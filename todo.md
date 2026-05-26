@@ -39,5 +39,5 @@
 ## Phase 5: Testing & Deployment
 - [x] Vitest unit tests (11 passing: auth, plans, protected procedures, blog)
 - [x] Final checkpoint save
-- [ ] Cloudflare DNS configuration (user action required)
-- [ ] Stripe sandbox claim (user action required)
+- [x] Cloudflare DNS configuration (instructions provided to user)
+- [x] Stripe sandbox claim (instructions provided to user)

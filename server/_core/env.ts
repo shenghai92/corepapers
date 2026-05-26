@@ -7,4 +7,7 @@ export const ENV = {
   isProduction: process.env.NODE_ENV === "production",
   forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL ?? "",
   forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
+  // Custom AI API (user-supplied, takes priority over built-in)
+  customAiApiKey: process.env.CUSTOM_AI_API_KEY ?? "",
+  customAiBaseUrl: process.env.CUSTOM_AI_BASE_URL ?? "",
 };
