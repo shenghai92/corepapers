@@ -295,7 +295,7 @@ export async function invokeLLM(params: InvokeParams): Promise<InvokeResult> {
 
   // Use custom model if custom API is configured, otherwise fall back to built-in
   const model = (ENV.customAiApiKey && ENV.customAiApiKey.trim().length > 0)
-    ? "deepseek-v3.2"
+    ? "claude-sonnet-4-6"
     : "gemini-2.5-flash";
 
   const payload: Record<string, unknown> = {
