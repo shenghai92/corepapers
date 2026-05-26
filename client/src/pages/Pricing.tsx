@@ -104,7 +104,7 @@ const FAQ = [
   },
   {
     q: "What payment methods do you accept?",
-    a: "We accept all major credit and debit cards (Visa, Mastercard, American Express) via Stripe. All transactions are secured with bank-level encryption.",
+    a: "We accept all major credit and debit cards through our secure Creem checkout. All transactions are secured with bank-level encryption.",
   },
   {
     q: "How does the annual plan save me money?",
@@ -136,12 +136,12 @@ export default function Pricing() {
       window.location.href = getLoginUrl();
       return;
     }
-    const stripeId = annual
+    const checkoutPlanId = annual
       ? (planId === 'student' ? 'student_annual' : 'pro_annual')
       : (planId === 'student' ? 'student_monthly' : 'pro_monthly');
-    setCheckoutLoading(stripeId);
+    setCheckoutLoading(checkoutPlanId);
     toast.info('Redirecting to secure checkout...');
-    createCheckout.mutate({ planId: stripeId as 'student_monthly' | 'student_annual' | 'pro_monthly' | 'pro_annual', origin: window.location.origin });
+    createCheckout.mutate({ planId: checkoutPlanId as 'student_monthly' | 'student_annual' | 'pro_monthly' | 'pro_annual', origin: window.location.origin });
   };
 
   return (

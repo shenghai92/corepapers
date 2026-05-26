@@ -14,6 +14,7 @@ import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
 
 function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/pricing" component={() => <PublicLayout><Pricing /></PublicLayout>} />
       <Route path="/blog" component={() => <PublicLayout><Blog /></PublicLayout>} />
       <Route path="/blog/:slug" component={() => <PublicLayout><BlogPost /></PublicLayout>} />
+      <Route path="/login" component={() => <Login />} />
       <Route path="/dashboard" component={() => <PublicLayout><Dashboard /></PublicLayout>} />
       <Route path="/dashboard/:section" component={() => <PublicLayout><Dashboard /></PublicLayout>} />
       <Route path="/404" component={() => <PublicLayout><NotFound /></PublicLayout>} />

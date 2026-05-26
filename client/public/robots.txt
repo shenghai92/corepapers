@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /dashboard
 Disallow: /api/
-Disallow: /__manus__/
 
 # Sitemaps
 Sitemap: https://corepapers.space/sitemap.xml

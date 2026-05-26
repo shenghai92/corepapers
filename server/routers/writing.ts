@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { protectedProcedure, publicProcedure, router } from "../_core/trpc";
 import { invokeLLM } from "../_core/llm";
-import { getDb } from "../db";
 import { writingSessions, citationHistory } from "../../drizzle/schema";
 import { eq, desc } from "drizzle-orm";
 
@@ -16,7 +15,7 @@ export const polishRouter = router({
         nativeLanguage: z.string().default("Chinese"),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ ctx, input }) => {
       const systemPrompt = `You are CorePapers, an expert academic writing assistant specializing in helping non-native English speakers write like native academic writers.
 
 Your task is to analyze the provided text and:
@@ -96,7 +95,7 @@ Respond with a JSON object in this exact format:
             },
           },
         },
-      });
+      }, ctx.env);
 
       const rawContent = response.choices[0]?.message?.content;
       const content = typeof rawContent === 'string' ? rawContent : null;
@@ -133,7 +132,7 @@ Respond with a JSON object in this exact format:
       })
     )
     .mutation(async ({ ctx, input }) => {
-      const db = await getDb();
+      const db = ctx.db;
       if (!db) throw new Error("Database unavailable");
       await db.insert(writingSessions).values({
         userId: ctx.user.id,
@@ -148,7 +147,7 @@ Respond with a JSON object in this exact format:
     }),
 
   getSessions: protectedProcedure.query(async ({ ctx }) => {
-    const db = await getDb();
+    const db = ctx.db;
     if (!db) return [];
     return db
       .select()
@@ -187,7 +186,7 @@ export const citationRouter = router({
         }),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ ctx, input }) => {
       const systemPrompt = `You are a citation formatting expert. Generate a perfectly formatted citation in the requested style.
 
 Return ONLY a JSON object with this structure:
@@ -228,7 +227,7 @@ Follow the latest edition guidelines strictly:
             },
           },
         },
-      });
+      }, ctx.env);
 
       const rawContent2 = response.choices[0]?.message?.content;
       const content = typeof rawContent2 === 'string' ? rawContent2 : null;
@@ -253,8 +252,8 @@ Follow the latest edition guidelines strictly:
         outputCitation: z.string(),
       })
     )
-    .mutation(async ({ input }) => {
-      const db = await getDb();
+    .mutation(async ({ ctx, input }) => {
+      const db = ctx.db;
       if (!db) return { success: false };
       await db.insert(citationHistory).values({
         userId: input.userId,

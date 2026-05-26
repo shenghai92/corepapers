@@ -1,14 +1,13 @@
+import { and, desc, eq } from "drizzle-orm";
 import { z } from "zod";
-import { publicProcedure, protectedProcedure, router } from "../_core/trpc";
-import { getDb } from "../db";
 import { blogPosts } from "../../drizzle/schema";
-import { eq, desc, and } from "drizzle-orm";
+import { publicProcedure, protectedProcedure, router } from "../_core/trpc";
 
 export const blogRouter = router({
   list: publicProcedure
     .input(z.object({ limit: z.number().default(10), offset: z.number().default(0) }).optional())
-    .query(async ({ input }) => {
-      const db = await getDb();
+    .query(async ({ ctx, input }) => {
+      const db = ctx.db;
       if (!db) return [];
       return db
         .select({
@@ -31,8 +30,8 @@ export const blogRouter = router({
 
   getBySlug: publicProcedure
     .input(z.object({ slug: z.string() }))
-    .query(async ({ input }) => {
-      const db = await getDb();
+    .query(async ({ ctx, input }) => {
+      const db = ctx.db;
       if (!db) return null;
       const result = await db
         .select()
@@ -59,7 +58,7 @@ export const blogRouter = router({
     )
     .mutation(async ({ ctx, input }) => {
       if (ctx.user.role !== "admin") throw new Error("Forbidden");
-      const db = await getDb();
+      const db = ctx.db;
       if (!db) throw new Error("Database unavailable");
       await db.insert(blogPosts).values({
         ...input,
@@ -69,3 +68,4 @@ export const blogRouter = router({
       return { success: true };
     }),
 });
+

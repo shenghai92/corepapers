@@ -3,6 +3,7 @@ import { appRouter } from "./routers";
 import { COOKIE_NAME } from "../shared/const";
 import type { TrpcContext } from "./_core/context";
 import type { User } from "../drizzle/schema";
+import { assertCreemProductId } from "./products";
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
@@ -12,7 +13,7 @@ function makeUser(overrides: Partial<User> = {}): User {
     openId: "test-user",
     email: "student@university.edu",
     name: "Test Student",
-    loginMethod: "manus",
+    loginMethod: "local",
     role: "user",
     preferredDiscipline: "general",
     preferredLanguage: "en",
@@ -30,6 +31,9 @@ function makeCtx(user: User | null = null): TrpcContext {
   return {
     user,
     req: { protocol: "https", headers: {} } as TrpcContext["req"],
+    resHeaders: new Headers(),
+    env: {},
+    db: null,
     res: {
       clearCookie: (name: string) => clearedCookies.push(name),
     } as TrpcContext["res"],
@@ -60,6 +64,9 @@ describe("auth.logout", () => {
     const ctx: TrpcContext = {
       user: makeUser(),
       req: { protocol: "https", headers: {} } as TrpcContext["req"],
+      resHeaders: new Headers(),
+      env: {},
+      db: null,
       res: {
         clearCookie: (name: string, options: Record<string, unknown>) => {
           clearedCookies.push({ name, options });
@@ -164,5 +171,19 @@ describe("protected procedures", () => {
         suggestions: [],
       })
     ).rejects.toThrow();
+  });
+});
+
+describe("creem product id validation", () => {
+  it("accepts a valid Creem product id", () => {
+    expect(assertCreemProductId("Pro Plan (Monthly)", "CREEM_PRO_MONTHLY_PRODUCT_ID", "prod_123abc")).toBe(
+      "prod_123abc"
+    );
+  });
+
+  it("rejects display text that was pasted into the env var", () => {
+    expect(() =>
+      assertCreemProductId("Pro Plan (Monthly)", "CREEM_PRO_MONTHLY_PRODUCT_ID", ".90/月")
+    ).toThrow("invalid Creem product ID");
   });
 });

@@ -1,16 +1,9 @@
 import { z } from "zod";
-import Stripe from "stripe";
 import { protectedProcedure, publicProcedure, router } from "../_core/trpc";
-import { getDb } from "../db";
-import { subscriptions, users } from "../../drizzle/schema";
+import { subscriptions } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
-import { PLANS, type PlanId } from "../products";
-
-function getStripe() {
-  const key = process.env.STRIPE_SECRET_KEY;
-  if (!key) throw new Error("Stripe not configured");
-  return new Stripe(key, { apiVersion: "2026-04-22.dahlia" });
-}
+import { createCreemCheckout, cancelCreemSubscription } from "../creem";
+import { assertCreemProductId, getPlan, getPlans, type PlanId } from "../products";
 
 export const paymentRouter = router({
   createCheckout: protectedProcedure
@@ -21,55 +14,25 @@ export const paymentRouter = router({
       })
     )
     .mutation(async ({ ctx, input }) => {
-      const stripe = getStripe();
-      const plan = PLANS[input.planId as PlanId];
+      const plan = getPlan(input.planId as PlanId, ctx.env);
+      const creemProductId = assertCreemProductId(
+        plan.name,
+        plan.creemProductEnv,
+        plan.creemProductId
+      );
 
-      if (!plan.stripePriceId) {
-        throw new Error("This plan is not yet configured. Please contact support.");
-      }
-
-      // Get or create Stripe customer
-      const db = await getDb();
-      let stripeCustomerId = ctx.user.stripeCustomerId;
-
-      if (!stripeCustomerId) {
-        const customer = await stripe.customers.create({
-          email: ctx.user.email ?? undefined,
-          name: ctx.user.name ?? undefined,
-          metadata: { userId: ctx.user.id.toString() },
-        });
-        stripeCustomerId = customer.id;
-
-        if (db) {
-          await db
-            .update(users)
-            .set({ stripeCustomerId })
-            .where(eq(users.id, ctx.user.id));
-        }
-      }
-
-      const session = await stripe.checkout.sessions.create({
-        customer: stripeCustomerId,
-        mode: "subscription",
-        payment_method_types: ["card"],
-        line_items: [{ price: plan.stripePriceId, quantity: 1 }],
-        allow_promotion_codes: true,
-        success_url: `${input.origin}/dashboard?payment=success&plan=${input.planId}`,
-        cancel_url: `${input.origin}/pricing?payment=canceled`,
-        client_reference_id: ctx.user.id.toString(),
-        metadata: {
-          user_id: ctx.user.id.toString(),
-          plan_id: input.planId,
-          customer_email: ctx.user.email ?? "",
-          customer_name: ctx.user.name ?? "",
-        },
+      const url = await createCreemCheckout(ctx.env, {
+        productId: creemProductId,
+        planId: input.planId,
+        origin: input.origin,
+        user: ctx.user,
       });
 
-      return { url: session.url };
+      return { url };
     }),
 
   getSubscription: protectedProcedure.query(async ({ ctx }) => {
-    const db = await getDb();
+    const db = ctx.db;
     if (!db) return null;
 
     const result = await db
@@ -82,8 +45,7 @@ export const paymentRouter = router({
   }),
 
   cancelSubscription: protectedProcedure.mutation(async ({ ctx }) => {
-    const stripe = getStripe();
-    const db = await getDb();
+    const db = ctx.db;
     if (!db) throw new Error("Database unavailable");
 
     const result = await db
@@ -95,9 +57,7 @@ export const paymentRouter = router({
     const sub = result[0];
     if (!sub?.stripeSubscriptionId) throw new Error("No active subscription found");
 
-    await stripe.subscriptions.update(sub.stripeSubscriptionId, {
-      cancel_at_period_end: true,
-    });
+    await cancelCreemSubscription(ctx.env, sub.stripeSubscriptionId);
 
     await db
       .update(subscriptions)
@@ -107,9 +67,9 @@ export const paymentRouter = router({
     return { success: true };
   }),
 
-  getPlans: publicProcedure.query(() => {
-    return Object.entries(PLANS).map(([id, plan]) => ({
-      id,
+  getPlans: publicProcedure.query(({ ctx }) => {
+    return getPlans(ctx.env).map((plan) => ({
+      id: plan.id,
       name: plan.name,
       price: plan.price,
       currency: plan.currency,

@@ -1,4 +1,5 @@
 import { ENV } from "./env";
+import type { RuntimeEnv } from "./env";
 
 export type Role = "system" | "user" | "assistant" | "tool" | "function";
 
@@ -209,27 +210,25 @@ const normalizeToolChoice = (
   return toolChoice;
 };
 
-const resolveApiUrl = () => {
-  // Priority: custom user API > built-in forge API
-  if (ENV.customAiBaseUrl && ENV.customAiBaseUrl.trim().length > 0) {
-    return `${ENV.customAiBaseUrl.replace(/\/$/, "")}/chat/completions`;
+const resolveApiUrl = (env: RuntimeEnv = ENV) => {
+  if (env.customAiBaseUrl && env.customAiBaseUrl.trim().length > 0) {
+    const baseUrl = env.customAiBaseUrl.replace(/\/+$/, "");
+    return baseUrl.endsWith("/chat/completions")
+      ? baseUrl
+      : `${baseUrl}/chat/completions`;
   }
-  if (ENV.forgeApiUrl && ENV.forgeApiUrl.trim().length > 0) {
-    return `${ENV.forgeApiUrl.replace(/\/$/, "")}/v1/chat/completions`;
-  }
-  return "https://forge.manus.im/v1/chat/completions";
+  throw new Error("CUSTOM_AI_BASE_URL is not configured");
 };
 
-const resolveApiKey = () => {
-  // Priority: custom user API key > built-in forge API key
-  if (ENV.customAiApiKey && ENV.customAiApiKey.trim().length > 0) {
-    return ENV.customAiApiKey;
+const resolveApiKey = (env: RuntimeEnv = ENV) => {
+  if (env.customAiApiKey && env.customAiApiKey.trim().length > 0) {
+    return env.customAiApiKey;
   }
-  return ENV.forgeApiKey;
+  return "";
 };
 
-const assertApiKey = () => {
-  if (!resolveApiKey()) {
+const assertApiKey = (env: RuntimeEnv = ENV) => {
+  if (!resolveApiKey(env)) {
     throw new Error("AI API key is not configured");
   }
 };
@@ -279,8 +278,11 @@ const normalizeResponseFormat = ({
   };
 };
 
-export async function invokeLLM(params: InvokeParams): Promise<InvokeResult> {
-  assertApiKey();
+export async function invokeLLM(
+  params: InvokeParams,
+  env: RuntimeEnv = ENV
+): Promise<InvokeResult> {
+  assertApiKey(env);
 
   const {
     messages,
@@ -293,10 +295,7 @@ export async function invokeLLM(params: InvokeParams): Promise<InvokeResult> {
     response_format,
   } = params;
 
-  // Use custom model if custom API is configured, otherwise fall back to built-in
-  const model = (ENV.customAiApiKey && ENV.customAiApiKey.trim().length > 0)
-    ? "claude-sonnet-4-6"
-    : "gemini-2.5-flash";
+  const model = env.customAiModel?.trim() || "claude-sonnet-4-6";
 
   const payload: Record<string, unknown> = {
     model,
@@ -328,11 +327,11 @@ export async function invokeLLM(params: InvokeParams): Promise<InvokeResult> {
     payload.response_format = normalizedResponseFormat;
   }
 
-  const response = await fetch(resolveApiUrl(), {
+  const response = await fetch(resolveApiUrl(env), {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      authorization: `Bearer ${resolveApiKey()}`,
+      authorization: `Bearer ${resolveApiKey(env)}`,
     },
     body: JSON.stringify(payload),
   });
