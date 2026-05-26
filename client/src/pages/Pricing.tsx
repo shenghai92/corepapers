@@ -121,7 +121,8 @@ export default function Pricing() {
   const createCheckout = trpc.payment.createCheckout.useMutation({
     onSuccess: ({ url }) => {
       if (url) {
-        window.open(url, '_blank');
+        window.location.href = url;
+        return;
       }
       setCheckoutLoading(null);
     },
