@@ -11,77 +11,13 @@ const schemaReady = new WeakMap<object, Promise<void>>();
 let lastDbInitError: string | null = null;
 
 const bootstrapStatements = [
-  `CREATE TABLE IF NOT EXISTS users (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  openId TEXT NOT NULL,
-  name TEXT,
-  email TEXT,
-  loginMethod TEXT,
-  passwordHash TEXT,
-  passwordSalt TEXT,
-  role TEXT NOT NULL DEFAULT 'user' CHECK (role IN ('user', 'admin')),
-  preferredDiscipline TEXT DEFAULT 'general' CHECK (preferredDiscipline IN ('stem', 'social_science', 'humanities', 'general')),
-  preferredLanguage TEXT DEFAULT 'en',
-  isEduVerified INTEGER DEFAULT 0,
-  stripeCustomerId TEXT,
-  createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
-  updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
-  lastSignedIn INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);`,
+  `CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, openId TEXT NOT NULL, name TEXT, email TEXT, loginMethod TEXT, passwordHash TEXT, passwordSalt TEXT, role TEXT NOT NULL DEFAULT 'user' CHECK (role IN ('user', 'admin')), preferredDiscipline TEXT DEFAULT 'general' CHECK (preferredDiscipline IN ('stem', 'social_science', 'humanities', 'general')), preferredLanguage TEXT DEFAULT 'en', isEduVerified INTEGER DEFAULT 0, stripeCustomerId TEXT, createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000), updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000), lastSignedIn INTEGER NOT NULL DEFAULT (unixepoch() * 1000));`,
   `CREATE UNIQUE INDEX IF NOT EXISTS users_openId_unique ON users(openId);`,
-  `CREATE TABLE IF NOT EXISTS subscriptions (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  userId INTEGER NOT NULL,
-  stripeSubscriptionId TEXT,
-  plan TEXT NOT NULL DEFAULT 'free' CHECK (plan IN ('free', 'student', 'pro')),
-  billingCycle TEXT CHECK (billingCycle IN ('monthly', 'annual')),
-  status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'canceled', 'past_due', 'trialing', 'incomplete')),
-  currentPeriodStart INTEGER,
-  currentPeriodEnd INTEGER,
-  cancelAtPeriodEnd INTEGER DEFAULT 0,
-  createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
-  updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);`,
-  `CREATE TABLE IF NOT EXISTS writing_sessions (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  userId INTEGER NOT NULL,
-  title TEXT DEFAULT 'Untitled',
-  originalText TEXT,
-  polishedText TEXT,
-  discipline TEXT DEFAULT 'general' CHECK (discipline IN ('stem', 'social_science', 'humanities', 'general')),
-  wordCount INTEGER DEFAULT 0,
-  suggestions TEXT,
-  createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
-  updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);`,
-  `CREATE TABLE IF NOT EXISTS blog_posts (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  slug TEXT NOT NULL,
-  title TEXT NOT NULL,
-  excerpt TEXT,
-  content TEXT NOT NULL,
-  category TEXT,
-  tags TEXT,
-  metaTitle TEXT,
-  metaDescription TEXT,
-  featuredImage TEXT,
-  readingTime INTEGER DEFAULT 5,
-  published INTEGER DEFAULT 0,
-  publishedAt INTEGER,
-  authorId INTEGER,
-  createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
-  updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);`,
+  `CREATE TABLE IF NOT EXISTS subscriptions (id INTEGER PRIMARY KEY AUTOINCREMENT, userId INTEGER NOT NULL, stripeSubscriptionId TEXT, plan TEXT NOT NULL DEFAULT 'free' CHECK (plan IN ('free', 'student', 'pro')), billingCycle TEXT CHECK (billingCycle IN ('monthly', 'annual')), status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'canceled', 'past_due', 'trialing', 'incomplete')), currentPeriodStart INTEGER, currentPeriodEnd INTEGER, cancelAtPeriodEnd INTEGER DEFAULT 0, createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000), updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000));`,
+  `CREATE TABLE IF NOT EXISTS writing_sessions (id INTEGER PRIMARY KEY AUTOINCREMENT, userId INTEGER NOT NULL, title TEXT DEFAULT 'Untitled', originalText TEXT, polishedText TEXT, discipline TEXT DEFAULT 'general' CHECK (discipline IN ('stem', 'social_science', 'humanities', 'general')), wordCount INTEGER DEFAULT 0, suggestions TEXT, createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000), updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000));`,
+  `CREATE TABLE IF NOT EXISTS blog_posts (id INTEGER PRIMARY KEY AUTOINCREMENT, slug TEXT NOT NULL, title TEXT NOT NULL, excerpt TEXT, content TEXT NOT NULL, category TEXT, tags TEXT, metaTitle TEXT, metaDescription TEXT, featuredImage TEXT, readingTime INTEGER DEFAULT 5, published INTEGER DEFAULT 0, publishedAt INTEGER, authorId INTEGER, createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000), updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000));`,
   `CREATE UNIQUE INDEX IF NOT EXISTS blog_posts_slug_unique ON blog_posts(slug);`,
-  `CREATE TABLE IF NOT EXISTS citation_history (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  userId INTEGER,
-  format TEXT NOT NULL CHECK (format IN ('apa', 'mla', 'chicago', 'ieee')),
-  sourceType TEXT,
-  inputData TEXT,
-  outputCitation TEXT,
-  createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);`,
+  `CREATE TABLE IF NOT EXISTS citation_history (id INTEGER PRIMARY KEY AUTOINCREMENT, userId INTEGER, format TEXT NOT NULL CHECK (format IN ('apa', 'mla', 'chicago', 'ieee')), sourceType TEXT, inputData TEXT, outputCitation TEXT, createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000));`,
 ] as const;
 
 async function ensureSchema(dbBinding: NonNullable<RuntimeEnv["DB"]>) {
