@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Core Pages -->
+  <url>
+    <loc>https://corepapers.space/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2024-02-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/polish</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2024-02-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/phrases</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2024-02-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/citations</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2024-02-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2024-02-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2024-02-15</lastmod>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://corepapers.space/blog/how-to-avoid-common-esl-writing-mistakes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2024-01-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/blog/complete-apa-7th-edition-guide-international-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2024-01-20</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/blog/chinglish-to-academic-english-transformation-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2024-01-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/blog/hedging-language-academic-writing-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2024-02-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/blog/mla-vs-apa-vs-chicago-which-citation-style</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2024-02-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/blog/academic-vocabulary-upgrade-guide-international-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2024-02-15</lastmod>
+  </url>
+
+</urlset>

@@ -1,26 +1,90 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>{{project_title}}</title>    
-    <!-- THIS IS THE START OF A COMMENT BLOCK, BLOCK TO BE DELETED: Google Fonts here, example:
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#8b7bb5" />
+
+    <!-- Primary SEO -->
+    <title>CorePapers – AI Academic Writing Assistant for International Students</title>
+    <meta name="description" content="CorePapers helps non-native English speaking students write better academic papers. AI-powered essay polishing, citation generator, and academic phrase library. Beat Chinglish, master academic English." />
+    <meta name="keywords" content="academic writing assistant, ESL writing tool, essay polishing for international students, non-native English writing, citation generator APA MLA, academic English improvement, avoid Chinglish, study abroad writing help" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://corepapers.space/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://corepapers.space/" />
+    <meta property="og:title" content="CorePapers – AI Academic Writing for International Students" />
+    <meta property="og:description" content="Write like a native. CorePapers uses AI to polish your academic English, fix non-native expressions, and generate perfect citations." />
+    <meta property="og:site_name" content="CorePapers" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CorePapers – Academic Writing for International Students" />
+    <meta name="twitter:description" content="AI-powered academic writing assistant built for non-native English speakers studying abroad." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    THIS IS THE END OF A COMMENT BLOCK, BLOCK TO BE DELETED -->
-  </head>
 
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CorePapers",
+      "url": "https://corepapers.space",
+      "description": "AI academic writing assistant for non-native English speaking international students",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://corepapers.space/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CorePapers",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free Plan",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Student Plan",
+          "price": "7.90",
+          "priceCurrency": "USD",
+          "billingIncrement": "P1M"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro Plan",
+          "price": "14.90",
+          "priceCurrency": "USD",
+          "billingIncrement": "P1M"
+        }
+      ],
+      "description": "AI-powered academic writing assistant for international students",
+      "url": "https://corepapers.space"
+    }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>
-
 </html>
