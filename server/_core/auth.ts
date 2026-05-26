@@ -1,7 +1,8 @@
 import { SignJWT, jwtVerify } from "jose";
 import { parse } from "cookie";
 
-const PBKDF2_ITERATIONS = 210_000;
+const PBKDF2_ITERATIONS = 100_000;
+const PBKDF2_LEGACY_ITERATIONS = 210_000;
 const PBKDF2_HASH = "SHA-256";
 const SESSION_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
 
@@ -50,7 +51,11 @@ export async function verifySessionToken(
   }
 }
 
-export async function hashPassword(password: string, saltBase64?: string) {
+export async function hashPassword(
+  password: string,
+  saltBase64?: string,
+  iterations = PBKDF2_ITERATIONS
+) {
   const salt = saltBase64
     ? base64ToBytes(saltBase64)
     : crypto.getRandomValues(new Uint8Array(16));
@@ -67,7 +72,7 @@ export async function hashPassword(password: string, saltBase64?: string) {
     {
       name: "PBKDF2",
       salt,
-      iterations: PBKDF2_ITERATIONS,
+      iterations,
       hash: PBKDF2_HASH,
     },
     keyMaterial,
@@ -85,8 +90,17 @@ export async function verifyPassword(
   saltBase64: string,
   expectedHashBase64: string
 ) {
-  const { hash } = await hashPassword(password, saltBase64);
-  return hash === expectedHashBase64;
+  const current = await hashPassword(password, saltBase64, PBKDF2_ITERATIONS);
+  if (current.hash === expectedHashBase64) {
+    return true;
+  }
+
+  if (PBKDF2_LEGACY_ITERATIONS === PBKDF2_ITERATIONS) {
+    return false;
+  }
+
+  const legacy = await hashPassword(password, saltBase64, PBKDF2_LEGACY_ITERATIONS);
+  return legacy.hash === expectedHashBase64;
 }
 
 export function getAuthCookieOptions(isSecure: boolean) {
