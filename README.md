@@ -9,7 +9,7 @@ Cloudflare-ready academic writing app for polishing essays, generating citations
 - Auth: email/password session cookies
 - Payments: Creem
 - Storage: Cloudflare R2
-- Database: MySQL via Cloudflare Hyperdrive or a direct MySQL connection
+- Database: Cloudflare D1 (SQLite)
 
 ## Local dev
 
@@ -31,7 +31,6 @@ corepack pnpm dev
 
 Set these in Cloudflare and locally:
 
-- `DATABASE_URL`
 - `JWT_SECRET`
 - `OWNER_EMAIL`
 - `CREEM_API_KEY`
@@ -46,7 +45,7 @@ Set these in Cloudflare and locally:
 - `R2_PUBLIC_URL`
 - `VITE_GOOGLE_MAPS_API_KEY`
 
-If you use Hyperdrive, bind it as `HYPERDRIVE`.
+Bind your Cloudflare D1 database as `DB`.
 If you use R2, bind the bucket as `R2`.
 
 ## Deployment notes
@@ -56,5 +55,6 @@ If you use R2, bind the bucket as `R2`.
 - Or run `corepack pnpm deploy:cf`.
 - The login page is `/login`.
 - Creem checkout and webhooks use Cloudflare Pages Functions.
+- The D1 schema bootstraps itself on first request after the `DB` binding is attached.
 - Uploaded files should be stored in R2 and served from the public URL you bind.
 - The app now runs on Cloudflare-compatible infrastructure only.
