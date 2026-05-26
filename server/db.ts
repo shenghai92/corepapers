@@ -8,6 +8,7 @@ type DbClient = ReturnType<typeof drizzle>;
 
 const dbCache = new WeakMap<object, DbClient>();
 const schemaReady = new WeakMap<object, Promise<void>>();
+let lastDbInitError: string | null = null;
 
 const bootstrapStatements = [
   `CREATE TABLE IF NOT EXISTS users (
@@ -103,11 +104,13 @@ async function ensureSchema(dbBinding: NonNullable<RuntimeEnv["DB"]>) {
 export async function getDb(env?: RuntimeEnv): Promise<DbClient | null> {
   const dbBinding = env?.DB;
   if (!dbBinding) {
+    lastDbInitError = "DB binding is missing";
     return null;
   }
 
   try {
     await ensureSchema(dbBinding);
+    lastDbInitError = null;
 
     const key = dbBinding as object;
     let db = dbCache.get(key);
@@ -118,9 +121,16 @@ export async function getDb(env?: RuntimeEnv): Promise<DbClient | null> {
 
     return db;
   } catch (error) {
+    lastDbInitError = error instanceof Error ? error.message : String(error);
     console.warn("[Database] Failed to initialize D1:", error);
     return null;
   }
+}
+
+export function getDbDiagnostics() {
+  return {
+    lastDbInitError,
+  };
 }
 
 export async function upsertUser(user: InsertUser, env?: RuntimeEnv): Promise<void> {
