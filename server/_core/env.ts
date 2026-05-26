@@ -15,6 +15,16 @@ export type R2Bucket = {
   get?(key: string): Promise<R2ObjectBody | null>;
 };
 
+export type D1PreparedStatement = {
+  bind(...values: unknown[]): D1PreparedStatement;
+};
+
+export type D1DatabaseBinding = {
+  prepare(query: string): D1PreparedStatement;
+  batch<T = unknown>(statements: D1PreparedStatement[]): Promise<T[]>;
+  exec(query: string): Promise<unknown>;
+};
+
 export type RuntimeEnv = {
   DATABASE_URL?: string;
   JWT_SECRET?: string;
@@ -31,14 +41,7 @@ export type RuntimeEnv = {
   customAiApiKey?: string;
   customAiBaseUrl?: string;
   customAiModel?: string;
-  HYPERDRIVE?: {
-    connectionString?: string;
-    host?: string;
-    user?: string;
-    password?: string;
-    database?: string;
-    port?: number;
-  };
+  DB?: D1DatabaseBinding;
   R2?: R2Bucket;
   R2_PUBLIC_URL?: string;
   // Legacy compatibility fields kept for older local tooling only.
@@ -107,7 +110,7 @@ export function buildRuntimeEnv(
     customAiApiKey,
     customAiBaseUrl,
     customAiModel,
-    HYPERDRIVE: source.HYPERDRIVE as RuntimeEnv["HYPERDRIVE"],
+    DB: source.DB as RuntimeEnv["DB"],
     R2: source.R2 as RuntimeEnv["R2"],
     R2_PUBLIC_URL: readValue(source, "R2_PUBLIC_URL"),
     VITE_APP_ID: appId,
