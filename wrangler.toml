@@ -1,0 +1,13 @@
+name = "corepapers"
+compatibility_date = "2026-05-26"
+pages_build_output_dir = "dist/public"
+compatibility_flags = ["nodejs_compat"]
+
+# Add your Cloudflare bindings in the dashboard or uncomment and fill these in:
+# [[hyperdrive]]
+# binding = "HYPERDRIVE"
+# id = "YOUR_HYPERDRIVE_ID"
+#
+# [[r2_buckets]]
+# binding = "R2"
+# bucket_name = "YOUR_R2_BUCKET"
