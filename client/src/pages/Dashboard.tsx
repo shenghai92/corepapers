@@ -17,6 +17,9 @@ import {
   Zap,
   Settings,
   LogOut,
+  CreditCard,
+  AlertCircle,
+  Loader2,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -29,7 +32,16 @@ const PLAN_INFO = {
 export default function Dashboard() {
   const { user, isAuthenticated, loading, logout } = useAuth();
   const { data: sessions } = trpc.polish.getSessions.useQuery(undefined, { enabled: isAuthenticated });
-  const { data: subscription } = trpc.payment.getSubscription.useQuery(undefined, { enabled: isAuthenticated });
+  const { data: subscription, refetch: refetchSubscription } = trpc.payment.getSubscription.useQuery(undefined, { enabled: isAuthenticated });
+  const cancelSubscription = trpc.payment.cancelSubscription.useMutation({
+    onSuccess: () => {
+      toast.success('Your subscription will be canceled at the end of the billing period.');
+      refetchSubscription();
+    },
+    onError: (err) => {
+      toast.error(err.message || 'Failed to cancel subscription. Please try again.');
+    },
+  });
 
   if (loading) {
     return (
@@ -183,7 +195,7 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              {/* Upgrade CTA */}
+              {/* Upgrade CTA for free users */}
               {plan === "free" && (
                 <div className="bg-primary/5 border border-primary/20 rounded-2xl p-5">
                   <div className="text-2xl mb-2">🚀</div>
@@ -194,6 +206,59 @@ export default function Dashboard() {
                   <Link href="/pricing">
                     <Button size="sm" className="w-full bg-cta-gradient text-white border-0 font-sans text-xs">
                       View Plans <ArrowRight size={12} className="ml-1" />
+                    </Button>
+                  </Link>
+                </div>
+              )}
+
+              {/* Subscription Management for paid users */}
+              {subscription && plan !== "free" && (
+                <div className="bg-white border border-border rounded-2xl p-5">
+                  <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">Subscription</p>
+                  <div className="space-y-2 text-xs font-sans">
+                    <div className="flex items-center justify-between py-2 border-b border-border">
+                      <span className="text-muted-foreground">Status</span>
+                      <Badge className={`border-0 text-xs ${
+                        subscription.status === 'active' ? 'bg-emerald-100 text-emerald-700' :
+                        subscription.status === 'past_due' ? 'bg-red-100 text-red-700' :
+                        'bg-secondary text-secondary-foreground'
+                      }`}>
+                        {subscription.status}
+                      </Badge>
+                    </div>
+                    {subscription.currentPeriodEnd && (
+                      <div className="flex items-center justify-between py-2 border-b border-border">
+                        <span className="text-muted-foreground">Renews</span>
+                        <span className="text-foreground">{new Date(subscription.currentPeriodEnd).toLocaleDateString()}</span>
+                      </div>
+                    )}
+                    {subscription.cancelAtPeriodEnd && (
+                      <div className="flex items-center gap-1.5 py-2 text-amber-600">
+                        <AlertCircle size={12} />
+                        <span>Cancels at period end</span>
+                      </div>
+                    )}
+                  </div>
+                  {!subscription.cancelAtPeriodEnd && (
+                    <button
+                      onClick={() => {
+                        if (confirm('Are you sure you want to cancel your subscription? You will retain access until the end of your billing period.')) {
+                          cancelSubscription.mutate();
+                        }
+                      }}
+                      disabled={cancelSubscription.isPending}
+                      className="mt-4 w-full text-xs text-muted-foreground hover:text-red-500 font-sans flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      {cancelSubscription.isPending ? (
+                        <><Loader2 size={11} className="animate-spin" /> Canceling...</>
+                      ) : (
+                        <>Cancel Subscription</>
+                      )}
+                    </button>
+                  )}
+                  <Link href="/pricing">
+                    <Button size="sm" variant="outline" className="w-full mt-2 font-sans text-xs">
+                      <CreditCard size={12} className="mr-1" /> Change Plan
                     </Button>
                   </Link>
                 </div>

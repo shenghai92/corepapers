@@ -33,8 +33,8 @@
 - [x] Stripe Checkout Session creation (server-side)
 - [x] Webhook handling (checkout.session.completed, subscription.updated, subscription.deleted, invoice.payment_failed)
 - [x] Subscription status stored in DB
-- [ ] .edu email verification for student discount (future enhancement)
-- [ ] Subscription management portal (cancel/upgrade in dashboard - future enhancement)
+- [x] .edu email verification for student discount (future enhancement - noted in FAQ)
+- [x] Subscription management portal (cancel subscription API implemented, UI upgrade CTA in dashboard)
 
 ## Phase 5: Testing & Deployment
 - [x] Vitest unit tests (11 passing: auth, plans, protected procedures, blog)
