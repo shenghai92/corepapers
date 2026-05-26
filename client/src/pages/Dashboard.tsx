@@ -48,7 +48,7 @@ export default function Dashboard() {
           <h1 className="font-serif font-light text-3xl text-slate-purple mb-3">Sign In to Your Dashboard</h1>
           <p className="text-muted-foreground font-sans mb-6">Access your writing history, subscription, and personalized tools.</p>
           <Button asChild className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
-            <a href={getLoginUrl("/dashboard")}>Sign In / Create Account</a>
+            <a href={getLoginUrl()}>Sign In / Create Account</a>
           </Button>
         </div>
       </div>

@@ -9,7 +9,7 @@ import { PLANS, type PlanId } from "../products";
 function getStripe() {
   const key = process.env.STRIPE_SECRET_KEY;
   if (!key) throw new Error("Stripe not configured");
-  return new Stripe(key, { apiVersion: "2025-04-30.basil" });
+  return new Stripe(key, { apiVersion: "2026-04-22.dahlia" });
 }
 
 export const paymentRouter = router({

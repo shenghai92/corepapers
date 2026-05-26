@@ -17,7 +17,7 @@ export function registerStripeWebhook(app: Express) {
         return res.json({ received: true });
       }
 
-      const stripe = new Stripe(stripeKey, { apiVersion: "2025-04-30.basil" });
+      const stripe = new Stripe(stripeKey, { apiVersion: "2026-04-22.dahlia" });
       const sig = req.headers["stripe-signature"];
 
       let event: Stripe.Event;
@@ -107,13 +107,15 @@ export function registerStripeWebhook(app: Express) {
               .limit(1);
 
             if (existing.length > 0) {
-              await db
+                  const periodStart = (sub as unknown as { current_period_start?: number }).current_period_start;
+                  const periodEnd = (sub as unknown as { current_period_end?: number }).current_period_end;
+                  await db
                 .update(subscriptions)
                 .set({
                   status: sub.status as "active" | "canceled" | "past_due" | "trialing" | "incomplete",
                   cancelAtPeriodEnd: sub.cancel_at_period_end,
-                  currentPeriodStart: new Date(sub.current_period_start * 1000),
-                  currentPeriodEnd: new Date(sub.current_period_end * 1000),
+                  currentPeriodStart: periodStart ? new Date(periodStart * 1000) : undefined,
+                  currentPeriodEnd: periodEnd ? new Date(periodEnd * 1000) : undefined,
                 })
                 .where(eq(subscriptions.stripeSubscriptionId, sub.id));
             }
@@ -132,7 +134,7 @@ export function registerStripeWebhook(app: Express) {
 
           case "invoice.payment_failed": {
             const invoice = event.data.object as Stripe.Invoice;
-            const subId = invoice.subscription as string | null;
+            const subId = (invoice as unknown as { subscription?: string }).subscription ?? null;
             if (subId) {
               await db
                 .update(subscriptions)

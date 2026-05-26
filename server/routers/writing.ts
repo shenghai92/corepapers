@@ -98,7 +98,8 @@ Respond with a JSON object in this exact format:
         },
       });
 
-      const content = response.choices[0]?.message?.content;
+      const rawContent = response.choices[0]?.message?.content;
+      const content = typeof rawContent === 'string' ? rawContent : null;
       if (!content) throw new Error("AI response was empty");
 
       return JSON.parse(content) as {
@@ -229,7 +230,8 @@ Follow the latest edition guidelines strictly:
         },
       });
 
-      const content = response.choices[0]?.message?.content;
+      const rawContent2 = response.choices[0]?.message?.content;
+      const content = typeof rawContent2 === 'string' ? rawContent2 : null;
       if (!content) throw new Error("AI response was empty");
 
       const result = JSON.parse(content) as {
