@@ -9,10 +9,8 @@ type DbClient = ReturnType<typeof drizzle>;
 const dbCache = new WeakMap<object, DbClient>();
 const schemaReady = new WeakMap<object, Promise<void>>();
 
-const bootstrapSql = `
-PRAGMA foreign_keys = ON;
-
-CREATE TABLE IF NOT EXISTS users (
+const bootstrapStatements = [
+  `CREATE TABLE IF NOT EXISTS users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   openId TEXT NOT NULL,
   name TEXT,
@@ -28,10 +26,9 @@ CREATE TABLE IF NOT EXISTS users (
   createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
   updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
   lastSignedIn INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);
-CREATE UNIQUE INDEX IF NOT EXISTS users_openId_unique ON users(openId);
-
-CREATE TABLE IF NOT EXISTS subscriptions (
+);`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS users_openId_unique ON users(openId);`,
+  `CREATE TABLE IF NOT EXISTS subscriptions (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   userId INTEGER NOT NULL,
   stripeSubscriptionId TEXT,
@@ -43,9 +40,8 @@ CREATE TABLE IF NOT EXISTS subscriptions (
   cancelAtPeriodEnd INTEGER DEFAULT 0,
   createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
   updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);
-
-CREATE TABLE IF NOT EXISTS writing_sessions (
+);`,
+  `CREATE TABLE IF NOT EXISTS writing_sessions (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   userId INTEGER NOT NULL,
   title TEXT DEFAULT 'Untitled',
@@ -56,9 +52,8 @@ CREATE TABLE IF NOT EXISTS writing_sessions (
   suggestions TEXT,
   createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
   updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);
-
-CREATE TABLE IF NOT EXISTS blog_posts (
+);`,
+  `CREATE TABLE IF NOT EXISTS blog_posts (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   slug TEXT NOT NULL,
   title TEXT NOT NULL,
@@ -75,10 +70,9 @@ CREATE TABLE IF NOT EXISTS blog_posts (
   authorId INTEGER,
   createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000),
   updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);
-CREATE UNIQUE INDEX IF NOT EXISTS blog_posts_slug_unique ON blog_posts(slug);
-
-CREATE TABLE IF NOT EXISTS citation_history (
+);`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS blog_posts_slug_unique ON blog_posts(slug);`,
+  `CREATE TABLE IF NOT EXISTS citation_history (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   userId INTEGER,
   format TEXT NOT NULL CHECK (format IN ('apa', 'mla', 'chicago', 'ieee')),
@@ -86,8 +80,8 @@ CREATE TABLE IF NOT EXISTS citation_history (
   inputData TEXT,
   outputCitation TEXT,
   createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000)
-);
-`;
+);`,
+] as const;
 
 async function ensureSchema(dbBinding: NonNullable<RuntimeEnv["DB"]>) {
   const key = dbBinding as object;
@@ -95,7 +89,11 @@ async function ensureSchema(dbBinding: NonNullable<RuntimeEnv["DB"]>) {
   if (!schemaReady.has(key)) {
     schemaReady.set(
       key,
-      dbBinding.exec(bootstrapSql).then(() => undefined)
+      (async () => {
+        for (const statement of bootstrapStatements) {
+          await dbBinding.exec(statement);
+        }
+      })()
     );
   }
 
