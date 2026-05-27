@@ -103,10 +103,10 @@ export default function Polish() {
                 <SelectValue placeholder="My native language" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Chinese">Chinese (中文)</SelectItem>
-                <SelectItem value="Spanish">Spanish (Español)</SelectItem>
-                <SelectItem value="French">French (Français)</SelectItem>
-                <SelectItem value="Arabic">Arabic (العربية)</SelectItem>
+                <SelectItem value="Chinese">Chinese</SelectItem>
+                <SelectItem value="Spanish">Spanish</SelectItem>
+                <SelectItem value="French">French</SelectItem>
+                <SelectItem value="Arabic">Arabic</SelectItem>
                 <SelectItem value="Japanese">Japanese (日本語)</SelectItem>
                 <SelectItem value="Korean">Korean (한국어)</SelectItem>
                 <SelectItem value="Portuguese">Portuguese</SelectItem>

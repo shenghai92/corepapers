@@ -9,8 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu, X, Globe, ChevronDown } from "lucide-react";
-import { trpc } from "@/lib/trpc";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Essay Polish", href: "/polish" },
@@ -20,18 +19,9 @@ const NAV_LINKS = [
   { label: "Blog", href: "/blog" },
 ];
 
-const LANGUAGES = [
-  { code: "en", label: "English" },
-  { code: "es", label: "Español" },
-  { code: "fr", label: "Français" },
-  { code: "zh", label: "中文" },
-  { code: "ar", label: "العربية" },
-];
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [lang, setLang] = useState("en");
   const [location] = useLocation();
   const { user, isAuthenticated, logout } = useAuth();
 
@@ -84,28 +74,6 @@ export default function Navbar() {
 
           {/* Right Actions */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Language Switcher */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors px-2 py-1.5 rounded-md hover:bg-secondary">
-                  <Globe size={14} />
-                  <span>{LANGUAGES.find((l) => l.code === lang)?.label}</span>
-                  <ChevronDown size={12} />
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-36">
-                {LANGUAGES.map((l) => (
-                  <DropdownMenuItem
-                    key={l.code}
-                    onClick={() => setLang(l.code)}
-                    className={lang === l.code ? "text-primary font-medium" : ""}
-                  >
-                    {l.label}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
             {isAuthenticated ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

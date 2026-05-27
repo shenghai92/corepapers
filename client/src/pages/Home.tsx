@@ -8,13 +8,7 @@ import {
   Quote,
   CheckCircle2,
   ArrowRight,
-  Star,
-  Globe2,
   GraduationCap,
-  FileText,
-  Zap,
-  Shield,
-  Users,
 } from "lucide-react";
 
 const FEATURES = [
@@ -41,44 +35,6 @@ const FEATURES = [
     href: "/citations",
     color: "bg-mint-light",
     iconColor: "text-emerald-600",
-  },
-];
-
-const STATS = [
-  { value: "50,000+", label: "Students Helped" },
-  { value: "120+", label: "Countries" },
-  { value: "2M+", label: "Essays Polished" },
-  { value: "98%", label: "Satisfaction Rate" },
-];
-
-const TESTIMONIALS = [
-  {
-    name: "Mei Lin",
-    country: "China → UCL, UK",
-    avatar: "ML",
-    rating: 5,
-    text: "CorePapers completely transformed my dissertation writing. It caught so many Chinglish patterns I didn't even notice, and the explanations helped me actually learn from my mistakes.",
-  },
-  {
-    name: "Carlos Rodríguez",
-    country: "Mexico → University of Toronto",
-    avatar: "CR",
-    rating: 5,
-    text: "The phrase library is incredible for academic writing. I used to spend hours trying to find the right academic expressions. Now I find them in seconds.",
-  },
-  {
-    name: "Fatima Al-Hassan",
-    country: "Saudi Arabia → MIT",
-    avatar: "FA",
-    rating: 5,
-    text: "As an engineering student, the STEM-specific templates are a game changer. The citation generator alone is worth the subscription price.",
-  },
-  {
-    name: "Yuki Tanaka",
-    country: "Japan → University of Melbourne",
-    avatar: "YT",
-    rating: 5,
-    text: "I was always worried my English wasn't academic enough. CorePapers gives me the confidence to submit papers knowing they sound professional.",
   },
 ];
 
@@ -216,20 +172,6 @@ export default function Home() {
                   <span className="font-sans">4 non-native expressions detected and improved</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Stats ── */}
-        <section className="py-14 bg-white border-y border-border">
-          <div className="container">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {STATS.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="font-serif text-4xl font-light text-slate-purple mb-1">{stat.value}</div>
-                  <div className="text-xs font-sans font-medium tracking-widest uppercase text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -373,46 +315,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Testimonials ── */}
-        <section className="py-24 bg-background" id="testimonials">
-          <div className="container">
-            <div className="text-center mb-16">
-              <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Student Stories</p>
-              <h2 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
-                Real Students,
-                <span className="italic"> Real Results</span>
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {TESTIMONIALS.map((t) => (
-                <div key={t.name} className="p-6 bg-white rounded-2xl border border-border shadow-card hover:shadow-soft transition-shadow">
-                  <div className="flex items-center gap-1 mb-4">
-                    {Array.from({ length: t.rating }).map((_, i) => (
-                      <Star key={i} size={14} className="text-amber-400 fill-amber-400" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-foreground font-sans leading-relaxed mb-5 italic">
-                    "{t.text}"
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-xs font-medium text-primary font-sans">
-                      {t.avatar}
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium text-foreground font-sans">{t.name}</div>
-                      <div className="text-xs text-muted-foreground font-sans flex items-center gap-1">
-                        <Globe2 size={10} />
-                        {t.country}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ── Pricing Teaser ── */}
         <section className="py-24 bg-white">
           <div className="container">
@@ -472,7 +374,7 @@ export default function Home() {
                 <span className="italic">Starts Here</span>
               </h2>
               <p className="text-muted-foreground font-sans mb-10 leading-relaxed">
-                Join 50,000+ international students who write with confidence using CorePapers. No credit card required to start.
+                Start writing with clearer academic English, better citations, and tools built for non-native speakers.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button

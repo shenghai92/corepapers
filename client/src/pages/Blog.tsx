@@ -196,7 +196,7 @@ export default function Blog() {
               Get Weekly Writing Tips
             </h3>
             <p className="text-sm text-muted-foreground font-sans mb-6">
-              Join 10,000+ international students who receive our weekly academic writing tips.
+              Get practical academic writing tips, citation help, and ESL-friendly study resources.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
