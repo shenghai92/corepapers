@@ -18,6 +18,7 @@ const bootstrapStatements = [
   `CREATE TABLE IF NOT EXISTS blog_posts (id INTEGER PRIMARY KEY AUTOINCREMENT, slug TEXT NOT NULL, title TEXT NOT NULL, excerpt TEXT, content TEXT NOT NULL, category TEXT, tags TEXT, metaTitle TEXT, metaDescription TEXT, featuredImage TEXT, readingTime INTEGER DEFAULT 5, published INTEGER DEFAULT 0, publishedAt INTEGER, authorId INTEGER, createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000), updatedAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000));`,
   `CREATE UNIQUE INDEX IF NOT EXISTS blog_posts_slug_unique ON blog_posts(slug);`,
   `CREATE TABLE IF NOT EXISTS citation_history (id INTEGER PRIMARY KEY AUTOINCREMENT, userId INTEGER, format TEXT NOT NULL CHECK (format IN ('apa', 'mla', 'chicago', 'ieee')), sourceType TEXT, inputData TEXT, outputCitation TEXT, createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000));`,
+  `CREATE TABLE IF NOT EXISTS usage_events (id INTEGER PRIMARY KEY AUTOINCREMENT, userId INTEGER, identifier TEXT NOT NULL, feature TEXT NOT NULL CHECK (feature IN ('polish', 'citation')), units INTEGER NOT NULL DEFAULT 0, createdAt INTEGER NOT NULL DEFAULT (unixepoch() * 1000));`,
 ] as const;
 
 async function ensureSchema(dbBinding: NonNullable<RuntimeEnv["DB"]>) {

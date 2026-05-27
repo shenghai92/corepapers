@@ -201,7 +201,7 @@ export default function Dashboard() {
                   <div className="text-2xl mb-2">🚀</div>
                   <h3 className="font-sans font-semibold text-sm text-foreground mb-1">Upgrade to Student</h3>
                   <p className="text-xs text-muted-foreground font-sans mb-4 leading-relaxed">
-                    Unlimited polishes, full phrase library, and save all your sessions for just $7.9/month.
+                    Get higher daily polish limits, longer per-draft word caps, and more citation runs for just $7.9/month.
                   </p>
                   <Link href="/pricing">
                     <Button size="sm" className="w-full bg-cta-gradient text-white border-0 font-sans text-xs">

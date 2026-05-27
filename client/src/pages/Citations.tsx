@@ -153,6 +153,9 @@ export default function Citations() {
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
               Build correctly formatted references and in-text citations for the source types students use most.
             </p>
+            <p className="text-xs text-muted-foreground font-sans mt-3">
+              Free usage includes up to 3 citation generations per day. Paid plans raise daily limits for regular coursework and research use.
+            </p>
           </div>
 
           <div className="max-w-3xl mx-auto">

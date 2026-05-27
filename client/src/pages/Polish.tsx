@@ -184,9 +184,12 @@ export default function Polish() {
                   </>
                 )}
               </Button>
+              <p className="text-xs text-center text-muted-foreground font-sans">
+                Free usage includes up to 300 words per polish, 1,000 AI polish words per day, and 5 polish runs per day.
+              </p>
               {!isAuthenticated && (
                 <p className="text-xs text-center text-muted-foreground font-sans">
-                  <a href={getLoginUrl()} className="text-primary underline">Sign in free</a> to save sessions and unlock 1,000 words per day
+                  <a href={getLoginUrl()} className="text-primary underline">Sign in free</a> to save sessions and keep your revisions in one place.
                 </p>
               )}
             </div>

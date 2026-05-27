@@ -1,8 +1,122 @@
 import { z } from "zod";
 import { protectedProcedure, publicProcedure, router } from "../_core/trpc";
 import { invokeLLM } from "../_core/llm";
-import { writingSessions, citationHistory } from "../../drizzle/schema";
-import { eq, desc } from "drizzle-orm";
+import {
+  writingSessions,
+  citationHistory,
+  subscriptions,
+  usageEvents,
+} from "../../drizzle/schema";
+import { and, desc, eq, gte } from "drizzle-orm";
+
+type UsagePlan = "free" | "student" | "pro";
+type UsageFeature = "polish" | "citation";
+
+const PLAN_LIMITS: Record<
+  UsagePlan,
+  {
+    polishMaxWordsPerRequest: number;
+    polishDailyWords: number;
+    polishDailyRequests: number;
+    citationDailyRequests: number;
+  }
+> = {
+  free: {
+    polishMaxWordsPerRequest: 300,
+    polishDailyWords: 1000,
+    polishDailyRequests: 5,
+    citationDailyRequests: 3,
+  },
+  student: {
+    polishMaxWordsPerRequest: 2000,
+    polishDailyWords: 20000,
+    polishDailyRequests: 30,
+    citationDailyRequests: 30,
+  },
+  pro: {
+    polishMaxWordsPerRequest: 5000,
+    polishDailyWords: 50000,
+    polishDailyRequests: 80,
+    citationDailyRequests: 80,
+  },
+};
+
+function getWordCount(text: string) {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
+function getStartOfUtcDay() {
+  const now = new Date();
+  return Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+}
+
+function getClientIdentifier(headers: Headers | Record<string, string | string[] | undefined>) {
+  const read = (key: string) => {
+    if (headers instanceof Headers) {
+      return headers.get(key) ?? undefined;
+    }
+
+    const value = headers[key.toLowerCase()];
+    return Array.isArray(value) ? value[0] : value;
+  };
+
+  const forwardedFor = read("x-forwarded-for");
+  const ip =
+    read("cf-connecting-ip") ??
+    read("true-client-ip") ??
+    read("x-real-ip") ??
+    forwardedFor?.split(",")[0]?.trim();
+  const userAgent = read("user-agent") ?? "unknown-agent";
+
+  return ip ? `ip:${ip}` : `ua:${userAgent.slice(0, 120)}`;
+}
+
+async function getUsagePlan(
+  db: NonNullable<Awaited<ReturnType<typeof import("../db").getDb>>>,
+  userId: number
+): Promise<UsagePlan> {
+  const result = await db
+    .select()
+    .from(subscriptions)
+    .where(eq(subscriptions.userId, userId))
+    .orderBy(desc(subscriptions.createdAt))
+    .limit(1);
+
+  const subscription = result[0];
+  if (!subscription) return "free";
+
+  const isActive = subscription.status === "active" || subscription.status === "trialing";
+  return isActive ? subscription.plan : "free";
+}
+
+async function getTodayUsage(
+  db: NonNullable<Awaited<ReturnType<typeof import("../db").getDb>>>,
+  identifier: string,
+  feature: UsageFeature,
+  userId?: number
+) {
+  const startOfDay = new Date(getStartOfUtcDay());
+  const filters = userId
+    ? and(eq(usageEvents.feature, feature), eq(usageEvents.userId, userId), gte(usageEvents.createdAt, startOfDay))
+    : and(eq(usageEvents.feature, feature), eq(usageEvents.identifier, identifier), gte(usageEvents.createdAt, startOfDay));
+
+  return db.select().from(usageEvents).where(filters);
+}
+
+async function recordUsageEvent(
+  db: NonNullable<Awaited<ReturnType<typeof import("../db").getDb>>>,
+  identifier: string,
+  feature: UsageFeature,
+  units: number,
+  userId?: number
+) {
+  await db.insert(usageEvents).values({
+    userId,
+    identifier,
+    feature,
+    units,
+  });
+}
 
 const extractJsonPayload = (rawContent: unknown) => {
   const content = typeof rawContent === "string"
@@ -55,6 +169,42 @@ export const polishRouter = router({
       })
     )
     .mutation(async ({ ctx, input }) => {
+      const db = ctx.db;
+      const identifier = getClientIdentifier(ctx.req.headers);
+      const wordCount = getWordCount(input.text);
+      const plan = ctx.user && db ? await getUsagePlan(db, ctx.user.id) : "free";
+      const limits = PLAN_LIMITS[plan];
+
+      if (wordCount > limits.polishMaxWordsPerRequest) {
+        throw new Error(
+          plan === "free"
+            ? `Free usage supports up to ${limits.polishMaxWordsPerRequest} words per polish. Upgrade to Student for longer passages.`
+            : `${plan === "student" ? "Student" : "Pro"} plan supports up to ${limits.polishMaxWordsPerRequest} words per polish.`
+        );
+      }
+
+      if (db) {
+        const usage = await getTodayUsage(db, identifier, "polish", ctx.user?.id);
+        const requestsToday = usage.length;
+        const wordsToday = usage.reduce((sum, event) => sum + (event.units ?? 0), 0);
+
+        if (requestsToday >= limits.polishDailyRequests) {
+          throw new Error(
+            plan === "free"
+              ? "You have reached today's free polish limit. Sign in or upgrade for more usage."
+              : "You have reached today's polish limit for your plan. Please try again tomorrow or contact support if you need a higher cap."
+          );
+        }
+
+        if (wordsToday + wordCount > limits.polishDailyWords) {
+          throw new Error(
+            plan === "free"
+              ? `Free usage includes up to ${limits.polishDailyWords.toLocaleString()} AI polish words per day. Upgrade to continue with longer drafts.`
+              : `You have reached today's ${plan} plan polish word limit. Please try again tomorrow or shorten this draft.`
+          );
+        }
+      }
+
       const systemPrompt = `You are CorePapers, an expert academic writing assistant specializing in helping non-native English speakers write like native academic writers.
 
 Your task is to analyze the provided text and:
@@ -155,6 +305,10 @@ Respond with a JSON object in this exact format:
         ctx.env
       );
 
+      if (db) {
+        await recordUsageEvent(db, identifier, "polish", wordCount, ctx.user?.id);
+      }
+
       return extractJsonPayload(response.choices[0]?.message?.content) as {
         polishedText: string;
         suggestions: Array<{
@@ -252,6 +406,22 @@ export const citationRouter = router({
       })
     )
     .mutation(async ({ ctx, input }) => {
+      const db = ctx.db;
+      const identifier = getClientIdentifier(ctx.req.headers);
+      const plan = ctx.user && db ? await getUsagePlan(db, ctx.user.id) : "free";
+      const limits = PLAN_LIMITS[plan];
+
+      if (db) {
+        const usage = await getTodayUsage(db, identifier, "citation", ctx.user?.id);
+        if (usage.length >= limits.citationDailyRequests) {
+          throw new Error(
+            plan === "free"
+              ? "You have reached today's free citation limit. Upgrade for higher daily usage."
+              : "You have reached today's citation limit for your plan. Please try again tomorrow."
+          );
+        }
+      }
+
       const systemPrompt = `You are a citation formatting expert. Generate a perfectly formatted citation in the requested style.
 
 Return ONLY a JSON object with this structure:
@@ -296,6 +466,10 @@ Follow the latest edition guidelines strictly:
         },
         ctx.env
       );
+
+      if (db) {
+        await recordUsageEvent(db, identifier, "citation", 1, ctx.user?.id);
+      }
 
       return extractJsonPayload(response.choices[0]?.message?.content) as {
         citation: string;

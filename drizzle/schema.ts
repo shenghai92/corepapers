@@ -97,9 +97,19 @@ export const citationHistory = sqliteTable("citation_history", {
   createdAt: integer("createdAt", { mode: "timestamp_ms" }).default(now).notNull(),
 });
 
+export const usageEvents = sqliteTable("usage_events", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  userId: integer("userId"),
+  identifier: text("identifier").notNull(),
+  feature: text("feature", { enum: ["polish", "citation"] }).notNull(),
+  units: integer("units").default(0).notNull(),
+  createdAt: integer("createdAt", { mode: "timestamp_ms" }).default(now).notNull(),
+});
+
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 export type Subscription = typeof subscriptions.$inferSelect;
 export type WritingSession = typeof writingSessions.$inferSelect;
 export type BlogPost = typeof blogPosts.$inferSelect;
 export type CitationHistory = typeof citationHistory.$inferSelect;
+export type UsageEvent = typeof usageEvents.$inferSelect;

@@ -21,12 +21,12 @@ const PLANS = [
     cta: "Start Free",
     highlight: false,
     features: [
-      { text: "5 AI essay polishes per day", included: true },
+      { text: "Up to 1,000 AI polish words per day", included: true },
       { text: "Up to 300 words per polish", included: true },
-      { text: "Basic grammar suggestions", included: true },
-      { text: "Academic phrase library (limited)", included: true },
+      { text: "Up to 5 polish runs per day", included: true },
+      { text: "Academic phrase library", included: true },
       { text: "Citation generator (3 per day)", included: true },
-      { text: "Save writing sessions", included: false },
+      { text: "Save writing sessions with a free account", included: true },
     ],
   },
   {
@@ -40,11 +40,11 @@ const PLANS = [
     highlight: true,
     eduBadge: true,
     features: [
-      { text: "Unlimited AI essay polishes", included: true },
+      { text: "Up to 20,000 AI polish words per day", included: true },
       { text: "Up to 2,000 words per polish", included: true },
-      { text: "Advanced non-native expression detection", included: true },
-      { text: "Full academic phrase library", included: true },
-      { text: "Unlimited citation generation", included: true },
+      { text: "Up to 30 polish runs per day", included: true },
+      { text: "Academic phrase library", included: true },
+      { text: "Citation generator (30 per day)", included: true },
       { text: "Save writing sessions", included: true },
     ],
   },
@@ -59,11 +59,11 @@ const PLANS = [
     highlight: false,
     features: [
       { text: "Everything in Student", included: true },
-      { text: "Up to 10,000 words per polish", included: true },
-      { text: "Priority AI processing", included: true },
-      { text: "Advanced writing analytics", included: true },
-      { text: "Export options", included: true },
-      { text: "Dedicated support", included: true },
+      { text: "Up to 50,000 AI polish words per day", included: true },
+      { text: "Up to 5,000 words per polish", included: true },
+      { text: "Up to 80 polish runs per day", included: true },
+      { text: "Citation generator (80 per day)", included: true },
+      { text: "Best fit for longer research drafts", included: true },
     ],
   },
 ];
@@ -83,7 +83,7 @@ const FAQ = [
   },
   {
     q: "Is there a free plan?",
-    a: "Yes. The free plan lets you try essay polishing, citations, and the phrase library without entering a card.",
+    a: "Yes. The free plan lets you try essay polishing, citations, and the phrase library without entering a card. Creating a free account also lets you save writing sessions.",
   },
 ];
 
@@ -177,7 +177,7 @@ export default function Pricing() {
               <span className="italic"> at student-friendly prices</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-lg mx-auto leading-relaxed mb-8">
-              Choose a plan for polishing, phrase support, and citation help without overpaying for general-purpose writing software. Start free when you are testing, then upgrade when your assignments become regular.
+              Choose a plan for polishing, phrase support, and citation help without overpaying for general-purpose writing software. Start free for short real tasks, then upgrade when you need larger daily limits.
             </p>
 
             <div className="inline-flex items-center gap-3 bg-secondary rounded-xl p-1.5">
@@ -308,15 +308,15 @@ export default function Pricing() {
             {[
               {
                 title: "Stay on Free if...",
-                desc: "you only polish short passages occasionally, generate a few citations, and want to explore the workflow before committing.",
+                desc: "you only polish short passages, generate a few citations, and want to test the workflow before committing.",
               },
               {
                 title: "Upgrade to Student if...",
-                desc: "you revise essays every week, need higher word limits, and want citation help plus full phrase access in one place.",
+                desc: "you revise essays every week, need higher daily limits, and want more room for full assignment sections.",
               },
               {
                 title: "Choose Pro if...",
-                desc: "you are working on longer research papers, dissertation chapters, or heavier writing loads that need bigger limits.",
+                desc: "you are working on longer research papers, dissertation chapters, or heavier writing loads that need the biggest limits.",
               },
             ].map((item) => (
               <div key={item.title} className="p-6 bg-white border border-border rounded-2xl">
