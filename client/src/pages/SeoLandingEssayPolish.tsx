@@ -147,6 +147,25 @@ export default function SeoLandingEssayPolish() {
               ))}
             </div>
           </div>
+
+          <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
+            <Link href="/pricing" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Compare free and paid polish limits</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                  Check whether the free tier is enough for occasional revisions or whether you need a higher word limit.
+                </p>
+              </div>
+            </Link>
+            <Link href="/phrases" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Browse phrase support too</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                  Reinforce revision with ready-to-use academic phrases for introductions, discussion, and stance.
+                </p>
+              </div>
+            </Link>
+          </div>
         </div>
       </main>
     </>

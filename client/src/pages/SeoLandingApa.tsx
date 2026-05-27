@@ -156,6 +156,25 @@ export default function SeoLandingApa() {
               ))}
             </div>
           </div>
+
+          <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
+            <Link href="/pricing" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">See plan limits and pricing</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                  Compare the free plan with paid usage if you need citations regularly for coursework or research writing.
+                </p>
+              </div>
+            </Link>
+            <Link href="/polish" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Polish the paragraph after citing</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                  Move straight from references to clearer academic sentences in the same workflow.
+                </p>
+              </div>
+            </Link>
+          </div>
         </div>
       </main>
     </>

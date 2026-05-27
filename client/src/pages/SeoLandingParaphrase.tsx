@@ -145,6 +145,25 @@ export default function SeoLandingParaphrase() {
               ))}
             </div>
           </div>
+
+          <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
+            <Link href="/pricing" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">See plans for regular revision</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                  Compare free and paid options if you revise source-based writing often during the semester.
+                </p>
+              </div>
+            </Link>
+            <Link href="/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Read the paraphrasing guide</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                  Review the practical workflow for safer paraphrasing, then return to the tool for revision.
+                </p>
+              </div>
+            </Link>
+          </div>
         </div>
       </main>
     </>
