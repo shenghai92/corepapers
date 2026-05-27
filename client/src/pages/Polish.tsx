@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import { trpc } from "@/lib/trpc";
 import SEOHead from "@/components/SEOHead";
-import { Sparkles, Copy, RotateCcw, BookOpen, Loader2, CheckCircle2, AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { Sparkles, Copy, BookOpen, Loader2, AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
@@ -73,14 +73,13 @@ export default function Polish() {
     <>
       <SEOHead
         title="AI Essay Polishing Tool - Fix Non-Native English Writing"
-        description="Paste your academic text and our AI instantly detects Chinglish, non-native expressions, and informal language. Get academic vocabulary upgrades with explanations."
+        description="Paste your academic text and our AI detects non-native expressions, informal language, and weak academic phrasing. Get clearer revisions with explanations."
         keywords="essay polishing tool, fix Chinglish, non-native English writing, academic writing AI, ESL essay correction, academic vocabulary improvement"
         canonical="/polish"
       />
 
       <main className="pt-24 pb-16 min-h-screen bg-background">
         <div className="container">
-          {/* Header */}
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-sans font-medium mb-4">
               <Sparkles size={13} />
@@ -90,11 +89,10 @@ export default function Polish() {
               Polish Your Academic English
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Paste your text below. Our AI identifies non-native expressions, upgrades your vocabulary, and explains every change, so you learn while you improve.
+              Paste your text below. Our AI identifies non-native expressions, upgrades your vocabulary, and explains every change so you learn while you revise.
             </p>
           </div>
 
-          {/* Controls */}
           <div className="max-w-4xl mx-auto mb-4 flex flex-wrap gap-3 items-center">
             <Select value={discipline} onValueChange={(v) => setDiscipline(v as typeof discipline)}>
               <SelectTrigger className="w-48 bg-white border-border font-sans text-sm">
@@ -133,9 +131,7 @@ export default function Polish() {
             </div>
           </div>
 
-          {/* Main Editor Area */}
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
-            {/* Input */}
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground">Your Text</span>
@@ -171,12 +167,11 @@ export default function Polish() {
               </Button>
               {!isAuthenticated && (
                 <p className="text-xs text-center text-muted-foreground font-sans">
-                  <a href={getLoginUrl()} className="text-primary underline">Sign in free</a> to save sessions & unlock 1,000 words/day
+                  <a href={getLoginUrl()} className="text-primary underline">Sign in free</a> to save sessions and unlock 1,000 words per day
                 </p>
               )}
             </div>
 
-            {/* Output */}
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground">Polished Version</span>
@@ -202,7 +197,6 @@ export default function Polish() {
                 )}
               </div>
 
-              {/* Score Display */}
               {result && (
                 <div className="bg-white border border-border rounded-xl p-4">
                   <div className="flex items-center justify-between mb-3">
@@ -212,7 +206,7 @@ export default function Polish() {
                   <div className="grid grid-cols-2 gap-2">
                     {Object.entries(result.scoreBreakdown).map(([key, val]) => (
                       <div key={key} className="flex items-center justify-between text-xs font-sans">
-                        <span className="text-muted-foreground capitalize">{key.replace(/([A-Z])/g, ' $1')}</span>
+                        <span className="text-muted-foreground capitalize">{key.replace(/([A-Z])/g, " $1")}</span>
                         <div className="flex items-center gap-2">
                           <div className="w-16 h-1.5 bg-secondary rounded-full overflow-hidden">
                             <div className="h-full bg-primary rounded-full" style={{ width: `${val}%` }} />
@@ -227,7 +221,6 @@ export default function Polish() {
             </div>
           </div>
 
-          {/* Suggestions Panel */}
           {result && result.suggestions.length > 0 && (
             <div className="max-w-4xl mx-auto mt-8">
               <div className="flex items-center justify-between mb-4">
@@ -235,7 +228,7 @@ export default function Polish() {
                   {result.suggestions.length} Improvements Found
                 </h2>
                 <div className="flex flex-wrap gap-2">
-                  {Array.from(new Set(result.suggestions.map(s => s.type))).map(type => (
+                  {Array.from(new Set(result.suggestions.map((s) => s.type))).map((type) => (
                     <Badge key={type} variant="secondary" className="text-xs font-sans">
                       {SUGGESTION_LABELS[type] ?? type}
                     </Badge>
@@ -262,7 +255,7 @@ export default function Polish() {
                         </div>
                         <div className="text-sm font-sans">
                           <span className="line-through opacity-70">{suggestion.original}</span>
-                          <span className="mx-2 opacity-50">→</span>
+                          <span className="mx-2 opacity-50">-&gt;</span>
                           <span className="font-medium">{suggestion.improved}</span>
                         </div>
                       </div>
@@ -288,16 +281,15 @@ export default function Polish() {
             </div>
           )}
 
-          {/* Feature callouts */}
           {!result && (
             <div className="max-w-4xl mx-auto mt-12 grid sm:grid-cols-3 gap-4">
               {[
-                { icon: "🎯", title: "Detects Mother-Tongue Interference", desc: "Identifies Chinglish, Spanglish, and other non-native patterns specific to your language background." },
-                { icon: "📚", title: "Academic Vocabulary Upgrade", desc: "Replaces informal or basic words with precise academic vocabulary from the Academic Word List." },
-                { icon: "💡", title: "Learn From Every Change", desc: "Every suggestion includes a clear explanation so you improve your writing skills over time." },
+                { icon: "01", title: "Detects Mother-Tongue Interference", desc: "Identifies Chinglish, Spanglish, and other non-native patterns specific to your language background." },
+                { icon: "02", title: "Academic Vocabulary Upgrade", desc: "Replaces informal or basic words with more precise academic vocabulary." },
+                { icon: "03", title: "Learn From Every Change", desc: "Every suggestion includes a clear explanation so you improve your writing skills over time." },
               ].map((item) => (
                 <div key={item.title} className="p-5 bg-white border border-border rounded-xl">
-                  <div className="text-2xl mb-3">{item.icon}</div>
+                  <div className="text-sm font-sans font-semibold text-primary mb-3">{item.icon}</div>
                   <h3 className="font-sans font-semibold text-sm text-foreground mb-2">{item.title}</h3>
                   <p className="text-xs text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
                 </div>

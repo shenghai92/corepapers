@@ -8,8 +8,8 @@ const FOOTER_LINKS = {
   ],
   Resources: [
     { label: "Blog", href: "/blog" },
-    { label: "APA Guide", href: "/blog/apa-format-guide" },
-    { label: "ESL Writing Tips", href: "/blog/esl-writing-mistakes" },
+    { label: "APA Guide", href: "/blog/complete-apa-7th-edition-guide-international-students" },
+    { label: "ESL Writing Tips", href: "/blog/how-to-avoid-common-esl-writing-mistakes" },
     { label: "Academic Phrases", href: "/phrases" },
   ],
   Company: [
@@ -36,6 +36,9 @@ export default function Footer() {
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               The academic writing assistant built for non-native English speakers. Write with confidence, cite with precision.
+            </p>
+            <p className="text-sm text-muted-foreground mt-4">
+              Support: <a className="text-primary underline" href="mailto:support@corepapers.space">support@corepapers.space</a>
             </p>
           </div>
 

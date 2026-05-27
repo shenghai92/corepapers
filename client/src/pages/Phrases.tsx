@@ -2,18 +2,17 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import SEOHead from "@/components/SEOHead";
-import { Copy, CheckCircle2, Search } from "lucide-react";
+import { Copy, CheckCircle2, Search, ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { Link } from "wouter";
 
 type Discipline = "all" | "stem" | "social_science" | "humanities";
-type Category = string;
 
 interface Phrase {
   id: string;
   text: string;
   function: string;
-  example?: string;
   tags: string[];
 }
 
@@ -27,102 +26,61 @@ const PHRASE_DATA: Record<string, PhraseGroup[]> = {
   stem: [
     {
       category: "Introducing Research",
-      icon: "🔬",
+      icon: "Lab",
       phrases: [
         { id: "s1", text: "This study investigates the relationship between [X] and [Y].", function: "Stating research aim", tags: ["introduction", "aim"] },
         { id: "s2", text: "The primary objective of this research is to examine [X].", function: "Stating objective", tags: ["introduction", "objective"] },
         { id: "s3", text: "To date, little research has addressed [X].", function: "Identifying gap", tags: ["gap", "literature"] },
-        { id: "s4", text: "This paper presents a novel approach to [X] by [method].", function: "Presenting novelty", tags: ["novelty", "method"] },
       ],
     },
     {
       category: "Describing Methods",
-      icon: "⚙️",
+      icon: "Method",
       phrases: [
-        { id: "s5", text: "Data were collected using [method] over a period of [time].", function: "Data collection", tags: ["method", "data"] },
-        { id: "s6", text: "The experiment was conducted under controlled conditions to ensure [X].", function: "Experimental setup", tags: ["method", "control"] },
-        { id: "s7", text: "Statistical analysis was performed using [software/test].", function: "Analysis method", tags: ["statistics", "analysis"] },
-        { id: "s8", text: "Samples were prepared according to the protocol described by [Author, Year].", function: "Protocol reference", tags: ["method", "protocol"] },
-      ],
-    },
-    {
-      category: "Presenting Results",
-      icon: "📊",
-      phrases: [
-        { id: "s9", text: "The results indicate that [X] significantly affects [Y] (p < 0.05).", function: "Reporting significance", tags: ["results", "statistics"] },
-        { id: "s10", text: "As shown in Figure [X], there is a positive correlation between [A] and [B].", function: "Referring to figure", tags: ["results", "figure"] },
-        { id: "s11", text: "The data suggest that [X], which is consistent with [Author's] findings.", function: "Comparing results", tags: ["results", "comparison"] },
-        { id: "s12", text: "Notably, [X] was observed in [Y]% of cases.", function: "Highlighting finding", tags: ["results", "highlight"] },
-      ],
-    },
-    {
-      category: "Hedging (Caution)",
-      icon: "🛡️",
-      phrases: [
-        { id: "s13", text: "These findings suggest that [X], although further research is needed to confirm this.", function: "Hedging conclusion", tags: ["hedging", "conclusion"] },
-        { id: "s14", text: "It is possible that [X] may be attributed to [Y].", function: "Cautious explanation", tags: ["hedging", "explanation"] },
-        { id: "s15", text: "The results appear to indicate [X], though this interpretation should be treated with caution.", function: "Cautious interpretation", tags: ["hedging", "interpretation"] },
-        { id: "s16", text: "This could potentially be explained by [X].", function: "Tentative explanation", tags: ["hedging", "explanation"] },
+        { id: "s4", text: "Data were collected using [method] over a period of [time].", function: "Data collection", tags: ["method", "data"] },
+        { id: "s5", text: "The experiment was conducted under controlled conditions to ensure [X].", function: "Experimental setup", tags: ["method", "control"] },
+        { id: "s6", text: "Statistical analysis was performed using [software/test].", function: "Analysis method", tags: ["statistics", "analysis"] },
       ],
     },
   ],
   social_science: [
     {
       category: "Literature Review",
-      icon: "📖",
+      icon: "Review",
       phrases: [
         { id: "ss1", text: "A substantial body of research has demonstrated that [X].", function: "Summarizing literature", tags: ["literature", "summary"] },
-        { id: "ss2", text: "Scholars have increasingly recognized the importance of [X] in [context].", function: "Establishing importance", tags: ["literature", "importance"] },
-        { id: "ss3", text: "While [Author] argues that [X], others contend that [Y].", function: "Presenting debate", tags: ["debate", "contrast"] },
-        { id: "ss4", text: "The concept of [X] was first introduced by [Author] ([Year]) to describe [Y].", function: "Introducing concept", tags: ["concept", "definition"] },
+        { id: "ss2", text: "While [Author] argues that [X], others contend that [Y].", function: "Presenting debate", tags: ["debate", "contrast"] },
       ],
     },
     {
-      category: "Argumentation",
-      icon: "💬",
+      category: "Discussion and Implications",
+      icon: "Discuss",
       phrases: [
-        { id: "ss5", text: "This analysis argues that [X] plays a critical role in [Y].", function: "Stating argument", tags: ["argument", "claim"] },
-        { id: "ss6", text: "The evidence strongly suggests that [X] is a key determinant of [Y].", function: "Evidence-based claim", tags: ["evidence", "claim"] },
-        { id: "ss7", text: "It is worth noting that [X], which challenges the conventional assumption that [Y].", function: "Challenging assumption", tags: ["critique", "challenge"] },
-        { id: "ss8", text: "This perspective is supported by [Author]'s ([Year]) finding that [X].", function: "Supporting with evidence", tags: ["evidence", "support"] },
-      ],
-    },
-    {
-      category: "Discussion & Implications",
-      icon: "🔍",
-      phrases: [
-        { id: "ss9", text: "These findings have significant implications for [policy/practice/theory].", function: "Stating implications", tags: ["implications", "discussion"] },
-        { id: "ss10", text: "This study contributes to the growing body of literature on [X] by [contribution].", function: "Stating contribution", tags: ["contribution", "significance"] },
-        { id: "ss11", text: "The limitations of this study include [X], which may affect the generalizability of the findings.", function: "Acknowledging limitations", tags: ["limitations", "reflexivity"] },
-        { id: "ss12", text: "Future research should explore [X] in order to [purpose].", function: "Future directions", tags: ["future", "recommendation"] },
+        { id: "ss3", text: "These findings have significant implications for [policy/practice/theory].", function: "Stating implications", tags: ["implications", "discussion"] },
+        { id: "ss4", text: "Future research should explore [X] in order to [purpose].", function: "Future directions", tags: ["future", "recommendation"] },
       ],
     },
   ],
   humanities: [
     {
       category: "Textual Analysis",
-      icon: "✍️",
+      icon: "Text",
       phrases: [
         { id: "h1", text: "This passage reveals [X], which can be interpreted as [Y].", function: "Textual interpretation", tags: ["analysis", "interpretation"] },
-        { id: "h2", text: "The author employs [literary device] to convey [theme/idea].", function: "Identifying technique", tags: ["technique", "analysis"] },
-        { id: "h3", text: "A close reading of [text] suggests that [X].", function: "Close reading", tags: ["close reading", "analysis"] },
-        { id: "h4", text: "This can be understood in the context of [historical/cultural framework].", function: "Contextualizing", tags: ["context", "framework"] },
+        { id: "h2", text: "A close reading of [text] suggests that [X].", function: "Close reading", tags: ["close reading", "analysis"] },
       ],
     },
     {
       category: "Critical Engagement",
-      icon: "🎭",
+      icon: "Critique",
       phrases: [
-        { id: "h5", text: "Drawing on [theoretical framework], this essay argues that [X].", function: "Theoretical framing", tags: ["theory", "argument"] },
-        { id: "h6", text: "While [Scholar]'s reading of [X] is compelling, it overlooks [Y].", function: "Critical engagement", tags: ["critique", "engagement"] },
-        { id: "h7", text: "This interpretation challenges the dominant reading of [X] by foregrounding [Y].", function: "Challenging interpretation", tags: ["challenge", "interpretation"] },
-        { id: "h8", text: "The tension between [X] and [Y] is central to understanding [work/period].", function: "Identifying tension", tags: ["tension", "analysis"] },
+        { id: "h3", text: "While [Scholar]'s reading of [X] is compelling, it overlooks [Y].", function: "Critical engagement", tags: ["critique", "engagement"] },
+        { id: "h4", text: "This interpretation challenges the dominant reading of [X] by foregrounding [Y].", function: "Challenging interpretation", tags: ["challenge", "interpretation"] },
       ],
     },
   ],
 };
 
-// Flatten all phrases for "all" view
 const ALL_PHRASES = Object.values(PHRASE_DATA).flat();
 
 const HEDGING_BOOSTING = {
@@ -131,21 +89,24 @@ const HEDGING_BOOSTING = {
     { word: "might", usage: "This might suggest that..." },
     { word: "could", usage: "These results could indicate..." },
     { word: "appears to", usage: "The data appears to show..." },
-    { word: "suggests", usage: "The evidence suggests that..." },
-    { word: "indicates", usage: "This indicates a possible link..." },
-    { word: "seems", usage: "It seems likely that..." },
-    { word: "arguably", usage: "Arguably, this demonstrates..." },
   ],
   boosting: [
     { word: "clearly", usage: "This clearly demonstrates that..." },
     { word: "evidently", usage: "Evidently, the results show..." },
-    { word: "undoubtedly", usage: "Undoubtedly, [X] plays a key role..." },
-    { word: "certainly", usage: "It is certainly the case that..." },
     { word: "strongly", usage: "The data strongly supports..." },
-    { word: "crucial", usage: "It is crucial to note that..." },
     { word: "significant", usage: "A significant finding is that..." },
-    { word: "demonstrates", usage: "This study demonstrates that..." },
   ],
+};
+
+const PHRASES_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "CorePapers Academic Phrase Library",
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Web",
+  url: "https://corepapers.space/phrases",
+  description:
+    "Academic phrase library with discipline-specific sentence templates for STEM, social sciences, and humanities.",
 };
 
 export default function Phrases() {
@@ -160,46 +121,47 @@ export default function Phrases() {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  const currentGroups = discipline === "all" ? ALL_PHRASES : (PHRASE_DATA[discipline] ?? []);
+  const currentGroups = discipline === "all" ? (ALL_PHRASES as PhraseGroup[]) : (PHRASE_DATA[discipline] ?? []);
 
-  const filteredGroups = (discipline === "all" ? currentGroups as PhraseGroup[] : currentGroups as PhraseGroup[]).map((group) => ({
-    ...group,
-    phrases: group.phrases.filter(
-      (p) =>
-        !search ||
-        p.text.toLowerCase().includes(search.toLowerCase()) ||
-        p.function.toLowerCase().includes(search.toLowerCase()) ||
-        p.tags.some((t) => t.toLowerCase().includes(search.toLowerCase()))
-    ),
-  })).filter((g) => g.phrases.length > 0);
+  const filteredGroups = currentGroups
+    .map((group) => ({
+      ...group,
+      phrases: group.phrases.filter(
+        (p) =>
+          !search ||
+          p.text.toLowerCase().includes(search.toLowerCase()) ||
+          p.function.toLowerCase().includes(search.toLowerCase()) ||
+          p.tags.some((t) => t.toLowerCase().includes(search.toLowerCase()))
+      ),
+    }))
+    .filter((g) => g.phrases.length > 0);
 
   return (
     <>
       <SEOHead
-        title="Academic Phrase Library – Sentence Templates for ESL Students"
-        description="Browse 200+ academic sentence templates organized by discipline (STEM, Social Sciences, Humanities). Master hedging, boosting, and academic stance. One-click copy."
-        keywords="academic phrase library, sentence templates ESL, hedging expressions academic writing, academic English phrases, STEM writing templates, social science writing phrases"
+        title="Academic Phrase Library for ESL and International Students"
+        description="Find discipline-specific academic sentence templates for literature reviews, methods, arguments, and hedging. Built for ESL and international students writing in English."
+        keywords="phrase library for academic writing, academic sentence templates, ESL academic phrases, hedging phrases, academic vocabulary upgrade, international student writing help"
         canonical="/phrases"
+        jsonLd={PHRASES_SCHEMA}
       />
 
       <main className="pt-24 pb-16 min-h-screen bg-background">
         <div className="container">
-          {/* Header */}
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-sans font-medium mb-4">
-              📚 Academic Phrase Library
+              Academic Phrase Library
             </div>
             <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
-              Write Like an Academic
+              Academic phrase templates
               <br />
-              <span className="italic">Native Speaker</span>
+              <span className="italic">for stronger English writing</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Discipline-specific sentence templates used by native academic writers. Click any phrase to copy it instantly.
+              Search sentence starters and discipline-specific phrasing used in essays, reports, and research papers.
             </p>
           </div>
 
-          {/* Filters */}
           <div className="max-w-4xl mx-auto mb-8 flex flex-col sm:flex-row gap-3">
             <div className="relative flex-1">
               <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
@@ -227,12 +189,11 @@ export default function Phrases() {
             </div>
           </div>
 
-          {/* Phrase Groups */}
           <div className="max-w-4xl mx-auto space-y-8">
             {filteredGroups.map((group) => (
               <div key={group.category}>
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-xl">{group.icon}</span>
+                  <span className="text-sm font-sans font-semibold text-primary">{group.icon}</span>
                   <h2 className="font-serif font-medium text-xl text-slate-purple">{group.category}</h2>
                   <span className="text-xs text-muted-foreground font-sans ml-1">({group.phrases.length})</span>
                 </div>
@@ -268,28 +229,18 @@ export default function Phrases() {
             ))}
           </div>
 
-          {/* Hedging & Boosting Reference */}
           <div className="max-w-4xl mx-auto mt-16">
             <div className="text-center mb-8">
               <h2 className="font-serif font-light text-3xl text-slate-purple mb-3">
-                Hedging & Boosting Reference
+                Hedging and boosting reference
               </h2>
               <p className="text-sm text-muted-foreground font-sans">
-                Control the certainty level of your academic claims with these essential words.
+                Adjust the certainty of your academic claims with these common expressions.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {/* Hedging */}
               <div className="bg-white border border-border rounded-2xl p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
-                    <span className="text-sm">🛡️</span>
-                  </div>
-                  <div>
-                    <h3 className="font-sans font-semibold text-foreground">Hedging Language</h3>
-                    <p className="text-xs text-muted-foreground">Express caution & uncertainty</p>
-                  </div>
-                </div>
+                <h3 className="font-sans font-semibold text-foreground mb-4">Hedging language</h3>
                 <div className="space-y-2">
                   {HEDGING_BOOSTING.hedging.map((item) => (
                     <div
@@ -307,17 +258,8 @@ export default function Phrases() {
                 </div>
               </div>
 
-              {/* Boosting */}
               <div className="bg-white border border-border rounded-2xl p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center">
-                    <span className="text-sm">⚡</span>
-                  </div>
-                  <div>
-                    <h3 className="font-sans font-semibold text-foreground">Boosting Language</h3>
-                    <p className="text-xs text-muted-foreground">Express confidence & emphasis</p>
-                  </div>
-                </div>
+                <h3 className="font-sans font-semibold text-foreground mb-4">Boosting language</h3>
                 <div className="space-y-2">
                   {HEDGING_BOOSTING.boosting.map((item) => (
                     <div
@@ -335,6 +277,21 @@ export default function Phrases() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-border bg-white p-6">
+            <div>
+              <h2 className="font-serif text-2xl text-slate-purple">Need help applying these phrases?</h2>
+              <p className="text-sm text-muted-foreground font-sans mt-2">
+                Use the essay polish tool to revise full paragraphs and learn how to sound more academic.
+              </p>
+            </div>
+            <Button asChild className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
+              <Link href="/polish">
+                Try Essay Polish
+                <ArrowRight size={16} className="ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
       </main>

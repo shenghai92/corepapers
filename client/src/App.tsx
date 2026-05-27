@@ -14,6 +14,9 @@ const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const About = lazy(() => import("./pages/About"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Login = lazy(() => import("./pages/Login"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -45,6 +48,9 @@ function Router() {
         <Route path="/phrases" component={() => <PublicLayout><Phrases /></PublicLayout>} />
         <Route path="/citations" component={() => <PublicLayout><Citations /></PublicLayout>} />
         <Route path="/pricing" component={() => <PublicLayout><Pricing /></PublicLayout>} />
+        <Route path="/about" component={() => <PublicLayout><About /></PublicLayout>} />
+        <Route path="/privacy" component={() => <PublicLayout><Privacy /></PublicLayout>} />
+        <Route path="/terms" component={() => <PublicLayout><Terms /></PublicLayout>} />
         <Route path="/blog" component={() => <PublicLayout><Blog /></PublicLayout>} />
         <Route path="/blog/:slug" component={() => <PublicLayout><BlogPost /></PublicLayout>} />
         <Route path="/login" component={() => <Login />} />

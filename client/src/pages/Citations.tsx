@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
 import SEOHead from "@/components/SEOHead";
 import { Quote, Copy, CheckCircle2, Loader2, BookOpen, Globe, FileText, GraduationCap, Mic } from "lucide-react";
@@ -35,7 +34,7 @@ const FIELD_CONFIGS: Record<SourceType, Array<{ key: string; label: string; plac
     { key: "journal", label: "Journal Name", placeholder: "Nature", required: true },
     { key: "volume", label: "Volume", placeholder: "12" },
     { key: "issue", label: "Issue", placeholder: "3" },
-    { key: "pages", label: "Pages", placeholder: "45–67" },
+    { key: "pages", label: "Pages", placeholder: "45-67" },
     { key: "doi", label: "DOI", placeholder: "10.1000/xyz123", span: true },
   ],
   book: [
@@ -60,7 +59,7 @@ const FIELD_CONFIGS: Record<SourceType, Array<{ key: string; label: string; plac
     { key: "title", label: "Chapter Title", placeholder: "Introduction to...", required: true, span: true },
     { key: "editors", label: "Book Editor(s)", placeholder: "Jones, B. (Ed.)", span: true },
     { key: "booktitle", label: "Book Title", placeholder: "Handbook of...", required: true, span: true },
-    { key: "pages", label: "Pages", placeholder: "45–67" },
+    { key: "pages", label: "Pages", placeholder: "45-67" },
     { key: "publisher", label: "Publisher", placeholder: "Springer" },
   ],
   thesis: [
@@ -76,7 +75,7 @@ const FIELD_CONFIGS: Record<SourceType, Array<{ key: string; label: string; plac
     { key: "year", label: "Year", placeholder: "2023", required: true },
     { key: "title", label: "Paper Title", placeholder: "A study of...", required: true, span: true },
     { key: "booktitle", label: "Conference Name", placeholder: "Proceedings of the 2023 ACL...", required: true, span: true },
-    { key: "pages", label: "Pages", placeholder: "123–130" },
+    { key: "pages", label: "Pages", placeholder: "123-130" },
     { key: "publisher", label: "Publisher / Location", placeholder: "ACL Anthology" },
   ],
 };
@@ -95,7 +94,6 @@ export default function Citations() {
   const fields = FIELD_CONFIGS[sourceType];
 
   const handleGenerate = () => {
-    const titleField = fields.find((f) => f.key === "title");
     if (!formData.title?.trim()) {
       toast.error("Please enter the title.");
       return;
@@ -114,36 +112,41 @@ export default function Citations() {
     setTimeout(() => setCopied(null), 2000);
   };
 
-  const SourceIcon = SOURCE_ICONS[sourceType];
-
   return (
     <>
       <SEOHead
-        title="Free Citation Generator – APA, MLA, Chicago, IEEE"
-        description="Generate perfect citations in APA 7th, MLA 9th, Chicago 17th, and IEEE format. Free citation generator for international students. Never lose marks on formatting."
-        keywords="citation generator free, APA citation generator, MLA citation, Chicago format, IEEE citation, bibliography generator, reference generator students"
+        title="Free Citation Generator for APA, MLA, Chicago, and IEEE"
+        description="Generate APA, MLA, Chicago, and IEEE citations for journal articles, books, websites, theses, and conference papers. Fast citation help for international students."
+        keywords="free citation generator, APA citation generator, MLA citation generator, Chicago citation generator, IEEE citation generator, bibliography generator"
         canonical="/citations"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "CorePapers Citation Generator",
+          applicationCategory: "EducationalApplication",
+          operatingSystem: "Web",
+          url: "https://corepapers.space/citations",
+          description: "Generate academic citations online in APA, MLA, Chicago, and IEEE styles.",
+        }}
       />
 
       <main className="pt-24 pb-16 min-h-screen bg-background">
         <div className="container">
-          {/* Header */}
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-sans font-medium mb-4">
               <Quote size={13} />
               Citation Generator
             </div>
             <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
-              Perfect Citations,
-              <span className="italic"> Every Time</span>
+              Perfect citations,
+              <span className="italic"> every time</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Generate APA, MLA, Chicago, and IEEE citations instantly. Never lose marks over formatting errors again.
+              Build correctly formatted references and in-text citations for the source types students use most.
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto">
-            {/* Format Selector */}
             <div className="mb-6">
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-3">Citation Format</p>
               <div className="grid grid-cols-4 gap-2">
@@ -164,7 +167,6 @@ export default function Citations() {
               </div>
             </div>
 
-            {/* Source Type Selector */}
             <div className="mb-6">
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-3">Source Type</p>
               <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
@@ -173,7 +175,10 @@ export default function Citations() {
                   return (
                     <button
                       key={type}
-                      onClick={() => { setSourceType(type); setFormData({}); }}
+                      onClick={() => {
+                        setSourceType(type);
+                        setFormData({});
+                      }}
                       className={`p-3 rounded-xl border text-center transition-all flex flex-col items-center gap-1.5 ${
                         sourceType === type
                           ? "border-primary bg-primary/5"
@@ -188,7 +193,6 @@ export default function Citations() {
               </div>
             </div>
 
-            {/* Form Fields */}
             <div className="bg-white border border-border rounded-2xl p-6 mb-6">
               <div className="grid grid-cols-2 gap-4">
                 {fields.map((field) => (
@@ -213,22 +217,24 @@ export default function Citations() {
                 className="mt-6 w-full bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90 py-5 text-base font-sans"
               >
                 {generateMutation.isPending ? (
-                  <><Loader2 size={18} className="mr-2 animate-spin" /> Generating Citation...</>
+                  <>
+                    <Loader2 size={18} className="mr-2 animate-spin" />
+                    Generating Citation...
+                  </>
                 ) : (
-                  <><Quote size={18} className="mr-2" /> Generate Citation</>
+                  <>
+                    <Quote size={18} className="mr-2" />
+                    Generate Citation
+                  </>
                 )}
               </Button>
             </div>
 
-            {/* Result */}
             {result && (
               <div className="space-y-4">
-                {/* Full Citation */}
                 <div className={`p-5 rounded-2xl border ${FORMAT_INFO[format].color}`}>
                   <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-sans font-bold uppercase tracking-widest">{FORMAT_INFO[format].name} Reference</span>
-                    </div>
+                    <span className="text-xs font-sans font-bold uppercase tracking-widest">{FORMAT_INFO[format].name} Reference</span>
                     <button
                       onClick={() => handleCopy(result.citation, "citation")}
                       className="flex items-center gap-1.5 text-xs font-sans font-medium hover:underline"
@@ -240,7 +246,6 @@ export default function Citations() {
                   <p className="font-sans text-sm leading-relaxed">{result.citation}</p>
                 </div>
 
-                {/* In-text Citation */}
                 <div className="p-5 rounded-2xl bg-secondary border border-border">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-sans font-bold uppercase tracking-widest text-muted-foreground">In-Text Citation</span>
@@ -255,7 +260,6 @@ export default function Citations() {
                   <code className="font-mono text-sm text-foreground">{result.inTextCitation}</code>
                 </div>
 
-                {/* Notes */}
                 {result.notes && (
                   <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-700 font-sans">
                     <span className="font-semibold">Note: </span>{result.notes}
@@ -264,13 +268,12 @@ export default function Citations() {
               </div>
             )}
 
-            {/* Format Guide */}
             <div className="mt-12 grid sm:grid-cols-2 gap-4">
               {[
-                { format: "APA 7th", use: "Psychology, Education, Social Sciences", example: 'Smith, J. A. (2023). Title. Journal, 12(3), 45–67.' },
-                { format: "MLA 9th", use: "Literature, Arts, Humanities", example: 'Smith, John A. "Title." Journal, vol. 12, no. 3, 2023, pp. 45–67.' },
-                { format: "Chicago 17th", use: "History, Fine Arts, Business", example: 'Smith, John A. "Title." Journal 12, no. 3 (2023): 45–67.' },
-                { format: "IEEE", use: "Engineering, Computer Science", example: 'J. A. Smith, "Title," Journal, vol. 12, no. 3, pp. 45–67, 2023.' },
+                { format: "APA 7th", use: "Psychology, Education, Social Sciences", example: 'Smith, J. A. (2023). Title. Journal, 12(3), 45-67.' },
+                { format: "MLA 9th", use: "Literature, Arts, Humanities", example: 'Smith, John A. "Title." Journal, vol. 12, no. 3, 2023, pp. 45-67.' },
+                { format: "Chicago 17th", use: "History, Fine Arts, Business", example: 'Smith, John A. "Title." Journal 12, no. 3 (2023): 45-67.' },
+                { format: "IEEE", use: "Engineering, Computer Science", example: 'J. A. Smith, "Title," Journal, vol. 12, no. 3, pp. 45-67, 2023.' },
               ].map((item) => (
                 <div key={item.format} className="p-4 bg-white border border-border rounded-xl">
                   <div className="font-sans font-semibold text-sm text-foreground mb-1">{item.format}</div>
