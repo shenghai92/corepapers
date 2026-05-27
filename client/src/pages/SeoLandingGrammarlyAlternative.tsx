@@ -59,7 +59,7 @@ export default function SeoLandingGrammarlyAlternative() {
               <Scale size={13} />
               Academic Writing Workflow
             </div>
-            <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
+            <h1 className="font-serif font-light text-3xl sm:text-5xl text-slate-purple mb-4 leading-tight">
               A more academic-writing-focused
               <span className="italic"> alternative for international students</span>
             </h1>

@@ -165,7 +165,7 @@ export default function Pricing() {
               <Star size={13} className="fill-primary" />
               Transparent Pricing
             </div>
-            <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
+            <h1 className="font-serif font-light text-3xl sm:text-5xl text-slate-purple mb-4 max-w-3xl mx-auto leading-tight">
               Academic support
               <span className="italic"> at student-friendly prices</span>
             </h1>

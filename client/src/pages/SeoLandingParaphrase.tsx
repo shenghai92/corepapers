@@ -59,7 +59,7 @@ export default function SeoLandingParaphrase() {
               <PenTool size={13} />
               Source-Based Writing Support
             </div>
-            <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
+            <h1 className="font-serif font-light text-3xl sm:text-5xl text-slate-purple mb-4 leading-tight">
               Academic paraphrasing tool
               <span className="italic"> for ESL students</span>
             </h1>

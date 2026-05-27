@@ -67,7 +67,7 @@ export default function SeoLandingApa() {
               <Quote size={13} />
               APA 7th Edition Help
             </div>
-            <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
+            <h1 className="font-serif font-light text-3xl sm:text-5xl text-slate-purple mb-4 leading-tight">
               APA citation generator
               <span className="italic"> for international students</span>
             </h1>

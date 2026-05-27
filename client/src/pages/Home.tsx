@@ -139,7 +139,7 @@ export default function Home() {
                 <span>Built for international students writing in English</span>
               </div>
 
-              <h1 className="font-serif font-light text-5xl sm:text-6xl lg:text-7xl text-slate-purple leading-tight mb-6">
+              <h1 className="font-serif font-light text-4xl sm:text-6xl lg:text-7xl text-slate-purple leading-tight mb-6">
                 Write Academic English
                 <br />
                 <span className="italic font-normal">with More Clarity</span>
