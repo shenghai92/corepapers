@@ -100,15 +100,16 @@ export default function Polish() {
 
             <Select value={nativeLanguage} onValueChange={setNativeLanguage}>
               <SelectTrigger className="w-44 bg-white border-border font-sans text-sm">
-                <SelectValue placeholder="My native language" />
+                <SelectValue placeholder="Native language" />
               </SelectTrigger>
               <SelectContent>
+                <SelectItem value="English">English</SelectItem>
                 <SelectItem value="Chinese">Chinese</SelectItem>
                 <SelectItem value="Spanish">Spanish</SelectItem>
                 <SelectItem value="French">French</SelectItem>
                 <SelectItem value="Arabic">Arabic</SelectItem>
-                <SelectItem value="Japanese">Japanese (日本語)</SelectItem>
-                <SelectItem value="Korean">Korean (한국어)</SelectItem>
+                <SelectItem value="Japanese">Japanese</SelectItem>
+                <SelectItem value="Korean">Korean</SelectItem>
                 <SelectItem value="Portuguese">Portuguese</SelectItem>
                 <SelectItem value="Other">Other</SelectItem>
               </SelectContent>

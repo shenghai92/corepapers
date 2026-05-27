@@ -233,6 +233,20 @@ const assertApiKey = (env: RuntimeEnv = ENV) => {
   }
 };
 
+const resolveDefaultModel = (env: RuntimeEnv = ENV) => {
+  const configuredModel = env.customAiModel?.trim();
+  if (configuredModel) {
+    return configuredModel;
+  }
+
+  const baseUrl = env.customAiBaseUrl?.toLowerCase() ?? "";
+  if (baseUrl.includes("openai.com")) {
+    return "gpt-4.1-mini";
+  }
+
+  return "claude-sonnet-4-6";
+};
+
 const normalizeResponseFormat = ({
   responseFormat,
   response_format,
@@ -295,7 +309,7 @@ export async function invokeLLM(
     response_format,
   } = params;
 
-  const model = env.customAiModel?.trim() || "claude-sonnet-4-6";
+  const model = resolveDefaultModel(env);
 
   const payload: Record<string, unknown> = {
     model,
