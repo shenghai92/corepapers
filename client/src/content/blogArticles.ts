@@ -636,6 +636,372 @@ If your discussion sounds repetitive or too blunt, [essay polish](/polish) can h
 
 A good discussion section guides the reader from results to meaning. Once you focus on interpretation instead of repetition, the section becomes much easier to shape.`,
   },
+  {
+    slug: "how-to-write-a-thesis-statement-for-an-academic-essay",
+    title: "How to Write a Thesis Statement for an Academic Essay",
+    excerpt:
+      "Learn how to write a clear, arguable, and focused thesis statement that gives your essay direction from the start.",
+    category: "Essay Structure",
+    tags: ["Thesis Statement", "Essay Writing", "Academic Writing"],
+    readingTime: 9,
+    metaDescription:
+      "Learn how to write a thesis statement for an academic essay. Practical examples, common mistakes, and revision tips for international students.",
+    publishedAt: "2024-03-03",
+    featured: false,
+    content: `## Why the Thesis Statement Matters
+
+The thesis statement is the sentence that tells the reader what your essay is trying to prove, explain, or evaluate. A weak thesis creates confusion from the beginning. A strong one gives the whole paper direction.
+
+Many international students understand their topic well but write thesis statements that are too broad, too descriptive, or too obvious. The problem is usually not grammar. It is focus.
+
+## What a Good Thesis Statement Does
+
+A strong thesis statement is:
+
+- specific
+- arguable
+- relevant to the assignment
+- narrow enough to support within the word limit
+
+It should tell the reader both the topic and your position or main line of argument.
+
+## Compare Weak and Strong Examples
+
+Weak: "Social media is important for university students."
+
+Stronger: "Although social media can support peer collaboration, excessive use of short-form platforms may reduce sustained attention during independent study."
+
+The second version is stronger because it makes a clear claim and gives the essay a direction.
+
+## A Simple Formula
+
+You do not need to use a formula forever, but it can help while drafting:
+
+"This essay argues that [main claim] because [reason 1], [reason 2], and [reason 3]."
+
+Once you have the logic, you can revise the sentence to sound smoother and more natural.
+
+## Three Common Problems
+
+### Problem 1: The thesis is only a topic
+
+"This essay discusses climate change."
+
+This tells the reader the subject, but not the argument.
+
+### Problem 2: The thesis is too broad
+
+"Technology has changed education."
+
+That may be true, but it is too large for one essay unless the assignment is extremely general.
+
+### Problem 3: The thesis only states a fact
+
+"Many students use AI tools for writing."
+
+That sounds more like background information than a thesis. The thesis should do more analytical work.
+
+## How to Build a Thesis From Your Notes
+
+If you are stuck, start with these questions:
+
+1. What is the exact issue I am responding to?
+2. What do I want the reader to believe by the end?
+3. What are the two or three strongest reasons?
+4. Are there any limits or conditions I need to mention?
+
+Your answers often contain the thesis already, even if it does not sound polished yet.
+
+## When to Revise the Thesis
+
+Many students think the thesis must be perfect before they draft. In reality, the best thesis statements often become clear after some writing has happened. It is normal to revise the thesis once your body paragraphs sharpen the argument.
+
+## Sentence Patterns You Can Use
+
+- "This essay argues that..."
+- "The central claim of this paper is that..."
+- "Although X is often seen as Y, this essay contends that..."
+- "This paper suggests that..."
+
+For more sentence starters, visit the [academic phrases page](/phrases).
+
+## CorePapers Tip
+
+If your thesis sounds vague or too conversational, [essay polish](/polish) can help refine the sentence and make the claim more academic.
+
+## Conclusion
+
+A thesis statement does not need to sound dramatic. It needs to sound clear, focused, and defensible. Once you know the claim your paper is making, the rest of the essay becomes much easier to organize.`,
+  },
+  {
+    slug: "how-to-write-a-research-proposal-for-university",
+    title: "How to Write a Research Proposal for University",
+    excerpt:
+      "A step-by-step guide to writing a research proposal, including structure, scope, and academic language tips.",
+    category: "Research Writing",
+    tags: ["Research Proposal", "University Writing", "Research Writing"],
+    readingTime: 11,
+    metaDescription:
+      "Learn how to write a research proposal for university. Structure, section guidance, and writing tips for international students.",
+    publishedAt: "2024-03-10",
+    featured: false,
+    content: `## What a Research Proposal Needs to Show
+
+A research proposal explains what you want to study, why the topic matters, how you plan to investigate it, and why the project is manageable. In many courses, the proposal is not judged only on the idea itself. It is also judged on clarity, feasibility, and awareness of existing research.
+
+## A Basic Research Proposal Structure
+
+Most university proposals include some version of these sections:
+
+- title
+- introduction or background
+- research question
+- brief literature review
+- methodology
+- significance of the study
+- timeline or expected scope
+- references
+
+Your department may rename these sections, but the logic is usually similar.
+
+## Start With a Manageable Topic
+
+One of the most common mistakes is choosing a topic that is too wide. A proposal should not promise to solve an entire field-level problem. It should define a focused question that can actually be studied with the time and resources available.
+
+For example, "AI in education" is too broad. "How first-year international students use AI feedback tools when revising short analytical essays" is much more workable.
+
+## Writing the Introduction
+
+The introduction should do three things:
+
+1. introduce the topic
+2. explain why it matters
+3. lead toward the research question
+
+Avoid turning the introduction into a long general essay. Move toward the specific project fairly quickly.
+
+## The Literature Review Section
+
+In a proposal, the literature review is usually short. Its job is not to summarize everything ever written. It should show that you know the relevant conversation and can identify a gap or unresolved issue.
+
+If you need help shaping that section, see the [literature review guide](/blog/how-to-write-a-literature-review-for-international-students).
+
+## Writing the Methodology
+
+Your methodology should explain:
+
+- what kind of data you will collect
+- who or what you will study
+- how you will analyze the material
+- why this method fits the question
+
+Be concrete. Readers need to know that the project is realistic.
+
+## Common Proposal Problems
+
+### The question is unclear
+
+If the reader cannot identify the exact question, the rest of the proposal becomes weak.
+
+### The project is too ambitious
+
+A proposal should show ambition in thinking, but realism in scope.
+
+### The method does not match the question
+
+If you want to study experience or perception, a purely numerical method may not be enough. If you want to compare measurable outcomes, a vague descriptive plan may not be enough.
+
+## Useful Sentence Patterns
+
+- "This proposal examines..."
+- "The study aims to investigate..."
+- "Previous research has largely focused on..."
+- "However, limited attention has been given to..."
+- "To address this gap, the present study will..."
+
+## CorePapers Tip
+
+You can draft the structure first, then use [essay polish](/polish) to improve clarity and formality. If you are collecting sources while planning the proposal, the [citation tool](/citations) can also save time.
+
+## Conclusion
+
+A good research proposal is clear about purpose, limited in scope, and realistic about method. If the reader can see exactly what you want to study and how you will study it, the proposal is already doing much of its job well.`,
+  },
+  {
+    slug: "how-to-write-a-methodology-section-for-a-research-paper",
+    title: "How to Write a Methodology Section for a Research Paper",
+    excerpt:
+      "Learn how to explain research design, data collection, and analysis clearly in a methodology section.",
+    category: "Research Writing",
+    tags: ["Methodology", "Research Paper", "Academic Writing"],
+    readingTime: 10,
+    metaDescription:
+      "Learn how to write a methodology section for a research paper. Practical guidance on design, sampling, data collection, and analysis.",
+    publishedAt: "2024-03-17",
+    featured: false,
+    content: `## What the Methodology Section Is For
+
+The methodology section explains how the study was conducted and why those choices make sense. Readers should come away knowing what kind of research you did, what data you used, and how you analyzed it.
+
+This section is often difficult because students either become too vague or include every minor detail without a clear structure.
+
+## What to Include
+
+Depending on your field, a methodology section may include:
+
+- research design
+- participants or data source
+- sampling strategy
+- materials or instruments
+- procedure
+- method of analysis
+- ethical considerations
+
+Not every paper needs every subsection, but most methodology sections need a clear sequence.
+
+## Start With the Research Design
+
+Tell the reader whether the study is qualitative, quantitative, mixed-methods, experimental, comparative, case-based, or something similar. This gives the section a frame.
+
+## Explain Data Collection Clearly
+
+Readers should know:
+
+- what data was collected
+- where it came from
+- when collection happened
+- how the data was gathered
+
+For example, instead of writing "Data was collected from students," explain whether you used surveys, interviews, classroom observations, or assignment drafts.
+
+## Describe the Sample
+
+Be specific about who or what was included. Sample size, context, and selection criteria all matter because they shape how far the findings can be generalized.
+
+## Explain the Analysis
+
+This is where many methodology sections become too thin. Do not stop after saying you collected the data. Explain how you interpreted it.
+
+Examples:
+
+- thematic coding for interviews
+- statistical comparison for numerical data
+- discourse analysis for texts
+- content analysis for documents
+
+## Common Mistakes
+
+### Being too general
+
+If the reader could not repeat your process, the description may be too vague.
+
+### Mixing results into methodology
+
+The methodology explains process, not findings.
+
+### Using complicated language to hide uncertainty
+
+Simple, precise wording is usually stronger than abstract phrasing.
+
+## Useful Sentence Patterns
+
+- "This study employed a qualitative research design..."
+- "Data were collected through..."
+- "Participants were selected based on..."
+- "The data were analyzed using..."
+- "This method was chosen because..."
+
+## CorePapers Tip
+
+If your methodology sounds repetitive or awkward, [essay polish](/polish) can help smooth the phrasing. If you are citing method sources or research instruments, the [citation generator](/citations) can help keep references organized.
+
+## Conclusion
+
+A strong methodology section is specific, logical, and transparent. Its goal is not to sound technical for its own sake. Its goal is to show that your research process was appropriate and understandable.`,
+  },
+  {
+    slug: "mla-9th-edition-guide-for-international-students",
+    title: "MLA 9th Edition Guide for International Students",
+    excerpt:
+      "A practical MLA 9 guide for students who need help with Works Cited entries, in-text citations, and common formatting issues.",
+    category: "Citation Guides",
+    tags: ["MLA", "Citation", "Works Cited"],
+    readingTime: 11,
+    metaDescription:
+      "Learn MLA 9th edition formatting with a practical guide for international students. Includes in-text citations, Works Cited rules, and common mistakes.",
+    publishedAt: "2024-03-24",
+    featured: false,
+    content: `## Why MLA Feels Different
+
+MLA style is widely used in literature, language, cultural studies, and many humanities subjects. Students who are used to APA often find MLA confusing because it relies more heavily on author-page citations and uses different title and container rules.
+
+## The Core Parts of MLA
+
+The two elements students use most often are:
+
+- in-text citations
+- the Works Cited list
+
+As with other styles, the goal is to help readers identify and locate the source.
+
+## In-Text Citations
+
+The basic MLA pattern is:
+
+(Author page)
+
+Examples:
+
+- (Smith 45)
+- (Garcia and Lee 112)
+
+If the author's name already appears in your sentence, only include the page number in parentheses.
+
+## Works Cited Basics
+
+MLA entries often follow a pattern based on containers. A container is the larger work that holds the source, such as a journal, website, or edited collection.
+
+### Book example
+
+Smith, John A. *Academic Writing for Multilingual Students*. Oxford UP, 2023.
+
+### Journal article example
+
+Lee, Maria, and Hasan Rahman. "Language Support in First-Year Writing." *Journal of Academic Literacy*, vol. 12, no. 2, 2023, pp. 33-49.
+
+### Website example
+
+Brown, Alicia. "How to Revise a Literature Review." *Writing Center Online*, 14 Mar. 2023, www.example.org/revise-review.
+
+## Common MLA Mistakes
+
+### Missing page numbers in in-text citations
+
+When the source has page numbers, MLA usually expects them.
+
+### Mixing title capitalization rules
+
+MLA uses title-style capitalization more often than APA.
+
+### Forgetting italics for containers
+
+Book titles, journal titles, and website names are often containers and are commonly italicized.
+
+## A Fast MLA Workflow
+
+1. Record author, title, container, date, and page range when reading.
+2. Add in-text citations while drafting.
+3. Build Works Cited entries from the exact source details.
+4. Check punctuation and italics carefully.
+
+## CorePapers Tip
+
+You can use the [citation generator](/citations) for MLA entries, then use [essay polish](/polish) to make sure source integration sounds natural in your paragraph.
+
+## Conclusion
+
+MLA becomes much easier once you understand how in-text citations connect to the Works Cited list. The main challenge is consistency, not complexity.`,
+  },
 ];
 
 export const STATIC_ARTICLE_MAP: Record<string, StaticArticle> = Object.fromEntries(
