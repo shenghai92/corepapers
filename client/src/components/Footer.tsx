@@ -12,6 +12,11 @@ const FOOTER_LINKS = {
     { label: "ESL Writing Tips", href: "/blog/how-to-avoid-common-esl-writing-mistakes" },
     { label: "Academic Phrases", href: "/phrases" },
   ],
+  Popular: [
+    { label: "APA Citation Generator", href: "/apa-citation-generator-for-international-students" },
+    { label: "AI Essay Polisher", href: "/ai-essay-polisher-for-non-native-english-writers" },
+    { label: "Academic Paraphrasing Tool", href: "/academic-paraphrasing-tool-for-esl-students" },
+  ],
   Company: [
     { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },

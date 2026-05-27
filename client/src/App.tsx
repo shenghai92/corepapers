@@ -12,6 +12,9 @@ const Polish = lazy(() => import("./pages/Polish"));
 const Phrases = lazy(() => import("./pages/Phrases"));
 const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
+const SeoLandingApa = lazy(() => import("./pages/SeoLandingApa"));
+const SeoLandingEssayPolish = lazy(() => import("./pages/SeoLandingEssayPolish"));
+const SeoLandingParaphrase = lazy(() => import("./pages/SeoLandingParaphrase"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const About = lazy(() => import("./pages/About"));
@@ -48,6 +51,9 @@ function Router() {
         <Route path="/phrases" component={() => <PublicLayout><Phrases /></PublicLayout>} />
         <Route path="/citations" component={() => <PublicLayout><Citations /></PublicLayout>} />
         <Route path="/pricing" component={() => <PublicLayout><Pricing /></PublicLayout>} />
+        <Route path="/apa-citation-generator-for-international-students" component={() => <PublicLayout><SeoLandingApa /></PublicLayout>} />
+        <Route path="/ai-essay-polisher-for-non-native-english-writers" component={() => <PublicLayout><SeoLandingEssayPolish /></PublicLayout>} />
+        <Route path="/academic-paraphrasing-tool-for-esl-students" component={() => <PublicLayout><SeoLandingParaphrase /></PublicLayout>} />
         <Route path="/about" component={() => <PublicLayout><About /></PublicLayout>} />
         <Route path="/privacy" component={() => <PublicLayout><Privacy /></PublicLayout>} />
         <Route path="/terms" component={() => <PublicLayout><Terms /></PublicLayout>} />
