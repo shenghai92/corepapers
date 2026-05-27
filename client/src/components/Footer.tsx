@@ -16,6 +16,7 @@ const FOOTER_LINKS = {
     { label: "APA Citation Generator", href: "/apa-citation-generator-for-international-students" },
     { label: "AI Essay Polisher", href: "/ai-essay-polisher-for-non-native-english-writers" },
     { label: "Academic Paraphrasing Tool", href: "/academic-paraphrasing-tool-for-esl-students" },
+    { label: "Academic Writing Alternative", href: "/academic-writing-alternative-for-international-students" },
   ],
   Company: [
     { label: "Pricing", href: "/pricing" },
