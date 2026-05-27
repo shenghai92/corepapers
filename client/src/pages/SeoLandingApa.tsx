@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, CheckCircle2, Quote, GraduationCap } from "lucide-react";
 import { getLoginUrl } from "@/const";
+import { trackEvent } from "@/lib/analytics";
 
 const FAQ = [
   {
@@ -76,13 +77,19 @@ export default function SeoLandingApa() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
-                <Link href="/citations">
+                <Link
+                  href="/citations"
+                  onClick={() => trackEvent("cta_click", { location: "landing_apa_hero", target: "use_tool" })}
+                >
                   Use APA Citation Tool
                   <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="bg-white border-border">
-                <a href={getLoginUrl()}>
+                <a
+                  href={getLoginUrl()}
+                  onClick={() => trackEvent("cta_click", { location: "landing_apa_hero", target: "start_free" })}
+                >
                   Start Free
                 </a>
               </Button>
@@ -137,7 +144,10 @@ export default function SeoLandingApa() {
                 ))}
               </div>
               <Button asChild className="w-full mt-6 bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
-                <Link href="/citations">
+                <Link
+                  href="/citations"
+                  onClick={() => trackEvent("cta_click", { location: "landing_apa_sidebar", target: "generate_citation" })}
+                >
                   Generate APA Citation
                   <ArrowRight size={16} className="ml-2" />
                 </Link>

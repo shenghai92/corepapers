@@ -3,6 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, GraduationCap, PenTool } from "lucide-react";
 import { getLoginUrl } from "@/const";
+import { trackEvent } from "@/lib/analytics";
 
 const FAQ = [
   {
@@ -68,13 +69,19 @@ export default function SeoLandingParaphrase() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
-                <Link href="/polish">
+                <Link
+                  href="/polish"
+                  onClick={() => trackEvent("cta_click", { location: "landing_paraphrase_hero", target: "revise_paraphrase" })}
+                >
                   Revise a Paraphrase
                   <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="bg-white border-border">
-                <Link href="/citations">
+                <Link
+                  href="/citations"
+                  onClick={() => trackEvent("cta_click", { location: "landing_paraphrase_hero", target: "generate_citation" })}
+                >
                   Generate Citation
                 </Link>
               </Button>
@@ -120,13 +127,19 @@ export default function SeoLandingParaphrase() {
               </div>
               <div className="space-y-3 mt-6">
                 <Button asChild className="w-full bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
-                  <Link href="/polish">
+                  <Link
+                    href="/polish"
+                    onClick={() => trackEvent("cta_click", { location: "landing_paraphrase_sidebar", target: "try_revision" })}
+                  >
                     Try Paragraph Revision
                     <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" className="w-full bg-white border-border">
-                  <a href={getLoginUrl()}>
+                  <a
+                    href={getLoginUrl()}
+                    onClick={() => trackEvent("cta_click", { location: "landing_paraphrase_sidebar", target: "start_free" })}
+                  >
                     Start Free
                   </a>
                 </Button>

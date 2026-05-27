@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { getLoginUrl } from "@/const";
 import SEOHead from "@/components/SEOHead";
+import { trackEvent } from "@/lib/analytics";
 import {
   Sparkles,
   BookOpen,
@@ -155,7 +156,10 @@ export default function Home() {
                   size="lg"
                   className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90 transition-all duration-200 px-8 py-6 text-base font-sans font-medium rounded-xl"
                 >
-                  <a href={getLoginUrl()}>
+                  <a
+                    href={getLoginUrl()}
+                    onClick={() => trackEvent("cta_click", { location: "home_hero", target: "start_free" })}
+                  >
                     Start Free in Minutes
                     <ArrowRight size={18} className="ml-2" />
                   </a>
@@ -166,7 +170,12 @@ export default function Home() {
                   size="lg"
                   className="bg-white/70 backdrop-blur-sm border-border text-foreground hover:bg-white px-8 py-6 text-base font-sans rounded-xl"
                 >
-                  <Link href="/polish">Try Essay Polish Now</Link>
+                  <Link
+                    href="/polish"
+                    onClick={() => trackEvent("cta_click", { location: "home_hero", target: "try_polish" })}
+                  >
+                    Try Essay Polish Now
+                  </Link>
                 </Button>
               </div>
 
@@ -428,7 +437,12 @@ export default function Home() {
               </div>
 
               <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90 px-10 py-6 text-base rounded-xl">
-                <Link href="/pricing">See Pricing <ArrowRight size={18} className="ml-2" /></Link>
+                <Link
+                  href="/pricing"
+                  onClick={() => trackEvent("cta_click", { location: "home_footer", target: "see_pricing" })}
+                >
+                  See Pricing <ArrowRight size={18} className="ml-2" />
+                </Link>
               </Button>
             </div>
           </div>

@@ -3,6 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Sparkles, GraduationCap } from "lucide-react";
 import { getLoginUrl } from "@/const";
+import { trackEvent } from "@/lib/analytics";
 
 const FAQ = [
   {
@@ -76,13 +77,19 @@ export default function SeoLandingEssayPolish() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
-                <Link href="/polish">
+                <Link
+                  href="/polish"
+                  onClick={() => trackEvent("cta_click", { location: "landing_polish_hero", target: "try_polish" })}
+                >
                   Try Essay Polish
                   <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="bg-white border-border">
-                <a href={getLoginUrl()}>
+                <a
+                  href={getLoginUrl()}
+                  onClick={() => trackEvent("cta_click", { location: "landing_polish_hero", target: "start_free" })}
+                >
                   Start Free
                 </a>
               </Button>
@@ -128,7 +135,10 @@ export default function SeoLandingEssayPolish() {
                 <p>Then move into citations or phrase support without leaving the same workflow.</p>
               </div>
               <Button asChild className="w-full mt-6 bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
-                <Link href="/polish">
+                <Link
+                  href="/polish"
+                  onClick={() => trackEvent("cta_click", { location: "landing_polish_sidebar", target: "polish_now" })}
+                >
                   Polish My Writing
                   <ArrowRight size={16} className="ml-2" />
                 </Link>

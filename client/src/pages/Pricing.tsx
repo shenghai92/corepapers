@@ -8,6 +8,7 @@ import { trpc } from "@/lib/trpc";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { toast } from "sonner";
 import { Link } from "wouter";
+import { trackEvent } from "@/lib/analytics";
 
 const PLANS = [
   {
@@ -107,6 +108,12 @@ export default function Pricing() {
   });
 
   const handleUpgrade = (planId: string) => {
+    trackEvent("pricing_plan_click", {
+      plan: planId,
+      billing: annual ? "annual" : "monthly",
+      auth: isAuthenticated,
+    });
+
     if (!isAuthenticated) {
       window.location.href = getLoginUrl();
       return;
@@ -249,7 +256,10 @@ export default function Pricing() {
 
                 {plan.id === "free" ? (
                   <Button asChild className="mb-6 py-5 text-base font-sans rounded-xl bg-secondary text-foreground border border-border hover:bg-secondary/80">
-                    <a href={getLoginUrl()}>
+                    <a
+                      href={getLoginUrl()}
+                      onClick={() => trackEvent("pricing_plan_click", { plan: "free", billing: "none", auth: isAuthenticated })}
+                    >
                       {plan.cta}
                       <ArrowRight size={16} className="ml-2" />
                     </a>
@@ -341,7 +351,10 @@ export default function Pricing() {
           <div className="text-center mt-16">
             <p className="text-muted-foreground font-sans mb-4">Start with the free plan if you want to explore before upgrading.</p>
             <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90 px-10 py-6 text-base rounded-xl">
-              <a href={getLoginUrl()}>
+              <a
+                href={getLoginUrl()}
+                onClick={() => trackEvent("cta_click", { location: "pricing_footer", target: "start_free" })}
+              >
                 Start Free Today <ArrowRight size={18} className="ml-2" />
               </a>
             </Button>
