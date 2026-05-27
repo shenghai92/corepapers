@@ -170,7 +170,7 @@ export default function Pricing() {
               <span className="italic"> at student-friendly prices</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-lg mx-auto leading-relaxed mb-8">
-              Choose a plan for polishing, phrase support, and citation help without overpaying for general-purpose writing software.
+              Choose a plan for polishing, phrase support, and citation help without overpaying for general-purpose writing software. Start free when you are testing, then upgrade when your assignments become regular.
             </p>
 
             <div className="inline-flex items-center gap-3 bg-secondary rounded-xl p-1.5">
@@ -228,6 +228,22 @@ export default function Pricing() {
                       <GraduationCap size={13} />
                       <span>Extra student discount with .edu email</span>
                     </div>
+                  )}
+
+                  {plan.id === "free" && (
+                    <p className="mt-3 text-xs text-muted-foreground font-sans">
+                      Best for trying short real assignments before you commit.
+                    </p>
+                  )}
+                  {plan.id === "student" && (
+                    <p className="mt-3 text-xs text-muted-foreground font-sans">
+                      Best for weekly coursework, essay revision, and regular citation use.
+                    </p>
+                  )}
+                  {plan.id === "pro" && (
+                    <p className="mt-3 text-xs text-muted-foreground font-sans">
+                      Best for longer research projects, thesis work, and heavier writing volume.
+                    </p>
                   )}
                 </div>
 

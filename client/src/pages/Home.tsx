@@ -146,7 +146,7 @@ export default function Home() {
               </h1>
 
               <p className="font-sans text-lg sm:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto tracking-wide">
-                CorePapers helps you fix non-native expressions, strengthen academic vocabulary, and build accurate citations so your ideas come through clearly.
+                CorePapers helps you fix non-native expressions, strengthen academic vocabulary, and build accurate citations so your ideas come through clearly, especially when a deadline is already close.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -156,7 +156,7 @@ export default function Home() {
                   className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90 transition-all duration-200 px-8 py-6 text-base font-sans font-medium rounded-xl"
                 >
                   <a href={getLoginUrl()}>
-                    Start Writing Free
+                    Start Free in Minutes
                     <ArrowRight size={18} className="ml-2" />
                   </a>
                 </Button>
@@ -166,9 +166,13 @@ export default function Home() {
                   size="lg"
                   className="bg-white/70 backdrop-blur-sm border-border text-foreground hover:bg-white px-8 py-6 text-base font-sans rounded-xl"
                 >
-                  <Link href="/polish">Try Essay Polish</Link>
+                  <Link href="/polish">Try Essay Polish Now</Link>
                 </Button>
               </div>
+
+              <p className="text-sm text-muted-foreground font-sans mb-6">
+                Best when you already have a draft, paragraph, or source list and want to improve it quickly.
+              </p>
 
               <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-sans">
                 <span className="flex items-center gap-1.5">
@@ -177,11 +181,11 @@ export default function Home() {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 size={13} className="text-emerald-500" />
-                  Free plan available
+                  Free plan for trying real tasks
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 size={13} className="text-emerald-500" />
-                  Student-friendly pricing
+                  Upgrade when your writing load grows
                 </span>
               </div>
             </div>
