@@ -278,6 +278,28 @@ export default function Pricing() {
             ))}
           </div>
 
+          <div className="max-w-5xl mx-auto mb-16 grid md:grid-cols-3 gap-5">
+            {[
+              {
+                title: "Stay on Free if...",
+                desc: "you only polish short passages occasionally, generate a few citations, and want to explore the workflow before committing.",
+              },
+              {
+                title: "Upgrade to Student if...",
+                desc: "you revise essays every week, need higher word limits, and want citation help plus full phrase access in one place.",
+              },
+              {
+                title: "Choose Pro if...",
+                desc: "you are working on longer research papers, dissertation chapters, or heavier writing loads that need bigger limits.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="p-6 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-2xl text-slate-purple mb-3">{item.title}</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="max-w-2xl mx-auto">
             <h2 className="font-serif font-light text-3xl text-slate-purple text-center mb-8">Frequently Asked Questions</h2>
             <div className="space-y-3">

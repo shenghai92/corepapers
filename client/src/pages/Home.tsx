@@ -336,6 +336,53 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="py-24 bg-background">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">When It Fits</p>
+                <h2 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
+                  Best for students who already
+                  <span className="italic"> have real writing to finish</span>
+                </h2>
+                <p className="text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
+                  CorePapers is strongest when the goal is not vague improvement, but getting a draft, paragraph, citation, or literature review section into better academic shape quickly.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-5">
+                {[
+                  {
+                    title: "Essay deadlines",
+                    desc: "You have a draft and need to improve tone, clarity, and non-native phrasing before submission.",
+                    href: "/ai-essay-polisher-for-non-native-english-writers",
+                  },
+                  {
+                    title: "Citation-heavy assignments",
+                    desc: "You need references and in-text citations that look correct without spending extra time on formatting.",
+                    href: "/apa-citation-generator-for-international-students",
+                  },
+                  {
+                    title: "Source-based writing",
+                    desc: "You are paraphrasing research and want the wording to sound more natural and academically safe.",
+                    href: "/academic-paraphrasing-tool-for-esl-students",
+                  },
+                ].map((item) => (
+                  <Link key={item.href} href={item.href} className="block">
+                    <div className="h-full p-6 rounded-2xl border border-border bg-white hover:border-primary/30 hover:shadow-soft transition-all">
+                      <h3 className="font-serif text-2xl text-slate-purple mb-3">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-4">{item.desc}</p>
+                      <span className="text-xs font-sans font-medium text-primary flex items-center gap-1">
+                        See use case <ArrowRight size={12} />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-24 bg-white">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
