@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import SEOHead from "@/components/SEOHead";
@@ -92,6 +92,28 @@ export default function Pricing() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [checkoutLoading, setCheckoutLoading] = useState<string | null>(null);
   const { isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    const resetLoading = () => {
+      setCheckoutLoading((current) => (current ? null : current));
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        resetLoading();
+      }
+    };
+
+    window.addEventListener("pageshow", resetLoading);
+    window.addEventListener("focus", resetLoading);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      window.removeEventListener("pageshow", resetLoading);
+      window.removeEventListener("focus", resetLoading);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   const createCheckout = trpc.payment.createCheckout.useMutation({
     onSuccess: ({ url }) => {
