@@ -6,6 +6,7 @@ import { trpc } from "@/lib/trpc";
 import SEOHead from "@/components/SEOHead";
 import { Quote, Copy, CheckCircle2, Loader2, BookOpen, Globe, FileText, GraduationCap, Mic } from "lucide-react";
 import { toast } from "sonner";
+import { Link } from "wouter";
 
 type CitationFormat = "apa" | "mla" | "chicago" | "ieee";
 type SourceType = "journal" | "book" | "website" | "chapter" | "thesis" | "conference";
@@ -80,6 +81,22 @@ const FIELD_CONFIGS: Record<SourceType, Array<{ key: string; label: string; plac
   ],
 };
 
+const CITATION_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "CorePapers Citation Generator",
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Web",
+  url: "https://corepapers.space/citations",
+  description: "Generate academic citations online in APA, MLA, Chicago, and IEEE styles.",
+  featureList: [
+    "APA 7 citation generator",
+    "MLA 9 citation generator",
+    "Chicago citation generator",
+    "IEEE citation generator",
+  ],
+};
+
 export default function Citations() {
   const [format, setFormat] = useState<CitationFormat>("apa");
   const [sourceType, setSourceType] = useState<SourceType>("journal");
@@ -119,15 +136,7 @@ export default function Citations() {
         description="Generate APA, MLA, Chicago, and IEEE citations for journal articles, books, websites, theses, and conference papers. Fast citation help for international students."
         keywords="free citation generator, APA citation generator, MLA citation generator, Chicago citation generator, IEEE citation generator, bibliography generator"
         canonical="/citations"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          name: "CorePapers Citation Generator",
-          applicationCategory: "EducationalApplication",
-          operatingSystem: "Web",
-          url: "https://corepapers.space/citations",
-          description: "Generate academic citations online in APA, MLA, Chicago, and IEEE styles.",
-        }}
+        jsonLd={CITATION_SCHEMA}
       />
 
       <main className="pt-24 pb-16 min-h-screen bg-background">
@@ -281,6 +290,25 @@ export default function Citations() {
                   <code className="text-xs font-mono text-foreground/70 leading-relaxed block">{item.example}</code>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-10 grid sm:grid-cols-2 gap-4">
+              <Link href="/blog/complete-apa-7th-edition-guide-international-students" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-2">Need an APA walkthrough?</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                    Read the step-by-step APA guide for international students and common formatting mistakes to avoid.
+                  </p>
+                </div>
+              </Link>
+              <Link href="/polish" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-2">Polish the draft after citing</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                    Improve academic tone, fix non-native phrasing, and strengthen your writing after building references.
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

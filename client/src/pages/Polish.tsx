@@ -9,6 +9,7 @@ import { Sparkles, Copy, BookOpen, Loader2, AlertCircle, ChevronDown, ChevronUp 
 import { toast } from "sonner";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
+import { Link } from "wouter";
 
 const SUGGESTION_COLORS: Record<string, string> = {
   non_native_expression: "bg-red-50 border-red-200 text-red-700",
@@ -27,6 +28,23 @@ const SUGGESTION_LABELS: Record<string, string> = {
 };
 
 const SAMPLE_TEXT = `The research show that many student have difficulty in writing academic paper. In my opinion, I think the main reason is because they don't have enough vocabulary. Also, the grammar is very important for writing good essay. This study will discuss about the factors that affect student performance and give some suggestion to improve the situation.`;
+
+const POLISH_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "CorePapers Essay Polish",
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Web",
+  url: "https://corepapers.space/polish",
+  description:
+    "AI essay polishing tool for international students and non-native English writers.",
+  featureList: [
+    "Non-native expression detection",
+    "Academic vocabulary upgrades",
+    "Sentence-level explanations",
+    "Discipline-aware writing suggestions",
+  ],
+};
 
 function getPolishErrorMessage(message: string) {
   if (
@@ -76,6 +94,7 @@ export default function Polish() {
         description="Paste your academic text and our AI detects non-native expressions, informal language, and weak academic phrasing. Get clearer revisions with explanations."
         keywords="essay polishing tool, fix Chinglish, non-native English writing, academic writing AI, ESL essay correction, academic vocabulary improvement"
         canonical="/polish"
+        jsonLd={POLISH_SCHEMA}
       />
 
       <main className="pt-24 pb-16 min-h-screen bg-background">
@@ -282,19 +301,40 @@ export default function Polish() {
           )}
 
           {!result && (
-            <div className="max-w-4xl mx-auto mt-12 grid sm:grid-cols-3 gap-4">
-              {[
-                { icon: "01", title: "Detects Mother-Tongue Interference", desc: "Identifies Chinglish, Spanglish, and other non-native patterns specific to your language background." },
-                { icon: "02", title: "Academic Vocabulary Upgrade", desc: "Replaces informal or basic words with more precise academic vocabulary." },
-                { icon: "03", title: "Learn From Every Change", desc: "Every suggestion includes a clear explanation so you improve your writing skills over time." },
-              ].map((item) => (
-                <div key={item.title} className="p-5 bg-white border border-border rounded-xl">
-                  <div className="text-sm font-sans font-semibold text-primary mb-3">{item.icon}</div>
-                  <h3 className="font-sans font-semibold text-sm text-foreground mb-2">{item.title}</h3>
-                  <p className="text-xs text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
+            <>
+              <div className="max-w-4xl mx-auto mt-12 grid sm:grid-cols-3 gap-4">
+                {[
+                  { icon: "01", title: "Detects Mother-Tongue Interference", desc: "Identifies Chinglish, Spanglish, and other non-native patterns specific to your language background." },
+                  { icon: "02", title: "Academic Vocabulary Upgrade", desc: "Replaces informal or basic words with more precise academic vocabulary." },
+                  { icon: "03", title: "Learn From Every Change", desc: "Every suggestion includes a clear explanation so you improve your writing skills over time." },
+                ].map((item) => (
+                  <div key={item.title} className="p-5 bg-white border border-border rounded-xl">
+                    <div className="text-sm font-sans font-semibold text-primary mb-3">{item.icon}</div>
+                    <h3 className="font-sans font-semibold text-sm text-foreground mb-2">{item.title}</h3>
+                    <p className="text-xs text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
+                <Link href="/phrases" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Need better academic phrases?</h2>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                      Browse discipline-specific sentence templates for introductions, methods, discussion, and hedging.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/citations" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Need citations too?</h2>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                      Generate APA, MLA, Chicago, and IEEE references after polishing your draft.
+                    </p>
+                  </div>
+                </Link>
+              </div>
+            </>
           )}
         </div>
       </main>

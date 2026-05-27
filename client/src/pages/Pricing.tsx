@@ -7,6 +7,7 @@ import { getLoginUrl } from "@/const";
 import { trpc } from "@/lib/trpc";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { toast } from "sonner";
+import { Link } from "wouter";
 
 const PLANS = [
   {
@@ -306,6 +307,25 @@ export default function Pricing() {
                 Start Free Today <ArrowRight size={18} className="ml-2" />
               </a>
             </Button>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
+            <Link href="/polish" className="block">
+              <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">See what the plans unlock</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                  Try the essay polish workflow to see how free and paid usage limits map to real writing tasks.
+                </p>
+              </div>
+            </Link>
+            <Link href="/phrases" className="block">
+              <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Explore the phrase library</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                  Browse the academic phrase library to understand what is included before you choose a plan.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </main>
