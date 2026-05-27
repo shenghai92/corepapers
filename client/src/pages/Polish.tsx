@@ -334,6 +334,38 @@ export default function Polish() {
                   </div>
                 </Link>
               </div>
+
+              <div className="max-w-4xl mx-auto mt-10">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">
+                  Related guides
+                </p>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {[
+                    {
+                      href: "/blog/how-to-avoid-common-esl-writing-mistakes",
+                      title: "Common ESL writing mistakes",
+                      desc: "Learn which sentence patterns professors notice most often.",
+                    },
+                    {
+                      href: "/blog/how-to-use-hedging-language-in-academic-writing",
+                      title: "Hedging language guide",
+                      desc: "Use a more academic tone without sounding vague.",
+                    },
+                    {
+                      href: "/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing",
+                      title: "Paraphrasing without plagiarism",
+                      desc: "Revise source-based writing more safely and naturally.",
+                    },
+                  ].map((item) => (
+                    <Link key={item.href} href={item.href} className="block">
+                      <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                        <h3 className="font-serif text-xl text-slate-purple mb-2 leading-snug">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </>
           )}
         </div>

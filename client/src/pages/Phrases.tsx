@@ -293,6 +293,38 @@ export default function Phrases() {
               </Link>
             </Button>
           </div>
+
+          <div className="max-w-4xl mx-auto mt-10">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">
+              Related guides
+            </p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {[
+                {
+                  href: "/blog/how-to-write-a-literature-review-for-international-students",
+                  title: "Literature review guide",
+                  desc: "See how to group studies and write stronger synthesis paragraphs.",
+                },
+                {
+                  href: "/blog/how-to-use-hedging-language-in-academic-writing",
+                  title: "Hedging language guide",
+                  desc: "Use phrase choices that sound more careful and credible.",
+                },
+                {
+                  href: "/blog/how-to-write-a-discussion-section-in-an-academic-paper",
+                  title: "Discussion section guide",
+                  desc: "Turn phrase patterns into analytical writing that interprets findings.",
+                },
+              ].map((item) => (
+                <Link key={item.href} href={item.href} className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                    <h3 className="font-serif text-xl text-slate-purple mb-2 leading-snug">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </main>
     </>

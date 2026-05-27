@@ -310,6 +310,38 @@ export default function Citations() {
                 </div>
               </Link>
             </div>
+
+            <div className="mt-10">
+              <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">
+                Related guides
+              </p>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {[
+                  {
+                    href: "/blog/complete-apa-7th-edition-guide-international-students",
+                    title: "APA guide for international students",
+                    desc: "Review the citation rules students get wrong most often.",
+                  },
+                  {
+                    href: "/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing",
+                    title: "Paraphrasing and citation",
+                    desc: "Keep citations accurate when rephrasing source ideas.",
+                  },
+                  {
+                    href: "/blog/how-to-write-a-literature-review-for-international-students",
+                    title: "Literature review workflow",
+                    desc: "Connect your sources more clearly after building references.",
+                  },
+                ].map((item) => (
+                  <Link key={item.href} href={item.href} className="block">
+                    <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                      <h3 className="font-serif text-xl text-slate-purple mb-2 leading-snug">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </main>

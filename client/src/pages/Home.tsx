@@ -11,6 +11,24 @@ import {
   GraduationCap,
 } from "lucide-react";
 
+const FEATURED_GUIDES = [
+  {
+    title: "How to Write a Literature Review for International Students",
+    href: "/blog/how-to-write-a-literature-review-for-international-students",
+    desc: "Plan, group, and synthesize sources more clearly.",
+  },
+  {
+    title: "How to Use Hedging Language in Academic Writing",
+    href: "/blog/how-to-use-hedging-language-in-academic-writing",
+    desc: "Sound more precise and appropriately cautious in formal writing.",
+  },
+  {
+    title: "How to Paraphrase Without Plagiarizing in Academic Writing",
+    href: "/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing",
+    desc: "Rephrase source ideas ethically while keeping your own voice.",
+  },
+];
+
 const FEATURES = [
   {
     icon: Sparkles,
@@ -339,6 +357,20 @@ export default function Home() {
                     <div className="p-6 rounded-2xl border border-border bg-background hover:border-primary/30 hover:shadow-soft transition-all">
                       <div className="font-sans font-semibold text-foreground mb-2">{item.name}</div>
                       <div className="text-xs text-muted-foreground font-sans">{item.desc}</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              <div className="grid sm:grid-cols-3 gap-4 mb-10 text-left">
+                {FEATURED_GUIDES.map((guide) => (
+                  <Link key={guide.href} href={guide.href} className="block">
+                    <div className="p-6 rounded-2xl border border-border bg-background hover:border-primary/30 hover:shadow-soft transition-all">
+                      <div className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-2">
+                        Featured Guide
+                      </div>
+                      <h3 className="font-serif text-xl text-slate-purple mb-2 leading-snug">{guide.title}</h3>
+                      <p className="text-xs text-muted-foreground font-sans leading-relaxed">{guide.desc}</p>
                     </div>
                   </Link>
                 ))}
