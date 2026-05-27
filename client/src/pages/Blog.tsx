@@ -3,29 +3,7 @@ import { trpc } from "@/lib/trpc";
 import SEOHead from "@/components/SEOHead";
 import { Clock, ArrowRight, BookOpen, Tag } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
-const SEED_ARTICLES = [
-  {
-    slug: "how-to-avoid-common-esl-writing-mistakes",
-    title: "How to Avoid the 10 Most Common ESL Writing Mistakes in Academic Papers",
-    excerpt: "Non-native English speakers often repeat the same writing patterns that signal to professors they are not native speakers. Learn how to identify and fix these patterns to improve your academic writing.",
-    category: "Writing Tips",
-    tags: ["ESL", "Academic Writing", "Common Mistakes"],
-    readingTime: 8,
-    publishedAt: "2024-01-15",
-    featured: true,
-  },
-  {
-    slug: "complete-apa-7th-edition-guide-international-students",
-    title: "Complete APA 7th Edition Guide for International Students (2024)",
-    excerpt: "A practical step-by-step guide to APA 7th edition formatting for non-native English speakers, with common mistakes and citation examples.",
-    category: "Citation Guides",
-    tags: ["APA", "Citation", "Formatting"],
-    readingTime: 12,
-    publishedAt: "2024-01-20",
-    featured: true,
-  },
-];
+import { STATIC_ARTICLES } from "@/content/blogArticles";
 
 export default function Blog() {
   const { data: dbPosts } = trpc.blog.list.useQuery({ limit: 20, offset: 0 });
@@ -42,8 +20,13 @@ export default function Blog() {
       publishedAt: p.publishedAt ? new Date(p.publishedAt).toISOString().split("T")[0] : "",
       featured: false,
     })),
-    ...SEED_ARTICLES.filter((a) => !dbSlugs.has(a.slug)),
-  ];
+    ...STATIC_ARTICLES.filter((a) => !dbSlugs.has(a.slug)),
+  ].sort((a, b) => {
+    if (!a.publishedAt && !b.publishedAt) return 0;
+    if (!a.publishedAt) return 1;
+    if (!b.publishedAt) return -1;
+    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+  });
 
   const featured = allArticles.filter((a) => a.featured);
   const regular = allArticles.filter((a) => !a.featured);
@@ -60,8 +43,8 @@ export default function Blog() {
     <>
       <SEOHead
         title="Academic Writing Blog for International Students"
-        description="Read academic writing guides, citation tutorials, and ESL-friendly resources for international students. Learn APA, MLA, Chicago formatting and improve academic English."
-        keywords="academic writing blog, international student writing tips, ESL writing guide, APA format guide, academic English help, avoid common ESL writing mistakes"
+        description="Read academic writing guides, citation tutorials, literature review advice, and ESL-friendly resources for international students. Improve academic English, citations, and research writing."
+        keywords="academic writing blog, international student writing tips, ESL writing guide, APA format guide, literature review guide, paraphrasing help, academic English help"
         canonical="/blog"
         jsonLd={{
           "@context": "https://schema.org",
@@ -89,7 +72,7 @@ export default function Blog() {
               <span className="italic"> study smarter</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Free guides, tutorials, and practical advice for international students navigating English academic writing.
+              Free guides, tutorials, and practical advice for international students working on academic English, citations, literature reviews, and research writing.
             </p>
           </div>
 
