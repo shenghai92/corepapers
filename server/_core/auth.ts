@@ -95,10 +95,6 @@ export async function verifyPassword(
     return true;
   }
 
-  if (PBKDF2_LEGACY_ITERATIONS === PBKDF2_ITERATIONS) {
-    return false;
-  }
-
   const legacy = await hashPassword(password, saltBase64, PBKDF2_LEGACY_ITERATIONS);
   return legacy.hash === expectedHashBase64;
 }

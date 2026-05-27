@@ -20,6 +20,46 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) {
+            return;
+          }
+
+          if (id.includes("@tanstack") || id.includes("@trpc") || id.includes("superjson")) {
+            return "vendor-data";
+          }
+
+          if (id.includes("@radix-ui")) {
+            return "vendor-ui";
+          }
+
+          if (id.includes("lucide-react")) {
+            return "vendor-icons";
+          }
+
+          if (id.includes("wouter")) {
+            return "vendor-router";
+          }
+
+          if (id.includes("sonner")) {
+            return "vendor-feedback";
+          }
+
+          if (
+            id.includes("/react/") ||
+            id.includes("\\react\\") ||
+            id.includes("/react-dom/") ||
+            id.includes("\\react-dom\\") ||
+            id.includes("/scheduler/") ||
+            id.includes("\\scheduler\\")
+          ) {
+            return "vendor-react";
+          }
+        },
+      },
+    },
   },
   server: {
     host: true,

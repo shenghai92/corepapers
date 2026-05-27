@@ -18,6 +18,8 @@ import type {
 const isNonEmptyString = (value: unknown): value is string =>
   typeof value === "string" && value.length > 0;
 
+const getAppId = () => ENV.appId ?? "";
+
 export type SessionPayload = {
   openId: string;
   appId: string;
@@ -48,7 +50,7 @@ class OAuthService {
     state: string
   ): Promise<ExchangeTokenResponse> {
     const payload: ExchangeTokenRequest = {
-      clientId: ENV.appId,
+      clientId: getAppId(),
       grantType: "authorization_code",
       code,
       redirectUri: this.decodeState(state),
@@ -171,7 +173,7 @@ class SDKServer {
     return this.signSession(
       {
         openId,
-        appId: ENV.appId,
+        appId: getAppId(),
         name: options.name || "",
       },
       options
@@ -237,7 +239,7 @@ class SDKServer {
   ): Promise<GetUserInfoWithJwtResponse> {
     const payload: GetUserInfoWithJwtRequest = {
       jwtToken,
-      projectId: ENV.appId,
+      projectId: getAppId(),
     };
 
     const { data } = await this.client.post<GetUserInfoWithJwtResponse>(

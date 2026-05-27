@@ -4,7 +4,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "corepack pnpm build && wrangler pages dev dist/public --functions functions",
+    "dev": "corepack pnpm build && wrangler pages dev dist/public",
     "dev:legacy": "NODE_ENV=development tsx watch server/_core/index.ts",
     "deploy:cf": "wrangler pages deploy dist/public",
     "prebuild": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",

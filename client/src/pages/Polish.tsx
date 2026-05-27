@@ -28,6 +28,17 @@ const SUGGESTION_LABELS: Record<string, string> = {
 
 const SAMPLE_TEXT = `The research show that many student have difficulty in writing academic paper. In my opinion, I think the main reason is because they don't have enough vocabulary. Also, the grammar is very important for writing good essay. This study will discuss about the factors that affect student performance and give some suggestion to improve the situation.`;
 
+function getPolishErrorMessage(message: string) {
+  if (
+    message.includes("AI API key is not configured") ||
+    message.includes("CUSTOM_AI_BASE_URL is not configured")
+  ) {
+    return "The essay polishing service is temporarily unavailable. Please try again later.";
+  }
+
+  return message;
+}
+
 export default function Polish() {
   const [text, setText] = useState("");
   const [discipline, setDiscipline] = useState<"stem" | "social_science" | "humanities" | "general">("general");
@@ -36,7 +47,7 @@ export default function Polish() {
   const { isAuthenticated } = useAuth();
 
   const polishMutation = trpc.polish.polish.useMutation({
-    onError: (err) => toast.error(err.message),
+    onError: (err) => toast.error(getPolishErrorMessage(err.message)),
   });
 
   const result = polishMutation.data;
@@ -61,7 +72,7 @@ export default function Polish() {
   return (
     <>
       <SEOHead
-        title="AI Essay Polishing Tool – Fix Non-Native English Writing"
+        title="AI Essay Polishing Tool - Fix Non-Native English Writing"
         description="Paste your academic text and our AI instantly detects Chinglish, non-native expressions, and informal language. Get academic vocabulary upgrades with explanations."
         keywords="essay polishing tool, fix Chinglish, non-native English writing, academic writing AI, ESL essay correction, academic vocabulary improvement"
         canonical="/polish"
@@ -79,7 +90,7 @@ export default function Polish() {
               Polish Your Academic English
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Paste your text below. Our AI identifies non-native expressions, upgrades your vocabulary, and explains every change — so you learn while you improve.
+              Paste your text below. Our AI identifies non-native expressions, upgrades your vocabulary, and explains every change, so you learn while you improve.
             </p>
           </div>
 
@@ -100,10 +111,9 @@ export default function Polish() {
 
             <Select value={nativeLanguage} onValueChange={setNativeLanguage}>
               <SelectTrigger className="w-44 bg-white border-border font-sans text-sm">
-                <SelectValue placeholder="Native language" />
+                <SelectValue placeholder="My native language" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="English">English</SelectItem>
                 <SelectItem value="Chinese">Chinese</SelectItem>
                 <SelectItem value="Spanish">Spanish</SelectItem>
                 <SelectItem value="French">French</SelectItem>
@@ -118,7 +128,7 @@ export default function Polish() {
             <div className="ml-auto text-xs text-muted-foreground font-sans">
               {wordCount} words
               {!isAuthenticated && wordCount > FREE_LIMIT && (
-                <span className="ml-2 text-amber-600">· Free limit: {FREE_LIMIT} words</span>
+                <span className="ml-2 text-amber-600">Free limit: {FREE_LIMIT} words</span>
               )}
             </div>
           </div>
