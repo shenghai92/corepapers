@@ -1,5 +1,14 @@
 import SEOHead from "@/components/SEOHead";
 
+const ABOUT_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "CorePapers",
+  url: "https://corepapers.space",
+  email: "support@corepapers.space",
+  description: "Academic writing tools for students and researchers writing in English.",
+};
+
 export default function About() {
   return (
     <>
@@ -7,6 +16,7 @@ export default function About() {
         title="About CorePapers"
         description="Learn about CorePapers and how to contact support for academic writing tool questions."
         canonical="/about"
+        jsonLd={ABOUT_SCHEMA}
       />
 
       <main className="pt-24 pb-16 min-h-screen bg-background">

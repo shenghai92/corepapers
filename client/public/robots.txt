@@ -3,8 +3,11 @@ Allow: /
 Disallow: /dashboard
 Disallow: /api/
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 # Sitemaps
 Sitemap: https://corepapers.space/sitemap.xml
-
-# Crawl-delay for politeness
-Crawl-delay: 1

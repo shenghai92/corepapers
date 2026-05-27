@@ -45,6 +45,34 @@
     <lastmod>2026-05-27</lastmod>
   </url>
 
+  <url>
+    <loc>https://corepapers.space/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2026-05-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2026-05-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/feed.xml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-27</lastmod>
+  </url>
+
   <!-- Blog Articles -->
   <url>
     <loc>https://corepapers.space/blog/how-to-avoid-common-esl-writing-mistakes</loc>

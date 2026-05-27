@@ -16,6 +16,7 @@ const ARTICLE_CONTENT: Record<
     tags: string[];
     readingTime: number;
     metaDescription: string;
+    publishedAt?: string;
   }
 > = {
   "how-to-avoid-common-esl-writing-mistakes": {
@@ -27,6 +28,7 @@ const ARTICLE_CONTENT: Record<
     readingTime: 8,
     metaDescription:
       "Discover the 10 most common ESL writing mistakes in academic papers and how to fix them. Essential guide for non-native English speaking international students.",
+    publishedAt: "2024-01-15",
     content: `## Introduction
 
 Writing academic papers in English as a second language is one of the most challenging aspects of studying abroad. Even students with strong English skills often make the same patterns of mistakes - patterns that immediately signal to professors that the writer is not a native English speaker.
@@ -133,6 +135,7 @@ These 10 mistakes are among the most common patterns in ESL academic writing. By
     readingTime: 12,
     metaDescription:
       "Complete APA 7th edition guide for international students. Step-by-step instructions for in-text citations, reference lists, and common formatting mistakes to avoid.",
+    publishedAt: "2024-01-20",
     content: `## What is APA Format?
 
 APA (American Psychological Association) format is widely used in the social sciences, education, psychology, and nursing. The 7th edition, published in 2019, introduced several important changes students should know.
@@ -198,6 +201,11 @@ APA 7th edition includes several important updates from the 6th edition. The mos
   },
 };
 
+const ARTICLE_ORDER = [
+  "how-to-avoid-common-esl-writing-mistakes",
+  "complete-apa-7th-edition-guide-international-students",
+];
+
 export default function BlogPost() {
   const [, params] = useRoute("/blog/:slug");
   const slug = params?.slug ?? "";
@@ -205,6 +213,14 @@ export default function BlogPost() {
   const { data: dbPost } = trpc.blog.getBySlug.useQuery({ slug }, { enabled: !!slug });
 
   const staticArticle = ARTICLE_CONTENT[slug];
+  const relatedArticles = ARTICLE_ORDER
+    .filter((itemSlug) => itemSlug !== slug)
+    .map((itemSlug) => ({
+      slug: itemSlug,
+      title: ARTICLE_CONTENT[itemSlug]?.title,
+      excerpt: ARTICLE_CONTENT[itemSlug]?.excerpt,
+    }))
+    .filter((item) => item.title && item.excerpt);
 
   const article = dbPost
     ? {
@@ -215,16 +231,10 @@ export default function BlogPost() {
         tags: (dbPost.tags as string[]) ?? [],
         readingTime: dbPost.readingTime ?? 5,
         metaDescription: dbPost.metaDescription ?? dbPost.excerpt ?? "",
-        publishedAt: dbPost.publishedAt
-          ? new Date(dbPost.publishedAt).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-          : "",
+        publishedAt: dbPost.publishedAt ? new Date(dbPost.publishedAt).toISOString().split("T")[0] : "",
       }
     : staticArticle
-      ? { ...staticArticle, publishedAt: "" }
+      ? staticArticle
       : null;
 
   if (!article) {
@@ -287,6 +297,22 @@ export default function BlogPost() {
         return <div key={i} className="mb-3" />;
       }
 
+      const linkMatch = line.match(/\[([^\]]+)\]\((\/[^)]+)\)/);
+      if (linkMatch) {
+        const [fullMatch, label, href] = linkMatch;
+        const before = line.slice(0, line.indexOf(fullMatch));
+        const after = line.slice(line.indexOf(fullMatch) + fullMatch.length);
+        return (
+          <p key={i} className="font-sans text-foreground leading-relaxed mb-3">
+            {before}
+            <Link href={href} className="text-primary underline">
+              {label}
+            </Link>
+            {after}
+          </p>
+        );
+      }
+
       const parts = line.split(/(\*\*[^*]+\*\*)/g);
       return (
         <p key={i} className="font-sans text-foreground leading-relaxed mb-3">
@@ -302,6 +328,14 @@ export default function BlogPost() {
     });
   };
 
+  const publishedDisplay = article.publishedAt
+    ? new Date(article.publishedAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : "";
+
   return (
     <>
       <SEOHead
@@ -312,16 +346,46 @@ export default function BlogPost() {
         ogType="article"
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "Article",
-          headline: article.title,
-          description: article.excerpt,
-          keywords: article.tags.join(", "),
-          author: { "@type": "Organization", name: "CorePapers" },
-          publisher: {
-            "@type": "Organization",
-            name: "CorePapers",
-            url: "https://corepapers.space",
-          },
+          "@graph": [
+            {
+              "@type": "Article",
+              headline: article.title,
+              description: article.excerpt,
+              keywords: article.tags.join(", "),
+              articleSection: article.category,
+              mainEntityOfPage: `https://corepapers.space/blog/${slug}`,
+              datePublished: article.publishedAt,
+              author: { "@type": "Organization", name: "CorePapers" },
+              publisher: {
+                "@type": "Organization",
+                name: "CorePapers",
+                url: "https://corepapers.space",
+              },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://corepapers.space/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Blog",
+                  item: "https://corepapers.space/blog",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: article.title,
+                  item: `https://corepapers.space/blog/${slug}`,
+                },
+              ],
+            },
+          ],
         }}
       />
 
@@ -338,8 +402,8 @@ export default function BlogPost() {
                 <span className="text-xs text-muted-foreground font-sans flex items-center gap-1">
                   <Clock size={11} /> {article.readingTime} min read
                 </span>
-                {article.publishedAt && (
-                  <span className="text-xs text-muted-foreground font-sans">{article.publishedAt}</span>
+                {publishedDisplay && (
+                  <span className="text-xs text-muted-foreground font-sans">{publishedDisplay}</span>
                 )}
               </div>
               <h1 className="font-serif font-medium text-3xl sm:text-4xl text-slate-purple leading-tight mb-4">
@@ -374,7 +438,7 @@ export default function BlogPost() {
                 Ready to improve your academic writing?
               </h3>
               <p className="text-sm text-muted-foreground font-sans mb-4">
-                Try CorePapers free - AI-powered essay polishing built for international students.
+                Try CorePapers free for AI-powered essay polishing built for international students.
               </p>
               <Link href="/polish">
                 <Button className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90 font-sans">
@@ -382,6 +446,22 @@ export default function BlogPost() {
                 </Button>
               </Link>
             </div>
+
+            {relatedArticles.length > 0 && (
+              <div className="mt-8">
+                <h2 className="font-serif font-medium text-2xl text-slate-purple mb-4">Related guides</h2>
+                <div className="grid gap-4">
+                  {relatedArticles.map((item) => (
+                    <Link key={item.slug} href={`/blog/${item.slug}`} className="block">
+                      <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                        <h3 className="font-serif text-xl text-slate-purple mb-2">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.excerpt}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </main>

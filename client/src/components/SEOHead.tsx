@@ -57,7 +57,12 @@ export default function SEOHead({
       setMeta('meta[name="keywords"]', keywords);
     }
 
-    setMeta('meta[name="robots"]', noIndex ? "noindex, nofollow" : "index, follow");
+    setMeta(
+      'meta[name="robots"]',
+      noIndex
+        ? "noindex, nofollow"
+        : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    );
     setMeta('meta[property="og:title"]', fullTitle);
     setMeta('meta[property="og:type"]', ogType);
     setMeta('meta[property="og:image"]', ogImage);

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>CorePapers Academic Writing Blog</title>
+    <link>https://corepapers.space/blog</link>
+    <description>Academic writing guides, citation tutorials, and ESL-friendly resources for international students.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 May 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>How to Avoid the 10 Most Common ESL Writing Mistakes in Academic Papers</title>
+      <link>https://corepapers.space/blog/how-to-avoid-common-esl-writing-mistakes</link>
+      <guid>https://corepapers.space/blog/how-to-avoid-common-esl-writing-mistakes</guid>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+      <description>Learn how to identify and fix common ESL writing mistakes that weaken academic papers.</description>
+    </item>
+
+    <item>
+      <title>Complete APA 7th Edition Guide for International Students (2024)</title>
+      <link>https://corepapers.space/blog/complete-apa-7th-edition-guide-international-students</link>
+      <guid>https://corepapers.space/blog/complete-apa-7th-edition-guide-international-students</guid>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 GMT</pubDate>
+      <description>Step-by-step APA 7th edition guidance for non-native English speakers, including citations and formatting.</description>
+    </item>
+  </channel>
+</rss>

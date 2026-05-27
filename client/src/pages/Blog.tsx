@@ -47,6 +47,14 @@ export default function Blog() {
 
   const featured = allArticles.filter((a) => a.featured);
   const regular = allArticles.filter((a) => !a.featured);
+  const formatDate = (value: string) =>
+    value
+      ? new Date(value).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      : "";
 
   return (
     <>
@@ -97,6 +105,9 @@ export default function Blog() {
                         <span className="text-xs text-muted-foreground font-sans flex items-center gap-1">
                           <Clock size={11} /> {article.readingTime} min read
                         </span>
+                        {article.publishedAt && (
+                          <span className="text-xs text-muted-foreground font-sans">{formatDate(article.publishedAt)}</span>
+                        )}
                       </div>
                       <h2 className="font-serif font-medium text-xl text-slate-purple mb-3 group-hover:text-primary transition-colors leading-snug">
                         {article.title}
@@ -132,6 +143,9 @@ export default function Blog() {
                       <span className="text-xs text-muted-foreground font-sans flex items-center gap-1">
                         <Clock size={11} /> {article.readingTime} min
                       </span>
+                      {article.publishedAt && (
+                        <span className="text-xs text-muted-foreground font-sans">{formatDate(article.publishedAt)}</span>
+                      )}
                     </div>
                     <h3 className="font-serif font-medium text-lg text-slate-purple mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">
                       {article.title}
