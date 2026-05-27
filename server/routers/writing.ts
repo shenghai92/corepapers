@@ -4,14 +4,53 @@ import { invokeLLM } from "../_core/llm";
 import { writingSessions, citationHistory } from "../../drizzle/schema";
 import { eq, desc } from "drizzle-orm";
 
-// ── AI Essay Polish ──────────────────────────────────────────────────────────
+const extractJsonPayload = (rawContent: unknown) => {
+  const content = typeof rawContent === "string"
+    ? rawContent
+    : Array.isArray(rawContent)
+      ? rawContent
+          .map(part => {
+            if (
+              part &&
+              typeof part === "object" &&
+              "type" in part &&
+              part.type === "text" &&
+              "text" in part
+            ) {
+              return String(part.text);
+            }
+            return "";
+          })
+          .join("\n")
+      : "";
+
+  const trimmed = content.trim();
+  if (!trimmed) {
+    throw new Error("AI response was empty");
+  }
+
+  const fencedMatch = trimmed.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+  const candidate = fencedMatch?.[1]?.trim() ?? trimmed;
+
+  try {
+    return JSON.parse(candidate);
+  } catch {
+    const objectMatch = candidate.match(/\{[\s\S]*\}/);
+    if (!objectMatch) {
+      throw new Error(`AI returned non-JSON content: ${candidate.slice(0, 200)}`);
+    }
+    return JSON.parse(objectMatch[0]);
+  }
+};
 
 export const polishRouter = router({
   polish: publicProcedure
     .input(
       z.object({
         text: z.string().min(10).max(5000),
-        discipline: z.enum(["stem", "social_science", "humanities", "general"]).default("general"),
+        discipline: z
+          .enum(["stem", "social_science", "humanities", "general"])
+          .default("general"),
         nativeLanguage: z.string().default("Chinese"),
       })
     )
@@ -45,63 +84,78 @@ Respond with a JSON object in this exact format:
   }
 }`;
 
-      const response = await invokeLLM({
-        messages: [
-          { role: "system", content: systemPrompt },
-          {
-            role: "user",
-            content: `Discipline: ${input.discipline}\nNative language background: ${input.nativeLanguage}\n\nText to polish:\n${input.text}`,
-          },
-        ],
-        response_format: {
-          type: "json_schema",
-          json_schema: {
-            name: "polish_result",
-            strict: true,
-            schema: {
-              type: "object",
-              properties: {
-                polishedText: { type: "string" },
-                suggestions: {
-                  type: "array",
-                  items: {
+      const response = await invokeLLM(
+        {
+          messages: [
+            { role: "system", content: systemPrompt },
+            {
+              role: "user",
+              content: `Discipline: ${input.discipline}\nNative language background: ${input.nativeLanguage}\n\nText to polish:\n${input.text}`,
+            },
+          ],
+          response_format: {
+            type: "json_schema",
+            json_schema: {
+              name: "polish_result",
+              strict: true,
+              schema: {
+                type: "object",
+                properties: {
+                  polishedText: { type: "string" },
+                  suggestions: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        id: { type: "string" },
+                        original: { type: "string" },
+                        improved: { type: "string" },
+                        type: { type: "string" },
+                        explanation: { type: "string" },
+                      },
+                      required: [
+                        "id",
+                        "original",
+                        "improved",
+                        "type",
+                        "explanation",
+                      ],
+                      additionalProperties: false,
+                    },
+                  },
+                  overallScore: { type: "number" },
+                  scoreBreakdown: {
                     type: "object",
                     properties: {
-                      id: { type: "string" },
-                      original: { type: "string" },
-                      improved: { type: "string" },
-                      type: { type: "string" },
-                      explanation: { type: "string" },
+                      vocabulary: { type: "number" },
+                      grammar: { type: "number" },
+                      academicTone: { type: "number" },
+                      coherence: { type: "number" },
                     },
-                    required: ["id", "original", "improved", "type", "explanation"],
+                    required: [
+                      "vocabulary",
+                      "grammar",
+                      "academicTone",
+                      "coherence",
+                    ],
                     additionalProperties: false,
                   },
                 },
-                overallScore: { type: "number" },
-                scoreBreakdown: {
-                  type: "object",
-                  properties: {
-                    vocabulary: { type: "number" },
-                    grammar: { type: "number" },
-                    academicTone: { type: "number" },
-                    coherence: { type: "number" },
-                  },
-                  required: ["vocabulary", "grammar", "academicTone", "coherence"],
-                  additionalProperties: false,
-                },
+                required: [
+                  "polishedText",
+                  "suggestions",
+                  "overallScore",
+                  "scoreBreakdown",
+                ],
+                additionalProperties: false,
               },
-              required: ["polishedText", "suggestions", "overallScore", "scoreBreakdown"],
-              additionalProperties: false,
             },
           },
         },
-      }, ctx.env);
+        ctx.env
+      );
 
-      const rawContent = response.choices[0]?.message?.content;
-      const content = typeof rawContent === 'string' ? rawContent : null;
-      if (!content) throw new Error("AI response was empty");
-
-      return JSON.parse(content) as {
+      return extractJsonPayload(response.choices[0]?.message?.content) as {
         polishedText: string;
         suggestions: Array<{
           id: string;
@@ -126,14 +180,18 @@ Respond with a JSON object in this exact format:
         title: z.string().optional(),
         originalText: z.string(),
         polishedText: z.string(),
-        discipline: z.enum(["stem", "social_science", "humanities", "general"]).default("general"),
+        discipline: z
+          .enum(["stem", "social_science", "humanities", "general"])
+          .default("general"),
         wordCount: z.number().default(0),
         suggestions: z.any().optional(),
       })
     )
     .mutation(async ({ ctx, input }) => {
       const db = ctx.db;
-      if (!db) throw new Error("Database unavailable");
+      if (!db) {
+        throw new Error("Database unavailable");
+      }
       await db.insert(writingSessions).values({
         userId: ctx.user.id,
         title: input.title ?? "Untitled",
@@ -148,7 +206,9 @@ Respond with a JSON object in this exact format:
 
   getSessions: protectedProcedure.query(async ({ ctx }) => {
     const db = ctx.db;
-    if (!db) return [];
+    if (!db) {
+      return [];
+    }
     return db
       .select()
       .from(writingSessions)
@@ -158,14 +218,19 @@ Respond with a JSON object in this exact format:
   }),
 });
 
-// ── Citation Generator ───────────────────────────────────────────────────────
-
 export const citationRouter = router({
   generate: publicProcedure
     .input(
       z.object({
         format: z.enum(["apa", "mla", "chicago", "ieee"]),
-        sourceType: z.enum(["journal", "book", "website", "chapter", "thesis", "conference"]),
+        sourceType: z.enum([
+          "journal",
+          "book",
+          "website",
+          "chapter",
+          "thesis",
+          "conference",
+        ]),
         data: z.object({
           authors: z.string().optional(),
           title: z.string(),
@@ -198,48 +263,45 @@ Return ONLY a JSON object with this structure:
 
 Follow the latest edition guidelines strictly:
 - APA: 7th edition
-- MLA: 9th edition  
+- MLA: 9th edition
 - Chicago: 17th edition (Notes-Bibliography style)
 - IEEE: current standards`;
 
-      const response = await invokeLLM({
-        messages: [
-          { role: "system", content: systemPrompt },
-          {
-            role: "user",
-            content: `Format: ${input.format.toUpperCase()}\nSource type: ${input.sourceType}\nData: ${JSON.stringify(input.data, null, 2)}`,
-          },
-        ],
-        response_format: {
-          type: "json_schema",
-          json_schema: {
-            name: "citation_result",
-            strict: true,
-            schema: {
-              type: "object",
-              properties: {
-                citation: { type: "string" },
-                inTextCitation: { type: "string" },
-                notes: { type: "string" },
+      const response = await invokeLLM(
+        {
+          messages: [
+            { role: "system", content: systemPrompt },
+            {
+              role: "user",
+              content: `Format: ${input.format.toUpperCase()}\nSource type: ${input.sourceType}\nData: ${JSON.stringify(input.data, null, 2)}`,
+            },
+          ],
+          response_format: {
+            type: "json_schema",
+            json_schema: {
+              name: "citation_result",
+              strict: true,
+              schema: {
+                type: "object",
+                properties: {
+                  citation: { type: "string" },
+                  inTextCitation: { type: "string" },
+                  notes: { type: "string" },
+                },
+                required: ["citation", "inTextCitation", "notes"],
+                additionalProperties: false,
               },
-              required: ["citation", "inTextCitation", "notes"],
-              additionalProperties: false,
             },
           },
         },
-      }, ctx.env);
+        ctx.env
+      );
 
-      const rawContent2 = response.choices[0]?.message?.content;
-      const content = typeof rawContent2 === 'string' ? rawContent2 : null;
-      if (!content) throw new Error("AI response was empty");
-
-      const result = JSON.parse(content) as {
+      return extractJsonPayload(response.choices[0]?.message?.content) as {
         citation: string;
         inTextCitation: string;
         notes: string;
       };
-
-      return result;
     }),
 
   saveCitation: publicProcedure
@@ -254,7 +316,9 @@ Follow the latest edition guidelines strictly:
     )
     .mutation(async ({ ctx, input }) => {
       const db = ctx.db;
-      if (!db) return { success: false };
+      if (!db) {
+        return { success: false };
+      }
       await db.insert(citationHistory).values({
         userId: input.userId,
         format: input.format,
