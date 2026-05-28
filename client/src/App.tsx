@@ -61,8 +61,8 @@ function Router() {
         <Route path="/about" component={() => <PublicLayout><About /></PublicLayout>} />
         <Route path="/privacy" component={() => <PublicLayout><Privacy /></PublicLayout>} />
         <Route path="/terms" component={() => <PublicLayout><Terms /></PublicLayout>} />
-        <Route path="/blog" component={() => <PublicLayout><Blog /></PublicLayout>} />
         <Route path="/blog/:slug" component={() => <PublicLayout><BlogPost /></PublicLayout>} />
+        <Route path="/blog" component={() => <PublicLayout><Blog /></PublicLayout>} />
         <Route path="/login" component={() => <Login />} />
         <Route path="/dashboard" component={() => <PublicLayout><Dashboard /></PublicLayout>} />
         <Route path="/dashboard/:section" component={() => <PublicLayout><Dashboard /></PublicLayout>} />
