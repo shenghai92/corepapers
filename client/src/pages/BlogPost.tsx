@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useRoute, Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { trpc } from "@/lib/trpc";
 import SEOHead from "@/components/SEOHead";
 import { Clock, ArrowLeft, Tag, Share2 } from "lucide-react";
@@ -9,8 +9,8 @@ import { toast } from "sonner";
 import { STATIC_ARTICLE_MAP, STATIC_ARTICLE_ORDER } from "@/content/blogArticles";
 
 export default function BlogPost() {
-  const [, params] = useRoute("/blog/:slug");
-  const slug = params?.slug ?? "";
+  const [location] = useLocation();
+  const slug = decodeURIComponent((location.match(/^\/blog\/([^/?#]+)/)?.[1] ?? "").trim());
 
   const { data: dbPost } = trpc.blog.getBySlug.useQuery({ slug }, { enabled: !!slug });
   const matchedDbPost = dbPost?.slug === slug ? dbPost : undefined;
