@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://corepapers.space/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/polish</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/phrases</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/citations</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/apa-citation-generator-for-international-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/ai-essay-polisher-for-non-native-english-writers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/academic-paraphrasing-tool-for-esl-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/academic-writing-alternative-for-international-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/paraphrasing-alternative-for-academic-writing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://corepapers.space/feed.xml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+
+</urlset>

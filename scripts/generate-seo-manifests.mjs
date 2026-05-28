@@ -1,0 +1,135 @@
+import { readFileSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+const BASE_URL = "https://corepapers.space";
+const TODAY = new Date().toISOString().slice(0, 10);
+
+const ROOT = resolve(process.cwd());
+const BLOG_SOURCE = resolve(ROOT, "client/src/content/blogArticles.ts");
+const PUBLIC_DIR = resolve(ROOT, "client/public");
+
+const STATIC_PAGES = [
+  { path: "/", changefreq: "weekly", priority: "1.0" },
+  { path: "/polish", changefreq: "monthly", priority: "0.9" },
+  { path: "/phrases", changefreq: "monthly", priority: "0.9" },
+  { path: "/citations", changefreq: "monthly", priority: "0.9" },
+  { path: "/pricing", changefreq: "monthly", priority: "0.8" },
+  { path: "/about", changefreq: "monthly", priority: "0.5" },
+  { path: "/privacy", changefreq: "yearly", priority: "0.4" },
+  { path: "/terms", changefreq: "yearly", priority: "0.4" },
+  { path: "/blog", changefreq: "weekly", priority: "0.8" },
+  { path: "/apa-citation-generator-for-international-students", changefreq: "monthly", priority: "0.9" },
+  { path: "/ai-essay-polisher-for-non-native-english-writers", changefreq: "monthly", priority: "0.9" },
+  { path: "/academic-paraphrasing-tool-for-esl-students", changefreq: "monthly", priority: "0.9" },
+  { path: "/academic-writing-alternative-for-international-students", changefreq: "monthly", priority: "0.8" },
+  { path: "/paraphrasing-alternative-for-academic-writing", changefreq: "monthly", priority: "0.8" },
+  { path: "/feed.xml", changefreq: "weekly", priority: "0.3" },
+];
+
+function escapeXml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+function createUrlSet(rows) {
+  const urls = rows
+    .map((row) => {
+      return [
+        "  <url>",
+        `    <loc>${escapeXml(row.loc)}</loc>`,
+        `    <changefreq>${row.changefreq}</changefreq>`,
+        `    <priority>${row.priority}</priority>`,
+        `    <lastmod>${row.lastmod}</lastmod>`,
+        "  </url>",
+      ].join("\n");
+    })
+    .join("\n\n");
+
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    "",
+    urls,
+    "",
+    "</urlset>",
+    "",
+  ].join("\n");
+}
+
+function createSitemapIndex(entries) {
+  const body = entries
+    .map((entry) => {
+      return [
+        "  <sitemap>",
+        `    <loc>${escapeXml(entry.loc)}</loc>`,
+        `    <lastmod>${entry.lastmod}</lastmod>`,
+        "  </sitemap>",
+      ].join("\n");
+    })
+    .join("\n\n");
+
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    "",
+    body,
+    "",
+    "</sitemapindex>",
+    "",
+  ].join("\n");
+}
+
+function extractBlogEntries(source) {
+  const articleRegex =
+    /slug:\s*"([^"]+)"[\s\S]*?publishedAt:\s*"([^"]+)"/g;
+  const rows = [];
+  let match = articleRegex.exec(source);
+
+  while (match) {
+    rows.push({
+      loc: `${BASE_URL}/blog/${match[1]}`,
+      changefreq: "monthly",
+      priority: "0.7",
+      lastmod: match[2],
+    });
+    match = articleRegex.exec(source);
+  }
+
+  return rows;
+}
+
+const blogSource = readFileSync(BLOG_SOURCE, "utf8");
+const blogRows = extractBlogEntries(blogSource);
+const pageRows = STATIC_PAGES.map((page) => ({
+  loc: `${BASE_URL}${page.path}`,
+  changefreq: page.changefreq,
+  priority: page.priority,
+  lastmod: TODAY,
+}));
+
+writeFileSync(
+  resolve(PUBLIC_DIR, "sitemap-pages.xml"),
+  createUrlSet(pageRows),
+  "utf8"
+);
+writeFileSync(
+  resolve(PUBLIC_DIR, "sitemap-blog.xml"),
+  createUrlSet(blogRows),
+  "utf8"
+);
+writeFileSync(
+  resolve(PUBLIC_DIR, "sitemap.xml"),
+  createSitemapIndex([
+    { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
+    { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
+  ]),
+  "utf8"
+);
+
+console.log(
+  `[seo] generated sitemaps: pages=${pageRows.length}, blog=${blogRows.length}, date=${TODAY}`
+);

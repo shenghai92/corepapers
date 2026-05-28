@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRoute, Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import SEOHead from "@/components/SEOHead";
@@ -12,6 +13,11 @@ export default function BlogPost() {
   const slug = params?.slug ?? "";
 
   const { data: dbPost } = trpc.blog.getBySlug.useQuery({ slug }, { enabled: !!slug });
+  const matchedDbPost = dbPost?.slug === slug ? dbPost : undefined;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [slug]);
 
   const staticArticle = STATIC_ARTICLE_MAP[slug];
   const relatedArticles = STATIC_ARTICLE_ORDER
@@ -23,16 +29,18 @@ export default function BlogPost() {
     }))
     .filter((item) => item.title && item.excerpt);
 
-  const article = dbPost
+  const article = matchedDbPost
     ? {
-        title: dbPost.title,
-        content: dbPost.content,
-        excerpt: dbPost.excerpt ?? "",
-        category: dbPost.category ?? "General",
-        tags: (dbPost.tags as string[]) ?? [],
-        readingTime: dbPost.readingTime ?? 5,
-        metaDescription: dbPost.metaDescription ?? dbPost.excerpt ?? "",
-        publishedAt: dbPost.publishedAt ? new Date(dbPost.publishedAt).toISOString().split("T")[0] : "",
+        title: matchedDbPost.title,
+        content: matchedDbPost.content,
+        excerpt: matchedDbPost.excerpt ?? "",
+        category: matchedDbPost.category ?? "General",
+        tags: (matchedDbPost.tags as string[]) ?? [],
+        readingTime: matchedDbPost.readingTime ?? 5,
+        metaDescription: matchedDbPost.metaDescription ?? matchedDbPost.excerpt ?? "",
+        publishedAt: matchedDbPost.publishedAt
+          ? new Date(matchedDbPost.publishedAt).toISOString().split("T")[0]
+          : "",
       }
     : staticArticle
       ? staticArticle

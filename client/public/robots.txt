@@ -11,3 +11,5 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://corepapers.space/sitemap.xml
+Sitemap: https://corepapers.space/sitemap-pages.xml
+Sitemap: https://corepapers.space/sitemap-blog.xml
