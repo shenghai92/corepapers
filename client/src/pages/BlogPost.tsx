@@ -144,6 +144,10 @@ export default function BlogPost() {
         day: "numeric",
       })
     : "";
+  const articleUrl = `https://corepapers.space/blog/${slug}`;
+  const wordCount = article.content
+    .split(/\s+/)
+    .filter(Boolean).length;
 
   return (
     <>
@@ -162,14 +166,20 @@ export default function BlogPost() {
               description: article.excerpt,
               keywords: article.tags.join(", "),
               articleSection: article.category,
-              mainEntityOfPage: `https://corepapers.space/blog/${slug}`,
+              mainEntityOfPage: articleUrl,
+              url: articleUrl,
+              wordCount,
               datePublished: article.publishedAt,
+              dateModified: article.publishedAt,
+              inLanguage: "en",
+              isAccessibleForFree: true,
               author: { "@type": "Organization", name: "CorePapers" },
               publisher: {
                 "@type": "Organization",
                 name: "CorePapers",
                 url: "https://corepapers.space",
               },
+              about: article.tags,
             },
             {
               "@type": "BreadcrumbList",
@@ -190,7 +200,7 @@ export default function BlogPost() {
                   "@type": "ListItem",
                   position: 3,
                   name: article.title,
-                  item: `https://corepapers.space/blog/${slug}`,
+                  item: articleUrl,
                 },
               ],
             },

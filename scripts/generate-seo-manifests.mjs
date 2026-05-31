@@ -7,6 +7,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const ROOT = resolve(process.cwd());
 const BLOG_SOURCE = resolve(ROOT, "client/src/content/blogArticles.ts");
 const PUBLIC_DIR = resolve(ROOT, "client/public");
+const INDEX_HTML = resolve(ROOT, "client/index.html");
 
 const STATIC_PAGES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
@@ -85,21 +86,67 @@ function createSitemapIndex(entries) {
 
 function extractBlogEntries(source) {
   const articleRegex =
-    /slug:\s*"([^"]+)"[\s\S]*?publishedAt:\s*"([^"]+)"/g;
+    /slug:\s*"([^"]+)"[\s\S]*?title:\s*"([^"]+)"[\s\S]*?publishedAt:\s*"([^"]+)"/g;
   const rows = [];
   let match = articleRegex.exec(source);
 
   while (match) {
     rows.push({
       loc: `${BASE_URL}/blog/${match[1]}`,
+      slug: match[1],
+      title: match[2],
       changefreq: "monthly",
       priority: "0.7",
-      lastmod: match[2],
+      lastmod: match[3],
     });
     match = articleRegex.exec(source);
   }
 
   return rows;
+}
+
+function escapeHtml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function createDiscoveryLinks(rows) {
+  const items = rows
+    .map(
+      (row) =>
+        `        <li><a href="/blog/${escapeHtml(row.slug)}">${escapeHtml(row.title)}</a></li>`
+    )
+    .join("\n");
+
+  return [
+    "    <!-- BLOG_DISCOVERY_LINKS_START -->",
+    "    <noscript>",
+    '      <nav aria-label="Blog article discovery links">',
+    "        <p>CorePapers academic writing guides:</p>",
+    "        <ul>",
+    items,
+    "        </ul>",
+    "      </nav>",
+    "    </noscript>",
+    "    <!-- BLOG_DISCOVERY_LINKS_END -->",
+  ].join("\n");
+}
+
+function updateIndexHtml(blogRows) {
+  const indexHtml = readFileSync(INDEX_HTML, "utf8");
+  const discoveryBlock = createDiscoveryLinks(blogRows);
+  const pattern =
+    /[ \t]*<!-- BLOG_DISCOVERY_LINKS_START -->[\s\S]*?<!-- BLOG_DISCOVERY_LINKS_END -->/;
+
+  if (!pattern.test(indexHtml)) {
+    throw new Error("Missing blog discovery markers in client/index.html");
+  }
+
+  writeFileSync(INDEX_HTML, indexHtml.replace(pattern, discoveryBlock), "utf8");
 }
 
 const blogSource = readFileSync(BLOG_SOURCE, "utf8");
@@ -129,6 +176,7 @@ writeFileSync(
   ]),
   "utf8"
 );
+updateIndexHtml(blogRows);
 
 console.log(
   `[seo] generated sitemaps: pages=${pageRows.length}, blog=${blogRows.length}, date=${TODAY}`
