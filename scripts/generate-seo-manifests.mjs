@@ -24,7 +24,6 @@ const STATIC_PAGES = [
   { path: "/academic-paraphrasing-tool-for-esl-students", changefreq: "monthly", priority: "0.9" },
   { path: "/academic-writing-alternative-for-international-students", changefreq: "monthly", priority: "0.8" },
   { path: "/paraphrasing-alternative-for-academic-writing", changefreq: "monthly", priority: "0.8" },
-  { path: "/feed.xml", changefreq: "weekly", priority: "0.3" },
 ];
 
 function escapeXml(value) {

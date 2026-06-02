@@ -1,0 +1,11 @@
+/feed.xml
+  X-Robots-Tag: noindex, follow
+
+/sitemap.xml
+  X-Robots-Tag: noindex
+
+/sitemap-pages.xml
+  X-Robots-Tag: noindex
+
+/sitemap-blog.xml
+  X-Robots-Tag: noindex
