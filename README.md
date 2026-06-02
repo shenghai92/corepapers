@@ -44,6 +44,7 @@ Set these in Cloudflare and locally:
 - `CUSTOM_AI_MODEL`
 - `R2_PUBLIC_URL`
 - `VITE_GOOGLE_MAPS_API_KEY`
+- `VITE_GA_MEASUREMENT_ID`
 
 Bind your Cloudflare D1 database as `DB`.
 If you use R2, bind the bucket as `R2`.
@@ -58,3 +59,11 @@ If you use R2, bind the bucket as `R2`.
 - The D1 schema bootstraps itself on first request after the `DB` binding is attached.
 - Uploaded files should be stored in R2 and served from the public URL you bind.
 - The app now runs on Cloudflare-compatible infrastructure only.
+
+## GA4 analytics
+
+To enable Google Analytics 4 tracking, set:
+
+- `VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX`
+
+The frontend automatically loads `gtag.js` and sends page views for SPA route changes when this variable is present.
