@@ -42,6 +42,34 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4966684354825438" crossorigin="anonymous"></script>
 
+    <!-- Google Analytics bootstrap -->
+    <script>
+      (function () {
+        var measurementId = "G-599JBEELPZ";
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag =
+          window.gtag ||
+          function () {
+            window.dataLayer.push(arguments);
+          };
+
+        if (!window.__gaInitialized) {
+          window.gtag("js", new Date());
+          window.gtag("config", measurementId, { send_page_view: false });
+          window.__gaInitialized = true;
+        }
+
+        if (!document.getElementById("ga4-script")) {
+          var script = document.createElement("script");
+          script.id = "ga4-script";
+          script.async = true;
+          script.src = "https://www.googletagmanager.com/gtag/js?id=" + measurementId;
+          document.head.appendChild(script);
+        }
+      })();
+    </script>
+
     <!-- JSON-LD: WebSite -->
     <script type="application/ld+json">
     {

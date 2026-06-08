@@ -9,7 +9,9 @@ declare global {
   }
 }
 
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID?.trim();
+const DEFAULT_GA_MEASUREMENT_ID = "G-599JBEELPZ";
+const GA_MEASUREMENT_ID =
+  import.meta.env.VITE_GA_MEASUREMENT_ID?.trim() || DEFAULT_GA_MEASUREMENT_ID;
 
 function sendPageView(path: string) {
   if (!GA_MEASUREMENT_ID || typeof window.gtag !== "function") {
