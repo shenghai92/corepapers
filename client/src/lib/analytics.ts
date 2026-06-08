@@ -4,6 +4,7 @@ declare global {
   interface Window {
     plausible?: (event: string, options?: { props?: AnalyticsPayload }) => void;
     va?: (...args: unknown[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -11,6 +12,10 @@ export function trackEvent(name: string, props?: AnalyticsPayload) {
   if (typeof window === "undefined") return;
 
   try {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", name, props ?? {});
+    }
+
     if (typeof window.plausible === "function") {
       window.plausible(name, props ? { props } : undefined);
     }

@@ -5,6 +5,7 @@ declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    __gaInitialized?: boolean;
   }
 }
 
@@ -41,17 +42,26 @@ export default function Analytics() {
       document.head.appendChild(script);
     }
 
+    // Initialize the GA queue in application code so it exists even before the
+    // remote gtag.js script finishes loading.
+    window.dataLayer = window.dataLayer || [];
+    window.gtag =
+      window.gtag ||
+      ((...args: unknown[]) => {
+        window.dataLayer?.push(args);
+      });
+
     if (!document.getElementById(inlineId)) {
-      const inlineScript = document.createElement("script");
-      inlineScript.id = inlineId;
-      inlineScript.text = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = window.gtag || gtag;
-        gtag('js', new Date());
-        gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
-      `;
-      document.head.appendChild(inlineScript);
+      const marker = document.createElement("meta");
+      marker.id = inlineId;
+      marker.setAttribute("data-ga4-inline", "true");
+      document.head.appendChild(marker);
+    }
+
+    if (!window.__gaInitialized) {
+      window.gtag("js", new Date());
+      window.gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
+      window.__gaInitialized = true;
     }
 
     sendPageView(location);
