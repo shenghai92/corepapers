@@ -82,6 +82,21 @@ const PAIN_POINTS = [
   { icon: "x", before: "\"According to my knowledge\"", after: "\"Based on the existing literature\"" },
 ];
 
+const HOME_FAQ = [
+  {
+    q: "Who is CorePapers best for?",
+    a: "CorePapers is built for international students and non-native English writers who already have a draft, paragraph, citation list, or research section they need to improve quickly.",
+  },
+  {
+    q: "Can I use CorePapers for more than grammar correction?",
+    a: "Yes. CorePapers is designed for academic phrasing, non-native expression fixes, citation support, and sentence-level revision guidance rather than only surface grammar checks.",
+  },
+  {
+    q: "What should I try first?",
+    a: "Most users start with the essay polisher for draft revision, then use the phrase library for sentence patterns and the citation generator for reference formatting.",
+  },
+];
+
 const HOME_SCHEMA = [
   {
     "@context": "https://schema.org",
@@ -109,6 +124,18 @@ const HOME_SCHEMA = [
       "Academic phrase library for ESL students",
       "APA MLA Chicago IEEE citation generator",
     ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: HOME_FAQ.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
   },
 ];
 
@@ -444,6 +471,46 @@ export default function Home() {
                   See Pricing <ArrowRight size={18} className="ml-2" />
                 </Link>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 bg-background">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-10">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Common Questions</p>
+                <h2 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
+                  Quick answers before you start
+                </h2>
+                <p className="text-muted-foreground font-sans leading-relaxed">
+                  If you are comparing tools or deciding where to begin, these are the questions students usually ask first.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {HOME_FAQ.map((item) => (
+                  <div key={item.q} className="rounded-2xl border border-border bg-white p-6">
+                    <h3 className="font-sans font-semibold text-foreground mb-2">{item.q}</h3>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="grid sm:grid-cols-3 gap-4 mt-8">
+                {[
+                  { href: "/polish", title: "Try essay polish", desc: "Start with a real paragraph or draft." },
+                  { href: "/pricing", title: "Compare plans", desc: "See which limits fit your writing load." },
+                  { href: "/blog", title: "Read guides", desc: "Learn paraphrasing, hedging, and structure." },
+                ].map((item) => (
+                  <Link key={item.href} href={item.href} className="block">
+                    <div className="h-full rounded-2xl border border-border bg-white p-5 hover:border-primary/30 hover:shadow-soft transition-all">
+                      <h3 className="font-serif text-2xl text-slate-purple mb-2">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

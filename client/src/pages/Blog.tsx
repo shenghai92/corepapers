@@ -46,18 +46,31 @@ export default function Blog() {
         description="Read academic writing guides, ESL essay help, sentence starter examples, citation tutorials, and research paper advice for international students."
         keywords="academic writing blog, ESL essay help, sentence starters for essays, academic writing tips for international students, literature review guide, discussion section phrases, APA writing help"
         canonical="/blog"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Blog",
-          name: "CorePapers Academic Writing Blog",
-          description: "Academic writing guides for international students",
-          url: "https://corepapers.space/blog",
-          blogPost: allArticles.slice(0, 6).map((article) => ({
-            "@type": "BlogPosting",
-            headline: article.title,
-            url: `https://corepapers.space/blog/${article.slug}`,
-          })),
-        }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: "CorePapers Academic Writing Blog",
+            description: "Academic writing guides for international students",
+            url: "https://corepapers.space/blog",
+            blogPost: allArticles.slice(0, 6).map((article) => ({
+              "@type": "BlogPosting",
+              headline: article.title,
+              url: `https://corepapers.space/blog/${article.slug}`,
+            })),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "CorePapers blog articles",
+            itemListElement: allArticles.slice(0, 12).map((article, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              url: `https://corepapers.space/blog/${article.slug}`,
+              name: article.title,
+            })),
+          },
+        ]}
       />
 
       <main className="pt-24 pb-16 min-h-screen bg-background">
@@ -74,6 +87,33 @@ export default function Blog() {
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
               Free guides, tutorials, and practical examples for international students working on academic English, essay structure, citations, discussion sections, and research writing.
             </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto mb-12 grid md:grid-cols-3 gap-5">
+            {[
+              {
+                href: "/polish",
+                title: "Revise a draft now",
+                desc: "Use the essay polisher when you already have text and need faster academic revision.",
+              },
+              {
+                href: "/phrases",
+                title: "Find better phrases",
+                desc: "Browse academic sentence starters for introductions, analysis, and discussion sections.",
+              },
+              {
+                href: "/citations",
+                title: "Format references",
+                desc: "Generate APA, MLA, Chicago, and IEEE citations after finishing your draft.",
+              },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="block">
+                <div className="h-full rounded-2xl border border-border bg-white p-6 hover:border-primary/30 hover:shadow-soft transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-3">{item.title}</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
 
           {featured.length > 0 && (
@@ -116,7 +156,10 @@ export default function Blog() {
           )}
 
           <div>
-            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">All Articles</p>
+            <div className="flex flex-wrap items-end justify-between gap-3 mb-4">
+              <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground">All Articles</p>
+              <p className="text-xs text-muted-foreground font-sans">{allArticles.length} guides available</p>
+            </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {regular.map((article) => (
                 <Link key={article.slug} href={`/blog/${article.slug}`} className="group block">

@@ -259,11 +259,44 @@ export default function BlogPost() {
               <p className="text-sm text-muted-foreground font-sans mb-4">
                 Try CorePapers free for AI-powered essay polishing built for international students.
               </p>
-              <Link href="/polish">
-                <Button className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90 font-sans">
-                  Try Essay Polish Free
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <Link href="/polish">
+                  <Button className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90 font-sans">
+                    Try Essay Polish Free
+                  </Button>
+                </Link>
+                <Link href="/pricing">
+                  <Button variant="outline" className="font-sans">
+                    Compare Plans
+                  </Button>
+                </Link>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-3 mt-5 text-left">
+                {[
+                  {
+                    href: "/polish",
+                    title: "Fix non-native phrasing",
+                    desc: "Paste a paragraph and get sentence-level revision suggestions.",
+                  },
+                  {
+                    href: "/phrases",
+                    title: "Find academic sentence starters",
+                    desc: "Use ready-made phrase patterns for analysis, discussion, and stance.",
+                  },
+                  {
+                    href: "/citations",
+                    title: "Generate citations",
+                    desc: "Create references and in-text citations after revising your draft.",
+                  },
+                ].map((item) => (
+                  <Link key={item.href} href={item.href} className="block">
+                    <div className="rounded-xl border border-border bg-white/80 p-4 hover:border-primary/30 transition-all">
+                      <h4 className="font-sans font-semibold text-sm text-foreground mb-1">{item.title}</h4>
+                      <p className="text-xs text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
 
             {relatedArticles.length > 0 && (
