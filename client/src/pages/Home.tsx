@@ -116,9 +116,9 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="AI Academic Writing Assistant for International Students"
-        description="CorePapers helps international students and non-native English writers polish essays, improve academic vocabulary, and generate APA, MLA, Chicago, and IEEE citations."
-        keywords="AI academic writing assistant, essay polish, ESL academic writing help, non-native English academic writing, citation generator APA MLA Chicago IEEE, academic phrase library"
+        title="AI Essay Polisher and Academic Writing Assistant for International Students"
+        description="CorePapers is an AI essay polisher and academic writing assistant for international students. Fix non-native phrasing, improve academic English, use sentence starters, and generate APA, MLA, Chicago, and IEEE citations."
+        keywords="AI essay polisher, academic writing assistant for international students, ESL academic writing help, non-native English essay revision, academic phrase bank, APA citation generator, sentence starters for essays"
         canonical="/"
         jsonLd={HOME_SCHEMA}
       />
@@ -141,13 +141,13 @@ export default function Home() {
               </div>
 
               <h1 className="font-serif font-light text-4xl sm:text-6xl lg:text-7xl text-slate-purple leading-tight mb-6">
-                Write Academic English
+                Polish essays,
                 <br />
-                <span className="italic font-normal">with More Clarity</span>
+                <span className="italic font-normal">write stronger academic English</span>
               </h1>
 
               <p className="font-sans text-lg sm:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto tracking-wide">
-                CorePapers helps you fix non-native expressions, strengthen academic vocabulary, and build accurate citations so your ideas come through clearly, especially when a deadline is already close.
+                CorePapers helps international students fix non-native expressions, strengthen academic vocabulary, find better sentence starters, and generate accurate citations so each draft reads more clearly and credibly.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -180,7 +180,7 @@ export default function Home() {
               </div>
 
               <p className="text-sm text-muted-foreground font-sans mb-6">
-                Best when you already have a draft, paragraph, or source list and want to improve it quickly.
+                Best for students who already have a draft, paragraph, source list, or discussion section and need faster academic revision support.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-sans">

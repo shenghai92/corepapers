@@ -55,8 +55,8 @@ export default function SeoLandingApa() {
     <>
       <SEOHead
         title="APA Citation Generator for International Students"
-        description="Generate APA 7th edition citations and in-text references for essays, reports, and research papers. Built for international students writing in English."
-        keywords="APA citation generator for international students, APA 7 citation generator, APA reference generator, in-text citation generator"
+        description="Generate APA 7th edition citations and in-text references for essays, reports, and research papers. Built for international students who need a fast APA citation generator."
+        keywords="APA citation generator for international students, APA 7 citation generator, APA reference generator, APA in-text citation generator, free APA citation tool"
         canonical="/apa-citation-generator-for-international-students"
         jsonLd={APA_LANDING_SCHEMA}
       />

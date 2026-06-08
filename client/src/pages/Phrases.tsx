@@ -139,9 +139,9 @@ export default function Phrases() {
   return (
     <>
       <SEOHead
-        title="Academic Phrase Library for ESL and International Students"
-        description="Find discipline-specific academic sentence templates for literature reviews, methods, arguments, and hedging. Built for ESL and international students writing in English."
-        keywords="phrase library for academic writing, academic sentence templates, ESL academic phrases, hedging phrases, academic vocabulary upgrade, international student writing help"
+        title="Academic Phrase Bank and Sentence Starters for Essays"
+        description="Search an academic phrase bank with sentence starters for essays, literature reviews, discussion sections, methods, and hedging. Built for ESL and international students."
+        keywords="academic phrase bank, sentence starters for essays, academic sentence starters, discussion section sentence starters, literature review phrases, ESL academic phrases, academic writing phrase library"
         canonical="/phrases"
         jsonLd={PHRASES_SCHEMA}
       />
@@ -153,12 +153,12 @@ export default function Phrases() {
               Academic Phrase Library
             </div>
             <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
-              Academic phrase templates
+              Academic phrase bank
               <br />
-              <span className="italic">for stronger English writing</span>
+              <span className="italic">with sentence starters for essays</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Search sentence starters and discipline-specific phrasing used in essays, reports, and research papers.
+              Search academic sentence starters and discipline-specific phrasing for essays, reports, literature reviews, discussion sections, and research papers.
             </p>
           </div>
 

@@ -90,9 +90,9 @@ export default function Polish() {
   return (
     <>
       <SEOHead
-        title="AI Essay Polishing Tool - Fix Non-Native English Writing"
-        description="Paste your academic text and our AI detects non-native expressions, informal language, and weak academic phrasing. Get clearer revisions with explanations."
-        keywords="essay polishing tool, fix Chinglish, non-native English writing, academic writing AI, ESL essay correction, academic vocabulary improvement"
+        title="AI Essay Polisher for ESL and Non-Native English Writing"
+        description="Use an AI essay polisher to fix non-native expressions, improve academic tone, and revise essays, reports, and research papers with clearer academic English."
+        keywords="AI essay polisher, essay polisher for ESL students, non-native English writing fixer, academic writing AI tool, essay revision tool, improve academic tone, fix translated English"
         canonical="/polish"
         jsonLd={POLISH_SCHEMA}
       />
@@ -105,10 +105,10 @@ export default function Polish() {
               AI-Powered Academic Polish
             </div>
             <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
-              Polish Your Academic English
+              AI essay polisher for clearer academic English
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Paste your text below. Our AI identifies non-native expressions, upgrades your vocabulary, and explains every change so you learn while you revise.
+              Paste your essay, report, or research paragraph below. CorePapers identifies non-native expressions, upgrades weak phrasing, and explains every revision so you can improve the draft and learn from it.
             </p>
           </div>
 

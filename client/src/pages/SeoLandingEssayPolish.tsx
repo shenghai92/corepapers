@@ -54,9 +54,9 @@ export default function SeoLandingEssayPolish() {
   return (
     <>
       <SEOHead
-        title="AI Essay Polisher for Non-Native English Writers"
-        description="Improve academic essays, reports, and research papers with an AI essay polisher built for non-native English writers and international students."
-        keywords="AI essay polisher, essay polisher for non-native English writers, ESL essay correction, academic writing polish tool"
+        title="AI Essay Polisher for ESL and Non-Native English Writers"
+        description="Improve academic essays, reports, and research papers with an AI essay polisher for ESL and non-native English writers. Fix awkward phrasing and strengthen academic tone."
+        keywords="AI essay polisher, essay polisher for non-native English writers, essay polisher for ESL students, ESL essay correction, academic writing polish tool, improve academic tone"
         canonical="/ai-essay-polisher-for-non-native-english-writers"
         jsonLd={POLISH_LANDING_SCHEMA}
       />
@@ -73,7 +73,7 @@ export default function SeoLandingEssayPolish() {
               <span className="italic"> for non-native English writers</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed mb-8">
-              Improve academic tone, fix non-native expressions, and strengthen clarity with a revision workflow built for international students.
+              Improve academic tone, fix non-native expressions, and strengthen clarity with a revision workflow built for ESL students and international students writing in English.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">

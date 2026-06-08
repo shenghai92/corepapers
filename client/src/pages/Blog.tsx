@@ -42,9 +42,9 @@ export default function Blog() {
   return (
     <>
       <SEOHead
-        title="Academic Writing Blog for International Students"
-        description="Read academic writing guides, citation tutorials, literature review advice, and ESL-friendly resources for international students. Improve academic English, citations, and research writing."
-        keywords="academic writing blog, international student writing tips, ESL writing guide, APA format guide, literature review guide, paraphrasing help, academic English help"
+        title="Academic Writing Blog With ESL Essay Help and Sentence Starters"
+        description="Read academic writing guides, ESL essay help, sentence starter examples, citation tutorials, and research paper advice for international students."
+        keywords="academic writing blog, ESL essay help, sentence starters for essays, academic writing tips for international students, literature review guide, discussion section phrases, APA writing help"
         canonical="/blog"
         jsonLd={{
           "@context": "https://schema.org",
@@ -68,11 +68,11 @@ export default function Blog() {
               Academic Writing Resources
             </div>
             <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
-              Write better,
-              <span className="italic"> study smarter</span>
+              Academic writing guides,
+              <span className="italic"> sentence starters, and ESL essay help</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Free guides, tutorials, and practical advice for international students working on academic English, citations, literature reviews, and research writing.
+              Free guides, tutorials, and practical examples for international students working on academic English, essay structure, citations, discussion sections, and research writing.
             </p>
           </div>
 
