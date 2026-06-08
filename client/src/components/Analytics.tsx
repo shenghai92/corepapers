@@ -18,6 +18,7 @@ function sendPageView(path: string) {
     return;
   }
 
+  document.documentElement.setAttribute("data-ga4-last-page-path", path);
   window.gtag("config", GA_MEASUREMENT_ID, {
     page_path: path,
     page_title: document.title,

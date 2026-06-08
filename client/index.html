@@ -46,11 +46,21 @@
     <script>
       (function () {
         var measurementId = "G-599JBEELPZ";
+        var root = document.documentElement;
+        var bumpGaMarker = function (eventName) {
+          var currentCount = parseInt(root.getAttribute("data-ga4-call-count") || "0", 10) || 0;
+          root.setAttribute("data-ga4-call-count", String(currentCount + 1));
+          if (eventName) {
+            root.setAttribute("data-ga4-last-event", String(eventName));
+          }
+        };
 
         window.dataLayer = window.dataLayer || [];
+        root.setAttribute("data-ga4-ready", "1");
         window.gtag =
           window.gtag ||
           function () {
+            bumpGaMarker(arguments[0]);
             window.dataLayer.push(arguments);
           };
 

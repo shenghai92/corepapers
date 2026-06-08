@@ -12,6 +12,8 @@ export function trackEvent(name: string, props?: AnalyticsPayload) {
   if (typeof window === "undefined") return;
 
   try {
+    document.documentElement.setAttribute("data-ga4-last-custom-event", name);
+
     if (typeof window.gtag === "function") {
       window.gtag("event", name, props ?? {});
     }
