@@ -13,6 +13,174 @@ export interface StaticArticle {
 
 export const STATIC_ARTICLES: StaticArticle[] = [
   {
+    slug: "how-to-write-an-abstract-for-a-research-paper",
+    title: "How to Write an Abstract for a Research Paper",
+    excerpt:
+      "Learn how to write a clear, concise abstract for a research paper, with structure, examples, and common mistakes international students should avoid.",
+    category: "Research Writing",
+    tags: ["Abstract", "Research Paper", "Academic Writing"],
+    readingTime: 9,
+    metaDescription:
+      "How to write an abstract for a research paper: structure, examples, sentence starters, and common mistakes for international students and non-native English writers.",
+    publishedAt: "2026-06-12",
+    featured: true,
+    content: `## Why the Abstract Matters
+
+The abstract is often the first part of a research paper that instructors, reviewers, and database readers see. Even when the main paper is strong, a weak abstract can make the whole study sound unclear or unfinished.
+
+For international students, abstract writing is difficult because it requires precision, compression, and formal academic style at the same time. You usually need to explain the topic, method, result, and conclusion in a very small space without sounding vague.
+
+The good news is that most effective abstracts follow a clear pattern.
+
+## What an Abstract Should Do
+
+A strong abstract helps the reader answer four questions quickly:
+
+1. What is the paper about?
+2. What did the researcher do?
+3. What did the researcher find?
+4. Why do the findings matter?
+
+If one of these points is missing, the abstract often feels incomplete.
+
+## A Simple Abstract Structure
+
+Most research paper abstracts can be written in five short moves:
+
+### 1. Background or topic
+
+Start by introducing the general issue or research area.
+
+Example:
+
+"Academic writing support tools are increasingly used by international students in English-medium universities."
+
+### 2. Research purpose
+
+State what the paper investigates.
+
+Example:
+
+"This study examines how first-year international students use AI feedback tools during essay revision."
+
+### 3. Method
+
+Briefly explain how the research was conducted.
+
+Example:
+
+"Using a mixed-method design, the study analyzed revision logs and follow-up interviews from 42 undergraduate students."
+
+### 4. Main findings
+
+Summarize the most important results.
+
+Example:
+
+"The findings suggest that students used AI feedback most effectively when suggestions were specific, explainable, and easy to apply during revision."
+
+### 5. Conclusion or implication
+
+Finish with the broader meaning of the results.
+
+Example:
+
+"These results indicate that academic writing tools may be more useful when they support revision decisions rather than only surface correction."
+
+## A Full Abstract Example
+
+"Academic writing support tools are increasingly used by international students in English-medium universities. This study examines how first-year international students use AI feedback tools during essay revision. Using a mixed-method design, the study analyzed revision logs and follow-up interviews from 42 undergraduate students. The findings suggest that students used AI feedback most effectively when suggestions were specific, explainable, and easy to apply during revision. These results indicate that academic writing tools may be more useful when they support revision decisions rather than only surface correction."
+
+This example works because it is specific, logically ordered, and concise.
+
+## Common Abstract Mistakes
+
+### Writing a general introduction instead of an abstract
+
+Many students begin with broad statements such as:
+
+"Nowadays, technology is very important in education."
+
+This sounds like the beginning of an essay introduction, not an abstract. An abstract should move to the actual study quickly.
+
+### Including too much background
+
+You do not need a literature review inside the abstract. One sentence of context is usually enough.
+
+### Being too vague about the findings
+
+Phrases like "the results are discussed" or "some useful conclusions are presented" do not tell the reader anything meaningful.
+
+Instead, state the real finding as clearly as possible.
+
+### Copying sentences directly from multiple parts of the paper
+
+This often creates a paragraph that feels disconnected. The abstract should read as one coherent summary, not as several pasted lines.
+
+### Using unnecessary citation
+
+In most cases, abstracts do not need citations. The focus should be on your own paper.
+
+## Useful Sentence Starters for Abstracts
+
+If you are unsure how to begin each part, these sentence starters can help:
+
+### For the topic
+
+- "This paper explores..."
+- "This study investigates..."
+- "This research examines..."
+
+### For the method
+
+- "Using a qualitative approach, the study..."
+- "Drawing on survey data from..."
+- "A case study design was used to..."
+
+### For the findings
+
+- "The findings indicate that..."
+- "The results suggest that..."
+- "The analysis showed that..."
+
+### For the implication
+
+- "These findings highlight..."
+- "The study suggests that..."
+- "This research contributes to..."
+
+## How Long Should an Abstract Be?
+
+The exact length depends on the journal, course, or department, but many abstracts are around 150 to 250 words.
+
+If your abstract is much longer, it may include too much background or too many details. If it is much shorter, it may be missing method or findings.
+
+## A Fast Revision Checklist
+
+Before submitting, check whether your abstract:
+
+- states the paper's main topic clearly
+- identifies the research purpose
+- briefly explains the method
+- gives a real result, not a vague promise
+- ends with a conclusion or implication
+- stays within the word limit
+
+## Where CorePapers Can Help
+
+If your abstract sounds too informal, repetitive, or translated, [essay polish](/polish) can help you revise sentence-level phrasing into clearer academic English.
+
+If you need more formal expressions for reporting findings or implications, the [academic phrase library](/phrases) can help you build stronger abstract sentences.
+
+If your paper also needs reference support before submission, the [citation generator](/citations) can help you format sources more quickly.
+
+## Conclusion
+
+Writing a strong abstract is mostly about selection and clarity. You are not trying to include everything from the paper. You are choosing the few details that best explain what the study does and why it matters.
+
+Once you follow a clear structure, abstract writing becomes much easier and much more effective for readers.`,
+  },
+  {
     slug: "how-to-avoid-common-esl-writing-mistakes",
     title: "How to Avoid the 10 Most Common ESL Writing Mistakes in Academic Papers",
     excerpt:

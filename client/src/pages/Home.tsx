@@ -14,14 +14,14 @@ import {
 
 const FEATURED_GUIDES = [
   {
+    title: "How to Write an Abstract for a Research Paper",
+    href: "/blog/how-to-write-an-abstract-for-a-research-paper",
+    desc: "Use a clear structure for topic, method, findings, and implication.",
+  },
+  {
     title: "How to Write a Literature Review for International Students",
     href: "/blog/how-to-write-a-literature-review-for-international-students",
     desc: "Plan, group, and synthesize sources more clearly.",
-  },
-  {
-    title: "How to Use Hedging Language in Academic Writing",
-    href: "/blog/how-to-use-hedging-language-in-academic-writing",
-    desc: "Sound more precise and appropriately cautious in formal writing.",
   },
   {
     title: "How to Paraphrase Without Plagiarizing in Academic Writing",
