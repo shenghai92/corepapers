@@ -13,6 +13,175 @@ export interface StaticArticle {
 
 export const STATIC_ARTICLES: StaticArticle[] = [
   {
+    slug: "abstract-vs-introduction-difference",
+    title: "Abstract vs Introduction: What Is the Difference in a Research Paper?",
+    excerpt:
+      "Understand the difference between an abstract and an introduction, with examples, structure tips, and common mistakes international students often make.",
+    category: "Research Writing",
+    tags: ["Abstract", "Introduction", "Research Paper"],
+    readingTime: 8,
+    metaDescription:
+      "Abstract vs introduction in a research paper: learn the key differences in purpose, length, content, and structure, with examples for international students.",
+    publishedAt: "2026-06-12",
+    featured: false,
+    content: `## Why Students Confuse the Abstract and the Introduction
+
+Many students know that both the abstract and the introduction come near the beginning of a research paper, but they are not sure how the two sections differ.
+
+This confusion is common among international students because both sections describe the topic, and both may mention the purpose of the paper. However, they do very different jobs.
+
+If you write the abstract like an introduction, it often becomes too broad. If you write the introduction like an abstract, it often becomes too short and underdeveloped.
+
+## The Short Answer
+
+The abstract is a brief summary of the whole paper.
+
+The introduction is the opening section that prepares the reader for the paper in more detail.
+
+In other words:
+
+- the abstract summarizes
+- the introduction develops
+
+That is the main difference.
+
+## What the Abstract Does
+
+The abstract gives the reader a compressed overview of the full paper.
+
+A strong abstract usually explains:
+
+- the topic
+- the research purpose
+- the method
+- the main findings
+- the conclusion or implication
+
+It is usually short, often around 150 to 250 words.
+
+A reader should be able to understand the basic shape of the study without reading the whole paper.
+
+## What the Introduction Does
+
+The introduction is not a summary. It is the section that leads the reader into the paper.
+
+A strong introduction often:
+
+- introduces the topic area
+- explains why the topic matters
+- gives relevant background
+- identifies a problem, gap, or question
+- states the aim or thesis of the paper
+- sometimes outlines the structure of the paper
+
+Unlike the abstract, the introduction does not need to summarize the results right away in most student papers.
+
+## Abstract vs Introduction: Key Differences
+
+### 1. Purpose
+
+The abstract gives a full summary of the paper.
+
+The introduction prepares the reader for the discussion that follows.
+
+### 2. Length
+
+The abstract is short and highly compressed.
+
+The introduction is usually longer because it provides context and explanation.
+
+### 3. Detail
+
+The abstract includes only the most essential points.
+
+The introduction can explain background, definitions, context, and the importance of the topic in more depth.
+
+### 4. Results
+
+The abstract often includes the main findings.
+
+The introduction usually does not give a full summary of results in advance.
+
+### 5. Position in the paper
+
+The abstract appears before the main paper.
+
+The introduction is the first section of the main paper itself.
+
+## A Simple Example
+
+### Weak abstract-like introduction
+
+"This paper studies AI feedback tools. The method involved interviews and revision analysis. The results suggest that students preferred explainable feedback."
+
+This sounds too much like a summary. It does not really introduce the topic.
+
+### Stronger introduction opening
+
+"AI feedback tools are becoming more common in university writing support, especially among international students working in a second language. As these tools become more visible in academic revision, it becomes important to understand not only whether students use them, but how they use them during real drafting and feedback cycles."
+
+This sounds more like an introduction because it builds context and prepares the research question.
+
+## Common Mistakes
+
+### Repeating the same paragraph in both sections
+
+Some students write one paragraph and use it for both the abstract and the introduction. This usually weakens both sections because each one has a different purpose.
+
+### Putting too much background in the abstract
+
+The abstract should not become a mini literature review. Keep it focused on the paper itself.
+
+### Making the introduction too short
+
+An introduction needs enough context for the reader to understand why the paper matters.
+
+### Including no clear purpose statement
+
+Both the abstract and the introduction should make the paper's focus clear, but they do so in different ways.
+
+## How to Write Them in the Right Order
+
+A useful workflow is:
+
+1. Draft the introduction early, because it helps shape the direction of the paper.
+2. Write the abstract after the full paper is finished, because then you know exactly what the paper includes.
+
+This order usually produces a stronger abstract because you are summarizing the real final version, not an earlier plan.
+
+## Quick Checklist
+
+Ask these questions:
+
+### For the abstract
+
+- Does it summarize the whole paper?
+- Does it mention method and findings if needed?
+- Can a reader understand the full study quickly?
+
+### For the introduction
+
+- Does it explain the topic and context?
+- Does it show why the paper matters?
+- Does it clearly state the research aim, question, or thesis?
+
+## Related Help for International Students
+
+If you are still working on the abstract itself, read [how to write an abstract for a research paper](/blog/how-to-write-an-abstract-for-a-research-paper).
+
+If your sentences sound too informal or translated, [essay polish](/polish) can help you revise them into clearer academic English.
+
+If you need stronger formal wording for topic sentences, aims, or research significance, the [academic phrase library](/phrases) can also help.
+
+## Conclusion
+
+The abstract and the introduction may appear next to each other, but they are not interchangeable.
+
+The abstract gives the reader the whole paper in miniature. The introduction opens the discussion and builds the context step by step.
+
+Once you separate those two jobs clearly, both sections become much easier to write well.`,
+  },
+  {
     slug: "how-to-write-an-abstract-for-a-research-paper",
     title: "How to Write an Abstract for a Research Paper",
     excerpt:

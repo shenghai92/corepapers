@@ -345,14 +345,14 @@ export default function Polish() {
                 <div className="grid sm:grid-cols-3 gap-4">
                   {[
                     {
+                      href: "/blog/abstract-vs-introduction-difference",
+                      title: "Abstract vs introduction",
+                      desc: "Learn what each section should do in a research paper.",
+                    },
+                    {
                       href: "/blog/how-to-avoid-common-esl-writing-mistakes",
                       title: "Common ESL writing mistakes",
                       desc: "Learn which sentence patterns professors notice most often.",
-                    },
-                    {
-                      href: "/blog/how-to-use-hedging-language-in-academic-writing",
-                      title: "Hedging language guide",
-                      desc: "Use a more academic tone without sounding vague.",
                     },
                     {
                       href: "/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing",
