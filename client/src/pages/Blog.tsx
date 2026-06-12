@@ -89,6 +89,40 @@ export default function Blog() {
             </p>
           </div>
 
+          <div className="max-w-5xl mx-auto mb-10 rounded-3xl border border-primary/10 bg-hero-gradient p-8">
+            <div className="max-w-3xl">
+              <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Trending Topic</p>
+              <h2 className="font-serif font-light text-3xl sm:text-4xl text-slate-purple mb-3">
+                Research paper abstract help
+              </h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-5">
+                If you are writing a paper abstract right now, start with structure, then compare examples, then check how the abstract differs from the introduction.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {[
+                  {
+                    href: "/blog/how-to-write-an-abstract-for-a-research-paper",
+                    title: "How to write an abstract",
+                  },
+                  {
+                    href: "/blog/research-paper-abstract-examples",
+                    title: "Abstract examples",
+                  },
+                  {
+                    href: "/blog/abstract-vs-introduction-difference",
+                    title: "Abstract vs introduction",
+                  },
+                ].map((item) => (
+                  <Link key={item.href} href={item.href} className="block">
+                    <div className="rounded-2xl border border-white/70 bg-white/80 p-4 hover:border-primary/30 hover:shadow-soft transition-all">
+                      <h3 className="font-serif text-xl text-slate-purple">{item.title}</h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div className="max-w-5xl mx-auto mb-12 grid md:grid-cols-3 gap-5">
             {[
               {
