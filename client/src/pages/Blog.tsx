@@ -101,6 +101,10 @@ export default function Blog() {
               <div className="grid sm:grid-cols-3 gap-4">
                 {[
                   {
+                    href: "/blog/how-to-write-a-research-paper-introduction",
+                    title: "Research paper introduction",
+                  },
+                  {
                     href: "/blog/how-to-write-an-abstract-for-a-research-paper",
                     title: "How to write an abstract",
                   },

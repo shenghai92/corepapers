@@ -13,6 +13,152 @@ export interface StaticArticle {
 
 export const STATIC_ARTICLES: StaticArticle[] = [
   {
+    slug: "how-to-write-a-research-paper-introduction",
+    title: "How to Write a Research Paper Introduction",
+    excerpt:
+      "Learn how to write a clear research paper introduction with topic setup, background, gap, and purpose statements for international students.",
+    category: "Research Writing",
+    tags: ["Introduction", "Research Paper", "Academic Writing"],
+    readingTime: 9,
+    metaDescription:
+      "How to write a research paper introduction: learn structure, purpose statements, background, and examples for international students and ESL writers.",
+    publishedAt: "2026-06-12",
+    featured: false,
+    content: `## What a Research Paper Introduction Should Do
+
+A research paper introduction has one main job: it helps the reader understand what the paper is about and why it matters.
+
+For international students, the introduction can be difficult because it is not just a summary. It needs to build context, narrow the topic, and lead toward the paper's purpose.
+
+If the introduction is too broad, the paper feels unfocused. If it is too short, the reader may not understand why the research matters.
+
+## A Simple Introduction Structure
+
+A strong research paper introduction usually moves through four parts:
+
+### 1. Topic area
+
+Begin with the general subject.
+
+Example:
+
+"Academic writing support has become more visible in universities that teach large numbers of international students."
+
+### 2. Background or context
+
+Add a little more detail so the reader sees the setting.
+
+Example:
+
+"As students revise essays in English, they often need help with clarity, sentence structure, and academic tone."
+
+### 3. Gap, problem, or question
+
+Show what is missing, unclear, or worth investigating.
+
+Example:
+
+"However, less is known about how students actually use AI feedback during revision, especially when they must decide which suggestions to accept."
+
+### 4. Purpose or thesis
+
+State exactly what the paper will do.
+
+Example:
+
+"This paper examines how first-year international students respond to AI-generated writing feedback during essay revision."
+
+## Example of a Strong Research Paper Introduction
+
+"Academic writing support has become more visible in universities that teach large numbers of international students. As students revise essays in English, they often need help with clarity, sentence structure, and academic tone. However, less is known about how students actually use AI feedback during revision, especially when they must decide which suggestions to accept. This paper examines how first-year international students respond to AI-generated writing feedback during essay revision."
+
+This introduction works because it moves from broad topic to specific research purpose in a clear order.
+
+## What Not to Do
+
+### Start too generally
+
+Avoid introductions like:
+
+"Writing is important in modern society."
+
+This is true, but it is too broad for a research paper introduction.
+
+### Write the abstract again
+
+The introduction should not become a compressed summary of the whole paper. It should open the topic and lead the reader into the research.
+
+### Forget the purpose statement
+
+If the introduction does not say what the paper will do, the reader may feel lost.
+
+### Add too much detail too early
+
+Save detailed findings, tables, and heavy explanation for later sections.
+
+## Useful Sentence Starters
+
+### For the topic
+
+- "This paper examines..."
+- "This study focuses on..."
+- "This research explores..."
+
+### For the background
+
+- "In recent years..."
+- "As universities increasingly..."
+- "A growing number of studies..."
+
+### For the gap or problem
+
+- "However, less is known about..."
+- "Few studies have examined..."
+- "This question remains underexplored..."
+
+### For the purpose
+
+- "This paper aims to..."
+- "The present study investigates..."
+- "This research seeks to..."
+
+## How Long Should the Introduction Be?
+
+There is no single fixed length, but the introduction is usually longer than the abstract.
+
+It should be long enough to:
+
+- provide context
+- identify the problem or gap
+- explain the purpose of the paper
+
+If it is too short, the paper can feel abrupt. If it is too long, it may start to read like a literature review.
+
+## A Fast Revision Checklist
+
+Before you submit, check whether your introduction:
+
+- starts with the topic area
+- narrows to a clear research problem
+- explains why the topic matters
+- ends with a purpose or thesis statement
+- does not repeat the abstract
+
+## Related Guides
+
+If you are also writing the summary at the start of your paper, read [how to write an abstract for a research paper](/blog/how-to-write-an-abstract-for-a-research-paper).
+
+If you want a better sense of the difference between opening sections, read [abstract vs introduction: what is the difference](/blog/abstract-vs-introduction-difference).
+
+If your sentences sound too informal or translated, [essay polish](/polish) can help you revise them into clearer academic English.
+
+## Conclusion
+
+A good research paper introduction should not try to do everything. It should guide the reader from the broad topic to the specific purpose of the study.
+
+Once you have that direction clear, the rest of the paper becomes much easier to build.`,
+  },
+  {
     slug: "research-paper-abstract-examples",
     title: "Research Paper Abstract Examples for International Students",
     excerpt:
