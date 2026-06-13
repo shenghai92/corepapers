@@ -3,6 +3,7 @@ import { publicProcedure, router } from "./trpc";
 import { getDbDiagnostics } from "../db";
 import { getAiRuntimeDebug, invokeLLM } from "./llm";
 import { usageEvents } from "../../drizzle/schema";
+import { and, eq, gte } from "drizzle-orm";
 
 export const systemRouter = router({
   health: publicProcedure
@@ -268,11 +269,37 @@ export const systemRouter = router({
       return { inserted: true };
     });
 
+    const usageRead = await run("usageRead", async () => {
+      if (!ctx.db) {
+        throw new Error("Database unavailable");
+      }
+
+      const startOfDay = new Date(Date.UTC(
+        new Date().getUTCFullYear(),
+        new Date().getUTCMonth(),
+        new Date().getUTCDate()
+      ));
+
+      const rows = await ctx.db
+        .select()
+        .from(usageEvents)
+        .where(
+          and(
+            eq(usageEvents.feature, "polish"),
+            eq(usageEvents.identifier, "system-probe"),
+            gte(usageEvents.createdAt, startOfDay)
+          )
+        );
+
+      return { count: rows.length };
+    });
+
     return {
       ok: true,
       polishInvoke,
       citationInvoke,
       usageWrite,
+      usageRead,
     };
   }),
 });
