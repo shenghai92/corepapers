@@ -294,12 +294,58 @@ export const systemRouter = router({
       return { count: rows.length };
     });
 
+    const requestUsageRead = await run("requestUsageRead", async () => {
+      if (!ctx.db) {
+        throw new Error("Database unavailable");
+      }
+
+      const read = (key: string) => {
+        if (ctx.req.headers instanceof Headers) {
+          return ctx.req.headers.get(key) ?? undefined;
+        }
+        const value = ctx.req.headers[key.toLowerCase()];
+        return Array.isArray(value) ? value[0] : value;
+      };
+
+      const forwardedFor = read("x-forwarded-for");
+      const ip =
+        read("cf-connecting-ip") ??
+        read("true-client-ip") ??
+        read("x-real-ip") ??
+        forwardedFor?.split(",")[0]?.trim();
+      const userAgent = read("user-agent") ?? "unknown-agent";
+      const identifier = ip ? `ip:${ip}` : `ua:${userAgent.slice(0, 120)}`;
+
+      const startOfDay = new Date(Date.UTC(
+        new Date().getUTCFullYear(),
+        new Date().getUTCMonth(),
+        new Date().getUTCDate()
+      ));
+
+      const rows = await ctx.db
+        .select()
+        .from(usageEvents)
+        .where(
+          and(
+            eq(usageEvents.feature, "polish"),
+            eq(usageEvents.identifier, identifier),
+            gte(usageEvents.createdAt, startOfDay)
+          )
+        );
+
+      return {
+        identifier,
+        count: rows.length,
+      };
+    });
+
     return {
       ok: true,
       polishInvoke,
       citationInvoke,
       usageWrite,
       usageRead,
+      requestUsageRead,
     };
   }),
 });
