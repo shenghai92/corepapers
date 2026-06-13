@@ -8,6 +8,7 @@ import {
   usageEvents,
 } from "../../drizzle/schema";
 import { and, desc, eq, gte } from "drizzle-orm";
+import { TRPCError } from "@trpc/server";
 
 type UsagePlan = "free" | "student" | "pro";
 type UsageFeature = "polish" | "citation";
@@ -118,6 +119,120 @@ async function recordUsageEvent(
   });
 }
 
+function toFiniteNumber(value: unknown, fallback = 0) {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string") {
+    const parsed = Number(value);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return fallback;
+}
+
+function normalizeSuggestionType(value: unknown) {
+  const normalized = String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/[ /-]+/g, "_");
+
+  const allowed = new Set([
+    "non_native_expression",
+    "vocabulary",
+    "sentence_structure",
+    "hedging",
+    "formality",
+  ]);
+
+  if (allowed.has(normalized)) return normalized;
+  if (normalized.includes("grammar")) return "sentence_structure";
+  if (normalized.includes("style")) return "formality";
+  return "sentence_structure";
+}
+
+function normalizePolishResult(raw: unknown) {
+  const data = raw && typeof raw === "object" ? raw as Record<string, unknown> : {};
+  const rawSuggestions = Array.isArray(data.suggestions) ? data.suggestions : [];
+  const rawScoreBreakdown =
+    data.scoreBreakdown && typeof data.scoreBreakdown === "object"
+      ? (data.scoreBreakdown as Record<string, unknown>)
+      : {};
+
+  return {
+    polishedText: String(data.polishedText ?? ""),
+    suggestions: rawSuggestions.map((item, index) => {
+      const suggestion =
+        item && typeof item === "object" ? (item as Record<string, unknown>) : {};
+
+      return {
+        id: String(suggestion.id ?? `${index + 1}`),
+        original: String(suggestion.original ?? ""),
+        improved: String(
+          suggestion.improved ??
+          suggestion.corrected ??
+          suggestion.rewrite ??
+          ""
+        ),
+        type: normalizeSuggestionType(suggestion.type),
+        explanation: String(suggestion.explanation ?? ""),
+      };
+    }),
+    overallScore: Math.round(toFiniteNumber(data.overallScore, 0)),
+    scoreBreakdown: {
+      vocabulary: Math.round(
+        toFiniteNumber(
+          rawScoreBreakdown.vocabulary && typeof rawScoreBreakdown.vocabulary === "object"
+            ? (rawScoreBreakdown.vocabulary as Record<string, unknown>).score
+            : rawScoreBreakdown.vocabulary,
+          0
+        )
+      ),
+      grammar: Math.round(
+        toFiniteNumber(
+          rawScoreBreakdown.grammar && typeof rawScoreBreakdown.grammar === "object"
+            ? (rawScoreBreakdown.grammar as Record<string, unknown>).score
+            : rawScoreBreakdown.grammar,
+          0
+        )
+      ),
+      academicTone: Math.round(
+        toFiniteNumber(
+          rawScoreBreakdown.academicTone && typeof rawScoreBreakdown.academicTone === "object"
+            ? (rawScoreBreakdown.academicTone as Record<string, unknown>).score
+            : rawScoreBreakdown.academicTone,
+          0
+        )
+      ),
+      coherence: Math.round(
+        toFiniteNumber(
+          rawScoreBreakdown.coherence && typeof rawScoreBreakdown.coherence === "object"
+            ? (rawScoreBreakdown.coherence as Record<string, unknown>).score
+            : rawScoreBreakdown.coherence,
+          0
+        )
+      ),
+    },
+  };
+}
+
+function normalizeCitationResult(raw: unknown) {
+  const data = raw && typeof raw === "object" ? raw as Record<string, unknown> : {};
+  const inTextCitation = data.inTextCitation;
+
+  return {
+    citation: String(data.citation ?? ""),
+    inTextCitation:
+      typeof inTextCitation === "string"
+        ? inTextCitation
+        : inTextCitation && typeof inTextCitation === "object"
+          ? String(
+              (inTextCitation as Record<string, unknown>).parenthetical ??
+              (inTextCitation as Record<string, unknown>).narrative ??
+              ""
+            )
+          : "",
+    notes: String(data.notes ?? ""),
+  };
+}
+
 const extractJsonPayload = (rawContent: unknown) => {
   const content = typeof rawContent === "string"
     ? rawContent
@@ -176,11 +291,13 @@ export const polishRouter = router({
       const limits = PLAN_LIMITS[plan];
 
       if (wordCount > limits.polishMaxWordsPerRequest) {
-        throw new Error(
+        throw new TRPCError({
+          code: "BAD_REQUEST",
+          message:
           plan === "free"
             ? `Free usage supports up to ${limits.polishMaxWordsPerRequest} words per polish. Upgrade to Student for longer passages.`
-            : `${plan === "student" ? "Student" : "Pro"} plan supports up to ${limits.polishMaxWordsPerRequest} words per polish.`
-        );
+            : `${plan === "student" ? "Student" : "Pro"} plan supports up to ${limits.polishMaxWordsPerRequest} words per polish.`,
+        });
       }
 
       if (db) {
@@ -189,19 +306,23 @@ export const polishRouter = router({
         const wordsToday = usage.reduce((sum, event) => sum + (event.units ?? 0), 0);
 
         if (requestsToday >= limits.polishDailyRequests) {
-          throw new Error(
+          throw new TRPCError({
+            code: "TOO_MANY_REQUESTS",
+            message:
             plan === "free"
               ? "You have reached today's free polish limit. Sign in or upgrade for more usage."
-              : "You have reached today's polish limit for your plan. Please try again tomorrow or contact support if you need a higher cap."
-          );
+              : "You have reached today's polish limit for your plan. Please try again tomorrow or contact support if you need a higher cap.",
+          });
         }
 
         if (wordsToday + wordCount > limits.polishDailyWords) {
-          throw new Error(
+          throw new TRPCError({
+            code: "TOO_MANY_REQUESTS",
+            message:
             plan === "free"
               ? `Free usage includes up to ${limits.polishDailyWords.toLocaleString()} AI polish words per day. Upgrade to continue with longer drafts.`
-              : `You have reached today's ${plan} plan polish word limit. Please try again tomorrow or shorten this draft.`
-          );
+              : `You have reached today's ${plan} plan polish word limit. Please try again tomorrow or shorten this draft.`,
+          });
         }
       }
 
@@ -309,23 +430,9 @@ Respond with a JSON object in this exact format:
         await recordUsageEvent(db, identifier, "polish", wordCount, ctx.user?.id);
       }
 
-      return extractJsonPayload(response.choices[0]?.message?.content) as {
-        polishedText: string;
-        suggestions: Array<{
-          id: string;
-          original: string;
-          improved: string;
-          type: string;
-          explanation: string;
-        }>;
-        overallScore: number;
-        scoreBreakdown: {
-          vocabulary: number;
-          grammar: number;
-          academicTone: number;
-          coherence: number;
-        };
-      };
+      return normalizePolishResult(
+        extractJsonPayload(response.choices[0]?.message?.content)
+      );
     }),
 
   saveSession: protectedProcedure
@@ -414,11 +521,13 @@ export const citationRouter = router({
       if (db) {
         const usage = await getTodayUsage(db, identifier, "citation", ctx.user?.id);
         if (usage.length >= limits.citationDailyRequests) {
-          throw new Error(
+          throw new TRPCError({
+            code: "TOO_MANY_REQUESTS",
+            message:
             plan === "free"
               ? "You have reached today's free citation limit. Upgrade for higher daily usage."
-              : "You have reached today's citation limit for your plan. Please try again tomorrow."
-          );
+              : "You have reached today's citation limit for your plan. Please try again tomorrow.",
+          });
         }
       }
 
@@ -471,11 +580,9 @@ Follow the latest edition guidelines strictly:
         await recordUsageEvent(db, identifier, "citation", 1, ctx.user?.id);
       }
 
-      return extractJsonPayload(response.choices[0]?.message?.content) as {
-        citation: string;
-        inTextCitation: string;
-        notes: string;
-      };
+      return normalizeCitationResult(
+        extractJsonPayload(response.choices[0]?.message?.content)
+      );
     }),
 
   saveCitation: publicProcedure
