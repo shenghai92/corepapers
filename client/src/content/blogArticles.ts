@@ -1098,12 +1098,12 @@ Good hedging is a sign of control, not weakness. It helps your argument sound mo
     slug: "how-to-paraphrase-without-plagiarizing-in-academic-writing",
     title: "How to Paraphrase Without Plagiarizing in Academic Writing",
     excerpt:
-      "A step-by-step approach to paraphrasing sources accurately, ethically, and in your own academic voice.",
+      "A step-by-step approach to paraphrasing sources accurately, ethically, and in your own academic voice, with examples and common mistakes to avoid.",
     category: "Research Skills",
     tags: ["Paraphrasing", "Plagiarism", "Research Skills"],
     readingTime: 10,
     metaDescription:
-      "Learn how to paraphrase without plagiarizing in academic writing. Step-by-step advice, examples, and citation tips for students writing in English.",
+      "Learn how to paraphrase without plagiarizing in academic writing with examples, citation tips, and advice on fixing insufficient paraphrase.",
     publishedAt: "2024-02-18",
     featured: false,
     content: `## Paraphrasing Is More Than Replacing Words
@@ -1146,6 +1146,29 @@ Weak paraphrase: Researchers discovered that students who got structured feedbac
 
 Better paraphrase: Compared with grading alone, detailed feedback supported stronger revision practices among students in the study.
 
+## What Does "Insufficient Paraphrase" Mean?
+
+If a teacher writes "insufficient paraphrase" in the margin, it usually means your sentence is still too close to the source in wording, structure, or both.
+
+This often happens when students:
+
+- keep the original sentence pattern
+- swap only a few words
+- keep distinctive academic phrases from the source
+- paraphrase before fully understanding the idea
+
+In other words, the problem is not only citation. The problem is that the sentence still sounds borrowed.
+
+## Bad Paraphrase vs Strong Paraphrase
+
+Original idea: Many students revised more effectively after receiving structured feedback than after receiving grades alone.
+
+Too close: Many students revised more effectively after receiving structured feedback than after only receiving grades.
+
+Stronger paraphrase: Compared with grading alone, structured feedback helped students make more effective revisions.
+
+The stronger version changes the sentence shape, wording, and emphasis while keeping the main meaning.
+
 ## How to Keep Your Own Voice
 
 Your paragraph should still sound like your paper, not like a series of borrowed sentences. Before paraphrasing, decide why you are using the source:
@@ -1163,6 +1186,18 @@ Even when every word is your own, the idea still belongs to the original author.
 
 If you need help with formatting, the [citation generator](/citations) can help you build references in common styles.
 
+## How to Fix Insufficient Paraphrase
+
+If you think your paraphrase is still too close to the source, try this sequence:
+
+1. hide the source
+2. explain the idea aloud in simple words
+3. write the sentence again from memory
+4. compare the structure with the original
+5. add the citation after revising
+
+This process is slower, but it is one of the safest ways to avoid patchwriting.
+
 ## A Quick Self-Check
 
 Ask these questions:
@@ -1177,6 +1212,8 @@ If one answer is no, revise again.
 ## CorePapers Tip
 
 After paraphrasing, run the paragraph through [essay polish](/polish) to smooth tone and sentence flow. That can help your paraphrase sound integrated rather than inserted.
+
+If you are also trying to avoid plagiarism more broadly, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing).
 
 ## Conclusion
 
@@ -1268,12 +1305,12 @@ A good discussion section guides the reader from results to meaning. Once you fo
     slug: "how-to-write-a-thesis-statement-for-an-academic-essay",
     title: "How to Write a Thesis Statement for an Academic Essay",
     excerpt:
-      "Learn how to write a clear, arguable, and focused thesis statement that gives your essay direction from the start.",
+      "Learn how to write a clear, arguable, and focused thesis statement, with placement tips, examples, and revision advice for academic essays.",
     category: "Essay Structure",
     tags: ["Thesis Statement", "Essay Writing", "Academic Writing"],
     readingTime: 9,
     metaDescription:
-      "Learn how to write a thesis statement for an academic essay. Practical examples, common mistakes, and revision tips for international students.",
+      "Learn how to write a thesis statement for an academic essay, where to place it, and how to improve it with clear examples and revision tips.",
     publishedAt: "2024-03-03",
     featured: false,
     content: `## Why the Thesis Statement Matters
@@ -1300,6 +1337,14 @@ Weak: "Social media is important for university students."
 Stronger: "Although social media can support peer collaboration, excessive use of short-form platforms may reduce sustained attention during independent study."
 
 The second version is stronger because it makes a clear claim and gives the essay a direction.
+
+## Where Does the Thesis Statement Go in an Essay?
+
+In most academic essays, the thesis statement appears near the end of the introduction.
+
+That position works well because the introduction can first explain the topic, narrow the focus, and then end with the essay's main claim. In shorter essays, the thesis is often the final sentence of the first paragraph. In longer essays, it may come after a few opening sentences of context, but it still usually appears before the body paragraphs begin.
+
+If the reader finishes the introduction and still cannot tell what the paper will argue, the thesis is probably too vague or placed too late.
 
 ## A Simple Formula
 
@@ -1344,6 +1389,32 @@ Your answers often contain the thesis already, even if it does not sound polishe
 
 Many students think the thesis must be perfect before they draft. In reality, the best thesis statements often become clear after some writing has happened. It is normal to revise the thesis once your body paragraphs sharpen the argument.
 
+## Thesis Statement Examples for Different Essay Types
+
+### Argument essay
+
+"Although university students often use social media for collaboration, constant short-form content exposure may reduce deep focus during independent study."
+
+### Compare-and-contrast essay
+
+"While online learning increases flexibility, face-to-face seminars often provide stronger opportunities for immediate discussion and accountability."
+
+### Analytical essay
+
+"The novel presents silence not as passivity, but as a deliberate strategy for showing emotional and political pressure."
+
+These examples work because they do more than name the topic. Each one makes a claim that can be explained and supported in the body paragraphs.
+
+## A Fast Thesis Statement Checklist
+
+Before you submit, ask:
+
+- Does the thesis clearly state the main claim?
+- Is the claim arguable rather than obvious?
+- Is it narrow enough for the assignment length?
+- Does it appear near the end of the introduction?
+- Can each body paragraph support it directly?
+
 ## Sentence Patterns You Can Use
 
 - "This essay argues that..."
@@ -1356,6 +1427,8 @@ For more sentence starters, visit the [academic phrases page](/phrases).
 ## CorePapers Tip
 
 If your thesis sounds vague or too conversational, [essay polish](/polish) can help refine the sentence and make the claim more academic.
+
+If you need stronger sentence starters around the thesis or introduction, the [academic phrase bank](/phrases) can help you build a clearer opening paragraph.
 
 ## Conclusion
 
@@ -1457,14 +1530,14 @@ A good research proposal is clear about purpose, limited in scope, and realistic
   },
   {
     slug: "how-to-write-a-methodology-section-for-a-research-paper",
-    title: "How to Write a Methodology Section for a Research Paper",
+    title: "How to Write a Methodology Section for a Research Paper (With Example)",
     excerpt:
-      "Learn how to explain research design, data collection, and analysis clearly in a methodology section.",
+      "Learn how to write a methodology section with structure tips, sample wording, and a practical example for student research papers.",
     category: "Research Writing",
     tags: ["Methodology", "Research Paper", "Academic Writing"],
     readingTime: 10,
     metaDescription:
-      "Learn how to write a methodology section for a research paper. Practical guidance on design, sampling, data collection, and analysis.",
+      "Learn how to write a methodology section for a research paper with structure, examples, sample wording, and common mistakes to avoid.",
     publishedAt: "2024-03-17",
     featured: false,
     content: `## What the Methodology Section Is For
@@ -1472,6 +1545,8 @@ A good research proposal is clear about purpose, limited in scope, and realistic
 The methodology section explains how the study was conducted and why those choices make sense. Readers should come away knowing what kind of research you did, what data you used, and how you analyzed it.
 
 This section is often difficult because students either become too vague or include every minor detail without a clear structure.
+
+If you are searching for how to write a methodology section, a good short answer is this: explain the research design, data source or participants, data collection process, and method of analysis in a clear order that another reader could follow.
 
 ## What to Include
 
@@ -1486,6 +1561,19 @@ Depending on your field, a methodology section may include:
 - ethical considerations
 
 Not every paper needs every subsection, but most methodology sections need a clear sequence.
+
+## A Simple Methodology Section Structure
+
+Many students find it easier to write the section when they treat it as a predictable sequence:
+
+1. research design
+2. participants, sample, or data source
+3. materials or instruments
+4. procedure or data collection
+5. method of analysis
+6. ethics or limitations where relevant
+
+You do not always need these as formal subheadings, but this order helps the reader understand what happened and why.
 
 ## Start With the Research Design
 
@@ -1517,6 +1605,34 @@ Examples:
 - discourse analysis for texts
 - content analysis for documents
 
+## Methodology Section Example
+
+Here is a simple example of methodology wording for a student research paper:
+
+"This study employed a qualitative research design to examine how first-year international students responded to AI-generated writing feedback. Data were collected through semi-structured interviews and annotated essay drafts from twelve undergraduate students enrolled in an English-medium writing course. Participants were selected through voluntary recruitment within the course. The interview data and draft revisions were analyzed using thematic coding in order to identify recurring patterns in how students interpreted and applied feedback."
+
+This example works because it tells the reader:
+
+- the design
+- the participants
+- the data source
+- the selection process
+- the method of analysis
+
+## Sample Methodology Section for Different Research Types
+
+### Quantitative
+
+Focus on variables, sample size, instruments, and statistical analysis.
+
+### Qualitative
+
+Focus on participant context, data collection method, coding process, and interpretive logic.
+
+### Mixed-methods
+
+Explain both the numerical and qualitative parts, and show how they work together.
+
 ## Common Mistakes
 
 ### Being too general
@@ -1531,6 +1647,16 @@ The methodology explains process, not findings.
 
 Simple, precise wording is usually stronger than abstract phrasing.
 
+## Methodology Section Checklist
+
+Before submitting, ask:
+
+- Have I clearly named the research design?
+- Can the reader tell who or what was studied?
+- Have I explained how the data was collected?
+- Have I explained how the data was analyzed?
+- Did I avoid mixing results into the methodology?
+
 ## Useful Sentence Patterns
 
 - "This study employed a qualitative research design..."
@@ -1542,6 +1668,10 @@ Simple, precise wording is usually stronger than abstract phrasing.
 ## CorePapers Tip
 
 If your methodology sounds repetitive or awkward, [essay polish](/polish) can help smooth the phrasing. If you are citing method sources or research instruments, the [citation generator](/citations) can help keep references organized.
+
+If you need more sentence starters for methods, analysis, or cautious reporting, the [academic phrase bank](/phrases) can help you draft the section more confidently.
+
+If you are still planning the study, the [research proposal guide](/blog/how-to-write-a-research-proposal-for-university) can help you connect the methodology to the research question more clearly.
 
 ## Conclusion
 

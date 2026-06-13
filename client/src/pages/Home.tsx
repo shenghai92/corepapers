@@ -143,9 +143,9 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="AI Academic Writing Assistant and Essay Polisher for International Students"
-        description="CorePapers is an AI academic writing assistant for international students and non-native English writers. Polish essays, improve academic English, use an academic phrase bank, and generate APA 7, MLA, Chicago, and IEEE citations."
-        keywords="AI academic writing assistant, writing tools for international students, AI essay polisher, academic writing for non-native English speakers, academic phrase bank, APA 7 citation generator, essay revision for international students"
+        title="CorePapers: AI Academic Writing Assistant for International Students"
+        description="CorePapers helps international students and non-native English writers polish essays, improve academic English, use an academic phrase bank, and generate APA 7, MLA, Chicago, and IEEE citations."
+        keywords="CorePapers, AI academic writing assistant, writing tools for international students, AI essay polisher, academic writing for non-native English speakers, academic phrase bank, APA 7 citation generator"
         canonical="/"
         jsonLd={HOME_SCHEMA}
       />
