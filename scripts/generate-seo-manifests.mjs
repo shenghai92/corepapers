@@ -85,7 +85,7 @@ function createSitemapIndex(entries) {
 
 function extractBlogEntries(source) {
   const articleRegex =
-    /slug:\s*"([^"]+)"[\s\S]*?title:\s*"([^"]+)"[\s\S]*?publishedAt:\s*"([^"]+)"/g;
+    /slug:\s*"([^"]+)"[\s\S]*?title:\s*"([^"]+)"[\s\S]*?excerpt:\s*"([^"]+)"[\s\S]*?publishedAt:\s*"([^"]+)"/g;
   const rows = [];
   let match = articleRegex.exec(source);
 
@@ -94,9 +94,10 @@ function extractBlogEntries(source) {
       loc: `${BASE_URL}/blog/${match[1]}`,
       slug: match[1],
       title: match[2],
+      excerpt: match[3],
       changefreq: "monthly",
       priority: "0.7",
-      lastmod: match[3],
+      lastmod: match[4],
     });
     match = articleRegex.exec(source);
   }
@@ -132,6 +133,44 @@ function createDiscoveryLinks(rows) {
     "      </nav>",
     "    </noscript>",
     "    <!-- BLOG_DISCOVERY_LINKS_END -->",
+  ].join("\n");
+}
+
+function formatRssDate(value) {
+  return new Date(`${value}T00:00:00Z`).toUTCString();
+}
+
+function createRssFeed(rows) {
+  const sortedRows = [...rows].sort((a, b) => b.lastmod.localeCompare(a.lastmod));
+  const latestDate = sortedRows[0]?.lastmod ?? TODAY;
+  const items = sortedRows
+    .map((row) => {
+      return [
+        "    <item>",
+        `      <title>${escapeXml(row.title)}</title>`,
+        `      <link>${escapeXml(row.loc)}</link>`,
+        `      <guid>${escapeXml(row.loc)}</guid>`,
+        `      <pubDate>${formatRssDate(row.lastmod)}</pubDate>`,
+        `      <description>${escapeXml(row.excerpt)}</description>`,
+        "    </item>",
+      ].join("\n");
+    })
+    .join("\n\n");
+
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    "<rss version=\"2.0\">",
+    "  <channel>",
+    "    <title>CorePapers Academic Writing Blog</title>",
+    `    <link>${BASE_URL}/blog</link>`,
+    "    <description>Academic writing guides, citation tutorials, and ESL-friendly resources for international students.</description>",
+    "    <language>en-us</language>",
+    `    <lastBuildDate>${formatRssDate(latestDate)}</lastBuildDate>`,
+    "",
+    items,
+    "  </channel>",
+    "</rss>",
+    "",
   ].join("\n");
 }
 
@@ -191,8 +230,9 @@ writeFileSync(
   ]),
   "utf8"
 );
+writeFileSync(resolve(PUBLIC_DIR, "feed.xml"), createRssFeed(blogRows), "utf8");
 updateIndexHtml(blogRows);
 
 console.log(
-  `[seo] generated sitemaps: pages=${pageRows.length}, blog=${blogRows.length}, date=${TODAY}`
+  `[seo] generated manifests: pages=${pageRows.length}, blog=${blogRows.length}, date=${TODAY}`
 );
