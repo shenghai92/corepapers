@@ -14,19 +14,19 @@ import {
 
 const FEATURED_GUIDES = [
   {
-    title: "How to Write an Abstract for a Research Paper",
-    href: "/blog/how-to-write-an-abstract-for-a-research-paper",
-    desc: "Use a clear structure for topic, method, findings, and implication.",
+    title: "How to Improve Academic Writing Skills",
+    href: "/blog/how-to-improve-academic-writing-skills-for-international-students",
+    desc: "Build clearer structure, stronger vocabulary, and better revision habits.",
   },
   {
-    title: "How to Write a Literature Review for International Students",
-    href: "/blog/how-to-write-a-literature-review-for-international-students",
-    desc: "Plan, group, and synthesize sources more clearly.",
+    title: "APA 7th Edition Citation Format Guide",
+    href: "/blog/apa-7th-edition-citation-format-guide-with-examples",
+    desc: "See how APA 7 references and in-text citations should look in real assignments.",
   },
   {
-    title: "How to Paraphrase Without Plagiarizing in Academic Writing",
-    href: "/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing",
-    desc: "Rephrase source ideas ethically while keeping your own voice.",
+    title: "How to Avoid Plagiarism in Academic Writing",
+    href: "/blog/how-to-avoid-plagiarism-in-academic-writing",
+    desc: "Learn safe paraphrasing, source use, and citation habits for coursework.",
   },
 ];
 
@@ -143,9 +143,9 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="AI Essay Polisher and Academic Writing Assistant for International Students"
-        description="CorePapers is an AI essay polisher and academic writing assistant for international students. Fix non-native phrasing, improve academic English, use sentence starters, and generate APA, MLA, Chicago, and IEEE citations."
-        keywords="AI essay polisher, academic writing assistant for international students, ESL academic writing help, non-native English essay revision, academic phrase bank, APA citation generator, sentence starters for essays"
+        title="AI Academic Writing Assistant and Essay Polisher for International Students"
+        description="CorePapers is an AI academic writing assistant for international students and non-native English writers. Polish essays, improve academic English, use an academic phrase bank, and generate APA 7, MLA, Chicago, and IEEE citations."
+        keywords="AI academic writing assistant, writing tools for international students, AI essay polisher, academic writing for non-native English speakers, academic phrase bank, APA 7 citation generator, essay revision for international students"
         canonical="/"
         jsonLd={HOME_SCHEMA}
       />
@@ -174,7 +174,7 @@ export default function Home() {
               </h1>
 
               <p className="font-sans text-lg sm:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto tracking-wide">
-                CorePapers helps international students fix non-native expressions, strengthen academic vocabulary, find better sentence starters, and generate accurate citations so each draft reads more clearly and credibly.
+                CorePapers helps international students and non-native English speakers fix translated phrasing, strengthen academic vocabulary, find better academic English expressions, and generate accurate citations so each draft reads more clearly and credibly.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -207,7 +207,7 @@ export default function Home() {
               </div>
 
               <p className="text-sm text-muted-foreground font-sans mb-6">
-                Best for students who already have a draft, paragraph, source list, or discussion section and need faster academic revision support.
+                Best for students who already have a draft, paragraph, source list, or discussion section and need faster academic revision support without losing control of meaning.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-sans">

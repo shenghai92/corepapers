@@ -13,3 +13,5 @@ Allow: /
 Sitemap: https://corepapers.space/sitemap.xml
 Sitemap: https://corepapers.space/sitemap-pages.xml
 Sitemap: https://corepapers.space/sitemap-blog.xml
+Sitemap: https://corepapers.space/google-sitemap.xml
+Sitemap: https://corepapers.space/bing-sitemap.xml

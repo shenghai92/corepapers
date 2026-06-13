@@ -175,6 +175,22 @@ writeFileSync(
   ]),
   "utf8"
 );
+writeFileSync(
+  resolve(PUBLIC_DIR, "google-sitemap.xml"),
+  createSitemapIndex([
+    { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
+    { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
+  ]),
+  "utf8"
+);
+writeFileSync(
+  resolve(PUBLIC_DIR, "bing-sitemap.xml"),
+  createSitemapIndex([
+    { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
+    { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
+  ]),
+  "utf8"
+);
 updateIndexHtml(blogRows);
 
 console.log(

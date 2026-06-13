@@ -139,9 +139,9 @@ export default function Phrases() {
   return (
     <>
       <SEOHead
-        title="Academic Phrase Bank and Sentence Starters for Essays"
-        description="Search an academic phrase bank with sentence starters for essays, literature reviews, discussion sections, methods, and hedging. Built for ESL and international students."
-        keywords="academic phrase bank, sentence starters for essays, academic sentence starters, discussion section sentence starters, literature review phrases, ESL academic phrases, academic writing phrase library"
+        title="Academic Phrase Bank and Academic English Expressions for Essays"
+        description="Search an academic phrase bank with sentence starters, academic English expressions, and literature review or discussion phrases for essays, reports, and research papers."
+        keywords="academic phrase bank, academic English expressions, sentence starters for essays, academic sentence starters, discussion section sentence starters, literature review phrases, academic phrase bank for ESL students"
         canonical="/phrases"
         jsonLd={PHRASES_SCHEMA}
       />
@@ -158,7 +158,7 @@ export default function Phrases() {
               <span className="italic">with sentence starters for essays</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Search academic sentence starters and discipline-specific phrasing for essays, reports, literature reviews, discussion sections, and research papers.
+              Search academic sentence starters and discipline-specific academic English expressions for essays, reports, literature reviews, discussion sections, and research papers.
             </p>
           </div>
 

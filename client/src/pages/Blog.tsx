@@ -42,9 +42,9 @@ export default function Blog() {
   return (
     <>
       <SEOHead
-        title="Academic Writing Blog With ESL Essay Help and Sentence Starters"
-        description="Read academic writing guides, ESL essay help, sentence starter examples, citation tutorials, and research paper advice for international students."
-        keywords="academic writing blog, ESL essay help, sentence starters for essays, academic writing tips for international students, literature review guide, discussion section phrases, APA writing help"
+        title="Academic Writing Blog With ESL Essay Help, Citation Guides, and Research Writing Tips"
+        description="Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students."
+        keywords="academic writing blog, ESL essay help, academic writing tips for international students, research paper writing guide for ESL students, APA 7th edition citation format, how to avoid plagiarism in academic writing, improve academic writing skills"
         canonical="/blog"
         jsonLd={[
           {
@@ -98,7 +98,7 @@ export default function Blog() {
               <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-5">
                 If you are writing a paper abstract right now, start with structure, then compare examples, then check how the abstract differs from the introduction.
               </p>
-              <div className="grid sm:grid-cols-3 gap-4">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
                   {
                     href: "/blog/how-to-write-a-research-paper-introduction",
@@ -143,6 +143,33 @@ export default function Blog() {
                 href: "/citations",
                 title: "Format references",
                 desc: "Generate APA, MLA, Chicago, and IEEE citations after finishing your draft.",
+              },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="block">
+                <div className="h-full rounded-2xl border border-border bg-white p-6 hover:border-primary/30 hover:shadow-soft transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-3">{item.title}</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto mb-12 grid md:grid-cols-3 gap-5">
+            {[
+              {
+                href: "/blog/how-to-improve-academic-writing-skills-for-international-students",
+                title: "Improve academic writing skills",
+                desc: "Actionable revision habits for international students who want stronger structure and tone.",
+              },
+              {
+                href: "/blog/apa-7th-edition-citation-format-guide-with-examples",
+                title: "APA 7 citation format guide",
+                desc: "See how references and in-text citations should look before you submit.",
+              },
+              {
+                href: "/blog/how-to-avoid-plagiarism-in-academic-writing",
+                title: "Avoid plagiarism in academic writing",
+                desc: "Learn when to quote, paraphrase, summarize, and cite sources safely.",
               },
             ].map((item) => (
               <Link key={item.href} href={item.href} className="block">

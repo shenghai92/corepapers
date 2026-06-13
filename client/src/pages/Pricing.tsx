@@ -158,9 +158,9 @@ export default function Pricing() {
   return (
     <>
       <SEOHead
-        title="Pricing for International Student Writing Support"
-        description="Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable options for students and researchers."
-        keywords="academic writing tool pricing, essay polish pricing, citation tool pricing, international student writing app, affordable academic writing assistant"
+        title="Pricing for AI Academic Writing Support for Students"
+        description="Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable AI academic writing assistant pricing for students and researchers."
+        keywords="academic writing tool pricing, AI academic writing assistant pricing, essay polish pricing, citation tool pricing, student writing tool pricing, affordable academic writing assistant"
         canonical="/pricing"
         jsonLd={[
           {
@@ -199,7 +199,7 @@ export default function Pricing() {
               <span className="italic"> at student-friendly prices</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-lg mx-auto leading-relaxed mb-8">
-              Choose a plan for polishing, phrase support, and citation help without overpaying for general-purpose writing software. Start free for short real tasks, then upgrade when you need larger daily limits.
+              Choose a plan for polishing, phrase support, and citation help without overpaying for general-purpose writing software. Start free for short real tasks, then upgrade when you need larger daily limits for essays, research papers, and thesis writing.
             </p>
 
             <div className="inline-flex items-center gap-3 bg-secondary rounded-xl p-1.5">

@@ -1903,6 +1903,477 @@ Learning how to make your essay sound more academic is not about hiding simple i
 Once you start revising for clarity, specificity, and stance, your writing usually becomes more academic very quickly without losing your original meaning.`,
   },
   {
+    slug: "how-to-improve-academic-writing-skills-for-international-students",
+    title: "How to Improve Academic Writing Skills for International Students",
+    excerpt:
+      "Learn how to improve academic writing skills with practical revision habits, sentence strategies, and structure advice for international students.",
+    category: "Academic Writing",
+    tags: ["Academic Writing Skills", "International Students", "ESL Writing"],
+    readingTime: 12,
+    metaDescription:
+      "How to improve academic writing skills for international students: practical revision tips, structure advice, and academic English strategies for ESL writers.",
+    publishedAt: "2026-06-13",
+    featured: false,
+    content: `## Why Academic Writing Skills Improve Slowly for Many Students
+
+Many international students search for "how to improve academic writing skills" because progress often feels uneven. You may understand the topic well, but the final draft still sounds too simple, too translated, or not academic enough.
+
+That usually happens because academic writing is not one skill. It combines structure, tone, source use, vocabulary control, and revision.
+
+The good news is that you do not need to improve everything at once. A few targeted habits can make your writing stronger very quickly.
+
+## 1. Start by Improving Structure Before Vocabulary
+
+Students often focus on finding more advanced words first. In reality, structure usually matters more.
+
+Before editing sentences, ask:
+
+- Is the main argument clear?
+- Does each paragraph have one central idea?
+- Do topic sentences guide the reader?
+- Does the paper move logically from one point to the next?
+
+If the structure is weak, stronger vocabulary will not fix the larger problem.
+
+## 2. Build a Small Academic Phrase Bank
+
+You do not need hundreds of expressions. A small set of reliable academic phrases can help you write introductions, comparisons, and conclusions more confidently.
+
+Useful patterns include:
+
+- "This essay argues that..."
+- "A key limitation of this view is..."
+- "The findings suggest that..."
+- "Taken together, these points indicate that..."
+
+If you want more models, the [academic phrase bank](/phrases) can help you find academic English expressions for real assignments.
+
+## 3. Revise for Clarity, Not Just Grammar
+
+Strong academic writing is not only error-free. It is also clear.
+
+During revision, check whether your reader can immediately understand:
+
+- what the sentence means
+- how the sentence connects to the paragraph
+- why the point matters
+
+For example:
+
+### Less clear
+
+"There are many factors which are very important in this situation."
+
+### Clearer
+
+"Several institutional factors shape how students respond to academic feedback."
+
+The second sentence is stronger because it is more specific and analytical.
+
+## 4. Learn the Difference Between Formal and Informal Style
+
+One reason students struggle with academic writing is that spoken English habits enter the page.
+
+### Less academic
+
+"I think this shows that the policy is bad."
+
+### More academic
+
+"This suggests that the policy may produce negative outcomes."
+
+The second version sounds more academic because it avoids personal filler and uses cautious wording.
+
+## 5. Improve Paragraph Control
+
+A good paragraph does more than collect related sentences. It usually:
+
+1. starts with a clear point
+2. explains or supports that point
+3. connects the point back to the argument
+
+If your paragraphs feel messy, try writing one sentence in the margin that explains the job of each paragraph. If that sentence is unclear, the paragraph usually needs revision.
+
+## 6. Read Model Texts With a Writer's Eye
+
+Reading journal articles or strong student papers helps, but only if you notice how they work.
+
+Look for:
+
+- how the writer opens paragraphs
+- how evidence is introduced
+- how claims are qualified
+- how the conclusion shows significance
+
+This is much more useful than only copying vocabulary.
+
+## 7. Practice Safe Source Use
+
+Academic writing also improves when source use becomes cleaner. Many students lose clarity because they paste quotes or paraphrases into the paper without strong explanation.
+
+Ask:
+
+- Is the source clearly introduced?
+- Have I explained why the source matters?
+- Did I paraphrase in my own structure?
+- Did I cite it correctly?
+
+If you need help with references, the [citation generator](/citations) can support APA, MLA, Chicago, and IEEE formatting.
+
+## 8. Revise One Layer at a Time
+
+Trying to fix everything in one read usually leads to weak revision. A better method is to revise in layers:
+
+1. argument and structure
+2. paragraph flow
+3. sentence clarity
+4. academic tone
+5. grammar and citation details
+
+This makes revision faster and more accurate.
+
+## 9. Get Feedback on Non-Native Phrasing
+
+International students often know what they want to say, but the sentence still sounds translated. That is where targeted feedback matters.
+
+If your draft feels awkward or too direct, [essay polish](/polish) can help identify non-native expressions and rewrite them into clearer academic English.
+
+## 10. Measure Progress With Real Assignments
+
+The best way to improve academic writing skills is not to write isolated practice sentences forever. It is to improve the assignments you already need to submit.
+
+After each paper, review:
+
+- which comments appeared more than once
+- which sentence patterns sounded weak
+- which sections took the longest to revise
+
+That gives you a much clearer improvement plan.
+
+## Related Guides
+
+If you also want to sound more academic at sentence level, read [how to make your essay sound more academic](/blog/how-to-make-your-essay-sound-more-academic).
+
+If source use is part of the problem, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing).
+
+If you need a citation walkthrough, read [APA 7th edition citation format guide with examples](/blog/apa-7th-edition-citation-format-guide-with-examples).
+
+## Conclusion
+
+Learning how to improve academic writing skills is usually less about talent and more about better revision habits. Once you focus on structure, clarity, formal tone, and careful source use, your writing improves in ways teachers can notice very quickly.`,
+  },
+  {
+    slug: "apa-7th-edition-citation-format-guide-with-examples",
+    title: "APA 7th Edition Citation Format Guide With Examples",
+    excerpt:
+      "A practical APA 7th edition citation format guide with examples for references, in-text citations, and common mistakes international students should avoid.",
+    category: "Citations",
+    tags: ["APA 7", "Citation Format", "Academic Writing"],
+    readingTime: 11,
+    metaDescription:
+      "APA 7th edition citation format guide with examples for journal articles, books, websites, and in-text citations for international students.",
+    publishedAt: "2026-06-13",
+    featured: false,
+    content: `## Why Students Search for APA 7th Edition Citation Format
+
+Many students know they need APA style, but still feel unsure when they format the final reference list. That is why searches like "APA 7th edition citation format" and "APA 7 citation example" are so common.
+
+The difficulty is not only remembering punctuation. Students also need to know:
+
+- what information belongs in the reference
+- how the in-text citation should look
+- what changes when there is no author or no date
+
+This guide gives a practical starting point.
+
+## What APA 7th Edition Usually Requires
+
+APA 7 is widely used in psychology, education, business, and many social science courses.
+
+In most student assignments, you need:
+
+- a reference list
+- in-text citations
+- consistent capitalization and punctuation
+
+The core rule is simple: every source cited in the text should appear in the reference list, and every reference should match a source used in the paper.
+
+## Journal Article Example
+
+### Reference format
+
+Author, A. A., & Author, B. B. (Year). Title of article. *Title of Journal, volume*(issue), page-page. https://doi.org/xxxxx
+
+### Example
+
+Chen, Y., & Smith, J. A. (2024). Revision behavior in multilingual academic writing. *Journal of Academic Literacy, 18*(2), 44-63. https://doi.org/10.1000/example
+
+### In-text citation
+
+- Parenthetical: (Chen & Smith, 2024)
+- Narrative: Chen and Smith (2024)
+
+## Book Example
+
+### Reference format
+
+Author, A. A. (Year). *Title of book*. Publisher.
+
+### Example
+
+Bailey, S. (2023). *Academic writing for university students*. Routledge.
+
+### In-text citation
+
+- (Bailey, 2023)
+
+## Website Example
+
+### Reference format
+
+Author, A. A. (Year, Month Day). Title of page. *Website Name*. URL
+
+### Example
+
+University of Melbourne. (2025, March 12). Writing literature reviews. *Academic Skills Hub*. https://example.edu/literature-review
+
+### In-text citation
+
+- (University of Melbourne, 2025)
+
+## APA 7 In-Text Citation Basics
+
+In-text citations usually include:
+
+- author surname
+- publication year
+- page number for direct quotations when needed
+
+### Quotation example
+
+(Chen & Smith, 2024, p. 51)
+
+### Paraphrase example
+
+(Chen & Smith, 2024)
+
+Direct quotations need more precision. Paraphrases still need citation even if the wording is your own.
+
+## Common APA 7 Mistakes
+
+### 1. Capitalizing every major word in article titles
+
+In APA references, article titles usually use sentence case, not title case.
+
+### 2. Forgetting italics
+
+Journal names and book titles are often italicized, but article titles are not.
+
+### 3. Missing in-text citations
+
+Some students build a reference list at the end but forget to cite sources inside the paper. That is still incomplete citation practice.
+
+### 4. Using the wrong author format
+
+APA uses surname first in the reference list.
+
+### 5. Treating paraphrase as citation-free writing
+
+Paraphrasing still requires citation because the idea comes from a source.
+
+## A Quick APA 7 Checklist
+
+Before submitting, ask:
+
+1. Does every source in the paper appear in the reference list?
+2. Does every reference match an in-text citation?
+3. Are journal names and book titles italicized correctly?
+4. Are article and webpage titles in sentence case?
+5. Did I add page numbers for direct quotations?
+
+## When to Use a Citation Generator
+
+Citation rules are repetitive, and small punctuation errors are easy to miss under deadline pressure.
+
+If you want a faster workflow, the [citation generator](/citations) can help you build APA 7 references and in-text citations before you do a final manual check.
+
+## Related Guides
+
+If you are also paraphrasing sources, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing).
+
+If you want a broader writing workflow, read [how to improve academic writing skills for international students](/blog/how-to-improve-academic-writing-skills-for-international-students).
+
+If your final draft still sounds too informal after the citations are fixed, [essay polish](/polish) can help improve the academic tone.
+
+## Conclusion
+
+APA 7th edition citation format becomes much easier once you separate the task into source details, reference structure, and in-text citation rules. With a few reliable models, you can format references more confidently and avoid the small mistakes that often cost students easy marks.`,
+  },
+  {
+    slug: "how-to-avoid-plagiarism-in-academic-writing",
+    title: "How to Avoid Plagiarism in Academic Writing",
+    excerpt:
+      "Learn how to avoid plagiarism in academic writing through better paraphrasing, quotation, note-taking, and citation habits.",
+    category: "Source Use",
+    tags: ["Plagiarism", "Paraphrasing", "Citations"],
+    readingTime: 12,
+    metaDescription:
+      "How to avoid plagiarism in academic writing: practical paraphrasing, quoting, summarizing, and citation tips for international students.",
+    publishedAt: "2026-06-13",
+    featured: false,
+    content: `## Why Plagiarism Feels Confusing for Many Students
+
+Many students are told to avoid plagiarism, but the advice often stays too general. You may hear "cite your sources" or "use your own words," but still feel unsure when you are actually drafting the paper.
+
+This is especially common for international students writing in English. When you are still building confidence with academic language, it can be hard to know how much wording needs to change and when a citation is still required.
+
+## What Plagiarism Usually Means
+
+Plagiarism happens when you present someone else's words, ideas, or structure as if they were your own.
+
+That can include:
+
+- copying a sentence without quotation marks
+- changing only a few words from the original source
+- paraphrasing without citation
+- reusing someone else's argument structure too closely
+
+Avoiding plagiarism is not only about honesty. It is also part of good academic writing practice.
+
+## 1. Understand the Difference Between Quoting, Paraphrasing, and Summarizing
+
+### Quoting
+
+You use the exact words from a source and place them in quotation marks.
+
+### Paraphrasing
+
+You restate a specific idea from the source in your own wording and sentence structure.
+
+### Summarizing
+
+You shorten the source into its main point or larger argument.
+
+All three usually require citation.
+
+## 2. Do Not Paraphrase by Only Swapping Vocabulary
+
+One of the most common plagiarism problems is patchwriting. This happens when a student keeps the original sentence structure and only changes a few words.
+
+### Too close to the source
+
+"Students experienced substantial anxiety when receiving automated feedback on high-stakes assignments."
+
+### Weak paraphrase
+
+"Students felt considerable anxiety when getting automated feedback on important assignments."
+
+The wording changed, but the structure stayed too close.
+
+### Better paraphrase
+
+"When automated feedback was attached to major assessments, many students reported feeling more pressure during revision."
+
+The stronger version changes wording, structure, and emphasis while keeping the original meaning.
+
+## 3. Take Notes in a Way That Separates Source Language From Your Ideas
+
+Plagiarism often begins in the note-taking stage. If copied source sentences and your own thoughts are mixed together, it becomes much easier to reuse source language by accident.
+
+Try this method:
+
+- keep exact quotations in quotation marks
+- label page numbers immediately
+- write a short note in your own words below each source point
+
+This gives you a safer drafting base later.
+
+## 4. Cite Every Borrowed Idea, Not Only Direct Quotations
+
+Some students believe citation is only necessary when they copy exact wording. That is not enough.
+
+You also need citation when:
+
+- the idea comes from a source
+- the statistic comes from a source
+- the interpretation comes from a source
+- the paraphrase is based on a source
+
+If the reader could reasonably ask "Where did this idea come from?" and the answer is a source, citation is usually needed.
+
+## 5. Leave Time for a Final Source Check
+
+Before submitting, review each body paragraph and ask:
+
+- Which sentence contains my own analysis?
+- Which sentence depends on a source?
+- Is every borrowed point cited?
+- Do the references and in-text citations match?
+
+This final pass catches a surprising number of mistakes.
+
+## 6. Learn a Few Safe Paraphrasing Moves
+
+To paraphrase more safely:
+
+- change the sentence structure
+- change the order of information where appropriate
+- replace general wording with your own specific framing
+- write from memory after reading the source carefully
+- compare your version with the source before submitting
+
+If you need sentence-level help, [essay polish](/polish) can help you rewrite awkward or translated paraphrases into clearer academic English.
+
+## 7. Keep Citations Consistent
+
+Even strong paraphrasing can still create problems if the citation is missing or inconsistent.
+
+If you are unsure about reference format, the [citation generator](/citations) can help you build APA, MLA, Chicago, and IEEE citations more reliably.
+
+## 8. Use Academic Phrases to Introduce Sources
+
+Sometimes plagiarism problems come from weak integration, not only weak citation. Useful academic phrases can help you show clearly where the source begins and where your own analysis continues.
+
+Examples:
+
+- "According to..."
+- "X argues that..."
+- "The study found that..."
+- "These findings suggest that..."
+
+For more patterns, the [academic phrase bank](/phrases) can help with reporting verbs and source integration.
+
+## Common Mistakes to Avoid
+
+### Copying the original sentence shape
+
+Even with new vocabulary, the structure may still be too close.
+
+### Forgetting to cite paraphrases
+
+Changing the wording does not remove the need for citation.
+
+### Overusing direct quotations
+
+Too many quotations can make the paper feel stitched together instead of analytical.
+
+### Losing track of sources
+
+If your notes are messy, plagiarism risk increases fast.
+
+## Related Guides
+
+If you want safer source-based writing, read [how to paraphrase without plagiarizing in academic writing](/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing).
+
+If you need APA help too, read [APA 7th edition citation format guide with examples](/blog/apa-7th-edition-citation-format-guide-with-examples).
+
+If you want broader revision advice, read [how to improve academic writing skills for international students](/blog/how-to-improve-academic-writing-skills-for-international-students).
+
+## Conclusion
+
+Learning how to avoid plagiarism in academic writing is mostly about better process: clearer notes, stronger paraphrasing, and more consistent citation. Once those habits improve, source-based writing becomes safer, clearer, and much easier to manage under deadline pressure.`,
+  },
+  {
     slug: "how-to-write-a-conclusion-for-an-academic-essay-with-examples",
     title: "How to Write a Conclusion for an Academic Essay With Examples",
     excerpt:

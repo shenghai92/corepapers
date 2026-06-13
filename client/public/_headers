@@ -9,3 +9,9 @@
 
 /sitemap-blog.xml
   X-Robots-Tag: noindex
+
+/google-sitemap.xml
+  X-Robots-Tag: noindex
+
+/bing-sitemap.xml
+  X-Robots-Tag: noindex
