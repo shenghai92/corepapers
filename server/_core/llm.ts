@@ -247,6 +247,19 @@ const resolveDefaultModel = (env: RuntimeEnv = ENV) => {
   return "claude-sonnet-4-6";
 };
 
+export function getAiRuntimeDebug(env: RuntimeEnv = ENV) {
+  const configuredBaseUrl = env.customAiBaseUrl?.trim() ?? "";
+  const configuredModel = env.customAiModel?.trim() ?? "";
+
+  return {
+    hasApiKey: Boolean(resolveApiKey(env)),
+    configuredBaseUrl,
+    resolvedApiUrl: configuredBaseUrl ? resolveApiUrl(env) : "",
+    configuredModel,
+    resolvedModel: resolveDefaultModel(env),
+  };
+}
+
 const normalizeResponseFormat = ({
   responseFormat,
   response_format,
