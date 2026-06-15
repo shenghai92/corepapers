@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const BASE_URL = "https://corepapers.space";
@@ -8,6 +8,25 @@ const ROOT = resolve(process.cwd());
 const BLOG_SOURCE = resolve(ROOT, "client/src/content/blogArticles.ts");
 const PUBLIC_DIR = resolve(ROOT, "client/public");
 const INDEX_HTML = resolve(ROOT, "client/index.html");
+const BLOG_INDEX_HTML = resolve(PUBLIC_DIR, "blog", "index.html");
+
+const BLOG_INDEX_SEO = {
+  title:
+    "Academic Writing Blog With ESL Essay Help, Citation Guides, and Research Writing Tips | CorePapers",
+  description:
+    "Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students.",
+  keywords:
+    "academic writing blog, ESL essay help, academic writing tips for international students, research paper writing guide for ESL students, APA 7th edition citation format, how to avoid plagiarism in academic writing, improve academic writing skills",
+  canonical: `${BASE_URL}/blog`,
+  ogTitle:
+    "Academic Writing Blog With ESL Essay Help, Citation Guides, and Research Writing Tips | CorePapers",
+  ogDescription:
+    "Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students.",
+  twitterTitle:
+    "Academic Writing Blog With ESL Essay Help, Citation Guides, and Research Writing Tips | CorePapers",
+  twitterDescription:
+    "Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students.",
+};
 
 const STATIC_PAGES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
@@ -187,6 +206,63 @@ function updateIndexHtml(blogRows) {
   writeFileSync(INDEX_HTML, indexHtml.replace(pattern, discoveryBlock), "utf8");
 }
 
+function replaceTag(source, pattern, replacement) {
+  if (!pattern.test(source)) {
+    throw new Error(`Missing expected HTML pattern: ${pattern}`);
+  }
+
+  return source.replace(pattern, replacement);
+}
+
+function createBlogIndexHtml() {
+  let html = readFileSync(INDEX_HTML, "utf8");
+
+  html = replaceTag(html, /<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(BLOG_INDEX_SEO.title)}</title>`);
+  html = replaceTag(
+    html,
+    /<meta name="description" content="[^"]*" \/>/,
+    `<meta name="description" content="${escapeHtml(BLOG_INDEX_SEO.description)}" />`
+  );
+  html = replaceTag(
+    html,
+    /<meta name="keywords" content="[^"]*" \/>/,
+    `<meta name="keywords" content="${escapeHtml(BLOG_INDEX_SEO.keywords)}" />`
+  );
+  html = replaceTag(
+    html,
+    /<link rel="canonical" href="[^"]*" \/>/,
+    `<link rel="canonical" href="${BLOG_INDEX_SEO.canonical}" />`
+  );
+  html = replaceTag(
+    html,
+    /<meta property="og:url" content="[^"]*" \/>/,
+    `<meta property="og:url" content="${BLOG_INDEX_SEO.canonical}" />`
+  );
+  html = replaceTag(
+    html,
+    /<meta property="og:title" content="[^"]*" \/>/,
+    `<meta property="og:title" content="${escapeHtml(BLOG_INDEX_SEO.ogTitle)}" />`
+  );
+  html = replaceTag(
+    html,
+    /<meta property="og:description" content="[^"]*" \/>/,
+    `<meta property="og:description" content="${escapeHtml(BLOG_INDEX_SEO.ogDescription)}" />`
+  );
+  html = replaceTag(
+    html,
+    /<meta name="twitter:title" content="[^"]*" \/>/,
+    `<meta name="twitter:title" content="${escapeHtml(BLOG_INDEX_SEO.twitterTitle)}" />`
+  );
+  html = replaceTag(
+    html,
+    /<meta name="twitter:description" content="[^"]*" \/>/,
+    `<meta name="twitter:description" content="${escapeHtml(BLOG_INDEX_SEO.twitterDescription)}" />`
+  );
+
+  mkdirSync(resolve(PUBLIC_DIR, "blog"), { recursive: true });
+  writeFileSync(BLOG_INDEX_HTML, html, "utf8");
+}
+
 const blogSource = readFileSync(BLOG_SOURCE, "utf8");
 const blogRows = extractBlogEntries(blogSource);
 const pageRows = STATIC_PAGES.map((page) => ({
@@ -232,6 +308,7 @@ writeFileSync(
 );
 writeFileSync(resolve(PUBLIC_DIR, "feed.xml"), createRssFeed(blogRows), "utf8");
 updateIndexHtml(blogRows);
+createBlogIndexHtml();
 
 console.log(
   `[seo] generated manifests: pages=${pageRows.length}, blog=${blogRows.length}, date=${TODAY}`
