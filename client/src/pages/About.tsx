@@ -16,8 +16,8 @@ export default function About() {
   return (
     <>
       <SEOHead
-        title="About CorePapers"
-        description="Learn about CorePapers, our focus on international students, and how to contact support for academic writing tool questions."
+        title="About CorePapers and Our Academic Writing Tools for International Students"
+        description="Learn about CorePapers, our academic writing tools for international students, and how to contact support for essay polishing, phrase help, and citations."
         canonical="/about"
         jsonLd={ABOUT_SCHEMA}
       />

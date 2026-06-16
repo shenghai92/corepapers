@@ -158,9 +158,9 @@ export default function Pricing() {
   return (
     <>
       <SEOHead
-        title="Pricing for AI Academic Writing Support for Students"
-        description="Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable AI academic writing assistant pricing for students and researchers."
-        keywords="academic writing tool pricing, AI academic writing assistant pricing, essay polish pricing, citation tool pricing, student writing tool pricing, affordable academic writing assistant"
+        title="Student Pricing for AI Essay Polishing, Academic Phrase Support, and Citations"
+        description="Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable pricing for students and researchers."
+        keywords="academic writing tool pricing, AI essay polisher pricing, academic phrase bank pricing, citation generator pricing, student writing tool pricing, affordable academic writing assistant"
         canonical="/pricing"
         jsonLd={[
           {

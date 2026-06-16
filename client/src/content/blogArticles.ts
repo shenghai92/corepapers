@@ -644,12 +644,12 @@ Once you follow a clear structure, abstract writing becomes much easier and much
     slug: "how-to-avoid-common-esl-writing-mistakes",
     title: "How to Avoid the 10 Most Common ESL Writing Mistakes in Academic Papers",
     excerpt:
-      "Non-native English speakers often repeat the same writing patterns that signal to professors they are not native speakers.",
+      "Learn the most common ESL writing mistakes in academic papers and how to fix them with clearer examples for international students.",
     category: "Writing Tips",
     tags: ["ESL", "Academic Writing", "Common Mistakes"],
     readingTime: 8,
     metaDescription:
-      "Discover the 10 most common ESL writing mistakes in academic papers and how to fix them. Essential guide for non-native English speaking international students.",
+      "Discover the most common ESL writing mistakes in academic papers and how to fix them with examples, revision tips, and clearer academic alternatives.",
     publishedAt: "2024-01-15",
     featured: true,
     content: `## Introduction
@@ -748,9 +748,22 @@ Before submitting, do one revision pass for grammar and another pass for style. 
 - Search for repeated words such as "very," "important," and "good."
 - Review whether each paragraph has one clear purpose.
 
+## Common ESL Writing Mistakes: Quick Before-and-After Examples
+
+If you want to fix common ESL writing mistakes quickly, compare short patterns like these:
+
+- "In my opinion, I think..." -> "This analysis suggests..."
+- "The results shows..." -> "The results show..."
+- "This is very important." -> "This is a significant issue."
+- "The research is based in..." -> "The research is based on..."
+
+These sentence-level changes help the draft sound more academic without changing the underlying idea.
+
 ## Where CorePapers Fits
 
 If you want a second pass that focuses on clarity, tone, and academic phrasing, [try the essay polish tool](/polish). If you are still building paragraphs, [the academic phrases page](/phrases) can help you choose stronger transitions and sentence starters.
+
+If you also want broader revision habits, read [how to improve academic writing skills for international students](/blog/how-to-improve-academic-writing-skills-for-international-students).
 
 ## Conclusion
 
@@ -760,12 +773,12 @@ Improving ESL academic writing is rarely about memorizing difficult rules in iso
     slug: "complete-apa-7th-edition-guide-international-students",
     title: "Complete APA 7th Edition Guide for International Students",
     excerpt:
-      "A practical step-by-step guide to APA 7th edition formatting for non-native English speakers, with common mistakes and citation examples.",
+      "A practical APA 7th edition guide with in-text citation examples, reference list models, and common mistakes for international students.",
     category: "Citation Guides",
     tags: ["APA", "Citation", "Formatting"],
     readingTime: 12,
     metaDescription:
-      "Complete APA 7th edition guide for international students. Step-by-step instructions for in-text citations, reference lists, and common formatting mistakes to avoid.",
+      "Complete APA 7th edition guide for international students with in-text citation examples, reference list models, and common formatting mistakes to avoid.",
     publishedAt: "2024-01-20",
     featured: true,
     content: `## Why APA Still Trips Students Up
@@ -870,6 +883,17 @@ If you are short on time, use this order:
 4. Compare each entry against one reliable APA example.
 5. Do a final check for italics, punctuation, and DOI links.
 
+## APA 7 In-Text Citation Examples Students Commonly Need
+
+Many searches around APA are really looking for quick models. Here are a few:
+
+- One author: (Smith, 2020)
+- Two authors: (Smith & Jones, 2020)
+- Three or more authors: (Smith et al., 2020)
+- Direct quote: (Smith, 2020, p. 45)
+
+If your reference list is correct but your in-text citation still feels awkward, check whether the citation fits the grammar of the sentence.
+
 ## Special Advice for International Students
 
 Many APA mistakes are not really "citation knowledge" problems. They are data entry problems. Students copy titles with the wrong capitalization, miss the issue number, or mix website dates with journal dates. Slow down when collecting source details and your reference list improves immediately.
@@ -877,6 +901,8 @@ Many APA mistakes are not really "citation knowledge" problems. They are data en
 ## Useful CorePapers Tools
 
 You can generate references with the [citation generator](/citations), then use [essay polish](/polish) to check whether your in-text citations fit naturally into academic sentences.
+
+If you also need a shorter practical example page, read [APA 7th edition citation format guide with examples](/blog/apa-7th-edition-citation-format-guide-with-examples).
 
 ## Conclusion
 
@@ -886,12 +912,12 @@ APA 7th edition rewards careful formatting more than memory. Once you understand
     slug: "how-to-write-a-literature-review-for-international-students",
     title: "How to Write a Literature Review for International Students",
     excerpt:
-      "A practical guide to planning, structuring, and writing a literature review in clear academic English.",
+      "A practical guide to writing a literature review with structure tips, synthesis advice, and academic English examples.",
     category: "Research Writing",
     tags: ["Literature Review", "Research Writing", "International Students"],
     readingTime: 11,
     metaDescription:
-      "Learn how to write a literature review step by step. Practical structure, paragraph advice, and language tips for international students writing in English.",
+      "Learn how to write a literature review step by step with structure advice, synthesis tips, and language patterns for international students.",
     publishedAt: "2024-02-02",
     featured: true,
     content: `## What a Literature Review Is Really For
@@ -950,6 +976,17 @@ Explain what remains unclear in the literature and how your project responds to 
 
 Summarize the main patterns and connect them to your research purpose.
 
+## Literature Review Example Structure for One Body Paragraph
+
+Students often ask what one paragraph should look like. A simple pattern is:
+
+1. state the theme
+2. compare two or more studies
+3. explain a difference or limitation
+4. connect the point to your project
+
+For example, one paragraph might compare studies that report benefits of AI writing tools with studies that emphasize plagiarism concerns, then explain why that tension matters for your research question.
+
 ## Useful Sentence Patterns
 
 Writers often know what they want to say but need academic phrasing that sounds natural. Here are a few reliable patterns:
@@ -986,6 +1023,8 @@ Do not claim there is "no research" unless you are certain. It is safer to say r
 ## Where CorePapers Can Help
 
 When your draft is structurally complete, [essay polish](/polish) can help improve clarity and formal tone. If you need help citing studies accurately, the [citation tool](/citations) can speed up the reference stage.
+
+If you are still planning the project around the review, the [research proposal guide](/blog/how-to-write-a-research-proposal-for-university) can help you connect the review to the research gap.
 
 ## Conclusion
 
@@ -1438,12 +1477,12 @@ A thesis statement does not need to sound dramatic. It needs to sound clear, foc
     slug: "how-to-write-a-research-proposal-for-university",
     title: "How to Write a Research Proposal for University",
     excerpt:
-      "A step-by-step guide to writing a research proposal, including structure, scope, and academic language tips.",
+      "A step-by-step guide to writing a research proposal with structure, research question advice, and methodology planning tips.",
     category: "Research Writing",
     tags: ["Research Proposal", "University Writing", "Research Writing"],
     readingTime: 11,
     metaDescription:
-      "Learn how to write a research proposal for university. Structure, section guidance, and writing tips for international students.",
+      "Learn how to write a research proposal for university with structure guidance, research question advice, and methodology planning tips.",
     publishedAt: "2024-03-10",
     featured: false,
     content: `## What a Research Proposal Needs to Show
@@ -1497,6 +1536,20 @@ Your methodology should explain:
 - why this method fits the question
 
 Be concrete. Readers need to know that the project is realistic.
+
+If you already know the proposal needs a methods section, the [methodology section guide](/blog/how-to-write-a-methodology-section-for-a-research-paper) can help you shape that part more clearly.
+
+## A Simple Research Proposal Example Flow
+
+Many students do better when they imagine the proposal as a sequence:
+
+1. topic and problem
+2. focused research question
+3. short literature context
+4. proposed methodology
+5. significance and scope
+
+This order helps the reader see that the project is specific, relevant, and feasible.
 
 ## Common Proposal Problems
 
@@ -1764,12 +1817,12 @@ MLA becomes much easier once you understand how in-text citations connect to the
     slug: "how-to-make-your-essay-sound-more-academic-without-changing-your-ideas",
     title: "How to Make Your Essay Sound More Academic Without Changing Your Ideas",
     excerpt:
-      "Learn how to make an essay sound more academic without losing your original meaning. Practical revision strategies for ESL and international students.",
+      "Learn how to make an essay sound more academic without changing your ideas, with revision examples and practical wording upgrades.",
     category: "Writing Style",
     tags: ["Academic Style", "Essay Revision", "ESL Writing"],
     readingTime: 13,
     metaDescription:
-      "A practical guide on how to make your essay sound more academic without changing your ideas. Ideal for ESL and international students revising essays and research papers.",
+      "A practical guide on how to make your essay sound more academic without changing your ideas, with revision examples for ESL and international students.",
     publishedAt: "2026-05-31",
     featured: false,
     content: `## Why This Is Such a Common Problem
@@ -1905,6 +1958,16 @@ This does not make your writing weaker. It makes it more credible.
 
 If you want more sentence patterns like these, the [academic phrase library](/phrases) is a useful place to build stronger academic tone.
 
+## How to Make an Essay Sound More Academic: A Quick Revision Checklist
+
+Before submitting, check whether you:
+
+- removed conversational fillers
+- replaced vague verbs with precise ones
+- reduced repeated words like "very" and "a lot"
+- changed broad opinions into evidence-based claims
+- used more cautious wording where the evidence is limited
+
 ## 6. Improve Sentence Structure, Not Just Vocabulary
 
 Sometimes a sentence sounds informal because it is loosely organized, not because the words are simple.
@@ -2005,6 +2068,12 @@ This kind of focused editing is usually more effective than rewriting the whole 
 
 "I think social media is a very bad influence on students because they spend a lot of time on it and it makes them not focus on study."
 
+## Related Guides
+
+If your draft also contains repeated ESL-style errors, read [how to avoid the 10 most common ESL writing mistakes in academic papers](/blog/how-to-avoid-common-esl-writing-mistakes).
+
+If you want broader revision habits, read [how to improve academic writing skills for international students](/blog/how-to-improve-academic-writing-skills-for-international-students).
+
 ### After
 
 "This essay argues that excessive social media use can negatively affect students' concentration by reducing the time and attention available for study."
@@ -2036,12 +2105,12 @@ Once you start revising for clarity, specificity, and stance, your writing usual
     slug: "how-to-improve-academic-writing-skills-for-international-students",
     title: "How to Improve Academic Writing Skills for International Students",
     excerpt:
-      "Learn how to improve academic writing skills with practical revision habits, sentence strategies, and structure advice for international students.",
+      "Learn how to improve academic writing skills with practical revision habits, paragraph control, and academic English strategies for international students.",
     category: "Academic Writing",
     tags: ["Academic Writing Skills", "International Students", "ESL Writing"],
     readingTime: 12,
     metaDescription:
-      "How to improve academic writing skills for international students: practical revision tips, structure advice, and academic English strategies for ESL writers.",
+      "How to improve academic writing skills for international students with revision habits, structure advice, and academic English strategies for ESL writers.",
     publishedAt: "2026-06-13",
     featured: false,
     content: `## Why Academic Writing Skills Improve Slowly for Many Students
@@ -2161,6 +2230,17 @@ Trying to fix everything in one read usually leads to weak revision. A better me
 5. grammar and citation details
 
 This makes revision faster and more accurate.
+
+## A Weekly Habit for Improving Academic Writing Skills
+
+If you want to improve steadily, use one short routine each week:
+
+1. read one strong model text
+2. save three useful sentence patterns
+3. revise one old paragraph for clarity
+4. compare the original and revised versions
+
+This is often more effective than only doing grammar exercises in isolation.
 
 ## 9. Get Feedback on Non-Native Phrasing
 
