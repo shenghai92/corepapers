@@ -2762,6 +2762,92 @@ Learning how to write a conclusion for an academic essay is mostly about control
 When your final paragraph restates the argument clearly, summarizes the reasoning, and ends with genuine significance, the whole essay feels stronger and more complete.`,
   },
   {
+    slug: "methodology-section-faq-for-research-papers",
+    title: "Methodology Section FAQ for Research Papers",
+    excerpt:
+      "Answers to common methodology section questions, including examples, structure, and what to include in a research paper methods section.",
+    category: "Research Writing",
+    tags: ["Methodology FAQ", "Research Paper", "Methods Section"],
+    readingTime: 9,
+    metaDescription:
+      "Methodology section FAQ for research papers with answers on structure, examples, what to include, and how to write a methods section more clearly.",
+    publishedAt: "2026-06-18",
+    featured: false,
+    content: `## Why a Methodology Section FAQ Helps
+
+Search Console is already showing long-tail searches around methodology sections, methods section examples, and what a research paper methodology should include.
+
+This FAQ page answers those questions directly so students can find short, practical explanations before drafting the full section.
+
+## FAQ 1: How Do You Write a Methodology Section for a Research Paper?
+
+A simple way to write a methodology section is to explain:
+
+1. the research design
+2. the participants, sample, or data source
+3. the data collection method
+4. the method of analysis
+5. any ethics or limitations that matter
+
+That sequence works because it shows the reader what you studied, how you studied it, and why the method was appropriate.
+
+If you need a full step-by-step guide, read [how to write a methodology section for a research paper](/blog/how-to-write-a-methodology-section-for-a-research-paper).
+
+## FAQ 2: What Should Be Included in a Methods Section?
+
+Most methods sections include:
+
+- research design
+- participants or dataset
+- sampling or selection criteria
+- tools, materials, or instruments
+- procedure
+- analysis method
+
+Not every assignment needs all of these as separate headings, but most strong methods sections answer those points clearly.
+
+## FAQ 3: What Is an Example of a Methodology Section?
+
+Here is a short example:
+
+"This study used a qualitative research design to examine how first-year international students responded to AI-generated writing feedback. Data were collected through semi-structured interviews and annotated essay drafts from twelve undergraduate students. The interview data and draft revisions were analyzed using thematic coding to identify recurring revision patterns."
+
+This example works because it tells the reader:
+
+- the design
+- the participants
+- the data source
+- the method of analysis
+
+## FAQ 4: What Is the Difference Between a Methodology Section and a Methods Section?
+
+In many student assignments, the terms are used almost interchangeably.
+
+However, some instructors use "methods section" to mean the practical steps of data collection and analysis, while "methodology" can refer more broadly to the logic behind choosing those methods.
+
+In practice, the safest approach is to follow your course wording and make sure the section explains both the process and the reason for the process.
+
+## A Fast Methodology Section Checklist
+
+Before submitting, ask:
+
+- Did I clearly name the research design?
+- Did I explain who or what was studied?
+- Did I explain how the data was collected?
+- Did I explain how the data was analyzed?
+- Did I avoid putting results into the methodology section?
+
+## Related Guides
+
+If you are still planning the whole study, read [how to write a research proposal for university](/blog/how-to-write-a-research-proposal-for-university).
+
+If you need sentence starters for methods, cautious reporting, or analysis, the [academic phrase bank](/phrases) can help.
+
+## Conclusion
+
+Most methodology questions become easier once you focus on sequence and clarity. A good methods section does not try to sound complicated. It helps the reader follow exactly what you did and why you did it.`,
+  },
+  {
     slug: "sentence-starters-for-discussion-sections-in-research-papers",
     title: "Sentence Starters for Discussion Sections in Research Papers",
     excerpt:
