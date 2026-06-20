@@ -1,14 +1,13 @@
-/// <reference types="@cloudflare/workers-types" />
-
 type AssetsFetcher = {
   fetch(input: RequestInfo | URL, init?: RequestInit): Promise<Response>;
 };
 
-type BlogContext = (
-  context: EventContext<{
-  ASSETS: AssetsFetcher;
-  }, string, Record<string, unknown>>
-) => Promise<Response>;
+type BlogContext = (context: {
+  request: Request;
+  params: { slug?: string };
+  env: { ASSETS: AssetsFetcher };
+  next: () => Promise<Response>;
+}) => Promise<Response>;
 
 export const onRequest: BlogContext = async (context) => {
   const slug = typeof context.params.slug === "string" ? context.params.slug.trim() : "";
