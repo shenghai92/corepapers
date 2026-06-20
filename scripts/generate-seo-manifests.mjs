@@ -6,8 +6,9 @@ const TODAY = new Date().toISOString().slice(0, 10);
 
 const ROOT = resolve(process.cwd());
 const BLOG_SOURCE = resolve(ROOT, "client/src/content/blogArticles.ts");
+const DIST_PUBLIC_DIR = resolve(ROOT, "dist/public");
 const PUBLIC_DIR = resolve(ROOT, "client/public");
-const INDEX_HTML = resolve(ROOT, "client/index.html");
+const INDEX_HTML = resolve(DIST_PUBLIC_DIR, "index.html");
 const BLOG_INDEX_HTML = resolve(PUBLIC_DIR, "blog", "index.html");
 
 const HOME_SEO = {
@@ -361,8 +362,8 @@ function createHomeIndexHtml() {
 
 function createBlogIndexHtml() {
   const html = readFileSync(INDEX_HTML, "utf8");
-  mkdirSync(resolve(PUBLIC_DIR, "blog"), { recursive: true });
-  writeFileSync(BLOG_INDEX_HTML, applySeoToHtml(html, BLOG_INDEX_SEO), "utf8");
+  mkdirSync(resolve(DIST_PUBLIC_DIR, "blog"), { recursive: true });
+  writeFileSync(resolve(DIST_PUBLIC_DIR, "blog", "index.html"), applySeoToHtml(html, BLOG_INDEX_SEO), "utf8");
 }
 
 function createBlogArticleHtml(rows) {
@@ -430,7 +431,7 @@ function createBlogArticleHtml(rows) {
       twitterDescription: row.metaDescription,
     };
 
-    const articleDir = resolve(PUBLIC_DIR, "blog", row.slug);
+    const articleDir = resolve(DIST_PUBLIC_DIR, "blog", row.slug);
     mkdirSync(articleDir, { recursive: true });
     writeFileSync(
       resolve(articleDir, "index.html"),
@@ -449,10 +450,10 @@ const pageRows = STATIC_PAGES.map((page) => ({
   lastmod: TODAY,
 }));
 
-writeFileSync(resolve(PUBLIC_DIR, "sitemap-pages.xml"), createUrlSet(pageRows), "utf8");
-writeFileSync(resolve(PUBLIC_DIR, "sitemap-blog.xml"), createUrlSet(blogRows), "utf8");
+writeFileSync(resolve(DIST_PUBLIC_DIR, "sitemap-pages.xml"), createUrlSet(pageRows), "utf8");
+writeFileSync(resolve(DIST_PUBLIC_DIR, "sitemap-blog.xml"), createUrlSet(blogRows), "utf8");
 writeFileSync(
-  resolve(PUBLIC_DIR, "sitemap.xml"),
+  resolve(DIST_PUBLIC_DIR, "sitemap.xml"),
   createSitemapIndex([
     { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
     { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
@@ -460,7 +461,7 @@ writeFileSync(
   "utf8"
 );
 writeFileSync(
-  resolve(PUBLIC_DIR, "google-sitemap.xml"),
+  resolve(DIST_PUBLIC_DIR, "google-sitemap.xml"),
   createSitemapIndex([
     { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
     { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
@@ -468,14 +469,14 @@ writeFileSync(
   "utf8"
 );
 writeFileSync(
-  resolve(PUBLIC_DIR, "bing-sitemap.xml"),
+  resolve(DIST_PUBLIC_DIR, "bing-sitemap.xml"),
   createSitemapIndex([
     { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
     { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
   ]),
   "utf8"
 );
-writeFileSync(resolve(PUBLIC_DIR, "feed.xml"), createRssFeed(blogRows), "utf8");
+writeFileSync(resolve(DIST_PUBLIC_DIR, "feed.xml"), createRssFeed(blogRows), "utf8");
 updateIndexHtml(blogRows);
 createHomeIndexHtml();
 createBlogIndexHtml();
