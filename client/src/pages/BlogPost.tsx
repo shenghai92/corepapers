@@ -8,6 +8,58 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { STATIC_ARTICLE_MAP, STATIC_ARTICLE_ORDER } from "@/content/blogArticles";
 
+const FAQ_SCHEMA_BY_SLUG: Record<string, Array<{ question: string; answer: string }>> = {
+  "how-to-write-a-methodology-section-for-a-research-paper": [
+    {
+      question: "What is the difference between methodology and methods?",
+      answer:
+        "Methodology explains the overall research approach and why it fits the question, while methods are the specific tools or procedures used to collect and analyze data.",
+    },
+    {
+      question: "How long should a methodology section be?",
+      answer:
+        "The length depends on the assignment and field, but it should be long enough to explain the design, data collection, and analysis clearly. For many student papers, one to three focused pages is common.",
+    },
+    {
+      question: "What tense should I use in the methodology section?",
+      answer:
+        "Most methodology sections use past tense because they describe what the study did. Present tense may still appear when explaining general research conventions or definitions.",
+    },
+    {
+      question: "Can I use first person in a methodology section?",
+      answer:
+        "That depends on the style guide and instructor. Some fields accept first person for clarity, while others prefer an impersonal style.",
+    },
+    {
+      question: "What should I include in a qualitative methodology section?",
+      answer:
+        "A qualitative methodology section usually explains the research context, participant selection, data collection method, and coding or interpretive process used to analyze the material.",
+    },
+  ],
+  "methodology-section-faq-for-research-papers": [
+    {
+      question: "How do you write a methodology section for a research paper?",
+      answer:
+        "A simple approach is to explain the research design, the participants or data source, the data collection method, the analysis method, and any ethics or limitations that matter.",
+    },
+    {
+      question: "What should be included in a methods section?",
+      answer:
+        "Most methods sections include the research design, participants or dataset, sampling or selection criteria, tools or instruments, procedure, and analysis method.",
+    },
+    {
+      question: "What is an example of a methodology section?",
+      answer:
+        "A methodology example usually states the design, identifies the participants or data, explains how the data was collected, and names the analysis approach such as thematic coding or statistical comparison.",
+    },
+    {
+      question: "What is the difference between a methodology section and a methods section?",
+      answer:
+        "In many assignments the terms overlap, but methodology can refer more broadly to the logic behind the methods, while methods often refers to the practical steps taken in the study.",
+    },
+  ],
+};
+
 export default function BlogPost() {
   const [location] = useLocation();
   const slug = decodeURIComponent((location.match(/^\/blog\/([^/?#]+)/)?.[1] ?? "").trim());
@@ -148,6 +200,67 @@ export default function BlogPost() {
   const wordCount = article.content
     .split(/\s+/)
     .filter(Boolean).length;
+  const faqSchema = FAQ_SCHEMA_BY_SLUG[slug];
+  const jsonLdGraph: Record<string, unknown>[] = [
+    {
+      "@type": "Article",
+      headline: article.title,
+      description: article.excerpt,
+      keywords: article.tags.join(", "),
+      articleSection: article.category,
+      mainEntityOfPage: articleUrl,
+      url: articleUrl,
+      wordCount,
+      datePublished: article.publishedAt,
+      dateModified: article.publishedAt,
+      inLanguage: "en",
+      isAccessibleForFree: true,
+      author: { "@type": "Organization", name: "CorePapers" },
+      publisher: {
+        "@type": "Organization",
+        name: "CorePapers",
+        url: "https://corepapers.space",
+      },
+      about: article.tags,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://corepapers.space/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: "https://corepapers.space/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: article.title,
+          item: articleUrl,
+        },
+      ],
+    },
+  ];
+
+  if (faqSchema) {
+    jsonLdGraph.push({
+      "@type": "FAQPage",
+      mainEntity: faqSchema.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    });
+  }
 
   return (
     <>
@@ -159,52 +272,7 @@ export default function BlogPost() {
         ogType="article"
         jsonLd={{
           "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Article",
-              headline: article.title,
-              description: article.excerpt,
-              keywords: article.tags.join(", "),
-              articleSection: article.category,
-              mainEntityOfPage: articleUrl,
-              url: articleUrl,
-              wordCount,
-              datePublished: article.publishedAt,
-              dateModified: article.publishedAt,
-              inLanguage: "en",
-              isAccessibleForFree: true,
-              author: { "@type": "Organization", name: "CorePapers" },
-              publisher: {
-                "@type": "Organization",
-                name: "CorePapers",
-                url: "https://corepapers.space",
-              },
-              about: article.tags,
-            },
-            {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://corepapers.space/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Blog",
-                  item: "https://corepapers.space/blog",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: article.title,
-                  item: articleUrl,
-                },
-              ],
-            },
-          ],
+          "@graph": jsonLdGraph,
         }}
       />
 

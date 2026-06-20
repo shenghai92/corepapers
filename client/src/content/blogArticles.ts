@@ -642,7 +642,7 @@ Once you follow a clear structure, abstract writing becomes much easier and much
   },
   {
     slug: "how-to-avoid-common-esl-writing-mistakes",
-    title: "How to Avoid the 10 Most Common ESL Writing Mistakes in Academic Papers",
+    title: "10 Most Common ESL Writing Mistakes in Academic Papers (And How to Fix Them)",
     excerpt:
       "Learn the most common ESL writing mistakes in academic papers and how to fix them with clearer examples for international students.",
     category: "Writing Tips",
@@ -758,6 +758,22 @@ If you want to fix common ESL writing mistakes quickly, compare short patterns l
 - "The research is based in..." -> "The research is based on..."
 
 These sentence-level changes help the draft sound more academic without changing the underlying idea.
+
+## Language-Specific Mistakes: Chinese, Spanish, and Arabic Speakers
+
+Different language backgrounds often produce different recurring patterns in English academic writing.
+
+### Chinese speakers
+
+Common issues include direct translation such as "according to my thinking," weak connectors between ideas, and overuse of passive voice where a clearer active structure would work better.
+
+### Spanish speakers
+
+Common issues include very long sentences, unnecessary article use, and word order that sounds natural in Spanish but awkward in English academic prose.
+
+### Arabic speakers
+
+Common issues include article confusion, verb tense inconsistency, and paragraph structures that delay the main point for too long before making the claim clear.
 
 ## Where CorePapers Fits
 
@@ -910,7 +926,7 @@ APA 7th edition rewards careful formatting more than memory. Once you understand
   },
   {
     slug: "how-to-write-a-literature-review-for-international-students",
-    title: "How to Write a Literature Review for International Students",
+    title: "How to Write a Literature Review Step by Step - Guide for International Students",
     excerpt:
       "A practical guide to writing a literature review with structure tips, synthesis advice, and academic English examples.",
     category: "Research Writing",
@@ -929,6 +945,14 @@ International students often read many sources but still struggle to turn those 
 ## Start With a Research Question
 
 Before you collect sources, define the topic in a way that gives you boundaries. "Social media and education" is too broad. "How short-form video platforms affect university students' study habits" is easier to search, compare, and organize.
+
+## 5-Step Literature Review Checklist
+
+1. Define your scope and search terms.
+2. Search databases such as Google Scholar, JSTOR, or PubMed.
+3. Screen and select the most relevant sources.
+4. Synthesize patterns instead of summarizing one study at a time.
+5. Write with a clear thematic structure that leads toward your research gap.
 
 ## Build a Search Strategy
 
@@ -1583,14 +1607,14 @@ A good research proposal is clear about purpose, limited in scope, and realistic
   },
   {
     slug: "how-to-write-a-methodology-section-for-a-research-paper",
-    title: "How to Write a Methodology Section for a Research Paper (With Example)",
+    title: "How to Write a Methodology Section for a Research Paper - ESL Guide With Examples",
     excerpt:
       "Learn how to write a methodology section with structure tips, sample wording, and a practical example for student research papers.",
     category: "Research Writing",
     tags: ["Methodology", "Research Paper", "Academic Writing"],
     readingTime: 10,
     metaDescription:
-      "Learn how to write a methodology section for a research paper with structure, examples, sample wording, and common mistakes to avoid.",
+      "Learn how to write a clear methodology section with a real example. This step-by-step guide is designed for international students writing in English.",
     publishedAt: "2024-03-17",
     featured: false,
     content: `## What the Methodology Section Is For
@@ -1627,6 +1651,16 @@ Many students find it easier to write the section when they treat it as a predic
 6. ethics or limitations where relevant
 
 You do not always need these as formal subheadings, but this order helps the reader understand what happened and why.
+
+## Sample Methodology Section (Social Science Paper)
+
+The following sample shows what a fuller methodology section can look like in a small social science research paper:
+
+"This study used a qualitative case study design to examine how first-year international students used AI writing feedback during a twelve-week academic writing course at a large urban university. The participants were fourteen undergraduate students from three language backgrounds who had all completed at least one major essay in English before the interview stage. They were recruited through an open course invitation and gave consent for their draft comments and interview responses to be analyzed anonymously.
+
+Data were collected from two sources: semi-structured interviews and annotated essay drafts. Each participant completed one thirty-minute interview focused on revision choices, confidence, and perceived usefulness of the feedback. In addition, two drafts per participant were collected in order to compare original phrasing with revised versions after feedback. This combination allowed the study to compare what students said about revision with what they actually changed in their writing.
+
+The data were analyzed through thematic coding. Interview transcripts were first read closely to identify repeated themes related to clarity, trust, confusion, and revision strategy. Draft changes were then grouped into categories such as grammar correction, vocabulary change, sentence restructuring, and idea development. The coding process was iterative, meaning categories were refined after repeated reading of both interview and draft data. This method was chosen because it allowed the study to connect student perception with visible revision behavior in a clear and systematic way."
 
 ## Start With the Research Design
 
@@ -1710,6 +1744,28 @@ Before submitting, ask:
 - Have I explained how the data was analyzed?
 - Did I avoid mixing results into the methodology?
 
+## Methodology Section FAQ
+
+### What is the difference between methodology and methods?
+
+Methodology explains the overall research approach and why it fits the question. Methods are the specific tools or procedures you used, such as surveys, interviews, or statistical tests.
+
+### How long should a methodology section be?
+
+The length depends on the assignment and field, but it should be long enough to explain the design, data collection, and analysis clearly. For many student papers, one to three well-focused pages is common.
+
+### What tense should I use in the methodology section?
+
+Most methodology sections use past tense because they describe what the study did. Present tense may still appear when you explain general research conventions or definitions.
+
+### Can I use first person in a methodology section?
+
+That depends on your style guide and instructor. Some fields accept first person for clarity, while others prefer an impersonal style. The safest choice is to follow your department's existing examples.
+
+### What should I include in a qualitative methodology section?
+
+A qualitative methodology section usually explains the research context, participant selection, data collection method, and coding or interpretive process used to analyze the material.
+
 ## Useful Sentence Patterns
 
 - "This study employed a qualitative research design..."
@@ -1732,14 +1788,14 @@ A strong methodology section is specific, logical, and transparent. Its goal is 
   },
   {
     slug: "mla-9th-edition-guide-for-international-students",
-    title: "MLA 9th Edition Guide for International Students",
+    title: "MLA 9th Edition Citation Guide for International Students - Format, Examples & Templates",
     excerpt:
       "A practical MLA 9 guide for students who need help with Works Cited entries, in-text citations, and common formatting issues.",
     category: "Citation Guides",
     tags: ["MLA", "Citation", "Works Cited"],
     readingTime: 11,
     metaDescription:
-      "Learn MLA 9th edition formatting with a practical guide for international students. Includes in-text citations, Works Cited rules, and common mistakes.",
+      "A complete MLA 9th edition guide for international students. Covers in-text citations, Works Cited page, and formatting rules with real examples.",
     publishedAt: "2024-03-24",
     featured: false,
     content: `## Why MLA Feels Different
