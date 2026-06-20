@@ -194,7 +194,7 @@ function extractBlogEntries(source) {
       .filter(Boolean);
 
     rows.push({
-      loc: `${BASE_URL}/blog/${match[1]}/`,
+      loc: `${BASE_URL}/blog/${match[1]}`,
       slug: match[1],
       title: match[2],
       excerpt: match[3],
@@ -215,7 +215,7 @@ function createDiscoveryLinks(rows) {
   const items = rows
     .map(
       (row) =>
-        `        <li><a href="/blog/${escapeHtml(row.slug)}/">${escapeHtml(row.title)}</a></li>`
+        `        <li><a href="/blog/${escapeHtml(row.slug)}">${escapeHtml(row.title)}</a></li>`
     )
     .join("\n");
 
@@ -369,7 +369,7 @@ function createBlogArticleHtml(rows) {
   const template = readFileSync(INDEX_HTML, "utf8");
 
   for (const row of rows) {
-    const articleUrl = `${BASE_URL}/blog/${row.slug}/`;
+    const articleUrl = `${BASE_URL}/blog/${row.slug}`;
     const jsonLdItems = [
       {
         "@context": "https://schema.org",
@@ -430,10 +430,9 @@ function createBlogArticleHtml(rows) {
       twitterDescription: row.metaDescription,
     };
 
-    const articleDir = resolve(PUBLIC_DIR, "blog", row.slug);
-    mkdirSync(articleDir, { recursive: true });
+    mkdirSync(resolve(PUBLIC_DIR, "blog"), { recursive: true });
     writeFileSync(
-      resolve(articleDir, "index.html"),
+      resolve(PUBLIC_DIR, "blog", `${row.slug}.html`),
       applySeoToHtml(template, seo, buildJsonLdScripts(jsonLdItems)),
       "utf8"
     );
