@@ -2762,6 +2762,150 @@ Learning how to write a conclusion for an academic essay is mostly about control
 When your final paragraph restates the argument clearly, summarizes the reasoning, and ends with genuine significance, the whole essay feels stronger and more complete.`,
   },
   {
+    slug: "how-to-write-a-results-section-research-paper-esl",
+    title: "How to Write a Results Section in a Research Paper for ESL Students",
+    excerpt:
+      "Learn how to write a results section in a research paper with clearer academic phrases, structure advice, and examples for non-native English speakers.",
+    category: "Research Writing",
+    tags: ["Results Section", "Research Paper", "ESL Writing"],
+    readingTime: 6,
+    metaDescription:
+      "Learn how to write a results section in a research paper with academic phrases, structure advice, figure references, and examples for ESL and international students.",
+    publishedAt: "2026-06-21",
+    featured: false,
+    content: `## Why the Results Section Feels Difficult for ESL Writers
+
+Writing the results section of a research paper can be frustrating for non-native English speakers. The problem is usually not the research itself. The real challenge is presenting the findings in clear academic language without sounding repetitive, too informal, or too interpretive.
+
+This guide focuses on the practical side of the section: how to structure it, which phrases to use, and how to avoid the most common writing mistake international students make here.
+
+## Results Section vs Discussion Section
+
+The most common mistake is mixing the results section with the discussion section.
+
+In the **results section**, your job is to report what happened:
+
+- the findings
+- the data
+- the observations
+
+In the **discussion section**, your job is different. That is where you explain what the findings mean, why they matter, and how they connect to previous research.
+
+If a sentence starts explaining significance instead of reporting findings, it usually belongs in the discussion, not the results.
+
+## A Quick Test
+
+Before you write a sentence, ask:
+
+"Am I reporting a fact, or am I explaining what it means?"
+
+If you are explaining meaning, save that sentence for the discussion section.
+
+## How to Structure a Results Section Logically
+
+Do not write the results section like a diary of your research process.
+
+Instead, organize it around:
+
+- research questions
+- hypotheses
+- variables
+- major result groups
+
+For example, if your paper compares multiple conditions, create one subsection for each condition. Within each subsection, report the numerical or descriptive findings first, then highlight any patterns or trends the reader should notice.
+
+This structure makes the section easier for reviewers to follow because they can quickly find the answer to each question raised earlier in the paper.
+
+## Academic Phrases for Reporting Results
+
+One common problem in student writing is repeating the word "show" in every sentence. Varying your reporting language makes the results section sound more professional and easier to read.
+
+### Describing what a figure or table reveals
+
+Less effective:
+
+"Table 1 shows that the temperature increased."
+
+Stronger:
+
+"As illustrated in Table 1, the temperature increased significantly."
+
+### Reporting a difference between groups
+
+Less effective:
+
+"We found a big difference between the two groups."
+
+Stronger:
+
+"The data reveals a statistically significant difference between the experimental and control groups."
+
+### Confirming a hypothesis
+
+Less effective:
+
+"The results say our idea was right."
+
+Stronger:
+
+"These findings provide evidence supporting the initial hypothesis."
+
+Other useful reporting verbs include:
+
+- demonstrate
+- indicate
+- reveal
+- confirm
+- suggest
+- highlight
+- illustrate
+- reflect
+
+## How to Reference Tables and Figures Correctly
+
+When you refer to a table or figure, integrate it into the sentence rather than announcing it separately.
+
+Less effective:
+
+"Here is Table 2. It shows the survey results."
+
+Stronger:
+
+"The survey results, summarized in Table 2, indicate a strong preference for synchronous online learning among participants over 30."
+
+Your text and your table should support each other, not repeat the same information word for word. Use the sentence to highlight the key pattern or outlier, and let the table or figure hold the full data.
+
+## Key Takeaway
+
+The results section is about precision and objectivity. Report what you found, organize the section around your research questions, use more varied academic reporting verbs, and let tables and figures carry the detailed numbers. Save interpretation for the discussion section.
+
+## Frequently Asked Questions
+
+### What is the difference between the results section and the discussion section?
+
+The results section reports what happened in the study without interpretation. The discussion section explains what those findings mean, why they matter, and how they relate to previous research.
+
+### How should I reference tables and figures in the results section?
+
+Integrate the reference into the sentence. Instead of writing "Here is Table 2," write something like "The survey results, summarized in Table 2, indicate..."
+
+### Should I use past or present tense in the results section?
+
+In many papers, past tense is used to describe what the study found, while present tense can be used when referring the reader to a figure or table that is visible in the paper. Check your department or journal style if you are unsure.
+
+## Related Guides
+
+If you need help writing the next section after results, read [how to write a discussion section in an academic paper](/blog/how-to-write-a-discussion-section-in-an-academic-paper).
+
+If you want sentence starters for interpreting findings, read [sentence starters for discussion sections in research papers](/blog/sentence-starters-for-discussion-sections-in-research-papers).
+
+If your draft sounds awkward or repetitive, [essay polish](/polish) can help improve the academic phrasing.
+
+## Conclusion
+
+Learning how to write a results section in a research paper is mostly about control. Once you separate reporting from interpretation, organize the section around the research questions, and use more accurate academic phrasing, the section becomes much easier to write and much easier to read.`,
+  },
+  {
     slug: "methodology-section-faq-for-research-papers",
     title: "Methodology Section FAQ for Research Papers",
     excerpt:
