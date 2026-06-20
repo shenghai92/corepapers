@@ -196,7 +196,7 @@ export default function BlogPost() {
         day: "numeric",
       })
     : "";
-  const articleUrl = `https://corepapers.space/blog/${slug}`;
+  const articleUrl = `https://corepapers.space/blog/${slug}/`;
   const wordCount = article.content
     .split(/\s+/)
     .filter(Boolean).length;
@@ -268,7 +268,7 @@ export default function BlogPost() {
         title={article.title}
         description={article.metaDescription}
         keywords={article.tags.join(", ")}
-        canonical={`/blog/${slug}`}
+        canonical={`/blog/${slug}/`}
         ogType="article"
         jsonLd={{
           "@context": "https://schema.org",
