@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Quote, Sparkles } from "lucide-react";
+import { ArrowRight, FileText, GraduationCap, Mail, Quote, Sparkles } from "lucide-react";
 
 const ABOUT_SCHEMA = {
   "@context": "https://schema.org",
@@ -64,6 +64,32 @@ export default function About() {
             ))}
           </div>
 
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 mb-10">
+            {[
+              {
+                icon: Mail,
+                title: "Direct support contact",
+                desc: "Users can reach CorePapers at support@corepapers.space for account, billing, support, and content feedback questions.",
+              },
+              {
+                icon: FileText,
+                title: "Editorial transparency",
+                desc: "We publish how our educational content is structured, improved, and distinguished from tool-driven output.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Practical academic focus",
+                desc: "We prioritize pages and tools that solve concrete writing problems for international students instead of publishing broad filler content.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="p-6 bg-white border border-border rounded-2xl">
+                <item.icon size={18} className="text-primary mb-3" />
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">{item.title}</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="max-w-5xl mx-auto grid lg:grid-cols-[1.2fr_0.8fr] gap-6 mb-10">
             <section className="p-8 bg-white border border-border rounded-2xl">
               <h2 className="font-serif text-3xl text-slate-purple mb-4">What CorePapers is trying to do</h2>
@@ -76,6 +102,11 @@ export default function About() {
                 </p>
                 <p>
                   If you want to try the product directly, start with <Link href="/polish" className="text-primary underline">essay polish</Link>, <Link href="/citations" className="text-primary underline">citation generation</Link>, or the <Link href="/phrases" className="text-primary underline">academic phrase library</Link>.
+                </p>
+                <p>
+                  If you want more detail about how we publish and improve site content, see the{" "}
+                  <Link href="/editorial-policy" className="text-primary underline">editorial policy</Link> and{" "}
+                  <Link href="/how-corepapers-content-is-created" className="text-primary underline">how CorePapers content is created</Link>.
                 </p>
               </div>
             </section>
@@ -90,6 +121,14 @@ export default function About() {
                   support@corepapers.space
                 </a>
               </p>
+              <div className="text-sm text-muted-foreground font-sans leading-relaxed mb-6">
+                <p className="mb-2">
+                  For policy and publishing information, visit{" "}
+                  <Link href="/contact" className="text-primary underline">Contact</Link>,{" "}
+                  <Link href="/editorial-policy" className="text-primary underline">Editorial Policy</Link>, and{" "}
+                  <Link href="/how-corepapers-content-is-created" className="text-primary underline">How Content Is Created</Link>.
+                </p>
+              </div>
               <Button asChild className="w-full bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
                 <Link href="/pricing">
                   See Pricing

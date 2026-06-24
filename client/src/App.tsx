@@ -21,6 +21,9 @@ const SeoLandingQuillbotAlternative = lazy(() => import("./pages/SeoLandingQuill
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const EditorialPolicy = lazy(() => import("./pages/EditorialPolicy"));
+const HowContentIsCreated = lazy(() => import("./pages/HowContentIsCreated"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -60,6 +63,9 @@ function Router() {
         <Route path="/academic-writing-alternative-for-international-students" component={() => <PublicLayout><SeoLandingGrammarlyAlternative /></PublicLayout>} />
         <Route path="/paraphrasing-alternative-for-academic-writing" component={() => <PublicLayout><SeoLandingQuillbotAlternative /></PublicLayout>} />
         <Route path="/about" component={() => <PublicLayout><About /></PublicLayout>} />
+        <Route path="/contact" component={() => <PublicLayout><Contact /></PublicLayout>} />
+        <Route path="/editorial-policy" component={() => <PublicLayout><EditorialPolicy /></PublicLayout>} />
+        <Route path="/how-corepapers-content-is-created" component={() => <PublicLayout><HowContentIsCreated /></PublicLayout>} />
         <Route path="/privacy" component={() => <PublicLayout><Privacy /></PublicLayout>} />
         <Route path="/terms" component={() => <PublicLayout><Terms /></PublicLayout>} />
         <Route path="/blog/:slug" component={() => <PublicLayout><BlogPost /></PublicLayout>} />

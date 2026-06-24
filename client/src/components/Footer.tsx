@@ -21,6 +21,9 @@ const FOOTER_LINKS = {
   Company: [
     { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+    { label: "Editorial Policy", href: "/editorial-policy" },
+    { label: "How Content Is Created", href: "/how-corepapers-content-is-created" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
   ],
