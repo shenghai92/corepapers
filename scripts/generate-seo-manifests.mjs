@@ -47,6 +47,111 @@ const BLOG_INDEX_SEO = {
     "Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students.",
 };
 
+const STATIC_PAGE_SEO = {
+  "/about": {
+    title: "About CorePapers and Our Academic Writing Tools for International Students | CorePapers",
+    description:
+      "Learn about CorePapers, our academic writing tools for international students, and how to contact support for essay polishing, phrase help, and citations.",
+    keywords:
+      "about CorePapers, academic writing tools for international students, essay polish support, citation help, academic phrase library",
+    canonical: `${BASE_URL}/about`,
+    ogTitle:
+      "About CorePapers and Our Academic Writing Tools for International Students | CorePapers",
+    ogDescription:
+      "Learn about CorePapers, our academic writing tools for international students, and how to contact support for essay polishing, phrase help, and citations.",
+    twitterTitle:
+      "About CorePapers and Our Academic Writing Tools for International Students | CorePapers",
+    twitterDescription:
+      "Learn about CorePapers, our academic writing tools for international students, and how to contact support for essay polishing, phrase help, and citations.",
+  },
+  "/contact": {
+    title: "Contact CorePapers Support and Editorial Team | CorePapers",
+    description:
+      "Contact CorePapers for support questions, account help, billing issues, editorial feedback, and general academic writing tool inquiries.",
+    keywords:
+      "contact CorePapers, CorePapers support, billing help, editorial feedback, academic writing support contact",
+    canonical: `${BASE_URL}/contact`,
+    ogTitle: "Contact CorePapers Support and Editorial Team | CorePapers",
+    ogDescription:
+      "Contact CorePapers for support questions, account help, billing issues, editorial feedback, and general academic writing tool inquiries.",
+    twitterTitle: "Contact CorePapers Support and Editorial Team | CorePapers",
+    twitterDescription:
+      "Contact CorePapers for support questions, account help, billing issues, editorial feedback, and general academic writing tool inquiries.",
+  },
+  "/editorial-policy": {
+    title: "CorePapers Editorial Policy for Academic Writing Content | CorePapers",
+    description:
+      "Read the CorePapers editorial policy, including how we review academic writing guides, update content, and separate educational resources from tool outputs.",
+    keywords:
+      "CorePapers editorial policy, academic writing content standards, educational content policy, content review process",
+    canonical: `${BASE_URL}/editorial-policy`,
+    ogTitle: "CorePapers Editorial Policy for Academic Writing Content | CorePapers",
+    ogDescription:
+      "Read the CorePapers editorial policy, including how we review academic writing guides, update content, and separate educational resources from tool outputs.",
+    twitterTitle: "CorePapers Editorial Policy for Academic Writing Content | CorePapers",
+    twitterDescription:
+      "Read the CorePapers editorial policy, including how we review academic writing guides, update content, and separate educational resources from tool outputs.",
+  },
+  "/how-corepapers-content-is-created": {
+    title: "How CorePapers Content Is Created and Updated | CorePapers",
+    description:
+      "Learn how CorePapers plans, writes, revises, and updates academic writing content for international students and multilingual writers.",
+    keywords:
+      "how CorePapers content is created, content creation process, academic writing content workflow, multilingual student resources",
+    canonical: `${BASE_URL}/how-corepapers-content-is-created`,
+    ogTitle: "How CorePapers Content Is Created and Updated | CorePapers",
+    ogDescription:
+      "Learn how CorePapers plans, writes, revises, and updates academic writing content for international students and multilingual writers.",
+    twitterTitle: "How CorePapers Content Is Created and Updated | CorePapers",
+    twitterDescription:
+      "Learn how CorePapers plans, writes, revises, and updates academic writing content for international students and multilingual writers.",
+  },
+  "/privacy": {
+    title: "Privacy Policy | CorePapers",
+    description:
+      "Read the CorePapers privacy policy, including how we handle account details, usage data, and support requests.",
+    keywords:
+      "CorePapers privacy policy, data handling, account privacy, support request privacy",
+    canonical: `${BASE_URL}/privacy`,
+    ogTitle: "Privacy Policy | CorePapers",
+    ogDescription:
+      "Read the CorePapers privacy policy, including how we handle account details, usage data, and support requests.",
+    twitterTitle: "Privacy Policy | CorePapers",
+    twitterDescription:
+      "Read the CorePapers privacy policy, including how we handle account details, usage data, and support requests.",
+  },
+  "/terms": {
+    title: "Terms of Service | CorePapers",
+    description:
+      "Read the CorePapers terms of service for account usage, billing, acceptable use, and support.",
+    keywords:
+      "CorePapers terms of service, billing terms, acceptable use, support terms",
+    canonical: `${BASE_URL}/terms`,
+    ogTitle: "Terms of Service | CorePapers",
+    ogDescription:
+      "Read the CorePapers terms of service for account usage, billing, acceptable use, and support.",
+    twitterTitle: "Terms of Service | CorePapers",
+    twitterDescription:
+      "Read the CorePapers terms of service for account usage, billing, acceptable use, and support.",
+  },
+  "/pricing": {
+    title: "Student Pricing for AI Essay Polishing, Academic Phrase Support, and Citations | CorePapers",
+    description:
+      "Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable pricing for students and researchers.",
+    keywords:
+      "academic writing tool pricing, AI essay polisher pricing, academic phrase bank pricing, citation generator pricing, student writing tool pricing, affordable academic writing assistant",
+    canonical: `${BASE_URL}/pricing`,
+    ogTitle:
+      "Student Pricing for AI Essay Polishing, Academic Phrase Support, and Citations | CorePapers",
+    ogDescription:
+      "Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable pricing for students and researchers.",
+    twitterTitle:
+      "Student Pricing for AI Essay Polishing, Academic Phrase Support, and Citations | CorePapers",
+    twitterDescription:
+      "Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable pricing for students and researchers.",
+  },
+};
+
 const STATIC_PAGES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/polish", changefreq: "monthly", priority: "0.9" },
@@ -369,6 +474,20 @@ function createBlogIndexHtml() {
   writeFileSync(resolve(DIST_PUBLIC_DIR, "blog", "index.html"), applySeoToHtml(html, BLOG_INDEX_SEO), "utf8");
 }
 
+function createStaticPageHtml() {
+  const template = readFileSync(INDEX_HTML, "utf8");
+
+  for (const [path, seo] of Object.entries(STATIC_PAGE_SEO)) {
+    const pageDir =
+      path === "/"
+        ? DIST_PUBLIC_DIR
+        : resolve(DIST_PUBLIC_DIR, path.replace(/^\//, ""));
+
+    mkdirSync(pageDir, { recursive: true });
+    writeFileSync(resolve(pageDir, "index.html"), applySeoToHtml(template, seo), "utf8");
+  }
+}
+
 function createBlogArticleHtml(rows) {
   const template = readFileSync(INDEX_HTML, "utf8");
 
@@ -483,6 +602,7 @@ writeFileSync(resolve(DIST_PUBLIC_DIR, "feed.xml"), createRssFeed(blogRows), "ut
 updateIndexHtml(blogRows);
 createHomeIndexHtml();
 createBlogIndexHtml();
+createStaticPageHtml();
 createBlogArticleHtml(blogRows);
 
 console.log(
