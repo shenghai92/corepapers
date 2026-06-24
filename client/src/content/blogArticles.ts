@@ -789,43 +789,63 @@ Improving ESL academic writing is rarely about memorizing difficult rules in iso
     slug: "complete-apa-7th-edition-guide-international-students",
     title: "Complete APA 7th Edition Guide for International Students",
     excerpt:
-      "A practical APA 7th edition guide with in-text citation examples, reference list models, and common mistakes for international students.",
+      "A fuller APA 7th edition guide with formatting rules, in-text citation models, reference examples, and common mistakes international students should fix first.",
     category: "Citation Guides",
     tags: ["APA", "Citation", "Formatting"],
-    readingTime: 12,
+    readingTime: 14,
     metaDescription:
-      "Complete APA 7th edition guide for international students with in-text citation examples, reference list models, and common formatting mistakes to avoid.",
+      "Complete APA 7th edition guide for international students with formatting rules, in-text citation examples, reference list models, and common mistakes to avoid.",
     publishedAt: "2024-01-20",
     featured: true,
-    content: `## Why APA Still Trips Students Up
+    content: `## Why APA 7 Still Feels Difficult
 
-APA 7th edition looks simple from a distance, but many small rules affect grades: title capitalization, author formatting, DOI presentation, quotation page numbers, and reference ordering. International students often understand the source material but lose marks on these details.
+APA 7th edition looks manageable until you start writing under deadline pressure. Then small details become expensive: title capitalization, author formatting, DOI presentation, quotation page numbers, reference order, and the difference between a journal article and a webpage entry.
 
-This guide focuses on the parts students actually use most often in essays, reports, and literature reviews.
+International students often understand the source itself but still lose marks because the citation system feels unfamiliar. In many cases, the problem is not academic ability. It is inconsistent formatting.
+
+This guide focuses on the rules students use most often in essays, reports, literature reviews, and research papers.
 
 ## When You Should Use APA
 
-APA is common in:
+APA is especially common in:
 
-- Psychology
-- Education
-- Business
-- Nursing and health sciences
-- Social sciences
+- psychology
+- education
+- business
+- nursing and health sciences
+- social sciences
 
-Always follow your course handbook first. Some instructors modify department preferences even when they say "use APA."
+Always follow your course handbook first. Some instructors say "use APA" but still apply local department preferences for title pages, headings, or reference presentation.
+
+## Start With Document Formatting
+
+Before writing, set up the document correctly so you do not have to repair everything at the end.
+
+### Core APA 7 setup
+
+- use one readable font consistently
+- double-space the whole paper, including references
+- keep 1-inch margins on all sides
+- indent the first line of each paragraph by 0.5 inches
+- place page numbers in the top-right corner
+
+### Student paper reminder
+
+In APA 7, student papers usually do not need a running head. It is mainly required for professional manuscripts submitted for publication. If your professor says otherwise, follow the assignment instructions.
 
 ## In-Text Citations
 
+APA uses an author-date system. The reader should quickly see who produced the idea and when it was published.
+
 ### One author
 
-Use: (Smith, 2020)
+Parenthetical form: (Smith, 2020)
 
 Narrative form: Smith (2020) argues that...
 
 ### Two authors
 
-Use: (Smith & Jones, 2020)
+Parenthetical form: (Smith & Jones, 2020)
 
 Narrative form: Smith and Jones (2020) argue that...
 
@@ -833,7 +853,7 @@ Narrative form: Smith and Jones (2020) argue that...
 
 Use: (Smith et al., 2020)
 
-This rule applies from the first citation onward in APA 7th edition.
+This applies from the first citation onward in APA 7th edition.
 
 ### Direct quotations
 
@@ -842,9 +862,11 @@ Add a page number:
 - (Smith, 2020, p. 45)
 - (Smith, 2020, pp. 45-47)
 
+If a webpage has no page numbers, use a paragraph number when possible.
+
 ### Paraphrasing
 
-Author and year are required. Page numbers are optional but often helpful when the original point is complex.
+Author and year are required. Page numbers are optional, but they often help when the original point is complex or when you want the reader to verify a specific claim quickly.
 
 ## Reference List Basics
 
@@ -854,6 +876,8 @@ Every entry should help the reader answer four questions:
 2. When was it published?
 3. What is the source called?
 4. Where can the reader find it?
+
+If one of those parts is weak or missing, the whole entry usually becomes unreliable.
 
 ### Journal article example
 
@@ -867,27 +891,46 @@ Smith, J. A. (2020). *Academic writing for international students* (3rd ed.). Ox
 
 Smith, J. A. (2020, January 15). *How to write academic English*. University of Oxford. https://www.ox.ac.uk/example
 
-## Common APA Mistakes
+## The APA 7 Rules Students Miss Most Often
 
-### Wrong title capitalization
+### Title capitalization
+
+Article and webpage titles usually use sentence case.
 
 Incorrect: "The Impact Of Digital Tools On Academic Writing"
 
 Correct: "The impact of digital tools on academic writing"
 
-### Missing DOI
+### Author formatting
 
-When a DOI is available, include it as a URL beginning with https://doi.org/.
-
-### Wrong author format
+Do not write full names in normal order.
 
 Incorrect: "John A. Smith"
 
 Correct: "Smith, J. A."
 
-### Inconsistent italics
+### DOI formatting
 
-Students often italicize article titles when they should italicize the journal title and volume number.
+When a DOI is available, present it as a URL beginning with https://doi.org/.
+
+### Italics
+
+Students often italicize article titles when they should italicize the journal title and volume number instead.
+
+### Missing source details
+
+Many weak reference lists fail because students copy incomplete website data, forget issue numbers, or mix publication dates with access dates.
+
+## Key Changes From APA 6 to APA 7
+
+If you learned APA from older materials, these updates matter:
+
+- three or more authors become et al. from the first citation
+- student papers usually do not require a running head
+- book references no longer include publisher location
+- DOIs should appear as clickable URLs
+
+Using old rules is one of the most common reasons a paper looks inconsistent even when the student says they "used APA."
 
 ## A Fast APA Workflow
 
@@ -895,24 +938,35 @@ If you are short on time, use this order:
 
 1. Draft the paper normally.
 2. Insert in-text citations while sources are still open.
-3. Build the reference list from the exact source metadata.
-4. Compare each entry against one reliable APA example.
-5. Do a final check for italics, punctuation, and DOI links.
+3. Build the reference list from exact source metadata, not memory.
+4. Compare each entry against a trusted APA example.
+5. Do one final check for italics, punctuation, capitalization, and DOI links.
 
-## APA 7 In-Text Citation Examples Students Commonly Need
+## APA 7 In-Text Citation Examples Students Search For
 
-Many searches around APA are really looking for quick models. Here are a few:
+Many APA searches are really asking for quick working models:
 
-- One author: (Smith, 2020)
-- Two authors: (Smith & Jones, 2020)
-- Three or more authors: (Smith et al., 2020)
-- Direct quote: (Smith, 2020, p. 45)
+- one author: (Smith, 2020)
+- two authors: (Smith & Jones, 2020)
+- three or more authors: (Smith et al., 2020)
+- direct quote: (Smith, 2020, p. 45)
+- no author webpage: ("Academic Writing Tips," 2023)
 
-If your reference list is correct but your in-text citation still feels awkward, check whether the citation fits the grammar of the sentence.
+If your citation looks grammatically awkward, the problem may be the sentence, not the citation format itself.
 
 ## Special Advice for International Students
 
-Many APA mistakes are not really "citation knowledge" problems. They are data entry problems. Students copy titles with the wrong capitalization, miss the issue number, or mix website dates with journal dates. Slow down when collecting source details and your reference list improves immediately.
+Many APA mistakes are not knowledge problems. They are collection problems. Students copy titles with the wrong capitalization, miss the issue number, use the wrong date, or paste a homepage URL instead of the exact source URL.
+
+The safest habit is to collect full source details as soon as you decide to use a source. That takes less time than rebuilding your reference list at the end.
+
+## Quick Self-Check Before Submission
+
+- Does every in-text citation appear in the reference list?
+- Does every reference list entry appear in the paper?
+- Are titles in the correct capitalization style?
+- Are journal titles and volume numbers italicized correctly?
+- Are DOI links written as URLs?
 
 ## Useful CorePapers Tools
 
@@ -922,7 +976,7 @@ If you also need a shorter practical example page, read [APA 7th edition citatio
 
 ## Conclusion
 
-APA 7th edition rewards careful formatting more than memory. Once you understand the handful of patterns you use most often, the system becomes much easier to manage consistently.`,
+APA 7th edition rewards careful formatting more than memory. Once you understand the handful of patterns you use most often and collect source data accurately, the system becomes much easier to manage consistently.`,
   },
   {
     slug: "how-to-write-a-literature-review-for-international-students",
@@ -1058,35 +1112,47 @@ The strongest literature reviews are selective, comparative, and purposeful. If 
     slug: "how-to-use-hedging-language-in-academic-writing",
     title: "How to Use Hedging Language in Academic Writing",
     excerpt:
-      "Learn how to sound appropriately cautious and academically credible by using hedging language well.",
+      "Learn how to hedge claims in academic writing with clearer examples, practical sentence patterns, and revision advice for multilingual and international students.",
     category: "Academic English",
     tags: ["Hedging", "Academic English", "Writing Style"],
-    readingTime: 9,
+    readingTime: 11,
     metaDescription:
-      "Learn how to use hedging language in academic writing. Examples, sentence patterns, and revision tips for international students writing in English.",
+      "Learn how to use hedging language in academic writing with examples, sentence patterns, revision tips, and common mistakes for international students writing in English.",
     publishedAt: "2024-02-10",
     featured: false,
     content: `## Why Hedging Matters
 
-Academic writing usually avoids absolute certainty unless the evidence is overwhelming. Scholars often present claims with careful limits because research findings depend on context, method, sample size, and interpretation.
+Academic writing usually avoids absolute certainty unless the evidence is overwhelming. Scholars present claims with limits because research findings depend on context, method, sample size, and interpretation.
 
 That careful tone is called hedging.
 
-## What Hedging Looks Like
+For many international students, hedging feels unnatural at first. In everyday English, strong direct sentences can sound confident. In academic English, the same sentences may sound overstated.
 
-Hedging softens a claim without making it weak. It signals that the writer understands the boundaries of the evidence.
+## What Hedging Actually Does
 
-Common hedging words include:
+Hedging softens a claim without making it weak. It shows that the writer understands the boundaries of the evidence.
+
+Good hedging can help you:
+
+- avoid overclaiming
+- sound more credible to instructors and reviewers
+- separate evidence from interpretation
+- show awareness of limitation and context
+
+## Common Hedging Words and Phrases
+
+Writers often hedge with:
 
 - may
 - might
-- can
+- could
 - appears to
 - seems to
 - suggests
 - likely
 - relatively
 - in many cases
+- to some extent
 
 ## Compare Strong and Hedged Claims
 
@@ -1098,24 +1164,75 @@ Too strong: "This policy causes inequality."
 
 Better: "This policy appears to contribute to inequality in low-income communities."
 
-## When to Hedge
+Too strong: "The results prove that feedback always increases motivation."
 
-Hedging is useful when:
+Better: "The results suggest that feedback may increase motivation for some student groups."
+
+## Three Practical Hedging Strategies
+
+### 1. Use modal verbs
+
+Modal verbs are one of the easiest ways to reduce certainty.
+
+- may
+- might
+- could
+- would
+
+Example:
+
+Too strong: "Lack of sleep affects academic performance."
+
+Hedged: "Lack of sleep may affect academic performance."
+
+### 2. Use tentative reporting verbs
+
+Instead of claiming that your data proves something, use verbs that signal interpretation.
+
+- suggests
+- indicates
+- appears to show
+- implies
+- points to
+
+Example:
+
+Too strong: "The experiment proves that the intervention is effective."
+
+Hedged: "The experiment suggests that the intervention is effective."
+
+### 3. Limit the scope of the claim
+
+Sometimes the problem is not the verb but the size of the claim.
+
+Example:
+
+Too broad: "Social media harms teenagers."
+
+Better: "Heavy social media use may be associated with lower well-being in some teenagers."
+
+## When You Should Hedge
+
+Hedging is especially useful when:
 
 - evidence is mixed
 - the sample is small
 - findings are context-specific
 - you are interpreting rather than directly observing
 - you are discussing implications
+- your result may have alternative explanations
 
 ## When Not to Hedge Too Much
 
-Some students hedge every sentence, which makes the argument sound uncertain or vague. Do not weaken statements that are factual, procedural, or well established.
+Some students hedge every sentence, which makes the paper sound uncertain or vague. Do not weaken statements that are factual, procedural, or widely established.
 
 For example:
 
-- Strong and appropriate: "The survey included 214 participants."
-- Strong and appropriate: "APA 7th edition requires author and year for basic in-text citations."
+- "The survey included 214 participants."
+- "APA 7th edition requires author and year for basic in-text citations."
+- "The interview data was collected over six weeks."
+
+These do not need extra caution if they are straightforward facts.
 
 ## Useful Hedging Patterns
 
@@ -1124,6 +1241,8 @@ For example:
 - "One possible interpretation is that..."
 - "The results appear to support..."
 - "These differences could reflect..."
+- "This pattern is likely related to..."
+- "The findings should be interpreted cautiously because..."
 
 ## Common Hedging Problems
 
@@ -1133,11 +1252,15 @@ For example:
 
 ### Problem 2: Combining too many hedge words
 
-"It may perhaps possibly suggest..." sounds hesitant and messy. Use one clear hedge.
+"It may perhaps possibly suggest..." sounds hesitant and messy. Use one clear hedge, not several.
 
 ### Problem 3: Making every sentence equally cautious
 
 Readers need to know which points are solid and which are tentative. Vary the strength of your language.
+
+### Problem 4: Hedging with vague wording only
+
+Some students write weak sentences such as "This is kind of important." That is not academic hedging. Good hedging is precise, not casual.
 
 ## A Quick Revision Strategy
 
@@ -1146,8 +1269,23 @@ Read your draft and highlight sentences that make broad claims. Ask:
 1. Do I have enough evidence for this level of certainty?
 2. Is the claim limited to a specific context?
 3. Would a more precise verb sound more credible?
+4. Am I describing a fact or interpreting a pattern?
 
-If the answer is yes, adjust the sentence.
+If the sentence is interpretive, revise the strength of the wording to match the evidence.
+
+## Short FAQ
+
+### Is hedging a sign of weak writing?
+
+No. In academic writing, careful limitation usually makes your argument sound stronger because it is more defensible.
+
+### Do all disciplines use hedging?
+
+Yes, although the style varies. Sciences often use modal verbs and cautious reporting verbs. Social sciences and humanities often use attribution and interpretation phrases.
+
+### Can I hedge too much?
+
+Yes. If every sentence sounds uncertain, the paper loses force. Hedge the claims that need caution, not the simple facts.
 
 ## CorePapers Tip
 
@@ -1155,18 +1293,18 @@ If your draft sounds either too blunt or too hesitant, [essay polish](/polish) c
 
 ## Conclusion
 
-Good hedging is a sign of control, not weakness. It helps your argument sound more credible because it matches the strength of the evidence.`,
+Good hedging is a sign of control, not weakness. It helps your argument sound more credible because it matches the strength of the evidence and shows that you understand what your research can and cannot claim.`,
   },
   {
     slug: "how-to-paraphrase-without-plagiarizing-in-academic-writing",
     title: "How to Paraphrase Without Plagiarizing in Academic Writing",
     excerpt:
-      "A step-by-step approach to paraphrasing sources accurately, ethically, and in your own academic voice, with examples and common mistakes to avoid.",
+      "A fuller step-by-step approach to paraphrasing sources accurately, ethically, and in your own academic voice, with examples and common mistakes to avoid.",
     category: "Research Skills",
     tags: ["Paraphrasing", "Plagiarism", "Research Skills"],
-    readingTime: 10,
+    readingTime: 12,
     metaDescription:
-      "Learn how to paraphrase without plagiarizing in academic writing with examples, citation tips, and advice on fixing insufficient paraphrase.",
+      "Learn how to paraphrase without plagiarizing in academic writing with clearer examples, citation tips, patchwriting warnings, and advice on fixing insufficient paraphrase.",
     publishedAt: "2024-02-18",
     featured: false,
     content: `## Paraphrasing Is More Than Replacing Words
@@ -1174,6 +1312,16 @@ Good hedging is a sign of control, not weakness. It helps your argument sound mo
 Many students think paraphrasing means changing a few vocabulary items while keeping the sentence structure the same. That is usually not enough. If the wording and structure remain too close to the source, the result may still count as patchwriting or plagiarism.
 
 Good paraphrasing shows that you understand the original idea and can restate it in a new form that fits your own argument.
+
+## Why Paraphrasing Feels Risky for Many Students
+
+Paraphrasing is stressful because you have to do three things at once:
+
+- understand the original meaning accurately
+- change the wording and structure enough
+- keep the sentence natural inside your own paragraph
+
+When students are tired or writing in a second language, they often stay too close to the source because it feels safer. Unfortunately, that is exactly what creates accidental plagiarism.
 
 ## A Four-Step Method
 
@@ -1209,6 +1357,8 @@ Weak paraphrase: Researchers discovered that students who got structured feedbac
 
 Better paraphrase: Compared with grading alone, detailed feedback supported stronger revision practices among students in the study.
 
+The better version changes the shape, wording, and emphasis while preserving the core idea.
+
 ## What Does "Insufficient Paraphrase" Mean?
 
 If a teacher writes "insufficient paraphrase" in the margin, it usually means your sentence is still too close to the source in wording, structure, or both.
@@ -1222,7 +1372,9 @@ This often happens when students:
 
 In other words, the problem is not only citation. The problem is that the sentence still sounds borrowed.
 
-## Bad Paraphrase vs Strong Paraphrase
+## What Patchwriting Looks Like
+
+Patchwriting is a partial rewrite that stays too close to the source. It often keeps the same structure and simply substitutes synonyms.
 
 Original idea: Many students revised more effectively after receiving structured feedback than after receiving grades alone.
 
@@ -1230,7 +1382,7 @@ Too close: Many students revised more effectively after receiving structured fee
 
 Stronger paraphrase: Compared with grading alone, structured feedback helped students make more effective revisions.
 
-The stronger version changes the sentence shape, wording, and emphasis while keeping the main meaning.
+If the sentence still feels like the original sentence, it probably needs another rewrite.
 
 ## How to Keep Your Own Voice
 
@@ -1242,6 +1394,8 @@ Your paragraph should still sound like your paper, not like a series of borrowed
 - to provide evidence or context
 
 That purpose will shape how you paraphrase it.
+
+For example, a source used as background may be summarized more briefly, while a source used as key evidence may need a more exact and carefully framed paraphrase.
 
 ## Citation Still Matters
 
@@ -1272,6 +1426,20 @@ Ask these questions:
 
 If one answer is no, revise again.
 
+## FAQ
+
+### Do I still need to cite after paraphrasing?
+
+Yes. Paraphrasing changes the wording, not the ownership of the idea.
+
+### What is the difference between paraphrasing and summarizing?
+
+Paraphrasing restates a specific idea in similar detail. Summarizing condenses a larger section into its main point.
+
+### Why do students get flagged even after changing words?
+
+Because instructors and plagiarism tools can still notice when the sentence structure and logic remain too close to the original.
+
 ## CorePapers Tip
 
 After paraphrasing, run the paragraph through [essay polish](/polish) to smooth tone and sentence flow. That can help your paraphrase sound integrated rather than inserted.
@@ -1280,7 +1448,7 @@ If you are also trying to avoid plagiarism more broadly, read [how to avoid plag
 
 ## Conclusion
 
-Strong paraphrasing depends on understanding first and wording second. Once you treat sources as ideas to interpret rather than sentences to reshape, plagiarism becomes much easier to avoid.`,
+Strong paraphrasing depends on understanding first and wording second. Once you treat sources as ideas to interpret rather than sentences to reshape, plagiarism becomes much easier to avoid and your writing starts to sound more like your own.`,
   },
   {
     slug: "how-to-write-a-discussion-section-in-an-academic-paper",
@@ -3051,12 +3219,12 @@ Most methodology questions become easier once you focus on sequence and clarity.
     slug: "sentence-starters-for-discussion-sections-in-research-papers",
     title: "Sentence Starters for Discussion Sections in Research Papers",
     excerpt:
-      "A practical guide to discussion section sentence starters, with examples for interpreting findings, explaining limits, and linking results to research questions.",
+      "A richer guide to discussion section sentence starters, with examples for interpreting findings, comparing studies, explaining limits, and linking results to research questions.",
     category: "Academic Phrases",
     tags: ["Discussion Section", "Sentence Starters", "Research Paper"],
-    readingTime: 13,
+    readingTime: 14,
     metaDescription:
-      "Find sentence starters for discussion sections in research papers, with examples for interpreting results, explaining limitations, and writing stronger academic discussions.",
+      "Find sentence starters for discussion sections in research papers, with examples for interpreting results, comparing literature, explaining limitations, and writing stronger academic discussions.",
     publishedAt: "2026-06-07",
     featured: false,
     content: `## Why Students Search for Discussion Section Sentence Starters
@@ -3145,6 +3313,17 @@ Useful sentence starters:
 
 This kind of phrasing helps readers see how your study fits into the broader conversation.
 
+### When your findings disagree with earlier studies
+
+You also need language for contrast:
+
+- "However, the present findings do not fully align with..."
+- "In contrast to earlier work, this study found that..."
+- "This discrepancy may reflect differences in sample, context, or method."
+- "Unlike previous studies, the present research suggests that..."
+
+These phrases are useful when your results are not straightforward and you need to stay analytical instead of defensive.
+
 ## Sentence Starters for Explaining Unexpected Results
 
 Sometimes your findings do not align with what you predicted. That does not weaken the discussion if you address it carefully.
@@ -3215,6 +3394,8 @@ Useful sentence starters:
 
 "Future research should examine whether similar revision patterns appear across disciplines beyond first-year writing courses."
 
+Future research language works best when it grows naturally from a clear limitation or unresolved question.
+
 ## How to Avoid Overusing Sentence Starters
 
 Sentence starters are useful, but they should not turn your discussion into a template-only paragraph.
@@ -3261,6 +3442,22 @@ Useful hedging phrases include:
 - is likely to reflect
 - could be explained by
 - should be interpreted cautiously
+
+These are especially useful when you are interpreting patterns rather than reporting raw data.
+
+## FAQ
+
+### How long should a discussion section be?
+
+There is no universal rule, but it is often similar in length to the results section or slightly longer because interpretation takes space.
+
+### Can I add new references in the discussion section?
+
+Yes. Many papers use the discussion section to compare findings with earlier studies more directly.
+
+### What is the difference between a discussion and a conclusion?
+
+The discussion interprets findings in depth. The conclusion is shorter and emphasizes the main takeaway, significance, and possible next step.
 
 If you want more phrasing support for this, the [academic phrase library](/phrases) includes sentence patterns that are useful for stance, interpretation, and transitions.
 
