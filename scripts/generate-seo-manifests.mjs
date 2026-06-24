@@ -470,16 +470,21 @@ function createHomeIndexHtml() {
 
 function createBlogIndexHtml() {
   const html = readFileSync(INDEX_HTML, "utf8");
-  writeFileSync(resolve(DIST_PUBLIC_DIR, "blog.html"), applySeoToHtml(html, BLOG_INDEX_SEO), "utf8");
+  mkdirSync(resolve(DIST_PUBLIC_DIR, "blog"), { recursive: true });
+  writeFileSync(resolve(DIST_PUBLIC_DIR, "blog", "index.html"), applySeoToHtml(html, BLOG_INDEX_SEO), "utf8");
 }
 
 function createStaticPageHtml() {
   const template = readFileSync(INDEX_HTML, "utf8");
 
   for (const [path, seo] of Object.entries(STATIC_PAGE_SEO)) {
-    const slug = path.replace(/^\//, "");
-    if (!slug) continue;
-    writeFileSync(resolve(DIST_PUBLIC_DIR, `${slug}.html`), applySeoToHtml(template, seo), "utf8");
+    const pageDir =
+      path === "/"
+        ? DIST_PUBLIC_DIR
+        : resolve(DIST_PUBLIC_DIR, path.replace(/^\//, ""));
+
+    mkdirSync(pageDir, { recursive: true });
+    writeFileSync(resolve(pageDir, "index.html"), applySeoToHtml(template, seo), "utf8");
   }
 }
 
