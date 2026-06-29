@@ -3475,6 +3475,297 @@ Learning strong sentence starters for a discussion section is not about filling 
 
 Once you combine precise sentence starters with specific analysis, your discussion section becomes much easier to write and much more convincing to read.`,
   },
+  {
+    slug: "how-to-write-topic-sentences-for-academic-paragraphs",
+    title: "How to Write Topic Sentences for Academic Paragraphs",
+    excerpt:
+      "Learn how to write clear topic sentences that improve paragraph cohesion, guide the reader, and strengthen academic essays for international students.",
+    category: "Academic Writing",
+    tags: ["Topic Sentences", "Paragraph Writing", "ESL Writing"],
+    readingTime: 9,
+    metaDescription:
+      "How to write topic sentences for academic paragraphs, with structure tips, paragraph examples, and common mistakes for international students.",
+    publishedAt: "2026-06-29",
+    featured: false,
+    content: `## Why Topic Sentences Matter in Academic Writing
+
+Professors often describe strong paragraphs as clear, focused, and cohesive. For international students, that advice can sound vague until it is connected to one concrete paragraph tool: the topic sentence.
+
+A topic sentence works like a mini thesis for the paragraph. It tells the reader what the paragraph is about and how the paragraph contributes to the larger argument of the essay.
+
+Without a clear topic sentence, even grammatically correct paragraphs can feel disconnected or difficult to follow.
+
+## What a Topic Sentence Actually Does
+
+In English academic writing, readers usually expect the main point early. They want to understand the focus of the paragraph before they read the evidence or examples.
+
+A strong topic sentence usually does two jobs at the same time:
+
+- it states the paragraph's main idea
+- it connects that idea to the thesis or broader argument
+
+If a sentence only names the topic, it may be too general. If it only repeats the thesis, it may not give the paragraph its own clear direction.
+
+## A Simple Formula for Writing Topic Sentences
+
+A useful way to build a topic sentence is:
+
+**Topic + Controlling Idea = Topic Sentence**
+
+### Topic
+
+The specific subject you are discussing in the paragraph.
+
+### Controlling idea
+
+The specific angle, point, or claim you are making about that subject.
+
+### Example
+
+Weak:
+
+"There are many environmental problems in the world today."
+
+This is too broad. The reader still does not know what the paragraph will argue.
+
+Stronger:
+
+"Rising global temperatures are driven more by human greenhouse gas emissions than by natural climate cycles."
+
+This version gives the topic and the controlling idea, so the reader knows what kind of evidence should follow.
+
+## Where the Topic Sentence Should Go
+
+In most academic writing, the topic sentence should appear at the beginning of the paragraph.
+
+That placement helps the reader follow the logic immediately. It also matches the paragraph structure expected in much English-medium academic writing.
+
+There is one common variation: sometimes the first sentence is transitional and the second sentence becomes the topic sentence.
+
+Example:
+
+"While cost is an important issue, it does not fully explain the policy debate. The deeper problem is that the policy disrupts long-standing community relationships."
+
+In that example, the first sentence links backward and the second sentence establishes the new paragraph focus.
+
+## A Paragraph Structure That Works Well
+
+You can think of a paragraph as three parts:
+
+1. topic sentence
+2. evidence and explanation
+3. closing or linking sentence
+
+The topic sentence gives direction. The middle sentences provide support. The final sentence reinforces the point or transitions to the next paragraph.
+
+If you include evidence without a strong topic sentence, the reader may understand the facts but not the purpose of the paragraph.
+
+## Common Topic Sentence Mistakes
+
+### 1. Starting with evidence
+
+Students sometimes begin the paragraph with a quotation, statistic, or example. In most academic essays, that evidence should come after your paragraph claim, not before it.
+
+### 2. Writing a question instead of a claim
+
+A topic sentence usually works better as a statement than as a question because academic writing needs a clear paragraph position.
+
+### 3. Being too vague
+
+Words such as "good," "bad," "important," or "interesting" often make the topic sentence weak unless you explain exactly why.
+
+### 4. Repeating the thesis without adding direction
+
+Each paragraph should contribute a distinct point. If every topic sentence restates the same idea, the essay may feel repetitive.
+
+## How to Check Whether Your Topic Sentences Work
+
+A practical revision method is to read only the first sentence of each paragraph in your draft.
+
+If those sentences create a clear outline of your argument, your topic sentences are probably doing their job. If the sequence feels repetitive or confusing, the paragraph structure likely needs revision.
+
+This is one of the fastest ways to improve clarity before submission.
+
+## Topic Sentence Starters You Can Adapt
+
+If you find it difficult to begin a paragraph in formal academic English, patterns like these can help:
+
+- "One major reason is that..."
+- "A further challenge is that..."
+- "An important difference is that..."
+- "This pattern suggests that..."
+- "A key factor is that..."
+
+These are only starting points. The important part is making the rest of the sentence specific and relevant to the paragraph argument.
+
+## Related Guides
+
+If you are still developing paragraph flow, read [how to improve academic writing skills for international students](/blog/how-to-improve-academic-writing-skills-for-international-students).
+
+If you need more formal sentence patterns for body paragraphs and transitions, use the [academic phrase library](/phrases).
+
+If your draft already exists and the paragraphing sounds awkward, [essay polish](/polish) can help you revise the wording into clearer academic English.
+
+## Conclusion
+
+Learning how to write topic sentences is one of the fastest ways to improve paragraph cohesion in academic essays.
+
+Once each paragraph starts with a clear, specific claim, the reader can follow your reasoning much more easily, and the whole paper becomes more persuasive.`,
+  },
+  {
+    slug: "active-vs-passive-voice-in-academic-writing",
+    title: "Active vs Passive Voice in Academic Writing",
+    excerpt:
+      "Learn when to use active or passive voice in academic writing, with discipline-aware examples, clearer sentence choices, and revision tips for international students.",
+    category: "Academic Writing",
+    tags: ["Active Voice", "Passive Voice", "Academic Style"],
+    readingTime: 10,
+    metaDescription:
+      "Active vs passive voice in academic writing: when to use each, how to revise unclear sentences, and what international students should know.",
+    publishedAt: "2026-06-29",
+    featured: false,
+    content: `## Why Voice Choice Confuses Many International Students
+
+Many students learn a simple rule early: always use the active voice because it is clearer. Then they begin reading academic articles and notice that passive sentences appear everywhere, especially in science and methods sections.
+
+That contradiction creates confusion. In reality, both active and passive voice have valid functions in academic writing. The key is choosing the form that fits the purpose of the sentence.
+
+## Active Voice and Passive Voice: The Basic Difference
+
+In active voice, the subject performs the action.
+
+Example:
+
+"The researchers analyzed the survey responses."
+
+In passive voice, the subject receives the action.
+
+Example:
+
+"The survey responses were analyzed by the researchers."
+
+The main difference is not grammar difficulty. It is sentence focus.
+
+## Why Active Voice Is Often Better
+
+In many academic contexts, active voice is preferred because it is more direct, shorter, and easier to understand.
+
+### Use active voice when the actor matters
+
+If the identity of the person, group, or researcher is important, active voice usually makes the sentence stronger.
+
+Passive:
+
+"The theory was proposed by Einstein."
+
+Active:
+
+"Einstein proposed the theory."
+
+### Use active voice when you need to show responsibility
+
+Academic writing often needs clear attribution.
+
+Passive:
+
+"Research has been conducted on this issue."
+
+Active:
+
+"Smith and Lee (2024) conducted research on this issue."
+
+The active version makes the source of the claim much clearer.
+
+### Use active voice when readability matters
+
+Too many passive sentences in a row can make the prose heavy and slow. If a paragraph feels vague or difficult to process, revising some passive constructions into active voice often improves flow quickly.
+
+## When Passive Voice Is the Better Choice
+
+Passive voice is not a mistake. It is useful when the actor is unknown, unimportant, or less important than the process or result.
+
+### 1. When the actor is unknown or irrelevant
+
+"The samples were stored at room temperature for 24 hours."
+
+In this case, the focus is on the procedure, not on the person performing it.
+
+### 2. When the object should stay in focus
+
+Sometimes the paragraph is about the thing being acted on, so passive voice helps maintain cohesion.
+
+"Insulin was first isolated in the early twentieth century. It later became central to diabetes treatment."
+
+If the paragraph is about insulin, keeping insulin in subject position can make the paragraph flow better.
+
+### 3. In methodology or process writing
+
+Methods sections in many disciplines still use passive structures because the procedure matters more than the actor.
+
+"The solution was heated to 80 degrees Celsius and then filtered."
+
+However, style expectations vary across fields, so it is always smart to check your instructor's preference or recent papers in your target discipline.
+
+## Academic Writing Norms Are Changing
+
+Many science journals and university writing guides now accept more active voice than before, including first-person plural forms such as "we analyzed" in methods sections.
+
+That means students should not assume passive voice is automatically more academic. In many cases, the active form now sounds more current and more precise.
+
+The safest rule is this:
+
+- use active voice for clarity and attribution
+- use passive voice when you intentionally want to foreground the process, object, or result
+
+## How to Revise Unwanted Passive Voice
+
+If a sentence feels weak, ask:
+
+1. Who is doing the action?
+2. Does that actor matter here?
+3. Would the sentence be clearer if the actor came first?
+
+Example:
+
+Passive:
+
+"The policy was criticized in several recent studies."
+
+Revised active version:
+
+"Several recent studies criticized the policy."
+
+The meaning stays the same, but the sentence becomes more direct.
+
+## A Quick Decision Guide
+
+Choose active voice when you want to:
+
+- make the sentence shorter
+- identify who did something
+- clarify responsibility
+- improve readability
+
+Choose passive voice when you want to:
+
+- emphasize the process or result
+- keep the object as the topic of the paragraph
+- omit an unimportant actor
+
+## Related Guides
+
+If you also want more cautious academic wording, read [how to use hedging language in academic writing](/blog/how-to-use-hedging-language-in-academic-writing).
+
+If you want help improving sentence-level clarity across a whole draft, try [essay polish](/polish).
+
+If you need reusable academic wording for methods, results, and discussion sections, the [academic phrase library](/phrases) can help.
+
+## Conclusion
+
+The question is not whether active voice or passive voice is always correct. The real question is what you want the sentence to emphasize.
+
+Once you make that choice deliberately, your academic writing becomes clearer, more controlled, and more appropriate to your discipline.`,
+  },
 ];
 
 export const STATIC_ARTICLE_MAP: Record<string, StaticArticle> = Object.fromEntries(

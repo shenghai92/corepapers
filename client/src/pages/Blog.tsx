@@ -171,6 +171,16 @@ export default function Blog() {
                 title: "Avoid plagiarism in academic writing",
                 desc: "Learn when to quote, paraphrase, summarize, and cite sources safely.",
               },
+              {
+                href: "/blog/how-to-write-topic-sentences-for-academic-paragraphs",
+                title: "Write stronger topic sentences",
+                desc: "Build clearer paragraphs with topic sentence structure, examples, and ESL-friendly revision advice.",
+              },
+              {
+                href: "/blog/active-vs-passive-voice-in-academic-writing",
+                title: "Active vs passive voice",
+                desc: "Know when to use each voice in essays, methods sections, and sentence-level revision.",
+              },
             ].map((item) => (
               <Link key={item.href} href={item.href} className="block">
                 <div className="h-full rounded-2xl border border-border bg-white p-6 hover:border-primary/30 hover:shadow-soft transition-all">
