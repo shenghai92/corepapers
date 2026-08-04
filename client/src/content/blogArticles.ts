@@ -644,146 +644,129 @@ Once you follow a clear structure, abstract writing becomes much easier and much
     slug: "how-to-avoid-common-esl-writing-mistakes",
     title: "10 Most Common ESL Writing Mistakes in Academic Papers (And How to Fix Them)",
     excerpt:
-      "Learn the most common ESL writing mistakes in academic papers and how to fix them with clearer examples for international students.",
+      "Learn the most common ESL writing mistakes in academic papers and how to fix them with clearer examples specifically tailored for international students.",
     category: "Writing Tips",
     tags: ["ESL", "Academic Writing", "Common Mistakes"],
     readingTime: 8,
     metaDescription:
-      "Discover the most common ESL writing mistakes in academic papers and how to fix them with examples, revision tips, and clearer academic alternatives.",
+      "Discover the most common ESL writing mistakes in academic papers and how to fix them with examples, revision tips, and clearer academic alternatives for international students.",
     publishedAt: "2024-01-15",
     featured: true,
     content: `## Introduction
 
-Writing academic papers in English as a second language is one of the most challenging parts of studying abroad. Even students with strong English skills often repeat the same patterns of mistakes, and those patterns can distract readers from the quality of the actual ideas.
+Writing academic papers in English as a second language is undeniably one of the most challenging parts of studying abroad. Even international students with strong conversational English skills often repeat the same patterns of mistakes in their writing. Unfortunately, these patterns can distract professors and reviewers from the actual quality of your ideas.
 
-The good news is that these problems are predictable. Once you know what to look for, you can revise more efficiently and sound much more confident on the page.
+The good news is that these grammatical and stylistic problems are highly predictable. Once you know exactly what to look for, you can revise your drafts much more efficiently and sound significantly more confident and professional on the page.
 
 ## Mistake 1: Redundant Subject Pronouns
 
 **What it looks like:** "The study, it shows that..." or "The results, they indicate..."
 
-**Why it happens:** In many languages, repeating the subject with a pronoun is acceptable or even natural. In English academic writing, it usually sounds repetitive.
+**Why it happens:** In many languages (like spoken Chinese or Spanish), repeating the subject with a pronoun is acceptable or even feels natural for emphasis. In English academic writing, it sounds repetitive and informal.
 
-**The fix:** Remove the extra pronoun. Write "The study shows that..."
+**The fix:** Remove the extra pronoun entirely.
 
-## Mistake 2: Overusing "Very"
+Corrected: "The study shows that..."
+
+## Mistake 2: Overusing the Word "Very"
 
 **What it looks like:** "This is a very important factor" or "The results are very significant."
 
-**Why it happens:** Students often translate intensifiers directly from everyday speech.
+**Why it happens:** Students often translate intensifiers directly from everyday speech into their academic writing.
 
-**The fix:** Replace vague emphasis with precise academic vocabulary. Write "critical," "substantial," "highly significant," or "central" when those words better match your meaning.
+**The fix:** Replace vague emphasis with precise, strong academic vocabulary.
+
+Corrected: Use words like "critical," "substantial," "highly significant," or "central" when those words better match your specific meaning.
 
 ## Mistake 3: Informal First-Person Fillers
 
 **What it looks like:** "In my opinion, I think..." or "I believe that..."
 
-**Why it happens:** Conversational English habits carry over into formal assignments.
+**Why it happens:** Conversational English habits carry over into formal university assignments.
 
-**The fix:** Use evidence-led phrasing such as "This analysis suggests..." or "The evidence indicates..."
+**The fix:** Use evidence-led phrasing that removes the subjective "I".
 
-## Mistake 4: Incorrect Article Usage
+Corrected: "This analysis suggests..." or "The evidence indicates..."
+
+## Mistake 4: Incorrect Article Usage (a/an/the)
 
 **What it looks like:** "The research shows that education is important factor."
 
-**Why it happens:** Many languages do not use articles in the same way English does.
+**Why it happens:** Many languages (including Chinese, Japanese, and Russian) do not use articles in the same way English does, making this one of the hardest habits to break.
 
-**The fix:** Write "The research shows that education is an important factor." Review whether the noun is countable, specific, or already introduced.
+**The fix:** Review whether the noun is countable, specific, or already introduced.
 
-## Mistake 5: Subject-Verb Agreement Errors
+Corrected: "The research shows that education is **an** important factor."
 
-**What it looks like:** "The number of participants were..." or "The results shows..."
+## Mistake 5: Subject-Verb Agreement Errors in Long Sentences
 
-**Why it happens:** Long noun phrases can hide the true subject of the sentence.
+**What it looks like:** "The number of participants were..." or "The results of the complex study shows..."
 
-**The fix:** Identify the grammatical head noun first, then match the verb to it. "The number was..." but "The participants were..."
+**Why it happens:** Long prepositional phrases can hide the true subject of the sentence, confusing the writer about whether the verb should be singular or plural.
+
+**The fix:** Identify the grammatical head noun first, ignoring the prepositional phrase, then match the verb to it.
+
+Corrected: "The **number** [of participants] **was**..." but "The **participants were**..."
 
 ## Mistake 6: Passive Voice Overuse
 
 **What it looks like:** "It was found by the researchers that the results were shown to be significant."
 
-**Why it happens:** Students are often taught that academic writing should sound impersonal, so they rely too heavily on passive structures.
+**Why it happens:** ESL students are often taught that academic writing must sound completely impersonal, so they rely far too heavily on complex passive structures, making sentences hard to read.
 
-**The fix:** Use active voice when it improves clarity. Write "The researchers found that the results were significant."
+**The fix:** Use active voice when it improves clarity and directness.
+
+Corrected: "The researchers found that the results were significant."
 
 ## Mistake 7: Run-On Sentences
 
-**What it looks like:** Several independent ideas joined only with commas.
+**What it looks like:** Several independent ideas joined only with commas, creating a massive, confusing block of text.
 
-**Why it happens:** In some writing traditions, long sentences with many clauses feel normal and elegant.
+**Why it happens:** In some writing traditions, long sentences with many clauses feel normal, poetic, and elegant. In English academic writing, clarity is prioritized over length.
 
-**The fix:** Break the idea into shorter units or use a stronger connector. Readers should be able to follow the logic on the first pass.
+**The fix:** Break the idea into shorter units using periods, or use a stronger connector (like a semicolon or conjunction). Readers should be able to follow your logic easily on the first pass.
 
 ## Mistake 8: Incorrect Prepositions
 
 **What it looks like:** "The research is based in the theory of..." or "This finding is consistent to..."
 
-**Why it happens:** Prepositions rarely map cleanly from one language to another.
+**Why it happens:** Prepositions rarely map cleanly from one language to another through direct translation.
 
-**The fix:** Learn common academic collocations such as "based on," "consistent with," "associated with," and "relevant to."
+**The fix:** Learn and memorize common academic collocations (words that naturally go together).
+
+Corrected: "based **on**," "consistent **with**," "associated **with**," and "relevant **to**."
 
 ## Mistake 9: Tense Inconsistency
 
 **What it looks like:** "The study found that X is true. The researchers showed that Y was important."
 
-**Why it happens:** Students are unsure when to use present tense for general claims and past tense for specific studies.
+**Why it happens:** Students are often unsure when to use present tense for general claims versus past tense for specific studies.
 
-**The fix:** Use past tense for what a particular study did or found, and present tense for accepted knowledge or what your paper argues now.
+**The fix:** Use **past tense** for what a particular study did or found in the past, and **present tense** for accepted general knowledge or what your paper is arguing right now.
 
-## Mistake 10: Literal Translation
+## Mistake 10: Literal Translation (Chinglish/Spanglish)
 
 **What it looks like:** "The research has a big meaning for..." or "This problem is very seriousness."
 
-**Why it happens:** Direct translation often produces phrases that are understandable but not idiomatic.
+**Why it happens:** Direct, word-for-word translation often produces phrases that are technically understandable but not idiomatic to native academic readers.
 
-**The fix:** Replace translated expressions with common academic combinations such as "has important implications for" or "raises serious concerns about."
+**The fix:** Replace translated expressions with standard academic combinations.
 
-## A Practical Editing Routine
+Corrected: "has important implications for" or "raises serious concerns about."
 
-Before submitting, do one revision pass for grammar and another pass for style. Looking for everything at once is slow and frustrating. A focused checklist usually works better:
+## A Practical Editing Routine for International Students
 
-- Check article use sentence by sentence.
-- Highlight verbs to test subject-verb agreement.
-- Read topic sentences aloud to hear awkward phrasing.
-- Search for repeated words such as "very," "important," and "good."
-- Review whether each paragraph has one clear purpose.
+Before submitting your paper, do one revision pass strictly for grammar and another separate pass for style. Looking for everything at once is slow and frustrating. A focused checklist usually works much better:
 
-## Common ESL Writing Mistakes: Quick Before-and-After Examples
+- [ ] Check article use (a/an/the) sentence by sentence.
+- [ ] Highlight the main verbs to test subject-verb agreement.
+- [ ] Read your topic sentences aloud to hear awkward phrasing.
+- [ ] Search the document for repeated weak words such as "very," "important," and "good."
+- [ ] Review whether each paragraph has one clear, single purpose.
 
-If you want to fix common ESL writing mistakes quickly, compare short patterns like these:
+---
 
-- "In my opinion, I think..." -> "This analysis suggests..."
-- "The results shows..." -> "The results show..."
-- "This is very important." -> "This is a significant issue."
-- "The research is based in..." -> "The research is based on..."
-
-These sentence-level changes help the draft sound more academic without changing the underlying idea.
-
-## Language-Specific Mistakes: Chinese, Spanish, and Arabic Speakers
-
-Different language backgrounds often produce different recurring patterns in English academic writing.
-
-### Chinese speakers
-
-Common issues include direct translation such as "according to my thinking," weak connectors between ideas, and overuse of passive voice where a clearer active structure would work better.
-
-### Spanish speakers
-
-Common issues include very long sentences, unnecessary article use, and word order that sounds natural in Spanish but awkward in English academic prose.
-
-### Arabic speakers
-
-Common issues include article confusion, verb tense inconsistency, and paragraph structures that delay the main point for too long before making the claim clear.
-
-## Where CorePapers Fits
-
-If you want a second pass that focuses on clarity, tone, and academic phrasing, [try the essay polish tool](/polish). If you are still building paragraphs, [the academic phrases page](/phrases) can help you choose stronger transitions and sentence starters.
-
-If you also want broader revision habits, read [how to improve academic writing skills for international students](/blog/how-to-improve-academic-writing-skills-for-international-students).
-
-## Conclusion
-
-Improving ESL academic writing is rarely about memorizing difficult rules in isolation. It is more often about noticing repeated patterns and replacing them with clearer, more standard academic choices. Once those patterns become visible, revision gets much faster.`,
+*If you want a second pass that focuses on clarity, tone, and academic phrasing, try the [CorePapers Essay Polish tool](https://corepapers.space/ai-essay-polisher-for-non-native-english-writers) designed specifically for non-native English speakers.*`,
   },
   {
     slug: "complete-apa-7th-edition-guide-international-students",
