@@ -1757,11 +1757,11 @@ A good research proposal is clear about purpose, limited in scope, and realistic
   },
   {
     slug: "how-to-write-a-methodology-section-for-a-research-paper",
-    title: "How to Write a Methodology Section for a Research Paper - ESL Guide With Examples",
+    title: "How to Write a Methodology Section for a Research Paper: ESL Guide With Examples",
     excerpt:
-      "Learn how to write a methodology section with structure tips, sample wording, and a practical example for student research papers.",
+      "Learn how to write a methodology section with clear structure tips, sample wording, and a full practical example for student research papers.",
     category: "Research Writing",
-    tags: ["Methodology", "Research Paper", "Academic Writing"],
+    tags: ["Methodology", "Research Paper", "ESL Writing"],
     readingTime: 10,
     metaDescription:
       "Learn how to write a clear methodology section with a real example. This step-by-step guide is designed for international students writing in English.",
@@ -1769,172 +1769,106 @@ A good research proposal is clear about purpose, limited in scope, and realistic
     featured: false,
     content: `## What the Methodology Section Is For
 
-The methodology section explains how the study was conducted and why those choices make sense. Readers should come away knowing what kind of research you did, what data you used, and how you analyzed it.
+The methodology section explains exactly how your study was conducted and, crucially, why those specific choices make sense for your research question. Readers should come away knowing what kind of research you did, what data you used, and how you analyzed it.
 
-This section is often difficult because students either become too vague or include every minor detail without a clear structure.
+This section is often difficult for ESL students because writers either become too vague ("data was collected and analyzed") or include every minor procedural detail without a clear, logical structure.
 
-If you are searching for how to write a methodology section, a good short answer is this: explain the research design, data source or participants, data collection process, and method of analysis in a clear order that another reader could follow.
+**The simplest answer to "how do I write a methodology section" is this:** Explain the research design, data source or participants, data collection process, and method of analysis in a clear, sequential order that another researcher could follow and replicate.
 
-## What to Include
+## What to Include in a Methodology Section
 
-Depending on your field, a methodology section may include:
+Depending on your academic field, a methodology section may include:
 
-- research design
-- participants or data source
-- sampling strategy
-- materials or instruments
-- procedure
-- method of analysis
-- ethical considerations
+- Research design
+- Participants or data source
+- Sampling strategy (how you selected participants)
+- Materials or instruments used
+- Step-by-step procedure
+- Method of analysis
+- Ethical considerations
 
-Not every paper needs every subsection, but most methodology sections need a clear sequence.
+Not every paper needs every single subsection, but most strong methodology sections address all of these points in a clear sequence.
 
 ## A Simple Methodology Section Structure
 
-Many students find it easier to write the section when they treat it as a predictable sequence:
+Many students find it much easier to write the section when they treat it as a predictable, ordered sequence:
 
-1. research design
-2. participants, sample, or data source
-3. materials or instruments
-4. procedure or data collection
-5. method of analysis
-6. ethics or limitations where relevant
+1. **Research design** (qualitative, quantitative, mixed-methods?)
+2. **Participants, sample, or data source** (Who or what was studied?)
+3. **Materials or instruments** (What tools were used?)
+4. **Procedure or data collection** (How was the data gathered?)
+5. **Method of analysis** (How was the data interpreted?)
+6. **Ethics or limitations** (Where relevant)
 
-You do not always need these as formal subheadings, but this order helps the reader understand what happened and why.
+You do not always need these as formal subheadings, but following this order helps the reader understand what happened and why.
 
-## Sample Methodology Section (Social Science Paper)
+## Full Sample Methodology Section (Social Science Paper)
 
-The following sample shows what a fuller methodology section can look like in a small social science research paper:
+The following sample shows what a complete, well-written methodology section looks like in a student research paper:
 
-"This study used a qualitative case study design to examine how first-year international students used AI writing feedback during a twelve-week academic writing course at a large urban university. The participants were fourteen undergraduate students from three language backgrounds who had all completed at least one major essay in English before the interview stage. They were recruited through an open course invitation and gave consent for their draft comments and interview responses to be analyzed anonymously.
+> "This study used a qualitative case study design to examine how first-year international students used AI writing feedback during a twelve-week academic writing course at a large urban university. The participants were fourteen undergraduate students from three language backgrounds who had all completed at least one major essay in English before the interview stage. They were recruited through an open course invitation and gave written consent for their draft comments and interview responses to be analyzed anonymously.
+>
+> Data were collected from two sources: semi-structured interviews and annotated essay drafts. Each participant completed one thirty-minute interview focused on revision choices, confidence, and perceived usefulness of the feedback. In addition, two drafts per participant were collected in order to compare original phrasing with revised versions after feedback. This combination allowed the study to compare what students said about revision with what they actually changed in their writing.
+>
+> The data were analyzed through thematic coding. Interview transcripts were first read closely to identify repeated themes related to clarity, trust, confusion, and revision strategy. Draft changes were then grouped into categories such as grammar correction, vocabulary change, sentence restructuring, and idea development. The coding process was iterative, meaning categories were refined after repeated reading of both interview and draft data. This method was chosen because it allowed the study to connect student perception with visible revision behavior in a clear and systematic way."
 
-Data were collected from two sources: semi-structured interviews and annotated essay drafts. Each participant completed one thirty-minute interview focused on revision choices, confidence, and perceived usefulness of the feedback. In addition, two drafts per participant were collected in order to compare original phrasing with revised versions after feedback. This combination allowed the study to compare what students said about revision with what they actually changed in their writing.
+## Step 1: Start With the Research Design
 
-The data were analyzed through thematic coding. Interview transcripts were first read closely to identify repeated themes related to clarity, trust, confusion, and revision strategy. Draft changes were then grouped into categories such as grammar correction, vocabulary change, sentence restructuring, and idea development. The coding process was iterative, meaning categories were refined after repeated reading of both interview and draft data. This method was chosen because it allowed the study to connect student perception with visible revision behavior in a clear and systematic way."
+Tell the reader clearly whether the study is qualitative, quantitative, mixed-methods, experimental, comparative, case-based, or another type. This single sentence gives the entire section a frame and helps the reader understand everything that follows.
 
-## Start With the Research Design
+## Step 2: Explain Data Collection Clearly
 
-Tell the reader whether the study is qualitative, quantitative, mixed-methods, experimental, comparative, case-based, or something similar. This gives the section a frame.
+Readers should know precisely:
 
-## Explain Data Collection Clearly
+- What data was collected
+- Where it came from
+- When collection happened
+- How the data was gathered
 
-Readers should know:
+For example, instead of vaguely writing "Data was collected from students," explain specifically whether you used surveys, interviews, classroom observations, or assignment drafts.
 
-- what data was collected
-- where it came from
-- when collection happened
-- how the data was gathered
+## Step 3: Describe the Sample Specifically
 
-For example, instead of writing "Data was collected from students," explain whether you used surveys, interviews, classroom observations, or assignment drafts.
+Be specific about who or what was included. Sample size, context, and selection criteria all matter because they directly shape how far the findings can be generalized to other populations.
 
-## Describe the Sample
+## Step 4: Explain the Analysis Method in Detail
 
-Be specific about who or what was included. Sample size, context, and selection criteria all matter because they shape how far the findings can be generalized.
+This is where many methodology sections become too thin. Do not stop after saying you collected the data. Explain in detail how you interpreted it.
 
-## Explain the Analysis
+Common analysis methods include:
 
-This is where many methodology sections become too thin. Do not stop after saying you collected the data. Explain how you interpreted it.
+- **Thematic coding** (for interview or text data)
+- **Statistical comparison** (for numerical data, e.g., t-test, ANOVA)
+- **Discourse analysis** (for language and communication data)
+- **Content analysis** (for documents or media)
 
-Examples:
-
-- thematic coding for interviews
-- statistical comparison for numerical data
-- discourse analysis for texts
-- content analysis for documents
-
-## Methodology Section Example
-
-Here is a simple example of methodology wording for a student research paper:
-
-"This study employed a qualitative research design to examine how first-year international students responded to AI-generated writing feedback. Data were collected through semi-structured interviews and annotated essay drafts from twelve undergraduate students enrolled in an English-medium writing course. Participants were selected through voluntary recruitment within the course. The interview data and draft revisions were analyzed using thematic coding in order to identify recurring patterns in how students interpreted and applied feedback."
-
-This example works because it tells the reader:
-
-- the design
-- the participants
-- the data source
-- the selection process
-- the method of analysis
-
-## Sample Methodology Section for Different Research Types
-
-### Quantitative
-
-Focus on variables, sample size, instruments, and statistical analysis.
-
-### Qualitative
-
-Focus on participant context, data collection method, coding process, and interpretive logic.
-
-### Mixed-methods
-
-Explain both the numerical and qualitative parts, and show how they work together.
-
-## Common Mistakes
+## Common Mistakes to Avoid
 
 ### Being too general
 
-If the reader could not repeat your process, the description may be too vague.
+If the reader could not replicate your process based on your description, it is probably too vague.
 
 ### Mixing results into methodology
 
-The methodology explains process, not findings.
+The methodology section explains the process, not the findings. Save all results for the results section.
 
 ### Using complicated language to hide uncertainty
 
-Simple, precise wording is usually stronger than abstract phrasing.
+Simple, precise wording is always stronger than abstract or overly technical phrasing.
 
-## Methodology Section Checklist
-
-Before submitting, ask:
-
-- Have I clearly named the research design?
-- Can the reader tell who or what was studied?
-- Have I explained how the data was collected?
-- Have I explained how the data was analyzed?
-- Did I avoid mixing results into the methodology?
-
-## Methodology Section FAQ
-
-### What is the difference between methodology and methods?
-
-Methodology explains the overall research approach and why it fits the question. Methods are the specific tools or procedures you used, such as surveys, interviews, or statistical tests.
-
-### How long should a methodology section be?
-
-The length depends on the assignment and field, but it should be long enough to explain the design, data collection, and analysis clearly. For many student papers, one to three well-focused pages is common.
-
-### What tense should I use in the methodology section?
-
-Most methodology sections use past tense because they describe what the study did. Present tense may still appear when you explain general research conventions or definitions.
-
-### Can I use first person in a methodology section?
-
-That depends on your style guide and instructor. Some fields accept first person for clarity, while others prefer an impersonal style. The safest choice is to follow your department's existing examples.
-
-### What should I include in a qualitative methodology section?
-
-A qualitative methodology section usually explains the research context, participant selection, data collection method, and coding or interpretive process used to analyze the material.
-
-## Useful Sentence Patterns
+## Useful Sentence Patterns for the Methodology Section
 
 - "This study employed a qualitative research design..."
 - "Data were collected through..."
 - "Participants were selected based on..."
 - "The data were analyzed using..."
 - "This method was chosen because..."
+- "A total of [X] participants were recruited from..."
+- "The study was approved by the institutional ethics committee."
 
-## CorePapers Tip
+---
 
-If your methodology sounds repetitive or awkward, [essay polish](/polish) can help smooth the phrasing. If you are citing method sources or research instruments, the [citation generator](/citations) can help keep references organized.
-
-If you need more sentence starters for methods, analysis, or cautious reporting, the [academic phrase bank](/phrases) can help you draft the section more confidently.
-
-If you are still planning the study, the [research proposal guide](/blog/how-to-write-a-research-proposal-for-university) can help you connect the methodology to the research question more clearly.
-
-## Conclusion
-
-A strong methodology section is specific, logical, and transparent. Its goal is not to sound technical for its own sake. Its goal is to show that your research process was appropriate and understandable.`,
+*If your methodology section sounds repetitive or awkward after drafting, [CorePapers Essay Polish](https://corepapers.space/ai-essay-polisher-for-non-native-english-writers) can help smooth the phrasing for non-native English speakers.*`,
   },
   {
     slug: "mla-9th-edition-guide-for-international-students",
@@ -2824,231 +2758,219 @@ When your final paragraph restates the argument clearly, summarizes the reasonin
     slug: "how-to-write-a-results-section-research-paper-esl",
     title: "How to Write a Results Section in a Research Paper for ESL Students",
     excerpt:
-      "Learn how to write a results section in a research paper with clearer academic phrases, structure advice, and examples for non-native English speakers.",
+      "Learn how to write a results section in a research paper with clearer academic phrases, structure advice, and examples tailored specifically for non-native English speakers.",
     category: "Research Writing",
-    tags: ["Results Section", "Research Paper", "ESL Writing"],
-    readingTime: 6,
+    tags: ["Results Section", "Research Paper", "ESL Writing", "Academic Phrases"],
+    readingTime: 7,
     metaDescription:
       "Learn how to write a results section in a research paper with academic phrases, structure advice, figure references, and examples for ESL and international students.",
     publishedAt: "2026-06-21",
     featured: false,
     content: `## Why the Results Section Feels Difficult for ESL Writers
 
-Writing the results section of a research paper can be frustrating for non-native English speakers. The problem is usually not the research itself. The real challenge is presenting the findings in clear academic language without sounding repetitive, too informal, or too interpretive.
+Writing the results section of a research paper can be incredibly frustrating for non-native English speakers. The problem is usually not the research itself or your understanding of the data. The real challenge is presenting the findings in clear, objective academic language without sounding repetitive, too informal, or overly interpretive.
 
-This guide focuses on the practical side of the section: how to structure it, which phrases to use, and how to avoid the most common writing mistake international students make here.
+Many international students struggle with finding the right verbs to describe their data or feel unsure about how to transition smoothly between tables and text. This guide focuses on the practical side of the section: how to structure it, which specific phrases to use, and how to avoid the most common writing mistakes ESL students make here.
 
-## Results Section vs Discussion Section
+## Results Section vs. Discussion Section: Knowing the Difference
 
-The most common mistake is mixing the results section with the discussion section.
+The most common mistake international students make is mixing the results section with the discussion section. This happens because in many academic cultures, reporting and interpreting are done simultaneously. In English academic writing, they are strictly separated.
 
-In the **results section**, your job is to report what happened:
+In the **results section**, your job is purely to report what happened:
 
-- the findings
-- the data
-- the observations
+- The numerical or qualitative findings
+- The data collected
+- The direct observations
 
 In the **discussion section**, your job is different. That is where you explain what the findings mean, why they matter, and how they connect to previous research.
 
-If a sentence starts explaining significance instead of reporting findings, it usually belongs in the discussion, not the results.
+### A Quick Test for Your Sentences
 
-## A Quick Test
+Before you write a sentence in the results section, ask yourself:
 
-Before you write a sentence, ask:
+*"Am I reporting a fact, or am I explaining what it means?"*
 
-"Am I reporting a fact, or am I explaining what it means?"
-
-If you are explaining meaning, save that sentence for the discussion section.
+If you are explaining the meaning or significance of a result, save that sentence for the discussion section.
 
 ## How to Structure a Results Section Logically
 
-Do not write the results section like a diary of your research process.
+Do not write the results section like a chronological diary of your research process (e.g., "First we did this, then we found this...").
 
-Instead, organize it around:
+Instead, organize it around the core elements of your study:
 
-- research questions
-- hypotheses
-- variables
-- major result groups
+- Research questions
+- Hypotheses
+- Variables
+- Major result groups
 
-For example, if your paper compares multiple conditions, create one subsection for each condition. Within each subsection, report the numerical or descriptive findings first, then highlight any patterns or trends the reader should notice.
+For example, if your paper compares multiple conditions, create one clear subsection for each condition. Within each subsection, report the numerical or descriptive findings first, then highlight any patterns or trends the reader should notice.
 
-This structure makes the section easier for reviewers to follow because they can quickly find the answer to each question raised earlier in the paper.
+This structure makes the section much easier for professors and reviewers to follow because they can quickly find the answer to each specific question raised earlier in the paper.
 
-## Academic Phrases for Reporting Results
+## Essential Academic Phrases for Reporting Results
 
-One common problem in student writing is repeating the word "show" in every sentence. Varying your reporting language makes the results section sound more professional and easier to read.
+One common problem in ESL student writing is repeating the word "show" in every single sentence (e.g., "The table shows," "The graph shows," "The results show"). Varying your reporting language makes the results section sound significantly more professional and easier to read.
 
 ### Describing what a figure or table reveals
 
-Less effective:
+**Less effective:** "Table 1 shows that the temperature increased."
 
-"Table 1 shows that the temperature increased."
+**Stronger:** "As illustrated in Table 1, the temperature increased significantly."
 
-Stronger:
-
-"As illustrated in Table 1, the temperature increased significantly."
+**Alternative:** "Table 1 presents the temperature variations, indicating a clear upward trend."
 
 ### Reporting a difference between groups
 
-Less effective:
+**Less effective:** "We found a big difference between the two groups."
 
-"We found a big difference between the two groups."
+**Stronger:** "The data reveals a statistically significant difference between the experimental and control groups."
 
-Stronger:
-
-"The data reveals a statistically significant difference between the experimental and control groups."
+**Alternative:** "A comparison of the two groups highlights a substantial variance in performance."
 
 ### Confirming a hypothesis
 
-Less effective:
+**Less effective:** "The results say our idea was right."
 
-"The results say our idea was right."
+**Stronger:** "These findings provide evidence supporting the initial hypothesis."
 
-Stronger:
+**Alternative:** "The data confirms the prediction that [variable A] affects [variable B]."
 
-"These findings provide evidence supporting the initial hypothesis."
+### Powerful Reporting Verbs to Replace "Show"
 
-Other useful reporting verbs include:
+Instead of constantly using "show," try these academic verbs:
 
-- demonstrate
-- indicate
-- reveal
-- confirm
-- suggest
-- highlight
-- illustrate
-- reflect
+- Demonstrate
+- Indicate
+- Reveal
+- Confirm
+- Suggest
+- Highlight
+- Illustrate
+- Reflect
 
 ## How to Reference Tables and Figures Correctly
 
-When you refer to a table or figure, integrate it into the sentence rather than announcing it separately.
+When you refer to a table or figure, integrate it smoothly into the sentence rather than announcing it as a separate entity.
 
-Less effective:
+**Less effective:** "Here is Table 2. It shows the survey results."
 
-"Here is Table 2. It shows the survey results."
+**Stronger:** "The survey results, summarized in Table 2, indicate a strong preference for synchronous online learning among participants over 30."
 
-Stronger:
+Your text and your table should support each other, not repeat the exact same information word for word. Use the sentence to highlight the key pattern, trend, or outlier, and let the table or figure hold the full, detailed data.
 
-"The survey results, summarized in Table 2, indicate a strong preference for synchronous online learning among participants over 30."
+## Common Grammar Pitfalls in the Results Section
 
-Your text and your table should support each other, not repeat the same information word for word. Use the sentence to highlight the key pattern or outlier, and let the table or figure hold the full data.
+ESL students often encounter specific grammar issues when writing results:
+
+1. **Tense Confusion:** Generally, use the **past tense** to describe what the study found (e.g., "The participants reported..."). Use the **present tense** when referring the reader to a figure or table that is currently visible in the paper (e.g., "Figure 3 illustrates...").
+2. **Article Usage with Data:** Remember that "data" is typically treated as a plural noun in formal academic writing (e.g., "The data **were** collected," not "The data was collected").
 
 ## Key Takeaway
 
-The results section is about precision and objectivity. Report what you found, organize the section around your research questions, use more varied academic reporting verbs, and let tables and figures carry the detailed numbers. Save interpretation for the discussion section.
+The results section is entirely about precision and objectivity. Report exactly what you found, organize the section logically around your research questions, use varied and accurate academic reporting verbs, and let your tables and figures carry the detailed numbers. Save all your interpretation and analysis for the discussion section.
 
 ## Frequently Asked Questions
 
-### What is the difference between the results section and the discussion section?
+### What is the exact difference between the results section and the discussion section?
 
-The results section reports what happened in the study without interpretation. The discussion section explains what those findings mean, why they matter, and how they relate to previous research.
+The results section reports what happened in the study without any interpretation. The discussion section explains what those findings mean, why they matter, and how they relate to previous research in your field.
 
 ### How should I reference tables and figures in the results section?
 
-Integrate the reference into the sentence. Instead of writing "Here is Table 2," write something like "The survey results, summarized in Table 2, indicate..."
+Integrate the reference directly into the sentence. Instead of writing "Here is Table 2," write something like "The survey results, summarized in Table 2, indicate..."
 
 ### Should I use past or present tense in the results section?
 
-In many papers, past tense is used to describe what the study found, while present tense can be used when referring the reader to a figure or table that is visible in the paper. Check your department or journal style if you are unsure.
+In most academic papers, the past tense is used to describe what the study found (because the experiment is over), while the present tense is used when referring the reader to a figure or table that is visible in the text right now. Check your specific department or journal style guide if you are unsure.
 
-## Related Guides
+---
 
-If you need help writing the next section after results, read [how to write a discussion section in an academic paper](/blog/how-to-write-a-discussion-section-in-an-academic-paper).
-
-If you want sentence starters for interpreting findings, read [sentence starters for discussion sections in research papers](/blog/sentence-starters-for-discussion-sections-in-research-papers).
-
-If your draft sounds awkward or repetitive, [essay polish](/polish) can help improve the academic phrasing.
-
-## Conclusion
-
-Learning how to write a results section in a research paper is mostly about control. Once you separate reporting from interpretation, organize the section around the research questions, and use more accurate academic phrasing, the section becomes much easier to write and much easier to read.`,
+*If your draft still sounds awkward or repetitive, [CorePapers Essay Polish](https://corepapers.space/ai-essay-polisher-for-non-native-english-writers) can help improve the academic phrasing specifically for non-native English speakers.*`,
   },
   {
     slug: "methodology-section-faq-for-research-papers",
-    title: "Methodology Section FAQ for Research Papers",
+    title: "Methodology Section FAQ for Research Papers: A Guide for International Students",
     excerpt:
-      "Answers to common methodology section questions, including examples, structure, and what to include in a research paper methods section.",
+      "Clear, practical answers to common methodology section questions, including structure tips, real examples, and what exactly to include in a research paper methods section.",
     category: "Research Writing",
-    tags: ["Methodology FAQ", "Research Paper", "Methods Section"],
+    tags: ["Methodology FAQ", "Research Paper", "Methods Section", "International Students"],
     readingTime: 9,
     metaDescription:
-      "Methodology section FAQ for research papers with answers on structure, examples, what to include, and how to write a methods section more clearly.",
+      "Methodology section FAQ for research papers with clear answers on structure, examples, what to include, and how to write a methods section for international students.",
     publishedAt: "2026-06-18",
     featured: false,
-    content: `## Why a Methodology Section FAQ Helps
+    content: `## Why the Methodology Section Matters
 
-Search Console is already showing long-tail searches around methodology sections, methods section examples, and what a research paper methodology should include.
+For many international students, the methodology section is one of the most intimidating parts of a research paper. It requires precise, technical language to explain exactly what you did and why you did it.
 
-This FAQ page answers those questions directly so students can find short, practical explanations before drafting the full section.
+This FAQ page answers the most common questions students have when drafting their methodology, providing short, practical explanations to help you start writing with confidence.
 
 ## FAQ 1: How Do You Write a Methodology Section for a Research Paper?
 
-A simple way to write a methodology section is to explain:
+A simple and effective way to write a methodology section is to explain your process in this logical sequence:
 
-1. the research design
-2. the participants, sample, or data source
-3. the data collection method
-4. the method of analysis
-5. any ethics or limitations that matter
+1. **The research design:** (e.g., qualitative, quantitative, mixed-methods)
+2. **The participants, sample, or data source:** (Who or what did you study?)
+3. **The data collection method:** (How did you gather the information?)
+4. **The method of analysis:** (How did you process the data once you had it?)
+5. **Ethics or limitations:** (What constraints or ethical rules applied to your study?)
 
-That sequence works because it shows the reader what you studied, how you studied it, and why the method was appropriate.
+This sequence works universally because it clearly shows the reader what you studied, how you studied it, and why that specific method was the most appropriate choice for your research question.
 
-If you need a full step-by-step guide, read [how to write a methodology section for a research paper](/blog/how-to-write-a-methodology-section-for-a-research-paper).
+## FAQ 2: What Exactly Should Be Included in a Methods Section?
 
-## FAQ 2: What Should Be Included in a Methods Section?
+While requirements vary slightly by discipline, most strong methods sections include the following elements:
 
-Most methods sections include:
+- **Research design framework**
+- **Participants or dataset description**
+- **Sampling or selection criteria** (Why these specific participants/data?)
+- **Tools, materials, or instruments used** (e.g., surveys, software, lab equipment)
+- **Step-by-step procedure**
+- **Specific analysis method** (e.g., thematic coding, ANOVA)
 
-- research design
-- participants or dataset
-- sampling or selection criteria
-- tools, materials, or instruments
-- procedure
-- analysis method
+Not every assignment needs all of these as separate, bolded headings, but a comprehensive methods section will answer all these points clearly within the text.
 
-Not every assignment needs all of these as separate headings, but most strong methods sections answer those points clearly.
+## FAQ 3: What Is a Good Example of a Methodology Section?
 
-## FAQ 3: What Is an Example of a Methodology Section?
+Here is a short, well-structured example of a methodology section for a social science paper:
 
-Here is a short example:
+> "This study used a qualitative research design to examine how first-year international students responded to AI-generated writing feedback. Data were collected through semi-structured interviews and annotated essay drafts from twelve undergraduate students. The interview data and draft revisions were analyzed using thematic coding to identify recurring revision patterns."
 
-"This study used a qualitative research design to examine how first-year international students responded to AI-generated writing feedback. Data were collected through semi-structured interviews and annotated essay drafts from twelve undergraduate students. The interview data and draft revisions were analyzed using thematic coding to identify recurring revision patterns."
+**Why this example works:**
+It is concise but tells the reader everything they need to know immediately:
+- **The design:** Qualitative
+- **The participants:** Twelve undergraduate international students
+- **The data source:** Semi-structured interviews and annotated drafts
+- **The method of analysis:** Thematic coding
 
-This example works because it tells the reader:
+## FAQ 4: What Is the Difference Between "Methodology" and "Methods"?
 
-- the design
-- the participants
-- the data source
-- the method of analysis
+In many undergraduate student assignments, the terms are used almost interchangeably. However, in advanced academic writing, there is a distinct difference:
 
-## FAQ 4: What Is the Difference Between a Methodology Section and a Methods Section?
+- **Methods** refer to the practical, step-by-step tools and procedures you used for data collection and analysis (e.g., a Likert-scale survey, a specific statistical test).
+- **Methodology** refers more broadly to the underlying logic, theory, and justification behind choosing those specific methods.
 
-In many student assignments, the terms are used almost interchangeably.
+In practice, the safest approach is to follow your specific course wording. Make sure your section explains both *what* the process was (the methods) and *why* you chose that process (the methodology).
 
-However, some instructors use "methods section" to mean the practical steps of data collection and analysis, while "methodology" can refer more broadly to the logic behind choosing those methods.
+## FAQ 5: What Tense Should I Use in the Methodology Section?
 
-In practice, the safest approach is to follow your course wording and make sure the section explains both the process and the reason for the process.
+This is a very common question for ESL writers. Most methodology sections use the **past tense** because they describe actions that have already been completed (e.g., "Data *were* collected," "Participants *completed* the survey").
+
+Present tense may still appear occasionally when you are explaining general, accepted research conventions or defining standard terms.
 
 ## A Fast Methodology Section Checklist
 
-Before submitting, ask:
+Before submitting your paper, review your methodology section and ask yourself:
 
-- Did I clearly name the research design?
-- Did I explain who or what was studied?
-- Did I explain how the data was collected?
-- Did I explain how the data was analyzed?
-- Did I avoid putting results into the methodology section?
+- [ ] Did I clearly name the overall research design?
+- [ ] Did I explain exactly who or what was studied?
+- [ ] Did I explain precisely how the data was collected?
+- [ ] Did I explain how the data was analyzed after collection?
+- [ ] Did I avoid accidentally putting the actual *results* into the methodology section?
 
-## Related Guides
+---
 
-If you are still planning the whole study, read [how to write a research proposal for university](/blog/how-to-write-a-research-proposal-for-university).
-
-If you need sentence starters for methods, cautious reporting, or analysis, the [academic phrase bank](/phrases) can help.
-
-## Conclusion
-
-Most methodology questions become easier once you focus on sequence and clarity. A good methods section does not try to sound complicated. It helps the reader follow exactly what you did and why you did it.`,
+*If you need sentence starters for methods, cautious reporting, or analysis, the [CorePapers Academic Phrase Library](https://corepapers.space/phrases) can help you find the right academic vocabulary.*`,
   },
   {
     slug: "sentence-starters-for-discussion-sections-in-research-papers",
