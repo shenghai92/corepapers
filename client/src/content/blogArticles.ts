@@ -2497,153 +2497,6 @@ If you need a citation walkthrough, read [APA 7th edition citation format guide 
 Learning how to improve academic writing skills is usually less about talent and more about better revision habits. Once you focus on structure, clarity, formal tone, and careful source use, your writing improves in ways teachers can notice very quickly.`,
   },
   {
-    slug: "apa-7th-edition-citation-format-guide-with-examples",
-    title: "APA 7th Edition Citation Format Guide With Examples",
-    excerpt:
-      "A practical APA 7th edition citation format guide with examples for references, in-text citations, and common mistakes international students should avoid.",
-    category: "Citations",
-    tags: ["APA 7", "Citation Format", "Academic Writing"],
-    readingTime: 11,
-    metaDescription:
-      "APA 7th edition citation format guide with examples for journal articles, books, websites, and in-text citations for international students.",
-    publishedAt: "2026-06-13",
-    featured: false,
-    content: `## Why Students Search for APA 7th Edition Citation Format
-
-Many students know they need APA style, but still feel unsure when they format the final reference list. That is why searches like "APA 7th edition citation format" and "APA 7 citation example" are so common.
-
-The difficulty is not only remembering punctuation. Students also need to know:
-
-- what information belongs in the reference
-- how the in-text citation should look
-- what changes when there is no author or no date
-
-This guide gives a practical starting point.
-
-## What APA 7th Edition Usually Requires
-
-APA 7 is widely used in psychology, education, business, and many social science courses.
-
-In most student assignments, you need:
-
-- a reference list
-- in-text citations
-- consistent capitalization and punctuation
-
-The core rule is simple: every source cited in the text should appear in the reference list, and every reference should match a source used in the paper.
-
-## Journal Article Example
-
-### Reference format
-
-Author, A. A., & Author, B. B. (Year). Title of article. *Title of Journal, volume*(issue), page-page. https://doi.org/xxxxx
-
-### Example
-
-Chen, Y., & Smith, J. A. (2024). Revision behavior in multilingual academic writing. *Journal of Academic Literacy, 18*(2), 44-63. https://doi.org/10.1000/example
-
-### In-text citation
-
-- Parenthetical: (Chen & Smith, 2024)
-- Narrative: Chen and Smith (2024)
-
-## Book Example
-
-### Reference format
-
-Author, A. A. (Year). *Title of book*. Publisher.
-
-### Example
-
-Bailey, S. (2023). *Academic writing for university students*. Routledge.
-
-### In-text citation
-
-- (Bailey, 2023)
-
-## Website Example
-
-### Reference format
-
-Author, A. A. (Year, Month Day). Title of page. *Website Name*. URL
-
-### Example
-
-University of Melbourne. (2025, March 12). Writing literature reviews. *Academic Skills Hub*. https://example.edu/literature-review
-
-### In-text citation
-
-- (University of Melbourne, 2025)
-
-## APA 7 In-Text Citation Basics
-
-In-text citations usually include:
-
-- author surname
-- publication year
-- page number for direct quotations when needed
-
-### Quotation example
-
-(Chen & Smith, 2024, p. 51)
-
-### Paraphrase example
-
-(Chen & Smith, 2024)
-
-Direct quotations need more precision. Paraphrases still need citation even if the wording is your own.
-
-## Common APA 7 Mistakes
-
-### 1. Capitalizing every major word in article titles
-
-In APA references, article titles usually use sentence case, not title case.
-
-### 2. Forgetting italics
-
-Journal names and book titles are often italicized, but article titles are not.
-
-### 3. Missing in-text citations
-
-Some students build a reference list at the end but forget to cite sources inside the paper. That is still incomplete citation practice.
-
-### 4. Using the wrong author format
-
-APA uses surname first in the reference list.
-
-### 5. Treating paraphrase as citation-free writing
-
-Paraphrasing still requires citation because the idea comes from a source.
-
-## A Quick APA 7 Checklist
-
-Before submitting, ask:
-
-1. Does every source in the paper appear in the reference list?
-2. Does every reference match an in-text citation?
-3. Are journal names and book titles italicized correctly?
-4. Are article and webpage titles in sentence case?
-5. Did I add page numbers for direct quotations?
-
-## When to Use a Citation Generator
-
-Citation rules are repetitive, and small punctuation errors are easy to miss under deadline pressure.
-
-If you want a faster workflow, the [citation generator](/citations) can help you build APA 7 references and in-text citations before you do a final manual check.
-
-## Related Guides
-
-If you are also paraphrasing sources, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing).
-
-If you want a broader writing workflow, read [how to improve academic writing skills for international students](/blog/how-to-improve-academic-writing-skills-for-international-students).
-
-If your final draft still sounds too informal after the citations are fixed, [essay polish](/polish) can help improve the academic tone.
-
-## Conclusion
-
-APA 7th edition citation format becomes much easier once you separate the task into source details, reference structure, and in-text citation rules. With a few reliable models, you can format references more confidently and avoid the small mistakes that often cost students easy marks.`,
-  },
-  {
     slug: "how-to-avoid-plagiarism-in-academic-writing",
     title: "How to Avoid Plagiarism in Academic Writing",
     excerpt:
@@ -3765,6 +3618,148 @@ If you need reusable academic wording for methods, results, and discussion secti
 The question is not whether active voice or passive voice is always correct. The real question is what you want the sentence to emphasize.
 
 Once you make that choice deliberately, your academic writing becomes clearer, more controlled, and more appropriate to your discipline.`,
+  },
+  {
+    slug: "apa-7th-edition-citation-format-guide-with-examples",
+    title: "Complete APA 7th Edition Citation Format Guide With Examples",
+    excerpt:
+      "A practical APA 7th edition citation format guide with examples for references, in-text citations, and common mistakes international students should avoid.",
+    category: "Citation Guides",
+    tags: ["APA 7th", "Citation Format", "Reference Examples", "International Students"],
+    readingTime: 7,
+    metaDescription:
+      "APA 7th edition citation format guide with examples for journal articles, books, and websites. Learn in-text citation rules and common mistakes international students should avoid.",
+    publishedAt: "2026-08-04",
+    featured: false,
+    content: `## Why Students Search for APA 7th Edition Citation Format
+
+Many international students know they need to use APA style, but still feel highly unsure when they sit down to format the final reference list. That is exactly why searches like "APA 7th edition citation format" and "APA 7 citation example" are so incredibly common.
+
+The difficulty is not only remembering where to put the periods and commas. Students also need to know:
+- Exactly what information belongs in the reference list
+- How the in-text citation should look inside the paragraph
+- What changes when there is no author or no publication date
+
+This guide gives you a practical, reliable starting point for the most common sources.
+
+## What APA 7th Edition Usually Requires
+
+APA 7 is the standard citation style widely used in psychology, education, business, nursing, and many social science courses.
+
+In most university assignments, you need:
+- A complete **reference list** at the end of the document
+- **In-text citations** within the body paragraphs
+- Consistent capitalization, italicization, and punctuation
+
+**The Golden Rule of APA:** Every single source cited in the text *must* appear in the reference list, and every reference in the list *must* match a source used in the paper.
+
+## 1. Journal Article Example
+
+Journal articles are the most common academic source you will cite.
+
+### Reference List Format
+
+Author, A. A., & Author, B. B. (Year). Title of article. *Title of Journal, volume*(issue), page-page. https://doi.org/xxxxx
+
+### Example
+
+Chen, Y., & Smith, J. A. (2024). Revision behavior in multilingual academic writing. *Journal of Academic Literacy, 18*(2), 44-63. https://doi.org/10.1000/example
+
+### In-Text Citation
+
+- **Parenthetical (at the end of a sentence):** (Chen & Smith, 2024)
+- **Narrative (part of the sentence):** Chen and Smith (2024) noted that...
+
+## 2. Book Example
+
+### Reference List Format
+
+Author, A. A. (Year). *Title of book*. Publisher.
+
+### Example
+
+Bailey, S. (2023). *Academic writing for university students*. Routledge.
+
+### In-Text Citation
+
+- (Bailey, 2023)
+
+## 3. Website Example
+
+### Reference List Format
+
+Author, A. A. (Year, Month Day). Title of page. *Website Name*. URL
+
+### Example
+
+University of Melbourne. (2025, March 12). Writing literature reviews. *Academic Skills Hub*. https://example.edu/literature-review
+
+### In-Text Citation
+
+- (University of Melbourne, 2025)
+
+## APA 7 In-Text Citation Basics
+
+In-text citations usually must include:
+1. The author's surname
+2. The publication year
+3. The specific page number (required for direct quotations, recommended for paraphrasing long texts)
+
+### Direct Quotation Example
+
+When quoting exactly word-for-word, you must include the page number.
+
+> (Chen & Smith, 2024, p. 51)
+
+### Paraphrase Example
+
+Even if you rewrite the idea in your own words, you must still cite the source.
+
+> (Chen & Smith, 2024)
+
+## 5 Common APA 7 Mistakes International Students Make
+
+### 1. Capitalizing every major word in article titles
+
+In APA reference lists, article titles usually use **sentence case**, not title case. This means you only capitalize the first word of the title, the first word after a colon, and proper nouns.
+
+Incorrect: Revision Behavior In Multilingual Academic Writing
+
+Correct: Revision behavior in multilingual academic writing
+
+### 2. Forgetting italics
+
+Journal names and book titles must be italicized, but article titles are not.
+
+### 3. Missing in-text citations
+
+Some students build a beautiful reference list at the end but forget to actually cite the sources inside the paragraphs. This is considered incomplete citation practice and can lead to accidental plagiarism.
+
+### 4. Using the wrong author format
+
+APA uses the surname first, followed by initials in the reference list.
+
+Incorrect: John A. Smith
+
+Correct: Smith, J. A.
+
+### 5. Treating paraphrase as citation-free writing
+
+Paraphrasing still requires an in-text citation because the underlying idea comes from an external source, even if the vocabulary is yours.
+
+## A Quick APA 7 Final Checklist
+
+Before submitting your assignment, ask yourself:
+
+- [ ] Does every source mentioned in the paper appear in the reference list?
+- [ ] Does every reference in the list match an in-text citation?
+- [ ] Are journal names and book titles italicized correctly?
+- [ ] Are article and webpage titles written in sentence case?
+- [ ] Did I add page numbers for all direct quotations?
+
+---
+
+*Citation rules are highly repetitive, and small punctuation errors are easy to miss under deadline pressure. If you want a faster workflow, the [CorePapers Citation Generator](https://corepapers.space/citations) can help you build APA 7 references automatically.*`,
   },
 ];
 
