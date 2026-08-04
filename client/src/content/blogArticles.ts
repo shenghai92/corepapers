@@ -975,82 +975,87 @@ APA 7th edition rewards careful formatting more than memory. Once you understand
     featured: true,
     content: `## What a Literature Review Is Really For
 
-A literature review is not just a list of studies. Its job is to show how previous research connects, where scholars agree or disagree, what methods dominate the field, and what gap your own project will address.
+A literature review is not just a descriptive list of studies you read. Its true job is to show how previous research connects, where scholars agree or disagree, what methods dominate the field, and ultimately, what specific gap your own research project will address.
 
-International students often read many sources but still struggle to turn those notes into a focused review. The missing step is usually synthesis.
+International students often read dozens of sources but still struggle to turn those scattered notes into a focused, cohesive review. The missing step is usually **synthesis**—combining separate elements to form a coherent whole.
 
-## Start With a Research Question
+## Start With a Highly Specific Research Question
 
-Before you collect sources, define the topic in a way that gives you boundaries. "Social media and education" is too broad. "How short-form video platforms affect university students' study habits" is easier to search, compare, and organize.
+Before you collect sources, define your topic in a way that gives you strict boundaries.
 
-## 5-Step Literature Review Checklist
+- **Too broad:** "Social media and education"
+- **Focused:** "How short-form video platforms affect university students' study habits"
 
-1. Define your scope and search terms.
-2. Search databases such as Google Scholar, JSTOR, or PubMed.
-3. Screen and select the most relevant sources.
-4. Synthesize patterns instead of summarizing one study at a time.
-5. Write with a clear thematic structure that leads toward your research gap.
+A focused question is much easier to search, compare, and organize.
 
-## Build a Search Strategy
+## The 5-Step Literature Review Checklist
 
-Use a simple tracking table while reading:
+1. **Define your scope and search terms.**
+2. **Search academic databases** (such as Google Scholar, JSTOR, or PubMed).
+3. **Screen and select** the most relevant, high-quality sources.
+4. **Synthesize patterns** instead of summarizing one study at a time.
+5. **Write with a clear thematic structure** that leads logically toward your research gap.
 
-- author and year
-- research question
-- method
-- sample or context
-- key findings
-- limitations
-- how the source relates to your project
+## Build a Smart Search Strategy
 
-This table helps you compare studies instead of treating every article as a separate summary.
+Do not rely on memory. Use a simple tracking table (like an Excel spreadsheet) while reading:
+
+- Author and year
+- Core research question
+- Methodology used
+- Sample size or context
+- Key findings
+- Limitations of the study
+- How the source relates directly to your project
+
+This table forces you to compare studies side-by-side instead of treating every article as an isolated summary.
 
 ## Group Sources by Theme, Not by Author
 
-One common weak structure is writing one paragraph per article. That creates a sequence of mini summaries with no argument.
+One of the weakest, yet most common, structures is writing one paragraph per article (e.g., "Smith found X. Next, Jones found Y. Then, Lee found Z."). That creates a boring sequence of mini-summaries with no overarching argument.
 
-A stronger structure groups studies by:
+A much stronger structure groups studies by:
 
-- theoretical perspective
-- method
-- population
-- variable or outcome
-- historical development of the topic
+- Theoretical perspective
+- Methodology
+- Target population
+- Specific variable or outcome
+- Historical development of the topic
 
-For example, if you are reviewing research on AI writing tools, one section might cover perceived benefits, another might examine plagiarism concerns, and a third might compare learning outcomes across disciplines.
+*For example:* If you are reviewing research on AI writing tools, one section might cover "Perceived Benefits," another might examine "Plagiarism Concerns," and a third might compare "Learning Outcomes Across Disciplines."
 
-## A Simple Literature Review Structure
+## A Simple, Reliable Literature Review Structure
 
 ### 1. Introduction
 
-Introduce the topic, explain why it matters, and define the scope of the review.
+Introduce the broad topic, explain why it matters to the field, and clearly define the scope of your review.
 
-### 2. Thematic body sections
+### 2. Thematic Body Sections
 
-Each section should compare several sources around one idea.
+Each section should compare several sources around one specific idea or theme.
 
-### 3. Gap or limitation section
+### 3. Gap or Limitation Section
 
-Explain what remains unclear in the literature and how your project responds to that gap.
+Critically explain what remains unclear, unstudied, or contradictory in the current literature, and how your project responds directly to that gap.
 
-### 4. Short conclusion
+### 4. Short Conclusion
 
-Summarize the main patterns and connect them to your research purpose.
+Summarize the main patterns found in the literature and connect them firmly to your research purpose.
 
-## Literature Review Example Structure for One Body Paragraph
+## What Does One Body Paragraph Look Like?
 
-Students often ask what one paragraph should look like. A simple pattern is:
+Students often ask how to structure a single paragraph. A simple, effective pattern is:
 
-1. state the theme
-2. compare two or more studies
-3. explain a difference or limitation
-4. connect the point to your project
+1. **State the theme** (Topic sentence)
+2. **Compare two or more studies** (Evidence)
+3. **Explain a difference, limitation, or consensus** (Analysis)
+4. **Connect the point to your project** (Synthesis)
 
-For example, one paragraph might compare studies that report benefits of AI writing tools with studies that emphasize plagiarism concerns, then explain why that tension matters for your research question.
+*Example concept:* One paragraph might compare three studies that report the time-saving benefits of AI writing tools, contrast them with two studies that emphasize critical thinking loss, and then explain why that tension matters for your specific research question.
 
-## Useful Sentence Patterns
+## Useful Academic Sentence Patterns
 
-Writers often know what they want to say but need academic phrasing that sounds natural. Here are a few reliable patterns:
+Writers often know what they want to say in their native language but need academic phrasing that sounds natural in English. Here are a few reliable patterns:
 
 - "Previous studies have primarily focused on..."
 - "A recurring theme in the literature is..."
@@ -1058,38 +1063,32 @@ Writers often know what they want to say but need academic phrasing that sounds 
 - "Taken together, these findings suggest that..."
 - "Despite growing interest in this topic, limited research has examined..."
 
-You can find more transition options on the [academic phrases page](/phrases).
-
 ## Common Problems to Avoid
 
 ### Problem 1: Too much description
 
-If every sentence starts with an author's name, your review probably reads like a summary list.
+If every sentence starts with an author's name, your review probably reads like a summary list rather than an analytical essay.
 
 ### Problem 2: No critical comparison
 
-A strong review does more than report findings. It explains differences in method, scope, and evidence quality.
+A strong review does much more than report findings. It critically explains differences in methodology, scope, and evidence quality between studies.
 
-### Problem 3: Weak gap statement
+### Problem 3: Weak gap statements
 
-Do not claim there is "no research" unless you are certain. It is safer to say research is limited, concentrated in certain contexts, or lacking comparative evidence.
+Do not claim there is "no research" on a topic unless you are absolutely certain. It is much safer and more accurate to say research is "limited," "concentrated in certain contexts," or "lacking comparative evidence."
 
-## A Revision Checklist
+## A Quick Revision Checklist
 
-- Does each body paragraph include more than one source?
-- Is the paragraph organized around an idea rather than an author?
-- Have you explained agreements, disagreements, and limitations?
-- Does the conclusion lead clearly toward your own study?
+Before finalizing your draft, ask yourself:
 
-## Where CorePapers Can Help
+- [ ] Does each body paragraph discuss more than one source?
+- [ ] Is the paragraph organized logically around an idea rather than just an author?
+- [ ] Have I clearly explained agreements, disagreements, and limitations?
+- [ ] Does the conclusion lead naturally and clearly toward my own study?
 
-When your draft is structurally complete, [essay polish](/polish) can help improve clarity and formal tone. If you need help citing studies accurately, the [citation tool](/citations) can speed up the reference stage.
+---
 
-If you are still planning the project around the review, the [research proposal guide](/blog/how-to-write-a-research-proposal-for-university) can help you connect the review to the research gap.
-
-## Conclusion
-
-The strongest literature reviews are selective, comparative, and purposeful. If you move from note-taking to synthesis early, the writing process becomes much less overwhelming.`,
+*When your draft is structurally complete, [CorePapers Essay Polish](https://corepapers.space/ai-essay-polisher-for-non-native-english-writers) can help improve clarity and ensure a formal academic tone.*`,
   },
   {
     slug: "how-to-use-hedging-language-in-academic-writing",
