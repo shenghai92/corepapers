@@ -158,6 +158,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "academic argument evidence example, claim evidence explanation, research paper argument",
   },
+  "/literature-review-example": {
+    title: "Literature Review Example: Thematic Synthesis and Research Gap | CorePapers",
+    description: "Use a fictional literature review example to organize sources by theme, write synthesis paragraphs, and identify a cautious research gap without listing one study at a time.",
+    keywords: "literature review example, literature review synthesis example, thematic literature review, research gap example, how to write literature review",
+  },
   "/literature-review-synthesis-matrix": {
     title:
       "How to Synthesize Sources in a Literature Review: Matrix and Example | CorePapers",
@@ -201,6 +206,11 @@ const STATIC_PAGE_SEO = {
       "Use a methodology section example, a research-paper methods template, and a practical planner for design, participants, data collection, analysis, and limitations.",
     keywords:
       "methodology section example research paper, sample methodology section, methodology section template, how to write methodology section",
+  },
+  "/mla-citation-examples": {
+    title: "MLA 9 Citation Examples: Works Cited and In-Text Citations | CorePapers",
+    description: "Use clear, labelled MLA 9 Works Cited and in-text citation examples for books, journal articles, and web pages, with a source-detail review checklist.",
+    keywords: "MLA citation examples, MLA 9 Works Cited examples, MLA in-text citation examples, how to cite MLA",
   },
   "/citation-examples": {
     title: "APA 7 Citation Examples and In-Text Citation Examples | CorePapers",
@@ -336,6 +346,11 @@ const STATIC_PAGES = [
   { path: "/academic-paragraph-structure/", changefreq: "monthly", priority: "0.8" },
   { path: "/academic-argument-evidence/", changefreq: "monthly", priority: "0.8" },
   {
+    path: "/literature-review-example/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
     path: "/literature-review-synthesis-matrix/",
     changefreq: "monthly",
     priority: "0.8",
@@ -367,6 +382,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/methodology-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/mla-citation-examples/",
     changefreq: "monthly",
     priority: "0.8",
   },

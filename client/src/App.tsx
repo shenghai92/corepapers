@@ -25,6 +25,9 @@ const SectionWritingPractice = lazy(
 const LiteratureReviewSynthesis = lazy(
   () => import("./pages/LiteratureReviewSynthesis")
 );
+const LiteratureReviewExample = lazy(
+  () => import("./pages/LiteratureReviewExample")
+);
 const ResearchFoundations = lazy(() => import("./pages/ResearchFoundations"));
 const AbstractWritingGuide = lazy(() => import("./pages/AbstractWritingGuide"));
 const Citations = lazy(() => import("./pages/Citations"));
@@ -171,6 +174,14 @@ function Router() {
           )}
         />
         <Route
+          path="/mla-citation-examples"
+          component={() => (
+            <PublicLayout>
+              <AcademicWritingResource kind="mla-citation-examples" />
+            </PublicLayout>
+          )}
+        />
+        <Route
           path="/citation-examples"
           component={() => (
             <PublicLayout>
@@ -201,6 +212,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <ResearchFoundations kind="evidence" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/literature-review-example"
+          component={() => (
+            <PublicLayout>
+              <LiteratureReviewExample />
             </PublicLayout>
           )}
         />

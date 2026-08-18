@@ -109,6 +109,14 @@ const pages = [
     "Conclusion section example for a research paper",
   ],
   [
+    "/mla-citation-examples/",
+    "MLA 9 citation examples: Works Cited and in-text citations",
+  ],
+  [
+    "/literature-review-example/",
+    "Literature review example: synthesize by theme",
+  ],
+  [
     "/literature-review-synthesis-matrix/",
     "How to synthesize sources in a literature review",
   ],
@@ -207,6 +215,15 @@ expect(
   "methodology practice: USC guidance link"
 );
 
+const mlaCitationHtml = read("mla-citation-examples/index.html");
+expect(mlaCitationHtml.includes("fictional learning examples"), "MLA citations: fictional-example disclosure");
+expect(mlaCitationHtml.includes("style.mla.org"), "MLA citations: official MLA guidance link");
+expect(mlaCitationHtml.includes("writingcenter.gmu.edu"), "MLA citations: university writing-center guidance link");
+const literatureReviewExampleHtml = read("literature-review-example/index.html");
+expect(literatureReviewExampleHtml.includes("Fictional learning example"), "literature-review example: fictional-example disclosure");
+expect(literatureReviewExampleHtml.includes("writingcenter.gmu.edu"), "literature-review example: university synthesis guidance link");
+expect(literatureReviewExampleHtml.includes("guides.library.jhu.edu"), "literature-review example: library synthesis guidance link");
+
 const integrityHtml = read("academic-integrity-and-source-use/index.html");
 expect(
   integrityHtml.includes(
@@ -273,6 +290,14 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-templates/`),
   "sitemap: paper-templates resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/mla-citation-examples/`),
+  "sitemap: MLA citation examples"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/literature-review-example/`),
+  "sitemap: literature-review example"
 );
 expect(
   sitemap.includes(`${BASE_URL}/thesis-statement-examples/`),

@@ -554,7 +554,7 @@ export default function Citations() {
               ))}
             </div>
 
-            <div className="mt-10 grid sm:grid-cols-2 gap-4">
+            <div className="mt-10 grid sm:grid-cols-3 gap-4">
               <Link href="/citation-examples" className="block">
                 <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
                   <h2 className="font-serif text-2xl text-slate-purple mb-2">
@@ -565,6 +565,12 @@ export default function Citations() {
                     structures, then compare your output with the original
                     source details.
                   </p>
+                </div>
+              </Link>
+              <Link href="/mla-citation-examples" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-2">Check MLA 9 examples</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">Review fictional Works Cited and author-page citation structures before you submit humanities work.</p>
                 </div>
               </Link>
               <Link href="/polish" className="block">
@@ -584,12 +590,17 @@ export default function Citations() {
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">
                 Related guides
               </p>
-              <div className="grid sm:grid-cols-3 gap-4">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
                   {
                     href: "/blog/complete-apa-7th-edition-guide-international-students",
                     title: "APA guide for international students",
                     desc: "Review the citation rules students get wrong most often.",
+                  },
+                  {
+                    href: "/mla-citation-examples",
+                    title: "MLA Works Cited and in-text examples",
+                    desc: "Check how MLA source details and author-page citations work together.",
                   },
                   {
                     href: "/academic-integrity-and-source-use",

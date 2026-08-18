@@ -15,7 +15,8 @@ type ResourceKind =
   | "integrity"
   | "examples"
   | "templates"
-  | "citation-examples";
+  | "citation-examples"
+  | "mla-citation-examples";
 
 type ResourcePageProps = { kind: ResourceKind };
 
@@ -33,6 +34,9 @@ const sourceLinks = {
   purdueSourceUse:
     "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html",
   uciResults: "https://guides.lib.uci.edu/scientificwriting/results",
+  mlaStyle: "https://style.mla.org/",
+  mlaQuickGuide: "https://writingcenter.gmu.edu/writing-resources/citing-sources/mla-citation-style-quick-guide",
+  mlaInText: "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_in_text_citations_the_basics.html",
 };
 
 function ExternalLink({
@@ -537,6 +541,55 @@ function TemplatesPage() {
   );
 }
 
+function MlaCitationExamplesPage() {
+  return (
+    <>
+      <SEOHead
+        title="MLA 9 Citation Examples: Works Cited and In-Text Citations"
+        description="Use clear, labelled MLA 9 Works Cited and in-text citation examples for books, journal articles, and web pages, with a source-detail review checklist."
+        keywords="MLA citation examples, MLA 9 Works Cited examples, MLA in-text citation examples, how to cite MLA"
+        canonical="/mla-citation-examples/"
+      />
+      <main className="pt-24 pb-16 min-h-screen bg-background">
+        <div className="container">
+          <ResourceHeader
+            eyebrow="MLA citation example guide"
+            title={<>MLA 9 examples for <span className="italic">Works Cited and in-text citations</span></>}
+            description="Use these simplified examples to identify the parts of an MLA Works Cited entry and link each source-based claim to the correct in-text citation."
+          />
+          <section className={`max-w-4xl mx-auto ${commonClass.card}`}>
+            <p className="text-sm font-sans text-primary font-medium">The names, titles, publishers, journals, pages, and URLs below are fictional learning examples. They demonstrate citation structure only and must never be presented as real sources.</p>
+          </section>
+          <section className="max-w-4xl mx-auto mt-8 space-y-5">
+            {[
+              ["Book", "Okafor, Mara. Writing with Evidence. Academic Press, 2024.", "Narrative: Okafor argues that careful source use supports a reader’s trust (42). · Parenthetical: (Okafor 42)."],
+              ["Journal article", "Rivera, Elena, and Daniel Kim. “Revision Feedback and Undergraduate Writers.” Journal of Academic Learning, vol. 8, no. 2, 2025, pp. 44–61. https://doi.org/10.xxxx/example.", "Narrative: Rivera and Kim report that specific feedback can support revision (51). · Parenthetical: (Rivera and Kim 51)."],
+              ["Web page", "Global Learning Centre. “Planning a Literature Review.” Global Learning Centre, 8 May 2025, https://example.edu/literature-review. Accessed 18 Aug. 2026.", "If the author is the organisation and no page number is available, introduce it clearly in the sentence or use a shortened title that matches the Works Cited entry."],
+            ].map(([type, reference, inText]) => (
+              <article key={type} className={commonClass.card}>
+                <h2 className="font-serif text-2xl text-slate-purple mb-4">{type}</h2>
+                <p className="rounded-xl bg-muted/50 p-5 text-sm text-foreground/80 leading-relaxed break-words">{reference}</p>
+                <p className={`${commonClass.copy} mt-4`}><strong className="text-foreground/80">In-text connection:</strong> {inText}</p>
+              </article>
+            ))}
+          </section>
+          <section className={`max-w-4xl mx-auto mt-8 ${commonClass.card}`}>
+            <h2 className={commonClass.title}>A source-detail check before you submit</h2>
+            <ul className="space-y-3 text-sm text-muted-foreground font-sans leading-relaxed">
+              {["Check the exact creator, title, container, other contributors, version or number, publisher, date, and location available for the source.", "Make sure the first meaningful element in the in-text citation helps a reader find the matching Works Cited entry.", "Use page numbers only when they exist in the source; do not invent page or paragraph numbers for a web page.", "Compare the finished citation with the course, instructor, or current MLA guidance that applies to your work."].map(item => <li key={item} className="flex gap-3"><CheckCircle2 size={18} className="text-primary shrink-0 mt-0.5" />{item}</li>)}
+            </ul>
+            <p className={`${commonClass.copy} mt-5`}>For authoritative guidance, consult the <ExternalLink href={sourceLinks.mlaStyle}>MLA Style Center</ExternalLink>, the <ExternalLink href={sourceLinks.mlaQuickGuide}>George Mason University MLA quick guide</ExternalLink>, and <ExternalLink href={sourceLinks.mlaInText}>Purdue OWL&apos;s MLA in-text citation guide</ExternalLink>. A generator can format details you provide, but it cannot verify a source or decide whether you have credited every borrowed idea.</p>
+          </section>
+          <section className="max-w-4xl mx-auto mt-8 grid sm:grid-cols-2 gap-4">
+            <ToolNextStep title="Generate a citation" copy="Enter checked source details, then review the final Works Cited entry before submission." href="/citations" label="Open Citation Generator" />
+            <ToolNextStep title="Use sources responsibly" copy="Choose whether to quote, paraphrase, or summarize—and cite the borrowed idea clearly." href="/academic-integrity-and-source-use" label="Read source-use guide" />
+          </section>
+        </div>
+      </main>
+    </>
+  );
+}
+
 function CitationExamplesPage() {
   return (
     <>
@@ -663,5 +716,6 @@ export default function AcademicWritingResource({ kind }: ResourcePageProps) {
   if (kind === "integrity") return <IntegrityPage />;
   if (kind === "examples") return <ExamplesPage />;
   if (kind === "templates") return <TemplatesPage />;
+  if (kind === "mla-citation-examples") return <MlaCitationExamplesPage />;
   return <CitationExamplesPage />;
 }
