@@ -57,6 +57,11 @@ const STATIC_PAGE_SEO = {
     description: "Use academic discussion phrases to interpret findings, compare them with prior research, explain limitations, and state cautious implications.",
     keywords: "discussion section phrases, academic phrases for discussion, interpreting results phrases, limitations and implications phrases",
   },
+  "/phrases/literature-review": {
+    title: "Academic Phrases for Literature Reviews and Source Synthesis | CorePapers",
+    description: "Use literature review phrases to synthesize studies by theme, compare findings, signal a cautious research gap, and maintain your own academic voice.",
+    keywords: "literature review phrases, synthesis phrases academic writing, research gap phrases, compare studies phrases",
+  },
   "/phrases/methods": {
     title: "Academic Phrases for Methods Sections | CorePapers",
     description:
@@ -307,7 +312,13 @@ const STATIC_PAGES = [
   { path: "/phrases/", changefreq: "monthly", priority: "0.9" },
   { path: "/phrases/introduction/", changefreq: "monthly", priority: "0.7" },
   { path: "/phrases/discussion/", changefreq: "monthly", priority: "0.7" },
-  { path: "/phrases/methods/", changefreq: "monthly", priority: "0.7" },
+    {
+    path: "/phrases/literature-review/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/phrases/methods/", changefreq: "monthly", priority: "0.7" },
   { path: "/phrases/results/", changefreq: "monthly", priority: "0.7" },
   { path: "/citations/", changefreq: "monthly", priority: "0.9" },
   { path: "/pricing/", changefreq: "monthly", priority: "0.8" },

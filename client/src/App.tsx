@@ -94,6 +94,14 @@ function Router() {
           )}
         />
         <Route
+          path="/phrases/literature-review"
+          component={() => (
+            <PublicLayout>
+              <PhraseSection />
+            </PublicLayout>
+          )}
+        />
+        <Route
           path="/phrases/introduction"
           component={() => (
             <PublicLayout>

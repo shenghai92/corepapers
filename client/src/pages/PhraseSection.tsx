@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
-type SectionKey = "introduction" | "methods" | "results" | "discussion";
+type SectionKey = "introduction" | "methods" | "results" | "discussion" | "literature-review";
 
 type Phrase = {
   text: string;
@@ -46,6 +46,25 @@ const SECTION_CONTENT: Record<
     checks: ["Cite all factual claims about prior research or the research context.", "Move from broad context to a defined problem without adding unrelated background.", "State a purpose or question that your paper can genuinely answer."],
     guideHref: "/introduction-section-example-research-paper",
     guideTitle: "Read the Introduction structure and example guide",
+  },
+  "literature-review": {
+    eyebrow: "Academic phrase library · Literature Review",
+    title: "Academic phrases for literature reviews and source synthesis",
+    description: "Use literature review phrases to synthesize studies by theme, compare findings, signal a cautious research gap, and maintain your own academic voice.",
+    canonical: "/phrases/literature-review/",
+    keywords: "literature review phrases, synthesis phrases academic writing, research gap phrases, compare studies phrases",
+    intro: "Adapt these sentence starters to connect verified sources around a theme or question. Replace every bracketed item with an accurate, cited detail from your own reading and assignment.",
+    phrases: [
+      { label: "Shared pattern", text: "Across the reviewed studies, [theme or pattern] emerges as a recurring concern.", note: "Name the sources or citations that support the pattern; do not imply consensus from a small or unrelated set." },
+      { label: "Comparison", text: "While [Author, year] emphasizes [point], [Author, year] focuses on [different point or condition].", note: "Compare a specific aspect of the studies rather than only listing their topics." },
+      { label: "Qualified agreement", text: "These findings broadly align in suggesting [careful pattern], although they differ in [method, setting, sample, or outcome].", note: "Explain the meaningful difference so readers can judge how far the comparison goes." },
+      { label: "Methodological distinction", text: "The differing conclusions may reflect variation in [design, measurement, population, or context].", note: "Use may when the methodological explanation is plausible but not directly tested." },
+      { label: "Research limitation", text: "However, the reviewed evidence offers limited insight into [defined population, setting, mechanism, or outcome].", note: "Base this on the sources you reviewed; avoid saying no research exists without a transparent search process." },
+      { label: "Next question", text: "Further research could examine [focused question] in [defined context] using [appropriate approach].", note: "Make the next step follow from the synthesis rather than from a general interest in the topic." },
+    ],
+    checks: ["Organize paragraphs around a theme, question, method, or debate rather than author order.", "Place citations close to the particular source-based claim they support.", "Distinguish your synthesis from the individual findings you are reporting."],
+    guideHref: "/literature-review-example",
+    guideTitle: "Read the thematic Literature Review example",
   },
   methods: {
     eyebrow: "Academic phrase library · Methods",
@@ -172,6 +191,8 @@ export default function PhraseSection() {
   const [location] = useLocation();
   const key: SectionKey = location.includes("/phrases/introduction")
     ? "introduction"
+    : location.includes("/phrases/literature-review")
+      ? "literature-review"
     : location.includes("/phrases/discussion")
       ? "discussion"
       : location.includes("/phrases/results")

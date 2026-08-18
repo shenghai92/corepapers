@@ -298,12 +298,17 @@ export default function Phrases() {
             <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">
               Related guides
             </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 {
                   href: "/phrases/introduction",
                   title: "Introduction phrases",
                   desc: "Move from context to a research gap, purpose, and focused question.",
+                },
+                {
+                  href: "/phrases/literature-review",
+                  title: "Literature Review phrases",
+                  desc: "Synthesize studies by theme, compare findings, and state research limits carefully.",
                 },
                 {
                   href: "/phrases/methods",
