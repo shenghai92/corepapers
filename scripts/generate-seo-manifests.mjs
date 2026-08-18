@@ -116,6 +116,14 @@ const STATIC_PAGE_SEO = {
     keywords:
       "research paper template, methods section template, results section template, discussion section template, research writing checklist",
   },
+  "/literature-review-synthesis-matrix": {
+    title:
+      "How to Synthesize Sources in a Literature Review: Matrix and Example | CorePapers",
+    description:
+      "Learn how to synthesize sources in a literature review with a simple synthesis matrix, a fictional paragraph example, and a source-based writing checklist.",
+    keywords:
+      "how to synthesize sources literature review, synthesis matrix example, literature review synthesis example, research gap literature review",
+  },
   "/results-section-example-research-paper": {
     title:
       "Results Section Example for a Research Paper: Template and Checklist | CorePapers",
@@ -247,6 +255,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/research-paper-templates/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/literature-review-synthesis-matrix/",
     changefreq: "monthly",
     priority: "0.8",
   },

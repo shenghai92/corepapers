@@ -87,6 +87,10 @@ const pages = [
     "Research paper templates for methods, results, and discussion",
   ],
   [
+    "/literature-review-synthesis-matrix/",
+    "How to synthesize sources in a literature review",
+  ],
+  [
     "/results-section-example-research-paper/",
     "Results section example for a research paper",
   ],
@@ -126,6 +130,18 @@ expect(
 expect(
   (resultsHtml.match(/<link rel="canonical"/g) ?? []).length === 1,
   "results article: exactly one canonical"
+);
+
+const synthesisHtml = read("literature-review-synthesis-matrix/index.html");
+expect(
+  synthesisHtml.includes("Fictional learning example"),
+  "literature synthesis: fictional example in raw HTML"
+);
+expect(
+  synthesisHtml.includes(
+    "owl.purdue.edu/owl/research_and_citation/conducting_research/research_overview/synthesizing_sources.html"
+  ),
+  "literature synthesis: Purdue OWL guidance link"
 );
 
 const resultsPracticeHtml = read(
@@ -211,6 +227,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-templates/`),
   "sitemap: paper-templates resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/literature-review-synthesis-matrix/`),
+  "sitemap: literature synthesis resource"
 );
 expect(
   sitemap.includes(`${BASE_URL}/results-section-example-research-paper/`),

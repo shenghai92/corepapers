@@ -22,6 +22,9 @@ const AcademicWritingResource = lazy(
 const SectionWritingPractice = lazy(
   () => import("./pages/SectionWritingPractice")
 );
+const LiteratureReviewSynthesis = lazy(
+  () => import("./pages/LiteratureReviewSynthesis")
+);
 const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const SeoLandingApa = lazy(() => import("./pages/SeoLandingApa"));
@@ -154,6 +157,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <AcademicWritingResource kind="citation-examples" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/literature-review-synthesis-matrix"
+          component={() => (
+            <PublicLayout>
+              <LiteratureReviewSynthesis />
             </PublicLayout>
           )}
         />
