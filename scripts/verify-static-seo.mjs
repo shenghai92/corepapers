@@ -58,6 +58,8 @@ const pages = [
     "/phrases/",
     "Academic phrase bank with sentence starters for essays and research papers",
   ],
+  ["/phrases/introduction/", "Academic phrases for research paper introductions"],
+  ["/phrases/discussion/", "Academic phrases for discussion sections"],
   ["/phrases/methods/", "Academic phrases for research methods sections"],
   ["/phrases/results/", "Academic phrases for reporting research results"],
   ["/citations/", "Free citation generator for APA 7, MLA, Chicago and IEEE"],
@@ -85,6 +87,26 @@ const pages = [
   [
     "/research-paper-templates/",
     "Research paper templates for methods, results, and discussion",
+  ],
+  [
+    "/thesis-statement-examples/",
+    "Thesis statement examples: make an academic claim specific and arguable",
+  ],
+  [
+    "/how-to-write-an-abstract-research-paper/",
+    "How to write an abstract for a research paper",
+  ],
+  [
+    "/introduction-section-example-research-paper/",
+    "Introduction section example for a research paper",
+  ],
+  [
+    "/discussion-section-example-research-paper/",
+    "Discussion section example for a research paper",
+  ],
+  [
+    "/conclusion-section-example-research-paper/",
+    "Conclusion section example for a research paper",
   ],
   [
     "/literature-review-synthesis-matrix/",
@@ -144,6 +166,22 @@ expect(
   "literature synthesis: Purdue OWL guidance link"
 );
 
+const abstractGuideHtml = read("how-to-write-an-abstract-research-paper/index.html");
+expect(abstractGuideHtml.includes("Fictional learning example"), "abstract guide: fictional-example disclosure");
+expect(abstractGuideHtml.includes("writing.wisc.edu"), "abstract guide: university guidance link");
+const introductionPracticeHtml = read("introduction-section-example-research-paper/index.html");
+expect(introductionPracticeHtml.includes("Fictional learning example"), "introduction practice: fictional example in raw HTML");
+expect(introductionPracticeHtml.includes("writingcenter.unc.edu"), "introduction practice: university guidance link");
+const discussionPracticeHtml = read("discussion-section-example-research-paper/index.html");
+expect(discussionPracticeHtml.includes("Fictional learning example"), "discussion practice: fictional example in raw HTML");
+expect(discussionPracticeHtml.includes("explore.plos.org"), "discussion practice: publisher guidance link");
+const conclusionPracticeHtml = read("conclusion-section-example-research-paper/index.html");
+expect(conclusionPracticeHtml.includes("Fictional learning example"), "conclusion practice: fictional example in raw HTML");
+expect(conclusionPracticeHtml.includes("explore.plos.org"), "conclusion practice: publisher guidance link");
+const thesisGuideHtml = read("thesis-statement-examples/index.html");
+expect(thesisGuideHtml.includes("Fictional learning example"), "thesis guide: fictional-example disclosure");
+expect(thesisGuideHtml.includes("writingcenter.unc.edu"), "thesis guide: university guidance link");
+
 const resultsPracticeHtml = read(
   "results-section-example-research-paper/index.html"
 );
@@ -201,6 +239,14 @@ expect(
 
 const sitemap = read("sitemap-pages.xml");
 expect(
+  sitemap.includes(`${BASE_URL}/phrases/introduction/`),
+  "sitemap: introduction phrase route"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/phrases/discussion/`),
+  "sitemap: discussion phrase route"
+);
+expect(
   sitemap.includes(`${BASE_URL}/phrases/methods/`),
   "sitemap: methods phrase route"
 );
@@ -227,6 +273,26 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-templates/`),
   "sitemap: paper-templates resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/thesis-statement-examples/`),
+  "sitemap: thesis statement guide"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/how-to-write-an-abstract-research-paper/`),
+  "sitemap: abstract guide"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/introduction-section-example-research-paper/`),
+  "sitemap: introduction practice resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/discussion-section-example-research-paper/`),
+  "sitemap: discussion practice resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/conclusion-section-example-research-paper/`),
+  "sitemap: conclusion practice resource"
 );
 expect(
   sitemap.includes(`${BASE_URL}/literature-review-synthesis-matrix/`),
