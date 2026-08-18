@@ -239,6 +239,38 @@ expect(
   "results article: exactly one canonical"
 );
 
+const abstractVsIntroductionHtml = read(
+  "blog/abstract-vs-introduction-difference/index.html"
+);
+expect(
+  abstractVsIntroductionHtml.includes("Fictional Learning Example: One Topic, Two Different Jobs"),
+  "abstract-vs-introduction article: fictional-example disclosure"
+);
+expect(
+  abstractVsIntroductionHtml.includes("writingcenter.gmu.edu"),
+  "abstract-vs-introduction article: George Mason guidance link"
+);
+expect(
+  abstractVsIntroductionHtml.includes("undergradresearch.washu.edu"),
+  "abstract-vs-introduction article: WashU guidance link"
+);
+expect(
+  abstractVsIntroductionHtml.includes("guides.lib.uci.edu"),
+  "abstract-vs-introduction article: UC Irvine guidance link"
+);
+expect(
+  abstractVsIntroductionHtml.includes('/research-gap-examples/'),
+  "abstract-vs-introduction article: research-gap cluster link"
+);
+expect(
+  abstractVsIntroductionHtml.includes('/how-to-write-an-abstract-research-paper/'),
+  "abstract-vs-introduction article: abstract-guide cluster link"
+);
+expect(
+  abstractVsIntroductionHtml.includes('"@type":"Article"'),
+  "abstract-vs-introduction article: Article JSON-LD"
+);
+
 const hedgingLanguageHtml = read("hedging-language-academic-writing/index.html");
 expect(hedgingLanguageHtml.includes("Fictional learning example"), "hedging language: fictional-example disclosure");
 expect(hedgingLanguageHtml.includes("writingcenter.gmu.edu"), "hedging language: George Mason guidance link");

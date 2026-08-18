@@ -307,12 +307,12 @@ Once you can recognize the basic pattern in a strong example, writing your own a
     slug: "abstract-vs-introduction-difference",
     title: "Abstract vs Introduction: What Is the Difference in a Research Paper?",
     excerpt:
-      "Understand the difference between an abstract and an introduction, with examples, structure tips, and common mistakes international students often make.",
+      "Compare abstract vs introduction with section functions, a labelled fictional learning example, revision checks, and research-writing resources for international students.",
     category: "Research Writing",
     tags: ["Abstract", "Introduction", "Research Paper"],
-    readingTime: 8,
+    readingTime: 12,
     metaDescription:
-      "Abstract vs introduction in a research paper: learn the key differences in purpose, length, content, and structure, with examples for international students.",
+      "Abstract vs introduction in a research paper: compare purpose, evidence, results, structure, and revision order with a labelled fictional learning example for international students.",
     publishedAt: "2026-06-12",
     featured: false,
     content: `## Why Students Confuse the Abstract and the Introduction
@@ -336,6 +336,13 @@ In other words:
 
 That is the main difference.
 
+| Reader question | Abstract | Introduction |
+|---|---|---|
+| Primary job | Gives a concise, self-contained overview of the complete work. | Establishes the context, problem, question, purpose, or thesis that opens the main text. |
+| Typical content | Selected purpose, approach or evidence, main finding or argument, and a bounded conclusion or implication when the genre calls for them. | Background, relevant conversation, definitions or scope, a problem or gap, and the focused question, purpose, or claim. |
+| Results or final argument | Often includes a main finding or final claim because it represents the whole completed paper. | Usually does not replace Results, Analysis, or Conclusion with a compressed account. |
+| Best drafting moment | Often revised after the whole paper has a stable draft. | Drafted early and revised after the question, scope, evidence, and structure are clear. |
+
 ## What the Abstract Does
 
 The abstract gives the reader a compressed overview of the full paper.
@@ -348,9 +355,9 @@ A strong abstract usually explains:
 - the main findings
 - the conclusion or implication
 
-It is usually short, often around 150 to 250 words.
+Abstract length and required components vary across disciplines, assignment types, journals, and conferences. Use a course, publisher, or event requirement rather than treating a common word range as a universal rule.
 
-A reader should be able to understand the basic shape of the study without reading the whole paper.
+A reader should be able to understand the basic shape of the study without reading the whole paper, and every important statement in the abstract should be supported by the final body text.
 
 ## What the Introduction Does
 
@@ -399,7 +406,9 @@ The abstract appears before the main paper.
 
 The introduction is the first section of the main paper itself.
 
-## A Simple Example
+## Fictional Learning Example: One Topic, Two Different Jobs
+
+**This fictional learning example is invented for practice.** The study, participants, methods, findings, and wording below are not real research, must not be cited, and must not be copied into a submitted assignment.
 
 ### Weak abstract-like introduction
 
@@ -412,6 +421,12 @@ This sounds too much like a summary. It does not really introduce the topic.
 "AI feedback tools are becoming more common in university writing support, especially among international students working in a second language. As these tools become more visible in academic revision, it becomes important to understand not only whether students use them, but how they use them during real drafting and feedback cycles."
 
 This sounds more like an introduction because it builds context and prepares the research question.
+
+## Project Status and Disciplinary Differences
+
+For a completed empirical paper, an abstract often gives the purpose, approach, principal finding, and a carefully bounded implication. A humanities abstract may instead prioritize the critical context, interpretive approach, central argument, and conclusion. A proposal or project-in-progress abstract may legitimately describe an intended method or expected contribution, but it should not present predicted results as completed findings. Follow the required abstract type and make the project status transparent.
+
+The [George Mason University Writing Center](https://writingcenter.gmu.edu/writing-resources/different-genres/writing-an-abstract) explains that an abstract describes rather than defends the completed paper and recommends writing it after a full draft for many IMRaD papers. The [Washington University in St. Louis Office of Undergraduate Research](https://undergradresearch.washu.edu/writing-abstract) likewise notes that abstract structure can differ for STEM and humanities work and should reflect disciplinary conventions and mentor feedback.
 
 ## Common Mistakes
 
@@ -431,14 +446,17 @@ An introduction needs enough context for the reader to understand why the paper 
 
 Both the abstract and the introduction should make the paper's focus clear, but they do so in different ways.
 
-## How to Write Them in the Right Order
+## How to Write Them in a Useful Order
 
-A useful workflow is:
+A useful workflow is iterative rather than perfectly linear:
 
-1. Draft the introduction early, because it helps shape the direction of the paper.
-2. Write the abstract after the full paper is finished, because then you know exactly what the paper includes.
+1. Draft a working introduction that names the topic, problem, question, or tentative claim.
+2. Develop the body, including evidence, method, analysis, results, and discussion where relevant.
+3. Revisit the introduction so its context, scope, question, and purpose match the paper you actually wrote.
+4. Draft or substantially revise the abstract after the full paper has a stable form.
+5. Compare both sections against the final body. Remove any claim, result, method detail, or implication that is not supported elsewhere.
 
-This order usually produces a stronger abstract because you are summarizing the real final version, not an earlier plan.
+[UC Irvine Libraries’ scientific-writing guide](https://guides.lib.uci.edu/scientificwriting/abstract) recommends writing the abstract late, checking that it is self-contained and consistent with the body, and avoiding the shortcut of using the introduction’s first paragraph as the abstract.
 
 ## Quick Checklist
 
@@ -456,13 +474,23 @@ Ask these questions:
 - Does it show why the paper matters?
 - Does it clearly state the research aim, question, or thesis?
 
+## Final Revision Check
+
+| Check the abstract | Check the introduction |
+|---|---|
+| Does it represent the final paper rather than an earlier plan? | Does it establish enough context for the exact paper that follows? |
+| Does it include only information supported in the body? | Does it lead to a defined problem, question, purpose, or thesis? |
+| Does it state the central result or argument when the required genre calls for it? | Does it avoid reporting a compressed list of final results in place of rationale? |
+| Can an informed reader understand its key terms without opening the body? | Does it explain necessary scope or scholarly context without becoming a full literature review? |
+| Does it follow the actual word limit and formatting instructions? | Does it match the course, department, journal, or publisher requirements? |
+
 ## Related Help for International Students
 
-If you are still working on the abstract itself, read [how to write an abstract for a research paper](/blog/how-to-write-an-abstract-for-a-research-paper).
+For a full summary-writing guide, use [how to write an abstract for a research paper](/how-to-write-an-abstract-research-paper/). For an annotated section model, use the [research paper introduction example](/introduction-section-example-research-paper/). The [research paper sections hub](/research-paper-sections/) helps keep introductions, methods, results, discussions, and conclusions doing distinct jobs.
 
-If your sentences sound too informal or translated, [essay polish](/polish) can help you revise them into clearer academic English.
+If your introduction needs a careful, evidence-based limitation rather than a claim that “no research exists,” use [research gap examples](/research-gap-examples/). For patterns by rhetorical function, browse [Introduction phrases](/phrases/introduction/) or the [academic phrase library](/phrases/); adapt every phrase to the actual evidence and terminology of your discipline.
 
-If you need stronger formal wording for topic sentences, aims, or research significance, the [academic phrase library](/phrases) can also help.
+If your sentences sound too informal or literally translated after the argument and source use are in place, [Essay Polish](/polish) can support revision without replacing your scholarly responsibility.
 
 ## Conclusion
 
@@ -470,7 +498,7 @@ The abstract and the introduction may appear next to each other, but they are no
 
 The abstract gives the reader the whole paper in miniature. The introduction opens the discussion and builds the context step by step.
 
-Once you separate those two jobs clearly, both sections become much easier to write well.`,
+Once you separate those two jobs clearly, revise both against the final body, and follow the instructions for your own discipline and submission, readers can find your paper’s purpose and contribution more easily.`,
   },
   {
     slug: "how-to-write-an-abstract-for-a-research-paper",
