@@ -257,6 +257,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "methodology section example research paper, sample methodology section, methodology section template, how to write methodology section",
   },
+  "/ieee-citation-examples": {
+    title: "IEEE Citation Examples: In-Text and Reference List Guide | CorePapers",
+    description: "Learn IEEE citation with bracketed in-text numbers, reference-list order, fictional source examples, source verification checks, and official IEEE guidance.",
+    keywords: "IEEE citation examples, IEEE in-text citation, IEEE reference list, IEEE citation style guide, IEEE referencing examples, how to cite IEEE",
+  },
   "/mla-citation-examples": {
     title: "MLA 9 Citation Examples: Works Cited and In-Text Citations | CorePapers",
     description: "Use clear, labelled MLA 9 Works Cited and in-text citation examples for books, journal articles, and web pages, with a source-detail review checklist.",
@@ -489,6 +494,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/methodology-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/ieee-citation-examples/",
     changefreq: "monthly",
     priority: "0.8",
   },

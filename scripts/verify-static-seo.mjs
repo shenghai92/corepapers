@@ -54,6 +54,16 @@ function checkPage(route, expectedH1) {
 const citationGeneratorHtml = read("citations/index.html");
 expect(citationGeneratorHtml.includes("Chicago 18"), "citation generator: current Chicago 18 label");
 expect(!citationGeneratorHtml.includes("Chicago 17"), "citation generator: no stale Chicago 17 label");
+expect(citationGeneratorHtml.includes('/ieee-citation-examples/'), "citation generator: IEEE examples return link");
+
+const ieeeCitationHtml = read("ieee-citation-examples/index.html");
+expect(ieeeCitationHtml.includes("Fictional learning examples"), "IEEE citations: fictional-example disclosure");
+expect(ieeeCitationHtml.includes("ieeeauthorcenter.ieee.org"), "IEEE citations: official IEEE guidance link");
+expect(ieeeCitationHtml.includes("owl.purdue.edu"), "IEEE citations: Purdue OWL guidance link");
+expect(ieeeCitationHtml.includes("researchguides.njit.edu"), "IEEE citations: NJIT guidance link");
+expect(ieeeCitationHtml.includes("libraryguides.vu.edu.au"), "IEEE citations: Victoria University guidance link");
+expect(ieeeCitationHtml.includes('/citations/'), "IEEE citations: citation-generator link");
+expect(ieeeCitationHtml.includes('/academic-integrity-and-source-use/'), "IEEE citations: source-use cluster link");
 
 const polishHtml = read("polish/index.html");
 expect(polishHtml.includes("fictional learning sample"), "Essay Polish: fictional learning-sample disclosure");
@@ -147,6 +157,10 @@ const pages = [
   [
     "/conclusion-section-example-research-paper/",
     "Conclusion section example for a research paper",
+  ],
+  [
+    "/ieee-citation-examples/",
+    "IEEE citation examples: number sources as readers meet them",
   ],
   [
     "/mla-citation-examples/",
@@ -445,8 +459,12 @@ expect(
   "sitemap: paper-templates resource"
 );
 expect(
+  sitemap.includes(`${BASE_URL}/ieee-citation-examples/`),
+  "sitemap: IEEE citation examples"
+);
+expect(
   sitemap.includes(`${BASE_URL}/mla-citation-examples/`),
-  "sitemap: MLA citation examples"
+  "sitemap: MLA examples"
 );
 expect(
   sitemap.includes(`${BASE_URL}/literature-review-example/`),

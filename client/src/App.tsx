@@ -33,6 +33,9 @@ const GraduateAcademicWriting = lazy(
 const HedgingLanguageGuide = lazy(
   () => import("./pages/HedgingLanguageGuide")
 );
+const IeeeCitationExamples = lazy(
+  () => import("./pages/IeeeCitationExamples")
+);
 const AcademicEnglishHub = lazy(() => import("./pages/AcademicEnglishHub"));
 const AcademicWritingResource = lazy(
   () => import("./pages/AcademicWritingResource")
@@ -199,6 +202,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <ResearchPaperSections />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/ieee-citation-examples"
+          component={() => (
+            <PublicLayout>
+              <IeeeCitationExamples />
             </PublicLayout>
           )}
         />
