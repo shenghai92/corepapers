@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import {
   ArrowRight,
+  BookOpenCheck,
   Languages,
   ScanText,
   Scale,
@@ -31,6 +32,13 @@ const guides = [
     href: "/blog/active-vs-passive-voice-in-academic-writing",
     icon: TextCursorInput,
   },
+  {
+    title: "Graduate academic writing",
+    description:
+      "Plan a research-writing workflow for graduate genres, source use, revision, and feedback without treating one style as universal.",
+    href: "/academic-writing-for-graduate-students",
+    icon: BookOpenCheck,
+  },
 ];
 
 export default function AcademicEnglishHub() {
@@ -60,7 +68,7 @@ export default function AcademicEnglishHub() {
           </div>
 
           <section
-            className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5"
+            className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-5"
             aria-labelledby="academic-english-guides"
           >
             <h2 id="academic-english-guides" className="sr-only">

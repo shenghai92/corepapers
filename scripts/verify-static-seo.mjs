@@ -89,6 +89,10 @@ const pages = [
     "How to write each section of a research paper",
   ],
   [
+    "/academic-writing-for-graduate-students/",
+    "Academic writing for graduate students: build a repeatable research-writing practice",
+  ],
+  [
     "/academic-english-for-esl-students/",
     "Academic English support for ESL and international students",
   ],
@@ -197,6 +201,17 @@ expect(
   (resultsHtml.match(/<link rel="canonical"/g) ?? []).length === 1,
   "results article: exactly one canonical"
 );
+
+const graduateAcademicWritingHtml = read("academic-writing-for-graduate-students/index.html");
+expect(graduateAcademicWritingHtml.includes("Fictional learning example"), "graduate academic writing: fictional-example disclosure");
+expect(graduateAcademicWritingHtml.includes("gsc.upenn.edu"), "graduate academic writing: UPenn guidance link");
+expect(graduateAcademicWritingHtml.includes("poorvucenter.yale.edu"), "graduate academic writing: Yale guidance link");
+expect(graduateAcademicWritingHtml.includes("grad.berkeley.edu"), "graduate academic writing: UC Berkeley guidance link");
+expect(graduateAcademicWritingHtml.includes("asc.dasa.ncsu.edu"), "graduate academic writing: NC State guidance link");
+expect(graduateAcademicWritingHtml.includes('/academic-english-for-esl-students/'), "graduate academic writing: academic-English cluster link");
+expect(graduateAcademicWritingHtml.includes('/research-proposal-template/'), "graduate academic writing: proposal cluster link");
+const academicEnglishHubHtml = read("academic-english-for-esl-students/index.html");
+expect(academicEnglishHubHtml.includes('/academic-writing-for-graduate-students/'), "academic-English hub: graduate-writing return link");
 
 const synthesisHtml = read("literature-review-synthesis-matrix/index.html");
 expect(
@@ -382,6 +397,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-sections/`),
   "sitemap: research-paper hub"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/academic-writing-for-graduate-students/`),
+  "sitemap: graduate academic writing guide"
 );
 expect(
   sitemap.includes(`${BASE_URL}/academic-english-for-esl-students/`),

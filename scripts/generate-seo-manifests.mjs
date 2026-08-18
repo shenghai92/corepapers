@@ -119,6 +119,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "research paper sections, how to write methods section, results section examples, discussion section guide, research paper introduction",
   },
+  "/academic-writing-for-graduate-students": {
+    title: "Academic Writing for Graduate Students: A Practical Guide | CorePapers",
+    description: "Build stronger graduate-level academic writing with a practical guide to audience, genres, argument, evidence, source workflow, revision, and sustainable writing habits.",
+    keywords: "academic writing for graduate students, graduate academic writing, graduate student writing guide, academic writing skills graduate students, writing research paper graduate school",
+  },
   "/academic-english-for-esl-students": {
     title:
       "Academic English Support for ESL and International Students | CorePapers",
@@ -384,6 +389,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/research-paper-sections/", changefreq: "weekly", priority: "0.8" },
+  {
+    path: "/academic-writing-for-graduate-students/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
   {
     path: "/academic-english-for-esl-students/",
     changefreq: "weekly",

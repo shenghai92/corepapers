@@ -27,6 +27,9 @@ const ResearchGapExamples = lazy(
 const DiscussionWritingGuide = lazy(
   () => import("./pages/DiscussionWritingGuide")
 );
+const GraduateAcademicWriting = lazy(
+  () => import("./pages/GraduateAcademicWriting")
+);
 const AcademicEnglishHub = lazy(() => import("./pages/AcademicEnglishHub"));
 const AcademicWritingResource = lazy(
   () => import("./pages/AcademicWritingResource")
@@ -193,6 +196,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <ResearchPaperSections />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/academic-writing-for-graduate-students"
+          component={() => (
+            <PublicLayout>
+              <GraduateAcademicWriting />
             </PublicLayout>
           )}
         />
