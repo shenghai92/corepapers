@@ -135,8 +135,8 @@ const data = {
       "This study used a cross-sectional survey design to examine the association between weekly planning and assignment completion among undergraduate students. Participants were recruited through [approved course channel] and completed an anonymous online questionnaire. Responses were screened using the predefined inclusion criteria. Descriptive statistics and linear regression were used to examine the relationship between planning frequency and completion score.",
     explanation:
       "This paragraph gives a reader enough information to understand the design, sample route, procedure, and analysis. It does not report findings or argue that planning is effective.",
-    next: "/phrases/methods",
-    nextLabel: "Open Methods phrases",
+    next: "/methodology-vs-methods-research-paper",
+    nextLabel: "Compare methodology and methods",
   },
 } satisfies Record<PracticeKind, Record<string, string | string[]>>;
 

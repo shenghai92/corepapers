@@ -219,6 +219,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "results section example research paper, results section sample, how to write results section research paper, results section template",
   },
+  "/methodology-vs-methods-research-paper": {
+    title: "Methodology vs. Methods in a Research Paper: Definition and Example | CorePapers",
+    description: "Learn the difference between methodology and methods in a research paper, what belongs in a methods section, and how to explain a rationale without reporting results too early.",
+    keywords: "methodology vs methods research paper, what is methodology section, methods section research paper example, research paper methodology format",
+  },
   "/methodology-section-example-research-paper": {
     title:
       "Methodology Section Example for a Research Paper: Template and Planner | CorePapers",
@@ -419,6 +424,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/results-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/methodology-vs-methods-research-paper/",
     changefreq: "monthly",
     priority: "0.8",
   },

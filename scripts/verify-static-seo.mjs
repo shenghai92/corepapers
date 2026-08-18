@@ -135,6 +135,10 @@ const pages = [
     "Results section example for a research paper",
   ],
   [
+    "/methodology-vs-methods-research-paper/",
+    "Methodology vs. methods in a research paper",
+  ],
+  [
     "/methodology-section-example-research-paper/",
     "Methodology section example for a research paper",
   ],
@@ -229,6 +233,10 @@ expect(
   ),
   "methodology practice: USC guidance link"
 );
+
+const methodologyVsMethodsHtml = read("methodology-vs-methods-research-paper/index.html");
+expect(methodologyVsMethodsHtml.includes("Fictional learning example"), "methodology vs methods: fictional-example disclosure");
+expect(methodologyVsMethodsHtml.includes("libguides.usc.edu"), "methodology vs methods: USC guidance link");
 
 const annotatedBibliographyHtml = read("annotated-bibliography-example/index.html");
 expect(annotatedBibliographyHtml.includes("Fictional learning example"), "annotated bibliography: fictional-example disclosure");
@@ -363,6 +371,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/results-section-example-research-paper/`),
   "sitemap: results practice resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/methodology-vs-methods-research-paper/`),
+  "sitemap: methodology-vs-methods guide"
 );
 expect(
   sitemap.includes(`${BASE_URL}/methodology-section-example-research-paper/`),

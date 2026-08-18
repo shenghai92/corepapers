@@ -33,6 +33,7 @@ const LiteratureReviewExample = lazy(
 );
 const ResearchFoundations = lazy(() => import("./pages/ResearchFoundations"));
 const AbstractWritingGuide = lazy(() => import("./pages/AbstractWritingGuide"));
+const MethodologyVsMethods = lazy(() => import("./pages/MethodologyVsMethods"));
 const AnnotatedBibliography = lazy(() => import("./pages/AnnotatedBibliography"));
 const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
@@ -304,6 +305,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <SectionWritingPractice kind="results" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/methodology-vs-methods-research-paper"
+          component={() => (
+            <PublicLayout>
+              <MethodologyVsMethods />
             </PublicLayout>
           )}
         />
