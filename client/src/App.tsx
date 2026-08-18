@@ -19,6 +19,9 @@ const AcademicEnglishHub = lazy(() => import("./pages/AcademicEnglishHub"));
 const AcademicWritingResource = lazy(
   () => import("./pages/AcademicWritingResource")
 );
+const SectionWritingPractice = lazy(
+  () => import("./pages/SectionWritingPractice")
+);
 const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const SeoLandingApa = lazy(() => import("./pages/SeoLandingApa"));
@@ -151,6 +154,22 @@ function Router() {
           component={() => (
             <PublicLayout>
               <AcademicWritingResource kind="citation-examples" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/results-section-example-research-paper"
+          component={() => (
+            <PublicLayout>
+              <SectionWritingPractice kind="results" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/methodology-section-example-research-paper"
+          component={() => (
+            <PublicLayout>
+              <SectionWritingPractice kind="methodology" />
             </PublicLayout>
           )}
         />

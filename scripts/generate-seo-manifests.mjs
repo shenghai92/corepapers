@@ -116,6 +116,22 @@ const STATIC_PAGE_SEO = {
     keywords:
       "research paper template, methods section template, results section template, discussion section template, research writing checklist",
   },
+  "/results-section-example-research-paper": {
+    title:
+      "Results Section Example for a Research Paper: Template and Checklist | CorePapers",
+    description:
+      "Use a fictional results section example, a research-paper results template, and a checklist for reporting findings without turning them into discussion.",
+    keywords:
+      "results section example research paper, results section sample, how to write results section research paper, results section template",
+  },
+  "/methodology-section-example-research-paper": {
+    title:
+      "Methodology Section Example for a Research Paper: Template and Planner | CorePapers",
+    description:
+      "Use a methodology section example, a research-paper methods template, and a practical planner for design, participants, data collection, analysis, and limitations.",
+    keywords:
+      "methodology section example research paper, sample methodology section, methodology section template, how to write methodology section",
+  },
   "/citation-examples": {
     title: "APA 7 Citation Examples and In-Text Citation Examples | CorePapers",
     description:
@@ -231,6 +247,16 @@ const STATIC_PAGES = [
   },
   {
     path: "/research-paper-templates/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/results-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/methodology-section-example-research-paper/",
     changefreq: "monthly",
     priority: "0.8",
   },

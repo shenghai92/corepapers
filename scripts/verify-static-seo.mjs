@@ -87,6 +87,14 @@ const pages = [
     "Research paper templates for methods, results, and discussion",
   ],
   [
+    "/results-section-example-research-paper/",
+    "Results section example for a research paper",
+  ],
+  [
+    "/methodology-section-example-research-paper/",
+    "Methodology section example for a research paper",
+  ],
+  [
     "/citation-examples/",
     "APA 7 citation examples and in-text citation examples",
   ],
@@ -118,6 +126,31 @@ expect(
 expect(
   (resultsHtml.match(/<link rel="canonical"/g) ?? []).length === 1,
   "results article: exactly one canonical"
+);
+
+const resultsPracticeHtml = read(
+  "results-section-example-research-paper/index.html"
+);
+expect(
+  resultsPracticeHtml.includes("Fictional quantitative example"),
+  "results practice: fictional example in raw HTML"
+);
+expect(
+  resultsPracticeHtml.includes("library.sacredheart.edu"),
+  "results practice: university guidance link"
+);
+const methodologyPracticeHtml = read(
+  "methodology-section-example-research-paper/index.html"
+);
+expect(
+  methodologyPracticeHtml.includes("Fictional methodology example"),
+  "methodology practice: fictional example in raw HTML"
+);
+expect(
+  methodologyPracticeHtml.includes(
+    "libguides.usc.edu/writingguide/methodology"
+  ),
+  "methodology practice: USC guidance link"
 );
 
 const integrityHtml = read("academic-integrity-and-source-use/index.html");
@@ -178,6 +211,14 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-templates/`),
   "sitemap: paper-templates resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/results-section-example-research-paper/`),
+  "sitemap: results practice resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/methodology-section-example-research-paper/`),
+  "sitemap: methodology practice resource"
 );
 expect(
   sitemap.includes(`${BASE_URL}/citation-examples/`),
