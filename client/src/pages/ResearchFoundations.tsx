@@ -177,6 +177,50 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
               </a>
             </div>
           </section>
+          {kind === "sources" && (
+            <>
+              <section className="mt-8 p-7 bg-white border border-border rounded-2xl">
+                <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">A critical-reading sequence, not a scorecard</p>
+                <h2 className="font-serif text-3xl text-slate-purple mb-5">Evaluate how a source can serve this project</h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. FIT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Start with the task</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Check whether the source addresses your research question, required genre, audience, scope, and the role it would play in the paragraph.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. CONTEXT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Identify the creator</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Look for author expertise, affiliations, publication venue, purpose, audience, date, and any revision history relevant to the topic.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. EVIDENCE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Read beyond the title</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Inspect claims, methods, data, citations, omissions, and whether the material lets you trace important information to original sources.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. PERSPECTIVE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Locate the viewpoint</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Ask whose interests, assumptions, population, and alternatives are visible or absent; perspective can be useful without being universal.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. DECISION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Cross-check before use</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Compare central claims with other appropriate sources, record how you will use the item, and cite the original material accurately.</p></article>
+                </div>
+              </section>
+
+              <section className="mt-6 grid lg:grid-cols-2 gap-6">
+                <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                  <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Fictional learning example</p>
+                  <h2 className="font-serif text-3xl text-slate-purple mb-3">Ask what a source can show</h2>
+                  <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example contains no real sources or findings.</strong> A student finds an invented nonprofit report arguing that late library hours would improve student wellbeing. Instead of accepting or discarding it because of the organization&apos;s viewpoint, the student checks who funded it, what population and data it used, whether the report cites accessible evidence, and whether independent studies address the same outcome. The report might help explain one stakeholder perspective, but it cannot by itself establish a general causal conclusion.</p>
+                </article>
+                <article className="p-7 bg-white border border-border rounded-2xl">
+                  <h2 className="font-serif text-3xl text-slate-purple mb-4">Avoid quick signals and automatic decisions</h2>
+                  <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />A peer-reviewed article or university press may be a strong starting point, but it still needs to fit the particular claim, date, population, and task.</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />A polished design, a .edu/.org domain, or a familiar organization name does not itself verify an online claim or method.</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Finding a perspective, sponsor, or limitation does not automatically make the source unusable; decide what it can responsibly contribute.</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Never invent an author, publication date, DOI, source detail, or evidence trail because a reference seems convenient.</li>
+                  </ul>
+                </article>
+              </section>
+
+              <section className="mt-6 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Use source criteria in context</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/evaluating-print-sources/" target="_blank" rel="noreferrer">UNC Writing Center</a> recommends evaluating both a source&apos;s context and its argument, and notes that recognizing a perspective helps determine how it can inform a project. <a className="text-primary underline underline-offset-4" href="https://libguides.usc.edu/writingguide/evaluatesources" target="_blank" rel="noreferrer">USC Libraries</a> discusses authority, validity, reliability, evidence, coverage, online attribution, and multiple perspectives. <a className="text-primary underline underline-offset-4" href="https://knight.as.cornell.edu/writing-resource-evaluating-sources" target="_blank" rel="noreferrer">Cornell Knight Institute</a> links evaluation to evidence, alternative views, genre, purpose, readability, and project connection. <a className="text-primary underline underline-offset-4" href="https://usingsources.fas.harvard.edu/evaluating-sources-0" target="_blank" rel="noreferrer">Harvard&apos;s Guide to Using Sources</a> emphasizes author qualifications, context, coverage, and appropriate currency. Your discipline and assignment determine what counts as adequate support.</p>
+              </section>
+
+              <section className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <Link href="/research-question-examples" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Refine the research question</h2><p className="text-sm font-sans text-muted-foreground">Use early reading to test whether a narrower question has an evidence path.</p></article></Link>
+                <Link href="/literature-review-synthesis-matrix" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Compare sources across themes</h2><p className="text-sm font-sans text-muted-foreground">Track agreements, limits, settings, and questions before drafting a review.</p></article></Link>
+                <Link href="/academic-argument-evidence" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Use evidence in an argument</h2><p className="text-sm font-sans text-muted-foreground">Explain how a verified source supports or qualifies a specific claim.</p></article></Link>
+                <Link href="/annotated-bibliography-example" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Document why it matters</h2><p className="text-sm font-sans text-muted-foreground">Practice summary, evaluation, and project relevance without copying the source.</p></article></Link>
+              </section>
+            </>
+          )}
           {kind === "questions" && (
             <>
               <section className="mt-8 p-7 bg-white border border-border rounded-2xl">

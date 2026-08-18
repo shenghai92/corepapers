@@ -291,6 +291,27 @@ expect(
   "abstract-vs-introduction article: Article JSON-LD"
 );
 
+const sourceEvaluationHtml = read("evaluate-academic-sources/index.html");
+expect(
+  sourceEvaluationHtml.includes("How to evaluate academic sources: a student checklist"),
+  "source evaluation: strengthened H1"
+);
+expect(
+  sourceEvaluationHtml.includes("1. Start with task fit"),
+  "source evaluation: five-step critical-reading workflow"
+);
+expect(
+  sourceEvaluationHtml.includes("This fictional learning example contains no real sources or findings"),
+  "source evaluation: fictional-example disclosure"
+);
+expect(sourceEvaluationHtml.includes("writingcenter.unc.edu"), "source evaluation: UNC guidance link");
+expect(sourceEvaluationHtml.includes("libguides.usc.edu"), "source evaluation: USC guidance link");
+expect(sourceEvaluationHtml.includes("knight.as.cornell.edu"), "source evaluation: Cornell guidance link");
+expect(sourceEvaluationHtml.includes("usingsources.fas.harvard.edu"), "source evaluation: Harvard guidance link");
+expect(sourceEvaluationHtml.includes('/research-question-examples/'), "source evaluation: research-question cluster link");
+expect(sourceEvaluationHtml.includes('/academic-argument-evidence/'), "source evaluation: argument-evidence cluster link");
+expect(sourceEvaluationHtml.includes('/annotated-bibliography-example/'), "source evaluation: annotated-bibliography cluster link");
+
 const researchQuestionHtml = read("research-question-examples/index.html");
 expect(
   researchQuestionHtml.includes("Research question examples: make a topic clear, focused, and arguable"),
