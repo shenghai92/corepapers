@@ -51,6 +51,11 @@ const RESOURCE_CENTERS = [
     href: "/citation-examples",
     desc: "Check common reference and in-text citation structures before submitting.",
   },
+  {
+    title: "Research Foundations",
+    href: "/evaluate-academic-sources",
+    desc: "Evaluate sources, focus a research question, and build an evidence-based argument.",
+  },
 ];
 
 const FEATURES = [
