@@ -77,6 +77,10 @@ const pages = [
     "Research paper outline template for a logical evidence path",
   ],
   [
+    "/research-proposal-template/",
+    "Research proposal template: structure, example, and checklist",
+  ],
+  [
     "/research-paper-sections/",
     "How to write each section of a research paper",
   ],
@@ -197,6 +201,12 @@ expect(
   ),
   "literature synthesis: Purdue OWL guidance link"
 );
+
+const proposalTemplateHtml = read("research-proposal-template/index.html");
+expect(proposalTemplateHtml.includes("Fictional learning example"), "research proposal template: fictional-example disclosure");
+expect(proposalTemplateHtml.includes("ugradresearch.uconn.edu"), "research proposal template: UConn guidance link");
+expect(proposalTemplateHtml.includes("libguides.usc.edu"), "research proposal template: USC guidance link");
+expect(proposalTemplateHtml.includes('/research-question-examples/'), "research proposal template: research-question link");
 
 const outlineTemplateHtml = read("research-paper-outline-template/index.html");
 expect(outlineTemplateHtml.includes("Fictional learning example"), "research-paper outline: fictional-example disclosure");
@@ -331,6 +341,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-outline-template/`),
   "sitemap: research-paper outline template"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/research-proposal-template/`),
+  "sitemap: research proposal template"
 );
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-sections/`),

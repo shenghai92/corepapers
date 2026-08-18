@@ -101,6 +101,11 @@ const STATIC_PAGE_SEO = {
     description: "Use a flexible research paper outline template to organize a thesis, claims, evidence, section functions, and revision checks without treating one outline as universal.",
     keywords: "research paper outline template, research paper outline example, how to outline research paper, academic paper outline",
   },
+  "/research-proposal-template": {
+    title: "Research Proposal Template: Structure, Example, and Checklist | CorePapers",
+    description: "Use a flexible research proposal template to plan a research problem, rationale, question, literature review, methods, feasibility, and references with a fictional learning example.",
+    keywords: "research proposal template, research proposal outline, research proposal example, research proposal structure, how to write research proposal",
+  },
   "/research-paper-sections": {
     title:
       "How to Write Research Paper Sections: Guides and Examples | CorePapers",
@@ -354,6 +359,11 @@ const STATIC_PAGES = [
   { path: "/pricing/", changefreq: "monthly", priority: "0.8" },
     {
     path: "/research-paper-outline-template/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/research-proposal-template/",
     changefreq: "monthly",
     priority: "0.8",
   },

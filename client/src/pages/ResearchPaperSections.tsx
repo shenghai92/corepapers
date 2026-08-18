@@ -132,6 +132,12 @@ export default function ResearchPaperSections() {
                 <p className="text-sm text-muted-foreground font-sans leading-relaxed">Map your thesis, section functions, claims, and evidence before drafting each part.</p>
               </div>
             </Link>
+            <Link href="/research-proposal-template" className="block">
+              <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Plan a research proposal</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Connect a research problem, rationale, question, methods, feasibility, and references before the project begins.</p>
+              </div>
+            </Link>
             <Link href="/phrases/introduction" className="block">
               <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
                 <h2 className="font-serif text-2xl text-slate-purple mb-2">Find Introduction phrases</h2>
