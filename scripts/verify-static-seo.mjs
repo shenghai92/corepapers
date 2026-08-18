@@ -291,6 +291,26 @@ expect(
   "abstract-vs-introduction article: Article JSON-LD"
 );
 
+const argumentEvidenceHtml = read("academic-argument-evidence/index.html");
+expect(
+  argumentEvidenceHtml.includes("Academic argument and evidence: build a claim readers can follow"),
+  "argument evidence: strengthened H1"
+);
+expect(
+  argumentEvidenceHtml.includes("1. Make a defensible claim"),
+  "argument evidence: four-step argument workflow"
+);
+expect(
+  argumentEvidenceHtml.includes("All studies, authors, results, and citations in this example are invented for learning"),
+  "argument evidence: fictional-example disclosure"
+);
+expect(argumentEvidenceHtml.includes("writingcenter.unc.edu"), "argument evidence: UNC guidance link");
+expect(argumentEvidenceHtml.includes("writingcenter.tamu.edu"), "argument evidence: Texas A&M guidance link");
+expect(argumentEvidenceHtml.includes("brandeis.edu/writing-program"), "argument evidence: Brandeis guidance link");
+expect(argumentEvidenceHtml.includes('/research-question-examples/'), "argument evidence: research-question cluster link");
+expect(argumentEvidenceHtml.includes('/hedging-language-academic-writing/'), "argument evidence: hedging cluster link");
+expect(argumentEvidenceHtml.includes('/how-to-write-discussion-section/'), "argument evidence: discussion cluster link");
+
 const hedgingLanguageHtml = read("hedging-language-academic-writing/index.html");
 expect(hedgingLanguageHtml.includes("Fictional learning example"), "hedging language: fictional-example disclosure");
 expect(hedgingLanguageHtml.includes("writingcenter.gmu.edu"), "hedging language: George Mason guidance link");

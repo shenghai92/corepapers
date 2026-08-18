@@ -177,6 +177,49 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
               </a>
             </div>
           </section>
+          {kind === "evidence" && (
+            <>
+              <section className="mt-8 p-7 bg-white border border-border rounded-2xl">
+                <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">A revision sequence, not a universal formula</p>
+                <h2 className="font-serif text-3xl text-slate-purple mb-5">Move from a claim to a qualified implication</h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. CLAIM</p><h3 className="font-serif text-xl text-slate-purple mb-2">Say what you can defend</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Make a focused, arguable point that answers the question rather than naming a topic or repeating a source.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. EVIDENCE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Choose support that fits</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Use relevant data, examples, source details, or findings that your discipline treats as appropriate support for this particular claim.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. ANALYSIS</p><h3 className="font-serif text-xl text-slate-purple mb-2">Explain the connection</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Show how the evidence supports, complicates, or limits the claim. A quotation, number, or citation does not explain itself.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. IMPLICATION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Keep the conclusion proportionate</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">State a carefully bounded takeaway, acknowledge a meaningful limit or counterpoint, and revise the claim if strong evidence challenges it.</p></article>
+                </div>
+              </section>
+
+              <section className="mt-6 grid lg:grid-cols-2 gap-6">
+                <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                  <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Fictional learning example</p>
+                  <h2 className="font-serif text-3xl text-slate-purple mb-3">Show your reasoning after the citation</h2>
+                  <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">All studies, authors, results, and citations here are invented for learning.</strong> They are not real evidence and must not be submitted or cited. A fictional paper claims that visible assignment deadlines may support more consistent planning among first-year students. It then cites two fictional observational studies with similar patterns. The analysis explains that the studies support a limited association in their reported settings, while their self-reported cross-sectional designs do not show that deadline visibility caused the change. The paragraph therefore uses a cautious implication rather than a causal recommendation.</p>
+                </article>
+                <article className="p-7 bg-white border border-border rounded-2xl">
+                  <h2 className="font-serif text-3xl text-slate-purple mb-4">Test what the evidence can actually show</h2>
+                  <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Does the source address the same population, setting, outcome, or period named in the claim?</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Have you distinguished a reported association, interpretation, prediction, or causal conclusion?</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Would a skeptical reader understand why this evidence matters before they reach the next citation?</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Have you represented a serious counterpoint fairly, or revised the claim when the evidence requires it?</li>
+                  </ul>
+                </article>
+              </section>
+
+              <section className="mt-6 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Use discipline and assignment expectations first</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/argument/" target="_blank" rel="noreferrer">UNC Writing Center</a> describes academic argument as a claim supported with evidence and recommends considering counterarguments fairly. <a className="text-primary underline underline-offset-4" href="https://writingcenter.tamu.edu/guides/resources/arguments.html" target="_blank" rel="noreferrer">Texas A&amp;M University Writing Center</a> explains that evidence must be relevant to the conclusion and that strong claims often need strategic qualification. <a className="text-primary underline underline-offset-4" href="https://www.brandeis.edu/writing-program/resources/students/academic/drafting-revision/elements-of-academic-argument-humanities.html" target="_blank" rel="noreferrer">Brandeis Writing Program</a> distinguishes evidence from analysis and emphasizes accurate, fair source integration. These practices vary by discipline, course, genre, and assignment; use your instructor&apos;s guidance when it differs.</p>
+              </section>
+
+              <section className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <Link href="/research-question-examples" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Focus the question</h2><p className="text-sm font-sans text-muted-foreground">Give the argument a researchable direction before looking for support.</p></article></Link>
+                <Link href="/evaluate-academic-sources" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Evaluate the support</h2><p className="text-sm font-sans text-muted-foreground">Check authorship, purpose, evidence, and fit before a source carries a claim.</p></article></Link>
+                <Link href="/hedging-language-academic-writing" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Match certainty to evidence</h2><p className="text-sm font-sans text-muted-foreground">Use cautious wording when the design or scope limits a stronger claim.</p></article></Link>
+                <Link href="/how-to-write-discussion-section" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Interpret carefully in Discussion</h2><p className="text-sm font-sans text-muted-foreground">Connect findings to prior work, limitations, and implications without overclaiming.</p></article></Link>
+              </section>
+            </>
+          )}
           <section className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
               href="/literature-review-synthesis-matrix"
