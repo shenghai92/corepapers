@@ -1323,9 +1323,11 @@ Good hedging is a sign of control, not weakness. It helps your argument sound mo
     featured: false,
     content: `## Paraphrasing Is More Than Replacing Words
 
-Many students think paraphrasing means changing a few vocabulary items while keeping the sentence structure the same. That is usually not enough. If the wording and structure remain too close to the source, the result may still count as patchwriting or plagiarism.
+Many students think paraphrasing means changing a few vocabulary items while keeping the sentence structure the same. That is usually not enough. A paraphrase needs to represent the source accurately in a new form and still identify the source; superficial word substitution can leave the wording or structure too close to the original.
 
-Good paraphrasing shows that you understand the original idea and can restate it in a new form that fits your own argument.
+> **Fictional learning examples:** Every source claim, original passage, weak version, stronger version, citation, and sentence in this guide is invented for practice. They are not real findings or text to submit. Use the process with sources you have actually read, and follow your institution’s academic-integrity policy.
+
+Good paraphrasing shows that you understand the original idea and can restate it in a form that fits your own argument while keeping the source visible to the reader.
 
 ## Why Paraphrasing Feels Risky for Many Students
 
@@ -1335,9 +1337,11 @@ Paraphrasing is stressful because you have to do three things at once:
 - change the wording and structure enough
 - keep the sentence natural inside your own paragraph
 
-When students are tired or writing in a second language, they often stay too close to the source because it feels safer. Unfortunately, that is exactly what creates accidental plagiarism.
+When writers are under time pressure or drafting in an additional language, it can feel safer to stay close to the source sentence. Build a slower note-taking and checking process instead of relying on synonym replacement.
 
 ## A Four-Step Method
+
+This process is a learning framework, not an originality score or a guarantee that a specific institution will treat a sentence in a particular way. Ask your instructor, writing center, or academic-integrity office when an assignment’s expectations are unclear.
 
 ### 1. Read for meaning
 
@@ -1353,7 +1357,7 @@ Use your own sentence pattern and choose the details that matter for your paragr
 
 ### 4. Compare and cite
 
-Check accuracy, make sure the structure is sufficiently different, and include the citation.
+Check accuracy against the original, identify any exact distinctive wording with quotation marks if you retain it, and include the required citation. Record the source location while taking notes so you can verify and cite it later.
 
 ## What Usually Causes Accidental Plagiarism
 
@@ -1363,15 +1367,15 @@ Check accuracy, make sure the structure is sufficiently different, and include t
 - forgetting to cite paraphrased ideas
 - paraphrasing before fully understanding the source
 
-## Example
+## Fictional Learning Example: Compare the process, not the words
 
-Original idea: Researchers found that students who received structured feedback revised more effectively than students who only received a final grade.
+**Fictional source claim:** Researchers found that students who received structured feedback revised more effectively than students who only received a final grade.
 
-Weak paraphrase: Researchers discovered that students who got structured feedback revised more effectively than students who just got a final grade.
+**Fictional too-close version:** Researchers discovered that students who got structured feedback revised more effectively than students who just got a final grade.
 
-Better paraphrase: Compared with grading alone, detailed feedback supported stronger revision practices among students in the study.
+**Fictional revision planning version:** A writer might first identify the claim as a comparison between detailed feedback and grading alone, then decide how that comparison relates to the paragraph’s own claim. The final sentence must accurately represent the real source, use the required citation, and avoid copying distinctive wording or structure.
 
-The better version changes the shape, wording, and emphasis while preserving the core idea.
+The purpose of the comparison is not to find a magic percentage of changed words. It is to show how a writer can rebuild a source idea around a verified meaning and a clear reason for using it.
 
 ## What Does "Insufficient Paraphrase" Mean?
 
@@ -1386,17 +1390,17 @@ This often happens when students:
 
 In other words, the problem is not only citation. The problem is that the sentence still sounds borrowed.
 
-## What Patchwriting Looks Like
+## What Patchwriting Can Look Like
 
-Patchwriting is a partial rewrite that stays too close to the source. It often keeps the same structure and simply substitutes synonyms.
+Patchwriting is often used to describe a partial rewrite that stays too close to source wording or structure. Institutional definitions and consequences vary, so follow the policy for your own course.
 
-Original idea: Many students revised more effectively after receiving structured feedback than after receiving grades alone.
+**Fictional source claim:** Many students revised more effectively after receiving structured feedback than after receiving grades alone.
 
-Too close: Many students revised more effectively after receiving structured feedback than after only receiving grades.
+**Fictional too-close version:** Many students revised more effectively after receiving structured feedback than after only receiving grades.
 
-Stronger paraphrase: Compared with grading alone, structured feedback helped students make more effective revisions.
+**Fictional revision strategy:** Identify the evidence, comparison, and purpose in your own paragraph; put the source aside; rebuild the sentence from that meaning; compare it with the source for accuracy and overly close wording; then cite the source clearly.
 
-If the sentence still feels like the original sentence, it probably needs another rewrite.
+If a sentence still mirrors the source’s phrasing or order, return to the notes and decide whether to quote a distinctive phrase, paraphrase more independently, summarize at a broader level, or use a different source.
 
 ## How to Keep Your Own Voice
 
@@ -1415,7 +1419,7 @@ For example, a source used as background may be summarized more briefly, while a
 
 Even when every word is your own, the idea still belongs to the original author. That means you still need an in-text citation and a reference entry.
 
-If you need help with formatting, the [citation generator](/citations) can help you build references in common styles.
+Use [academic integrity and source use](/academic-integrity-and-source-use/) to decide whether a quotation, paraphrase, or summary fits your purpose. If you need help with formatting, the [citation generator](/citations) can format checked source details in common styles; it cannot determine whether a paraphrase is accurate, sufficiently independent, or permitted by an assignment.
 
 ## How to Fix Insufficient Paraphrase
 
@@ -1427,7 +1431,7 @@ If you think your paraphrase is still too close to the source, try this sequence
 4. compare the structure with the original
 5. add the citation after revising
 
-This process is slower, but it is one of the safest ways to avoid patchwriting.
+This process is slower, but it creates an auditable path from source to notes to draft. When you work with many sources, use the [annotated bibliography guide](/annotated-bibliography-example/) to record summary, evaluation, and relevance before you draft.
 
 ## A Quick Self-Check
 
@@ -1439,6 +1443,10 @@ Ask these questions:
 - Did I cite the source?
 
 If one answer is no, revise again.
+
+## Use APA and Purdue guidance before you submit
+
+[APA Style](https://apastyle.apa.org/style-grammar-guidelines/citations/paraphrasing) defines paraphrasing as restating another person’s idea in your own words and requires a citation to the original work. APA notes that page or paragraph numbers are optional for paraphrases but can help readers locate a passage in a long or complex work. [Purdue OWL](https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html) recommends understanding the passage, setting it aside, writing a new rendition, checking it against the source, marking exact borrowed language with quotation marks, and recording the source details. For a broader comparison of quotation, paraphrase, and summary, see [Purdue’s overview](https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html).
 
 ## FAQ
 
@@ -1452,17 +1460,17 @@ Paraphrasing restates a specific idea in similar detail. Summarizing condenses a
 
 ### Why do students get flagged even after changing words?
 
-Because instructors and plagiarism tools can still notice when the sentence structure and logic remain too close to the original.
+Because a sentence may still mirror source wording, structure, or distinctive phrasing, and because citation alone does not correct an inaccurate or overly close paraphrase. Your instructor or institution determines how to evaluate work in a specific assignment.
 
 ## CorePapers Tip
 
-After paraphrasing, run the paragraph through [essay polish](/polish) to smooth tone and sentence flow. That can help your paraphrase sound integrated rather than inserted.
+After you have created an accurate, cited draft, use [essay polish](/polish) to review tone and sentence flow. Do not use a language tool to invent source details, remove citations, or decide whether a paraphrase meets your institution’s academic-integrity standards.
 
-If you are also trying to avoid plagiarism more broadly, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing).
+If you are also trying to avoid plagiarism more broadly, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing), the [academic integrity and source-use guide](/academic-integrity-and-source-use/), and the [academic paraphrasing support page](/academic-paraphrasing-tool-for-esl-students/).
 
 ## Conclusion
 
-Strong paraphrasing depends on understanding first and wording second. Once you treat sources as ideas to interpret rather than sentences to reshape, plagiarism becomes much easier to avoid and your writing starts to sound more like your own.`,
+Strong paraphrasing begins with understanding and accurate source attribution. Treat a source as evidence or an idea to explain within your own argument—not as a sentence to disguise. Keep notes, compare with the original, cite the source clearly, and ask for local guidance when an assignment’s source-use rule is uncertain.`,
   },
   {
     slug: "how-to-write-a-discussion-section-in-an-academic-paper",
