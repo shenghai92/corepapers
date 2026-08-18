@@ -136,6 +136,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "research paper template, methods section template, results section template, discussion section template, research writing checklist",
   },
+  "/annotated-bibliography-example": {
+    title: "Annotated Bibliography Example: Citation, Summary, Evaluation, and Reflection | CorePapers",
+    description: "Use a fictional annotated bibliography example and a practical checklist to distinguish citation, source summary, evaluation, and research relevance.",
+    keywords: "annotated bibliography example, how to write annotated bibliography, annotated bibliography template, annotated bibliography summary evaluation",
+  },
   "/evaluate-academic-sources": {
     title: "How to Evaluate Academic Sources: A Student Checklist | CorePapers",
     description:
@@ -351,6 +356,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/research-paper-templates/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/annotated-bibliography-example/",
     changefreq: "monthly",
     priority: "0.8",
   },

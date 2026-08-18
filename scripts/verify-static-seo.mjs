@@ -82,6 +82,10 @@ const pages = [
     "Academic paraphrasing tool for ESL students",
   ],
   [
+    "/annotated-bibliography-example/",
+    "Annotated bibliography example: citation, summary, and evaluation",
+  ],
+  [
     "/academic-integrity-and-source-use/",
     "Academic integrity starts with clear source use",
   ],
@@ -225,6 +229,12 @@ expect(
   "methodology practice: USC guidance link"
 );
 
+const annotatedBibliographyHtml = read("annotated-bibliography-example/index.html");
+expect(annotatedBibliographyHtml.includes("Fictional learning example"), "annotated bibliography: fictional-example disclosure");
+expect(annotatedBibliographyHtml.includes("writingcenter.unc.edu"), "annotated bibliography: UNC guidance link");
+expect(annotatedBibliographyHtml.includes("writingcenter.gmu.edu"), "annotated bibliography: university writing-center guidance link");
+expect(annotatedBibliographyHtml.includes("owl.purdue.edu"), "annotated bibliography: Purdue OWL guidance link");
+
 const mlaCitationHtml = read("mla-citation-examples/index.html");
 expect(mlaCitationHtml.includes("fictional learning examples"), "MLA citations: fictional-example disclosure");
 expect(mlaCitationHtml.includes("style.mla.org"), "MLA citations: official MLA guidance link");
@@ -296,6 +306,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/academic-english-for-esl-students/`),
   "sitemap: academic-English hub"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/annotated-bibliography-example/`),
+  "sitemap: annotated bibliography example"
 );
 expect(
   sitemap.includes(`${BASE_URL}/academic-integrity-and-source-use/`),

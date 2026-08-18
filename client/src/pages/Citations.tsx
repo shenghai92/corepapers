@@ -590,7 +590,7 @@ export default function Citations() {
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">
                 Related guides
               </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
                 {[
                   {
                     href: "/blog/complete-apa-7th-edition-guide-international-students",
@@ -601,6 +601,11 @@ export default function Citations() {
                     href: "/mla-citation-examples",
                     title: "MLA Works Cited and in-text examples",
                     desc: "Check how MLA source details and author-page citations work together.",
+                  },
+                  {
+                    href: "/annotated-bibliography-example",
+                    title: "Annotated bibliography example",
+                    desc: "Turn verified source details into a concise summary, evaluation, and research-use note.",
                   },
                   {
                     href: "/academic-integrity-and-source-use",

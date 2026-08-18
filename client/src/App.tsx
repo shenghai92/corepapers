@@ -33,6 +33,7 @@ const LiteratureReviewExample = lazy(
 );
 const ResearchFoundations = lazy(() => import("./pages/ResearchFoundations"));
 const AbstractWritingGuide = lazy(() => import("./pages/AbstractWritingGuide"));
+const AnnotatedBibliography = lazy(() => import("./pages/AnnotatedBibliography"));
 const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const SeoLandingApa = lazy(() => import("./pages/SeoLandingApa"));
@@ -205,6 +206,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <AcademicWritingResource kind="citation-examples" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/annotated-bibliography-example"
+          component={() => (
+            <PublicLayout>
+              <AnnotatedBibliography />
             </PublicLayout>
           )}
         />

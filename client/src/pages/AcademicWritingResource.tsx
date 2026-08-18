@@ -264,7 +264,13 @@ function IntegrityPage() {
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto mt-8 grid sm:grid-cols-2 gap-4">
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-3 gap-4">
+            <ToolNextStep
+              title="Build an annotated bibliography"
+              copy="Summarize, evaluate, and connect a verified source to your research question."
+              href="/annotated-bibliography-example"
+              label="Read the annotation guide"
+            />
             <ToolNextStep
               title="Check a paraphrase"
               copy="Review non-native phrasing after you have written and cited the idea yourself."
