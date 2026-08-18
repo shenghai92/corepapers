@@ -115,8 +115,9 @@ export default function LiteratureReviewExample() {
             </p>
           </section>
 
-          <section className="mt-8 grid sm:grid-cols-3 gap-4">
+          <section className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href="/literature-review-synthesis-matrix" className="block"><article className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30"><h2 className="font-serif text-2xl text-slate-purple mb-2">Build a synthesis matrix</h2><p className="text-sm font-sans text-muted-foreground leading-relaxed">Sort source notes by theme before drafting the paragraph.</p></article></Link>
+            <Link href="/research-gap-examples" className="block"><article className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30"><h2 className="font-serif text-2xl text-slate-purple mb-2">State a research gap</h2><p className="text-sm font-sans text-muted-foreground leading-relaxed">Check whether a limit is supportable, meaningful, and feasible before writing the rationale.</p></article></Link>
             <Link href="/research-question-examples" className="block"><article className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30"><h2 className="font-serif text-2xl text-slate-purple mb-2">Refine the next question</h2><p className="text-sm font-sans text-muted-foreground leading-relaxed">Turn a cautiously identified limit into a focused research question.</p></article></Link>
             <Link href="/phrases/introduction" className="block"><article className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30"><h2 className="font-serif text-2xl text-slate-purple mb-2">Use literature review phrases</h2><p className="text-sm font-sans text-muted-foreground leading-relaxed">Adapt careful language for contrasts, patterns, and research gaps.</p></article></Link>
           </section>

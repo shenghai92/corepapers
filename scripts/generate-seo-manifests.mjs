@@ -106,6 +106,11 @@ const STATIC_PAGE_SEO = {
     description: "Use a flexible research proposal template to plan a research problem, rationale, question, literature review, methods, feasibility, and references with a fictional learning example.",
     keywords: "research proposal template, research proposal outline, research proposal example, research proposal structure, how to write research proposal",
   },
+  "/research-gap-examples": {
+    title: "Research Gap Examples: Find and State a Focused Gap | CorePapers",
+    description: "Learn how to identify and write a cautious research gap with conceptual, methodological, and empirical examples, a fictional learning example, and a feasibility checklist.",
+    keywords: "research gap examples, how to identify research gap, research gap statement, research gap in literature review, how to write research gap",
+  },
   "/research-paper-sections": {
     title:
       "How to Write Research Paper Sections: Guides and Examples | CorePapers",
@@ -364,6 +369,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/research-proposal-template/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/research-gap-examples/",
     changefreq: "monthly",
     priority: "0.8",
   },

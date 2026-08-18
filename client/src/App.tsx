@@ -21,6 +21,9 @@ const ResearchPaperOutline = lazy(
 const ResearchProposalTemplate = lazy(
   () => import("./pages/ResearchProposalTemplate")
 );
+const ResearchGapExamples = lazy(
+  () => import("./pages/ResearchGapExamples")
+);
 const AcademicEnglishHub = lazy(() => import("./pages/AcademicEnglishHub"));
 const AcademicWritingResource = lazy(
   () => import("./pages/AcademicWritingResource")
@@ -171,6 +174,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <ResearchProposalTemplate />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/research-gap-examples"
+          component={() => (
+            <PublicLayout>
+              <ResearchGapExamples />
             </PublicLayout>
           )}
         />

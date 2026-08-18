@@ -251,7 +251,7 @@ export default function SectionWritingPractice({
               </ul>
             </aside>
           </section>
-          <section className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-3 gap-4">
+          <section className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href={item.next as string} className="block">
               <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
                 <TableProperties size={18} className="text-primary mb-3" />
@@ -263,6 +263,18 @@ export default function SectionWritingPractice({
                 </p>
               </div>
             </Link>
+            {kind === "introduction" && (
+              <Link href="/research-gap-examples" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                  <h2 className="font-serif text-xl text-slate-purple mb-2">
+                    State a cautious gap
+                  </h2>
+                  <p className="text-sm text-muted-foreground font-sans">
+                    Connect the literature&apos;s limits to a focused research purpose.
+                  </p>
+                </div>
+              </Link>
+            )}
             <Link href="/research-paper-templates" className="block">
               <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
                 <h2 className="font-serif text-xl text-slate-purple mb-2">

@@ -81,6 +81,10 @@ const pages = [
     "Research proposal template: structure, example, and checklist",
   ],
   [
+    "/research-gap-examples/",
+    "Research gap examples: find and state a focused gap",
+  ],
+  [
     "/research-paper-sections/",
     "How to write each section of a research paper",
   ],
@@ -207,6 +211,16 @@ expect(proposalTemplateHtml.includes("Fictional learning example"), "research pr
 expect(proposalTemplateHtml.includes("ugradresearch.uconn.edu"), "research proposal template: UConn guidance link");
 expect(proposalTemplateHtml.includes("libguides.usc.edu"), "research proposal template: USC guidance link");
 expect(proposalTemplateHtml.includes('/research-question-examples/'), "research proposal template: research-question link");
+expect(proposalTemplateHtml.includes('/research-gap-examples/'), "research proposal template: research-gap link");
+
+const researchGapHtml = read("research-gap-examples/index.html");
+expect(researchGapHtml.includes("Fictional learning example"), "research gap examples: fictional-example disclosure");
+expect(researchGapHtml.includes("guides.lib.uchicago.edu"), "research gap examples: University of Chicago guidance link");
+expect(researchGapHtml.includes("owl.purdue.edu"), "research gap examples: Purdue OWL guidance link");
+expect(researchGapHtml.includes("sites.middlebury.edu"), "research gap examples: Middlebury guidance link");
+expect(researchGapHtml.includes('/literature-review-example/'), "research gap examples: literature-review cluster link");
+expect(researchGapHtml.includes('/research-question-examples/'), "research gap examples: research-question cluster link");
+expect(researchGapHtml.includes('/research-proposal-template/'), "research gap examples: research-proposal cluster link");
 
 const outlineTemplateHtml = read("research-paper-outline-template/index.html");
 expect(outlineTemplateHtml.includes("Fictional learning example"), "research-paper outline: fictional-example disclosure");
@@ -219,6 +233,7 @@ expect(abstractGuideHtml.includes("writing.wisc.edu"), "abstract guide: universi
 const introductionPracticeHtml = read("introduction-section-example-research-paper/index.html");
 expect(introductionPracticeHtml.includes("Fictional learning example"), "introduction practice: fictional example in raw HTML");
 expect(introductionPracticeHtml.includes("writingcenter.unc.edu"), "introduction practice: university guidance link");
+expect(introductionPracticeHtml.includes('/research-gap-examples/'), "introduction practice: research-gap return link");
 const discussionPracticeHtml = read("discussion-section-example-research-paper/index.html");
 expect(discussionPracticeHtml.includes("Fictional learning example"), "discussion practice: fictional example in raw HTML");
 expect(discussionPracticeHtml.includes("explore.plos.org"), "discussion practice: publisher guidance link");
@@ -282,6 +297,7 @@ const literatureReviewExampleHtml = read("literature-review-example/index.html")
 expect(literatureReviewExampleHtml.includes("Fictional learning example"), "literature-review example: fictional-example disclosure");
 expect(literatureReviewExampleHtml.includes("writingcenter.gmu.edu"), "literature-review example: university synthesis guidance link");
 expect(literatureReviewExampleHtml.includes("guides.library.jhu.edu"), "literature-review example: library synthesis guidance link");
+expect(literatureReviewExampleHtml.includes('/research-gap-examples/'), "literature-review example: research-gap return link");
 
 const integrityHtml = read("academic-integrity-and-source-use/index.html");
 expect(
@@ -345,6 +361,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-proposal-template/`),
   "sitemap: research proposal template"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/research-gap-examples/`),
+  "sitemap: research gap examples"
 );
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-sections/`),

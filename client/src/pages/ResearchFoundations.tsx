@@ -177,7 +177,7 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
               </a>
             </div>
           </section>
-          <section className="mt-6 grid sm:grid-cols-3 gap-4">
+          <section className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
               href="/literature-review-synthesis-matrix"
               className="p-5 bg-white border border-border rounded-xl"
@@ -189,6 +189,19 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
                 Build a matrix before drafting.
               </p>
             </Link>
+            {kind === "questions" && (
+              <Link
+                href="/research-gap-examples"
+                className="p-5 bg-white border border-border rounded-xl"
+              >
+                <h2 className="font-serif text-xl text-slate-purple">
+                  Locate a supportable gap
+                </h2>
+                <p className="text-sm mt-2 text-muted-foreground font-sans">
+                  Use a literature-based limit to guide the next question.
+                </p>
+              </Link>
+            )}
             <Link
               href="/academic-integrity-and-source-use"
               className="p-5 bg-white border border-border rounded-xl"
