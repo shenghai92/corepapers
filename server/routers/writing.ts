@@ -543,7 +543,7 @@ Return ONLY a JSON object with this structure:
 Follow the latest edition guidelines strictly:
 - APA: 7th edition
 - MLA: 9th edition
-- Chicago: 17th edition (Notes-Bibliography style)
+- Chicago: 18th edition (Notes-Bibliography style)
 - IEEE: current standards`;
 
       const response = await invokeLLM(

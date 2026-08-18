@@ -85,7 +85,7 @@ const STATIC_PAGE_SEO = {
     title:
       "Free Citation Generator for APA 7, MLA, Chicago, and IEEE | CorePapers",
     description:
-      "Generate APA 7, MLA 9, Chicago 17, and IEEE references and in-text citations for common student source types.",
+      "Generate APA 7, MLA 9, Chicago 18, and IEEE references and in-text citations for common student source types.",
     keywords:
       "free citation generator, APA 7 citation generator, MLA citation generator, Chicago citation generator, IEEE citation generator",
   },

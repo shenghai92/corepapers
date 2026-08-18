@@ -51,6 +51,10 @@ function checkPage(route, expectedH1) {
   );
 }
 
+const citationGeneratorHtml = read("citations/index.html");
+expect(citationGeneratorHtml.includes("Chicago 18"), "citation generator: current Chicago 18 label");
+expect(!citationGeneratorHtml.includes("Chicago 17"), "citation generator: no stale Chicago 17 label");
+
 const polishHtml = read("polish/index.html");
 expect(polishHtml.includes("fictional learning sample"), "Essay Polish: fictional learning-sample disclosure");
 expect(polishHtml.includes("What an essay polisher cannot decide"), "Essay Polish: tool-responsibility boundary");

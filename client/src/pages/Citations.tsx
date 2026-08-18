@@ -43,7 +43,7 @@ const FORMAT_INFO: Record<
   },
   chicago: {
     name: "Chicago",
-    edition: "17th Edition",
+    edition: "18th Edition",
     color: "bg-amber-50 border-amber-200 text-amber-700",
   },
   ieee: {
@@ -525,7 +525,7 @@ export default function Citations() {
                     'Smith, John A. "Title." Journal, vol. 12, no. 3, 2023, pp. 45-67.',
                 },
                 {
-                  format: "Chicago 17th",
+                  format: "Chicago 18th",
                   use: "History, Fine Arts, Business",
                   example:
                     'Smith, John A. "Title." Journal 12, no. 3 (2023): 45-67.',
