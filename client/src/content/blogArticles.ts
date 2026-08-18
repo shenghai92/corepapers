@@ -995,18 +995,24 @@ APA 7th edition rewards careful formatting more than memory. Once you understand
     featured: true,
     content: `## What a Literature Review Is Really For
 
-A literature review is not just a descriptive list of studies you read. Its true job is to show how previous research connects, where scholars agree or disagree, what methods dominate the field, and ultimately, what specific gap your own research project will address.
+A literature review is more than a descriptive list of studies. Its job is to help readers see how relevant scholarship connects: where sources agree or disagree, how methods or contexts differ, what limits are visible, and why a focused question is worth further attention.
 
-International students often read dozens of sources but still struggle to turn those scattered notes into a focused, cohesive review. The missing step is usually **synthesis**—combining separate elements to form a coherent whole.
+> **Fictional learning examples:** Every topic, question, theme, study pattern, source count, gap statement, and sentence pattern in this guide is invented for practice. They are not real research findings, a completed search, or wording to submit unchanged. Build claims about a field only from sources you have actually read and checked.
+
+International students often read many sources but still struggle to turn scattered notes into a cohesive review. The missing step is usually **synthesis**—comparing and connecting sources around a clear purpose rather than summarizing one source after another.
 
 ## Start With a Highly Specific Research Question
 
 Before you collect sources, define your topic in a way that gives you strict boundaries.
 
-- **Too broad:** "Social media and education"
-- **Focused:** "How short-form video platforms affect university students' study habits"
+- **Fictional broad topic:** "Social media and education"
+- **Fictional focused question:** "How do short-form video platforms relate to university students' reported study habits in a specified context?"
 
-A focused question is much easier to search, compare, and organize.
+A focused question makes it easier to define search terms, inclusion boundaries, comparisons, and the scope of the review. Use the [research question examples](/research-question-examples/) to test whether your own question is clear, researchable, and manageable.
+
+## Build a transparent search and note-taking process
+
+Your course may require a narrative review, a systematic review, a scoping review, or a short proposal review; these are not interchangeable. Record where and when you searched, the terms used, the kinds of sources considered, and any required inclusion rules. Do not present a limited classroom search as a comprehensive account of an entire field.
 
 ## The 5-Step Literature Review Checklist
 
@@ -1028,7 +1034,7 @@ Do not rely on memory. Use a simple tracking table (like an Excel spreadsheet) w
 - Limitations of the study
 - How the source relates directly to your project
 
-This table forces you to compare studies side-by-side instead of treating every article as an isolated summary.
+This table makes comparison easier and helps you separate a source’s claim, method, evidence, limitation, and relevance to your own question. Use the [literature review synthesis matrix](/literature-review-synthesis-matrix/) for a fictional working model before adapting a table to your own sources.
 
 ## Group Sources by Theme, Not by Author
 
@@ -1042,7 +1048,7 @@ A much stronger structure groups studies by:
 - Specific variable or outcome
 - Historical development of the topic
 
-*For example:* If you are reviewing research on AI writing tools, one section might cover "Perceived Benefits," another might examine "Plagiarism Concerns," and a third might compare "Learning Outcomes Across Disciplines."
+*Fictional learning example:* A review of AI writing tools might organize one section around reported benefits, another around academic-integrity concerns, and a third around outcomes across specified disciplines. These headings are only a planning model; use themes that emerge from your own verified source set.
 
 ## A Simple, Reliable Literature Review Structure
 
@@ -1056,7 +1062,7 @@ Each section should compare several sources around one specific idea or theme.
 
 ### 3. Gap or Limitation Section
 
-Critically explain what remains unclear, unstudied, or contradictory in the current literature, and how your project responds directly to that gap.
+Explain what remains unclear, limited, contradictory, or concentrated in particular contexts in the sources you reviewed, and how your project responds to that limited observation. Avoid claiming that “no research exists” unless a transparent and appropriately comprehensive search can support that unusually strong conclusion.
 
 ### 4. Short Conclusion
 
@@ -1071,17 +1077,19 @@ Students often ask how to structure a single paragraph. A simple, effective patt
 3. **Explain a difference, limitation, or consensus** (Analysis)
 4. **Connect the point to your project** (Synthesis)
 
-*Example concept:* One paragraph might compare three studies that report the time-saving benefits of AI writing tools, contrast them with two studies that emphasize critical thinking loss, and then explain why that tension matters for your specific research question.
+*Fictional learning concept:* One paragraph might compare sources that report time-saving benefits of AI writing tools with sources that raise concerns about critical thinking, then explain why that tension matters for a specified research question. The final paragraph must cite the actual studies and explain the basis for the comparison.
 
 ## Useful Academic Sentence Patterns
 
-Writers often know what they want to say in their native language but need academic phrasing that sounds natural in English. Here are a few reliable patterns:
+Writers may know what they want to say but need a careful way to make the relationship among sources visible in English. These fictional learning patterns can help you plan a sentence:
 
 - "Previous studies have primarily focused on..."
 - "A recurring theme in the literature is..."
 - "However, the evidence remains mixed regarding..."
 - "Taken together, these findings suggest that..."
 - "Despite growing interest in this topic, limited research has examined..."
+
+Use each pattern only after your sources support it. For a larger set organized by synthesis move, comparison, and cautious gap statement, see [literature review phrases](/phrases/literature-review/).
 
 ## Common Problems to Avoid
 
@@ -1097,6 +1105,10 @@ A strong review does much more than report findings. It critically explains diff
 
 Do not claim there is "no research" on a topic unless you are absolutely certain. It is much safer and more accurate to say research is "limited," "concentrated in certain contexts," or "lacking comparative evidence."
 
+## Use research-writing guidance and verify the scope of your claim
+
+The [George Mason University Writing Center](https://writingcenter.gmu.edu/writing-resources/research-based-writing/writing-a-literature-review) describes a literature review as an overview of scholarship on a topic that identifies relevant themes, debates, and gaps. Compare that purpose with your assignment prompt and chosen review type. Use the [fictional literature review example](/literature-review-example/) to study a theme-based paragraph, the [synthesis matrix guide](/literature-review-synthesis-matrix/) to organize notes, and the [annotated bibliography guide](/annotated-bibliography-example/) to record source summary, evaluation, and relevance before drafting.
+
 ## A Quick Revision Checklist
 
 Before finalizing your draft, ask yourself:
@@ -1108,7 +1120,7 @@ Before finalizing your draft, ask yourself:
 
 ---
 
-*When your draft is structurally complete, [CorePapers Essay Polish](https://corepapers.space/ai-essay-polisher-for-non-native-english-writers) can help improve clarity and ensure a formal academic tone.*`,
+*When your draft is structurally complete, [CorePapers Essay Polish](/polish) can help you review clarity and sentence-level phrasing. It cannot decide whether your search was sufficiently comprehensive, whether a source is appropriate, or whether a gap claim is accurate; verify those research decisions yourself.*`,
   },
   {
     slug: "how-to-use-hedging-language-in-academic-writing",
