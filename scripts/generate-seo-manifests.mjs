@@ -57,6 +57,11 @@ const STATIC_PAGE_SEO = {
     description: "Use academic discussion phrases to interpret findings, compare them with prior research, explain limitations, and state cautious implications.",
     keywords: "discussion section phrases, academic phrases for discussion, interpreting results phrases, limitations and implications phrases",
   },
+  "/phrases/conclusion": {
+    title: "Academic Phrases for Research Paper Conclusions | CorePapers",
+    description: "Use conclusion phrases to return to a research question, summarize a contribution, state a careful implication, and identify a focused next step without adding new evidence.",
+    keywords: "conclusion phrases research paper, conclusion sentence starters academic writing, research paper conclusion phrases",
+  },
   "/phrases/literature-review": {
     title: "Academic Phrases for Literature Reviews and Source Synthesis | CorePapers",
     description: "Use literature review phrases to synthesize studies by theme, compare findings, signal a cautious research gap, and maintain your own academic voice.",
@@ -323,6 +328,11 @@ const STATIC_PAGES = [
   { path: "/phrases/introduction/", changefreq: "monthly", priority: "0.7" },
   { path: "/phrases/discussion/", changefreq: "monthly", priority: "0.7" },
     {
+    path: "/phrases/conclusion/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
     path: "/phrases/literature-review/",
     changefreq: "monthly",
     priority: "0.8",

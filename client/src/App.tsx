@@ -98,6 +98,14 @@ function Router() {
           )}
         />
         <Route
+          path="/phrases/conclusion"
+          component={() => (
+            <PublicLayout>
+              <PhraseSection />
+            </PublicLayout>
+          )}
+        />
+        <Route
           path="/phrases/literature-review"
           component={() => (
             <PublicLayout>

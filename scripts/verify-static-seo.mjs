@@ -60,6 +60,7 @@ const pages = [
   ],
   ["/phrases/introduction/", "Academic phrases for research paper introductions"],
   ["/phrases/discussion/", "Academic phrases for discussion sections"],
+  ["/phrases/conclusion/", "Academic phrases for research paper conclusions"],
   ["/phrases/literature-review/", "Academic phrases for literature reviews and source synthesis"],
   ["/phrases/methods/", "Academic phrases for research methods sections"],
   ["/phrases/results/", "Academic phrases for reporting research results"],
@@ -278,6 +279,10 @@ const sitemap = read("sitemap-pages.xml");
 expect(
   sitemap.includes(`${BASE_URL}/phrases/introduction/`),
   "sitemap: introduction phrase route"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/phrases/conclusion/`),
+  "sitemap: conclusion phrase route"
 );
 expect(
   sitemap.includes(`${BASE_URL}/phrases/literature-review/`),

@@ -326,6 +326,11 @@ export default function Phrases() {
                   desc: "Interpret findings, identify limits, and frame implications carefully.",
                 },
                 {
+                  href: "/phrases/conclusion",
+                  title: "Conclusion phrases",
+                  desc: "Summarize the contribution and state a bounded takeaway without new evidence.",
+                },
+                {
                   href: "/blog/how-to-use-hedging-language-in-academic-writing",
                   title: "Hedging language guide",
                   desc: "Use phrase choices that sound more careful and credible.",

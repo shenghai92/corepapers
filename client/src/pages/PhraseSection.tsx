@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
-type SectionKey = "introduction" | "methods" | "results" | "discussion" | "literature-review";
+type SectionKey = "introduction" | "methods" | "results" | "discussion" | "literature-review" | "conclusion";
 
 type Phrase = {
   text: string;
@@ -65,6 +65,25 @@ const SECTION_CONTENT: Record<
     checks: ["Organize paragraphs around a theme, question, method, or debate rather than author order.", "Place citations close to the particular source-based claim they support.", "Distinguish your synthesis from the individual findings you are reporting."],
     guideHref: "/literature-review-example",
     guideTitle: "Read the thematic Literature Review example",
+  },
+  conclusion: {
+    eyebrow: "Academic phrase library · Conclusion",
+    title: "Academic phrases for research paper conclusions",
+    description: "Use conclusion phrases to return to a research question, summarize a contribution, state a careful implication, and identify a focused next step without adding new evidence.",
+    canonical: "/phrases/conclusion/",
+    keywords: "conclusion phrases research paper, conclusion sentence starters academic writing, research paper conclusion phrases",
+    intro: "Adapt these sentence starters after the paper is complete. Keep the final takeaway proportionate to your evidence and do not introduce a new result, citation, or claim that the paper has not developed.",
+    phrases: [
+      { label: "Return to the question", text: "This paper addressed [research question or central problem] by examining [focused approach].", note: "Use the wording your completed paper actually answers; do not expand the scope at the end." },
+      { label: "Main answer", text: "Taken together, the analysis suggests that [careful central finding or claim].", note: "Use suggests or another reporting verb that matches the evidence rather than presenting a limited result as universal fact." },
+      { label: "Contribution", text: "The paper contributes by clarifying [specific relationship, mechanism, interpretation, or context].", note: "Name the contribution within the assignment’s scale and the evidence you have developed." },
+      { label: "Bounded implication", text: "Within [defined context], this finding may have implications for [practice, theory, policy, or future inquiry].", note: "Keep implications inside the population, setting, and design studied." },
+      { label: "Limitation reminder", text: "This conclusion should be interpreted in light of [specific limitation].", note: "Use a limitation that genuinely affects scope, measurement, or inference." },
+      { label: "Next step", text: "Future research could investigate [focused question] using [appropriate context or method].", note: "Offer a concrete next step that follows from the analysis instead of a generic request for more research." },
+    ],
+    checks: ["State what the paper established without repeating the abstract sentence by sentence.", "Remove new data, citations, and claims that have not been developed in the body.", "Use a careful implication that matches the limits of the evidence."],
+    guideHref: "/conclusion-section-example-research-paper",
+    guideTitle: "Read the Conclusion structure and example guide",
   },
   methods: {
     eyebrow: "Academic phrase library · Methods",
@@ -193,6 +212,8 @@ export default function PhraseSection() {
     ? "introduction"
     : location.includes("/phrases/literature-review")
       ? "literature-review"
+    : location.includes("/phrases/conclusion")
+      ? "conclusion"
     : location.includes("/phrases/discussion")
       ? "discussion"
       : location.includes("/phrases/results")
