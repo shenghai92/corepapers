@@ -939,6 +939,60 @@ const crawlerVisibleRoutes = new Set(
       : `/${filePath.replace(/\/index\.html$/, "")}/`;
   })
 );
+const sitemapRouteSet = new Set(
+  ["sitemap-pages.xml", "sitemap-blog.xml"].flatMap(sitemapFile => {
+    const sitemapXml = read(sitemapFile);
+    return [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => {
+      const url = match[1];
+      const path = url.startsWith(BASE_URL) ? url.slice(BASE_URL.length) : url;
+      return path === "/" ? "/" : `${path.replace(/\/+$/, "")}/`;
+    });
+  })
+);
+const sitemapOnlyRoutes = [...sitemapRouteSet].filter(route => !crawlerVisibleRoutes.has(route));
+const staticOnlyRoutes = [...crawlerVisibleRoutes].filter(route => !sitemapRouteSet.has(route));
+expect(
+  sitemapOnlyRoutes.length === 0,
+  `static pages: every sitemap route has crawler-visible HTML${sitemapOnlyRoutes.length ? ` (${sitemapOnlyRoutes.join(", ")})` : ""}`
+);
+expect(
+  staticOnlyRoutes.length === 0,
+  `static pages: every crawler-visible route is represented in a child sitemap${staticOnlyRoutes.length ? ` (${staticOnlyRoutes.join(", ")})` : ""}`
+);
+
+const titleRoutes = new Map();
+const descriptionRoutes = new Map();
+for (const file of crawlerVisibleFiles) {
+  const html = readFileSync(file, "utf8");
+  const filePath = relative(DIST, file).replace(/\\/g, "/");
+  const route = filePath === "index.html" ? "/" : `/${filePath.replace(/\/index\.html$/, "")}/`;
+  const expectedCanonical = `${BASE_URL}${route}`;
+  const canonicalMatches = html.match(/<link rel="canonical" href="[^"]+" \/>/g) ?? [];
+  const title = html.match(/<title>([^<]+)<\/title>/)?.[1] ?? "";
+  const description = html.match(/<meta name="description" content="([^"]+)" \/>/)?.[1] ?? "";
+
+  expect(canonicalMatches.length === 1, `${route}: global canonical is unique`);
+  expect(canonicalMatches[0] === `<link rel="canonical" href="${expectedCanonical}" />`, `${route}: global canonical matches route`);
+  expect((html.match(/<h1[\s>]/g) ?? []).length === 1, `${route}: global single H1`);
+  expect(Boolean(title), `${route}: global non-empty title`);
+  expect(Boolean(description), `${route}: global non-empty description`);
+  expect(html.includes('type="application/ld+json"'), `${route}: global JSON-LD is present`);
+  expect(!html.includes("http://"), `${route}: global links avoid insecure HTTP`);
+
+  if (title) titleRoutes.set(title, [...(titleRoutes.get(title) ?? []), route]);
+  if (description) descriptionRoutes.set(description, [...(descriptionRoutes.get(description) ?? []), route]);
+}
+const duplicateTitles = [...titleRoutes.entries()].filter(([, routes]) => routes.length > 1);
+const duplicateDescriptions = [...descriptionRoutes.entries()].filter(([, routes]) => routes.length > 1);
+expect(
+  duplicateTitles.length === 0,
+  `static pages: titles are unique${duplicateTitles.length ? ` (${duplicateTitles.map(([title, routes]) => `${title}: ${routes.join(", ")}`).join("; ")})` : ""}`
+);
+expect(
+  duplicateDescriptions.length === 0,
+  `static pages: descriptions are unique${duplicateDescriptions.length ? ` (${duplicateDescriptions.map(([description, routes]) => `${description}: ${routes.join(", ")}`).join("; ")})` : ""}`
+);
+
 const unresolvedInternalTargets = new Set();
 for (const file of crawlerVisibleFiles) {
   const html = readFileSync(file, "utf8");
