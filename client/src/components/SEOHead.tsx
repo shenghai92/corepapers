@@ -16,6 +16,12 @@ const BASE_URL = "https://corepapers.space";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-default.png`;
 const DEFAULT_TITLE = `${SITE_NAME} - AI Academic Writing Assistant for International Students`;
 
+function normalizeCanonicalPath(path: string) {
+  const pathname = path.split("?")[0].split("#")[0] || "/";
+  if (pathname === "/") return "/";
+  return `${pathname.replace(/\/+$/, "")}/`;
+}
+
 export default function SEOHead({
   title,
   description,
@@ -70,9 +76,7 @@ export default function SEOHead({
     setMeta('meta[name="twitter:image"]', ogImage);
     setMeta('meta[name="twitter:card"]', "summary_large_image");
 
-    const resolvedCanonical = canonical
-      ? `${BASE_URL}${canonical}`
-      : `${BASE_URL}${window.location.pathname}`;
+    const resolvedCanonical = `${BASE_URL}${normalizeCanonicalPath(canonical ?? window.location.pathname)}`;
 
     let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!link) {

@@ -135,7 +135,7 @@ export default function Citations() {
         title="Free Citation Generator for APA 7, MLA, Chicago, and IEEE"
         description="Use a free citation generator for APA 7th edition, MLA, Chicago, and IEEE references and in-text citations. Built for international students writing essays, reports, and research papers."
         keywords="free citation generator, APA 7 citation generator, APA 7th edition citation format, MLA citation generator, Chicago citation generator, IEEE citation generator, bibliography generator for students"
-        canonical="/citations"
+        canonical="/citations/"
         jsonLd={CITATION_SCHEMA}
       />
 
@@ -147,11 +147,11 @@ export default function Citations() {
               Citation Generator
             </div>
             <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
-              Perfect citations,
-              <span className="italic"> every time</span>
+              Free citation generator for
+              <span className="italic"> APA, MLA, Chicago, and IEEE</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Build correctly formatted references and in-text citations for the source types students use most in essays, reports, dissertations, and research papers, including APA 7th edition citation format examples.
+              Build references and in-text citations for the source types students use most in essays, reports, dissertations, and research papers. Always compare the final citation with your course or publisher guidance.
             </p>
             <p className="text-xs text-muted-foreground font-sans mt-3">
               Free usage includes up to 3 citation generations per day. Paid plans raise daily limits for regular coursework and research use.

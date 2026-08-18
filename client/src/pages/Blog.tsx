@@ -45,18 +45,18 @@ export default function Blog() {
         title="Academic Writing Blog With ESL Essay Help, Citation Guides, and Research Writing Tips"
         description="Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students."
         keywords="academic writing blog, ESL essay help, academic writing tips for international students, research paper writing guide for ESL students, APA 7th edition citation format, how to avoid plagiarism in academic writing, improve academic writing skills"
-        canonical="/blog"
+        canonical="/blog/"
         jsonLd={[
           {
             "@context": "https://schema.org",
             "@type": "Blog",
             name: "CorePapers Academic Writing Blog",
             description: "Academic writing guides for international students",
-            url: "https://corepapers.space/blog",
+            url: "https://corepapers.space/blog/",
             blogPost: allArticles.slice(0, 6).map((article) => ({
               "@type": "BlogPosting",
               headline: article.title,
-              url: `https://corepapers.space/blog/${article.slug}`,
+              url: `https://corepapers.space/blog/${article.slug}/`,
             })),
           },
           {
@@ -66,7 +66,7 @@ export default function Blog() {
             itemListElement: allArticles.slice(0, 12).map((article, index) => ({
               "@type": "ListItem",
               position: index + 1,
-              url: `https://corepapers.space/blog/${article.slug}`,
+              url: `https://corepapers.space/blog/${article.slug}/`,
               name: article.title,
             })),
           },
@@ -93,28 +93,28 @@ export default function Blog() {
             <div className="max-w-3xl">
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Trending Topic</p>
               <h2 className="font-serif font-light text-3xl sm:text-4xl text-slate-purple mb-3">
-                Research paper abstract help
+                Research paper sections
               </h2>
               <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-5">
-                If you are writing a paper abstract right now, start with structure, then compare examples, then check how the abstract differs from the introduction.
+                Work through a research paper section by section: establish a purpose in the introduction, explain how the study was carried out, report findings, and then interpret what they mean.
               </p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
                   {
-                    href: "/blog/how-to-write-a-research-paper-introduction",
-                    title: "Research paper introduction",
+                    href: "/research-paper-sections",
+                    title: "Sections hub",
                   },
                   {
-                    href: "/blog/how-to-write-an-abstract-for-a-research-paper",
-                    title: "How to write an abstract",
+                    href: "/blog/how-to-write-a-methodology-section-for-a-research-paper",
+                    title: "Methods and methodology",
                   },
                   {
-                    href: "/blog/research-paper-abstract-examples",
-                    title: "Abstract examples",
+                    href: "/blog/how-to-write-a-results-section-research-paper-esl",
+                    title: "Results section guide",
                   },
                   {
-                    href: "/blog/abstract-vs-introduction-difference",
-                    title: "Abstract vs introduction",
+                    href: "/blog/how-to-write-a-discussion-section-in-an-academic-paper",
+                    title: "Discussion section guide",
                   },
                 ].map((item) => (
                   <Link key={item.href} href={item.href} className="block">

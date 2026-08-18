@@ -11,6 +11,9 @@ import Footer from "./components/Footer";
 const Home = lazy(() => import("./pages/Home"));
 const Polish = lazy(() => import("./pages/Polish"));
 const Phrases = lazy(() => import("./pages/Phrases"));
+const PhraseSection = lazy(() => import("./pages/PhraseSection"));
+const ResearchPaperSections = lazy(() => import("./pages/ResearchPaperSections"));
+const AcademicEnglishHub = lazy(() => import("./pages/AcademicEnglishHub"));
 const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const SeoLandingApa = lazy(() => import("./pages/SeoLandingApa"));
@@ -54,7 +57,11 @@ function Router() {
       <Switch>
         <Route path="/" component={() => <PublicLayout><Home /></PublicLayout>} />
         <Route path="/polish" component={() => <PublicLayout><Polish /></PublicLayout>} />
+        <Route path="/phrases/methods" component={() => <PublicLayout><PhraseSection /></PublicLayout>} />
+        <Route path="/phrases/results" component={() => <PublicLayout><PhraseSection /></PublicLayout>} />
         <Route path="/phrases" component={() => <PublicLayout><Phrases /></PublicLayout>} />
+        <Route path="/research-paper-sections" component={() => <PublicLayout><ResearchPaperSections /></PublicLayout>} />
+        <Route path="/academic-english-for-esl-students" component={() => <PublicLayout><AcademicEnglishHub /></PublicLayout>} />
         <Route path="/citations" component={() => <PublicLayout><Citations /></PublicLayout>} />
         <Route path="/pricing" component={() => <PublicLayout><Pricing /></PublicLayout>} />
         <Route path="/apa-citation-generator-for-international-students" component={() => <PublicLayout><SeoLandingApa /></PublicLayout>} />

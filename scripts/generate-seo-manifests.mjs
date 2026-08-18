@@ -1,110 +1,162 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import {
+  renderBlogArticle,
+  renderStaticPage,
+  staticSeoStyles,
+} from "./static-seo-content.mjs";
 
 const BASE_URL = "https://corepapers.space";
 const TODAY = new Date().toISOString().slice(0, 10);
-
 const ROOT = resolve(process.cwd());
 const BLOG_SOURCE = resolve(ROOT, "client/src/content/blogArticles.ts");
 const DIST_PUBLIC_DIR = resolve(ROOT, "dist/public");
-const PUBLIC_DIR = resolve(ROOT, "client/public");
 const INDEX_HTML = resolve(DIST_PUBLIC_DIR, "index.html");
-const BLOG_INDEX_HTML = resolve(PUBLIC_DIR, "blog", "index.html");
 
 const HOME_SEO = {
-  title:
-    "CorePapers: Academic Writing Tool for International Students | Essay Polish, Phrases & Citations",
+  title: "CorePapers: AI Academic Writing Tool for International Students",
   description:
-    "CorePapers helps international students fix non-native phrasing, find academic sentence templates, and generate APA, MLA, Chicago, and IEEE citations in seconds. Free to start.",
+    "Improve non-native academic English, find sentence templates for research papers, and create APA, MLA, Chicago, and IEEE citations with CorePapers.",
   keywords:
-    "CorePapers, core papers, AI academic writing assistant, academic phrase bank, writing tools for international students, AI essay polisher, APA 7 citation generator",
-  canonical: `${BASE_URL}/`,
-  ogTitle:
-    "CorePapers: Academic Writing Tool for International Students | Essay Polish, Phrases & Citations | CorePapers",
-  ogDescription:
-    "CorePapers helps international students fix non-native phrasing, find academic sentence templates, and generate APA, MLA, Chicago, and IEEE citations in seconds. Free to start.",
-  twitterTitle:
-    "CorePapers: Academic Writing Tool for International Students | Essay Polish, Phrases & Citations | CorePapers",
-  twitterDescription:
-    "CorePapers helps international students fix non-native phrasing, find academic sentence templates, and generate APA, MLA, Chicago, and IEEE citations in seconds. Free to start.",
+    "CorePapers, AI academic writing tool, academic English for international students, AI essay polisher, academic phrase bank, citation generator",
 };
 
 const BLOG_INDEX_SEO = {
   title:
-    "Academic Writing Blog With ESL Essay Help, Citation Guides, and Research Writing Tips | CorePapers",
+    "Academic Writing Guides and ESL Essay Help for International Students | CorePapers",
   description:
-    "Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students.",
+    "Read practical academic writing guides, research-paper examples, ESL revision advice, phrase templates, and citation help for international students.",
   keywords:
-    "academic writing blog, ESL essay help, academic writing tips for international students, research paper writing guide for ESL students, APA 7th edition citation format, how to avoid plagiarism in academic writing, improve academic writing skills",
-  canonical: `${BASE_URL}/blog`,
-  ogTitle:
-    "Academic Writing Blog With ESL Essay Help, Citation Guides, and Research Writing Tips | CorePapers",
-  ogDescription:
-    "Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students.",
-  twitterTitle:
-    "Academic Writing Blog With ESL Essay Help, Citation Guides, and Research Writing Tips | CorePapers",
-  twitterDescription:
-    "Read academic writing guides, ESL essay help, sentence starter examples, plagiarism advice, citation tutorials, and research paper tips for international students.",
+    "academic writing guides, ESL essay help, research paper writing guide, academic writing tips for international students, citation guides",
 };
 
 const STATIC_PAGE_SEO = {
+  "/polish": {
+    title:
+      "AI Essay Polisher for ESL and Non-Native English Writing | CorePapers",
+    description:
+      "Use an AI essay polisher to improve non-native expressions, academic tone, and sentence clarity in essays, reports, and research papers.",
+    keywords:
+      "AI essay polisher, essay polisher for ESL students, academic English revision, non-native English writing help, academic writing tool",
+  },
+  "/phrases": {
+    title:
+      "Academic Phrase Bank and Sentence Starters for Research Papers | CorePapers",
+    description:
+      "Browse an academic phrase bank with sentence starters for essays, literature reviews, methods, results, discussion sections, and research papers.",
+    keywords:
+      "academic phrase bank, sentence starters for research papers, academic phrases for essays, methods section phrases, results section phrases",
+  },
+  "/phrases/methods": {
+    title: "Academic Phrases for Methods Sections | CorePapers",
+    description:
+      "Find academic sentence starters for methodology and methods sections, including research design, data collection, participants, and analysis.",
+    keywords:
+      "methods section phrases, methodology section sentence starters, academic phrases for research methods, data collection phrases",
+  },
+  "/phrases/results": {
+    title: "Academic Phrases for Reporting Research Results | CorePapers",
+    description:
+      "Use academic phrases for reporting quantitative and qualitative research results, tables, findings, themes, and statistical patterns.",
+    keywords:
+      "results section phrases, phrases for reporting research results, academic phrases for findings, quantitative results writing",
+  },
+  "/citations": {
+    title:
+      "Free Citation Generator for APA 7, MLA, Chicago, and IEEE | CorePapers",
+    description:
+      "Generate APA 7, MLA 9, Chicago 17, and IEEE references and in-text citations for common student source types.",
+    keywords:
+      "free citation generator, APA 7 citation generator, MLA citation generator, Chicago citation generator, IEEE citation generator",
+  },
+  "/pricing": {
+    title: "CorePapers Pricing: AI Academic Writing Support for Students",
+    description:
+      "Compare CorePapers plans for academic essay polishing, phrase support, and citation generation. Start free and upgrade when your writing load grows.",
+    keywords:
+      "academic writing tool pricing, AI essay polisher pricing, citation generator pricing, student writing tool pricing",
+  },
+  "/research-paper-sections": {
+    title:
+      "How to Write Research Paper Sections: Guides and Examples | CorePapers",
+    description:
+      "Learn how to write research-paper introductions, methods, results, and discussion sections with structure guides, examples, and academic phrases.",
+    keywords:
+      "research paper sections, how to write methods section, results section examples, discussion section guide, research paper introduction",
+  },
+  "/academic-english-for-esl-students": {
+    title:
+      "Academic English Support for ESL and International Students | CorePapers",
+    description:
+      "Improve academic English with practical help for ESL writing mistakes, literal translation, academic tone, hedging, and sentence clarity.",
+    keywords:
+      "academic English for ESL students, academic writing help for international students, ESL academic writing, non-native English writing",
+  },
+  "/apa-citation-generator-for-international-students": {
+    title: "APA 7 Citation Generator for International Students | CorePapers",
+    description:
+      "Create APA 7 references and in-text citations for common academic sources, then check your work with practical APA examples.",
+    keywords:
+      "APA 7 citation generator, APA citation for international students, APA reference generator, APA in-text citation",
+  },
+  "/ai-essay-polisher-for-non-native-english-writers": {
+    title: "AI Essay Polisher for Non-Native English Writers | CorePapers",
+    description:
+      "Improve academic tone, sentence clarity, and non-native expressions with an AI essay polisher designed for international students.",
+    keywords:
+      "AI essay polisher for non-native English writers, academic writing revision, ESL essay polisher, academic English tool",
+  },
+  "/academic-paraphrasing-tool-for-esl-students": {
+    title: "Academic Paraphrasing Tool for ESL Students | CorePapers",
+    description:
+      "Improve academic paraphrasing for essays and literature reviews while preserving meaning, reducing literal translation, and keeping citations accurate.",
+    keywords:
+      "academic paraphrasing tool, paraphrasing tool for ESL students, academic paraphrase help, source-based writing support",
+  },
+  "/academic-writing-alternative-for-international-students": {
+    title: "Academic Writing Support for International Students | CorePapers",
+    description:
+      "Get academic writing support for non-native phrasing, research-paper sentence templates, citation workflow, and explainable revision feedback.",
+    keywords:
+      "academic writing support for international students, non-native English writing help, academic revision tool",
+  },
+  "/paraphrasing-alternative-for-academic-writing": {
+    title:
+      "Academic Paraphrasing Support for Clearer Source-Based Writing | CorePapers",
+    description:
+      "Improve the clarity and academic tone of source-based writing while preserving meaning and keeping original sources accurately cited.",
+    keywords:
+      "academic paraphrasing support, paraphrasing for academic writing, source-based writing, academic revision tool",
+  },
   "/about": {
-    title: "About CorePapers and Our Academic Writing Tools for International Students | CorePapers",
+    title:
+      "About CorePapers and Our Academic Writing Tools for International Students | CorePapers",
     description:
       "Learn about CorePapers, our academic writing tools for international students, and how to contact support for essay polishing, phrase help, and citations.",
     keywords:
       "about CorePapers, academic writing tools for international students, essay polish support, citation help, academic phrase library",
-    canonical: `${BASE_URL}/about`,
-    ogTitle:
-      "About CorePapers and Our Academic Writing Tools for International Students | CorePapers",
-    ogDescription:
-      "Learn about CorePapers, our academic writing tools for international students, and how to contact support for essay polishing, phrase help, and citations.",
-    twitterTitle:
-      "About CorePapers and Our Academic Writing Tools for International Students | CorePapers",
-    twitterDescription:
-      "Learn about CorePapers, our academic writing tools for international students, and how to contact support for essay polishing, phrase help, and citations.",
   },
   "/contact": {
     title: "Contact CorePapers Support and Editorial Team | CorePapers",
     description:
-      "Contact CorePapers for support questions, account help, billing issues, editorial feedback, and general academic writing tool inquiries.",
+      "Contact CorePapers for support questions, account help, billing issues, editorial feedback, and academic writing tool inquiries.",
     keywords:
       "contact CorePapers, CorePapers support, billing help, editorial feedback, academic writing support contact",
-    canonical: `${BASE_URL}/contact`,
-    ogTitle: "Contact CorePapers Support and Editorial Team | CorePapers",
-    ogDescription:
-      "Contact CorePapers for support questions, account help, billing issues, editorial feedback, and general academic writing tool inquiries.",
-    twitterTitle: "Contact CorePapers Support and Editorial Team | CorePapers",
-    twitterDescription:
-      "Contact CorePapers for support questions, account help, billing issues, editorial feedback, and general academic writing tool inquiries.",
   },
   "/editorial-policy": {
-    title: "CorePapers Editorial Policy for Academic Writing Content | CorePapers",
+    title:
+      "CorePapers Editorial Policy for Academic Writing Content | CorePapers",
     description:
-      "Read the CorePapers editorial policy, including how we review academic writing guides, update content, and separate educational resources from tool outputs.",
+      "Read the CorePapers editorial policy, including how academic writing guides are reviewed, updated, and separated from tool outputs.",
     keywords:
       "CorePapers editorial policy, academic writing content standards, educational content policy, content review process",
-    canonical: `${BASE_URL}/editorial-policy`,
-    ogTitle: "CorePapers Editorial Policy for Academic Writing Content | CorePapers",
-    ogDescription:
-      "Read the CorePapers editorial policy, including how we review academic writing guides, update content, and separate educational resources from tool outputs.",
-    twitterTitle: "CorePapers Editorial Policy for Academic Writing Content | CorePapers",
-    twitterDescription:
-      "Read the CorePapers editorial policy, including how we review academic writing guides, update content, and separate educational resources from tool outputs.",
   },
   "/how-corepapers-content-is-created": {
     title: "How CorePapers Content Is Created and Updated | CorePapers",
     description:
       "Learn how CorePapers plans, writes, revises, and updates academic writing content for international students and multilingual writers.",
     keywords:
-      "how CorePapers content is created, content creation process, academic writing content workflow, multilingual student resources",
-    canonical: `${BASE_URL}/how-corepapers-content-is-created`,
-    ogTitle: "How CorePapers Content Is Created and Updated | CorePapers",
-    ogDescription:
-      "Learn how CorePapers plans, writes, revises, and updates academic writing content for international students and multilingual writers.",
-    twitterTitle: "How CorePapers Content Is Created and Updated | CorePapers",
-    twitterDescription:
-      "Learn how CorePapers plans, writes, revises, and updates academic writing content for international students and multilingual writers.",
+      "how CorePapers content is created, academic writing content workflow, multilingual student resources",
   },
   "/privacy": {
     title: "Privacy Policy | CorePapers",
@@ -112,13 +164,6 @@ const STATIC_PAGE_SEO = {
       "Read the CorePapers privacy policy, including how we handle account details, usage data, and support requests.",
     keywords:
       "CorePapers privacy policy, data handling, account privacy, support request privacy",
-    canonical: `${BASE_URL}/privacy`,
-    ogTitle: "Privacy Policy | CorePapers",
-    ogDescription:
-      "Read the CorePapers privacy policy, including how we handle account details, usage data, and support requests.",
-    twitterTitle: "Privacy Policy | CorePapers",
-    twitterDescription:
-      "Read the CorePapers privacy policy, including how we handle account details, usage data, and support requests.",
   },
   "/terms": {
     title: "Terms of Service | CorePapers",
@@ -126,50 +171,59 @@ const STATIC_PAGE_SEO = {
       "Read the CorePapers terms of service for account usage, billing, acceptable use, and support.",
     keywords:
       "CorePapers terms of service, billing terms, acceptable use, support terms",
-    canonical: `${BASE_URL}/terms`,
-    ogTitle: "Terms of Service | CorePapers",
-    ogDescription:
-      "Read the CorePapers terms of service for account usage, billing, acceptable use, and support.",
-    twitterTitle: "Terms of Service | CorePapers",
-    twitterDescription:
-      "Read the CorePapers terms of service for account usage, billing, acceptable use, and support.",
-  },
-  "/pricing": {
-    title: "Student Pricing for AI Essay Polishing, Academic Phrase Support, and Citations | CorePapers",
-    description:
-      "Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable pricing for students and researchers.",
-    keywords:
-      "academic writing tool pricing, AI essay polisher pricing, academic phrase bank pricing, citation generator pricing, student writing tool pricing, affordable academic writing assistant",
-    canonical: `${BASE_URL}/pricing`,
-    ogTitle:
-      "Student Pricing for AI Essay Polishing, Academic Phrase Support, and Citations | CorePapers",
-    ogDescription:
-      "Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable pricing for students and researchers.",
-    twitterTitle:
-      "Student Pricing for AI Essay Polishing, Academic Phrase Support, and Citations | CorePapers",
-    twitterDescription:
-      "Compare CorePapers plans for essay polishing, citation generation, and academic phrase support. Free plan available, with affordable pricing for students and researchers.",
   },
 };
 
 const STATIC_PAGES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/polish", changefreq: "monthly", priority: "0.9" },
-  { path: "/phrases", changefreq: "monthly", priority: "0.9" },
-  { path: "/citations", changefreq: "monthly", priority: "0.9" },
-  { path: "/pricing", changefreq: "monthly", priority: "0.8" },
-  { path: "/about", changefreq: "monthly", priority: "0.5" },
-  { path: "/contact", changefreq: "monthly", priority: "0.5" },
-  { path: "/editorial-policy", changefreq: "monthly", priority: "0.5" },
-  { path: "/how-corepapers-content-is-created", changefreq: "monthly", priority: "0.5" },
-  { path: "/privacy", changefreq: "yearly", priority: "0.4" },
-  { path: "/terms", changefreq: "yearly", priority: "0.4" },
-  { path: "/blog", changefreq: "weekly", priority: "0.8" },
-  { path: "/apa-citation-generator-for-international-students", changefreq: "monthly", priority: "0.9" },
-  { path: "/ai-essay-polisher-for-non-native-english-writers", changefreq: "monthly", priority: "0.9" },
-  { path: "/academic-paraphrasing-tool-for-esl-students", changefreq: "monthly", priority: "0.9" },
-  { path: "/academic-writing-alternative-for-international-students", changefreq: "monthly", priority: "0.8" },
-  { path: "/paraphrasing-alternative-for-academic-writing", changefreq: "monthly", priority: "0.8" },
+  { path: "/polish/", changefreq: "monthly", priority: "0.9" },
+  { path: "/phrases/", changefreq: "monthly", priority: "0.9" },
+  { path: "/phrases/methods/", changefreq: "monthly", priority: "0.7" },
+  { path: "/phrases/results/", changefreq: "monthly", priority: "0.7" },
+  { path: "/citations/", changefreq: "monthly", priority: "0.9" },
+  { path: "/pricing/", changefreq: "monthly", priority: "0.8" },
+  { path: "/research-paper-sections/", changefreq: "weekly", priority: "0.8" },
+  {
+    path: "/academic-english-for-esl-students/",
+    changefreq: "weekly",
+    priority: "0.8",
+  },
+  { path: "/about/", changefreq: "monthly", priority: "0.5" },
+  { path: "/contact/", changefreq: "monthly", priority: "0.5" },
+  { path: "/editorial-policy/", changefreq: "monthly", priority: "0.5" },
+  {
+    path: "/how-corepapers-content-is-created/",
+    changefreq: "monthly",
+    priority: "0.5",
+  },
+  { path: "/privacy/", changefreq: "yearly", priority: "0.4" },
+  { path: "/terms/", changefreq: "yearly", priority: "0.4" },
+  { path: "/blog/", changefreq: "weekly", priority: "0.8" },
+  {
+    path: "/apa-citation-generator-for-international-students/",
+    changefreq: "monthly",
+    priority: "0.9",
+  },
+  {
+    path: "/ai-essay-polisher-for-non-native-english-writers/",
+    changefreq: "monthly",
+    priority: "0.9",
+  },
+  {
+    path: "/academic-paraphrasing-tool-for-esl-students/",
+    changefreq: "monthly",
+    priority: "0.9",
+  },
+  {
+    path: "/academic-writing-alternative-for-international-students/",
+    changefreq: "monthly",
+    priority: "0.7",
+  },
+  {
+    path: "/paraphrasing-alternative-for-academic-writing/",
+    changefreq: "monthly",
+    priority: "0.7",
+  },
 ];
 
 const FAQ_SCHEMA_BY_SLUG = {
@@ -188,38 +242,6 @@ const FAQ_SCHEMA_BY_SLUG = {
       question: "What tense should I use in the methodology section?",
       answer:
         "Most methodology sections use past tense because they describe what the study did. Present tense may still appear when explaining general research conventions or definitions.",
-    },
-    {
-      question: "Can I use first person in a methodology section?",
-      answer:
-        "That depends on the style guide and instructor. Some fields accept first person for clarity, while others prefer an impersonal style.",
-    },
-    {
-      question: "What should I include in a qualitative methodology section?",
-      answer:
-        "A qualitative methodology section usually explains the research context, participant selection, data collection method, and coding or interpretive process used to analyze the material.",
-    },
-  ],
-  "methodology-section-faq-for-research-papers": [
-    {
-      question: "How do you write a methodology section for a research paper?",
-      answer:
-        "A simple approach is to explain the research design, the participants or data source, the data collection method, the analysis method, and any ethics or limitations that matter.",
-    },
-    {
-      question: "What should be included in a methods section?",
-      answer:
-        "Most methods sections include the research design, participants or dataset, sampling or selection criteria, tools or instruments, procedure, and analysis method.",
-    },
-    {
-      question: "What is an example of a methodology section?",
-      answer:
-        "A methodology example usually states the design, identifies the participants or data, explains how the data was collected, and names the analysis approach such as thematic coding or statistical comparison.",
-    },
-    {
-      question: "What is the difference between a methodology section and a methods section?",
-      answer:
-        "In many assignments the terms overlap, but methodology can refer more broadly to the logic behind the methods, while methods often refers to the practical steps taken in the study.",
     },
   ],
 };
@@ -242,9 +264,36 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function canonicalPath(path) {
+  if (path === "/") return "/";
+  return `${path.replace(/\/+$/, "")}/`;
+}
+
+function canonicalUrl(path) {
+  return `${BASE_URL}${canonicalPath(path)}`;
+}
+
+function pageSeo(path) {
+  const normalizedPath = canonicalPath(path);
+  const base =
+    normalizedPath === "/"
+      ? HOME_SEO
+      : STATIC_PAGE_SEO[normalizedPath.replace(/\/$/, "")];
+  if (!base) throw new Error(`Missing SEO metadata for static route: ${path}`);
+  const canonical = canonicalUrl(path);
+  return {
+    ...base,
+    canonical,
+    ogTitle: base.title,
+    ogDescription: base.description,
+    twitterTitle: base.title,
+    twitterDescription: base.description,
+  };
+}
+
 function createUrlSet(rows) {
   const urls = rows
-    .map((row) =>
+    .map(row =>
       [
         "  <url>",
         `    <loc>${escapeXml(row.loc)}</loc>`,
@@ -255,7 +304,6 @@ function createUrlSet(rows) {
       ].join("\n")
     )
     .join("\n\n");
-
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -269,7 +317,7 @@ function createUrlSet(rows) {
 
 function createSitemapIndex(entries) {
   const body = entries
-    .map((entry) =>
+    .map(entry =>
       [
         "  <sitemap>",
         `    <loc>${escapeXml(entry.loc)}</loc>`,
@@ -278,7 +326,6 @@ function createSitemapIndex(entries) {
       ].join("\n")
     )
     .join("\n\n");
-
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -291,17 +338,32 @@ function createSitemapIndex(entries) {
 }
 
 function extractBlogEntries(source) {
+  const detailsBySlug = new Map();
+  const detailsRegex =
+    /slug:\s*"([^"]+)"[\s\S]*?readingTime:\s*(\d+),[\s\S]*?content:\s*`([\s\S]*?)`\s*,?\n\s*},/g;
+  let detailsMatch = detailsRegex.exec(source);
+  while (detailsMatch) {
+    detailsBySlug.set(detailsMatch[1], {
+      readingTime: Number(detailsMatch[2]),
+      content: detailsMatch[3],
+    });
+    detailsMatch = detailsRegex.exec(source);
+  }
+
   const articleRegex =
     /slug:\s*"([^"]+)"[\s\S]*?title:\s*"([^"]+)"[\s\S]*?excerpt:\s*"([^"]+)"[\s\S]*?category:\s*"([^"]+)"[\s\S]*?tags:\s*\[([\s\S]*?)\][\s\S]*?metaDescription:\s*"([^"]+)"[\s\S]*?publishedAt:\s*"([^"]+)"/g;
   const rows = [];
   let match = articleRegex.exec(source);
-
   while (match) {
     const tags = match[5]
       .split(",")
-      .map((tag) => tag.trim().replace(/^"|"$/g, ""))
+      .map(tag => tag.trim().replace(/^"|"$/g, ""))
       .filter(Boolean);
-
+    const details = detailsBySlug.get(match[1]);
+    if (!details)
+      throw new Error(
+        `Could not parse static content for blog article: ${match[1]}`
+      );
     rows.push({
       loc: `${BASE_URL}/blog/${match[1]}/`,
       slug: match[1],
@@ -313,65 +375,41 @@ function extractBlogEntries(source) {
       changefreq: "monthly",
       priority: "0.7",
       lastmod: match[7],
+      readingTime: details.readingTime,
+      content: details.content,
     });
     match = articleRegex.exec(source);
   }
-
   return rows;
 }
 
-function createDiscoveryLinks(rows) {
-  const items = rows
-    .map(
-      (row) =>
-        `        <li><a href="/blog/${escapeHtml(row.slug)}/">${escapeHtml(row.title)}</a></li>`
-    )
-    .join("\n");
-
-  return [
-    "    <!-- BLOG_DISCOVERY_LINKS_START -->",
-    "    <noscript>",
-    '      <nav aria-label="Blog article discovery links">',
-    "        <p>CorePapers academic writing guides:</p>",
-    "        <ul>",
-    items,
-    "        </ul>",
-    "      </nav>",
-    "    </noscript>",
-    "    <!-- BLOG_DISCOVERY_LINKS_END -->",
-  ].join("\n");
-}
-
-function formatRssDate(value) {
-  return new Date(`${value}T00:00:00Z`).toUTCString();
-}
-
 function createRssFeed(rows) {
-  const sortedRows = [...rows].sort((a, b) => b.lastmod.localeCompare(a.lastmod));
+  const sortedRows = [...rows].sort((a, b) =>
+    b.lastmod.localeCompare(a.lastmod)
+  );
   const latestDate = sortedRows[0]?.lastmod ?? TODAY;
   const items = sortedRows
-    .map((row) =>
+    .map(row =>
       [
         "    <item>",
         `      <title>${escapeXml(row.title)}</title>`,
         `      <link>${escapeXml(row.loc)}</link>`,
         `      <guid>${escapeXml(row.loc)}</guid>`,
-        `      <pubDate>${formatRssDate(row.lastmod)}</pubDate>`,
+        `      <pubDate>${new Date(`${row.lastmod}T00:00:00Z`).toUTCString()}</pubDate>`,
         `      <description>${escapeXml(row.excerpt)}</description>`,
         "    </item>",
       ].join("\n")
     )
     .join("\n\n");
-
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<rss version="2.0">',
     "  <channel>",
     "    <title>CorePapers Academic Writing Blog</title>",
-    `    <link>${BASE_URL}/blog</link>`,
+    `    <link>${BASE_URL}/blog/</link>`,
     "    <description>Academic writing guides, citation tutorials, and ESL-friendly resources for international students.</description>",
     "    <language>en-us</language>",
-    `    <lastBuildDate>${formatRssDate(latestDate)}</lastBuildDate>`,
+    `    <lastBuildDate>${new Date(`${latestDate}T00:00:00Z`).toUTCString()}</lastBuildDate>`,
     "",
     items,
     "  </channel>",
@@ -380,31 +418,16 @@ function createRssFeed(rows) {
   ].join("\n");
 }
 
-function updateIndexHtml(blogRows) {
-  const indexHtml = readFileSync(INDEX_HTML, "utf8");
-  const discoveryBlock = createDiscoveryLinks(blogRows);
-  const pattern =
-    /[ \t]*<!-- BLOG_DISCOVERY_LINKS_START -->[\s\S]*?<!-- BLOG_DISCOVERY_LINKS_END -->/;
-
-  if (!pattern.test(indexHtml)) {
-    throw new Error("Missing blog discovery markers in client/index.html");
-  }
-
-  writeFileSync(INDEX_HTML, indexHtml.replace(pattern, discoveryBlock), "utf8");
-}
-
 function replaceTag(source, pattern, replacement) {
-  if (!pattern.test(source)) {
+  if (!pattern.test(source))
     throw new Error(`Missing expected HTML pattern: ${pattern}`);
-  }
-
   return source.replace(pattern, replacement);
 }
 
 function buildJsonLdScripts(items) {
   return items
     .map(
-      (item) =>
+      item =>
         `    <script type="application/ld+json" data-static-jsonld="true">\n${JSON.stringify(item)}\n    </script>`
     )
     .join("\n");
@@ -412,8 +435,11 @@ function buildJsonLdScripts(items) {
 
 function applySeoToHtml(source, seo, jsonLdScripts = "") {
   let html = source;
-
-  html = replaceTag(html, /<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(seo.title)}</title>`);
+  html = replaceTag(
+    html,
+    /<title>[\s\S]*?<\/title>/,
+    `<title>${escapeHtml(seo.title)}</title>`
+  );
   html = replaceTag(
     html,
     /<meta name="description" content="[^"]*" \/>/,
@@ -454,45 +480,84 @@ function applySeoToHtml(source, seo, jsonLdScripts = "") {
     /<meta name="twitter:description" content="[^"]*" \/>/,
     `<meta name="twitter:description" content="${escapeHtml(seo.twitterDescription)}" />`
   );
-
-  html = html.replace(/\n\s*<script type="application\/ld\+json" data-static-jsonld="true">[\s\S]*?<\/script>/g, "");
-  if (jsonLdScripts) {
+  html = html.replace(
+    /\n\s*<script type="application\/ld\+json" data-static-jsonld="true">[\s\S]*?<\/script>/g,
+    ""
+  );
+  if (jsonLdScripts)
     html = html.replace("</head>", `${jsonLdScripts}\n  </head>`);
-  }
-
   return html;
 }
 
-function createHomeIndexHtml() {
-  const html = readFileSync(INDEX_HTML, "utf8");
-  writeFileSync(INDEX_HTML, applySeoToHtml(html, HOME_SEO), "utf8");
+function injectStaticRoot(source, staticBody) {
+  const root = `<div id="root" data-static-seo-fallback="true">${staticSeoStyles}\n${staticBody}</div>`;
+  return replaceTag(source, /<div id="root">[\s\S]*?<\/div>/, root);
 }
 
-function createBlogIndexHtml() {
-  const html = readFileSync(INDEX_HTML, "utf8");
-  mkdirSync(resolve(DIST_PUBLIC_DIR, "blog"), { recursive: true });
-  writeFileSync(resolve(DIST_PUBLIC_DIR, "blog", "index.html"), applySeoToHtml(html, BLOG_INDEX_SEO), "utf8");
+function htmlWithStaticBody(template, seo, body, jsonLdScripts = "") {
+  return injectStaticRoot(applySeoToHtml(template, seo, jsonLdScripts), body);
 }
 
-function createStaticPageHtml() {
-  const template = readFileSync(INDEX_HTML, "utf8");
+function createHomeIndexHtml(template, blogRows) {
+  const seo = pageSeo("/");
+  writeFileSync(
+    INDEX_HTML,
+    htmlWithStaticBody(
+      template,
+      seo,
+      renderStaticPage({ path: "/", seo, blogRows })
+    ),
+    "utf8"
+  );
+}
 
-  for (const [path, seo] of Object.entries(STATIC_PAGE_SEO)) {
-    const pageDir =
-      path === "/"
-        ? DIST_PUBLIC_DIR
-        : resolve(DIST_PUBLIC_DIR, path.replace(/^\//, ""));
+function createBlogIndexHtml(template, blogRows) {
+  const seo = {
+    ...BLOG_INDEX_SEO,
+    canonical: canonicalUrl("/blog/"),
+    ogTitle: BLOG_INDEX_SEO.title,
+    ogDescription: BLOG_INDEX_SEO.description,
+    twitterTitle: BLOG_INDEX_SEO.title,
+    twitterDescription: BLOG_INDEX_SEO.description,
+  };
+  const pageDir = resolve(DIST_PUBLIC_DIR, "blog");
+  mkdirSync(pageDir, { recursive: true });
+  writeFileSync(
+    resolve(pageDir, "index.html"),
+    htmlWithStaticBody(
+      template,
+      seo,
+      renderStaticPage({ path: "/blog/", seo, blogRows })
+    ),
+    "utf8"
+  );
+}
 
+function createStaticPageHtml(template, blogRows) {
+  for (const page of STATIC_PAGES) {
+    if (page.path === "/" || page.path === "/blog/") continue;
+    const seo = pageSeo(page.path);
+    const pageDir = resolve(
+      DIST_PUBLIC_DIR,
+      page.path.replace(/^\//, "").replace(/\/$/, "")
+    );
     mkdirSync(pageDir, { recursive: true });
-    writeFileSync(resolve(pageDir, "index.html"), applySeoToHtml(template, seo), "utf8");
+    writeFileSync(
+      resolve(pageDir, "index.html"),
+      htmlWithStaticBody(
+        template,
+        seo,
+        renderStaticPage({ path: page.path, seo, blogRows })
+      ),
+      "utf8"
+    );
   }
 }
 
-function createBlogArticleHtml(rows) {
-  const template = readFileSync(INDEX_HTML, "utf8");
-
+function createBlogArticleHtml(template, rows) {
   for (const row of rows) {
-    const articleUrl = `${BASE_URL}/blog/${row.slug}/`;
+    const articleUrl = row.loc;
+    const wordCount = row.content.split(/\s+/).filter(Boolean).length;
     const jsonLdItems = [
       {
         "@context": "https://schema.org",
@@ -503,6 +568,7 @@ function createBlogArticleHtml(rows) {
         articleSection: row.category,
         mainEntityOfPage: articleUrl,
         url: articleUrl,
+        wordCount,
         datePublished: row.lastmod,
         dateModified: row.lastmod,
         inLanguage: "en",
@@ -519,29 +585,39 @@ function createBlogArticleHtml(rows) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${BASE_URL}/` },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE_URL}/blog` },
-          { "@type": "ListItem", position: 3, name: row.title, item: articleUrl },
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `${BASE_URL}/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: `${BASE_URL}/blog/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: row.title,
+            item: articleUrl,
+          },
         ],
       },
     ];
-
     const faqItems = FAQ_SCHEMA_BY_SLUG[row.slug] ?? [];
-    if (faqItems.length > 0) {
+    if (faqItems.length) {
       jsonLdItems.push({
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: faqItems.map((item) => ({
+        mainEntity: faqItems.map(item => ({
           "@type": "Question",
           name: item.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.answer,
-          },
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
         })),
       });
     }
-
     const seo = {
       title: `${row.title} | CorePapers`,
       description: row.metaDescription,
@@ -552,12 +628,16 @@ function createBlogArticleHtml(rows) {
       twitterTitle: `${row.title} | CorePapers`,
       twitterDescription: row.metaDescription,
     };
-
     const articleDir = resolve(DIST_PUBLIC_DIR, "blog", row.slug);
     mkdirSync(articleDir, { recursive: true });
     writeFileSync(
       resolve(articleDir, "index.html"),
-      applySeoToHtml(template, seo, buildJsonLdScripts(jsonLdItems)),
+      htmlWithStaticBody(
+        template,
+        seo,
+        renderBlogArticle({ row, relatedRows: rows }),
+        buildJsonLdScripts(jsonLdItems)
+      ),
       "utf8"
     );
   }
@@ -565,46 +645,52 @@ function createBlogArticleHtml(rows) {
 
 const blogSource = readFileSync(BLOG_SOURCE, "utf8");
 const blogRows = extractBlogEntries(blogSource);
-const pageRows = STATIC_PAGES.map((page) => ({
-  loc: `${BASE_URL}${page.path}`,
+if (blogRows.length === 0)
+  throw new Error("No blog rows extracted from blogArticles.ts");
+const pageRows = STATIC_PAGES.map(page => ({
+  loc: canonicalUrl(page.path),
   changefreq: page.changefreq,
   priority: page.priority,
   lastmod: TODAY,
 }));
+const template = readFileSync(INDEX_HTML, "utf8");
 
-writeFileSync(resolve(DIST_PUBLIC_DIR, "sitemap-pages.xml"), createUrlSet(pageRows), "utf8");
-writeFileSync(resolve(DIST_PUBLIC_DIR, "sitemap-blog.xml"), createUrlSet(blogRows), "utf8");
 writeFileSync(
-  resolve(DIST_PUBLIC_DIR, "sitemap.xml"),
-  createSitemapIndex([
-    { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
-    { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
-  ]),
+  resolve(DIST_PUBLIC_DIR, "sitemap-pages.xml"),
+  createUrlSet(pageRows),
   "utf8"
 );
 writeFileSync(
+  resolve(DIST_PUBLIC_DIR, "sitemap-blog.xml"),
+  createUrlSet(blogRows),
+  "utf8"
+);
+const sitemapIndex = createSitemapIndex([
+  { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
+  { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
+]);
+writeFileSync(resolve(DIST_PUBLIC_DIR, "sitemap.xml"), sitemapIndex, "utf8");
+writeFileSync(
   resolve(DIST_PUBLIC_DIR, "google-sitemap.xml"),
-  createSitemapIndex([
-    { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
-    { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
-  ]),
+  sitemapIndex,
   "utf8"
 );
 writeFileSync(
   resolve(DIST_PUBLIC_DIR, "bing-sitemap.xml"),
-  createSitemapIndex([
-    { loc: `${BASE_URL}/sitemap-pages.xml`, lastmod: TODAY },
-    { loc: `${BASE_URL}/sitemap-blog.xml`, lastmod: TODAY },
-  ]),
+  sitemapIndex,
   "utf8"
 );
-writeFileSync(resolve(DIST_PUBLIC_DIR, "feed.xml"), createRssFeed(blogRows), "utf8");
-updateIndexHtml(blogRows);
-createHomeIndexHtml();
-createBlogIndexHtml();
-createStaticPageHtml();
-createBlogArticleHtml(blogRows);
+writeFileSync(
+  resolve(DIST_PUBLIC_DIR, "feed.xml"),
+  createRssFeed(blogRows),
+  "utf8"
+);
+
+createHomeIndexHtml(template, blogRows);
+createBlogIndexHtml(template, blogRows);
+createStaticPageHtml(template, blogRows);
+createBlogArticleHtml(template, blogRows);
 
 console.log(
-  `[seo] generated manifests: pages=${pageRows.length}, blog=${blogRows.length}, date=${TODAY}`
+  `[seo] generated static crawler-visible pages: pages=${pageRows.length}, blog=${blogRows.length}, date=${TODAY}`
 );

@@ -764,9 +764,9 @@ Before submitting your paper, do one revision pass strictly for grammar and anot
 - [ ] Search the document for repeated weak words such as "very," "important," and "good."
 - [ ] Review whether each paragraph has one clear, single purpose.
 
----
+## Keep Learning From Your Revision Patterns
 
-*If you want a second pass that focuses on clarity, tone, and academic phrasing, try the [CorePapers Essay Polish tool](https://corepapers.space/ai-essay-polisher-for-non-native-english-writers) designed specifically for non-native English speakers.*`,
+Many of these problems appear when a sentence has been translated too closely from another language or when conversational English is used in a formal context. For more focused guidance, visit [Academic English support for ESL and international students](/academic-english-for-esl-students/), browse the [academic phrase library](/phrases/), or use [CorePapers Essay Polish](/polish) for a second pass on clarity, tone, and academic phrasing.`,
   },
   {
     slug: "complete-apa-7th-edition-guide-international-students",
@@ -1757,15 +1757,15 @@ A good research proposal is clear about purpose, limited in scope, and realistic
   },
   {
     slug: "how-to-write-a-methodology-section-for-a-research-paper",
-    title: "How to Write a Methodology Section for a Research Paper: ESL Guide With Examples",
+    title: "How to Write a Methodology Section: Structure and Examples",
     excerpt:
-      "Learn how to write a methodology section with clear structure tips, sample wording, and a full practical example for student research papers.",
+      "Learn how to write a methodology section with a clear structure, sample wording, a practical example, and revision guidance for student research papers.",
     category: "Research Writing",
     tags: ["Methodology", "Research Paper", "ESL Writing"],
     readingTime: 10,
     metaDescription:
-      "Learn how to write a clear methodology section with a real example. This step-by-step guide is designed for international students writing in English.",
-    publishedAt: "2024-03-17",
+      "Learn how to write a methodology section with a clear structure, sample wording, design choices, data collection, analysis, and a practical example.",
+    publishedAt: "2026-08-18",
     featured: false,
     content: `## What the Methodology Section Is For
 
@@ -1866,9 +1866,17 @@ Simple, precise wording is always stronger than abstract or overly technical phr
 - "A total of [X] participants were recruited from..."
 - "The study was approved by the institutional ethics committee."
 
----
+## A Fast Methodology Section Checklist
 
-*If your methodology section sounds repetitive or awkward after drafting, [CorePapers Essay Polish](https://corepapers.space/ai-essay-polisher-for-non-native-english-writers) can help smooth the phrasing for non-native English speakers.*`,
+Before you submit, check whether a reader can identify:
+
+- the research design and why it fits the question
+- the participants, dataset, or source material
+- how data was collected and over what period
+- how the data was analysed
+- the ethics, limitations, or selection criteria that matter for interpreting the study
+
+For editable wording by task, browse [academic phrases for methods sections](/phrases/methods/). If your own completed draft still sounds repetitive or awkward, use [CorePapers Essay Polish](/polish) to review phrasing without replacing the details of your study.`,
   },
   {
     slug: "mla-9th-edition-guide-for-international-students",
@@ -2756,14 +2764,14 @@ When your final paragraph restates the argument clearly, summarizes the reasonin
   },
   {
     slug: "how-to-write-a-results-section-research-paper-esl",
-    title: "How to Write a Results Section in a Research Paper for ESL Students",
+    title: "How to Write a Results Section: Examples for ESL Students",
     excerpt:
-      "Learn how to write a results section in a research paper with clearer academic phrases, structure advice, and examples tailored specifically for non-native English speakers.",
+      "Learn how to write a results section in a research paper with clear structure, quantitative and qualitative examples, and academic phrases for international students.",
     category: "Research Writing",
     tags: ["Results Section", "Research Paper", "ESL Writing", "Academic Phrases"],
     readingTime: 7,
     metaDescription:
-      "Learn how to write a results section in a research paper with academic phrases, structure advice, figure references, and examples for ESL and international students.",
+      "Learn how to write a results section with quantitative and qualitative examples, reporting phrases, table references, and structure advice for ESL students.",
     publishedAt: "2026-06-21",
     featured: false,
     content: `## Why the Results Section Feels Difficult for ESL Writers
@@ -2858,6 +2866,40 @@ When you refer to a table or figure, integrate it smoothly into the sentence rat
 
 Your text and your table should support each other, not repeat the exact same information word for word. Use the sentence to highlight the key pattern, trend, or outlier, and let the table or figure hold the full, detailed data.
 
+## Results Section Example: Quantitative Study
+
+Here is a short model for a survey-based study. The details are fictional, so replace every number, group, and variable with your own evidence.
+
+"Of the 128 students who completed the survey, 74% reported using written feedback at least once per week. As shown in Table 2, first-year students reported a lower average confidence score (M = 3.1, SD = 0.8) than final-year students (M = 3.7, SD = 0.6). An independent-samples t-test indicated that this difference was statistically significant, t(126) = 4.62, p < .001. No statistically significant relationship was found between feedback frequency and total assignment grade."
+
+### Why this quantitative example works
+
+- It reports the sample and the measure before highlighting the key comparison.
+- It refers the reader to the relevant table instead of repeating every value in the prose.
+- It reports a null finding directly rather than hiding it.
+- It does not explain why final-year students may feel more confident; that interpretation belongs in the discussion.
+
+## Results Section Example: Qualitative Study
+
+A qualitative results section usually presents themes supported by evidence from the data. It should still report what participants said or what the analysis identified before interpreting the broader significance.
+
+"Thematic analysis identified three recurring patterns in the interview data: uncertainty about disciplinary vocabulary, reliance on peer feedback, and increased confidence after guided revision. Participants frequently described academic word choice as a source of hesitation, particularly when they were writing literature review paragraphs. One participant explained that she could understand a journal article but was unsure how to express the same idea in her own words."
+
+### Why this qualitative example works
+
+- It names the themes clearly and in a logical order.
+- It uses a participant account as evidence for a theme rather than as decoration.
+- It reports the pattern without claiming that the pattern proves a cause.
+- It leaves the implications for teaching, tools, or policy for the discussion section.
+
+## A Reusable Results Section Template
+
+Use this template as a starting point, then adapt it to your research question and evidence:
+
+"To address [research question], [analysis method] was used to examine [data/source]. The results indicated that [main finding]. As shown in [Table/Figure/Theme] [number or name], [specific supporting pattern]. [Optional: A statistically significant/no clear] relationship was found between [X] and [Y]."
+
+For a qualitative paper, replace the statistics with named themes and brief evidence. For a quantitative paper, report the statistic or measurement your discipline expects. Do not invent precision that your data does not provide.
+
 ## Common Grammar Pitfalls in the Results Section
 
 ESL students often encounter specific grammar issues when writing results:
@@ -2885,7 +2927,7 @@ In most academic papers, the past tense is used to describe what the study found
 
 ---
 
-*If your draft still sounds awkward or repetitive, [CorePapers Essay Polish](https://corepapers.space/ai-essay-polisher-for-non-native-english-writers) can help improve the academic phrasing specifically for non-native English speakers.*`,
+*If your draft still sounds awkward or repetitive, use [CorePapers Essay Polish](/polish) after you have written the evidence in your own words. For ready-made reporting patterns, browse [Results section phrases](/phrases/results/).*`,
   },
   {
     slug: "methodology-section-faq-for-research-papers",

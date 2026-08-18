@@ -142,7 +142,7 @@ export default function Phrases() {
         title="Academic Phrase Bank With Sentence Starters for Essays, Literature Reviews, and Research Papers"
         description="Search an academic phrase bank with sentence starters for essays, literature review phrases, discussion section phrases, and academic English expressions for research papers."
         keywords="academic phrase bank, sentence starters for essays, literature review phrases, discussion section phrases, academic sentence starters, academic English expressions, phrase bank for research papers"
-        canonical="/phrases"
+        canonical="/phrases/"
         jsonLd={PHRASES_SCHEMA}
       />
 
@@ -301,19 +301,19 @@ export default function Phrases() {
             <div className="grid sm:grid-cols-3 gap-4">
               {[
                 {
-                  href: "/blog/how-to-write-a-literature-review-for-international-students",
-                  title: "Literature review guide",
-                  desc: "See how to group studies and write stronger synthesis paragraphs.",
+                  href: "/phrases/methods",
+                  title: "Methods section phrases",
+                  desc: "Find sentence starters for research design, data collection, and analysis.",
+                },
+                {
+                  href: "/phrases/results",
+                  title: "Results section phrases",
+                  desc: "Report quantitative or qualitative findings without moving into discussion too early.",
                 },
                 {
                   href: "/blog/how-to-use-hedging-language-in-academic-writing",
                   title: "Hedging language guide",
                   desc: "Use phrase choices that sound more careful and credible.",
-                },
-                {
-                  href: "/blog/how-to-write-a-discussion-section-in-an-academic-paper",
-                  title: "Discussion section guide",
-                  desc: "Turn phrase patterns into analytical writing that interprets findings.",
                 },
               ].map((item) => (
                 <Link key={item.href} href={item.href} className="block">

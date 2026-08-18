@@ -17,7 +17,7 @@ export function registerStripeWebhook(app: Express) {
         return res.json({ received: true });
       }
 
-      const stripe = new Stripe(stripeKey, { apiVersion: "2026-04-22.dahlia" });
+      const stripe = new Stripe(stripeKey, { apiVersion: "2026-04-22.dahlia" as Stripe.LatestApiVersion });
       const sig = req.headers["stripe-signature"];
 
       let event: Stripe.Event;

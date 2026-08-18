@@ -2,7 +2,6 @@ import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, GraduationCap, PenTool } from "lucide-react";
-import { getLoginUrl } from "@/const";
 import { trackEvent } from "@/lib/analytics";
 
 const FAQ = [
@@ -49,7 +48,7 @@ export default function SeoLandingParaphrase() {
         title="Academic Paraphrasing Tool for ESL Students"
         description="Improve paraphrased academic writing so it sounds clearer, more natural, and more appropriate for essays, reports, and literature reviews."
         keywords="academic paraphrasing tool, paraphrasing tool for ESL students, improve paraphrasing academic writing, paraphrase academic English"
-        canonical="/academic-paraphrasing-tool-for-esl-students"
+        canonical="/academic-paraphrasing-tool-for-esl-students/"
         jsonLd={PARAPHRASE_LANDING_SCHEMA}
       />
 
@@ -103,18 +102,16 @@ export default function SeoLandingParaphrase() {
 
           <div className="max-w-5xl mx-auto grid lg:grid-cols-[1.3fr_0.9fr] gap-6 mb-10">
             <section className="p-8 bg-white border border-border rounded-2xl">
-              <h2 className="font-serif text-3xl text-slate-purple mb-4">Why this intent is commercially useful</h2>
-              <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
-                <p>
-                  Students searching for help with academic paraphrasing often have a real assignment open and a concrete problem to solve. That usually means stronger intent than broad educational browsing.
-                </p>
-                <p>
-                  This page is designed to catch that need early and move the user into the existing polish and citation tools, where conversion can happen faster than through blog reading alone.
-                </p>
-                <p>
-                  If you want background guidance first, read <Link href="/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing" className="text-primary underline">how to paraphrase without plagiarizing</Link>.
-                </p>
-              </div>
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">How to paraphrase an academic source responsibly</h2>
+              <ol className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed list-decimal list-inside">
+                <li><strong className="text-foreground">Understand the source first.</strong> Identify the claim, evidence, and qualification before you try to change the wording.</li>
+                <li><strong className="text-foreground">Write the idea in a new structure.</strong> Do more than exchange individual synonyms; organise the sentence in the way that best fits your own argument.</li>
+                <li><strong className="text-foreground">Compare for accuracy.</strong> Make sure your version does not overstate, omit, or distort the original meaning.</li>
+                <li><strong className="text-foreground">Cite the source.</strong> A paraphrase still needs a citation because the underlying idea or evidence came from another author.</li>
+              </ol>
+              <p className="mt-5 text-sm text-muted-foreground font-sans leading-relaxed">
+                For fuller examples, read <Link href="/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing" className="text-primary underline">how to paraphrase without plagiarizing</Link>.
+              </p>
             </section>
 
             <aside className="p-8 bg-hero-gradient border border-border rounded-2xl">
@@ -136,18 +133,28 @@ export default function SeoLandingParaphrase() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" className="w-full bg-white border-border">
-                  <a
-                    href={getLoginUrl()}
+                  <Link
+                    href="/login"
                     onClick={() => trackEvent("cta_click", { location: "landing_paraphrase_sidebar", target: "start_free" })}
                   >
                     Start Free
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </aside>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <section className="max-w-4xl mx-auto mt-10 p-7 bg-white border border-border rounded-2xl">
+            <h2 className="font-serif text-3xl text-slate-purple mb-4">A quick self-check before you submit</h2>
+            <ul className="space-y-3 text-sm text-muted-foreground font-sans leading-relaxed">
+              <li>Does the paraphrase preserve the source's actual claim and level of certainty?</li>
+              <li>Have you changed the sentence structure as well as the individual words?</li>
+              <li>Is the citation placed close enough for a reader to see which idea it supports?</li>
+              <li>Have you followed your instructor's or institution's academic-integrity policy?</li>
+            </ul>
+          </section>
+
+          <div className="max-w-4xl mx-auto mt-10">
             <h2 className="font-serif font-light text-3xl text-slate-purple text-center mb-6">Frequently asked questions</h2>
             <div className="space-y-3">
               {FAQ.map((item) => (
