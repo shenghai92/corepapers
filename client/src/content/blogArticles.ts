@@ -1683,6 +1683,8 @@ A thesis statement does not need to sound dramatic. It needs to sound clear, foc
 
 A research proposal explains what you want to study, why the topic matters, how you plan to investigate it, and why the project is manageable. In many courses, the proposal is not judged only on the idea itself. It is also judged on clarity, feasibility, and awareness of existing research.
 
+> **Fictional learning examples:** Any topic, question, wording, and structure example in this guide is invented for practice. It is not a completed proposal, real study, or material to submit unchanged. Your assignment prompt, department, funding body, supervisor, and ethics requirements control the final format.
+
 ## A Basic Research Proposal Structure
 
 Most university proposals include some version of these sections:
@@ -1696,13 +1698,17 @@ Most university proposals include some version of these sections:
 - timeline or expected scope
 - references
 
-Your department may rename these sections, but the logic is usually similar.
+Your department may rename these sections, require a theoretical framework, add a budget or qualifications, or set a strict word limit. The logic is usually similar, but the prompt always comes first.
 
 ## Start With a Manageable Topic
 
 One of the most common mistakes is choosing a topic that is too wide. A proposal should not promise to solve an entire field-level problem. It should define a focused question that can actually be studied with the time and resources available.
 
-For example, "AI in education" is too broad. "How first-year international students use AI feedback tools when revising short analytical essays" is much more workable.
+For example, "AI in education" is too broad. "How first-year international students use AI feedback tools when revising short analytical essays" is more workable because it narrows the group, activity, and context. This is a fictional learning example, not a claimed research gap or a ready-made proposal question.
+
+### Test feasibility before you promise a method
+
+A proposal needs more than an interesting topic. Before drafting methods, check whether you can reasonably access the participants, texts, data, archives, tools, time, skills, permissions, and supervision needed for the project. If a study involves people, personal data, or sensitive settings, follow your institution’s ethics and approval procedures rather than assuming a class assignment has permission.
 
 ## Writing the Introduction
 
@@ -1718,7 +1724,7 @@ Avoid turning the introduction into a long general essay. Move toward the specif
 
 In a proposal, the literature review is usually short. Its job is not to summarize everything ever written. It should show that you know the relevant conversation and can identify a gap or unresolved issue.
 
-If you need help shaping that section, see the [literature review guide](/blog/how-to-write-a-literature-review-for-international-students).
+If you need help shaping that section, see the [literature review guide](/blog/how-to-write-a-literature-review-for-international-students), the [thematic literature review example](/literature-review-example/), and the [synthesis matrix guide](/literature-review-synthesis-matrix/). A proposal should not claim that “no research exists” unless a transparent, suitably comprehensive search supports that unusually strong conclusion.
 
 ## Writing the Methodology
 
@@ -1731,7 +1737,11 @@ Your methodology should explain:
 
 Be concrete. Readers need to know that the project is realistic.
 
-If you already know the proposal needs a methods section, the [methodology section guide](/blog/how-to-write-a-methodology-section-for-a-research-paper) can help you shape that part more clearly.
+If you already know the proposal needs a methods section, the [methodology section guide](/blog/how-to-write-a-methodology-section-for-a-research-paper) and the [Methodology vs. Methods guide](/methodology-vs-methods-research-paper/) can help you distinguish concrete procedures from the rationale for your approach.
+
+## A Fictional Proposal Example Flow
+
+The following is a fictional learning sequence, not a real project or a submission template: (1) define a narrow issue in a specific setting; (2) form a focused question; (3) map a small, relevant group of sources by theme; (4) identify an evidence-based limitation in the reviewed material; (5) propose a method that can answer the question within the available time and permissions; and (6) explain the project’s limited contribution and practical scope.
 
 ## A Simple Research Proposal Example Flow
 
@@ -1757,7 +1767,24 @@ A proposal should show ambition in thinking, but realism in scope.
 
 ### The method does not match the question
 
-If you want to study experience or perception, a purely numerical method may not be enough. If you want to compare measurable outcomes, a vague descriptive plan may not be enough.
+If you want to study experience or perception, a purely numerical method may not be enough. If you want to compare measurable outcomes, a vague descriptive plan may not be enough. Explain why your proposed design, data, and analysis can address the question you actually ask.
+
+### The proposal does not answer the prompt
+
+A strong project can still lose clarity when it misses requested sections, word limits, audience level, citation style, or application criteria. Create a final checklist from the prompt before revising prose.
+
+## A proposal coherence check
+
+- Does the title accurately name the topic without promising a result?
+- Can a reader find the exact research question and understand why it matters?
+- Does the literature context lead logically to the focused question?
+- Can the proposed method answer that question with the stated data, access, skills, and timeline?
+- Does the claimed significance stay proportionate to the scale of the proposed study?
+- Have you followed the required format, sources, word count, ethics, and submission instructions?
+
+## Use university proposal guidance and assignment criteria
+
+The [University of Connecticut Office of Undergraduate Research](https://ugradresearch.uconn.edu/proposal-writing/) recommends reviewing prompts, considering audience, being specific about how a project will be carried out, and allowing time for feedback and revision. The [University of Illinois Writers Workshop](https://writersworkshop.illinois.edu/resources-2/writer-resources/academic-writing/research-proposals/) frames a proposal as an evidence-supported argument for why a project matters and describes checks for scope, coherence, feasibility, precision, and clarity. For graduate research, the [University of Oxford](https://www.geog.ox.ac.uk/study/graduate/apply/research_proposal.html) explains the importance of research questions, theoretical resources, methods, practical access, ethics, and realistic timescales. Use sources that match your course or application level.
 
 ## Useful Sentence Patterns
 
@@ -1769,7 +1796,7 @@ If you want to study experience or perception, a purely numerical method may not
 
 ## CorePapers Tip
 
-You can draft the structure first, then use [essay polish](/polish) to improve clarity and formality. If you are collecting sources while planning the proposal, the [citation tool](/citations) can also save time.
+You can draft the structure first, then use [essay polish](/polish) to improve clarity and formality. Use the [research question examples](/research-question-examples/) and [research paper outline template](/research-paper-outline-template/) to test focus and section logic. If you are collecting sources while planning the proposal, the [citation tool](/citations) can support formatting only after you verify the original source metadata.
 
 ## Conclusion
 
