@@ -71,6 +71,29 @@ expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation 
 expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
 expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
+const essayPolisherLandingHtml = read("ai-essay-polisher-for-non-native-english-writers/index.html");
+expect(
+  essayPolisherLandingHtml.includes("AI essay polisher for non-native English writers"),
+  "essay polisher landing: expected H1"
+);
+expect(essayPolisherLandingHtml.includes("Prepare, polish, and check a paragraph responsibly"), "essay polisher landing: review workflow");
+expect(essayPolisherLandingHtml.includes("Before: confirm the task"), "essay polisher landing: task-policy preparation");
+expect(essayPolisherLandingHtml.includes("Before: protect the draft"), "essay polisher landing: draft-privacy boundary");
+expect(essayPolisherLandingHtml.includes("During: review each change"), "essay polisher landing: suggestion-review step");
+expect(essayPolisherLandingHtml.includes("After: verify source-based content"), "essay polisher landing: source-verification step");
+expect(essayPolisherLandingHtml.includes("owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html"), "essay polisher landing: Purdue revision guidance link");
+expect(essayPolisherLandingHtml.includes("writingcenter.unc.edu/tips-and-tools/generative-ai-in-academic-writing"), "essay polisher landing: UNC AI-policy guidance link");
+expect(essayPolisherLandingHtml.includes('/academic-paragraph-structure/'), "essay polisher landing: paragraph-structure link");
+expect(essayPolisherLandingHtml.includes('/academic-argument-evidence/'), "essay polisher landing: argument-evidence link");
+expect(essayPolisherLandingHtml.includes('/academic-english-for-esl-students/'), "essay polisher landing: Academic English hub link");
+expect(essayPolisherLandingHtml.includes('/hedging-language-academic-writing/'), "essay polisher landing: hedging link");
+expect(essayPolisherLandingHtml.includes('/academic-writing-for-graduate-students/'), "essay polisher landing: graduate-writing link");
+expect(essayPolisherLandingHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "essay polisher landing: paraphrasing link");
+expect(essayPolisherLandingHtml.includes('/academic-integrity-and-source-use/'), "essay polisher landing: source-use link");
+expect(essayPolisherLandingHtml.includes('/citations/'), "essay polisher landing: citation-generator link");
+expect(essayPolisherLandingHtml.includes('/phrases/'), "essay polisher landing: phrase-library link");
+expect(essayPolisherLandingHtml.includes('/polish/'), "essay polisher landing: revision-tool link");
+
 const academicWritingSupportHtml = read("academic-writing-alternative-for-international-students/index.html");
 expect(
   academicWritingSupportHtml.includes("Academic writing support for international students"),

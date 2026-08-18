@@ -12,11 +12,11 @@ const FAQ = [
   },
   {
     q: "Does it only check grammar?",
-    a: "No. It also focuses on non-native phrasing, academic tone, vocabulary choice, sentence clarity, and hedging.",
+    a: "No. It can surface wording, academic tone, vocabulary, sentence clarity, hedging, and formality choices for you to review. It cannot confirm that evidence supports a claim, verify a source, or decide what your course permits.",
   },
   {
-    q: "Can I try it before paying?",
-    a: "Yes. There is a free option so you can test the polish workflow before upgrading.",
+    q: "How should I use AI polishing responsibly?",
+    a: "Draft the idea yourself, check assignment and AI-use rules, review every suggestion against your intended meaning and sources, and complete a final citation and accuracy check. You remain responsible for the submitted work.",
   },
 ];
 
@@ -96,6 +96,18 @@ export default function SeoLandingEssayPolish() {
             </div>
           </div>
 
+          <section className="max-w-5xl mx-auto mb-10 p-7 bg-white border border-border rounded-2xl shadow-card">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Use suggestions as review prompts</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">Prepare, polish, and check a paragraph responsibly</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">BEFORE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Confirm the task</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Check assignment requirements, permitted AI use, intended reader, discipline, and the revision goal for this paragraph.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">BEFORE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Protect the draft</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Use a paragraph you have written. Avoid entering confidential, unpublished, personal, or sensitive material unless its handling is permitted and understood.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">DURING</p><h3 className="font-serif text-xl text-slate-purple mb-2">Review each change</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Compare the original and suggested sentence. Keep, reject, or rewrite it after checking meaning, scope, certainty, discipline, and your own voice.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">AFTER</p><h3 className="font-serif text-xl text-slate-purple mb-2">Verify source-based content</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Make sure changes have not altered facts, removed qualification, overclaimed a conclusion, or separated borrowed ideas from citations.</p></article>
+            </div>
+            <p className="text-sm font-sans text-primary font-medium mt-5">An AI essay polisher can help you notice and evaluate language choices. It does not write your argument, validate research, make a source credible, or approve a paper for submission.</p>
+          </section>
+
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 mb-10">
             {[
               "Catch sentence patterns that sound translated instead of naturally academic.",
@@ -111,17 +123,11 @@ export default function SeoLandingEssayPolish() {
 
           <div className="max-w-5xl mx-auto grid lg:grid-cols-[1.3fr_0.9fr] gap-6 mb-10">
             <section className="p-8 bg-white border border-border rounded-2xl">
-              <h2 className="font-serif text-3xl text-slate-purple mb-4">Why this is closer to purchase intent</h2>
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Use an essay polisher after the writing decision</h2>
               <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
-                <p>
-                  Students searching for an AI essay polisher are usually much closer to action than students browsing general writing advice. They already have text, they already feel friction, and they want help now.
-                </p>
-                <p>
-                  That makes this page more commercially meaningful than broad blog content. It speaks directly to revision pain: awkward phrasing, weak academic tone, and uncertainty about whether the writing sounds natural.
-                </p>
-                <p>
-                  For supporting guides, start with <Link href="/blog/how-to-avoid-common-esl-writing-mistakes" className="text-primary underline">common ESL writing mistakes</Link> or <Link href="/blog/how-to-use-hedging-language-in-academic-writing" className="text-primary underline">hedging language in academic writing</Link>.
-                </p>
+                <p>Use a polisher after you have decided what the paragraph needs to say and how evidence supports that point. Begin with argument, organization, and source checks; use language review to make those decisions easier for readers to follow.</p>
+                <p><a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html" target="_blank" rel="noreferrer">Purdue OWL</a> recommends beginning revision with main point, reader, purpose, evidence, and relevance before clarity and grammar. <a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/generative-ai-in-academic-writing/" target="_blank" rel="noreferrer">UNC Writing Center</a> advises writers to follow course policies, compare original and AI-edited text, and remain responsible for submitted work.</p>
+                <p>For focused support, use <Link href="/academic-paragraph-structure" className="text-primary underline">paragraph structure</Link> to check logic, <Link href="/hedging-language-academic-writing" className="text-primary underline">hedging guidance</Link> to match certainty to evidence, or <Link href="/academic-writing-for-graduate-students" className="text-primary underline">graduate academic writing</Link> for longer research projects.</p>
               </div>
             </section>
 
@@ -131,8 +137,8 @@ export default function SeoLandingEssayPolish() {
                 Fastest path
               </div>
               <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
-                <p>Paste a paragraph, choose your discipline, and review sentence-level improvements immediately.</p>
-                <p>Then move into citations or phrase support without leaving the same workflow.</p>
+                <p>Paste a paragraph you have drafted, choose your discipline, and assess sentence-level improvements in the context of your intended meaning.</p>
+                <p>Then check paragraph logic, source attribution, and required citation details before you use any revision in coursework.</p>
               </div>
               <Button asChild className="w-full mt-6 bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
                 <Link
@@ -158,6 +164,19 @@ export default function SeoLandingEssayPolish() {
             </div>
           </div>
 
+          <section className="max-w-5xl mx-auto mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: "/academic-paragraph-structure", title: "Check paragraph structure", desc: "Confirm a focused point, relevant evidence, explanation, and transition before polishing language." },
+              { href: "/academic-argument-evidence", title: "Review argument and evidence", desc: "Make sure a clearer sentence still represents a defensible claim and its support." },
+              { href: "/academic-english-for-esl-students", title: "Academic English for ESL students", desc: "Build a multilingual revision routine that protects your authorial voice." },
+              { href: "/academic-paraphrasing-tool-for-esl-students", title: "Paraphrase with attribution", desc: "Understand and rebuild a source idea before using language support and citation checks." },
+              { href: "/academic-integrity-and-source-use", title: "Academic integrity and source use", desc: "Check quotation, paraphrase, summary, citation, and course-policy responsibilities." },
+              { href: "/citations", title: "Generate, then verify citations", desc: "Create a reference draft from original source details and check it against required style guidance." },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all"><h2 className="font-serif text-2xl text-slate-purple mb-2">{item.title}</h2><p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p></article></Link>
+            ))}
+          </section>
+
           <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
             <Link href="/pricing" className="block">
               <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
@@ -171,7 +190,7 @@ export default function SeoLandingEssayPolish() {
               <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
                 <h2 className="font-serif text-2xl text-slate-purple mb-2">Browse phrase support too</h2>
                 <p className="text-sm text-muted-foreground font-sans leading-relaxed">
-                  Reinforce revision with ready-to-use academic phrases for introductions, discussion, and stance.
+                  Adapt academic phrases to your own evidence, discipline, reader, and citation needs after you have checked the paragraph&apos;s purpose.
                 </p>
               </div>
             </Link>
