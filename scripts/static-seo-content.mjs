@@ -11,6 +11,10 @@ function escapeHtml(value = "") {
 
 function formatInline(value = "") {
   return escapeHtml(value)
+    .replace(
+      /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+      '<a href="$2" rel="noreferrer">$1</a>'
+    )
     .replace(/\[([^\]]+)\]\((\/[^)]+)\)/g, '<a href="$2">$1</a>')
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
 }
@@ -103,6 +107,10 @@ const PAGE_CONTENT = {
       </div>
     </section>
     <section>
+      <h2>Learn with examples, templates, and source-use guidance</h2>
+      <div class="seo-grid"><article><h3><a href="/academic-integrity-and-source-use/">Academic integrity and source use</a></h3><p>Choose when to quote, paraphrase, or summarize and keep borrowed ideas clearly cited.</p></article><article><h3><a href="/academic-writing-examples/">Academic writing examples</a></h3><p>See labelled, fictional examples for source-based writing, methods, and results.</p></article><article><h3><a href="/research-paper-templates/">Research paper templates</a></h3><p>Plan Methods, Results, and Discussion with evidence-first section prompts.</p></article><article><h3><a href="/citation-examples/">APA citation examples</a></h3><p>Check common reference and in-text citation structures before submitting.</p></article></div>
+    </section>
+    <section>
       <h2>Academic support, not a substitute for your work</h2>
       <p>CorePapers is designed to support revision and learning. You remain responsible for the accuracy of your content, your citations, and compliance with your university's academic-integrity policy.</p>
     </section>
@@ -143,7 +151,7 @@ const PAGE_CONTENT = {
     <h1>Free citation generator for APA 7, MLA, Chicago and IEEE</h1>
     <p class="lead">Create references and in-text citations for common student source types, including journal articles, books, websites, chapters, theses, and conference papers.</p>
     <section><h2>Supported citation formats</h2><ul><li><strong>APA 7:</strong> commonly used in psychology, education, and social sciences.</li><li><strong>MLA 9:</strong> commonly used in humanities and literature.</li><li><strong>Chicago 17:</strong> commonly used in history, arts, and business.</li><li><strong>IEEE:</strong> commonly used in engineering and computer science.</li></ul></section>
-    <section><h2>Check every reference before you submit</h2><p>A generator can format the details you provide, but it cannot confirm that a source is credible, that every author or DOI is correct, or that your institution requires a specific variation. Compare the output against your course or publisher guidance.</p><p><a href="/blog/apa-7th-edition-citation-format-guide-with-examples/">Read the APA 7 format guide with examples</a>.</p></section>
+    <section><h2>Check every reference before you submit</h2><p>A generator can format the details you provide, but it cannot confirm that a source is credible, that every author or DOI is correct, or that your institution requires a specific variation. Compare the output against your course or publisher guidance.</p><p><a href="/citation-examples/">Review APA citation examples</a> · <a href="/academic-integrity-and-source-use/">Read the source-use guide</a> · <a href="/blog/apa-7th-edition-citation-format-guide-with-examples/">Read the APA 7 format guide with examples</a>.</p></section>
     ${tools}`,
   "/pricing/": `
     <p class="eyebrow">Transparent student pricing</p>
@@ -171,7 +179,7 @@ const PAGE_CONTENT = {
     <h1>Academic paraphrasing tool for ESL students</h1>
     <p class="lead">Improve paraphrased sentences that sound too literal, too close to the source, or not academic enough for essays and literature reviews.</p>
     <section><h2>Paraphrase without changing the original idea</h2><ol><li>Read the source until you understand the claim and evidence.</li><li>Set the source aside and write the idea in your own sentence structure.</li><li>Check that the new wording preserves the meaning and does not copy distinctive phrasing.</li><li>Cite the original source, even when you have used your own words.</li></ol></section>
-    <section><h2>Common revision checks</h2><ul><li>Does the sentence still make the same claim as the source?</li><li>Have you changed both wording and structure rather than only swapping a few synonyms?</li><li>Have you kept the citation close to the paraphrased idea?</li><li>Does the final sentence sound natural in academic English?</li></ul><p><a href="/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing/">Read the detailed paraphrasing guide</a> or <a href="/polish/">revise a paragraph</a>.</p></section>
+    <section><h2>Common revision checks</h2><ul><li>Does the sentence still make the same claim as the source?</li><li>Have you changed both wording and structure rather than only swapping a few synonyms?</li><li>Have you kept the citation close to the paraphrased idea?</li><li>Does the final sentence sound natural in academic English?</li></ul><p><a href="/academic-integrity-and-source-use/">Use the source-use guide</a> · <a href="/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing/">Read the detailed paraphrasing guide</a> · <a href="/polish/">revise a paragraph</a>.</p></section>
     ${tools}`,
   "/ai-essay-polisher-for-non-native-english-writers/": `
     <p class="eyebrow">Academic revision for non-native writers</p>
@@ -198,6 +206,52 @@ const PAGE_CONTENT = {
     <section><h2>Use a responsible paraphrasing workflow</h2><p>Understand the source first, write the idea in your own structure, compare it for accuracy, and cite the original source. A stronger paraphrase is not simply a sentence with different synonyms.</p></section>
     ${tools}`,
 };
+
+Object.assign(PAGE_CONTENT, {
+  "/academic-integrity-and-source-use/": `
+    <p class="eyebrow">Source-based writing guide</p>
+    <h1>Academic integrity starts with clear source use</h1>
+    <p class="lead">Use this practical guide to decide whether a source needs a quotation, paraphrase, or summary—and to keep your own analysis visible in the final draft.</p>
+    <section><h2>Choose the right source-use move</h2><div class="seo-grid"><article><h3>Quote</h3><p>Use an author’s exact words only when the wording itself matters, then mark it clearly and provide the required citation.</p></article><article><h3>Paraphrase</h3><p>Restate a specific idea in a new sentence structure when the idea matters more than the original wording. The source still needs credit.</p></article><article><h3>Summarize</h3><p>Condense the main point of a broader source when readers need context, background, or a short account of an argument.</p></article></div></section>
+    <section><h2>Illustrative paraphrasing case</h2><p>This fictional learning example is not a real student submission or a source to cite. It shows the difference between swapping a few words and rebuilding an idea in your own sentence.</p><p><strong>Illustrative source claim:</strong> “Students who receive specific feedback revise more effectively than students who only receive a score.”</p><p><strong>Responsible paraphrase:</strong> Specific comments can help students make more useful revisions than a grade alone, because they identify what to change (Author, year).</p><p>The revision changes both wording and sentence structure, but it still credits the original idea. A citation does not disappear just because the words have changed.</p></section>
+    <section><h2>A four-step source check</h2><ul><li>Read until you can explain the source claim without looking at the sentence.</li><li>Write your version from memory, then compare it with the original for accuracy.</li><li>Use quotation marks for distinctive language you keep exactly.</li><li>Place a citation where a reader can see which source supports the idea.</li></ul></section>
+    <section><h2>Use AI as a revision step</h2><p>An AI suggestion can help you notice literal translation or awkward wording, but it cannot decide whether a claim is accurate, whether a source supports it, or what your university permits. Compare every revision with your intended meaning and your course policy.</p></section>
+    <section><h2>Read primary guidance</h2><p>APA Style explains that a paraphrase restates another author’s idea in your own words and still requires a citation. Purdue OWL similarly frames paraphrasing as a legitimate form of source use only when it is accurately documented. Read [APA Style on paraphrases](https://apastyle.apa.org/style-grammar-guidelines/citations/paraphrasing), [Purdue OWL on paraphrasing](https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html), and [Purdue OWL on quoting, paraphrasing, and summarizing](https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html) before relying on a tool or a course handout.</p></section>
+    <section class="seo-grid"><article><h2>Check a paraphrase</h2><p>Review non-native phrasing after you have written and cited the idea yourself.</p><p><a href="/academic-paraphrasing-tool-for-esl-students/">Open paraphrasing support</a></p></article><article><h2>Build the reference</h2><p>Generate a citation after checking the original source information.</p><p><a href="/citations/">Open Citation Generator</a></p></article></section>
+    ${tools}`,
+  "/academic-writing-examples/": `
+    <p class="eyebrow">Illustrative writing examples</p>
+    <h1>Academic writing examples for research papers and essays</h1>
+    <p class="lead">See how a short sentence changes when you move from source notes to a paraphrase, a methods description, or a results statement.</p>
+    <section><h2>Use these examples as learning models</h2><p>Every example below is fictional and simplified for learning. Replace bracketed details with your own evidence, data, discipline conventions, and required citations.</p></section>
+    <section><h2>Example 1: move from a note to a cited claim</h2><p><strong>Research note:</strong> The fictional study reports that peer feedback helped first-year students identify unclear claims.</p><p><strong>Draft sentence:</strong> Peer feedback may help first-year writers notice claims that need clarification (Author, year).</p><p>The verb <strong>may help</strong> keeps the claim proportionate to the evidence. The citation identifies the source of the idea, while the sentence remains part of the writer’s argument.</p></section>
+    <section><h2>Example 2: name what you actually did in Methods</h2><p><strong>Template:</strong> This study used semi-structured interviews to explore how [participant group] experienced [topic]. Participants were recruited through [method], and interview transcripts were analysed using [named approach].</p><p>This pattern tells readers the design, participants, collection method, and analysis method. It is a structure prompt, not a sentence to use unchanged.</p></section>
+    <section><h2>Example 3: report the pattern before explaining it</h2><p><strong>Template:</strong> As shown in Table 1, the [intervention] group reported a higher mean [measure] than the comparison group. The difference was statistically significant, p = [value].</p><p>This example states what the analysis found and directs the reader to the table. Save a claim about why the difference occurred or what it means for the discussion. The [UC Irvine scientific-writing guide](https://guides.lib.uci.edu/scientificwriting/results) similarly advises writers to present results in logical order and keep evaluation of their meaning for the discussion.</p></section>
+    <section class="seo-grid"><article><h2>Find section phrases</h2><p>Adapt sentence starters for your methods and results instead of copying a complete model.</p><p><a href="/phrases/">Browse Phrase Library</a></p></article><article><h2>Learn the full structure</h2><p>Use the research-paper hub when you need the purpose and sequence for each section.</p><p><a href="/research-paper-sections/">Explore paper sections</a></p></article></section>
+    ${tools}`,
+  "/research-paper-templates/": `
+    <p class="eyebrow">Research writing templates</p>
+    <h1>Research paper templates for methods, results, and discussion</h1>
+    <p class="lead">Use these section-by-section prompts to organise your own evidence and draft a research paper with a clearer sequence.</p>
+    <section><h2>Methods template</h2><p><strong>Prompt:</strong> What did you do, with whom or what data, and how did you analyse it?</p><p>This study used [design] to examine [question]. Data were collected from [source/participants] through [method] and analysed using [approach].</p></section>
+    <section><h2>Results template</h2><p><strong>Prompt:</strong> What did the data show, in what logical order, and where should readers look?</p><p>[Finding] was observed for [group/condition] (see Table/Figure [X]). The analysis showed [pattern or statistic].</p></section>
+    <section><h2>Discussion template</h2><p><strong>Prompt:</strong> What does the finding mean in relation to the question, literature, and study limits?</p><p>This finding suggests [interpretation]. It is consistent/inconsistent with [prior research] because [reason]. One limitation is [limit].</p></section>
+    <section><h2>Use a template with an evidence check</h2><ul><li>Replace every bracket with details you can support from your own study, notes, or approved sources.</li><li>Use the terminology, tense, reporting standards, and formatting rules required by your course or discipline.</li><li>Move explanation and implications out of Results and into Discussion unless your discipline uses a combined section.</li></ul></section>
+    <section><h2>A note on results reporting</h2><p>A useful template should reduce uncertainty about order, not invent evidence. The [UC Irvine guide to writing results](https://guides.lib.uci.edu/scientificwriting/results) recommends factual, evidence-supported reporting in a logical order, with tables and figures mentioned in the text. Use your institution’s requirements if they differ.</p></section>
+    <section class="seo-grid"><article><h2>Methods phrase bank</h2><p>Choose sentence starters for design, participants, collection, and analysis.</p><p><a href="/phrases/methods/">Open Methods phrases</a></p></article><article><h2>Results phrase bank</h2><p>Report tables, themes, statistics, and non-significant findings carefully.</p><p><a href="/phrases/results/">Open Results phrases</a></p></article></section>
+    ${tools}`,
+  "/citation-examples/": `
+    <p class="eyebrow">Citation example guide</p>
+    <h1>APA 7 citation examples and in-text citation examples</h1>
+    <p class="lead">Use clear, labelled APA 7 examples to understand the parts of a reference and in-text citation before you generate and review your own citation.</p>
+    <section><h2>Use fictional examples only as structure models</h2><p>The names, titles, publishers, journals, and DOI values below are fictional. They demonstrate reference structure only and should never be submitted as real sources.</p></section>
+    <section><h2>Journal article example</h2><p>Nguyen, T., &amp; Patel, R. (2025). Feedback timing and revision choices in undergraduate writing. <em>Journal of Learning Research, 12</em>(3), 44–61. https://doi.org/10.xxxx/example</p><p><strong>In-text citation:</strong> Parenthetical: (Nguyen &amp; Patel, 2025). Narrative: Nguyen and Patel (2025).</p></section>
+    <section><h2>Web page example</h2><p>Global Learning Centre. (2025, May 8). <em>Planning a literature review</em>. https://example.edu/literature-review</p><p><strong>In-text citation:</strong> Parenthetical: (Global Learning Centre, 2025). Narrative: Global Learning Centre (2025).</p></section>
+    <section><h2>Book example</h2><p>Okafor, M. (2024). <em>Writing with evidence</em>. Academic Press.</p><p><strong>In-text citation:</strong> Parenthetical: (Okafor, 2024). Narrative: Okafor (2024).</p></section>
+    <section><h2>Before you trust generated output</h2><ul><li>Open the original source and check author names, publication date, title, container, pages, and DOI or stable URL.</li><li>Use the source type that actually matches the item you read; a web page and a journal article do not use the same fields.</li><li>Compare your final reference and in-text citation with the guidance required by your course, journal, or supervisor.</li></ul><p>For official APA guidance on citing paraphrased ideas, consult [APA Style’s paraphrasing guidance](https://apastyle.apa.org/style-grammar-guidelines/citations/paraphrasing). A generator formats the information you provide; it does not verify that a source exists, that metadata is complete, or that you have cited every borrowed idea.</p></section>
+    <section class="seo-grid"><article><h2>Generate a citation</h2><p>Enter checked source details, then review the finished reference before submission.</p><p><a href="/citations/">Open Citation Generator</a></p></article><article><h2>Use sources responsibly</h2><p>Decide whether your source needs a quotation, paraphrase, or summary.</p><p><a href="/academic-integrity-and-source-use/">Read source-use guide</a></p></article></section>
+    ${tools}`,
+});
 
 function genericPage(seo) {
   return `<h1>${escapeHtml(seo.title.replace(/ \| CorePapers$/, ""))}</h1><p class="lead">${escapeHtml(seo.description)}</p>${tools}`;

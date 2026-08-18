@@ -92,6 +92,37 @@ const STATIC_PAGE_SEO = {
     keywords:
       "academic English for ESL students, academic writing help for international students, ESL academic writing, non-native English writing",
   },
+  "/academic-integrity-and-source-use": {
+    title:
+      "Academic Integrity and Source Use for International Students | CorePapers",
+    description:
+      "Learn when to quote, paraphrase, or summarize a source, how to keep citations clear, and how to review AI-assisted academic writing responsibly.",
+    keywords:
+      "academic integrity for international students, paraphrasing vs quoting vs summarizing, how to cite a paraphrase, source use in academic writing",
+  },
+  "/academic-writing-examples": {
+    title:
+      "Academic Writing Examples for Research Papers and Essays | CorePapers",
+    description:
+      "Study clear, labelled examples of source-based writing, methods descriptions, and results reporting, with explanations for international students.",
+    keywords:
+      "academic writing examples, research paper examples, paraphrasing example, methods section example, results section example",
+  },
+  "/research-paper-templates": {
+    title:
+      "Research Paper Templates for Methods, Results, and Discussion | CorePapers",
+    description:
+      "Use flexible research paper templates and checklists for methods, results, and discussion sections, designed for international students writing in academic English.",
+    keywords:
+      "research paper template, methods section template, results section template, discussion section template, research writing checklist",
+  },
+  "/citation-examples": {
+    title: "APA 7 Citation Examples and In-Text Citation Examples | CorePapers",
+    description:
+      "Use clear, labelled APA 7 citation examples for common source types and learn what to check before using a citation generator.",
+    keywords:
+      "APA citation examples, APA 7 reference examples, APA in-text citation examples, citation generator examples, how to cite sources",
+  },
   "/apa-citation-generator-for-international-students": {
     title: "APA 7 Citation Generator for International Students | CorePapers",
     description:
@@ -186,6 +217,26 @@ const STATIC_PAGES = [
   {
     path: "/academic-english-for-esl-students/",
     changefreq: "weekly",
+    priority: "0.8",
+  },
+  {
+    path: "/academic-integrity-and-source-use/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/academic-writing-examples/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/research-paper-templates/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/citation-examples/",
+    changefreq: "monthly",
     priority: "0.8",
   },
   { path: "/about/", changefreq: "monthly", priority: "0.5" },
@@ -533,6 +584,41 @@ function createBlogIndexHtml(template, blogRows) {
   );
 }
 
+function staticPageJsonLd(page, seo) {
+  const path = canonicalPath(page.path);
+  const pageName = seo.title.replace(/ \| CorePapers$/, "");
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: pageName,
+      description: seo.description,
+      url: seo.canonical,
+      inLanguage: "en",
+      isAccessibleForFree: true,
+      publisher: { "@type": "Organization", name: "CorePapers", url: BASE_URL },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${BASE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: pageName,
+          item: `${BASE_URL}${path}`,
+        },
+      ],
+    },
+  ];
+}
+
 function createStaticPageHtml(template, blogRows) {
   for (const page of STATIC_PAGES) {
     if (page.path === "/" || page.path === "/blog/") continue;
@@ -547,7 +633,8 @@ function createStaticPageHtml(template, blogRows) {
       htmlWithStaticBody(
         template,
         seo,
-        renderStaticPage({ path: page.path, seo, blogRows })
+        renderStaticPage({ path: page.path, seo, blogRows }),
+        buildJsonLdScripts(staticPageJsonLd(page, seo))
       ),
       "utf8"
     );

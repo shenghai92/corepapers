@@ -74,6 +74,22 @@ const pages = [
     "/academic-paraphrasing-tool-for-esl-students/",
     "Academic paraphrasing tool for ESL students",
   ],
+  [
+    "/academic-integrity-and-source-use/",
+    "Academic integrity starts with clear source use",
+  ],
+  [
+    "/academic-writing-examples/",
+    "Academic writing examples for research papers and essays",
+  ],
+  [
+    "/research-paper-templates/",
+    "Research paper templates for methods, results, and discussion",
+  ],
+  [
+    "/citation-examples/",
+    "APA 7 citation examples and in-text citation examples",
+  ],
   ["/blog/", "Academic writing guides, sentence starters, and ESL essay help"],
 ];
 pages.forEach(([route, h1]) => checkPage(route, h1));
@@ -104,6 +120,36 @@ expect(
   "results article: exactly one canonical"
 );
 
+const integrityHtml = read("academic-integrity-and-source-use/index.html");
+expect(
+  integrityHtml.includes(
+    "apastyle.apa.org/style-grammar-guidelines/citations/paraphrasing"
+  ),
+  "academic-integrity resource: APA primary guidance link"
+);
+expect(
+  integrityHtml.includes(
+    "owl.purdue.edu/owl/research_and_citation/using_research"
+  ),
+  "academic-integrity resource: Purdue OWL primary guidance link"
+);
+expect(
+  integrityHtml.includes('"@type":"WebPage"'),
+  "academic-integrity resource: WebPage JSON-LD"
+);
+
+const citationExamplesHtml = read("citation-examples/index.html");
+expect(
+  citationExamplesHtml.includes(
+    "fictional. They demonstrate reference structure only"
+  ),
+  "citation-examples resource: fictional-example disclosure"
+);
+expect(
+  citationExamplesHtml.includes('"@type":"BreadcrumbList"'),
+  "citation-examples resource: BreadcrumbList JSON-LD"
+);
+
 const sitemap = read("sitemap-pages.xml");
 expect(
   sitemap.includes(`${BASE_URL}/phrases/methods/`),
@@ -120,6 +166,22 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/academic-english-for-esl-students/`),
   "sitemap: academic-English hub"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/academic-integrity-and-source-use/`),
+  "sitemap: academic-integrity resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/academic-writing-examples/`),
+  "sitemap: writing-examples resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/research-paper-templates/`),
+  "sitemap: paper-templates resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/citation-examples/`),
+  "sitemap: citation-examples resource"
 );
 expect(
   !sitemap.includes(`${BASE_URL}/phrases</loc>`),
