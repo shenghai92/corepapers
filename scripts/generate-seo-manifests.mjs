@@ -257,6 +257,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "methodology section example research paper, sample methodology section, methodology section template, how to write methodology section",
   },
+  "/chicago-citation-examples": {
+    title: "Chicago Citation Examples: Notes–Bibliography and Author–Date | CorePapers",
+    description: "Learn Chicago 18 citation with clear Notes–Bibliography and Author–Date comparisons, fictional learning examples, source checks, and official guidance.",
+    keywords: "Chicago citation examples, Chicago 18 citation, Chicago notes bibliography examples, Chicago author date examples, Chicago footnote citation, Chicago reference list",
+  },
   "/ieee-citation-examples": {
     title: "IEEE Citation Examples: In-Text and Reference List Guide | CorePapers",
     description: "Learn IEEE citation with bracketed in-text numbers, reference-list order, fictional source examples, source verification checks, and official IEEE guidance.",
@@ -494,6 +499,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/methodology-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/chicago-citation-examples/",
     changefreq: "monthly",
     priority: "0.8",
   },

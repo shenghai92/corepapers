@@ -554,7 +554,7 @@ export default function Citations() {
               ))}
             </div>
 
-            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <Link href="/citation-examples" className="block">
                 <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
                   <h2 className="font-serif text-2xl text-slate-purple mb-2">
@@ -583,6 +583,12 @@ export default function Citations() {
                 <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
                   <h2 className="font-serif text-2xl text-slate-purple mb-2">Check IEEE examples</h2>
                   <p className="text-sm text-muted-foreground font-sans leading-relaxed">Follow bracketed in-text numbers and a reference list ordered by first appearance before you submit technical work.</p>
+                </div>
+              </Link>
+              <Link href="/chicago-citation-examples" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-2">Check Chicago 18 examples</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">Decide between Notes–Bibliography and Author–Date before formatting a Chicago reference.</p>
                 </div>
               </Link>
               <Link href="/polish" className="block">

@@ -55,6 +55,17 @@ const citationGeneratorHtml = read("citations/index.html");
 expect(citationGeneratorHtml.includes("Chicago 18"), "citation generator: current Chicago 18 label");
 expect(!citationGeneratorHtml.includes("Chicago 17"), "citation generator: no stale Chicago 17 label");
 expect(citationGeneratorHtml.includes('/ieee-citation-examples/'), "citation generator: IEEE examples return link");
+expect(citationGeneratorHtml.includes('/chicago-citation-examples/'), "citation generator: Chicago examples return link");
+
+const chicagoCitationHtml = read("chicago-citation-examples/index.html");
+expect(chicagoCitationHtml.includes("Fictional learning examples"), "Chicago citations: fictional-example disclosure");
+expect(chicagoCitationHtml.includes("Notes–Bibliography"), "Chicago citations: Notes-Bibliography system");
+expect(chicagoCitationHtml.includes("Author–Date"), "Chicago citations: Author-Date system");
+expect(chicagoCitationHtml.includes("chicagomanualofstyle.org"), "Chicago citations: official Chicago guidance link");
+expect(chicagoCitationHtml.includes("writing.ku.edu"), "Chicago citations: University of Kansas guidance link");
+expect(chicagoCitationHtml.includes("18th edition"), "Chicago citations: current edition disclosure");
+expect(chicagoCitationHtml.includes('/citations/'), "Chicago citations: citation-generator link");
+expect(chicagoCitationHtml.includes('/ieee-citation-examples/'), "Chicago citations: IEEE cluster link");
 
 const ieeeCitationHtml = read("ieee-citation-examples/index.html");
 expect(ieeeCitationHtml.includes("Fictional learning examples"), "IEEE citations: fictional-example disclosure");
@@ -157,6 +168,10 @@ const pages = [
   [
     "/conclusion-section-example-research-paper/",
     "Conclusion section example for a research paper",
+  ],
+  [
+    "/chicago-citation-examples/",
+    "Chicago citation examples: choose the right system before you format",
   ],
   [
     "/ieee-citation-examples/",
@@ -457,6 +472,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-templates/`),
   "sitemap: paper-templates resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/chicago-citation-examples/`),
+  "sitemap: Chicago citation examples"
 );
 expect(
   sitemap.includes(`${BASE_URL}/ieee-citation-examples/`),
