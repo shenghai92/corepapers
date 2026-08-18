@@ -39,6 +39,9 @@ const IeeeCitationExamples = lazy(
 const ChicagoCitationExamples = lazy(
   () => import("./pages/ChicagoCitationExamples")
 );
+const ParaphraseWithoutPlagiarizing = lazy(
+  () => import("./pages/ParaphraseWithoutPlagiarizing")
+);
 const AcademicEnglishHub = lazy(() => import("./pages/AcademicEnglishHub"));
 const AcademicWritingResource = lazy(
   () => import("./pages/AcademicWritingResource")
@@ -205,6 +208,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <ResearchPaperSections />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/how-to-paraphrase-without-plagiarizing"
+          component={() => (
+            <PublicLayout>
+              <ParaphraseWithoutPlagiarizing />
             </PublicLayout>
           )}
         />

@@ -61,6 +61,18 @@ expect(!citationGeneratorHtml.includes("Chicago 17"), "citation generator: no st
 expect(citationGeneratorHtml.includes('/ieee-citation-examples/'), "citation generator: IEEE examples return link");
 expect(citationGeneratorHtml.includes('/chicago-citation-examples/'), "citation generator: Chicago examples return link");
 
+const paraphrasingGuideHtml = read("how-to-paraphrase-without-plagiarizing/index.html");
+expect(paraphrasingGuideHtml.includes("Fictional learning example"), "paraphrasing guide: fictional-example disclosure");
+expect(paraphrasingGuideHtml.includes("writingcenter.unc.edu"), "paraphrasing guide: UNC guidance link");
+expect(paraphrasingGuideHtml.includes("writingcenter.gmu.edu"), "paraphrasing guide: George Mason guidance link");
+expect(paraphrasingGuideHtml.includes("niu.edu/academic-integrity"), "paraphrasing guide: NIU integrity guidance link");
+expect(paraphrasingGuideHtml.includes("What a paraphrasing tool cannot decide"), "paraphrasing guide: tool-responsibility boundary");
+expect(paraphrasingGuideHtml.includes('/academic-integrity-and-source-use/'), "paraphrasing guide: source-use cluster link");
+expect(paraphrasingGuideHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "paraphrasing guide: paraphrasing-tool cluster link");
+
+const academicIntegrityHtml = read("academic-integrity-and-source-use/index.html");
+expect(academicIntegrityHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "academic integrity: paraphrasing-guide return link");
+
 const chicagoCitationHtml = read("chicago-citation-examples/index.html");
 expect(chicagoCitationHtml.includes("Fictional learning examples"), "Chicago citations: fictional-example disclosure");
 expect(chicagoCitationHtml.includes("Notes–Bibliography"), "Chicago citations: Notes-Bibliography system");
@@ -172,6 +184,10 @@ const pages = [
   [
     "/conclusion-section-example-research-paper/",
     "Conclusion section example for a research paper",
+  ],
+  [
+    "/how-to-paraphrase-without-plagiarizing/",
+    "How to paraphrase without plagiarizing: understand, reshape, attribute",
   ],
   [
     "/chicago-citation-examples/",
@@ -533,6 +549,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-templates/`),
   "sitemap: paper-templates resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/how-to-paraphrase-without-plagiarizing/`),
+  "sitemap: paraphrasing guide"
 );
 expect(
   sitemap.includes(`${BASE_URL}/chicago-citation-examples/`),

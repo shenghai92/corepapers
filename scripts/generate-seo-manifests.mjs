@@ -257,6 +257,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "how to write methodology section research paper, how to write a methodology section of a research paper, methodology section example research paper, sample methodology section, methodology section template, methods section research paper",
   },
+  "/how-to-paraphrase-without-plagiarizing": {
+    title: "How to Paraphrase Without Plagiarizing: Source-Use Process | CorePapers",
+    description: "Learn how to paraphrase without plagiarizing through understanding, purpose, restructuring, accuracy checks, and clear source attribution. Includes fictional learning examples and university guidance.",
+    keywords: "how to paraphrase without plagiarizing, academic paraphrasing, insufficient paraphrase citation, paraphrasing and citation, avoid patchwriting, paraphrase source use",
+  },
   "/chicago-citation-examples": {
     title: "Chicago Citation Examples: Notes–Bibliography and Author–Date | CorePapers",
     description: "Learn Chicago 18 citation with clear Notes–Bibliography and Author–Date comparisons, fictional learning examples, source checks, and official guidance.",
@@ -499,6 +504,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/methodology-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/how-to-paraphrase-without-plagiarizing/",
     changefreq: "monthly",
     priority: "0.8",
   },

@@ -264,7 +264,13 @@ function IntegrityPage() {
             </p>
           </section>
 
-          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-3 gap-4">
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <ToolNextStep
+              title="Use a full paraphrase process"
+              copy="Work from source understanding to purpose-led restructuring, accuracy review, and visible attribution."
+              href="/how-to-paraphrase-without-plagiarizing"
+              label="Read the paraphrasing guide"
+            />
             <ToolNextStep
               title="Build an annotated bibliography"
               copy="Summarize, evaluate, and connect a verified source to your research question."
