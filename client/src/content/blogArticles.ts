@@ -2320,15 +2320,17 @@ Once you start revising for clarity, specificity, and stance, your writing usual
     featured: false,
     content: `## Why Academic Writing Skills Improve Slowly for Many Students
 
-Many international students search for "how to improve academic writing skills" because progress often feels uneven. You may understand the topic well, but the final draft still sounds too simple, too translated, or not academic enough.
+Many international students search for "how to improve academic writing skills" because progress can feel uneven. You may understand the topic well, but a draft may still make the claim, evidence, or paragraph logic hard for a reader to follow.
 
-That usually happens because academic writing is not one skill. It combines structure, tone, source use, vocabulary control, and revision.
+Academic writing is not one skill. It brings together argument, structure, source use, vocabulary choices, audience awareness, and revision. “Academic” does not mean making every sentence more complicated; it means making the work’s purpose and evidence easier to evaluate in the conventions of a course or discipline.
 
-The good news is that you do not need to improve everything at once. A few targeted habits can make your writing stronger very quickly.
+> **Fictional learning examples:** All sentences, phrases, and before/after revisions below are invented for practice. They are not real student work or sentences to submit unchanged. Adapt every revision to your own claim, evidence, discipline, and assignment requirements.
+
+You do not need to improve every layer at once. A repeatable routine can make the next draft clearer while helping you notice patterns across assignments.
 
 ## 1. Start by Improving Structure Before Vocabulary
 
-Students often focus on finding more advanced words first. In reality, structure usually matters more.
+Students often focus on finding more advanced words first. Yet a more specialized word cannot repair an unclear claim, unsupported paragraph, or missing connection between evidence and explanation. Start with the work the paper needs to do.
 
 Before editing sentences, ask:
 
@@ -2337,20 +2339,20 @@ Before editing sentences, ask:
 - Do topic sentences guide the reader?
 - Does the paper move logically from one point to the next?
 
-If the structure is weak, stronger vocabulary will not fix the larger problem.
+If the structure is weak, stronger vocabulary will not fix the larger problem. Use the [academic paragraph structure guide](/academic-paragraph-structure/) to check topic sentence, evidence, explanation, and link; use [thesis statement examples](/thesis-statement-examples/) when the controlling claim is still too broad.
 
 ## 2. Build a Small Academic Phrase Bank
 
 You do not need hundreds of expressions. A small set of reliable academic phrases can help you write introductions, comparisons, and conclusions more confidently.
 
-Useful patterns include:
+Useful fictional learning patterns include:
 
 - "This essay argues that..."
 - "A key limitation of this view is..."
 - "The findings suggest that..."
 - "Taken together, these points indicate that..."
 
-If you want more models, the [academic phrase bank](/phrases) can help you find academic English expressions for real assignments.
+Use a phrase only when it accurately describes the evidence and section function. For example, *the findings suggest* is not a substitute for reporting data, and *a key limitation* must name a real limitation. Browse the [academic phrase bank](/phrases) by purpose, including [literature review phrases](/phrases/literature-review/) and [discussion phrases](/phrases/discussion/), rather than copying a phrase because it sounds formal.
 
 ## 3. Revise for Clarity, Not Just Grammar
 
@@ -2372,7 +2374,7 @@ For example:
 
 "Several institutional factors shape how students respond to academic feedback."
 
-The second sentence is stronger because it is more specific and analytical.
+The second sentence is more specific because it names the kind of factors and the relationship being discussed. In a real draft, name the factors only if your evidence supports them.
 
 ## 4. Learn the Difference Between Formal and Informal Style
 
@@ -2386,7 +2388,7 @@ One reason students struggle with academic writing is that spoken English habits
 
 "This suggests that the policy may produce negative outcomes."
 
-The second version sounds more academic because it avoids personal filler and uses cautious wording.
+The second version is more specific about the claim and uses cautious wording. First person is not automatically wrong in academic writing; use or avoid it according to the discipline, genre, and assignment rather than treating one style as universally better.
 
 ## 5. Improve Paragraph Control
 
@@ -2396,7 +2398,7 @@ A good paragraph does more than collect related sentences. It usually:
 2. explains or supports that point
 3. connects the point back to the argument
 
-If your paragraphs feel messy, try writing one sentence in the margin that explains the job of each paragraph. If that sentence is unclear, the paragraph usually needs revision.
+If your paragraphs feel messy, write one sentence in the margin that explains the job of each paragraph. If that sentence is unclear, check whether the paragraph needs a clearer topic sentence, more relevant evidence, fuller explanation, or a better transition. The [academic paragraph structure guide](/academic-paragraph-structure/) provides a fictional learning model for that review.
 
 ## 6. Read Model Texts With a Writer's Eye
 
@@ -2409,7 +2411,7 @@ Look for:
 - how claims are qualified
 - how the conclusion shows significance
 
-This is much more useful than only copying vocabulary.
+This is more useful than copying vocabulary alone. Never imitate another writer’s wording or argument structure without clear quotation, paraphrasing, and citation; use models to notice moves, not to reproduce someone else’s work.
 
 ## 7. Practice Safe Source Use
 
@@ -2422,7 +2424,7 @@ Ask:
 - Did I paraphrase in my own structure?
 - Did I cite it correctly?
 
-If you need help with references, the [citation generator](/citations) can support APA, MLA, Chicago, and IEEE formatting.
+Use [academic integrity and source use](/academic-integrity-and-source-use/) to decide whether to quote, paraphrase, or summarize. The [citation generator](/citations) can support APA, MLA, Chicago, and IEEE formatting after you verify the original source details; it cannot confirm that a source exists or that a paraphrase accurately represents it.
 
 ## 8. Revise One Layer at a Time
 
@@ -2434,7 +2436,7 @@ Trying to fix everything in one read usually leads to weak revision. A better me
 4. academic tone
 5. grammar and citation details
 
-This makes revision faster and more accurate.
+This makes revision more manageable because each pass has a clear purpose. Keep a short log of repeated comments from your instructor, tutor, or own review so the next practice task addresses a real pattern rather than a vague goal.
 
 ## A Weekly Habit for Improving Academic Writing Skills
 
@@ -2445,13 +2447,13 @@ If you want to improve steadily, use one short routine each week:
 3. revise one old paragraph for clarity
 4. compare the original and revised versions
 
-This is often more effective than only doing grammar exercises in isolation.
+This combines reading, noticing, drafting, and reflection around your own coursework. Keep the model’s ideas and wording separate from your own draft, and cite any source-based ideas you use.
 
 ## 9. Get Feedback on Non-Native Phrasing
 
 International students often know what they want to say, but the sentence still sounds translated. That is where targeted feedback matters.
 
-If your draft feels awkward or too direct, [essay polish](/polish) can help identify non-native expressions and rewrite them into clearer academic English.
+If your draft feels awkward or too direct, [essay polish](/polish) can help identify phrasing choices to review. Compare every suggestion with your intended meaning, source evidence, and course policy; you remain responsible for deciding what belongs in the draft.
 
 ## 10. Measure Progress With Real Assignments
 
@@ -2467,15 +2469,19 @@ That gives you a much clearer improvement plan.
 
 ## Related Guides
 
-If you also want to sound more academic at sentence level, read [how to make your essay sound more academic](/blog/how-to-make-your-essay-sound-more-academic).
+If you also want to sound more academic at sentence level, read [how to make your essay sound more academic](/blog/how-to-make-your-essay-sound-more-academic) and [common ESL writing mistakes](/blog/how-to-avoid-common-esl-writing-mistakes).
 
-If source use is part of the problem, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing).
+If source use is part of the problem, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing), build an [annotated bibliography](/annotated-bibliography-example/), and use [source evaluation](/evaluate-academic-sources/) before you cite.
 
-If you need a citation walkthrough, read [APA 7th edition citation format guide with examples](/blog/apa-7th-edition-citation-format-guide-with-examples).
+If you need a citation walkthrough, read [APA 7th edition citation format guide with examples](/blog/apa-7th-edition-citation-format-guide-with-examples) or the [APA 7 non-English sources guide](/apa-7-non-english-sources/) for original-language works and translations.
+
+## Use writing-center guidance and your assignment criteria
+
+The [University of Toronto](https://www.utm.utoronto.ca/rgasc/student-resource-hub/writing-resources/ten-common-grammatical-errors-and-conventions-academic) offers practical examples of sentence-level issues such as agreement, pronoun reference, punctuation, active and passive voice, and wordiness. Use those checks alongside your assignment rubric, which determines the appropriate terminology, evidence, citation style, and level of formality.
 
 ## Conclusion
 
-Learning how to improve academic writing skills is usually less about talent and more about better revision habits. Once you focus on structure, clarity, formal tone, and careful source use, your writing improves in ways teachers can notice very quickly.`,
+Academic writing develops through repeated, evidence-aware revision. Prioritize a clear argument, purposeful paragraph structure, accurate source use, precise wording, and the conventions of the assignment. Keep a realistic record of the patterns you are improving rather than expecting a single tool or phrase list to solve every writing decision.`,
   },
   {
     slug: "how-to-avoid-plagiarism-in-academic-writing",
