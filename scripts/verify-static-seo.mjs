@@ -195,7 +195,7 @@ const pages = [
   ],
   [
     "/results-section-example-research-paper/",
-    "Results section example for a research paper",
+    "How to write a Results section for a research paper",
   ],
   [
     "/methodology-vs-methods-research-paper/",
@@ -203,7 +203,7 @@ const pages = [
   ],
   [
     "/methodology-section-example-research-paper/",
-    "Methodology section example for a research paper",
+    "How to write a Methodology section for a research paper",
   ],
   [
     "/apa-7-non-english-sources/",
@@ -366,6 +366,14 @@ expect(
   resultsPracticeHtml.includes("library.sacredheart.edu"),
   "results practice: university guidance link"
 );
+expect(
+  resultsPracticeHtml.includes("How to write a Results section for a research paper"),
+  "results practice: GSC-aligned how-to intent"
+);
+expect(
+  resultsPracticeHtml.includes("results section sample"),
+  "results practice: sample-query keyword metadata"
+);
 const methodologyPracticeHtml = read(
   "methodology-section-example-research-paper/index.html"
 );
@@ -378,6 +386,23 @@ expect(
     "libguides.usc.edu/writingguide/methodology"
   ),
   "methodology practice: USC guidance link"
+);
+expect(
+  methodologyPracticeHtml.includes("How to write a Methodology section for a research paper"),
+  "methodology practice: GSC-aligned how-to intent"
+);
+expect(
+  methodologyPracticeHtml.includes("sample methodology section"),
+  "methodology practice: sample-query keyword metadata"
+);
+const researchPaperSectionsHtml = read("research-paper-sections/index.html");
+expect(
+  researchPaperSectionsHtml.includes("How to write Methods and Methodology"),
+  "research-paper sections: methodology how-to entry"
+);
+expect(
+  researchPaperSectionsHtml.includes("How to write a Results section"),
+  "research-paper sections: results how-to entry"
 );
 
 const nonEnglishApaHtml = read("apa-7-non-english-sources/index.html");

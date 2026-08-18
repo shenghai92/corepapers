@@ -18,16 +18,16 @@ const sections = [
     icon: FileText,
   },
   {
-    title: "Methods and methodology",
+    title: "How to write Methods and Methodology",
     description:
-      "Explain design, data collection, participants, and analysis with enough detail for readers to follow the study.",
+      "Plan design, participants or sources, procedures, analysis, rationale, and limitations with a practical example and checklist.",
     href: "/methodology-section-example-research-paper",
     icon: FlaskConical,
   },
   {
-    title: "Results",
+    title: "How to write a Results section",
     description:
-      "Report quantitative or qualitative findings clearly before moving into interpretation.",
+      "Report quantitative or qualitative findings in a clear order with a fictional example and checklist before moving into interpretation.",
     href: "/results-section-example-research-paper",
     icon: BookOpenCheck,
   },

@@ -44,15 +44,15 @@ const data = {
   results: {
     canonical: "/results-section-example-research-paper/",
     title:
-      "Results Section Example for a Research Paper: Template and Checklist",
+      "How to Write a Results Section for a Research Paper: Example and Checklist",
     description:
-      "Use a fictional results section example, a research-paper results template, and a checklist for reporting findings without turning them into discussion.",
+      "Learn how to write a results section for a research paper with a fictional example, a practical template, and a checklist for reporting findings without turning them into discussion.",
     keywords:
-      "results section example research paper, results section sample, how to write results section research paper, results section template",
+      "how to write results section research paper, how to write a results section for a research paper, results section example research paper, results section sample, research paper results section example, results section template",
     eyebrow: "Research paper results practice",
-    h1: "Results section example for a research paper",
+    h1: "How to write a Results section for a research paper",
     intro:
-      "Use this fictional learning example to see how a Results section can report findings in a logical order. It is a writing model, not real research data, and it should never replace your own analysis or course requirements.",
+      "Learn how to write a Results section that reports findings in a logical order through this fictional learning example, practical structure, and self-check. It is a writing model, not real research data, and it should never replace your own analysis or course requirements.",
     question: "What did the study find?",
     checklist: [
       "I organised findings around a research question, hypothesis, or clearly named theme.",
@@ -113,15 +113,15 @@ const data = {
   methodology: {
     canonical: "/methodology-section-example-research-paper/",
     title:
-      "Methodology Section Example for a Research Paper: Template and Planner",
+      "How to Write a Methodology Section for a Research Paper: Example and Planner",
     description:
-      "Use a methodology section example, a research-paper methods template, and a practical planner for design, participants, data collection, analysis, and limitations.",
+      "Learn how to write a methodology or methods section for a research paper with a fictional example and planner for design, participants, data collection, analysis, and limitations.",
     keywords:
-      "methodology section example research paper, sample methodology section, methodology section template, how to write methodology section",
+      "how to write methodology section research paper, how to write a methodology section of a research paper, methodology section example research paper, sample methodology section, methodology section template, methods section research paper",
     eyebrow: "Research methodology planner",
-    h1: "Methodology section example for a research paper",
+    h1: "How to write a Methodology section for a research paper",
     intro:
-      "Use this fictional learning example to plan how you will describe your own research design. Replace every bracketed placeholder with verified details from your study and follow any method, ethics, or format requirements from your instructor.",
+      "Learn how to write a Methodology or Methods section through this fictional learning example and planner for describing research design. Replace every bracketed placeholder with verified details from your study and follow any method, ethics, or format requirements from your instructor.",
     question:
       "How was information collected or generated, and how was it analysed?",
     checklist: [

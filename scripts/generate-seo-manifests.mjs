@@ -238,11 +238,11 @@ const STATIC_PAGE_SEO = {
   },
   "/results-section-example-research-paper": {
     title:
-      "Results Section Example for a Research Paper: Template and Checklist | CorePapers",
+      "How to Write a Results Section for a Research Paper: Example and Checklist | CorePapers",
     description:
-      "Use a fictional results section example, a research-paper results template, and a checklist for reporting findings without turning them into discussion.",
+      "Learn how to write a results section for a research paper with a fictional example, practical template, and checklist for reporting findings without turning them into discussion.",
     keywords:
-      "results section example research paper, results section sample, how to write results section research paper, results section template",
+      "how to write results section research paper, how to write a results section for a research paper, results section example research paper, results section sample, research paper results section example, results section template",
   },
   "/methodology-vs-methods-research-paper": {
     title: "Methodology vs. Methods in a Research Paper: Definition and Example | CorePapers",
@@ -251,11 +251,11 @@ const STATIC_PAGE_SEO = {
   },
   "/methodology-section-example-research-paper": {
     title:
-      "Methodology Section Example for a Research Paper: Template and Planner | CorePapers",
+      "How to Write a Methodology Section for a Research Paper: Example and Planner | CorePapers",
     description:
-      "Use a methodology section example, a research-paper methods template, and a practical planner for design, participants, data collection, analysis, and limitations.",
+      "Learn how to write a methodology or methods section for a research paper with a fictional example and planner for design, participants, data collection, analysis, and limitations.",
     keywords:
-      "methodology section example research paper, sample methodology section, methodology section template, how to write methodology section",
+      "how to write methodology section research paper, how to write a methodology section of a research paper, methodology section example research paper, sample methodology section, methodology section template, methods section research paper",
   },
   "/chicago-citation-examples": {
     title: "Chicago Citation Examples: Notes–Bibliography and Author–Date | CorePapers",
