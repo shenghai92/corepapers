@@ -3,7 +3,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
-type Kind = "sources" | "questions" | "evidence";
+type Kind = "sources" | "questions" | "evidence" | "paragraphs";
 const DATA: Record<
   Kind,
   {
@@ -59,6 +59,17 @@ const DATA: Record<
       "https://writingcenter.gmu.edu/writing-resources/research-based-writing/how-to-write-a-research-question",
     sourceLabel: "Read George Mason University Writing Center guidance",
   },
+  paragraphs: {
+    title: "Academic paragraph structure: topic sentence, evidence, and explanation",
+    desc: "Build clearer academic paragraphs with a topic sentence, relevant evidence, explanation, and a purposeful link to the next idea.",
+    eyebrow: "Research foundations",
+    h2: "A paragraph should develop one controllable idea",
+    intro: "Academic paragraphs help readers process an argument in meaningful units. Start with a clear controlling point, introduce relevant evidence, explain its significance, and connect the paragraph to the larger line of reasoning.",
+    checklist: ["Does the opening sentence make a specific point?", "Does the evidence directly support that point?", "Have you explained why the evidence matters?", "Does the final sentence create a logical link or finish the point?"],
+    example: "Fictional learning example: A paragraph may begin by stating that a privacy setting changes what users can share, then cite relevant evidence, explain the relationship, and note that the conclusion is limited to the platform and group studied.",
+    source: "https://writingcenter.unc.edu/tips-and-tools/paragraphs/",
+    sourceLabel: "Read University of North Carolina Writing Center guidance",
+  },
   evidence: {
     title: "Academic argument and evidence: build a claim readers can follow",
     desc: "Learn a practical claim–evidence–explanation–limitation framework for academic paragraphs, with a fictional learning example and source checklist.",
@@ -82,7 +93,7 @@ const DATA: Record<
 };
 export default function ResearchFoundations({ kind }: { kind: Kind }) {
   const d = DATA[kind];
-  const canonical = `/${kind === "sources" ? "evaluate-academic-sources" : kind === "questions" ? "research-question-examples" : "academic-argument-evidence"}/`;
+  const canonical = `/${kind === "sources" ? "evaluate-academic-sources" : kind === "questions" ? "research-question-examples" : kind === "paragraphs" ? "academic-paragraph-structure" : "academic-argument-evidence"}/`;
   return (
     <>
       <SEOHead
@@ -93,7 +104,7 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
             ? "evaluate academic sources checklist, credible sources research paper"
             : kind === "questions"
               ? "research question examples, how to write a research question"
-              : "academic argument evidence example, claim evidence explanation"
+              : kind === "paragraphs" ? "academic paragraph structure, topic sentence evidence explanation" : "academic argument evidence example, claim evidence explanation"
         }
         canonical={canonical}
       />

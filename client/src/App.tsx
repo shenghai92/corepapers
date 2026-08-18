@@ -177,6 +177,7 @@ function Router() {
             </PublicLayout>
           )}
         />
+        <Route path="/academic-paragraph-structure" component={() => <PublicLayout><ResearchFoundations kind="paragraphs" /></PublicLayout>} />
         <Route
           path="/academic-argument-evidence"
           component={() => (

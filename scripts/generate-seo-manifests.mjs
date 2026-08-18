@@ -131,6 +131,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "research question examples, how to write a research question, focused research question",
   },
+  "/academic-paragraph-structure": {
+    title: "Academic Paragraph Structure: Topic Sentence, Evidence, and Explanation | CorePapers",
+    description: "Build clearer academic paragraphs with a topic sentence, relevant evidence, explanation, and a purposeful link to the next idea.",
+    keywords: "academic paragraph structure, topic sentence evidence explanation, research paragraph structure",
+  },
   "/academic-argument-evidence": {
     title: "Academic Argument and Evidence: A Paragraph Framework | CorePapers",
     description:
@@ -290,11 +295,8 @@ const STATIC_PAGES = [
     changefreq: "monthly",
     priority: "0.8",
   },
-  {
-    path: "/academic-argument-evidence/",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
+  { path: "/academic-paragraph-structure/", changefreq: "monthly", priority: "0.8" },
+  { path: "/academic-argument-evidence/", changefreq: "monthly", priority: "0.8" },
   {
     path: "/literature-review-synthesis-matrix/",
     changefreq: "monthly",
