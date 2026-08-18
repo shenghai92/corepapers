@@ -177,6 +177,50 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
               </a>
             </div>
           </section>
+          {kind === "thesis" && (
+            <>
+              <section className="mt-8 p-7 bg-white border border-border rounded-2xl">
+                <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">A drafting sequence, not a one-sentence formula</p>
+                <h2 className="font-serif text-3xl text-slate-purple mb-5">Move from a task and evidence to a supportable working thesis</h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. TASK</p><h3 className="font-serif text-xl text-slate-purple mb-2">Read what the assignment asks</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Determine whether readers need an analysis, interpretation, comparison, evaluation, explanation, proposal, or another kind of controlling statement.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. EVIDENCE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Study the available material</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Collect and organize sources, data, observations, or textual details before deciding what a paper can responsibly claim.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. WORKING CLAIM</p><h3 className="font-serif text-xl text-slate-purple mb-2">State a provisional answer</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Draft the central interpretation or position in your own words. It may change as you discover a better relationship or limitation.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. CALIBRATION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Set scope and certainty</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Name the relevant population, text, setting, time, condition, or reason and match the strength of the wording to the evidence.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. TEST</p><h3 className="font-serif text-xl text-slate-purple mb-2">Map the support path</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Check that planned sections and paragraphs can provide the analysis, evidence, counterpoint, or reasoning a reader needs.</p></article>
+                </div>
+              </section>
+
+              <section className="mt-6 grid lg:grid-cols-2 gap-6">
+                <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                  <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Fictional learning example</p>
+                  <h2 className="font-serif text-3xl text-slate-purple mb-3">A claim becomes useful when it names a supportable relationship</h2>
+                  <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice.</strong> After reviewing a small fictional set of campus-transport materials, a student first writes: “Universities should improve transport.” The statement has a topic and an opinion, but no defined context or reasoning path. For an invented policy-analysis assignment, the student revises it to: “At the fictional Northfield campus, extending the late-evening shuttle route should be prioritized over adding parking permits because the available student-travel records describe the largest unmet need after scheduled classes.” The revision identifies a context, type of claim, comparison, and evidence boundary; it still requires the paper to test whether the fictional records and policy criteria actually support that conclusion.</p>
+                </article>
+                <article className="p-7 bg-white border border-border rounded-2xl">
+                  <h2 className="font-serif text-3xl text-slate-purple mb-4">Match the claim to the work the paper must do</h2>
+                  <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />An analytical thesis interprets evidence, a text, or a relationship; it should not merely summarize the topic.</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />A normative or policy thesis makes a value or action claim and needs criteria, reasons, and attention to relevant alternatives.</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />A descriptive report, research proposal, or literature review may use a purpose statement, question, synthesis claim, or section-level claim instead of the same essay-style thesis.</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />A thesis often appears early, but placement and form should follow the assignment, genre, and disciplinary conventions.</li>
+                  </ul>
+                </article>
+              </section>
+
+              <section className="mt-6 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Test and revise rather than defend the first draft</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://writingcenter.fas.harvard.edu/thesis" target="_blank" rel="noreferrer">Harvard College Writing Center</a> describes a strong thesis as arguable and appropriately scoped to available evidence. <a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/thesis-statements/" target="_blank" rel="noreferrer">UNC Writing Center</a> frames the thesis as an interpretation and map that can begin as a working claim and change as research and drafting proceed. <a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html" target="_blank" rel="noreferrer">Purdue OWL</a> distinguishes debatable, narrow claims from broad statements that cannot be adequately supported. Ask whether your reader can see the answer, why it matters, and how the planned evidence will develop it.</p>
+              </section>
+
+              <section className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <Link href="/research-question-examples" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Start with a workable question</h2><p className="text-sm font-sans text-muted-foreground">Narrow a topic and test whether a realistic evidence path exists.</p></article></Link>
+                <Link href="/academic-argument-evidence" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Build the evidence path</h2><p className="text-sm font-sans text-muted-foreground">Show why evidence supports, complicates, or limits the working claim.</p></article></Link>
+                <Link href="/academic-paragraph-structure" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Develop one point per paragraph</h2><p className="text-sm font-sans text-muted-foreground">Turn a thesis reason into a topic sentence, evidence, and explanation.</p></article></Link>
+                <Link href="/research-paper-outline-template" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Map the paper&apos;s support</h2><p className="text-sm font-sans text-muted-foreground">Check whether each section and heading advances the central purpose.</p></article></Link>
+              </section>
+            </>
+          )}
           {kind === "sources" && (
             <>
               <section className="mt-8 p-7 bg-white border border-border rounded-2xl">

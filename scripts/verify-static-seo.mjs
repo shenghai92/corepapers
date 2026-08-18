@@ -291,6 +291,24 @@ expect(
   "abstract-vs-introduction article: Article JSON-LD"
 );
 
+const thesisStatementHtml = read("thesis-statement-examples/index.html");
+expect(
+  thesisStatementHtml.includes("Thesis statement examples: make an academic claim specific and arguable"),
+  "thesis statements: expected H1"
+);
+expect(thesisStatementHtml.includes("1. Read the task"), "thesis statements: five-step drafting workflow");
+expect(
+  thesisStatementHtml.includes("This fictional learning example is invented for practice"),
+  "thesis statements: fictional-example disclosure"
+);
+expect(thesisStatementHtml.includes("writingcenter.fas.harvard.edu"), "thesis statements: Harvard guidance link");
+expect(thesisStatementHtml.includes("writingcenter.unc.edu"), "thesis statements: UNC guidance link");
+expect(thesisStatementHtml.includes("owl.purdue.edu"), "thesis statements: Purdue guidance link");
+expect(thesisStatementHtml.includes("normative or policy thesis"), "thesis statements: claim-type boundary");
+expect(thesisStatementHtml.includes('/research-question-examples/'), "thesis statements: research-question cluster link");
+expect(thesisStatementHtml.includes('/academic-paragraph-structure/'), "thesis statements: paragraph cluster link");
+expect(thesisStatementHtml.includes('/research-paper-outline-template/'), "thesis statements: outline cluster link");
+
 const researchPaperSectionsHtml = read("research-paper-sections/index.html");
 expect(
   researchPaperSectionsHtml.includes("How to write each section of a research paper"),
