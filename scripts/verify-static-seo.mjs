@@ -71,6 +71,25 @@ expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation 
 expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
 expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
+const apaCitationLandingHtml = read("apa-citation-generator-for-international-students/index.html");
+expect(
+  apaCitationLandingHtml.includes("APA 7 citation generator for international students"),
+  "APA citation landing: expected H1"
+);
+expect(apaCitationLandingHtml.includes("Generate a formatting draft, then verify it"), "APA citation landing: generator-responsibility boundary");
+expect(apaCitationLandingHtml.includes("1. Identify the source type"), "APA citation landing: six-step workflow");
+expect(apaCitationLandingHtml.includes("2. Record original details"), "APA citation landing: source-field preparation");
+expect(apaCitationLandingHtml.includes("4. Match text and reference"), "APA citation landing: in-text-reference matching");
+expect(apaCitationLandingHtml.includes("6. Check source-use responsibility"), "APA citation landing: source-use accountability");
+expect(apaCitationLandingHtml.includes("apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/author-date"), "APA citation landing: official APA author-date guidance link");
+expect(apaCitationLandingHtml.includes('/citations/'), "APA citation landing: citation-generator link");
+expect(apaCitationLandingHtml.includes('/citation-examples/'), "APA citation landing: citation-examples link");
+expect(apaCitationLandingHtml.includes('/blog/complete-apa-7th-edition-guide-international-students/'), "APA citation landing: APA guide link");
+expect(apaCitationLandingHtml.includes('/apa-7-non-english-sources/'), "APA citation landing: non-English APA guide link");
+expect(apaCitationLandingHtml.includes('/academic-integrity-and-source-use/'), "APA citation landing: source-use link");
+expect(apaCitationLandingHtml.includes('/evaluate-academic-sources/'), "APA citation landing: source-evaluation link");
+expect(apaCitationLandingHtml.includes('/polish/'), "APA citation landing: essay-polish link");
+
 const paraphrasingSupportLandingHtml = read("paraphrasing-alternative-for-academic-writing/index.html");
 expect(
   paraphrasingSupportLandingHtml.includes("Academic paraphrasing support for source-based writing"),
