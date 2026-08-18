@@ -71,6 +71,25 @@ expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation 
 expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
 expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
+const academicParaphrasingToolHtml = read("academic-paraphrasing-tool-for-esl-students/index.html");
+expect(
+  academicParaphrasingToolHtml.includes("Academic paraphrasing tool for ESL students"),
+  "academic paraphrasing tool: expected H1"
+);
+expect(academicParaphrasingToolHtml.includes("1. Keep the source details"), "academic paraphrasing tool: six-step workflow");
+expect(academicParaphrasingToolHtml.includes("Fictional learning example"), "academic paraphrasing tool: fictional-example disclosure");
+expect(academicParaphrasingToolHtml.includes("Understand, rebuild, then attribute"), "academic paraphrasing tool: tool-responsibility boundary");
+expect(academicParaphrasingToolHtml.includes("owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"), "academic paraphrasing tool: Purdue guidance link");
+expect(academicParaphrasingToolHtml.includes("writingcenter.gmu.edu/writing-resources/citing-sources/paraphrasing"), "academic paraphrasing tool: George Mason guidance link");
+expect(academicParaphrasingToolHtml.includes("writing.wisc.edu/handbook/quotingsources"), "academic paraphrasing tool: Wisconsin guidance link");
+expect(academicParaphrasingToolHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "academic paraphrasing tool: paraphrasing-guide link");
+expect(academicParaphrasingToolHtml.includes('/academic-integrity-and-source-use/'), "academic paraphrasing tool: source-use link");
+expect(academicParaphrasingToolHtml.includes('/evaluate-academic-sources/'), "academic paraphrasing tool: source-evaluation link");
+expect(academicParaphrasingToolHtml.includes('/citations/'), "academic paraphrasing tool: citation-generator link");
+expect(academicParaphrasingToolHtml.includes('/academic-argument-evidence/'), "academic paraphrasing tool: argument-evidence link");
+expect(academicParaphrasingToolHtml.includes('/academic-writing-examples/'), "academic paraphrasing tool: writing-examples link");
+expect(academicParaphrasingToolHtml.includes('/polish/'), "academic paraphrasing tool: essay-polish link");
+
 const paraphrasingGuideHtml = read("how-to-paraphrase-without-plagiarizing/index.html");
 expect(paraphrasingGuideHtml.includes("Fictional learning example"), "paraphrasing guide: fictional-example disclosure");
 expect(paraphrasingGuideHtml.includes("writingcenter.unc.edu"), "paraphrasing guide: UNC guidance link");

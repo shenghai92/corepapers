@@ -11,11 +11,11 @@ const FAQ = [
   },
   {
     q: "Can it help paraphrased text sound more natural?",
-    a: "Yes. It is useful when a paraphrase sounds too close to the source, too literal, or not academic enough in tone.",
+    a: "It can help you review a paraphrase that sounds too literal or too close to the source. You should first understand the source, rebuild its relevant idea for your own point, compare meanings, and keep the citation; a tool cannot turn synonym swapping into an acceptable paraphrase.",
   },
   {
     q: "What should I use alongside paraphrasing?",
-    a: "Students often pair paragraph revision with citation generation so paraphrased ideas stay both clear and properly attributed.",
+    a: "Keep a record of the original source and page or location, then check the in-text citation and complete reference entry. Use a source-evaluation checklist and citation guide when you need to verify the source record or format.",
   },
 ];
 
@@ -109,6 +109,20 @@ export default function SeoLandingParaphrase() {
             </div>
           </div>
 
+          <section className="max-w-5xl mx-auto mb-10 p-7 bg-white border border-border rounded-2xl shadow-card">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Understand, rebuild, then attribute</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">A six-step academic paraphrasing workflow</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. RECORD</p><h3 className="font-serif text-xl text-slate-purple mb-2">Keep the source details</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Note author, title, publication details, page or location, and required citation system before you begin so the source remains traceable.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. UNDERSTAND</p><h3 className="font-serif text-xl text-slate-purple mb-2">Read for the full idea</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Read the passage and surrounding context until you can explain its claim, evidence, qualification, and purpose without relying on the original wording.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. SELECT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Choose what your point needs</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Identify the limited idea, result, definition, or contrast that genuinely advances your paragraph—not every detail from the source.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. REBUILD</p><h3 className="font-serif text-xl text-slate-purple mb-2">Set the source aside</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Explain the relevant idea in a structure, sequence, and emphasis that fit your own claim. Do not replace source words one by one while retaining its sentence pattern.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. COMPARE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check accuracy and distance</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Return to the source and correct any shift in scope, certainty, evidence, or meaning. Quote and mark any distinctive wording you must retain.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">6. ATTRIBUTE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Credit the borrowed idea</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Place the required in-text citation or note where readers can see what it supports, and make sure a matching full reference is present.</p></article>
+            </div>
+            <p className="text-sm font-sans text-primary font-medium mt-5">A revision tool can help you inspect your own draft, but it cannot verify the original source, determine shared versus distinctive language, or decide whether a paraphrase accurately represents the author&apos;s idea.</p>
+          </section>
+
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 mb-10">
             {[
               "Make source-based writing sound more like your own academic voice.",
@@ -132,34 +146,13 @@ export default function SeoLandingParaphrase() {
               <h2 className="font-serif text-3xl text-slate-purple mb-4">
                 How to paraphrase an academic source responsibly
               </h2>
-              <ol className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed list-decimal list-inside">
-                <li>
-                  <strong className="text-foreground">
-                    Understand the source first.
-                  </strong>{" "}
-                  Identify the claim, evidence, and qualification before you try
-                  to change the wording.
-                </li>
-                <li>
-                  <strong className="text-foreground">
-                    Write the idea in a new structure.
-                  </strong>{" "}
-                  Do more than exchange individual synonyms; organise the
-                  sentence in the way that best fits your own argument.
-                </li>
-                <li>
-                  <strong className="text-foreground">
-                    Compare for accuracy.
-                  </strong>{" "}
-                  Make sure your version does not overstate, omit, or distort
-                  the original meaning.
-                </li>
-                <li>
-                  <strong className="text-foreground">Cite the source.</strong>{" "}
-                  A paraphrase still needs a citation because the underlying
-                  idea or evidence came from another author.
-                </li>
-              </ol>
+              <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
+                <p><strong className="text-foreground">Fictional learning example.</strong> This invented practice scenario is not a source, result, or sentence to submit. A fictional writer reads a study, identifies only the limitation relevant to a paragraph, closes the source, explains that limit in a new sentence sequence, then reopens the study to check that its scope and cautious wording remain accurate before adding a citation.</p>
+                <p>That approach is different from replacing individual words while retaining the source&apos;s structure. A new vocabulary item does not create a new paraphrase; the writer must understand, select, organize, and explain the idea for a real purpose in the draft.</p>
+              </div>
+              <p className="mt-5 text-sm text-muted-foreground font-sans leading-relaxed">
+                <a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html" target="_blank" rel="noreferrer">Purdue OWL</a> recommends understanding the passage, putting it aside, creating a new rendition, checking against the original, marking unique borrowed wording, and recording the source. <a className="text-primary underline underline-offset-4" href="https://writingcenter.gmu.edu/writing-resources/citing-sources/paraphrasing" target="_blank" rel="noreferrer">George Mason University Writing Center</a> warns that synonym-by-synonym patchwriting remains unacceptable because it keeps the source&apos;s structure rather than serving the writer&apos;s own purpose.
+              </p>
               <p className="mt-5 text-sm text-muted-foreground font-sans leading-relaxed">
                 For a source-use decision guide and a labelled example, read{" "}
                 <Link
@@ -170,7 +163,7 @@ export default function SeoLandingParaphrase() {
                 </Link>
                 . You can also review{" "}
                 <Link
-                  href="/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing"
+                  href="/how-to-paraphrase-without-plagiarizing"
                   className="text-primary underline"
                 >
                   how to paraphrase without plagiarizing
@@ -274,7 +267,7 @@ export default function SeoLandingParaphrase() {
             </div>
           </div>
 
-          <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
+          <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link href="/pricing" className="block">
               <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
                 <h2 className="font-serif text-2xl text-slate-purple mb-2">
@@ -288,13 +281,32 @@ export default function SeoLandingParaphrase() {
             </Link>
             <Link href="/academic-integrity-and-source-use" className="block">
               <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
-                <h2 className="font-serif text-2xl text-slate-purple mb-2">
-                  Use sources with confidence
-                </h2>
-                <p className="text-sm text-muted-foreground font-sans leading-relaxed">
-                  Decide whether an idea needs a quotation, paraphrase, summary,
-                  and citation before returning to the tool for revision.
-                </p>
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Use sources with confidence</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Decide whether an idea needs a quotation, paraphrase, summary, and citation before returning to the tool for revision.</p>
+              </div>
+            </Link>
+            <Link href="/evaluate-academic-sources" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Evaluate the source first</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Check author, purpose, evidence, currency, and record quality before a clean paraphrase gives weak material undeserved authority.</p>
+              </div>
+            </Link>
+            <Link href="/citations" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Generate, then verify a citation</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Create a reference only from source details checked against the item you actually read and use.</p>
+              </div>
+            </Link>
+            <Link href="/academic-argument-evidence" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Connect evidence to an argument</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Use a paraphrase to advance a claim with explanation, not to replace your own reasoning.</p>
+              </div>
+            </Link>
+            <Link href="/academic-writing-examples" className="block">
+              <div className="p-6 bg-white border border-border rounded-2xl hover:border-primary/30 hover:shadow-card transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Analyse academic writing examples</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Transfer a rhetorical move into your own verified content rather than copying a polished source-based model.</p>
               </div>
             </Link>
           </div>
