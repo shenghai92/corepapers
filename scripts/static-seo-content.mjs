@@ -208,6 +208,17 @@ const PAGE_CONTENT = {
 };
 
 Object.assign(PAGE_CONTENT, {
+  "/academic-paragraph-structure/": `
+    <p class="eyebrow">Research foundations</p>
+    <h1>Academic paragraph structure: topic sentence, evidence, and explanation</h1>
+    <p class="lead">Build clearer academic paragraphs by developing one focused point with relevant evidence, careful explanation, and a purposeful connection to the next idea.</p>
+    <section><h2>Give every paragraph one job</h2><p>A paragraph is more than a group of related sentences. In academic writing, it should help a reader follow one controllable stage of your argument. Begin with a focused point, select evidence that supports that point, explain the connection, and use the final sentence to complete or extend the line of reasoning.</p></section>
+    <section><h2>A practical paragraph sequence</h2><ul><li><strong>Topic sentence:</strong> state the specific point the paragraph will develop.</li><li><strong>Evidence:</strong> introduce data, an example, or a source-based finding that is relevant to that point.</li><li><strong>Explanation:</strong> show the reader why the evidence supports the point rather than letting a quotation stand alone.</li><li><strong>Link:</strong> close the idea or connect it logically to the next paragraph.</li></ul></section>
+    <section><h2>Fictional learning example</h2><p>This is a fictional learning example, not a real student submission or a source to cite. A writer may first argue that a platform’s privacy setting affects how users share information. They can then introduce evidence from a relevant study, explain that the setting changes what users can control, and qualify the conclusion so it applies only to the group and platform studied. The paragraph becomes persuasive because the writer explains the evidence and respects its limits.</p></section>
+    <section><h2>Check before you move on</h2><ul><li>Can a reader find your paragraph’s point in the opening sentence?</li><li>Does each piece of evidence support that same point?</li><li>Have you explained the significance of the evidence in your own words?</li><li>Have you kept the claim no stronger than the evidence allows?</li><li>Does the end of the paragraph create a logical next step?</li></ul></section>
+    <section><h2>Learn from writing-center guidance</h2><p>The [University of North Carolina Writing Center paragraph guide](https://writingcenter.unc.edu/tips-and-tools/paragraphs/) explains paragraph development as a way to help readers follow a writer’s controlling point. Requirements vary by discipline and assignment, so use your instructor’s guidance where it differs.</p></section>
+    <section class="seo-grid"><article><h2>Build an evidence-based argument</h2><p>Learn a cautious claim–evidence–explanation framework for research writing.</p><p><a href="/academic-argument-evidence/">Read the argument and evidence guide</a></p></article><article><h2>Revise a drafted paragraph</h2><p>Review clarity and academic tone after you have developed the idea and checked the evidence.</p><p><a href="/polish/">Open Essay Polish</a></p></article></section>
+    ${tools}`,
   "/academic-integrity-and-source-use/": `
     <p class="eyebrow">Source-based writing guide</p>
     <h1>Academic integrity starts with clear source use</h1>
