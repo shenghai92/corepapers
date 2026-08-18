@@ -51,6 +51,12 @@ function checkPage(route, expectedH1) {
   );
 }
 
+const polishHtml = read("polish/index.html");
+expect(polishHtml.includes("fictional learning sample"), "Essay Polish: fictional learning-sample disclosure");
+expect(polishHtml.includes("What an essay polisher cannot decide"), "Essay Polish: tool-responsibility boundary");
+expect(polishHtml.includes('/academic-paragraph-structure/'), "Essay Polish: paragraph-structure learning link");
+expect(polishHtml.includes('/academic-integrity-and-source-use/'), "Essay Polish: source-use learning link");
+
 const pages = [
   ["/", "Improve academic English without losing your meaning"],
   ["/polish/", "AI essay polisher for clearer academic English"],

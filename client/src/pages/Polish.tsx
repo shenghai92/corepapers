@@ -27,7 +27,7 @@ const SUGGESTION_LABELS: Record<string, string> = {
   formality: "Formality",
 };
 
-const SAMPLE_TEXT = `The research show that many student have difficulty in writing academic paper. In my opinion, I think the main reason is because they don't have enough vocabulary. Also, the grammar is very important for writing good essay. This study will discuss about the factors that affect student performance and give some suggestion to improve the situation.`;
+const SAMPLE_TEXT = `The research show that many student have difficulty in writing academic paper. In my opinion, I think the main reason is because they don't have enough vocabulary. Also, the grammar is very important for writing good essay. This study will discuss about the factors that affect student performance and give some suggestion to improve the situation.`; // Fictional learning sample only; do not submit unchanged.
 
 const POLISH_SCHEMA = {
   "@context": "https://schema.org",
@@ -108,7 +108,7 @@ export default function Polish() {
               AI essay polisher for clearer academic English
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Paste your essay, report, or research paragraph below. CorePapers identifies non-native expressions, upgrades weak phrasing, and explains every revision so international students can improve the draft and learn from it.
+              Paste your essay, report, or research paragraph below. CorePapers highlights wording, sentence, stance, and formality choices for you to review, then explains each suggestion so you can keep control of your meaning and learn from the draft.
             </p>
           </div>
 
@@ -158,7 +158,7 @@ export default function Polish() {
                   onClick={() => setText(SAMPLE_TEXT)}
                   className="text-xs text-primary hover:underline font-sans"
                 >
-                  Try sample text
+                  Try fictional learning sample
                 </button>
               </div>
               <Textarea
@@ -186,6 +186,9 @@ export default function Polish() {
               </Button>
               <p className="text-xs text-center text-muted-foreground font-sans">
                 Free usage includes up to 300 words per polish, 1,000 AI polish words per day, and 5 polish runs per day.
+              </p>
+              <p className="text-xs text-center text-muted-foreground font-sans leading-relaxed">
+                The fictional learning sample is only for practice. Review every suggestion against your intended meaning, evidence, citations, and course policy before using it in a draft.
               </p>
               {!isAuthenticated && (
                 <p className="text-xs text-center text-muted-foreground font-sans">
@@ -307,9 +310,9 @@ export default function Polish() {
             <>
               <div className="max-w-4xl mx-auto mt-12 grid sm:grid-cols-3 gap-4">
                 {[
-                  { icon: "01", title: "Detects Mother-Tongue Interference", desc: "Identifies Chinglish, Spanglish, and other non-native patterns specific to your language background." },
-                  { icon: "02", title: "Academic Vocabulary Upgrade", desc: "Replaces informal or basic words with more precise academic vocabulary." },
-                  { icon: "03", title: "Learn From Every Change", desc: "Every suggestion includes a clear explanation so you improve your writing skills over time." },
+                  { icon: "01", title: "Review Language-Influenced Phrasing", desc: "Highlights wording or sentence patterns that may be unclear, literal, or less suitable for the academic context you choose." },
+                  { icon: "02", title: "Consider More Precise Wording", desc: "Offers revision options for you to compare with your intended meaning, evidence, discipline, and assignment requirements." },
+                  { icon: "03", title: "Learn From Every Change", desc: "Every suggestion includes an explanation so you can decide whether to accept, adapt, or reject it and build your own revision habits." },
                 ].map((item) => (
                   <div key={item.title} className="p-5 bg-white border border-border rounded-xl">
                     <div className="text-sm font-sans font-semibold text-primary mb-3">{item.icon}</div>
@@ -319,7 +322,7 @@ export default function Polish() {
                 ))}
               </div>
 
-              <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
+              <div className="max-w-4xl mx-auto mt-10 grid sm:grid-cols-3 gap-4">
                 <Link href="/phrases" className="block">
                   <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
                     <h2 className="font-serif text-2xl text-slate-purple mb-2">Need better academic phrases?</h2>
@@ -332,7 +335,15 @@ export default function Polish() {
                   <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
                     <h2 className="font-serif text-2xl text-slate-purple mb-2">Need citations too?</h2>
                     <p className="text-sm text-muted-foreground font-sans leading-relaxed">
-                      Generate APA, MLA, Chicago, and IEEE references after polishing your draft.
+                      Generate APA, MLA, Chicago, and IEEE references after checking the original source details.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/blog/how-to-improve-academic-writing-skills-for-international-students" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Build a revision routine</h2>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">
+                      Improve argument, paragraph flow, clarity, tone, and source use one focused layer at a time.
                     </p>
                   </div>
                 </Link>
@@ -358,6 +369,16 @@ export default function Polish() {
                       href: "/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing",
                       title: "Paraphrasing without plagiarism",
                       desc: "Revise source-based writing more safely and naturally.",
+                    },
+                    {
+                      href: "/academic-paragraph-structure",
+                      title: "Academic paragraph structure",
+                      desc: "Check that clearer sentences still support a focused claim, evidence, and explanation.",
+                    },
+                    {
+                      href: "/academic-integrity-and-source-use",
+                      title: "Academic integrity and source use",
+                      desc: "Keep citations and attribution accurate after revising source-based language.",
                     },
                   ].map((item) => (
                     <Link key={item.href} href={item.href} className="block">
