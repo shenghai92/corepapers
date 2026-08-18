@@ -233,6 +233,32 @@ const pages = [
 ];
 pages.forEach(([route, h1]) => checkPage(route, h1));
 
+const academicWritingExamplesHtml = read("academic-writing-examples/index.html");
+expect(
+  academicWritingExamplesHtml.includes("Academic writing examples for research papers and essays"),
+  "academic writing examples: expected H1"
+);
+expect(academicWritingExamplesHtml.includes("1. Check the writing situation"), "academic writing examples: six-step workflow");
+expect(
+  academicWritingExamplesHtml.includes("Fictional learning example 1"),
+  "academic writing examples: first fictional-example disclosure"
+);
+expect(
+  academicWritingExamplesHtml.includes("Fictional learning example 2"),
+  "academic writing examples: methods fictional-example disclosure"
+);
+expect(
+  academicWritingExamplesHtml.includes("Fictional learning example 3"),
+  "academic writing examples: results fictional-example disclosure"
+);
+expect(academicWritingExamplesHtml.includes("Transfer the move, not the sentence"), "academic writing examples: transfer boundary");
+expect(academicWritingExamplesHtml.includes("writersworkshop.illinois.edu"), "academic writing examples: Illinois guidance link");
+expect(academicWritingExamplesHtml.includes("miamioh.edu"), "academic writing examples: Miami guidance link");
+expect(academicWritingExamplesHtml.includes("purdueglobalwriting.center"), "academic writing examples: Purdue Global integrity link");
+expect(academicWritingExamplesHtml.includes('/thesis-statement-examples/'), "academic writing examples: thesis cluster link");
+expect(academicWritingExamplesHtml.includes('/academic-paragraph-structure/'), "academic writing examples: paragraph cluster link");
+expect(academicWritingExamplesHtml.includes('/academic-integrity-and-source-use/'), "academic writing examples: source-use cluster link");
+
 const researchPaperTemplatesHtml = read("research-paper-templates/index.html");
 expect(
   researchPaperTemplatesHtml.includes("Research paper templates for methods, results, and discussion"),

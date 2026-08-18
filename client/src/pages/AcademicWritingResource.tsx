@@ -315,9 +315,23 @@ function ExamplesPage() {
                 <span className="italic">make it your own</span>
               </>
             }
-            description="These short, synthetic examples show how a sentence changes when you move from source notes to a paraphrase, a methods description, or a results statement."
+            description="Use fictional learning examples to identify a writing move, the evidence or source relationship behind it, and the task-specific choices you must rebuild for your own paper."
           />
-          <section className={`max-w-4xl mx-auto ${commonClass.card}`}>
+
+          <section className={`max-w-5xl mx-auto ${commonClass.card}`}>
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">A method for learning from examples, not reproducing them</p>
+            <h2 className={commonClass.title}>Read a model for its decisions before you borrow its surface language</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. TASK</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check the writing situation</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Compare your assignment&apos;s purpose, reader, genre, discipline, evidence type, and length with the example before treating it as relevant.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. FUNCTION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Name what the passage does</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Ask whether it frames a problem, makes a claim, introduces evidence, explains a result, marks a limitation, or guides readers to a next step.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. RELATIONSHIP</p><h3 className="font-serif text-xl text-slate-purple mb-2">Trace claim and support</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Identify which information is the writer&apos;s point, which comes from a source or data, how it is cited, and what reasoning connects them.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. CHOICE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Notice rhetorical decisions</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Look for scope, certainty, order, transitions, terminology, and how the language is adjusted for audience and purpose.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. REBUILD</p><h3 className="font-serif text-xl text-slate-purple mb-2">Write from your own record</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Use your verified topic, sources, data, design, findings, and course requirements to create a new passage that performs the same kind of job.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">6. REVIEW</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check attribution and fit</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Confirm that borrowed wording or ideas are handled accurately, the claim fits the evidence, and the result responds to your own assignment.</p></article>
+            </div>
+          </section>
+
+          <section className={`max-w-4xl mx-auto mt-8 ${commonClass.card}`}>
             <p className="text-sm font-sans text-primary font-medium">
               Important: every example below is fictional and simplified for
               learning. Replace the bracketed details with your own evidence,
@@ -333,7 +347,7 @@ function ExamplesPage() {
               <div className="flex items-center gap-2 text-primary mb-3">
                 <Scale size={18} />
                 <span className="text-xs font-sans font-semibold uppercase tracking-wider">
-                  Example 1 · Source-based writing
+                  Fictional learning example 1 · Source-based writing
                 </span>
               </div>
               <h2 className={commonClass.title}>
@@ -370,7 +384,7 @@ function ExamplesPage() {
               <div className="flex items-center gap-2 text-primary mb-3">
                 <FileCheck2 size={18} />
                 <span className="text-xs font-sans font-semibold uppercase tracking-wider">
-                  Example 2 · Methods section
+                  Fictional learning example 2 · Methods section
                 </span>
               </div>
               <h2 className={commonClass.title}>Name what you actually did</h2>
@@ -392,7 +406,7 @@ function ExamplesPage() {
               <div className="flex items-center gap-2 text-primary mb-3">
                 <BookOpenCheck size={18} />
                 <span className="text-xs font-sans font-semibold uppercase tracking-wider">
-                  Example 3 · Results section
+                  Fictional learning example 3 · Results section
                 </span>
               </div>
               <h2 className={commonClass.title}>
@@ -416,18 +430,65 @@ function ExamplesPage() {
             </article>
           </section>
 
-          <section className="max-w-4xl mx-auto mt-8 grid sm:grid-cols-2 gap-4">
+          <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6">
+            <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Transfer the move, not the sentence</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed">A useful example can show that a Methods passage identifies a design, source or participants, collection path, and analysis; or that a Results passage reports what was found before discussing why it matters. It cannot supply your approved procedure, data, source interpretation, citation, or conclusion. If your task, evidence, discipline, or reader differs, the structure and wording may need to differ as well.</p>
+            </article>
+            <article className="p-7 bg-white border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Use writing-center guidance when you analyse a model</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><ExternalLink href="https://writersworkshop.illinois.edu/resources-2/writer-resources/academic-writing/rhetorical-analysis/">University of Illinois Writers Workshop</ExternalLink> recommends analysing a text&apos;s audience, purpose, context, message, medium, and genre rather than simply summarizing it. <ExternalLink href="https://miamioh.edu/howe-center/hwc/writing-resources/handouts/types-of-writing/rhetorical-analyses.html">Miami University Howe Writing Center</ExternalLink> distinguishes description, analysis, and evaluation, including the relationship between claim, support, and warrant. <ExternalLink href="https://purdueglobalwriting.center/writing-with-integrity/">Purdue Global Writing Center</ExternalLink> explains that research-based writing develops an original contribution while accurately integrating and documenting others&apos; ideas.</p>
+            </article>
+          </section>
+
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <ToolNextStep
               title="Find section phrases"
-              copy="Adapt sentence starters for your methods and results instead of copying a complete model."
+              copy="Adapt sentence starters only after identifying the writing move and evidence relationship you need."
               href="/phrases"
               label="Browse Phrase Library"
             />
             <ToolNextStep
               title="Learn the full structure"
-              copy="Use the research-paper hub when you need the purpose and sequence for each section."
+              copy="Check the purpose and sequence of each research-paper section before adapting a short passage."
               href="/research-paper-sections"
               label="Explore paper sections"
+            />
+            <ToolNextStep
+              title="Build a supportable thesis"
+              copy="Start from a question and evidence path before using a model to refine an academic claim."
+              href="/thesis-statement-examples"
+              label="Use thesis guide"
+            />
+            <ToolNextStep
+              title="Develop the paragraph"
+              copy="Turn a claim and source into a focused point, explanation, limitation, and meaningful transition."
+              href="/academic-paragraph-structure"
+              label="Use paragraph guide"
+            />
+            <ToolNextStep
+              title="Explain evidence clearly"
+              copy="Keep citations close to ideas and show how evidence supports, complicates, or limits the claim."
+              href="/academic-argument-evidence"
+              label="Use argument guide"
+            />
+            <ToolNextStep
+              title="Practise a paper section"
+              copy="Use detailed Introduction, Results, Discussion, and Conclusion examples with their own learning boundaries."
+              href="/research-paper-templates"
+              label="Open section templates"
+            />
+            <ToolNextStep
+              title="Paraphrase with attribution"
+              copy="Reshape a source after understanding it; do not copy a model&apos;s source relationship or wording."
+              href="/how-to-paraphrase-without-plagiarizing"
+              label="Read paraphrasing guide"
+            />
+            <ToolNextStep
+              title="Protect academic integrity"
+              copy="Check whether quoted, paraphrased, summarized, or source-derived material is clearly and accurately documented."
+              href="/academic-integrity-and-source-use"
+              label="Read source-use guide"
             />
           </section>
         </div>
