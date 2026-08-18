@@ -51,6 +51,10 @@ function checkPage(route, expectedH1) {
   );
 }
 
+const homeHtml = read("index.html");
+expect(homeHtml.includes('/ieee-citation-examples/'), "home: IEEE citation examples resource link");
+expect(homeHtml.includes('/chicago-citation-examples/'), "home: Chicago citation examples resource link");
+
 const citationGeneratorHtml = read("citations/index.html");
 expect(citationGeneratorHtml.includes("Chicago 18"), "citation generator: current Chicago 18 label");
 expect(!citationGeneratorHtml.includes("Chicago 17"), "citation generator: no stale Chicago 17 label");

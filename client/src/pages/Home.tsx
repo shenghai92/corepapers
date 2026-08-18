@@ -57,6 +57,16 @@ const RESOURCE_CENTERS = [
     desc: "Cite original-language sources, published translations, and transliterated titles carefully.",
   },
   {
+    title: "IEEE Citation Examples",
+    href: "/ieee-citation-examples",
+    desc: "Use bracketed in-text numbers and a reference list ordered by first appearance for technical writing.",
+  },
+  {
+    title: "Chicago 18 Citation Examples",
+    href: "/chicago-citation-examples",
+    desc: "Choose Notes–Bibliography or Author–Date before formatting Chicago references.",
+  },
+  {
     title: "Research Foundations",
     href: "/evaluate-academic-sources",
     desc: "Evaluate sources, focus a research question, shape a thesis, and build an evidence-based argument.",
