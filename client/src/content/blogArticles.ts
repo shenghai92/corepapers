@@ -1816,11 +1816,11 @@ A good research proposal is clear about purpose, limited in scope, and realistic
     featured: false,
     content: `## What the Methodology Section Is For
 
-The methodology section explains exactly how your study was conducted and, crucially, why those specific choices make sense for your research question. Readers should come away knowing what kind of research you did, what data you used, and how you analyzed it.
+A methods or methodology section explains how a study was conducted and, where the assignment expects it, why the chosen approach fits the research question. Readers should be able to identify the design, data or participants, collection process, and analysis—not infer them from vague phrases such as “data was collected and analyzed.”
 
-This section is often difficult for ESL students because writers either become too vague ("data was collected and analyzed") or include every minor procedural detail without a clear, logical structure.
+The terms are not always used the same way. **Methods** commonly refers to the concrete procedures used to collect and analyze information. **Methodology** commonly explains the reasoning, assumptions, and design rationale behind those procedures. Many course guides use “methodology section” for both; follow the convention in your assignment, discipline, journal, or supervisor guidance.
 
-**The simplest answer to "how do I write a methodology section" is this:** Explain the research design, data source or participants, data collection process, and method of analysis in a clear, sequential order that another researcher could follow and replicate.
+**The simplest planning answer is this:** Explain the research design, data source or participants, collection process, method of analysis, and the rationale or limitations that matter for your research question. Give readers enough accurate detail to understand and evaluate the study—without turning the section into results or a generic how-to manual.
 
 ## What to Include in a Methodology Section
 
@@ -1834,7 +1834,7 @@ Depending on your academic field, a methodology section may include:
 - Method of analysis
 - Ethical considerations
 
-Not every paper needs every single subsection, but most strong methodology sections address all of these points in a clear sequence.
+Not every paper needs every subsection, and some disciplines combine or rename them. Use the headings, sequence, level of procedural detail, and ethical language required by your own course or field.
 
 ## A Simple Methodology Section Structure
 
@@ -1849,15 +1849,17 @@ Many students find it much easier to write the section when they treat it as a p
 
 You do not always need these as formal subheadings, but following this order helps the reader understand what happened and why.
 
-## Full Sample Methodology Section (Social Science Paper)
+## Fictional Learning Example: Methodology Section (Social Science)
 
-The following sample shows what a complete, well-written methodology section looks like in a student research paper:
+The following is a fictional learning example. The study context, participants, methods, and process are invented for practice; they are not a real study, approved protocol, or text to submit unchanged. Replace every detail with verified information from your own research and course requirements.
 
-> "This study used a qualitative case study design to examine how first-year international students used AI writing feedback during a twelve-week academic writing course at a large urban university. The participants were fourteen undergraduate students from three language backgrounds who had all completed at least one major essay in English before the interview stage. They were recruited through an open course invitation and gave written consent for their draft comments and interview responses to be analyzed anonymously.
+> "This fictional study used a qualitative case study design to examine how first-year international students used AI writing feedback during a twelve-week academic writing course at a large urban university. The participants were fourteen undergraduate students from three language backgrounds who had all completed at least one major essay in English before the interview stage. They were recruited through an open course invitation and gave written consent for their draft comments and interview responses to be analyzed anonymously.
 >
 > Data were collected from two sources: semi-structured interviews and annotated essay drafts. Each participant completed one thirty-minute interview focused on revision choices, confidence, and perceived usefulness of the feedback. In addition, two drafts per participant were collected in order to compare original phrasing with revised versions after feedback. This combination allowed the study to compare what students said about revision with what they actually changed in their writing.
 >
-> The data were analyzed through thematic coding. Interview transcripts were first read closely to identify repeated themes related to clarity, trust, confusion, and revision strategy. Draft changes were then grouped into categories such as grammar correction, vocabulary change, sentence restructuring, and idea development. The coding process was iterative, meaning categories were refined after repeated reading of both interview and draft data. This method was chosen because it allowed the study to connect student perception with visible revision behavior in a clear and systematic way."
+> The data were analyzed through thematic coding. Interview transcripts were first read closely to identify repeated themes related to clarity, trust, confusion, and revision strategy. Draft changes were then grouped into categories such as grammar correction, vocabulary change, sentence restructuring, and idea development. The coding process was iterative, meaning categories were refined after repeated reading of both interview and draft data. This fictional method was chosen because it allowed the study to connect participant accounts with visible revision behavior in a clear and systematic way."
+
+The example explains a design, source selection, collection, analysis, and limited rationale. It does **not** report themes or conclusions, claim that the design proves causation, or replace ethics approval and consent requirements.
 
 ## Step 1: Start With the Research Design
 
@@ -1876,7 +1878,7 @@ For example, instead of vaguely writing "Data was collected from students," expl
 
 ## Step 3: Describe the Sample Specifically
 
-Be specific about who or what was included. Sample size, context, and selection criteria all matter because they directly shape how far the findings can be generalized to other populations.
+Be specific about who or what was included. Sample size, context, and selection criteria shape the scope of what a study can describe or infer. Do not claim that a sample represents a wider population unless the design and sampling justify that conclusion.
 
 ## Step 4: Explain the Analysis Method in Detail
 
@@ -1901,7 +1903,15 @@ The methodology section explains the process, not the findings. Save all results
 
 ### Using complicated language to hide uncertainty
 
-Simple, precise wording is always stronger than abstract or overly technical phrasing.
+Simple, precise wording is usually stronger than abstract or overly technical phrasing. State what you did, why it fits the question, and any important limitations rather than using terminology that does not add information.
+
+### Confusing procedures with results
+
+A sentence about interviews, surveys, sample selection, coding, or statistical analysis belongs in Methods when it explains the process. A sentence about what a pattern, theme, or test showed belongs in Results or Discussion when your discipline separates those sections.
+
+## Use discipline-aware guidance before finalizing
+
+[USC Libraries](https://libguides.usc.edu/writingguide/methodology) explains that a methods section describes research actions and the rationale for procedures used to collect and analyze information. Its guide distinguishes technical methods from methodology as the underlying reasoning for choosing a method. Use the [Methodology vs. Methods guide](/methodology-vs-methods-research-paper/) for a plain-language comparison, the [Methodology section example](/methodology-section-example-research-paper/) for a fictional planning model, and [Methods phrases](/phrases/methods/) only after you have verified the study details.
 
 ## Useful Sentence Patterns for the Methodology Section
 
@@ -1911,7 +1921,7 @@ Simple, precise wording is always stronger than abstract or overly technical phr
 - "The data were analyzed using..."
 - "This method was chosen because..."
 - "A total of [X] participants were recruited from..."
-- "The study was approved by the institutional ethics committee."
+- "The study was approved by the institutional ethics committee." **Use only if this is accurate and your institution requires or has granted that approval.**
 
 ## A Fast Methodology Section Checklist
 
@@ -1923,7 +1933,7 @@ Before you submit, check whether a reader can identify:
 - how the data was analysed
 - the ethics, limitations, or selection criteria that matter for interpreting the study
 
-For editable wording by task, browse [academic phrases for methods sections](/phrases/methods/). If your own completed draft still sounds repetitive or awkward, use [CorePapers Essay Polish](/polish) to review phrasing without replacing the details of your study.`,
+For editable wording by task, browse [academic phrases for methods sections](/phrases/methods/) and the [Methodology vs. Methods guide](/methodology-vs-methods-research-paper/). If your own completed draft still sounds repetitive or awkward, use [CorePapers Essay Polish](/polish) to review phrasing without replacing, inventing, or obscuring the verified details of your study.`,
   },
   {
     slug: "mla-9th-edition-guide-for-international-students",
