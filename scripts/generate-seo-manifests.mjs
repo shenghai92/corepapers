@@ -116,6 +116,28 @@ const STATIC_PAGE_SEO = {
     keywords:
       "research paper template, methods section template, results section template, discussion section template, research writing checklist",
   },
+  "/evaluate-academic-sources": {
+    title: "How to Evaluate Academic Sources: A Student Checklist | CorePapers",
+    description:
+      "Evaluate academic sources by checking authorship, purpose, evidence, timeliness, references, and cross-checking before you cite.",
+    keywords:
+      "evaluate academic sources checklist, credible sources research paper, source credibility checklist",
+  },
+  "/research-question-examples": {
+    title:
+      "Research Question Examples: Clear, Focused, and Arguable | CorePapers",
+    description:
+      "Turn a broad topic into a clear, focused, complex, and arguable research question with fictional examples and a revision checklist.",
+    keywords:
+      "research question examples, how to write a research question, focused research question",
+  },
+  "/academic-argument-evidence": {
+    title: "Academic Argument and Evidence: A Paragraph Framework | CorePapers",
+    description:
+      "Use a claim–evidence–explanation–limitation framework to write academic paragraphs readers can follow.",
+    keywords:
+      "academic argument evidence example, claim evidence explanation, research paper argument",
+  },
   "/literature-review-synthesis-matrix": {
     title:
       "How to Synthesize Sources in a Literature Review: Matrix and Example | CorePapers",
@@ -255,6 +277,21 @@ const STATIC_PAGES = [
   },
   {
     path: "/research-paper-templates/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/evaluate-academic-sources/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/research-question-examples/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/academic-argument-evidence/",
     changefreq: "monthly",
     priority: "0.8",
   },
