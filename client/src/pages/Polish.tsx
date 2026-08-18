@@ -112,6 +112,20 @@ export default function Polish() {
             </p>
           </div>
 
+          <section className="max-w-5xl mx-auto mb-8 p-7 bg-white border border-border rounded-2xl shadow-card">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Revise in layers; review every suggestion</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">A responsible workflow for AI-assisted academic polishing</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. POLICY</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check what is permitted</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Read the assignment, syllabus, and programme rules before entering a draft. AI permissions and disclosure expectations can differ by class and instructor.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. PURPOSE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Set one revision goal</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Name the highest-priority problem: a focused thesis, evidence, paragraph flow, clarity, disciplinary tone, grammar, or formatting. Do not treat every revision as a word swap.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. GLOBAL</p><h3 className="font-serif text-xl text-slate-purple mb-2">Fix the argument first</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Before polishing sentences, check whether the main point, purpose, evidence, organization, and paragraph sequence give readers a defensible path through the draft.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. REVIEW</p><h3 className="font-serif text-xl text-slate-purple mb-2">Inspect every suggestion</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Keep, reject, or rewrite a proposed change only after comparing it with your original sentence, intended meaning, discipline, reader, and own voice.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. VERIFY</p><h3 className="font-serif text-xl text-slate-purple mb-2">Protect facts and sources</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Confirm that revisions have not changed a result, overclaimed a conclusion, removed a qualification, invented a detail, or weakened the link between borrowed material and its citation.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">6. EDIT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Finish at sentence level</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Then check clarity, word choice, formality, grammar, punctuation, spelling, and required formatting. Read the changed passage aloud and in its paragraph.</p></article>
+            </div>
+            <p className="text-sm font-sans text-primary font-medium mt-5">CorePapers offers review prompts, not final academic judgments. You remain responsible for the ideas, evidence, factual accuracy, source use, citations, privacy choices, and policy compliance in anything you submit.</p>
+          </section>
+
           <div className="max-w-4xl mx-auto mb-4 flex flex-wrap gap-3 items-center">
             <Select value={discipline} onValueChange={(v) => setDiscipline(v as typeof discipline)}>
               <SelectTrigger className="w-48 bg-white border-border font-sans text-sm">
@@ -188,7 +202,7 @@ export default function Polish() {
                 Free usage includes up to 300 words per polish, 1,000 AI polish words per day, and 5 polish runs per day.
               </p>
               <p className="text-xs text-center text-muted-foreground font-sans leading-relaxed">
-                The fictional learning sample is only for practice. Review every suggestion against your intended meaning, evidence, citations, and course policy before using it in a draft.
+                The fictional learning sample is only for practice. Review every suggestion against your intended meaning, evidence, citations, privacy choices, and course policy before using it in a draft. Do not paste confidential, unpublished, or sensitive material unless you are comfortable with the tool&apos;s data handling terms and institutional policy.
               </p>
               {!isAuthenticated && (
                 <p className="text-xs text-center text-muted-foreground font-sans">
@@ -245,6 +259,17 @@ export default function Polish() {
               )}
             </div>
           </div>
+
+          {result && (
+            <section className="max-w-4xl mx-auto mt-8 p-6 bg-hero-gradient border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Before you use a revised sentence</h2>
+              <div className="grid sm:grid-cols-2 gap-4 text-sm text-muted-foreground font-sans leading-relaxed">
+                <p><strong className="text-foreground">Compare meaning:</strong> Does the change preserve what you actually found, argue, observe, or mean? Reject a smoother sentence if it alters scope, certainty, causation, or your disciplinary terminology.</p>
+                <p><strong className="text-foreground">Compare source use:</strong> Keep quotations, paraphrases, summaries, numbers, and images tied to accurate citations. A language suggestion cannot verify a source or make an unsupported statement acceptable.</p>
+              </div>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed mt-4"><a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html" target="_blank" rel="noreferrer">Purdue OWL</a> places main point, reader, purpose, evidence, relevance, clarity, and grammar in a revision sequence. <a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/generative-ai-in-academic-writing/" target="_blank" rel="noreferrer">UNC Writing Center</a> advises writers to follow course policies, compare original and AI-edited text, and remain responsible for submitted work.</p>
+            </section>
+          )}
 
           {result && result.suggestions.length > 0 && (
             <div className="max-w-4xl mx-auto mt-8">
@@ -339,12 +364,16 @@ export default function Polish() {
                     </p>
                   </div>
                 </Link>
-                <Link href="/blog/how-to-improve-academic-writing-skills-for-international-students" className="block">
+                <Link href="/academic-paragraph-structure" className="block">
                   <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
-                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Build a revision routine</h2>
-                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">
-                      Improve argument, paragraph flow, clarity, tone, and source use one focused layer at a time.
-                    </p>
+                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Check paragraph logic first</h2>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">Make sure clearer sentences still support a focused point, relevant evidence, explanation, and a purposeful transition.</p>
+                  </div>
+                </Link>
+                <Link href="/academic-argument-evidence" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Review argument and evidence</h2>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">Check the claim, evidence, reasoning, limitation, and language choices before you polish the surface.</p>
                   </div>
                 </Link>
               </div>
@@ -366,9 +395,19 @@ export default function Polish() {
                       desc: "Learn which sentence patterns professors notice most often.",
                     },
                     {
-                      href: "/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing",
+                      href: "/how-to-paraphrase-without-plagiarizing",
                       title: "Paraphrasing without plagiarism",
-                      desc: "Revise source-based writing more safely and naturally.",
+                      desc: "Revise source-based writing after checking the original meaning, your wording, and attribution.",
+                    },
+                    {
+                      href: "/academic-writing-examples",
+                      title: "Academic writing examples",
+                      desc: "Analyse a rhetorical move and rebuild it with your own verified content instead of copying a polished model.",
+                    },
+                    {
+                      href: "/evaluate-academic-sources",
+                      title: "Evaluate academic sources",
+                      desc: "Verify author, evidence, purpose, currency, and source records before a revised sentence presents them confidently.",
                     },
                     {
                       href: "/academic-paragraph-structure",

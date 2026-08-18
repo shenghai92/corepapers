@@ -107,6 +107,15 @@ expect(polishHtml.includes("fictional learning sample"), "Essay Polish: fictiona
 expect(polishHtml.includes("What an essay polisher cannot decide"), "Essay Polish: tool-responsibility boundary");
 expect(polishHtml.includes('/academic-paragraph-structure/'), "Essay Polish: paragraph-structure learning link");
 expect(polishHtml.includes('/academic-integrity-and-source-use/'), "Essay Polish: source-use learning link");
+expect(polishHtml.includes("1. Check what is permitted"), "Essay Polish: six-step revision workflow");
+expect(polishHtml.includes("Revise in layers; review every suggestion"), "Essay Polish: layered-revision boundary");
+expect(polishHtml.includes("owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html"), "Essay Polish: Purdue revision guidance link");
+expect(polishHtml.includes("writingcenter.unc.edu/tips-and-tools/generative-ai-in-academic-writing"), "Essay Polish: UNC AI-policy guidance link");
+expect(polishHtml.includes('/academic-argument-evidence/'), "Essay Polish: argument-evidence learning link");
+expect(polishHtml.includes('/academic-writing-examples/'), "Essay Polish: writing-examples learning link");
+expect(polishHtml.includes('/evaluate-academic-sources/'), "Essay Polish: source-evaluation learning link");
+expect(polishHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "Essay Polish: paraphrasing learning link");
+expect(polishHtml.includes('/citations/'), "Essay Polish: citation-generator learning link");
 
 const pages = [
   ["/", "Improve academic English without losing your meaning"],
