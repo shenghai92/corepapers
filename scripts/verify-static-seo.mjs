@@ -291,6 +291,26 @@ expect(
   "abstract-vs-introduction article: Article JSON-LD"
 );
 
+const academicEnglishHubHtml = read("academic-english-for-esl-students/index.html");
+expect(
+  academicEnglishHubHtml.includes("Academic English support for ESL and international students"),
+  "academic English hub: expected H1"
+);
+expect(
+  academicEnglishHubHtml.includes("Build academic English around the work your paper needs to do"),
+  "academic English hub: five-step learning workflow"
+);
+expect(
+  academicEnglishHubHtml.includes("This fictional learning example is invented for practice"),
+  "academic English hub: fictional-example disclosure"
+);
+expect(academicEnglishHubHtml.includes("owl.purdue.edu"), "academic English hub: Purdue OWL guidance link");
+expect(academicEnglishHubHtml.includes("drexel.edu"), "academic English hub: Drexel guidance link");
+expect(academicEnglishHubHtml.includes("dickinson.edu"), "academic English hub: Dickinson guidance link");
+expect(academicEnglishHubHtml.includes("cannot verify a research design"), "academic English hub: responsibility boundary");
+expect(academicEnglishHubHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "academic English hub: paraphrasing cluster link");
+expect(academicEnglishHubHtml.includes('/research-paper-sections/'), "academic English hub: paper-sections cluster link");
+
 const sourceEvaluationHtml = read("evaluate-academic-sources/index.html");
 expect(
   sourceEvaluationHtml.includes("How to evaluate academic sources: a student checklist"),
@@ -369,7 +389,6 @@ expect(graduateAcademicWritingHtml.includes("grad.berkeley.edu"), "graduate acad
 expect(graduateAcademicWritingHtml.includes("asc.dasa.ncsu.edu"), "graduate academic writing: NC State guidance link");
 expect(graduateAcademicWritingHtml.includes('/academic-english-for-esl-students/'), "graduate academic writing: academic-English cluster link");
 expect(graduateAcademicWritingHtml.includes('/research-proposal-template/'), "graduate academic writing: proposal cluster link");
-const academicEnglishHubHtml = read("academic-english-for-esl-students/index.html");
 expect(academicEnglishHubHtml.includes('/academic-writing-for-graduate-students/'), "academic-English hub: graduate-writing return link");
 expect(academicEnglishHubHtml.includes('/hedging-language-academic-writing/'), "academic-English hub: hedging return link");
 
