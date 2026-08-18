@@ -71,9 +71,9 @@ export default function LiteratureReviewSynthesis() {
                 <table className="w-full text-sm font-sans border-collapse">
                   <thead>
                     <tr className="bg-muted/50">
-                      <th className="text-left p-3 border">Theme</th>
-                      <th className="text-left p-3 border">Source A</th>
-                      <th className="text-left p-3 border">Source B</th>
+                        <th className="text-left p-3 border">Fictional theme</th>
+                        <th className="text-left p-3 border">Fictional source note A</th>
+                        <th className="text-left p-3 border">Fictional source note B</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -121,6 +121,17 @@ export default function LiteratureReviewSynthesis() {
             </aside>
           </section>
           <section className="max-w-5xl mx-auto mt-7 p-7 bg-white border border-border rounded-2xl">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">A research workflow, not just a spreadsheet</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">Build the matrix from the question to a supportable synthesis</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. SCOPE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Start with a question</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Define the question, review purpose, source types, and time or disciplinary boundary before adding notes.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. RECORD</p><h3 className="font-serif text-xl text-slate-purple mb-2">Keep each source traceable</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Record the full citation or stable identifier alongside relevant claims, methods, context, findings, and stated limits.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. CODE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Compare like with like</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Use columns or tags for themes, variables, methods, population or setting, evidence type, and limitation so distinctions remain visible.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. GROUP</p><h3 className="font-serif text-xl text-slate-purple mb-2">Find relationships</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Group relevant notes by shared pattern, contrast, trend, method, or condition. Re-check the original source whenever a note is unclear.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. ASSERT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Draft a synthesis claim</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Turn a label such as “planning habit” into a cautious, cited assertion that says what the grouped sources collectively show and where they differ.</p></article>
+            </div>
+          </section>
+          <section className="max-w-5xl mx-auto mt-7 p-7 bg-white border border-border rounded-2xl">
             <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">
               Fictional learning example
             </p>
@@ -128,14 +139,8 @@ export default function LiteratureReviewSynthesis() {
               Move beyond “Source A says … Source B says …”
             </h2>
             <p className="text-sm text-foreground/80 font-sans leading-relaxed">
-              Studies in this fictional example suggest that regular planning
-              may be associated with assignment completion, but they do not
-              support the same conclusion equally. Source A reports a positive
-              association across its sample, whereas Source B observes the
-              pattern only among first-year students. Taken together, the
-              studies point to a possible relationship while also showing that
-              self-reported measures and small local samples limit
-              generalisation.
+              <strong>This entire fictional learning example, including the table, is invented for practice and is not research evidence.</strong>{" "}
+              The fictional source notes suggest that regular planning may be associated with assignment completion, but they do not support the same conclusion equally. Note A reports a positive association across its invented sample, whereas Note B observes the pattern only among fictional first-year students. Taken together, the notes point to a possible relationship while also showing that self-reported measures and small local samples limit generalisation.
             </p>
             <p className="mt-4 text-sm text-muted-foreground font-sans">
               This paragraph groups sources by a shared theme, names a
@@ -143,7 +148,23 @@ export default function LiteratureReviewSynthesis() {
               research gap or claim that the evidence proves causation.
             </p>
           </section>
-          <section className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-3 gap-4">
+          <section className="max-w-5xl mx-auto mt-7 grid lg:grid-cols-2 gap-6">
+            <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Let the matrix reveal questions, not prove absences</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed">A thin row, an underrepresented population, or a repeated limitation can help you decide what to search for next. It does not by itself establish that “no research exists.” Check the search scope, databases, vocabulary, publication dates, and disciplinary conventions before describing a field as limited or underexplored. A matrix is an organizing tool; it cannot replace reading, source evaluation, accurate paraphrasing, citation, or your instructor&apos;s requirements.</p>
+            </article>
+            <article className="p-7 bg-white border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Use writing-center and library guidance</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://guides.library.jhu.edu/lit-review/synthesize" target="_blank" rel="noreferrer">Johns Hopkins Libraries</a> describes a synthesis matrix as a way to record source points and relationships by theme or variable. <a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/literature-reviews/" target="_blank" rel="noreferrer">UNC Writing Center</a> distinguishes a source summary from a review that reorganizes information around ideas, trends, methods, or debates. <a className="text-primary underline underline-offset-4" href="https://writingcenter.gmu.edu/writing-resources/research-based-writing/organizing-literature-reviews-the-basics" target="_blank" rel="noreferrer">George Mason University Writing Center</a> recommends selecting relevant material, arranging it in a grid, grouping related points, and turning labels into assertions linked to the research question.</p>
+            </article>
+          </section>
+          <section className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link href="/literature-review-example" className="block">
+              <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                <h2 className="font-serif text-xl text-slate-purple mb-2">See thematic synthesis in practice</h2>
+                <p className="text-sm text-muted-foreground font-sans">Compare fictional source notes and turn them into a careful literature-review paragraph.</p>
+              </div>
+            </Link>
             <Link
               href="/blog/how-to-write-a-literature-review-for-international-students"
               className="block"
@@ -165,6 +186,12 @@ export default function LiteratureReviewSynthesis() {
                 <p className="text-sm text-muted-foreground font-sans">
                   Check paraphrasing and citation decisions.
                 </p>
+              </div>
+            </Link>
+            <Link href="/research-gap-examples" className="block">
+              <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                <h2 className="font-serif text-xl text-slate-purple mb-2">State a research gap cautiously</h2>
+                <p className="text-sm text-muted-foreground font-sans">Turn a specific, checked pattern into a focused next question without overstating absence.</p>
               </div>
             </Link>
             <a href={SOURCE} target="_blank" rel="noreferrer" className="block">

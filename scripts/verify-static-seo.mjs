@@ -461,6 +461,18 @@ expect(
   ),
   "literature synthesis: Purdue OWL guidance link"
 );
+expect(synthesisHtml.includes("1. Start with scope"), "literature synthesis: five-step workflow");
+expect(
+  synthesisHtml.includes("This entire fictional learning example, including its matrix, is invented for practice"),
+  "literature synthesis: fictional-matrix disclosure"
+);
+expect(synthesisHtml.includes("Let the matrix reveal questions, not prove absences"), "literature synthesis: research-gap boundary");
+expect(synthesisHtml.includes("guides.library.jhu.edu"), "literature synthesis: Johns Hopkins guidance link");
+expect(synthesisHtml.includes("writingcenter.unc.edu"), "literature synthesis: UNC guidance link");
+expect(synthesisHtml.includes("writingcenter.gmu.edu"), "literature synthesis: George Mason guidance link");
+expect(synthesisHtml.includes('/literature-review-example/'), "literature synthesis: example cluster link");
+expect(synthesisHtml.includes('/academic-integrity-and-source-use/'), "literature synthesis: source-use cluster link");
+expect(synthesisHtml.includes('/research-gap-examples/'), "literature synthesis: research-gap cluster link");
 
 const proposalTemplateHtml = read("research-proposal-template/index.html");
 expect(proposalTemplateHtml.includes("Fictional learning example"), "research proposal template: fictional-example disclosure");
