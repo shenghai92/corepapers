@@ -669,9 +669,9 @@ function CitationExamplesPage() {
   return (
     <>
       <SEOHead
-        title="APA 7 Citation Examples and In-Text Citation Examples"
-        description="Use clear, labelled APA 7 citation examples for common source types and learn what to check before using a citation generator."
-        keywords="APA citation examples, APA 7 reference examples, APA in-text citation examples, citation generator examples, how to cite sources"
+        title="Citation Examples: Choose APA 7, MLA 9, Chicago 18, or IEEE"
+        description="Choose APA 7, MLA 9, Chicago 18, or IEEE citation examples, verify source details, match in-text citations to reference entries, and review generated output."
+        keywords="citation examples, APA 7 citation examples, MLA 9 citation examples, Chicago 18 citation examples, IEEE citation examples, citation generator"
         canonical="/citation-examples/"
       />
       <main className="pt-24 pb-16 min-h-screen bg-background">
@@ -680,17 +680,44 @@ function CitationExamplesPage() {
             eyebrow="Citation example guide"
             title={
               <>
-                APA citation examples with a{" "}
-                <span className="italic">source-detail check</span>
+                Citation examples start with the <span className="italic">right system and source record</span>
               </>
             }
-            description="Use these simplified examples to understand the parts of an APA 7 reference and in-text citation before you generate and review your own citation."
+            description="Choose the required citation system, verify the item you actually read, match every in-text or note citation to its full entry, then generate and review the final format."
           />
-          <section className={`max-w-4xl mx-auto ${commonClass.card}`}>
+
+          <section className={`max-w-5xl mx-auto ${commonClass.card}`}>
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">A citation workflow, not a format shortcut</p>
+            <h2 className={commonClass.title}>Build a traceable citation before you polish punctuation</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. REQUIREMENT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Confirm what is required</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Check the course, discipline, supervisor, or target publication for the citation system, edition, and whether notes, in-text citations, or a bibliography are required.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. ITEM</p><h3 className="font-serif text-xl text-slate-purple mb-2">Identify the exact source</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Record the version, source type, author or group author, title, container, contributors, date, pages, DOI, URL, and any required access information from the original item.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. SYSTEM</p><h3 className="font-serif text-xl text-slate-purple mb-2">Choose the matching format</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Use the system and example family that match the source type and requirement; do not re-label a journal article as a web page because both have URLs.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. LINK</p><h3 className="font-serif text-xl text-slate-purple mb-2">Connect borrowed ideas</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Place an accurate in-text citation, note, or signal where a reader can see which source supports the quotation, paraphrase, data, or idea.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. MATCH</p><h3 className="font-serif text-xl text-slate-purple mb-2">Reconcile both sides</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Check that each cited work has one matching full entry and that each listed work is actually cited, unless your assignment has a different rule.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">6. REVIEW</p><h3 className="font-serif text-xl text-slate-purple mb-2">Verify generated output</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Treat a generator as a formatting draft. Compare key fields and the final punctuation or ordering with official guidance and your assignment.</p></article>
+            </div>
+          </section>
+
+          <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6">
+            <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Choose the system before choosing an example</h2>
+              <ul className="space-y-3 text-sm text-muted-foreground font-sans leading-relaxed">
+                <li><strong className="text-foreground">APA 7:</strong> author–date in-text citations paired with a reference list; commonly required in many social and behavioral science settings.</li>
+                <li><strong className="text-foreground">MLA 9:</strong> author-page citations paired with a Works Cited list constructed from applicable core elements.</li>
+                <li><strong className="text-foreground">Chicago 18:</strong> choose Notes–Bibliography or Author–Date based on your course, publication, and disciplinary practice.</li>
+                <li><strong className="text-foreground">IEEE:</strong> bracketed source numbers in the order readers meet them, paired with a numbered reference list.</li>
+              </ul>
+            </article>
+            <article className="p-7 bg-white border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">What a citation generator cannot decide</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed">A tool cannot confirm that you used the version you cite, detect every borrowed idea, decide if a quotation is accurate, resolve a missing author or date, choose a course-specific system, or guarantee that imported metadata is complete. You remain responsible for checking the original source, your wording, and the final relationship between text, notes, and reference entries.</p>
+            </article>
+          </section>
+
+          <section className={`max-w-4xl mx-auto mt-8 ${commonClass.card}`}>
             <p className="text-sm font-sans text-primary font-medium">
-              The names, titles, publishers, journals, and DOI values below are
-              fictional. They demonstrate reference structure only and should
-              never be submitted as real sources.
+              Fictional learning examples: the names, titles, publishers, journals, URLs, and DOI values below are invented to demonstrate APA 7 reference structure only. They are not real sources, and must not be submitted, cited, or used as evidence.
             </p>
           </section>
           <section className="max-w-4xl mx-auto mt-8 space-y-5">
@@ -729,6 +756,16 @@ function CitationExamplesPage() {
           </section>
 
           <section className={`max-w-4xl mx-auto mt-8 ${commonClass.card}`}>
+            <h2 className={commonClass.title}>Use official guidance to check the final decision</h2>
+            <p className={commonClass.copy}>
+              <ExternalLink href="https://apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/author-date">APA Style</ExternalLink>{" "}
+              describes an author–date system in which each cited work has a corresponding reference-list entry. The <ExternalLink href="https://style.mla.org/works-cited/">MLA Style Center</ExternalLink>{" "}
+              recommends assessing which core elements apply to the work before building a Works Cited entry. The <ExternalLink href="https://www.chicagomanualofstyle.org/tools_citationguide.html">Chicago Manual of Style</ExternalLink>{" "}
+              distinguishes Notes–Bibliography from Author–Date and asks students to check with their instructor when choosing. Use the detailed APA, MLA, Chicago, and IEEE pages below for source-type-specific examples.
+            </p>
+          </section>
+
+          <section className={`max-w-4xl mx-auto mt-8 ${commonClass.card}`}>
             <h2 className={commonClass.title}>
               Before you trust generated output
             </h2>
@@ -757,18 +794,54 @@ function CitationExamplesPage() {
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto mt-8 grid sm:grid-cols-2 gap-4">
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <ToolNextStep
+              title="APA 7 examples"
+              copy="Check author–date citations and common reference entries, including source-specific details."
+              href="/citation-examples"
+              label="Review APA 7 examples"
+            />
+            <ToolNextStep
+              title="MLA 9 examples"
+              copy="Build a Works Cited entry from relevant core elements and align it with in-text citation."
+              href="/mla-citation-examples"
+              label="Review MLA 9 examples"
+            />
+            <ToolNextStep
+              title="Chicago 18 examples"
+              copy="Choose Notes–Bibliography or Author–Date before formatting a source."
+              href="/chicago-citation-examples"
+              label="Review Chicago examples"
+            />
+            <ToolNextStep
+              title="IEEE examples"
+              copy="Use numbered references and bracketed in-text citations in a consistent source order."
+              href="/ieee-citation-examples"
+              label="Review IEEE examples"
+            />
+            <ToolNextStep
+              title="Cite non-English sources"
+              copy="Check APA 7 rules for original-language titles, transliteration, and published translations."
+              href="/apa-7-non-english-sources"
+              label="Use APA multilingual guide"
+            />
             <ToolNextStep
               title="Generate a citation"
-              copy="Enter the source details you have checked, then review the finished reference before submission."
+              copy="Enter checked source details, then review the finished citation against the original work."
               href="/citations"
               label="Open Citation Generator"
             />
             <ToolNextStep
               title="Use sources responsibly"
-              copy="Decide whether your source needs a quotation, paraphrase, or summary."
+              copy="Decide whether a source needs a quotation, paraphrase, or summary and cite it clearly."
               href="/academic-integrity-and-source-use"
               label="Read source-use guide"
+            />
+            <ToolNextStep
+              title="Paraphrase with attribution"
+              copy="Reshape language after understanding the source, then preserve accurate credit and source traceability."
+              href="/how-to-paraphrase-without-plagiarizing"
+              label="Read paraphrasing guide"
             />
           </section>
           <div className="max-w-4xl mx-auto mt-10 text-center">

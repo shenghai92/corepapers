@@ -227,7 +227,7 @@ const pages = [
   ],
   [
     "/citation-examples/",
-    "APA 7 citation examples and in-text citation examples",
+    "Citation examples: choose APA 7, MLA 9, Chicago 18, or IEEE",
   ],
   ["/blog/", "Academic writing guides, sentence starters, and ESL essay help"],
 ];
@@ -655,11 +655,20 @@ expect(
 
 const citationExamplesHtml = read("citation-examples/index.html");
 expect(
-  citationExamplesHtml.includes(
-    "fictional. They demonstrate reference structure only"
-  ),
+  citationExamplesHtml.includes("Fictional APA 7 learning examples"),
   "citation-examples resource: fictional-example disclosure"
 );
+expect(citationExamplesHtml.includes("1. Confirm what is required"), "citation-examples resource: six-step workflow");
+expect(citationExamplesHtml.includes("Chicago 18:"), "citation-examples resource: multi-system selection");
+expect(citationExamplesHtml.includes("What a citation generator cannot decide"), "citation-examples resource: generator-responsibility boundary");
+expect(citationExamplesHtml.includes("apastyle.apa.org"), "citation-examples resource: APA guidance link");
+expect(citationExamplesHtml.includes("style.mla.org"), "citation-examples resource: MLA guidance link");
+expect(citationExamplesHtml.includes("chicagomanualofstyle.org"), "citation-examples resource: Chicago guidance link");
+expect(citationExamplesHtml.includes('/mla-citation-examples/'), "citation-examples resource: MLA cluster link");
+expect(citationExamplesHtml.includes('/chicago-citation-examples/'), "citation-examples resource: Chicago cluster link");
+expect(citationExamplesHtml.includes('/ieee-citation-examples/'), "citation-examples resource: IEEE cluster link");
+expect(citationExamplesHtml.includes('/apa-7-non-english-sources/'), "citation-examples resource: multilingual APA cluster link");
+expect(citationExamplesHtml.includes('/academic-integrity-and-source-use/'), "citation-examples resource: source-use cluster link");
 expect(
   citationExamplesHtml.includes('"@type":"BreadcrumbList"'),
   "citation-examples resource: BreadcrumbList JSON-LD"
