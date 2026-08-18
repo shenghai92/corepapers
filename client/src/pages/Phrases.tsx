@@ -298,8 +298,13 @@ export default function Phrases() {
             <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">
               Related guides
             </p>
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {[
+                {
+                  href: "/phrases/introduction",
+                  title: "Introduction phrases",
+                  desc: "Move from context to a research gap, purpose, and focused question.",
+                },
                 {
                   href: "/phrases/methods",
                   title: "Methods section phrases",
@@ -309,6 +314,11 @@ export default function Phrases() {
                   href: "/phrases/results",
                   title: "Results section phrases",
                   desc: "Report quantitative or qualitative findings without moving into discussion too early.",
+                },
+                {
+                  href: "/phrases/discussion",
+                  title: "Discussion phrases",
+                  desc: "Interpret findings, identify limits, and frame implications carefully.",
                 },
                 {
                   href: "/blog/how-to-use-hedging-language-in-academic-writing",

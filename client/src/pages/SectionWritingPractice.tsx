@@ -9,14 +9,37 @@ import {
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
-type PracticeKind = "results" | "methodology";
+type PracticeKind = "introduction" | "results" | "methodology" | "discussion";
 
 const authority = {
+  introduction: "https://writingcenter.unc.edu/tips-and-tools/introductions/",
   results: "https://library.sacredheart.edu/c.php?g=29803&p=185931",
   methodology: "https://libguides.usc.edu/writingguide/methodology",
+  discussion: "https://explore.plos.org/author-resources/how-to-write-effective-discussions-and-conclusions",
 };
 
 const data = {
+  introduction: {
+    canonical: "/introduction-section-example-research-paper/",
+    title: "Introduction Section Example for a Research Paper: Structure and Template",
+    description: "Use a fictional research-paper introduction example, a practical structure, and a checklist for moving from context to a focused research purpose.",
+    keywords: "introduction section example research paper, research paper introduction template, how to write introduction research paper",
+    eyebrow: "Research paper introduction practice",
+    h1: "Introduction section example for a research paper",
+    intro: "Use this fictional learning example to see how an Introduction can move from a defined context to a research problem, evidence-based gap, and focused purpose. It is a writing model, not real research or a substitute for your assignment brief.",
+    question: "What problem does this study address, and why does that question matter?",
+    checklist: [
+      "I gave readers only the context they need to understand the specific problem.",
+      "I used and cited relevant sources when I described what previous research has shown.",
+      "I stated a focused gap, purpose, or research question rather than a broad topic.",
+      "I did not report results or make claims that belong in the Discussion section.",
+    ],
+    sampleTitle: "Fictional introduction example",
+    sample: "Students often use digital planning tools to manage coursework, yet there is limited evidence about how particular planning routines relate to assignment completion in first-year programmes. This fictional study therefore examines the association between weekly planning frequency and self-reported assignment completion among undergraduate students.",
+    explanation: "The paragraph narrows from a recognisable context to a specific knowledge need and research purpose. In a real paper, any statement about previous evidence would require accurate, relevant citations.",
+    next: "/research-question-examples",
+    nextLabel: "Refine a research question",
+  },
   results: {
     canonical: "/results-section-example-research-paper/",
     title:
@@ -43,6 +66,27 @@ const data = {
       "This paragraph names the analysis, reports the association, and directs the reader to the table. It does not claim why planning helped or recommend an intervention.",
     next: "/phrases/results",
     nextLabel: "Open Results phrases",
+  },
+  discussion: {
+    canonical: "/discussion-section-example-research-paper/",
+    title: "Discussion Section Example for a Research Paper: Template and Checklist",
+    description: "Use a fictional discussion section example, a research-paper discussion template, and a checklist for interpreting findings without overstating evidence.",
+    keywords: "discussion section example research paper, discussion section template, how to write discussion section research paper",
+    eyebrow: "Research paper discussion practice",
+    h1: "Discussion section example for a research paper",
+    intro: "Use this fictional learning example to practise explaining what a finding may mean, connecting it to relevant research, and stating limits. It is a writing model, not real research evidence or a conclusion you can submit unchanged.",
+    question: "What do the findings mean in light of the research question, prior work, and study limits?",
+    checklist: [
+      "I began by interpreting a principal finding rather than repeating every result.",
+      "I compared the finding with relevant prior research and cited those sources accurately.",
+      "I explained implications cautiously and did not claim causation from correlational evidence.",
+      "I acknowledged a relevant limitation and kept new evidence out of this section.",
+    ],
+    sampleTitle: "Fictional discussion example",
+    sample: "The positive association between weekly planning and assignment completion may suggest that regular planning is useful for this group of students. However, because the fictional study used self-reported, cross-sectional data, the finding cannot show that planning caused higher completion. Future research could test this relationship with a longitudinal or experimental design.",
+    explanation: "The paragraph interprets the reported pattern, limits what can be claimed from the design, and identifies a specific next research step. It does not introduce a new result or turn an association into proof.",
+    next: "/academic-argument-evidence",
+    nextLabel: "Build a cautious argument",
   },
   methodology: {
     canonical: "/methodology-section-example-research-paper/",

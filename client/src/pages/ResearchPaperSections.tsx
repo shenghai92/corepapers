@@ -14,29 +14,36 @@ const sections = [
     title: "Introduction",
     description:
       "Move from context to a focused problem, research gap, and purpose statement.",
-    href: "/blog/how-to-write-a-research-paper-introduction",
+    href: "/introduction-section-example-research-paper",
     icon: FileText,
   },
   {
     title: "Methods and methodology",
     description:
       "Explain design, data collection, participants, and analysis with enough detail for readers to follow the study.",
-    href: "/blog/how-to-write-a-methodology-section-for-a-research-paper",
+    href: "/methodology-section-example-research-paper",
     icon: FlaskConical,
   },
   {
     title: "Results",
     description:
       "Report quantitative or qualitative findings clearly before moving into interpretation.",
-    href: "/blog/how-to-write-a-results-section-research-paper-esl",
+    href: "/results-section-example-research-paper",
     icon: BookOpenCheck,
   },
   {
     title: "Discussion",
     description:
       "Explain why findings matter, connect them to previous research, and acknowledge limits carefully.",
-    href: "/blog/how-to-write-a-discussion-section-in-an-academic-paper",
+    href: "/discussion-section-example-research-paper",
     icon: MessageSquareText,
+  },
+  {
+    title: "Abstract",
+    description:
+      "Summarize the completed paper’s purpose, approach, main finding, and implication in a concise overview.",
+    href: "/how-to-write-an-abstract-research-paper",
+    icon: FileText,
   },
 ];
 
@@ -111,7 +118,13 @@ export default function ResearchPaperSections() {
             </div>
           </section>
 
-          <section className="max-w-4xl mx-auto mt-8 grid sm:grid-cols-2 gap-4">
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-3 gap-4">
+            <Link href="/phrases/introduction" className="block">
+              <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Find Introduction phrases</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Build context, define a research gap, and state a focused purpose.</p>
+              </div>
+            </Link>
             <Link href="/phrases/results" className="block">
               <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
                 <h2 className="font-serif text-2xl text-slate-purple mb-2">
@@ -121,6 +134,12 @@ export default function ResearchPaperSections() {
                   Use reporting verbs and sentence starters for tables, themes,
                   and patterns.
                 </p>
+              </div>
+            </Link>
+            <Link href="/phrases/discussion" className="block">
+              <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Find Discussion phrases</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Interpret results and state limitations without overstating evidence.</p>
               </div>
             </Link>
             <Link href="/polish" className="block">

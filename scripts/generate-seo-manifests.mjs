@@ -47,6 +47,16 @@ const STATIC_PAGE_SEO = {
     keywords:
       "academic phrase bank, sentence starters for research papers, academic phrases for essays, methods section phrases, results section phrases",
   },
+  "/phrases/introduction": {
+    title: "Academic Phrases for Research Paper Introductions | CorePapers",
+    description: "Use academic introduction phrases to establish context, identify a research gap, state a purpose, and introduce a focused research question.",
+    keywords: "introduction section phrases, research paper introduction sentence starters, research gap phrases, academic introduction phrases",
+  },
+  "/phrases/discussion": {
+    title: "Academic Phrases for Discussion Sections | CorePapers",
+    description: "Use academic discussion phrases to interpret findings, compare them with prior research, explain limitations, and state cautious implications.",
+    keywords: "discussion section phrases, academic phrases for discussion, interpreting results phrases, limitations and implications phrases",
+  },
   "/phrases/methods": {
     title: "Academic Phrases for Methods Sections | CorePapers",
     description:
@@ -150,6 +160,21 @@ const STATIC_PAGE_SEO = {
       "Learn how to synthesize sources in a literature review with a simple synthesis matrix, a fictional paragraph example, and a source-based writing checklist.",
     keywords:
       "how to synthesize sources literature review, synthesis matrix example, literature review synthesis example, research gap literature review",
+  },
+  "/how-to-write-an-abstract-research-paper": {
+    title: "How to Write an Abstract for a Research Paper: Example and Checklist | CorePapers",
+    description: "Learn how to write a research paper abstract with a fictional learning example, IMRaD structure, revision checklist, and academic phrase guidance for international students.",
+    keywords: "how to write an abstract research paper, abstract example research paper, research abstract template, IMRaD abstract structure",
+  },
+  "/introduction-section-example-research-paper": {
+    title: "Introduction Section Example for a Research Paper: Structure and Template | CorePapers",
+    description: "Use a fictional research-paper introduction example, a practical structure, and a checklist for moving from context to a focused research purpose.",
+    keywords: "introduction section example research paper, research paper introduction template, how to write introduction research paper",
+  },
+  "/discussion-section-example-research-paper": {
+    title: "Discussion Section Example for a Research Paper: Template and Checklist | CorePapers",
+    description: "Use a fictional discussion section example, a research-paper discussion template, and a checklist for interpreting findings without overstating evidence.",
+    keywords: "discussion section example research paper, discussion section template, how to write discussion section research paper",
   },
   "/results-section-example-research-paper": {
     title:
@@ -260,6 +285,8 @@ const STATIC_PAGES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/polish/", changefreq: "monthly", priority: "0.9" },
   { path: "/phrases/", changefreq: "monthly", priority: "0.9" },
+  { path: "/phrases/introduction/", changefreq: "monthly", priority: "0.7" },
+  { path: "/phrases/discussion/", changefreq: "monthly", priority: "0.7" },
   { path: "/phrases/methods/", changefreq: "monthly", priority: "0.7" },
   { path: "/phrases/results/", changefreq: "monthly", priority: "0.7" },
   { path: "/citations/", changefreq: "monthly", priority: "0.9" },
@@ -299,6 +326,21 @@ const STATIC_PAGES = [
   { path: "/academic-argument-evidence/", changefreq: "monthly", priority: "0.8" },
   {
     path: "/literature-review-synthesis-matrix/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/how-to-write-an-abstract-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/introduction-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/discussion-section-example-research-paper/",
     changefreq: "monthly",
     priority: "0.8",
   },

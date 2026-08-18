@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
-type SectionKey = "methods" | "results";
+type SectionKey = "introduction" | "methods" | "results" | "discussion";
 
 type Phrase = {
   text: string;
@@ -28,6 +28,25 @@ const SECTION_CONTENT: Record<
     guideTitle: string;
   }
 > = {
+  introduction: {
+    eyebrow: "Academic phrase library · Introduction",
+    title: "Academic phrases for research paper introductions",
+    description: "Use academic introduction phrases to establish context, identify a research gap, state a purpose, and introduce a focused research question.",
+    canonical: "/phrases/introduction/",
+    keywords: "introduction section phrases, research paper introduction sentence starters, research gap phrases, academic introduction phrases",
+    intro: "Adapt these sentence starters to introduce a focused research problem. Replace each bracketed item with accurate, cited details from your own field and assignment.",
+    phrases: [
+      { label: "Context", text: "[Topic] has received increasing attention because [specific reason].", note: "Use a source when the context or trend comes from published evidence." },
+      { label: "What is known", text: "Previous research has shown that [specific finding] (Author, year).", note: "Cite the original, relevant source and avoid claiming more than it reports." },
+      { label: "Research gap", text: "However, less is known about [specific relationship, group, setting, or mechanism].", note: "Name a real and manageable gap rather than saying nothing is known." },
+      { label: "Purpose", text: "This study examines [focused topic] among/in [defined context or group].", note: "Make the scope match the evidence and methods you will actually use." },
+      { label: "Research question", text: "Accordingly, this study asks: How does [X] relate to [Y] in [context]?", note: "Use a question that is answerable within the assignment length and design." },
+      { label: "Road map", text: "The paper first [step], then [step], and finally [step].", note: "Use a road map only when your discipline or instructor expects one." },
+    ],
+    checks: ["Cite all factual claims about prior research or the research context.", "Move from broad context to a defined problem without adding unrelated background.", "State a purpose or question that your paper can genuinely answer."],
+    guideHref: "/introduction-section-example-research-paper",
+    guideTitle: "Read the Introduction structure and example guide",
+  },
   methods: {
     eyebrow: "Academic phrase library · Methods",
     title: "Academic phrases for research methods sections",
@@ -77,6 +96,25 @@ const SECTION_CONTENT: Record<
     ],
     guideHref: "/blog/how-to-write-a-methodology-section-for-a-research-paper",
     guideTitle: "Read the methodology structure and example guide",
+  },
+  discussion: {
+    eyebrow: "Academic phrase library · Discussion",
+    title: "Academic phrases for discussion sections",
+    description: "Use academic discussion phrases to interpret findings, compare them with prior research, explain limitations, and state cautious implications.",
+    canonical: "/phrases/discussion/",
+    keywords: "discussion section phrases, academic phrases for discussion, interpreting results phrases, limitations and implications phrases",
+    intro: "Adapt these sentence starters after you have reported the results. Keep each interpretation proportionate to your research design, findings, and cited literature.",
+    phrases: [
+      { label: "Principal finding", text: "The main finding suggests that [interpretation of result].", note: "Use suggests when the evidence supports a cautious interpretation rather than proof." },
+      { label: "Comparison", text: "This pattern is consistent with/contrasts with [Author, year], who found that [specific point].", note: "Compare a precise aspect of the finding and cite the relevant source." },
+      { label: "Possible explanation", text: "One possible explanation is that [mechanism], although this interpretation requires further investigation.", note: "Do not present a possible explanation as an established fact." },
+      { label: "Limitation", text: "This interpretation should be considered in light of [specific limitation].", note: "Name a limitation that genuinely affects scope, measurement, or inference." },
+      { label: "Implication", text: "Within this context, the findings may have implications for [practice, theory, or policy].", note: "Keep the implication within the population and design studied." },
+      { label: "Future research", text: "Future research could examine whether [focused next question] using [appropriate method or context].", note: "Offer a specific next step instead of a generic call for more research." },
+    ],
+    checks: ["Interpret principal findings instead of repeating all results.", "Do not turn a correlation or self-report pattern into a causal claim.", "Keep new data and new evidence out of the Discussion section."],
+    guideHref: "/discussion-section-example-research-paper",
+    guideTitle: "Read the Discussion structure and example guide",
   },
   results: {
     eyebrow: "Academic phrase library · Results",
@@ -132,9 +170,13 @@ const SECTION_CONTENT: Record<
 
 export default function PhraseSection() {
   const [location] = useLocation();
-  const key: SectionKey = location.includes("/phrases/results")
-    ? "results"
-    : "methods";
+  const key: SectionKey = location.includes("/phrases/introduction")
+    ? "introduction"
+    : location.includes("/phrases/discussion")
+      ? "discussion"
+      : location.includes("/phrases/results")
+        ? "results"
+        : "methods";
   const content = SECTION_CONTENT[key];
   const [copied, setCopied] = useState<string | null>(null);
 
@@ -148,11 +190,7 @@ export default function PhraseSection() {
   return (
     <>
       <SEOHead
-        title={
-          key === "methods"
-            ? "Academic Phrases for Methods Sections"
-            : "Academic Phrases for Reporting Research Results"
-        }
+        title={content.title}
         description={content.description}
         keywords={content.keywords}
         canonical={content.canonical}

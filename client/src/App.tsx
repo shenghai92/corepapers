@@ -26,6 +26,7 @@ const LiteratureReviewSynthesis = lazy(
   () => import("./pages/LiteratureReviewSynthesis")
 );
 const ResearchFoundations = lazy(() => import("./pages/ResearchFoundations"));
+const AbstractWritingGuide = lazy(() => import("./pages/AbstractWritingGuide"));
 const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const SeoLandingApa = lazy(() => import("./pages/SeoLandingApa"));
@@ -86,6 +87,22 @@ function Router() {
           component={() => (
             <PublicLayout>
               <Polish />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/phrases/introduction"
+          component={() => (
+            <PublicLayout>
+              <PhraseSection />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/phrases/discussion"
+          component={() => (
+            <PublicLayout>
+              <PhraseSection />
             </PublicLayout>
           )}
         />
@@ -191,6 +208,30 @@ function Router() {
           component={() => (
             <PublicLayout>
               <LiteratureReviewSynthesis />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/how-to-write-an-abstract-research-paper"
+          component={() => (
+            <PublicLayout>
+              <AbstractWritingGuide />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/introduction-section-example-research-paper"
+          component={() => (
+            <PublicLayout>
+              <SectionWritingPractice kind="introduction" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/discussion-section-example-research-paper"
+          component={() => (
+            <PublicLayout>
+              <SectionWritingPractice kind="discussion" />
             </PublicLayout>
           )}
         />
