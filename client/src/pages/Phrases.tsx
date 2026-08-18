@@ -93,8 +93,8 @@ const HEDGING_BOOSTING = {
   boosting: [
     { word: "clearly", usage: "This clearly demonstrates that..." },
     { word: "evidently", usage: "Evidently, the results show..." },
-    { word: "strongly", usage: "The data strongly supports..." },
-    { word: "significant", usage: "A significant finding is that..." },
+    { word: "strongly", usage: "The evidence strongly supports [carefully specified claim]." },
+    { word: "consistent with", usage: "The pattern is consistent with [carefully specified explanation]." },
   ],
 };
 
@@ -161,6 +161,20 @@ export default function Phrases() {
               Search academic sentence starters and discipline-specific academic English expressions for essays, reports, literature reviews, discussion sections, and research papers.
             </p>
           </div>
+
+          <section className="max-w-5xl mx-auto mb-8 p-7 bg-white border border-border rounded-2xl shadow-card">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Choose language by function, not by decoration</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">A six-step check before you use a sentence starter</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. FUNCTION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Name the writing job</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Decide whether you are framing a topic, comparing studies, describing a method, reporting a result, qualifying a claim, or closing a discussion.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. RELATION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Identify the real connection</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Ask whether the next idea adds support, contrasts, gives an example, explains a cause, marks a limit, or draws a cautious conclusion.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. EVIDENCE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check what supports it</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Make sure the source, data, observation, or analysis really allows the statement before choosing a confident or cautious phrase.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. CERTAINTY</p><h3 className="font-serif text-xl text-slate-purple mb-2">Calibrate the claim</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Use hedging when the evidence is limited, context-specific, preliminary, or associative; use stronger language only when it is justified.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. ADAPT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Rewrite for your context</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Replace every placeholder, vary the syntax when needed, and use terminology your discipline, method, and audience actually expect.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">6. READ BACK</p><h3 className="font-serif text-xl text-slate-purple mb-2">Test the logic in context</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Read the sentences on both sides. Remove a phrase that repeats the obvious, over-signals the structure, or points to the wrong relationship.</p></article>
+            </div>
+            <p className="text-sm font-sans text-primary font-medium mt-5">All sentence starters and mini-sentences in this library are fictional learning prompts. They are patterns to adapt with your own verified ideas, evidence, data, and citations—not text to submit unchanged.</p>
+          </section>
 
           <div className="max-w-4xl mx-auto mb-8 flex flex-col sm:flex-row gap-3">
             <div className="relative flex-1">
@@ -229,6 +243,18 @@ export default function Phrases() {
             ))}
           </div>
 
+          <section className="max-w-5xl mx-auto mt-10 grid lg:grid-cols-2 gap-6">
+            <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+              <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Let the relationship choose the phrase</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice.</strong> A fictional writer first reports that two small studies describe similar revision patterns, then adds a third study with a different participant group and measure. “Furthermore” would wrongly imply additional support for the same point. “However, this pattern may differ when…” better signals the contrast and keeps the claim appropriately limited. The phrase follows the logic; it does not create it.</p>
+            </article>
+            <article className="p-7 bg-white border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Use short phrases responsibly</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/transitions/" target="_blank" rel="noreferrer">UNC Writing Center</a> explains that transitions signal particular logical relationships and cannot replace good organization. <a className="text-primary underline underline-offset-4" href="https://writingcenter.gmu.edu/writing-resources/general-writing-practices/signposting-language-for-improving-cohesion" target="_blank" rel="noreferrer">George Mason University Writing Center</a> cautions that excessive or inaccurate signposting can make prose wordy or confusing. Its <a className="text-primary underline underline-offset-4" href="https://writingcenter.gmu.edu/writing-resources/research-based-writing/hedges-softening-claims-in-academic-writing" target="_blank" rel="noreferrer">hedging guide</a> shows how cautious wording should reflect the evidence&apos;s scope rather than hide an unsupported claim.</p>
+            </article>
+          </section>
+
           <div className="max-w-4xl mx-auto mt-16">
             <div className="text-center mb-8">
               <h2 className="font-serif font-light text-3xl text-slate-purple mb-3">
@@ -240,7 +266,8 @@ export default function Phrases() {
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-border rounded-2xl p-6">
-                <h3 className="font-sans font-semibold text-foreground mb-4">Hedging language</h3>
+                <h3 className="font-sans font-semibold text-foreground mb-2">Hedging language</h3>
+                <p className="text-xs text-muted-foreground font-sans leading-relaxed mb-4">Use only when your evidence genuinely calls for a limited, probable, or context-bound claim.</p>
                 <div className="space-y-2">
                   {HEDGING_BOOSTING.hedging.map((item) => (
                     <div
@@ -259,7 +286,8 @@ export default function Phrases() {
               </div>
 
               <div className="bg-white border border-border rounded-2xl p-6">
-                <h3 className="font-sans font-semibold text-foreground mb-4">Boosting language</h3>
+                <h3 className="font-sans font-semibold text-foreground mb-2">Boosting language</h3>
+                <p className="text-xs text-muted-foreground font-sans leading-relaxed mb-4">Reserve stronger wording for claims your evidence, method, and disciplinary convention can support.</p>
                 <div className="space-y-2">
                   {HEDGING_BOOSTING.boosting.map((item) => (
                     <div
@@ -331,9 +359,29 @@ export default function Phrases() {
                   desc: "Summarize the contribution and state a bounded takeaway without new evidence.",
                 },
                 {
-                  href: "/blog/how-to-use-hedging-language-in-academic-writing",
+                  href: "/hedging-language-academic-writing",
                   title: "Hedging language guide",
-                  desc: "Use phrase choices that sound more careful and credible.",
+                  desc: "Calibrate certainty to the evidence instead of using cautious words as decoration.",
+                },
+                {
+                  href: "/academic-paragraph-structure",
+                  title: "Academic paragraph structure",
+                  desc: "Use transitions to clarify an already coherent sequence of point, evidence, explanation, and limit.",
+                },
+                {
+                  href: "/academic-argument-evidence",
+                  title: "Argument and evidence guide",
+                  desc: "Check whether the claim, source, reasoning, and cautious language work together.",
+                },
+                {
+                  href: "/research-paper-sections",
+                  title: "Research paper sections",
+                  desc: "Choose phrases after identifying what each section must accomplish for the reader.",
+                },
+                {
+                  href: "/academic-integrity-and-source-use",
+                  title: "Source-use guide",
+                  desc: "Keep quotations, paraphrases, summaries, and citations clear while you adapt academic language.",
                 },
               ].map((item) => (
                 <Link key={item.href} href={item.href} className="block">

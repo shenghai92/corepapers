@@ -233,6 +233,25 @@ const pages = [
 ];
 pages.forEach(([route, h1]) => checkPage(route, h1));
 
+const academicPhraseLibraryHtml = read("phrases/index.html");
+expect(
+  academicPhraseLibraryHtml.includes("Academic phrase bank with sentence starters for essays and research papers"),
+  "academic phrase library: expected H1"
+);
+expect(academicPhraseLibraryHtml.includes("1. Name the writing job"), "academic phrase library: six-step workflow");
+expect(
+  academicPhraseLibraryHtml.includes("Fictional learning example: let the relationship choose the phrase"),
+  "academic phrase library: fictional-example disclosure"
+);
+expect(academicPhraseLibraryHtml.includes("All sentence starters and mini-sentences in this library are fictional learning prompts"), "academic phrase library: template boundary");
+expect(academicPhraseLibraryHtml.includes("writingcenter.unc.edu"), "academic phrase library: UNC transitions guidance link");
+expect(academicPhraseLibraryHtml.includes("writingcenter.gmu.edu"), "academic phrase library: George Mason guidance link");
+expect(academicPhraseLibraryHtml.includes('/hedging-language-academic-writing/'), "academic phrase library: hedging cluster link");
+expect(academicPhraseLibraryHtml.includes('/academic-paragraph-structure/'), "academic phrase library: paragraph cluster link");
+expect(academicPhraseLibraryHtml.includes('/academic-argument-evidence/'), "academic phrase library: argument cluster link");
+expect(academicPhraseLibraryHtml.includes('/research-paper-sections/'), "academic phrase library: sections cluster link");
+expect(academicPhraseLibraryHtml.includes('/academic-integrity-and-source-use/'), "academic phrase library: source-use cluster link");
+
 const academicWritingExamplesHtml = read("academic-writing-examples/index.html");
 expect(
   academicWritingExamplesHtml.includes("Academic writing examples for research papers and essays"),
