@@ -52,6 +52,11 @@ const RESOURCE_CENTERS = [
     desc: "Check common reference and in-text citation structures before submitting.",
   },
   {
+    title: "APA 7 Non-English Sources",
+    href: "/apa-7-non-english-sources",
+    desc: "Cite original-language sources, published translations, and transliterated titles carefully.",
+  },
+  {
     title: "Research Foundations",
     href: "/evaluate-academic-sources",
     desc: "Evaluate sources, focus a research question, shape a thesis, and build an evidence-based argument.",

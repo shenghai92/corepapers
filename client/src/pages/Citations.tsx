@@ -554,7 +554,7 @@ export default function Citations() {
               ))}
             </div>
 
-            <div className="mt-10 grid sm:grid-cols-3 gap-4">
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <Link href="/citation-examples" className="block">
                 <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
                   <h2 className="font-serif text-2xl text-slate-purple mb-2">
@@ -565,6 +565,12 @@ export default function Citations() {
                     structures, then compare your output with the original
                     source details.
                   </p>
+                </div>
+              </Link>
+              <Link href="/apa-7-non-english-sources" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-2">APA 7 non-English sources</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">Check original-language sources, translations, romanization, and title translations before citing.</p>
                 </div>
               </Link>
               <Link href="/mla-citation-examples" className="block">
