@@ -221,6 +221,11 @@ const STATIC_PAGE_SEO = {
     description: "Use a fictional discussion section example, a research-paper discussion template, and a checklist for interpreting findings without overstating evidence.",
     keywords: "discussion section example research paper, discussion section template, how to write discussion section research paper",
   },
+  "/how-to-write-discussion-section": {
+    title: "How to Write a Discussion Section: Structure and Checklist | CorePapers",
+    description: "Learn how to write a discussion section for a research paper: interpret findings, compare prior research, address limitations, state careful implications, and avoid repeating Results.",
+    keywords: "how to write discussion section, discussion section research paper, discussion section structure, how to discuss research findings, results vs discussion section",
+  },
   "/results-section-example-research-paper": {
     title:
       "Results Section Example for a Research Paper: Template and Checklist | CorePapers",
@@ -444,6 +449,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/discussion-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/how-to-write-discussion-section/",
     changefreq: "monthly",
     priority: "0.8",
   },

@@ -275,6 +275,18 @@ export default function SectionWritingPractice({
                 </div>
               </Link>
             )}
+            {kind === "discussion" && (
+              <Link href="/how-to-write-discussion-section" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                  <h2 className="font-serif text-xl text-slate-purple mb-2">
+                    Plan the full discussion
+                  </h2>
+                  <p className="text-sm text-muted-foreground font-sans">
+                    Move from a finding to careful interpretation, limitations, and implications.
+                  </p>
+                </div>
+              </Link>
+            )}
             <Link href="/research-paper-templates" className="block">
               <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
                 <h2 className="font-serif text-xl text-slate-purple mb-2">

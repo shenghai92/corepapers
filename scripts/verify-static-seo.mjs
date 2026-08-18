@@ -129,6 +129,10 @@ const pages = [
     "Discussion section example for a research paper",
   ],
   [
+    "/how-to-write-discussion-section/",
+    "How to write a discussion section: move from findings to meaning",
+  ],
+  [
     "/conclusion-section-example-research-paper/",
     "Conclusion section example for a research paper",
   ],
@@ -237,6 +241,15 @@ expect(introductionPracticeHtml.includes('/research-gap-examples/'), "introducti
 const discussionPracticeHtml = read("discussion-section-example-research-paper/index.html");
 expect(discussionPracticeHtml.includes("Fictional learning example"), "discussion practice: fictional example in raw HTML");
 expect(discussionPracticeHtml.includes("explore.plos.org"), "discussion practice: publisher guidance link");
+expect(discussionPracticeHtml.includes('/how-to-write-discussion-section/'), "discussion practice: deep-guide return link");
+const discussionGuideHtml = read("how-to-write-discussion-section/index.html");
+expect(discussionGuideHtml.includes("Fictional learning example"), "discussion guide: fictional-example disclosure");
+expect(discussionGuideHtml.includes("libguides.usc.edu/writingguide/discussion"), "discussion guide: USC guidance link");
+expect(discussionGuideHtml.includes("explore.plos.org"), "discussion guide: PLOS guidance link");
+expect(discussionGuideHtml.includes("guides.lib.uci.edu"), "discussion guide: UC Irvine guidance link");
+expect(discussionGuideHtml.includes('/results-section-example-research-paper/'), "discussion guide: results cluster link");
+expect(discussionGuideHtml.includes('/discussion-section-example-research-paper/'), "discussion guide: example cluster link");
+expect(discussionGuideHtml.includes('/phrases/discussion/'), "discussion guide: phrase cluster link");
 const conclusionPracticeHtml = read("conclusion-section-example-research-paper/index.html");
 expect(conclusionPracticeHtml.includes("Fictional learning example"), "conclusion practice: fictional example in raw HTML");
 expect(conclusionPracticeHtml.includes("explore.plos.org"), "conclusion practice: publisher guidance link");
@@ -413,6 +426,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/discussion-section-example-research-paper/`),
   "sitemap: discussion practice resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/how-to-write-discussion-section/`),
+  "sitemap: discussion structure guide"
 );
 expect(
   sitemap.includes(`${BASE_URL}/conclusion-section-example-research-paper/`),
