@@ -30,6 +30,9 @@ const DiscussionWritingGuide = lazy(
 const GraduateAcademicWriting = lazy(
   () => import("./pages/GraduateAcademicWriting")
 );
+const HedgingLanguageGuide = lazy(
+  () => import("./pages/HedgingLanguageGuide")
+);
 const AcademicEnglishHub = lazy(() => import("./pages/AcademicEnglishHub"));
 const AcademicWritingResource = lazy(
   () => import("./pages/AcademicWritingResource")
@@ -196,6 +199,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <ResearchPaperSections />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/hedging-language-academic-writing"
+          component={() => (
+            <PublicLayout>
+              <HedgingLanguageGuide />
             </PublicLayout>
           )}
         />

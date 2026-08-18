@@ -22,7 +22,7 @@ const guides = [
     title: "Hedging language",
     description:
       "Match the strength of your claim to the limits of your evidence with more careful academic phrasing.",
-    href: "/blog/how-to-use-hedging-language-in-academic-writing",
+    href: "/hedging-language-academic-writing",
     icon: Scale,
   },
   {

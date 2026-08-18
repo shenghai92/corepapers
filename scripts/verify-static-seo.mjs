@@ -93,6 +93,10 @@ const pages = [
     "Academic writing for graduate students: build a repeatable research-writing practice",
   ],
   [
+    "/hedging-language-academic-writing/",
+    "Hedging language in academic writing: match your claim to your evidence",
+  ],
+  [
     "/academic-english-for-esl-students/",
     "Academic English support for ESL and international students",
   ],
@@ -202,6 +206,15 @@ expect(
   "results article: exactly one canonical"
 );
 
+const hedgingLanguageHtml = read("hedging-language-academic-writing/index.html");
+expect(hedgingLanguageHtml.includes("Fictional learning example"), "hedging language: fictional-example disclosure");
+expect(hedgingLanguageHtml.includes("writingcenter.gmu.edu"), "hedging language: George Mason guidance link");
+expect(hedgingLanguageHtml.includes("owl.purdue.edu"), "hedging language: Purdue OWL guidance link");
+expect(hedgingLanguageHtml.includes("students.unimelb.edu.au"), "hedging language: University of Melbourne guidance link");
+expect(hedgingLanguageHtml.includes("bristol.ac.uk"), "hedging language: University of Bristol guidance link");
+expect(hedgingLanguageHtml.includes('/academic-argument-evidence/'), "hedging language: argument-evidence cluster link");
+expect(hedgingLanguageHtml.includes('/how-to-write-discussion-section/'), "hedging language: discussion cluster link");
+
 const graduateAcademicWritingHtml = read("academic-writing-for-graduate-students/index.html");
 expect(graduateAcademicWritingHtml.includes("Fictional learning example"), "graduate academic writing: fictional-example disclosure");
 expect(graduateAcademicWritingHtml.includes("gsc.upenn.edu"), "graduate academic writing: UPenn guidance link");
@@ -212,6 +225,7 @@ expect(graduateAcademicWritingHtml.includes('/academic-english-for-esl-students/
 expect(graduateAcademicWritingHtml.includes('/research-proposal-template/'), "graduate academic writing: proposal cluster link");
 const academicEnglishHubHtml = read("academic-english-for-esl-students/index.html");
 expect(academicEnglishHubHtml.includes('/academic-writing-for-graduate-students/'), "academic-English hub: graduate-writing return link");
+expect(academicEnglishHubHtml.includes('/hedging-language-academic-writing/'), "academic-English hub: hedging return link");
 
 const synthesisHtml = read("literature-review-synthesis-matrix/index.html");
 expect(
@@ -401,6 +415,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/academic-writing-for-graduate-students/`),
   "sitemap: graduate academic writing guide"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/hedging-language-academic-writing/`),
+  "sitemap: hedging language guide"
 );
 expect(
   sitemap.includes(`${BASE_URL}/academic-english-for-esl-students/`),

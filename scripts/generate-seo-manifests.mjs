@@ -124,6 +124,11 @@ const STATIC_PAGE_SEO = {
     description: "Build stronger graduate-level academic writing with a practical guide to audience, genres, argument, evidence, source workflow, revision, and sustainable writing habits.",
     keywords: "academic writing for graduate students, graduate academic writing, graduate student writing guide, academic writing skills graduate students, writing research paper graduate school",
   },
+  "/hedging-language-academic-writing": {
+    title: "Hedging Language in Academic Writing: Examples and Guide | CorePapers",
+    description: "Use hedging language in academic writing to match claims to evidence. Learn cautious academic phrases, fictional examples, revision checks, and when not to hedge.",
+    keywords: "hedging language academic writing, hedging examples academic writing, cautious language academic writing, academic hedging phrases, how to hedge academic claims",
+  },
   "/academic-english-for-esl-students": {
     title:
       "Academic English Support for ESL and International Students | CorePapers",
@@ -391,6 +396,11 @@ const STATIC_PAGES = [
     path: "/research-paper-sections/", changefreq: "weekly", priority: "0.8" },
   {
     path: "/academic-writing-for-graduate-students/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/hedging-language-academic-writing/",
     changefreq: "monthly",
     priority: "0.8",
   },
