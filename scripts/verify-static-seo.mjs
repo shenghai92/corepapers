@@ -1,5 +1,5 @@
-import { existsSync, readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { relative, resolve } from "node:path";
 
 const ROOT = resolve(process.cwd());
 const DIST = resolve(ROOT, "dist/public");
@@ -621,6 +621,52 @@ expect(
 expect(
   !sitemap.includes(`${BASE_URL}/phrases</loc>`),
   "sitemap: page routes use canonical trailing slash"
+);
+
+function collectCrawlerVisibleHtml(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
+    const target = resolve(dir, entry.name);
+    if (entry.isDirectory()) return collectCrawlerVisibleHtml(target);
+    if (entry.name !== "index.html") return [];
+    const html = readFileSync(target, "utf8");
+    return html.includes('data-static-seo-fallback="true"') ? [target] : [];
+  });
+}
+
+const crawlerVisibleFiles = collectCrawlerVisibleHtml(DIST);
+const crawlerVisibleRoutes = new Set(
+  crawlerVisibleFiles.map(file => {
+    const filePath = relative(DIST, file).replace(/\\/g, "/");
+    return filePath === "index.html"
+      ? "/"
+      : `/${filePath.replace(/\/index\.html$/, "")}/`;
+  })
+);
+const unresolvedInternalTargets = new Set();
+for (const file of crawlerVisibleFiles) {
+  const html = readFileSync(file, "utf8");
+  for (const match of html.matchAll(/href=["']([^"'#?]+)["']/g)) {
+    const href = match[1];
+    if (!href.startsWith("/") || href.startsWith("//")) continue;
+    const pathOnly = href.split(/[?#]/, 1)[0];
+    if (
+      pathOnly.startsWith("/assets/") ||
+      pathOnly === "/favicon.svg" ||
+      pathOnly === "/robots.txt" ||
+      pathOnly === "/sitemap.xml" ||
+      pathOnly === "/login" ||
+      pathOnly === "/login/" ||
+      /\\.[a-z0-9]+$/i.test(pathOnly)
+    ) {
+      continue;
+    }
+    const route = pathOnly === "/" ? "/" : `${pathOnly.replace(/\/+$/, "")}/`;
+    if (!crawlerVisibleRoutes.has(route)) unresolvedInternalTargets.add(route);
+  }
+}
+expect(
+  unresolvedInternalTargets.size === 0,
+  `static pages: all internal content links resolve to generated routes${unresolvedInternalTargets.size ? ` (${[...unresolvedInternalTargets].join(", ")})` : ""}`
 );
 
 if (errors.length) {

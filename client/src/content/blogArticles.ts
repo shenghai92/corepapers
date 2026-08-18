@@ -2519,7 +2519,7 @@ That gives you a much clearer improvement plan.
 
 ## Related Guides
 
-If you also want to sound more academic at sentence level, read [how to make your essay sound more academic](/blog/how-to-make-your-essay-sound-more-academic) and [common ESL writing mistakes](/blog/how-to-avoid-common-esl-writing-mistakes).
+If you also want to sound more academic at sentence level, read [how to make your essay sound more academic](/blog/how-to-make-your-essay-sound-more-academic-without-changing-your-ideas) and [common ESL writing mistakes](/blog/how-to-avoid-common-esl-writing-mistakes).
 
 If source use is part of the problem, read [how to avoid plagiarism in academic writing](/blog/how-to-avoid-plagiarism-in-academic-writing), build an [annotated bibliography](/annotated-bibliography-example/), and use [source evaluation](/evaluate-academic-sources/) before you cite.
 
