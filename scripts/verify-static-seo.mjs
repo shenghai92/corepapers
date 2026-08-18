@@ -233,6 +233,25 @@ const pages = [
 ];
 pages.forEach(([route, h1]) => checkPage(route, h1));
 
+const researchPaperTemplatesHtml = read("research-paper-templates/index.html");
+expect(
+  researchPaperTemplatesHtml.includes("Research paper templates for methods, results, and discussion"),
+  "research paper templates: expected H1"
+);
+expect(researchPaperTemplatesHtml.includes("1. Confirm the deliverable"), "research paper templates: five-step workflow");
+expect(
+  researchPaperTemplatesHtml.includes("This fictional learning example is invented for practice and is not a submission template"),
+  "research paper templates: fictional-example disclosure"
+);
+expect(researchPaperTemplatesHtml.includes("Literature review:"), "research paper templates: structure-selection boundary");
+expect(researchPaperTemplatesHtml.includes("owl.purdue.edu"), "research paper templates: Purdue guidance link");
+expect(researchPaperTemplatesHtml.includes("libguides.usc.edu"), "research paper templates: USC guidance link");
+expect(researchPaperTemplatesHtml.includes("psychology.ucsd.edu"), "research paper templates: UCSD guidance link");
+expect(researchPaperTemplatesHtml.includes('/research-paper-outline-template/'), "research paper templates: outline cluster link");
+expect(researchPaperTemplatesHtml.includes('/research-paper-sections/'), "research paper templates: sections cluster link");
+expect(researchPaperTemplatesHtml.includes('/literature-review-synthesis-matrix/'), "research paper templates: synthesis cluster link");
+expect(researchPaperTemplatesHtml.includes('/academic-integrity-and-source-use/'), "research paper templates: source-use cluster link");
+
 const resultsHtml = read(
   "blog/how-to-write-a-results-section-research-paper-esl/index.html"
 );

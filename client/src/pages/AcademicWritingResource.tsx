@@ -441,8 +441,8 @@ function TemplatesPage() {
     <>
       <SEOHead
         title="Research Paper Templates for Methods, Results, and Discussion"
-        description="Use flexible research paper templates and checklists for methods, results, and discussion sections, designed for international students writing in academic English."
-        keywords="research paper template, methods section template, results section template, discussion section template, research writing checklist"
+        description="Use flexible research paper templates, section planners, and evidence-path checklists for empirical reports, literature reviews, proposals, methods, results, and discussion."
+        keywords="research paper template, research paper outline template, methods section template, results section template, discussion section template, research writing checklist"
         canonical="/research-paper-templates/"
       />
       <main className="pt-24 pb-16 min-h-screen bg-background">
@@ -455,9 +455,40 @@ function TemplatesPage() {
                 <span className="italic">fill in a paper</span>
               </>
             }
-            description="Use these section-by-section prompts to organise your own evidence and draft a research paper with a clearer sequence."
+            description="Choose a structure that fits the assignment, map what each section must accomplish, and replace every prompt with your own verified evidence and course requirements."
           />
-          <section className="max-w-4xl mx-auto grid md:grid-cols-3 gap-5">
+
+          <section className={`max-w-5xl mx-auto ${commonClass.card}`}>
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">A planning sequence, not a paper generator</p>
+            <h2 className={commonClass.title}>Move from the assignment to an evidence-led paper plan</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-5">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. TASK</p><h3 className="font-serif text-xl text-slate-purple mb-2">Confirm the deliverable</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Identify the paper type, question or prompt, target reader, required sources, length, citation style, and any mandatory headings.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. STRUCTURE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Choose a fitting architecture</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Select a section pattern that matches the assignment and discipline instead of forcing every project into the same IMRaD sequence.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. FUNCTION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Give every section a job</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Write a short purpose statement, planned claim or question, and evidence placeholder for each section before drafting full sentences.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. EVIDENCE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Test the support path</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Check that sources, data, methods, and analysis can actually develop the outline rather than being added after a conclusion is chosen.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. REVISE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Reverse-outline the draft</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">After drafting, summarize each paragraph or section in the margin and reorganize when the emerging evidence changes the paper&apos;s focus.</p></article>
+            </div>
+          </section>
+
+          <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6">
+            <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Choose a pattern that fits the work</h2>
+              <ul className="space-y-3 text-sm text-muted-foreground font-sans leading-relaxed">
+                <li><strong className="text-foreground">Empirical report:</strong> commonly uses a research-context introduction, methods, results, discussion, and references; exact headings and placement can differ.</li>
+                <li><strong className="text-foreground">Literature review:</strong> typically organizes sources by theme, method, debate, or trend instead of forcing separate methods and results sections.</li>
+                <li><strong className="text-foreground">Research proposal:</strong> usually connects a problem, literature-based rationale, question, feasible approach, and practical or ethical considerations.</li>
+                <li><strong className="text-foreground">Argument paper or course report:</strong> may need an introduction, claims and evidence, counter-considerations, and conclusion rather than an experimental-report structure.</li>
+              </ul>
+            </article>
+            <article className="p-7 bg-white border border-border rounded-2xl">
+              <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Map section functions before drafting</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice and is not a submission template.</strong> For an invented study of a fictional student-planning workshop, a writer maps the Introduction to the problem and question, the Methods to the invented design and data route, the Results to planned factual reporting, and the Discussion to cautious interpretation and limits. When the writer finds that the available fictional notes cannot support a planned comparison, the outline changes before a conclusion is drafted. The lesson is to let an evidence path shape the structure, not to fill brackets with invented details.</p>
+            </article>
+          </section>
+
+          <section className="max-w-4xl mx-auto mt-8 grid md:grid-cols-3 gap-5">
+            <p className="md:col-span-3 text-xs font-sans font-semibold tracking-widest uppercase text-primary -mb-1">Fictional learning prompts — adapt only with verified project details</p>
             {[
               [
                 "Methods",
@@ -520,31 +551,63 @@ function TemplatesPage() {
           </section>
 
           <section className={`max-w-4xl mx-auto mt-8 ${commonClass.card}`}>
-            <h2 className={commonClass.title}>A note on results reporting</h2>
+            <h2 className={commonClass.title}>Use templates as adjustable planning tools</h2>
             <p className={commonClass.copy}>
-              A useful template should reduce uncertainty about order, not
-              invent evidence. The{" "}
-              <ExternalLink href={sourceLinks.uciResults}>
-                UC Irvine guide to writing results
-              </ExternalLink>{" "}
-              recommends factual, evidence-supported reporting in a logical
-              order, with tables and figures mentioned in the text. Use your
-              institution&apos;s requirements if they differ.
+              <ExternalLink href="https://owl.purdue.edu/owl/general_writing/the_writing_process/developing_an_outline/how_to_outline.html">Purdue OWL</ExternalLink>{" "}
+              recommends beginning an outline by clarifying purpose, audience, and thesis, then listing, grouping, ordering, and labelling material. <ExternalLink href="https://libguides.usc.edu/writingguide/outline">USC Libraries</ExternalLink>{" "}
+              describes an outline as a framework for testing connections, order, gaps, and evidence; it should guide rather than constrain a project as research develops. For APA-style empirical reporting, <ExternalLink href="https://psychology.ucsd.edu/undergraduate-program/undergraduate-resources/academic-writing-resources/writing-research-papers/research-paper-structure.html">UC San Diego Psychology</ExternalLink>{" "}
+              identifies common sections and important variations for literature reviews, multi-experiment papers, in-progress projects, and course assignments. The <ExternalLink href={sourceLinks.uciResults}>UC Irvine Results guide</ExternalLink> also recommends factual, evidence-supported reporting in a logical order, with tables and figures mentioned in the text. Follow your instructor, supervisor, target journal, and approved research process wherever requirements differ.
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto mt-8 grid sm:grid-cols-2 gap-4">
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <ToolNextStep
-              title="Methods phrase bank"
-              copy="Choose sentence starters for design, participants, collection, and analysis."
+              title="Build a research paper outline"
+              copy="Map claims, section functions, and evidence before drafting the full paper."
+              href="/research-paper-outline-template"
+              label="Open outline template"
+            />
+            <ToolNextStep
+              title="Choose the right paper sections"
+              copy="Check how Introduction, Methods, Results, Discussion, and Conclusion differ by task."
+              href="/research-paper-sections"
+              label="Explore paper sections"
+            />
+            <ToolNextStep
+              title="Synthesize the source base"
+              copy="Map themes, methods, limits, and source relationships before a literature-based claim."
+              href="/literature-review-synthesis-matrix"
+              label="Use synthesis matrix"
+            />
+            <ToolNextStep
+              title="Plan section-level language"
+              copy="Choose methods and results phrases only after you know the evidence and reporting function."
               href="/phrases/methods"
               label="Open Methods phrases"
             />
             <ToolNextStep
-              title="Results phrase bank"
-              copy="Report tables, themes, statistics, and non-significant findings carefully."
-              href="/phrases/results"
-              label="Open Results phrases"
+              title="Report results responsibly"
+              copy="Keep factual findings distinct from interpretation and connect tables or themes logically."
+              href="/results-section-example-research-paper"
+              label="Use Results guide"
+            />
+            <ToolNextStep
+              title="Interpret findings carefully"
+              copy="Move meaning, limitations, and implications into a focused Discussion section."
+              href="/how-to-write-discussion-section"
+              label="Use Discussion guide"
+            />
+            <ToolNextStep
+              title="Check citation details"
+              copy="Generate and review references only after verifying the source information you are using."
+              href="/citations"
+              label="Open Citation Generator"
+            />
+            <ToolNextStep
+              title="Use sources with integrity"
+              copy="Keep source notes, paraphrases, quotations, and citations traceable while you draft."
+              href="/academic-integrity-and-source-use"
+              label="Read source-use guide"
             />
           </section>
         </div>
