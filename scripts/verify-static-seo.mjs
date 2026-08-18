@@ -291,6 +291,26 @@ expect(
   "abstract-vs-introduction article: Article JSON-LD"
 );
 
+const researchQuestionHtml = read("research-question-examples/index.html");
+expect(
+  researchQuestionHtml.includes("Research question examples: make a topic clear, focused, and arguable"),
+  "research questions: strengthened H1"
+);
+expect(
+  researchQuestionHtml.includes("1. Start with a broad topic"),
+  "research questions: five-step planning workflow"
+);
+expect(
+  researchQuestionHtml.includes("This is a fictional learning example only"),
+  "research questions: fictional-example disclosure"
+);
+expect(researchQuestionHtml.includes("writingcenter.gmu.edu"), "research questions: George Mason guidance link");
+expect(researchQuestionHtml.includes("hub.williams.edu"), "research questions: Williams guidance link");
+expect(researchQuestionHtml.includes("writingcenter.uci.edu"), "research questions: UC Irvine guidance link");
+expect(researchQuestionHtml.includes('/research-gap-examples/'), "research questions: research-gap cluster link");
+expect(researchQuestionHtml.includes('/academic-argument-evidence/'), "research questions: argument-evidence cluster link");
+expect(researchQuestionHtml.includes('/research-proposal-template/'), "research questions: research-proposal cluster link");
+
 const argumentEvidenceHtml = read("academic-argument-evidence/index.html");
 expect(
   argumentEvidenceHtml.includes("Academic argument and evidence: build a claim readers can follow"),

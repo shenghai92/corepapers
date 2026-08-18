@@ -177,6 +177,50 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
               </a>
             </div>
           </section>
+          {kind === "questions" && (
+            <>
+              <section className="mt-8 p-7 bg-white border border-border rounded-2xl">
+                <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">A planning sequence, not a universal formula</p>
+                <h2 className="font-serif text-3xl text-slate-purple mb-5">Move from a topic to a workable research question</h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. TOPIC</p><h3 className="font-serif text-xl text-slate-purple mb-2">Name a broad area</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Begin with a subject you need to understand, not with a conclusion you must prove.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. READING</p><h3 className="font-serif text-xl text-slate-purple mb-2">Learn what is known</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Use preliminary reading to identify key terms, debates, methods, constraints, and perspectives.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. FOCUS</p><h3 className="font-serif text-xl text-slate-purple mb-2">Set useful boundaries</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Specify a relationship, group, setting, period, text, practice, or process that fits the assignment.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. FEASIBILITY</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check the path to an answer</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Ask whether you have the time, access, methods, and credible sources needed to investigate it responsibly.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. REVISION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Let evidence refine it</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Keep a provisional answer or working claim, but change the wording when reading reveals a better question.</p></article>
+                </div>
+              </section>
+
+              <section className="mt-6 grid lg:grid-cols-2 gap-6">
+                <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                  <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Fictional learning example</p>
+                  <h2 className="font-serif text-3xl text-slate-purple mb-3">Narrow without assuming the answer</h2>
+                  <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This is a fictional learning example only.</strong> A student begins with “online privacy.” After introductory reading, they notice that platform settings, a defined group, and a particular sharing decision could make the topic manageable. Instead of asking “Are social media sites harmful?”, the student drafts: “How do university students describe the effect of privacy-setting changes on their willingness to share location information on [a defined platform]?” The question is narrower and open to evidence; it does not claim that harm, an effect, or a research gap has already been proven.</p>
+                </article>
+                <article className="p-7 bg-white border border-border rounded-2xl">
+                  <h2 className="font-serif text-3xl text-slate-purple mb-4">Check scope, sources, and method fit</h2>
+                  <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Can the question be answered thoroughly in the available word count and time, rather than only introduced?</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Does preliminary reading reveal enough credible material, data, texts, or participants for the type of assignment you have?</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Does the wording invite analysis and synthesis instead of a quick factual lookup or a simple yes/no answer?</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Does the question fit the discipline, ethical requirements, permitted methods, and audience set by your course or project?</li>
+                  </ul>
+                </article>
+              </section>
+
+              <section className="mt-6 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Use local requirements before a generic checklist</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://writingcenter.gmu.edu/writing-resources/research-based-writing/how-to-write-a-research-question" target="_blank" rel="noreferrer">George Mason University Writing Center</a> identifies clarity, focus, complexity, and arguability as useful question qualities. <a className="text-primary underline underline-offset-4" href="https://hub.williams.edu/peer-academic-support/the-writing-center/developing-a-strong-research-question/" target="_blank" rel="noreferrer">Williams College Writing Center</a> connects scope to the actual time available for the assignment. <a className="text-primary underline underline-offset-4" href="https://writingcenter.uci.edu/2024/03/22/developing-a-research-question/" target="_blank" rel="noreferrer">UC Irvine Writing Center</a> notes that questions may change as research proceeds. A how/why construction can be useful, but it is not a rule; follow the form, method, ethics requirements, and terminology of your discipline.</p>
+              </section>
+
+              <section className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <Link href="/research-gap-examples" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Locate a supportable gap</h2><p className="text-sm font-sans text-muted-foreground">Use limits in reviewed literature, not an unsupported claim that nothing exists.</p></article></Link>
+                <Link href="/evaluate-academic-sources" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Evaluate possible support</h2><p className="text-sm font-sans text-muted-foreground">Check the sources that can actually help answer the narrowed question.</p></article></Link>
+                <Link href="/academic-argument-evidence" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Build a provisional argument</h2><p className="text-sm font-sans text-muted-foreground">Turn emerging evidence into a claim that remains proportionate to its support.</p></article></Link>
+                <Link href="/research-proposal-template" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Plan a proposal</h2><p className="text-sm font-sans text-muted-foreground">Connect the question to a manageable purpose, design, and source plan.</p></article></Link>
+              </section>
+            </>
+          )}
           {kind === "evidence" && (
             <>
               <section className="mt-8 p-7 bg-white border border-border rounded-2xl">
