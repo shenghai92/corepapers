@@ -1570,7 +1570,9 @@ A good discussion section guides the reader from results to meaning. Once you fo
 
 The thesis statement is the sentence that tells the reader what your essay is trying to prove, explain, or evaluate. A weak thesis creates confusion from the beginning. A strong one gives the whole paper direction.
 
-Many international students understand their topic well but write thesis statements that are too broad, too descriptive, or too obvious. The problem is usually not grammar. It is focus.
+Many international students understand their topic well but write thesis statements that are too broad, descriptive, obvious, or disconnected from the evidence they can actually develop. The problem is often focus and alignment, not grammar alone.
+
+> **Fictional learning examples:** Every topic, thesis statement, formula, and revision below is invented for practice. It is not a factual claim, research result, or text to submit unchanged. Build your own thesis from the assignment, the evidence you can use, and the conventions of your discipline.
 
 ## What a Good Thesis Statement Does
 
@@ -1583,29 +1585,29 @@ A strong thesis statement is:
 
 It should tell the reader both the topic and your position or main line of argument.
 
-## Compare Weak and Strong Examples
+## Fictional Learning Example: Compare topic and claim
 
-Weak: "Social media is important for university students."
+**Fictional topic statement:** "Social media is important for university students."
 
-Stronger: "Although social media can support peer collaboration, excessive use of short-form platforms may reduce sustained attention during independent study."
+**Fictional draft claim:** "Although social media can support peer collaboration, excessive use of short-form platforms may reduce sustained attention during independent study."
 
-The second version is stronger because it makes a clear claim and gives the essay a direction.
+The second fictional sentence gives an essay a more specific direction because it makes a qualified, supportable claim rather than only naming a topic. In a real paper, check that your sources and analysis can support the relationship and limits you state.
 
 ## Where Does the Thesis Statement Go in an Essay?
 
-In most academic essays, the thesis statement appears near the end of the introduction.
+In many academic essays, a thesis statement appears near the end of the introduction, after the writer has introduced the topic and narrowed the focus. In a short essay, it may be the final sentence of the opening paragraph; in a longer paper, it may follow several sentences of context or an introductory section.
 
-That position works well because the introduction can first explain the topic, narrow the focus, and then end with the essay's main claim. In shorter essays, the thesis is often the final sentence of the first paragraph. In longer essays, it may come after a few opening sentences of context, but it still usually appears before the body paragraphs begin.
+Placement varies by genre and discipline. A lab report, literature review, reflective assignment, policy brief, or research proposal may use a purpose statement, research question, or claim in a different location. Follow the assignment prompt and read model texts in your field before assuming that every paper needs the same sentence in the same place.
 
-If the reader finishes the introduction and still cannot tell what the paper will argue, the thesis is probably too vague or placed too late.
+If a reader finishes the introduction and still cannot tell what the paper will argue, explain, or investigate, the controlling statement is probably too vague, too late, or mismatched with the genre.
 
 ## A Simple Formula
 
-You do not need to use a formula forever, but it can help while drafting:
+You do not need to use a formula forever, but a planning pattern can help while drafting:
 
 "This essay argues that [main claim] because [reason 1], [reason 2], and [reason 3]."
 
-Once you have the logic, you can revise the sentence to sound smoother and more natural.
+This is a fictional planning pattern, not a required sentence or evidence. Once you identify the logic, revise it to fit your genre, discipline, source base, and assignment.
 
 ## Three Common Problems
 
@@ -1642,7 +1644,7 @@ Your answers often contain the thesis already, even if it does not sound polishe
 
 Many students think the thesis must be perfect before they draft. In reality, the best thesis statements often become clear after some writing has happened. It is normal to revise the thesis once your body paragraphs sharpen the argument.
 
-## Thesis Statement Examples for Different Essay Types
+## Fictional Thesis Statement Patterns for Different Essay Types
 
 ### Argument essay
 
@@ -1656,7 +1658,7 @@ Many students think the thesis must be perfect before they draft. In reality, th
 
 "The novel presents silence not as passivity, but as a deliberate strategy for showing emotional and political pressure."
 
-These examples work because they do more than name the topic. Each one makes a claim that can be explained and supported in the body paragraphs.
+These fictional patterns do more than name a topic. Each makes a claim that could be explained and supported in a body section. Before using your own version, check that the assignment asks for that type of claim and that each major body paragraph can develop it with accurate evidence.
 
 ## A Fast Thesis Statement Checklist
 
@@ -1675,17 +1677,17 @@ Before you submit, ask:
 - "Although X is often seen as Y, this essay contends that..."
 - "This paper suggests that..."
 
-For more sentence starters, visit the [academic phrases page](/phrases).
+For purpose-specific patterns, visit [Introduction phrases](/phrases/introduction/) and the wider [academic phrase library](/phrases). Use phrases only after you know what your evidence supports.
 
 ## CorePapers Tip
 
-If your thesis sounds vague or too conversational, [essay polish](/polish) can help refine the sentence and make the claim more academic.
+If your thesis sounds vague or too conversational, [essay polish](/polish) can offer wording choices to review. It cannot decide whether a claim is arguable, accurate, or sufficiently supported by your evidence.
 
-If you need stronger sentence starters around the thesis or introduction, the [academic phrase bank](/phrases) can help you build a clearer opening paragraph.
+Use the [thesis statement examples guide](/thesis-statement-examples/) for a focused claim checklist, the [academic paragraph structure guide](/academic-paragraph-structure/) to test whether body paragraphs develop the claim, and the [research paper outline template](/research-paper-outline-template/) to align the thesis with evidence and section order.
 
 ## Conclusion
 
-A thesis statement does not need to sound dramatic. It needs to sound clear, focused, and defensible. Once you know the claim your paper is making, the rest of the essay becomes much easier to organize.`,
+A thesis statement does not need to sound dramatic. It needs to make the paper’s controlling purpose clear, focused, and defensible within the assignment. Test it against the evidence, paragraph plan, and disciplinary genre, then revise it as your draft develops.`,
   },
   {
     slug: "how-to-write-a-research-proposal-for-university",
