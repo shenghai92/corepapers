@@ -71,6 +71,27 @@ expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation 
 expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
 expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
+const academicWritingSupportHtml = read("academic-writing-alternative-for-international-students/index.html");
+expect(
+  academicWritingSupportHtml.includes("Academic writing support for international students"),
+  "academic writing support: expected H1"
+);
+expect(academicWritingSupportHtml.includes("1. Interpret the task"), "academic writing support: six-step workflow");
+expect(academicWritingSupportHtml.includes("Keep the writer in control"), "academic writing support: support-responsibility boundary");
+expect(academicWritingSupportHtml.includes("drexel.edu/coas/academics/university-writing-program/multilingual-writers"), "academic writing support: Drexel multilingual guidance link");
+expect(academicWritingSupportHtml.includes("owl.purdue.edu/owl/multilingual/multilingual_students"), "academic writing support: Purdue multilingual guidance link");
+expect(academicWritingSupportHtml.includes("owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html"), "academic writing support: Purdue revision guidance link");
+expect(academicWritingSupportHtml.includes('/academic-english-for-esl-students/'), "academic writing support: Academic English hub link");
+expect(academicWritingSupportHtml.includes('/research-paper-sections/'), "academic writing support: paper-sections link");
+expect(academicWritingSupportHtml.includes('/academic-paragraph-structure/'), "academic writing support: paragraph-structure link");
+expect(academicWritingSupportHtml.includes('/academic-argument-evidence/'), "academic writing support: argument-evidence link");
+expect(academicWritingSupportHtml.includes('/polish/'), "academic writing support: essay-polish link");
+expect(academicWritingSupportHtml.includes('/phrases/'), "academic writing support: phrase-library link");
+expect(academicWritingSupportHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "academic writing support: paraphrasing-tool link");
+expect(academicWritingSupportHtml.includes('/evaluate-academic-sources/'), "academic writing support: source-evaluation link");
+expect(academicWritingSupportHtml.includes('/academic-integrity-and-source-use/'), "academic writing support: source-use link");
+expect(academicWritingSupportHtml.includes('/citations/'), "academic writing support: citation-generator link");
+
 const academicParaphrasingToolHtml = read("academic-paraphrasing-tool-for-esl-students/index.html");
 expect(
   academicParaphrasingToolHtml.includes("Academic paraphrasing tool for ESL students"),

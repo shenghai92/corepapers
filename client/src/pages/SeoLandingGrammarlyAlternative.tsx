@@ -6,16 +6,16 @@ import { getLoginUrl } from "@/const";
 
 const FAQ = [
   {
-    q: "Who might need an academic writing alternative?",
-    a: "Students who want revision help that is more closely aligned with academic English, non-native phrasing, citations, and research-writing tasks may want a more specialized workflow.",
+    q: "Who might need academic writing support?",
+    a: "International students and multilingual writers who want to work deliberately on academic English, research-paper structure, source use, citations, and revision may benefit from a workflow that connects those tasks rather than treating grammar as the whole assignment.",
   },
   {
-    q: "What makes CorePapers different in practice?",
-    a: "CorePapers focuses on academic wording, international student use cases, and adjacent tasks such as phrase support and citation generation.",
+    q: "What can this workflow help me do in practice?",
+    a: "It can help you plan a writing task, draft your own content, review argument and paragraph logic, inspect language suggestions, preserve source attribution, and verify citation details. You decide whether each suggestion fits your assignment and intended meaning.",
   },
   {
-    q: "Can I try it before choosing a paid plan?",
-    a: "Yes. You can start with the free workflow and see whether the writing support fits your assignments.",
+    q: "Does this replace my instructor or writing center?",
+    a: "No. It does not determine assignment requirements, verify research, approve a draft, or replace feedback from your instructor, supervisor, librarian, or writing center. You remain responsible for everything you submit.",
   },
 ];
 
@@ -60,11 +60,11 @@ export default function SeoLandingGrammarlyAlternative() {
               Academic Writing Workflow
             </div>
             <h1 className="font-serif font-light text-3xl sm:text-5xl text-slate-purple mb-4 leading-tight">
-              A more academic-writing-focused
-              <span className="italic"> alternative for international students</span>
+              Academic writing support
+              <span className="italic"> for international students</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed mb-8">
-              Some writing tools are broad by design. CorePapers is narrower and more focused: academic English, non-native phrasing, citation support, and student writing workflows.
+              Build an author-led academic writing workflow that connects task planning, research-paper structure, multilingual revision, source use, citations, and a final policy-aware check.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
@@ -81,11 +81,25 @@ export default function SeoLandingGrammarlyAlternative() {
             </div>
           </div>
 
+          <section className="max-w-5xl mx-auto mb-10 p-7 bg-white border border-border rounded-2xl shadow-card">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Keep the writer in control</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">An author-led academic writing support path</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. INTERPRET</p><h3 className="font-serif text-xl text-slate-purple mb-2">Read the task carefully</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Identify the question, genre, audience, required sections, evidence expectations, citation system, language policy, and assessment criteria before drafting.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. PLAN</p><h3 className="font-serif text-xl text-slate-purple mb-2">Build an evidence path</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Turn the task into a focused claim or question, a section plan, and a record of sources you can evaluate and cite accurately.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. DRAFT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Write the ideas yourself</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Develop your own explanation, analysis, and argument; use sources as traceable support rather than as text to rearrange or submit as your own.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. REVISE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Fix global issues first</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Check main point, purpose, evidence, organization, paragraph flow, and section function before spending time on individual sentences or grammar.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. REVIEW</p><h3 className="font-serif text-xl text-slate-purple mb-2">Inspect language choices</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Consider phrase, tone, grammar, and clarity suggestions against your discipline, intended meaning, and own voice; keep, reject, or rewrite them deliberately.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">6. VERIFY</p><h3 className="font-serif text-xl text-slate-purple mb-2">Finish with source checks</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Check quotations, paraphrases, evidence claims, in-text citations, reference entries, required disclosure, and your course or university policy before submission.</p></article>
+            </div>
+            <p className="text-sm font-sans text-primary font-medium mt-5">CorePapers can support practice and review. It cannot decide what your instructor permits, verify sources or facts, approve an argument, or replace feedback from a writing center, librarian, supervisor, or instructor.</p>
+          </section>
+
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 mb-10">
             {[
-              "More emphasis on non-native English phrasing in academic contexts.",
-              "Closer connection between revision, academic phrases, and citations.",
-              "A workflow that fits essays, literature reviews, and research-oriented writing.",
+              "Start with task, evidence, and structure before changing surface grammar.",
+              "Use language and phrase support as choices to review, not text to accept without judgment.",
+              "Keep paraphrases, quotations, in-text citations, and reference entries visible and traceable.",
             ].map((item) => (
               <div key={item} className="p-6 bg-white border border-border rounded-2xl">
                 <CheckCircle2 size={18} className="text-emerald-500 mb-3" />
@@ -96,17 +110,11 @@ export default function SeoLandingGrammarlyAlternative() {
 
           <div className="max-w-5xl mx-auto grid lg:grid-cols-[1.3fr_0.9fr] gap-6 mb-10">
             <section className="p-8 bg-white border border-border rounded-2xl">
-              <h2 className="font-serif text-3xl text-slate-purple mb-4">When a focused tool can make more sense</h2>
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Support multilingual writing without losing authorship</h2>
               <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
-                <p>
-                  International students often need more than surface grammar feedback. They may need help with academic tone, source integration, hedging, and sentence patterns that sound translated.
-                </p>
-                <p>
-                  That is where a narrower academic-writing workflow can be more useful. Instead of trying to cover every kind of writing equally, CorePapers concentrates on student academic use cases.
-                </p>
-                <p>
-                  You can start with <Link href="/ai-essay-polisher-for-non-native-english-writers" className="text-primary underline">AI essay polish</Link>, then move to <Link href="/citations" className="text-primary underline">citations</Link> or the <Link href="/phrases" className="text-primary underline">phrase library</Link>.
-                </p>
+                <p><a className="text-primary underline underline-offset-4" href="https://drexel.edu/coas/academics/university-writing-program/multilingual-writers/" target="_blank" rel="noreferrer">Drexel University&apos;s Writing Program</a> describes multilingual writing support as collaborative work that helps writers make informed choices reflecting their individual voice. Its support spans brainstorming, organizing, interpreting prompts, using sources, avoiding plagiarism, and revising grammar.</p>
+                <p><a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/multilingual/multilingual_students/index.html" target="_blank" rel="noreferrer">Purdue OWL</a> brings together multilingual resources for writing across the curriculum and disciplines. Its <a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html" target="_blank" rel="noreferrer">revision guide</a> begins with main point, reader, purpose, evidence, and relevance before clarity and grammar.</p>
+                <p>Use that sequence in CorePapers: start with <Link href="/academic-english-for-esl-students" className="text-primary underline">Academic English support</Link> or <Link href="/research-paper-sections" className="text-primary underline">paper sections</Link>, review argument and paragraph logic, then use <Link href="/polish" className="text-primary underline">Essay Polish</Link>, the <Link href="/phrases" className="text-primary underline">phrase library</Link>, or <Link href="/citations" className="text-primary underline">citation support</Link> for the relevant task.</p>
               </div>
             </section>
 
@@ -116,7 +124,7 @@ export default function SeoLandingGrammarlyAlternative() {
                 Quick fit check
               </div>
               <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
-                <p>If your assignments involve essays, reports, literature reviews, or citation-heavy work, the academic workflow will usually matter more than broad generic writing coverage.</p>
+                <p>If your assignment includes essays, reports, literature reviews, research-paper sections, or citation-heavy work, a staged workflow may help you separate planning, drafting, revision, language review, and source checks.</p>
               </div>
               <div className="space-y-3 mt-6">
                 <Button asChild className="w-full bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
@@ -134,7 +142,22 @@ export default function SeoLandingGrammarlyAlternative() {
             </aside>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <section className="max-w-5xl mx-auto mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: "/academic-english-for-esl-students", title: "Academic English for ESL students", desc: "Build a multilingual writing routine that moves from understanding the task to revising your own draft." },
+              { href: "/research-paper-sections", title: "Research paper sections", desc: "Choose a structure and section function before looking for sentence-level wording." },
+              { href: "/academic-paragraph-structure", title: "Academic paragraph structure", desc: "Make each paragraph connect point, evidence, explanation, and transition before polishing sentences." },
+              { href: "/academic-argument-evidence", title: "Argument and evidence", desc: "Check claim, support, reasoning, limitation, and evidence language together." },
+              { href: "/academic-paraphrasing-tool-for-esl-students", title: "Academic paraphrasing", desc: "Understand a source, rebuild the idea for your own purpose, and keep attribution visible." },
+              { href: "/evaluate-academic-sources", title: "Academic source evaluation", desc: "Verify a source&apos;s author, purpose, evidence, currency, and record before relying on it." },
+              { href: "/academic-integrity-and-source-use", title: "Academic integrity and source use", desc: "Decide when quotation, paraphrase, summary, and citation are required." },
+              { href: "/citations", title: "Citation Generator", desc: "Generate a formatting draft only after checking the original source details and required style." },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all"><h2 className="font-serif text-2xl text-slate-purple mb-2">{item.title}</h2><p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p></article></Link>
+            ))}
+          </section>
+
+          <div className="max-w-4xl mx-auto mt-10">
             <h2 className="font-serif font-light text-3xl text-slate-purple text-center mb-6">Frequently asked questions</h2>
             <div className="space-y-3">
               {FAQ.map((item) => (
