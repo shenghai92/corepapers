@@ -7,15 +7,15 @@ import { getLoginUrl } from "@/const";
 const FAQ = [
   {
     q: "Who is this page meant for?",
-    a: "It is aimed at students who want paraphrasing and revision help that fits academic writing rather than only generic rewriting.",
+    a: "It is for students who need to decide how to integrate a source into an academic paragraph: whether to quote, paraphrase, summarize, provide their own analysis, and document the source accurately.",
   },
   {
-    q: "What kind of tasks does CorePapers fit well?",
-    a: "It fits source-based writing, paraphrasing, essay revision, literature review drafting, and citation-adjacent academic workflows.",
+    q: "When should I paraphrase instead of quote or summarize?",
+    a: "Paraphrase when the source&apos;s idea or evidence matters more than its exact language and you need detail for your point. Quote when the exact wording needs analysis or would lose significance; summarize when a broad source pattern or context is sufficient. All three can require attribution.",
   },
   {
-    q: "Can I test the workflow without paying first?",
-    a: "Yes. You can start free and see whether the revision style works for your assignments.",
+    q: "Can a paraphrasing tool make a source-based sentence safe to submit?",
+    a: "No. A tool cannot confirm the original source, assess whether you have understood it, decide if wording is distinctive, verify a citation, or replace your course&apos;s academic-integrity requirements. Compare your draft with the source and take responsibility for the final wording and attribution.",
   },
 ];
 
@@ -60,11 +60,11 @@ export default function SeoLandingQuillbotAlternative() {
               Academic Paraphrasing Workflow
             </div>
             <h1 className="font-serif font-light text-3xl sm:text-5xl text-slate-purple mb-4 leading-tight">
-              A paraphrasing alternative
-              <span className="italic"> for academic writing</span>
+              Academic paraphrasing support
+              <span className="italic"> for source-based writing</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed mb-8">
-              If you need paraphrasing help for essays, literature reviews, and source-based academic writing, a more academic-focused revision workflow may be a better fit than generic rewriting alone.
+              Choose whether to quote, paraphrase, or summarize a source; rebuild the relevant idea for your own argument; then preserve clear, accurate attribution in essays, literature reviews, and research papers.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
@@ -81,11 +81,23 @@ export default function SeoLandingQuillbotAlternative() {
             </div>
           </div>
 
+          <section className="max-w-5xl mx-auto mb-10 p-7 bg-white border border-border rounded-2xl shadow-card">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Choose the source move before revising language</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">Quote, paraphrase, summarize, or write your own analysis?</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">QUOTE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Use exact wording when it matters</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Quote when particular language needs close analysis, carries historical or legal significance, or would lose the relevant meaning if recast. Mark it and cite it.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">PARAPHRASE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Rebuild a needed idea</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Use your own structure and emphasis when the source&apos;s idea, evidence, or detail supports a specific point in your paragraph. Keep the source visible.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">SUMMARIZE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Condense a broad pattern</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Use a concise overview for a larger argument, debate, study, or context when readers need the main takeaway rather than selected detail.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">ANALYZE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Explain your own point</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">After integrating the source, state how it supports, complicates, contrasts with, or limits your claim. Source material does not replace your reasoning.</p></article>
+            </div>
+            <p className="text-sm font-sans text-primary font-medium mt-5">No choice removes attribution responsibility. Keep a record of the source you actually read, compare your wording with it, place the required citation where readers can identify the borrowed material, and create a matching reference entry.</p>
+          </section>
+
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 mb-10">
             {[
-              "Keep the focus on academic tone instead of only sentence variation.",
-              "Connect paraphrasing with citation support and essay revision.",
-              "Support international students working with source-heavy assignments.",
+              "Decide the source move before you change a sentence&apos;s wording.",
+              "Link paraphrase, quotation, summary, analysis, and citation in the same source-use workflow.",
+              "Support international students working with source-heavy assignments without treating synonym swaps as academic revision.",
             ].map((item) => (
               <div key={item} className="p-6 bg-white border border-border rounded-2xl">
                 <CheckCircle2 size={18} className="text-emerald-500 mb-3" />
@@ -96,17 +108,12 @@ export default function SeoLandingQuillbotAlternative() {
 
           <div className="max-w-5xl mx-auto grid lg:grid-cols-[1.3fr_0.9fr] gap-6 mb-10">
             <section className="p-8 bg-white border border-border rounded-2xl">
-              <h2 className="font-serif text-3xl text-slate-purple mb-4">When the academic context matters more</h2>
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Integrate a source for a clear academic purpose</h2>
               <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
-                <p>
-                  Students often do not need paraphrasing in isolation. They need paraphrasing that works inside argument paragraphs, literature reviews, and cited academic writing.
-                </p>
-                <p>
-                  That is why the surrounding workflow matters. CorePapers tries to support the paragraph after the rewrite too, with polish, phrase support, and citation tools close by.
-                </p>
-                <p>
-                  For practical background, read <Link href="/blog/how-to-paraphrase-without-plagiarizing-in-academic-writing" className="text-primary underline">the paraphrasing guide</Link>.
-                </p>
+                <p>Academic context determines the source move. A literature review may summarize a debate, paraphrase a study&apos;s method or result, and quote a distinctive definition; an argument paragraph then explains how that material advances the writer&apos;s claim.</p>
+                <p><a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html" target="_blank" rel="noreferrer">Purdue OWL</a> describes a paraphrase as a new rendition of another writer&apos;s essential information and ideas that still needs documentation. <a className="text-primary underline underline-offset-4" href="https://writing.wisc.edu/handbook/quotingsources/" target="_blank" rel="noreferrer">University of Wisconsin–Madison Writing Center</a> distinguishes source moves by purpose and stresses that borrowed ideas require credit even when rendered in new words.</p>
+                <p><strong className="text-foreground">Fictional learning decision.</strong> This invented practice scenario is not a source or sentence to submit. A fictional writer summarizes a debate&apos;s overall position, paraphrases one study&apos;s relevant finding to support a paragraph, quotes only a distinctive definition, and then adds analysis explaining the connection to the writer&apos;s claim.</p>
+                <p>For a full understanding—rebuild—compare—attribute workflow, use <Link href="/how-to-paraphrase-without-plagiarizing" className="text-primary underline">the paraphrasing guide</Link>, then review the paragraph and citation details before submission.</p>
               </div>
             </section>
 
@@ -116,7 +123,7 @@ export default function SeoLandingQuillbotAlternative() {
                 Best next move
               </div>
               <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
-                <p>Revise the paraphrased paragraph first, then build the citation for the source and check whether the tone fits the rest of your draft.</p>
+                <p>First select the right source move, then draft the paragraph in your own structure and voice. Compare it with the original, verify the citation, and check how the source supports your analysis.</p>
               </div>
               <div className="space-y-3 mt-6">
                 <Button asChild className="w-full bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
@@ -134,7 +141,20 @@ export default function SeoLandingQuillbotAlternative() {
             </aside>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <section className="max-w-5xl mx-auto mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: "/how-to-paraphrase-without-plagiarizing", title: "Paraphrase without plagiarizing", desc: "Follow a full source understanding, purpose, reconstruction, comparison, and attribution process." },
+              { href: "/academic-paraphrasing-tool-for-esl-students", title: "Academic paraphrasing for ESL students", desc: "Review a source-based paragraph after you have rebuilt the relevant idea for your own purpose." },
+              { href: "/academic-integrity-and-source-use", title: "Academic integrity and source use", desc: "Distinguish quotation, paraphrase, summary, citation, and source verification responsibilities." },
+              { href: "/evaluate-academic-sources", title: "Evaluate the source first", desc: "Check author, purpose, evidence, currency, and source records before presenting a source confidently." },
+              { href: "/academic-argument-evidence", title: "Connect evidence to argument", desc: "Show how a source supports, limits, or complicates your claim instead of leaving evidence unexplained." },
+              { href: "/citations", title: "Generate, then verify citations", desc: "Build references from source details you checked against the actual work and required style." },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all"><h2 className="font-serif text-2xl text-slate-purple mb-2">{item.title}</h2><p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.desc}</p></article></Link>
+            ))}
+          </section>
+
+          <div className="max-w-4xl mx-auto mt-10">
             <h2 className="font-serif font-light text-3xl text-slate-purple text-center mb-6">Frequently asked questions</h2>
             <div className="space-y-3">
               {FAQ.map((item) => (

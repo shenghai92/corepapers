@@ -71,6 +71,27 @@ expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation 
 expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
 expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
+const paraphrasingSupportLandingHtml = read("paraphrasing-alternative-for-academic-writing/index.html");
+expect(
+  paraphrasingSupportLandingHtml.includes("Academic paraphrasing support for source-based writing"),
+  "paraphrasing support landing: expected H1"
+);
+expect(paraphrasingSupportLandingHtml.includes("Choose the source move before revising language"), "paraphrasing support landing: source-move framework");
+expect(paraphrasingSupportLandingHtml.includes("Quote: use exact wording when it matters"), "paraphrasing support landing: quotation decision");
+expect(paraphrasingSupportLandingHtml.includes("Paraphrase: rebuild a needed idea"), "paraphrasing support landing: paraphrase decision");
+expect(paraphrasingSupportLandingHtml.includes("Summarize: condense a broad pattern"), "paraphrasing support landing: summary decision");
+expect(paraphrasingSupportLandingHtml.includes("Analyze: explain your own point"), "paraphrasing support landing: analysis decision");
+expect(paraphrasingSupportLandingHtml.includes("Fictional learning decision"), "paraphrasing support landing: fictional-decision disclosure");
+expect(paraphrasingSupportLandingHtml.includes("owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"), "paraphrasing support landing: Purdue paraphrasing guidance link");
+expect(paraphrasingSupportLandingHtml.includes("writing.wisc.edu/handbook/quotingsources"), "paraphrasing support landing: Wisconsin source-use guidance link");
+expect(paraphrasingSupportLandingHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "paraphrasing support landing: detailed-guide link");
+expect(paraphrasingSupportLandingHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "paraphrasing support landing: paraphrasing-tool link");
+expect(paraphrasingSupportLandingHtml.includes('/academic-integrity-and-source-use/'), "paraphrasing support landing: source-use link");
+expect(paraphrasingSupportLandingHtml.includes('/evaluate-academic-sources/'), "paraphrasing support landing: source-evaluation link");
+expect(paraphrasingSupportLandingHtml.includes('/academic-argument-evidence/'), "paraphrasing support landing: argument-evidence link");
+expect(paraphrasingSupportLandingHtml.includes('/citations/'), "paraphrasing support landing: citation-generator link");
+expect(paraphrasingSupportLandingHtml.includes('/polish/'), "paraphrasing support landing: essay-polish link");
+
 const essayPolisherLandingHtml = read("ai-essay-polisher-for-non-native-english-writers/index.html");
 expect(
   essayPolisherLandingHtml.includes("AI essay polisher for non-native English writers"),
