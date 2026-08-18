@@ -177,6 +177,51 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
               </a>
             </div>
           </section>
+          {kind === "paragraphs" && (
+            <>
+              <section className="mt-8 p-7 bg-white border border-border rounded-2xl">
+                <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">A flexible writing sequence, not a universal template</p>
+                <h2 className="font-serif text-3xl text-slate-purple mb-5">Build a paragraph that readers can follow and evaluate</h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. FUNCTION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Name the paragraph&apos;s job</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Decide whether the paragraph introduces a reason, interprets evidence, qualifies a claim, compares views, or moves the argument forward.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. CONTROLLING POINT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Give it one focus</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">State or make clear the point readers should carry through the paragraph. A topic sentence often helps, but its placement can vary by purpose and genre.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. MATERIAL</p><h3 className="font-serif text-xl text-slate-purple mb-2">Choose relevant support</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Use a source, data point, observation, example, definition, or textual detail that actually helps develop this point rather than merely filling space.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. EXPLANATION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Show the connection</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Explain how the material supports, complicates, illustrates, or limits the point. A citation identifies a source; it does not complete the reasoning for you.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. CONNECTION</p><h3 className="font-serif text-xl text-slate-purple mb-2">Guide readers to the next idea</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Signal a genuine relationship—such as continuation, contrast, concession, cause, or clarification—rather than adding a transition word as decoration.</p></article>
+                  <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">6. REVERSE CHECK</p><h3 className="font-serif text-xl text-slate-purple mb-2">Test unity and development</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Write a short margin note stating what the paragraph does. If the note needs two ideas, split, reorder, or revise before polishing sentences.</p></article>
+                </div>
+              </section>
+
+              <section className="mt-6 grid lg:grid-cols-2 gap-6">
+                <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                  <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Fictional learning example</p>
+                  <h2 className="font-serif text-3xl text-slate-purple mb-3">Move from cited material to explained reasoning</h2>
+                  <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice.</strong> In an invented first-year writing course, a student needs to argue that clear deadline information can reduce avoidable confusion in a fictional course portal. The student&apos;s paragraph begins with the focused point that reminders are most useful when they tell students what action to take. It then introduces an invented student-feedback pattern, explains that the pattern concerns clarity rather than every cause of missed work, and links to the next paragraph on how the portal should present the information. The evidence is not left to “speak for itself,” and the wording does not turn a fictional association into a universal causal finding.</p>
+                </article>
+                <article className="p-7 bg-white border border-border rounded-2xl">
+                  <h2 className="font-serif text-3xl text-slate-purple mb-4">Use paragraph frameworks as prompts, not rules</h2>
+                  <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-foreground">PEEL, TEEL, and TTEB</strong> can remind writers to make a point, support it, explain its significance, and link it to the larger argument.</span></li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />They are especially useful when practising short argumentative paragraphs, but a literature review, methods section, close reading, or discipline-specific genre may organize a paragraph differently.</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />A topic sentence need not always be the first sentence, provided a reader can still identify the paragraph&apos;s controlling idea and its role in the paper.</li>
+                    <li className="flex gap-2"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />Transitions clarify an existing logical relationship; they cannot repair a paragraph sequence whose underlying reasoning is unclear.</li>
+                  </ul>
+                </article>
+              </section>
+
+              <section className="mt-6 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Make coherence visible rather than merely adding connectors</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/general_writing/academic_writing/paragraphs_and_paragraphing/index.html" target="_blank" rel="noreferrer">Purdue OWL&apos;s paragraph guidance</a> identifies unity, coherence, a controlling topic, and adequate development as overlapping qualities of an effective paragraph. Its <a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/general_writing/common_writing_assignments/argument_papers/body_paragraphs.html" target="_blank" rel="noreferrer">body-paragraph resource</a> presents Transition, Topic sentence, specific Evidence and analysis, and brief wrap-up (TTEB) for an argument-paper context. <a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/transitions/" target="_blank" rel="noreferrer">UNC Writing Center</a> advises writers to identify the relationship between ideas and check organization before relying on transition words. <a className="text-primary underline underline-offset-4" href="https://writingcenter.fas.harvard.edu/transitions" target="_blank" rel="noreferrer">Harvard College Writing Center</a> similarly recommends moving from familiar to new information and reserving causal language for genuine causal relationships.</p>
+              </section>
+
+              <section className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <Link href="/thesis-statement-examples" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Return to the central claim</h2><p className="text-sm font-sans text-muted-foreground">Check that each paragraph contributes a reason, analysis, qualification, or evidence path for the thesis.</p></article></Link>
+                <Link href="/academic-argument-evidence" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Explain evidence carefully</h2><p className="text-sm font-sans text-muted-foreground">Use claim, evidence, explanation, and limitation to avoid citation-only paragraphs.</p></article></Link>
+                <Link href="/phrases/introduction" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Signal a precise move</h2><p className="text-sm font-sans text-muted-foreground">Browse introduction phrases after identifying the relationship you truly need to signal.</p></article></Link>
+                <Link href="/hedging-language-academic-writing" className="block"><article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Calibrate the conclusion</h2><p className="text-sm font-sans text-muted-foreground">Match certainty and causal language to the evidence the paragraph actually presents.</p></article></Link>
+              </section>
+            </>
+          )}
           {kind === "thesis" && (
             <>
               <section className="mt-8 p-7 bg-white border border-border rounded-2xl">

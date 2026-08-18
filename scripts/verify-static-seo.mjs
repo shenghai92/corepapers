@@ -291,6 +291,25 @@ expect(
   "abstract-vs-introduction article: Article JSON-LD"
 );
 
+const academicParagraphHtml = read("academic-paragraph-structure/index.html");
+expect(
+  academicParagraphHtml.includes("Academic paragraph structure: topic sentence, evidence, and explanation"),
+  "academic paragraphs: expected H1"
+);
+expect(academicParagraphHtml.includes("1. Name the function"), "academic paragraphs: six-step workflow");
+expect(
+  academicParagraphHtml.includes("This fictional learning example is invented for practice"),
+  "academic paragraphs: fictional-example disclosure"
+);
+expect(academicParagraphHtml.includes("PEEL, TEEL, and TTEB"), "academic paragraphs: framework boundary");
+expect(academicParagraphHtml.includes("owl.purdue.edu"), "academic paragraphs: Purdue guidance link");
+expect(academicParagraphHtml.includes("writingcenter.unc.edu"), "academic paragraphs: UNC guidance link");
+expect(academicParagraphHtml.includes("writingcenter.fas.harvard.edu"), "academic paragraphs: Harvard guidance link");
+expect(academicParagraphHtml.includes('/thesis-statement-examples/'), "academic paragraphs: thesis cluster link");
+expect(academicParagraphHtml.includes('/academic-argument-evidence/'), "academic paragraphs: argument cluster link");
+expect(academicParagraphHtml.includes('/phrases/introduction/'), "academic paragraphs: phrases cluster link");
+expect(academicParagraphHtml.includes('/hedging-language-academic-writing/'), "academic paragraphs: hedging cluster link");
+
 const thesisStatementHtml = read("thesis-statement-examples/index.html");
 expect(
   thesisStatementHtml.includes("Thesis statement examples: make an academic claim specific and arguable"),
