@@ -590,12 +590,17 @@ export default function Citations() {
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-4">
                 Related guides
               </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
                   {
                     href: "/blog/complete-apa-7th-edition-guide-international-students",
                     title: "APA guide for international students",
                     desc: "Review the citation rules students get wrong most often.",
+                  },
+                  {
+                    href: "/apa-7-non-english-sources",
+                    title: "APA 7 non-English sources",
+                    desc: "Check original-language works, translations, romanization, and title translations before citing.",
                   },
                   {
                     href: "/mla-citation-examples",

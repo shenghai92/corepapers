@@ -143,6 +143,10 @@ const pages = [
     "Methodology section example for a research paper",
   ],
   [
+    "/apa-7-non-english-sources/",
+    "APA 7: cite foreign-language and translated sources",
+  ],
+  [
     "/citation-examples/",
     "APA 7 citation examples and in-text citation examples",
   ],
@@ -233,6 +237,11 @@ expect(
   ),
   "methodology practice: USC guidance link"
 );
+
+const nonEnglishApaHtml = read("apa-7-non-english-sources/index.html");
+expect(nonEnglishApaHtml.includes("Fictional learning examples"), "APA non-English sources: fictional-example disclosure");
+expect(nonEnglishApaHtml.includes("apastyle.apa.org"), "APA non-English sources: official APA guidance link");
+expect(nonEnglishApaHtml.includes("library.unimelb.edu.au"), "APA non-English sources: university guide link");
 
 const methodologyVsMethodsHtml = read("methodology-vs-methods-research-paper/index.html");
 expect(methodologyVsMethodsHtml.includes("Fictional learning example"), "methodology vs methods: fictional-example disclosure");
@@ -379,6 +388,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/methodology-section-example-research-paper/`),
   "sitemap: methodology practice resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/apa-7-non-english-sources/`),
+  "sitemap: APA non-English sources guide"
 );
 expect(
   sitemap.includes(`${BASE_URL}/citation-examples/`),

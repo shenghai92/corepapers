@@ -35,6 +35,7 @@ const ResearchFoundations = lazy(() => import("./pages/ResearchFoundations"));
 const AbstractWritingGuide = lazy(() => import("./pages/AbstractWritingGuide"));
 const MethodologyVsMethods = lazy(() => import("./pages/MethodologyVsMethods"));
 const AnnotatedBibliography = lazy(() => import("./pages/AnnotatedBibliography"));
+const NonEnglishApaCitations = lazy(() => import("./pages/NonEnglishApaCitations"));
 const Citations = lazy(() => import("./pages/Citations"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const SeoLandingApa = lazy(() => import("./pages/SeoLandingApa"));
@@ -207,6 +208,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <AcademicWritingResource kind="mla-citation-examples" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/apa-7-non-english-sources"
+          component={() => (
+            <PublicLayout>
+              <NonEnglishApaCitations />
             </PublicLayout>
           )}
         />

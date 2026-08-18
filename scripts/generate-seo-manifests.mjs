@@ -237,6 +237,11 @@ const STATIC_PAGE_SEO = {
     description: "Use clear, labelled MLA 9 Works Cited and in-text citation examples for books, journal articles, and web pages, with a source-detail review checklist.",
     keywords: "MLA citation examples, MLA 9 Works Cited examples, MLA in-text citation examples, how to cite MLA",
   },
+  "/apa-7-non-english-sources": {
+    title: "APA 7: How to Cite Foreign-Language and Translated Sources | CorePapers",
+    description: "Learn how APA 7 handles original non-English works, non-Roman scripts, title translations, transliteration, and published translations with fictional learning examples.",
+    keywords: "APA 7 cite foreign language sources, APA non English sources, APA transliteration title, APA translated work citation, how to cite Chinese source APA 7",
+  },
   "/citation-examples": {
     title: "APA 7 Citation Examples and In-Text Citation Examples | CorePapers",
     description:
@@ -439,6 +444,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/mla-citation-examples/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/apa-7-non-english-sources/",
     changefreq: "monthly",
     priority: "0.8",
   },
