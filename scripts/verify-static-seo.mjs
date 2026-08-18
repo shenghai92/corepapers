@@ -60,6 +60,16 @@ expect(citationGeneratorHtml.includes("Chicago 18"), "citation generator: curren
 expect(!citationGeneratorHtml.includes("Chicago 17"), "citation generator: no stale Chicago 17 label");
 expect(citationGeneratorHtml.includes('/ieee-citation-examples/'), "citation generator: IEEE examples return link");
 expect(citationGeneratorHtml.includes('/chicago-citation-examples/'), "citation generator: Chicago examples return link");
+expect(citationGeneratorHtml.includes("1. Confirm the rule"), "citation generator: six-step source-record workflow");
+expect(citationGeneratorHtml.includes("Fictional learning format patterns"), "citation generator: fictional-format disclosure");
+expect(citationGeneratorHtml.includes("Use the output as a reviewable draft"), "citation generator: generator-responsibility boundary");
+expect(citationGeneratorHtml.includes("owl.purdue.edu/owl/research_and_citation/using_citation_machines_responsibly.html"), "citation generator: Purdue citation-machine guidance link");
+expect(citationGeneratorHtml.includes("purdueglobalwriting.center"), "citation generator: Purdue Global integrity guidance link");
+expect(citationGeneratorHtml.includes('/mla-citation-examples/'), "citation generator: MLA examples return link");
+expect(citationGeneratorHtml.includes('/apa-7-non-english-sources/'), "citation generator: multilingual APA return link");
+expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation generator: source-evaluation return link");
+expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
+expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
 const paraphrasingGuideHtml = read("how-to-paraphrase-without-plagiarizing/index.html");
 expect(paraphrasingGuideHtml.includes("Fictional learning example"), "paraphrasing guide: fictional-example disclosure");

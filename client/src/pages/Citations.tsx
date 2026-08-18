@@ -336,6 +336,20 @@ export default function Citations() {
             </p>
           </div>
 
+          <section className="max-w-5xl mx-auto mb-8 p-7 bg-white border border-border rounded-2xl shadow-card">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Generate a draft, then verify the citation</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">A source-record workflow for responsible citation generation</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. REQUIREMENT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Confirm the rule</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Check your course, supervisor, publisher, and discipline for the required system, edition, source type, and in-text or note convention.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. ORIGINAL</p><h3 className="font-serif text-xl text-slate-purple mb-2">Open the source you used</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Work from the actual article, book, chapter, thesis, conference paper, or web page—not from a retailer, search preview, or another source&apos;s bibliography.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">3. RECORD</p><h3 className="font-serif text-xl text-slate-purple mb-2">Verify every field</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Check authors, title capitalization, container, date, edition or version, editors, volume, issue, pages, DOI, URL, and source type before entering data.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">4. GENERATE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Create a formatting draft</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Select the matching system and source category, then use the output as a first formatted version rather than a final authority.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">5. REVIEW</p><h3 className="font-serif text-xl text-slate-purple mb-2">Compare against guidance</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Recheck ordering, punctuation, capitalization, missing fields, placeholders, and format-specific rules against an official example or course requirement.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">6. MATCH</p><h3 className="font-serif text-xl text-slate-purple mb-2">Place credit in the text</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Make the in-text citation, note, quotation, paraphrase, or summary point to the right entry and reflect exactly what you borrowed.</p></article>
+            </div>
+            <p className="text-sm font-sans text-primary font-medium mt-5">This generator formats the information you provide. It does not verify a source&apos;s existence, judge its quality, choose the right version, or decide whether your use of a source is accurate and permitted.</p>
+          </section>
+
           <div className="max-w-3xl mx-auto">
             <div className="mb-6">
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-muted-foreground mb-3">
@@ -406,6 +420,7 @@ export default function Citations() {
             </div>
 
             <div className="bg-white border border-border rounded-2xl p-6 mb-6">
+              <p className="text-xs font-sans text-muted-foreground leading-relaxed mb-5">Enter details only after checking the original source. A correct source type and edition matter: a journal article, magazine item, chapter, database record, web page, and translated work can require different fields.</p>
               <div className="grid grid-cols-2 gap-4">
                 {fields.map(field => (
                   <div
@@ -511,7 +526,18 @@ export default function Citations() {
               </div>
             )}
 
-            <div className="mt-12 grid sm:grid-cols-2 gap-4">
+            <section className="mt-10 p-7 bg-hero-gradient border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Use the output as a reviewable draft</h2>
+              <div className="grid sm:grid-cols-2 gap-4 text-sm text-muted-foreground font-sans leading-relaxed">
+                <p><strong className="text-foreground">Before copying:</strong> confirm every author name, title, date, version or edition, source container, pages, DOI or URL, and any missing-field treatment against the actual item.</p>
+                <p><strong className="text-foreground">After inserting:</strong> make sure each borrowed quotation, paraphrase, summary, data point, or image is credited in context and has a matching full reference or Works Cited entry.</p>
+              </div>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed mt-4"><a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/research_and_citation/using_citation_machines_responsibly.html" target="_blank" rel="noreferrer">Purdue OWL</a> explains that citation generators follow user input and fixed patterns; they cannot exercise judgment about a source, its exact version, or the logic of an in-text citation. <a className="text-primary underline underline-offset-4" href="https://purdueglobalwriting.center/writing-with-integrity/" target="_blank" rel="noreferrer">Purdue Global Writing Center</a> similarly frames documentation as accurate in-text attribution and complete reference information for borrowed material.</p>
+            </section>
+
+            <section className="mt-12">
+              <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning format patterns — not sources to submit or cite</p>
+              <div className="grid sm:grid-cols-2 gap-4">
               {[
                 {
                   format: "APA 7th",
@@ -552,7 +578,8 @@ export default function Citations() {
                   </code>
                 </div>
               ))}
-            </div>
+              </div>
+            </section>
 
             <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <Link href="/citation-examples" className="block">
@@ -591,15 +618,22 @@ export default function Citations() {
                   <p className="text-sm text-muted-foreground font-sans leading-relaxed">Decide between Notes–Bibliography and Author–Date before formatting a Chicago reference.</p>
                 </div>
               </Link>
-              <Link href="/polish" className="block">
+              <Link href="/evaluate-academic-sources" className="block">
                 <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
-                  <h2 className="font-serif text-2xl text-slate-purple mb-2">
-                    Polish the draft after citing
-                  </h2>
-                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">
-                    Improve academic tone, fix non-native phrasing, and
-                    strengthen your writing after building references.
-                  </p>
+                  <h2 className="font-serif text-2xl text-slate-purple mb-2">Evaluate the source first</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">Check author, purpose, evidence, currency, and source record before a polished citation gives a weak source false credibility.</p>
+                </div>
+              </Link>
+              <Link href="/academic-integrity-and-source-use" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-2">Match source use to credit</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">Check quotations, paraphrases, summaries, images, and source-derived ideas for accurate attribution in the text.</p>
+                </div>
+              </Link>
+              <Link href="/how-to-paraphrase-without-plagiarizing" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                  <h2 className="font-serif text-2xl text-slate-purple mb-2">Paraphrase with attribution</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">Understand and recast the source in your own argument before attaching a verified citation.</p>
                 </div>
               </Link>
             </div>
@@ -636,9 +670,24 @@ export default function Citations() {
                     desc: "Decide when an idea needs a quotation, paraphrase, summary, and citation.",
                   },
                   {
-                    href: "/blog/how-to-write-a-literature-review-for-international-students",
-                    title: "Literature review workflow",
-                    desc: "Connect your sources more clearly after building references.",
+                    href: "/chicago-citation-examples",
+                    title: "Chicago 18 citation examples",
+                    desc: "Choose Notes–Bibliography or Author–Date before you generate and review a Chicago citation.",
+                  },
+                  {
+                    href: "/ieee-citation-examples",
+                    title: "IEEE citation examples",
+                    desc: "Verify bracketed in-text numbers and reference-list order for technical writing.",
+                  },
+                  {
+                    href: "/evaluate-academic-sources",
+                    title: "Academic source evaluation",
+                    desc: "Check the source record and quality before a clean format makes it look more credible than it is.",
+                  },
+                  {
+                    href: "/how-to-paraphrase-without-plagiarizing",
+                    title: "Paraphrase without plagiarizing",
+                    desc: "Keep the source&apos;s idea, your own wording, and the citation relationship clear.",
                   },
                 ].map(item => (
                   <Link key={item.href} href={item.href} className="block">
