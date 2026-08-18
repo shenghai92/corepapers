@@ -164,11 +164,11 @@ expect(
   "results article: updated title in raw HTML"
 );
 expect(
-  resultsHtml.includes("Results Section Example: Quantitative Study"),
+  resultsHtml.includes("Fictional Learning Example: Quantitative Results"),
   "results article: quantitative example in raw HTML"
 );
 expect(
-  resultsHtml.includes("Results Section Example: Qualitative Study"),
+  resultsHtml.includes("Fictional Learning Example: Qualitative Results"),
   "results article: qualitative example in raw HTML"
 );
 expect(

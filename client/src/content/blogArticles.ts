@@ -2833,15 +2833,17 @@ When your final paragraph restates the argument clearly, summarizes the reasonin
     featured: false,
     content: `## Why the Results Section Feels Difficult for ESL Writers
 
-Writing the results section of a research paper can be incredibly frustrating for non-native English speakers. The problem is usually not the research itself or your understanding of the data. The real challenge is presenting the findings in clear, objective academic language without sounding repetitive, too informal, or overly interpretive.
+Writing the results section of a research paper can be challenging because the writer must make evidence visible without adding more interpretation than the section is meant to carry. The challenge is not a measure of your research ability; it is a question of organizing findings, tables, figures, themes, and reporting language so readers can follow the evidence.
 
-Many international students struggle with finding the right verbs to describe their data or feel unsure about how to transition smoothly between tables and text. This guide focuses on the practical side of the section: how to structure it, which specific phrases to use, and how to avoid the most common writing mistakes ESL students make here.
+> **Fictional learning examples:** Every sentence, number, statistical result, participant account, table reference, and template in this guide is invented for practice. They are not real data, student work, or wording to submit unchanged. Replace every detail with verified evidence and follow the section conventions in your course, journal, or discipline.
+
+This guide focuses on the practical side of the section: how to structure it, choose reporting language that matches the evidence, and avoid moving from results into interpretation too early.
 
 ## Results Section vs. Discussion Section: Knowing the Difference
 
-The most common mistake international students make is mixing the results section with the discussion section. This happens because in many academic cultures, reporting and interpreting are done simultaneously. In English academic writing, they are strictly separated.
+Many empirical research papers separate Results from Discussion, while other assignments and disciplines combine reporting and interpretation. First check the assignment, journal, or supervisor guidance. When your paper uses separate sections, Results reports the evidence and Discussion explains its significance, limitations, and connections to prior research.
 
-In the **results section**, your job is purely to report what happened:
+In a separate **results section**, your job is usually to report:
 
 - The numerical or qualitative findings
 - The data collected
@@ -2855,7 +2857,7 @@ Before you write a sentence in the results section, ask yourself:
 
 *"Am I reporting a fact, or am I explaining what it means?"*
 
-If you are explaining the meaning or significance of a result, save that sentence for the discussion section.
+If you are explaining the meaning or significance of a result, save that sentence for Discussion **when your course uses separate Results and Discussion sections**.
 
 ## How to Structure a Results Section Logically
 
@@ -2868,19 +2870,19 @@ Instead, organize it around the core elements of your study:
 - Variables
 - Major result groups
 
-For example, if your paper compares multiple conditions, create one clear subsection for each condition. Within each subsection, report the numerical or descriptive findings first, then highlight any patterns or trends the reader should notice.
+For example, if your paper compares multiple conditions, you might create one clear subsection for each condition. Within each subsection, report the numerical or descriptive findings first, then identify the pattern or trend that the evidence itself supports.
 
 This structure makes the section much easier for professors and reviewers to follow because they can quickly find the answer to each specific question raised earlier in the paper.
 
 ## Essential Academic Phrases for Reporting Results
 
-One common problem in ESL student writing is repeating the word "show" in every single sentence (e.g., "The table shows," "The graph shows," "The results show"). Varying your reporting language makes the results section sound significantly more professional and easier to read.
+Repeatedly using the same reporting verb can make a paragraph harder to read, but changing verbs is not an end in itself. Choose a verb that matches what the table, figure, theme, statistic, or analysis actually supports. For instance, a table may *present* values, an analysis may *indicate* an association, and evidence may *support* a hypothesis without proving it.
 
 ### Describing what a figure or table reveals
 
 **Less effective:** "Table 1 shows that the temperature increased."
 
-**Stronger:** "As illustrated in Table 1, the temperature increased significantly."
+**More specific:** "As illustrated in Table 1, the mean temperature increased from [verified value] to [verified value]."
 
 **Alternative:** "Table 1 presents the temperature variations, indicating a clear upward trend."
 
@@ -2888,7 +2890,7 @@ One common problem in ESL student writing is repeating the word "show" in every 
 
 **Less effective:** "We found a big difference between the two groups."
 
-**Stronger:** "The data reveals a statistically significant difference between the experimental and control groups."
+**More specific:** "The analysis identified a statistically significant difference between the experimental and control groups (report the verified statistic and p value required by your field)."
 
 **Alternative:** "A comparison of the two groups highlights a substantial variance in performance."
 
@@ -2898,7 +2900,7 @@ One common problem in ESL student writing is repeating the word "show" in every 
 
 **Stronger:** "These findings provide evidence supporting the initial hypothesis."
 
-**Alternative:** "The data confirms the prediction that [variable A] affects [variable B]."
+**Careful alternative:** "The results provide evidence consistent with the prediction that [variable A] is associated with [variable B]."
 
 ### Powerful Reporting Verbs to Replace "Show"
 
@@ -2923,9 +2925,9 @@ When you refer to a table or figure, integrate it smoothly into the sentence rat
 
 Your text and your table should support each other, not repeat the exact same information word for word. Use the sentence to highlight the key pattern, trend, or outlier, and let the table or figure hold the full, detailed data.
 
-## Results Section Example: Quantitative Study
+## Fictional Learning Example: Quantitative Results
 
-Here is a short model for a survey-based study. The details are fictional, so replace every number, group, and variable with your own evidence.
+The following short model is fictional learning material. Replace every number, group, variable, statistic, and table reference with evidence from your own study and the reporting format your discipline requires.
 
 "Of the 128 students who completed the survey, 74% reported using written feedback at least once per week. As shown in Table 2, first-year students reported a lower average confidence score (M = 3.1, SD = 0.8) than final-year students (M = 3.7, SD = 0.6). An independent-samples t-test indicated that this difference was statistically significant, t(126) = 4.62, p < .001. No statistically significant relationship was found between feedback frequency and total assignment grade."
 
@@ -2936,9 +2938,9 @@ Here is a short model for a survey-based study. The details are fictional, so re
 - It reports a null finding directly rather than hiding it.
 - It does not explain why final-year students may feel more confident; that interpretation belongs in the discussion.
 
-## Results Section Example: Qualitative Study
+## Fictional Learning Example: Qualitative Results
 
-A qualitative results section usually presents themes supported by evidence from the data. It should still report what participants said or what the analysis identified before interpreting the broader significance.
+A qualitative results section often presents themes supported by evidence from the data. It should report what participants said or what the analysis identified before moving into broader interpretation when the paper separates Results from Discussion.
 
 "Thematic analysis identified three recurring patterns in the interview data: uncertainty about disciplinary vocabulary, reliance on peer feedback, and increased confidence after guided revision. Participants frequently described academic word choice as a source of hesitation, particularly when they were writing literature review paragraphs. One participant explained that she could understand a journal article but was unsure how to express the same idea in her own words."
 
@@ -2949,9 +2951,9 @@ A qualitative results section usually presents themes supported by evidence from
 - It reports the pattern without claiming that the pattern proves a cause.
 - It leaves the implications for teaching, tools, or policy for the discussion section.
 
-## A Reusable Results Section Template
+## A Fictional Results Planning Template
 
-Use this template as a starting point, then adapt it to your research question and evidence:
+Use this fictional planning template as a starting point, then adapt it to your research question, evidence, and reporting standard:
 
 "To address [research question], [analysis method] was used to examine [data/source]. The results indicated that [main finding]. As shown in [Table/Figure/Theme] [number or name], [specific supporting pattern]. [Optional: A statistically significant/no clear] relationship was found between [X] and [Y]."
 
@@ -2961,18 +2963,22 @@ For a qualitative paper, replace the statistics with named themes and brief evid
 
 ESL students often encounter specific grammar issues when writing results:
 
-1. **Tense Confusion:** Generally, use the **past tense** to describe what the study found (e.g., "The participants reported..."). Use the **present tense** when referring the reader to a figure or table that is currently visible in the paper (e.g., "Figure 3 illustrates...").
-2. **Article Usage with Data:** Remember that "data" is typically treated as a plural noun in formal academic writing (e.g., "The data **were** collected," not "The data was collected").
+1. **Tense Confusion:** Many research papers use **past tense** to describe what the study did or found (for example, “The participants reported...”) and **present tense** to point readers to a figure or table in the current paper (for example, “Figure 3 illustrates...”). Check your department or journal style because conventions vary.
+2. **Article Usage with Data:** “Data” may be treated as plural in many formal and scientific contexts, while some disciplines use singular “data” for a dataset. Follow the convention in your field and keep the choice consistent.
+
+## Use university guidance and section-specific resources
+
+The [UC Irvine guide to writing results](https://guides.lib.uci.edu/scientificwriting/results) recommends factual, evidence-supported reporting in a logical order and clear references to tables and figures. Use the [Results section example](/results-section-example-research-paper/) for a fictional structure model, [Results phrases](/phrases/results/) for section-specific sentence starters, and the [Discussion section example](/discussion-section-example-research-paper/) to keep interpretation appropriately separated where required.
 
 ## Key Takeaway
 
-The results section is entirely about precision and objectivity. Report exactly what you found, organize the section logically around your research questions, use varied and accurate academic reporting verbs, and let your tables and figures carry the detailed numbers. Save all your interpretation and analysis for the discussion section.
+A strong Results section makes evidence easy to locate and evaluate. Report exactly what the study found, organize the section around questions, hypotheses, themes, or variables, choose reporting verbs that match the evidence, and let tables and figures carry detailed values. When your assignment separates Results and Discussion, save extended interpretation, causal explanations, and implications for Discussion.
 
 ## Frequently Asked Questions
 
 ### What is the exact difference between the results section and the discussion section?
 
-The results section reports what happened in the study without any interpretation. The discussion section explains what those findings mean, why they matter, and how they relate to previous research in your field.
+When your assignment separates the sections, Results reports the evidence and Discussion explains what findings may mean, why they matter, and how they relate to previous research. Some fields use a combined Results and Discussion section, so check the required format before moving a sentence.
 
 ### How should I reference tables and figures in the results section?
 
@@ -2984,7 +2990,7 @@ In most academic papers, the past tense is used to describe what the study found
 
 ---
 
-*If your draft still sounds awkward or repetitive, use [CorePapers Essay Polish](/polish) after you have written the evidence in your own words. For ready-made reporting patterns, browse [Results section phrases](/phrases/results/).*`,
+*If your draft still sounds awkward or repetitive, use [CorePapers Essay Polish](/polish) after you have written the evidence in your own words. For section-specific reporting patterns, browse [Results section phrases](/phrases/results/), then compare your draft with the [fictional Results structure guide](/results-section-example-research-paper/) before submission.*`,
   },
   {
     slug: "methodology-section-faq-for-research-papers",
