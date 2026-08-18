@@ -11,6 +11,7 @@ const FOOTER_LINKS = {
     { label: "Academic Integrity", href: "/academic-integrity-and-source-use" },
     { label: "Writing Examples", href: "/academic-writing-examples" },
     { label: "Research Templates", href: "/research-paper-templates" },
+    { label: "Research Proposal Template", href: "/research-proposal-template" },
     { label: "APA Citation Examples", href: "/citation-examples" },
     { label: "Academic Phrases", href: "/phrases" },
   ],
