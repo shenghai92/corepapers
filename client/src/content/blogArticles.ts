@@ -654,15 +654,17 @@ Once you follow a clear structure, abstract writing becomes much easier and much
     featured: true,
     content: `## Introduction
 
-Writing academic papers in English as a second language is undeniably one of the most challenging parts of studying abroad. Even international students with strong conversational English skills often repeat the same patterns of mistakes in their writing. Unfortunately, these patterns can distract professors and reviewers from the actual quality of your ideas.
+Writing academic papers in an additional language can make it harder to present strong ideas as clearly as you intend. A sentence-level pattern does not mean that a writer lacks knowledge or analytical ability; it simply gives the writer a specific point to review. Even students with strong conversational English may need a different revision routine for academic prose.
 
-The good news is that these grammatical and stylistic problems are highly predictable. Once you know exactly what to look for, you can revise your drafts much more efficiently and sound significantly more confident and professional on the page.
+The good news is that many grammar and style patterns are visible once you know what to check. A focused review can help you make the relationship among claim, evidence, and sentence structure easier for a reader to follow—without replacing your own ideas with generic or unnecessarily complicated language.
+
+> **Fictional learning examples:** The short sentences in this guide are invented examples for practice. They are not real student work, research findings, or sentences to submit unchanged. Adapt any revision to your own meaning, evidence, discipline, and assignment instructions.
 
 ## Mistake 1: Redundant Subject Pronouns
 
 **What it looks like:** "The study, it shows that..." or "The results, they indicate..."
 
-**Why it happens:** In many languages (like spoken Chinese or Spanish), repeating the subject with a pronoun is acceptable or even feels natural for emphasis. In English academic writing, it sounds repetitive and informal.
+**Why it happens:** A writer may be carrying spoken emphasis into a formal sentence or may be revising a sentence that already has a complete grammatical subject. In edited academic English, the repeated pronoun usually adds no new information.
 
 **The fix:** Remove the extra pronoun entirely.
 
@@ -692,7 +694,7 @@ Corrected: "This analysis suggests..." or "The evidence indicates..."
 
 **What it looks like:** "The research shows that education is important factor."
 
-**Why it happens:** Many languages (including Chinese, Japanese, and Russian) do not use articles in the same way English does, making this one of the hardest habits to break.
+**Why it happens:** Article choices depend on whether a noun is countable, specific, previously introduced, or used in a general sense. Writers whose first language handles these distinctions differently may need a deliberate checking routine, but every writer benefits from checking the noun phrase in context.
 
 **The fix:** Review whether the noun is countable, specific, or already introduced.
 
@@ -722,7 +724,7 @@ Corrected: "The researchers found that the results were significant."
 
 **What it looks like:** Several independent ideas joined only with commas, creating a massive, confusing block of text.
 
-**Why it happens:** In some writing traditions, long sentences with many clauses feel normal, poetic, and elegant. In English academic writing, clarity is prioritized over length.
+**Why it happens:** When several independent ideas are drafted at once, punctuation and logical connections can become unclear. Academic writing can use long sentences, but readers need to see how each clause connects to the next.
 
 **The fix:** Break the idea into shorter units using periods, or use a stronger connector (like a semicolon or conjunction). Readers should be able to follow your logic easily on the first pass.
 
@@ -754,6 +756,12 @@ Corrected: "based **on**," "consistent **with**," "associated **with**," and "re
 
 Corrected: "has important implications for" or "raises serious concerns about."
 
+## Add a focused final review for common sentence patterns
+
+The ten patterns above are not the only possible revision targets. University writing resources also commonly flag agreement, unclear pronoun reference, comma splices, misplaced modifiers, fragments, word choice, punctuation, passive-versus-active choices, and wordiness. For example, **this** should point to a clear noun rather than an entire unclear previous sentence, and two complete sentences usually need a period, semicolon, or appropriate conjunction rather than a comma alone.
+
+A useful rule is to fix the communication problem, not merely make a sentence sound more “advanced.” Passive voice can be appropriate when the action or result matters more than the actor; a concise, direct active sentence may be better when naming the actor makes the process clearer. Your course, genre, and discipline determine which choice fits.
+
 ## A Practical Editing Routine for International Students
 
 Before submitting your paper, do one revision pass strictly for grammar and another separate pass for style. Looking for everything at once is slow and frustrating. A focused checklist usually works much better:
@@ -764,9 +772,21 @@ Before submitting your paper, do one revision pass strictly for grammar and anot
 - [ ] Search the document for repeated weak words such as "very," "important," and "good."
 - [ ] Review whether each paragraph has one clear, single purpose.
 
+### Use three focused passes instead of one overloaded pass
+
+**Pass 1 — Sentence control:** Review articles, subject–verb agreement, pronoun reference, verb tense, fragments, and comma splices. Read one sentence at a time and identify its main subject and verb before changing anything.
+
+**Pass 2 — Meaning and evidence:** Check whether each claim says exactly what the evidence supports. Replace vague intensifiers such as *very important* only when you can name a more precise meaning. Keep citations near borrowed ideas, and do not let polished wording hide an unsupported claim.
+
+**Pass 3 — Paragraph and section function:** Check that a paragraph begins with a clear job, develops it with relevant evidence or explanation, and transitions logically to the next point. In a research paper, keep procedures in Methods, findings in Results, and interpretation in Discussion unless your discipline uses a combined structure.
+
+## Use writing-center guidance and your assignment instructions
+
+The [University of Toronto](https://www.utm.utoronto.ca/rgasc/student-resource-hub/writing-resources/ten-common-grammatical-errors-and-conventions-academic) offers examples of agreement errors, comma splices, unclear pronoun reference, modifiers, punctuation, active and passive voice, fragments, and wordiness. The [Excelsior OWL](https://owl.excelsior.edu/grammar-essentials/common-errors/) notes that error patterns change over time and that reducing errors supports clearer communication, not a measure of a writer’s ideas or potential. Your instructor’s rubric and discipline-specific conventions remain the final standard.
+
 ## Keep Learning From Your Revision Patterns
 
-Many of these problems appear when a sentence has been translated too closely from another language or when conversational English is used in a formal context. For more focused guidance, visit [Academic English support for ESL and international students](/academic-english-for-esl-students/), browse the [academic phrase library](/phrases/), or use [CorePapers Essay Polish](/polish) for a second pass on clarity, tone, and academic phrasing.`,
+Many of these problems appear when a sentence has been translated too closely from another language or when conversational English is used in a formal context. For more focused guidance, visit [Academic English support for ESL and international students](/academic-english-for-esl-students/), browse the [academic phrase library](/phrases/), use the [academic paragraph structure guide](/academic-paragraph-structure/), or use [CorePapers Essay Polish](/polish) for a second pass on clarity, tone, and academic phrasing. When your draft uses sources, review [academic integrity and source use](/academic-integrity-and-source-use/) before submitting.`,
   },
   {
     slug: "complete-apa-7th-edition-guide-international-students",
