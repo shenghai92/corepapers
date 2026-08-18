@@ -58,9 +58,9 @@ export default function ResearchPaperSections() {
   return (
     <>
       <SEOHead
-        title="How to Write Research Paper Sections: Guides and Examples"
-        description="Learn how to write research-paper introductions, methods, results, and discussion sections with structure guides, examples, and academic phrases."
-        keywords="research paper sections, how to write methods section, results section examples, discussion section guide, research paper introduction"
+        title="How to Write Research Paper Sections: Structure Guides and Examples"
+        description="Plan and write research paper sections with a flexible structure workflow, guides for introduction through conclusion, examples, phrases, and revision checks for international students."
+        keywords="research paper sections, research paper structure, how to write methods section, results section examples, discussion section guide, research paper introduction"
         canonical="/research-paper-sections/"
       />
       <main className="pt-24 pb-16 min-h-screen bg-background">
@@ -103,6 +103,39 @@ export default function ResearchPaperSections() {
                 </article>
               </Link>
             ))}
+          </section>
+
+          <section className="max-w-5xl mx-auto mt-10 p-8 bg-white border border-border rounded-2xl">
+            <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Start with the assignment, not a universal template</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">Choose a structure that fits the kind of research you are doing</h2>
+            <div className="grid md:grid-cols-3 gap-5">
+              <article className="rounded-xl bg-muted/50 p-6"><h3 className="font-serif text-2xl text-slate-purple mb-3">Empirical report</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">A common IMRaD-style route moves from a focused introduction through methods, results, and discussion. It is useful when you report an original study, but detail, order, tables, and headings depend on the discipline or publication.</p></article>
+              <article className="rounded-xl bg-muted/50 p-6"><h3 className="font-serif text-2xl text-slate-purple mb-3">Literature-based paper</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">A review or argumentative paper may group scholarship by themes, debates, perspectives, evidence, or concepts rather than presenting a separate methods-and-results sequence.</p></article>
+              <article className="rounded-xl bg-muted/50 p-6"><h3 className="font-serif text-2xl text-slate-purple mb-3">Proposal or in-progress study</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">A proposal can foreground a problem, question, literature, plan, feasibility, and ethical considerations without inventing results. An in-progress report needs clear status and limitations.</p></article>
+            </div>
+          </section>
+
+          <section className="max-w-5xl mx-auto mt-6 grid lg:grid-cols-2 gap-6">
+            <article className="p-8 bg-hero-gradient border border-border rounded-2xl">
+              <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Fictional learning example</p>
+              <h2 className="font-serif text-3xl text-slate-purple mb-3">Let the research task determine the route</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><strong className="text-foreground">This is a fictional learning example only.</strong> A student&apos;s course asks for a review of research on an invented campus policy. The student does not create a Results section because they did not collect data. Instead, they group their sources by the policy&apos;s claimed benefits, implementation concerns, and evidence limits; the discussion then explains what the comparison suggests and where the reviewed evidence remains limited. A different empirical assignment could require Methods and Results instead.</p>
+            </article>
+            <article className="p-8 bg-white border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Build the paper through linked decisions</h2>
+              <ol className="space-y-3 text-sm text-muted-foreground font-sans leading-relaxed list-decimal list-inside">
+                <li>Identify the problem, reader, task, and evidence expectations.</li>
+                <li>Use initial reading to refine a question, purpose, and workable structure.</li>
+                <li>Give each section one reader-facing job, then use headings and transitions to show the path.</li>
+                <li>Make the claim, methods or source approach, reported evidence, and interpretation agree with one another.</li>
+                <li>Revise recursively: test the whole argument, then sections, paragraphs, sentences, and citations.</li>
+              </ol>
+            </article>
+          </section>
+
+          <section className="max-w-5xl mx-auto mt-6 p-8 bg-white border border-border rounded-2xl">
+            <h2 className="font-serif text-3xl text-slate-purple mb-3">Use common structures carefully</h2>
+            <p className="text-sm text-muted-foreground font-sans leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://psychology.ucsd.edu/undergraduate-program/undergraduate-resources/academic-writing-resources/writing-research-papers/research-paper-structure.html" target="_blank" rel="noreferrer">UC San Diego Psychology</a> outlines a common APA experimental-report structure while noting variations for literature reviews, multiple experiments, incomplete research, and course assignments. <a className="text-primary underline underline-offset-4" href="https://writing.wisc.edu/handbook/planresearchpaper/" target="_blank" rel="noreferrer">UW–Madison Writing Center</a> treats research writing as recursive and recommends organizing the body around the points you want to make rather than allowing sources to determine the order. <a className="text-primary underline underline-offset-4" href="https://knight.as.cornell.edu/writing-resource-organizing-papers" target="_blank" rel="noreferrer">Cornell Knight Institute</a> offers organization by perspectives, evidence, points, or sections. Follow your instructor, department, publisher, and disciplinary conventions whenever they differ.</p>
           </section>
 
           <section className="max-w-4xl mx-auto mt-12 p-8 bg-white border border-border rounded-2xl">

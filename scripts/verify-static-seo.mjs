@@ -291,6 +291,27 @@ expect(
   "abstract-vs-introduction article: Article JSON-LD"
 );
 
+const researchPaperSectionsHtml = read("research-paper-sections/index.html");
+expect(
+  researchPaperSectionsHtml.includes("How to write each section of a research paper"),
+  "research paper sections: expected H1"
+);
+expect(
+  researchPaperSectionsHtml.includes("Choose a structure that fits the kind of research you are doing"),
+  "research paper sections: structure-choice guidance"
+);
+expect(
+  researchPaperSectionsHtml.includes("This is a fictional learning example only"),
+  "research paper sections: fictional-example disclosure"
+);
+expect(researchPaperSectionsHtml.includes("Revise recursively"), "research paper sections: recursive-revision workflow");
+expect(researchPaperSectionsHtml.includes("psychology.ucsd.edu"), "research paper sections: UCSD guidance link");
+expect(researchPaperSectionsHtml.includes("writing.wisc.edu"), "research paper sections: UW Madison guidance link");
+expect(researchPaperSectionsHtml.includes("knight.as.cornell.edu"), "research paper sections: Cornell guidance link");
+expect(researchPaperSectionsHtml.includes('/research-paper-outline-template/'), "research paper sections: outline cluster link");
+expect(researchPaperSectionsHtml.includes('/research-proposal-template/'), "research paper sections: proposal cluster link");
+expect(researchPaperSectionsHtml.includes('/literature-review-synthesis-matrix/'), "research paper sections: synthesis cluster link");
+
 const academicEnglishHubHtml = read("academic-english-for-esl-students/index.html");
 expect(
   academicEnglishHubHtml.includes("Academic English support for ESL and international students"),
@@ -507,7 +528,6 @@ expect(
   methodologyPracticeHtml.includes("never invent approval"),
   "methodology practice: research-responsibility boundary"
 );
-const researchPaperSectionsHtml = read("research-paper-sections/index.html");
 expect(
   researchPaperSectionsHtml.includes("How to write Methods and Methodology"),
   "research-paper sections: methodology how-to entry"
