@@ -243,6 +243,11 @@ expect(nonEnglishApaHtml.includes("Fictional learning examples"), "APA non-Engli
 expect(nonEnglishApaHtml.includes("apastyle.apa.org"), "APA non-English sources: official APA guidance link");
 expect(nonEnglishApaHtml.includes("library.unimelb.edu.au"), "APA non-English sources: university guide link");
 
+const methodologyFaqHtml = read("blog/methodology-section-faq-for-research-papers/index.html");
+expect(methodologyFaqHtml.includes('"@type":"FAQPage"'), "methodology FAQ: FAQPage JSON-LD");
+expect(methodologyFaqHtml.includes("How do you write a methodology section for a research paper?"), "methodology FAQ: visible question in JSON-LD");
+expect(methodologyFaqHtml.includes("How do I write about ethics without inventing approval?"), "methodology FAQ: ethics question in JSON-LD");
+
 const methodologyVsMethodsHtml = read("methodology-vs-methods-research-paper/index.html");
 expect(methodologyVsMethodsHtml.includes("Fictional learning example"), "methodology vs methods: fictional-example disclosure");
 expect(methodologyVsMethodsHtml.includes("libguides.usc.edu"), "methodology vs methods: USC guidance link");

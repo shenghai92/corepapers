@@ -496,6 +496,38 @@ const STATIC_PAGES = [
 ];
 
 const FAQ_SCHEMA_BY_SLUG = {
+  "methodology-section-faq-for-research-papers": [
+    {
+      question: "How do you write a methodology section for a research paper?",
+      answer:
+        "Use a planning sequence that explains the research design, participants, sample or data source, data collection, analysis, and relevant ethics or limitations. Follow the headings, length, terminology, and ethics guidance in the assignment because no single structure is universal.",
+    },
+    {
+      question: "What exactly should be included in a methods section?",
+      answer:
+        "A methods section may explain the design framework, participants or dataset, selection criteria, tools or instruments, procedure, and analysis method. Include the information readers need to understand and evaluate the specific study at the level of detail expected by the discipline.",
+    },
+    {
+      question: "What is the difference between methodology and methods?",
+      answer:
+        "Methods are the practical procedures and tools used to collect and analyze information. Methodology is the broader reasoning, theory, and justification behind choosing those procedures. Follow the wording of the assignment because use of the terms varies.",
+    },
+    {
+      question: "What tense should I use in the methodology section?",
+      answer:
+        "Many completed-study reports use past tense for actions already taken. Present tense may appear for general conventions, current-paper references, or a journal style. Match tense to the timeline and follow the requirements of the department or target journal.",
+    },
+    {
+      question: "Can I include results in the methodology section?",
+      answer:
+        "Usually, a methods or methodology section explains the design, selection, materials, procedure, and analysis, while Results reports what the analysis found. Follow the required format if the discipline uses a combined Methods and Results section.",
+    },
+    {
+      question: "How do I write about ethics without inventing approval?",
+      answer:
+        "Describe consent, confidentiality, permissions, data handling, or formal review only when the details are accurate for the project. Do not claim institutional approval, anonymous participation, or informed consent unless it occurred, and follow institutional requirements before collecting human-participant data.",
+    },
+  ],
   "how-to-write-a-methodology-section-for-a-research-paper": [
     {
       question: "What is the difference between methodology and methods?",
