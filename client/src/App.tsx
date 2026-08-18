@@ -194,6 +194,7 @@ function Router() {
             </PublicLayout>
           )}
         />
+        <Route path="/thesis-statement-examples" component={() => <PublicLayout><ResearchFoundations kind="thesis" /></PublicLayout>} />
         <Route path="/academic-paragraph-structure" component={() => <PublicLayout><ResearchFoundations kind="paragraphs" /></PublicLayout>} />
         <Route
           path="/academic-argument-evidence"
@@ -224,6 +225,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <SectionWritingPractice kind="introduction" />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/conclusion-section-example-research-paper"
+          component={() => (
+            <PublicLayout>
+              <SectionWritingPractice kind="conclusion" />
             </PublicLayout>
           )}
         />

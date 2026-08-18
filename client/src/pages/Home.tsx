@@ -54,7 +54,7 @@ const RESOURCE_CENTERS = [
   {
     title: "Research Foundations",
     href: "/evaluate-academic-sources",
-    desc: "Evaluate sources, focus a research question, and build an evidence-based argument.",
+    desc: "Evaluate sources, focus a research question, shape a thesis, and build an evidence-based argument.",
   },
 ];
 

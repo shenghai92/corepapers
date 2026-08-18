@@ -141,6 +141,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "research question examples, how to write a research question, focused research question",
   },
+  "/thesis-statement-examples": {
+    title: "Thesis Statement Examples: Make an Academic Claim Specific and Arguable | CorePapers",
+    description: "Build a clearer thesis statement by turning a broad topic into a specific, arguable, evidence-led claim with a fictional learning example and checklist.",
+    keywords: "thesis statement examples, academic thesis statement, how to write thesis statement, arguable thesis claim",
+  },
   "/academic-paragraph-structure": {
     title: "Academic Paragraph Structure: Topic Sentence, Evidence, and Explanation | CorePapers",
     description: "Build clearer academic paragraphs with a topic sentence, relevant evidence, explanation, and a purposeful link to the next idea.",
@@ -170,6 +175,11 @@ const STATIC_PAGE_SEO = {
     title: "Introduction Section Example for a Research Paper: Structure and Template | CorePapers",
     description: "Use a fictional research-paper introduction example, a practical structure, and a checklist for moving from context to a focused research purpose.",
     keywords: "introduction section example research paper, research paper introduction template, how to write introduction research paper",
+  },
+  "/conclusion-section-example-research-paper": {
+    title: "Conclusion Section Example for a Research Paper: Template and Checklist | CorePapers",
+    description: "Use a fictional conclusion section example, a research-paper conclusion template, and a checklist for summarizing contributions without repeating the abstract.",
+    keywords: "conclusion section example research paper, research paper conclusion template, how to write conclusion section research paper",
   },
   "/discussion-section-example-research-paper": {
     title: "Discussion Section Example for a Research Paper: Template and Checklist | CorePapers",
@@ -322,6 +332,7 @@ const STATIC_PAGES = [
     changefreq: "monthly",
     priority: "0.8",
   },
+  { path: "/thesis-statement-examples/", changefreq: "monthly", priority: "0.8" },
   { path: "/academic-paragraph-structure/", changefreq: "monthly", priority: "0.8" },
   { path: "/academic-argument-evidence/", changefreq: "monthly", priority: "0.8" },
   {
@@ -336,6 +347,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/introduction-section-example-research-paper/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/conclusion-section-example-research-paper/",
     changefreq: "monthly",
     priority: "0.8",
   },

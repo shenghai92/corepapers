@@ -45,6 +45,13 @@ const sections = [
     href: "/how-to-write-an-abstract-research-paper",
     icon: FileText,
   },
+  {
+    title: "Conclusion",
+    description:
+      "Close the paper by restating its answer, contribution, and a carefully bounded takeaway.",
+    href: "/conclusion-section-example-research-paper",
+    icon: MessageSquareText,
+  },
 ];
 
 export default function ResearchPaperSections() {

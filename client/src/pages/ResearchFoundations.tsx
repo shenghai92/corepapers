@@ -3,7 +3,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
-type Kind = "sources" | "questions" | "evidence" | "paragraphs";
+type Kind = "sources" | "questions" | "evidence" | "paragraphs" | "thesis";
 const DATA: Record<
   Kind,
   {
@@ -59,6 +59,17 @@ const DATA: Record<
       "https://writingcenter.gmu.edu/writing-resources/research-based-writing/how-to-write-a-research-question",
     sourceLabel: "Read George Mason University Writing Center guidance",
   },
+  thesis: {
+    title: "Thesis statement examples: make an academic claim specific and arguable",
+    desc: "Build a clearer thesis statement by turning a broad topic into a specific, arguable, evidence-led claim with a fictional learning example and checklist.",
+    eyebrow: "Research foundations",
+    h2: "A thesis gives readers the paper’s controlling claim",
+    intro: "A thesis statement is not merely a topic announcement. It makes a claim that a paper can explain and support with evidence. Its exact form differs by discipline and assignment, so use this as a revision framework rather than a fixed formula.",
+    checklist: ["Does the statement make a claim rather than only name a topic?", "Is the claim specific enough for the assignment length and available evidence?", "Could a reasonable reader ask for evidence or offer a different interpretation?", "Does the rest of the paper’s structure help demonstrate the claim?"],
+    example: "Fictional learning example: A broad topic such as student planning can become an arguable claim: ‘In first-year seminar courses, regular weekly planning may support assignment completion by helping students make deadlines visible.’ The claim is scoped, cautious, and opens a path for evidence rather than presenting a universal fact.",
+    source: "https://writingcenter.unc.edu/tips-and-tools/thesis-statements/",
+    sourceLabel: "Read University of North Carolina Writing Center guidance",
+  },
   paragraphs: {
     title: "Academic paragraph structure: topic sentence, evidence, and explanation",
     desc: "Build clearer academic paragraphs with a topic sentence, relevant evidence, explanation, and a purposeful link to the next idea.",
@@ -93,7 +104,7 @@ const DATA: Record<
 };
 export default function ResearchFoundations({ kind }: { kind: Kind }) {
   const d = DATA[kind];
-  const canonical = `/${kind === "sources" ? "evaluate-academic-sources" : kind === "questions" ? "research-question-examples" : kind === "paragraphs" ? "academic-paragraph-structure" : "academic-argument-evidence"}/`;
+  const canonical = `/${kind === "sources" ? "evaluate-academic-sources" : kind === "questions" ? "research-question-examples" : kind === "paragraphs" ? "academic-paragraph-structure" : kind === "thesis" ? "thesis-statement-examples" : "academic-argument-evidence"}/`;
   return (
     <>
       <SEOHead
@@ -104,7 +115,7 @@ export default function ResearchFoundations({ kind }: { kind: Kind }) {
             ? "evaluate academic sources checklist, credible sources research paper"
             : kind === "questions"
               ? "research question examples, how to write a research question"
-              : kind === "paragraphs" ? "academic paragraph structure, topic sentence evidence explanation" : "academic argument evidence example, claim evidence explanation"
+              : kind === "paragraphs" ? "academic paragraph structure, topic sentence evidence explanation" : kind === "thesis" ? "thesis statement examples, academic thesis statement, arguable claim" : "academic argument evidence example, claim evidence explanation"
         }
         canonical={canonical}
       />

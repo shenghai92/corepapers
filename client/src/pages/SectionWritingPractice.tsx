@@ -9,13 +9,14 @@ import {
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
-type PracticeKind = "introduction" | "results" | "methodology" | "discussion";
+type PracticeKind = "introduction" | "results" | "methodology" | "discussion" | "conclusion";
 
 const authority = {
   introduction: "https://writingcenter.unc.edu/tips-and-tools/introductions/",
   results: "https://library.sacredheart.edu/c.php?g=29803&p=185931",
   methodology: "https://libguides.usc.edu/writingguide/methodology",
   discussion: "https://explore.plos.org/author-resources/how-to-write-effective-discussions-and-conclusions",
+  conclusion: "https://explore.plos.org/author-resources/how-to-write-effective-discussions-and-conclusions",
 };
 
 const data = {
@@ -66,6 +67,27 @@ const data = {
       "This paragraph names the analysis, reports the association, and directs the reader to the table. It does not claim why planning helped or recommend an intervention.",
     next: "/phrases/results",
     nextLabel: "Open Results phrases",
+  },
+  conclusion: {
+    canonical: "/conclusion-section-example-research-paper/",
+    title: "Conclusion Section Example for a Research Paper: Template and Checklist",
+    description: "Use a fictional conclusion section example, a research-paper conclusion template, and a checklist for summarizing contributions without repeating the abstract.",
+    keywords: "conclusion section example research paper, research paper conclusion template, how to write conclusion section research paper",
+    eyebrow: "Research paper conclusion practice",
+    h1: "Conclusion section example for a research paper",
+    intro: "Use this fictional learning example to bring a research paper to a clear close. A conclusion should restate the central answer and contribution in fresh, concise language without adding new evidence or making claims beyond the study’s limits.",
+    question: "What should readers take away from the completed paper?",
+    checklist: [
+      "I returned to the research question or central argument in concise language.",
+      "I summarized the paper’s contribution without copying the abstract sentence by sentence.",
+      "I stated implications that match the scope and limits of the evidence.",
+      "I removed new data, new citations, and broad claims that the paper cannot support.",
+    ],
+    sampleTitle: "Fictional conclusion example",
+    sample: "This fictional study found an association between weekly planning frequency and self-reported assignment completion among first-year undergraduates. The pattern suggests that planning routines may be a useful focus for student-support research, but the cross-sectional self-report design cannot establish causation. Future longitudinal work could examine how routines change across a semester.",
+    explanation: "The conclusion returns to the central finding, states a limited contribution, and ends with a focused next step. It does not introduce a new result or repeat every detail from the abstract.",
+    next: "/how-to-write-an-abstract-research-paper",
+    nextLabel: "Review the abstract guide",
   },
   discussion: {
     canonical: "/discussion-section-example-research-paper/",
