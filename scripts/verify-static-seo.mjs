@@ -66,6 +66,10 @@ const pages = [
   ["/citations/", "Free citation generator for APA 7, MLA, Chicago and IEEE"],
   ["/pricing/", "AI academic writing support pricing for students"],
   [
+    "/research-paper-outline-template/",
+    "Research paper outline template for a logical evidence path",
+  ],
+  [
     "/research-paper-sections/",
     "How to write each section of a research paper",
   ],
@@ -175,6 +179,11 @@ expect(
   "literature synthesis: Purdue OWL guidance link"
 );
 
+const outlineTemplateHtml = read("research-paper-outline-template/index.html");
+expect(outlineTemplateHtml.includes("Fictional learning example"), "research-paper outline: fictional-example disclosure");
+expect(outlineTemplateHtml.includes("owl.purdue.edu"), "research-paper outline: Purdue OWL guidance link");
+expect(outlineTemplateHtml.includes("writingcenter.gmu.edu"), "research-paper outline: university writing-center guidance link");
+
 const abstractGuideHtml = read("how-to-write-an-abstract-research-paper/index.html");
 expect(abstractGuideHtml.includes("Fictional learning example"), "abstract guide: fictional-example disclosure");
 expect(abstractGuideHtml.includes("writing.wisc.edu"), "abstract guide: university guidance link");
@@ -275,6 +284,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/phrases/results/`),
   "sitemap: results phrase route"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/research-paper-outline-template/`),
+  "sitemap: research-paper outline template"
 );
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-sections/`),

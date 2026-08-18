@@ -126,6 +126,12 @@ export default function ResearchPaperSections() {
           </section>
 
           <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-3 gap-4">
+            <Link href="/research-paper-outline-template" className="block">
+              <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Plan the full paper outline</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Map your thesis, section functions, claims, and evidence before drafting each part.</p>
+              </div>
+            </Link>
             <Link href="/phrases/introduction" className="block">
               <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
                 <h2 className="font-serif text-2xl text-slate-purple mb-2">Find Introduction phrases</h2>

@@ -15,6 +15,9 @@ const PhraseSection = lazy(() => import("./pages/PhraseSection"));
 const ResearchPaperSections = lazy(
   () => import("./pages/ResearchPaperSections")
 );
+const ResearchPaperOutline = lazy(
+  () => import("./pages/ResearchPaperOutline")
+);
 const AcademicEnglishHub = lazy(() => import("./pages/AcademicEnglishHub"));
 const AcademicWritingResource = lazy(
   () => import("./pages/AcademicWritingResource")
@@ -138,6 +141,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <Phrases />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/research-paper-outline-template"
+          component={() => (
+            <PublicLayout>
+              <ResearchPaperOutline />
             </PublicLayout>
           )}
         />

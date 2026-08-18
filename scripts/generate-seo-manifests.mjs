@@ -91,6 +91,11 @@ const STATIC_PAGE_SEO = {
     keywords:
       "academic writing tool pricing, AI essay polisher pricing, citation generator pricing, student writing tool pricing",
   },
+  "/research-paper-outline-template": {
+    title: "Research Paper Outline Template: Structure and Evidence Plan | CorePapers",
+    description: "Use a flexible research paper outline template to organize a thesis, claims, evidence, section functions, and revision checks without treating one outline as universal.",
+    keywords: "research paper outline template, research paper outline example, how to outline research paper, academic paper outline",
+  },
   "/research-paper-sections": {
     title:
       "How to Write Research Paper Sections: Guides and Examples | CorePapers",
@@ -322,7 +327,13 @@ const STATIC_PAGES = [
   { path: "/phrases/results/", changefreq: "monthly", priority: "0.7" },
   { path: "/citations/", changefreq: "monthly", priority: "0.9" },
   { path: "/pricing/", changefreq: "monthly", priority: "0.8" },
-  { path: "/research-paper-sections/", changefreq: "weekly", priority: "0.8" },
+    {
+    path: "/research-paper-outline-template/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/research-paper-sections/", changefreq: "weekly", priority: "0.8" },
   {
     path: "/academic-english-for-esl-students/",
     changefreq: "weekly",
