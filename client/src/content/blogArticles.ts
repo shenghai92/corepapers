@@ -2994,21 +2994,21 @@ In most academic papers, the past tense is used to describe what the study found
   },
   {
     slug: "methodology-section-faq-for-research-papers",
-    title: "Methodology Section FAQ for Research Papers: A Guide for International Students",
+    title: "Methodology Section FAQ: What to Include, Examples, and Common Questions",
     excerpt:
-      "Clear, practical answers to common methodology section questions, including structure tips, real examples, and what exactly to include in a research paper methods section.",
+      "Get concise answers about what a methodology or methods section should include, how it differs from methods, which tense to use, and how to plan a clear section.",
     category: "Research Writing",
     tags: ["Methodology FAQ", "Research Paper", "Methods Section", "International Students"],
     readingTime: 9,
     metaDescription:
-      "Methodology section FAQ for research papers with clear answers on structure, examples, what to include, and how to write a methods section for international students.",
+      "Methodology section FAQ with concise answers on what to include, methodology versus methods, fictional examples, tense, ethics, results boundaries, and next drafting steps.",
     publishedAt: "2026-06-18",
     featured: false,
     content: `## Why the Methodology Section Matters
 
-For many international students, the methodology section is one of the most intimidating parts of a research paper. It requires precise, technical language to explain exactly what you did and why you did it.
+A methodology or methods section can feel difficult because it must make a research process clear without reporting the results too early. It may describe procedures, design choices, data or participants, analysis, rationale, limitations, and ethics—but the exact balance depends on the assignment and discipline.
 
-This FAQ page answers the most common questions students have when drafting their methodology, providing short, practical explanations to help you start writing with confidence.
+This FAQ provides concise planning answers for common questions. It complements, rather than replaces, the fuller [Methodology writing guide](/blog/how-to-write-a-methodology-section-for-a-research-paper), the [Methodology vs. Methods guide](/methodology-vs-methods-research-paper/), and your course or journal requirements.
 
 ## FAQ 1: How Do You Write a Methodology Section for a Research Paper?
 
@@ -3020,7 +3020,7 @@ A simple and effective way to write a methodology section is to explain your pro
 4. **The method of analysis:** (How did you process the data once you had it?)
 5. **Ethics or limitations:** (What constraints or ethical rules applied to your study?)
 
-This sequence works universally because it clearly shows the reader what you studied, how you studied it, and why that specific method was the most appropriate choice for your research question.
+This sequence is a useful planning framework, not a universal format. It helps a reader see what you studied, how you studied it, and why the approach fits the research question. Use your assignment’s required headings, length, methods terminology, and ethics guidance.
 
 ## FAQ 2: What Exactly Should Be Included in a Methods Section?
 
@@ -3033,24 +3033,24 @@ While requirements vary slightly by discipline, most strong methods sections inc
 - **Step-by-step procedure**
 - **Specific analysis method** (e.g., thematic coding, ANOVA)
 
-Not every assignment needs all of these as separate, bolded headings, but a comprehensive methods section will answer all these points clearly within the text.
+Not every assignment needs these as separate headings, and some projects do not include every element. A clear section gives readers the information needed to understand and evaluate the specific study, using the level of detail your discipline expects.
 
 ## FAQ 3: What Is a Good Example of a Methodology Section?
 
-Here is a short, well-structured example of a methodology section for a social science paper:
+The following is a **fictional learning example**, not a real study, approved protocol, or text to submit unchanged. Its participants, data, and methods are invented to make the components visible:
 
-> "This study used a qualitative research design to examine how first-year international students responded to AI-generated writing feedback. Data were collected through semi-structured interviews and annotated essay drafts from twelve undergraduate students. The interview data and draft revisions were analyzed using thematic coding to identify recurring revision patterns."
+> "This fictional study used a qualitative research design to examine how first-year international students responded to AI-generated writing feedback. Data were collected through semi-structured interviews and annotated essay drafts from twelve undergraduate students. The interview data and draft revisions were analyzed using thematic coding to identify recurring revision patterns."
 
 **Why this example works:**
 It is concise but tells the reader everything they need to know immediately:
 - **The design:** Qualitative
-- **The participants:** Twelve undergraduate international students
-- **The data source:** Semi-structured interviews and annotated drafts
+- **The fictional participants:** Twelve undergraduate international students
+- **The fictional data source:** Semi-structured interviews and annotated drafts
 - **The method of analysis:** Thematic coding
 
 ## FAQ 4: What Is the Difference Between "Methodology" and "Methods"?
 
-In many undergraduate student assignments, the terms are used almost interchangeably. However, in advanced academic writing, there is a distinct difference:
+Some undergraduate assignments use the terms loosely, while many advanced research contexts distinguish them. The safest approach is to follow the wording of the assignment and explain any choice in plain language:
 
 - **Methods** refer to the practical, step-by-step tools and procedures you used for data collection and analysis (e.g., a Likert-scale survey, a specific statistical test).
 - **Methodology** refers more broadly to the underlying logic, theory, and justification behind choosing those specific methods.
@@ -3059,9 +3059,19 @@ In practice, the safest approach is to follow your specific course wording. Make
 
 ## FAQ 5: What Tense Should I Use in the Methodology Section?
 
-This is a very common question for ESL writers. Most methodology sections use the **past tense** because they describe actions that have already been completed (e.g., "Data *were* collected," "Participants *completed* the survey").
+This is a very common question for ESL writers. Many completed-study reports use the **past tense** because they describe actions already taken (for example, “Data *were* collected” or “Participants *completed* the survey”). Present tense may appear when defining a general convention, referring to a table in the current paper, or following a journal’s style. Match the tense to the timeline and check your department or target journal.
 
-Present tense may still appear occasionally when you are explaining general, accepted research conventions or defining standard terms.
+## FAQ 6: Can I include results in the methodology section?
+
+Usually, no. A methodology or methods section explains what you did: design, selection, materials, procedure, and analysis. Results report what the analysis found. If your discipline uses a combined Methods and Results format, follow that format rather than applying this general rule mechanically. See the [Results section example](/results-section-example-research-paper/) for a fictional reporting model.
+
+## FAQ 7: How do I write about ethics without inventing approval?
+
+Describe consent, confidentiality, permissions, data handling, or formal review **only when those details are accurate for your project**. Do not claim that a study received institutional approval, anonymous participation, or informed consent unless it did. For human-participant research, follow the process required by your institution before collecting data.
+
+## Use authoritative guidance before submission
+
+[USC Libraries](https://libguides.usc.edu/writingguide/methodology) distinguishes technical methods from methodology as the rationale behind a research approach. It also explains that a methods section should make procedures and analysis understandable. Use the [full Methodology guide](/blog/how-to-write-a-methodology-section-for-a-research-paper), [Methods phrases](/phrases/methods/), and [research paper outline template](/research-paper-outline-template/) only after you have verified the facts of your own study.
 
 ## A Fast Methodology Section Checklist
 
@@ -3075,7 +3085,7 @@ Before submitting your paper, review your methodology section and ask yourself:
 
 ---
 
-*If you need sentence starters for methods, cautious reporting, or analysis, the [CorePapers Academic Phrase Library](https://corepapers.space/phrases) can help you find the right academic vocabulary.*`,
+*If you need sentence starters for methods, browse [Methods phrases](/phrases/methods/). If you need a fictional structure model, use the [Methodology section example](/methodology-section-example-research-paper/). CorePapers can support revision, but you remain responsible for the accuracy, ethics, evidence, and required format of your study.*`,
   },
   {
     slug: "sentence-starters-for-discussion-sections-in-research-papers",
