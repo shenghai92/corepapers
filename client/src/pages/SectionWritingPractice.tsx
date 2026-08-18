@@ -148,6 +148,22 @@ export default function SectionWritingPractice({
   const item = data[kind];
   const [, setLocation] = useLocation();
   const isResults = kind === "results";
+  const isMethodology = kind === "methodology";
+  const sectionProcess = isResults
+    ? [
+        ["Map the reporting order", "List the research questions, hypotheses, or themes and decide the reader-friendly order in which you will report the findings."],
+        ["Prepare tables and figures first", "Check labels, notes, units, and numbering before you draft. Refer to each table or figure only after you introduce the relevant finding."],
+        ["Report what the analysis shows", "Name the analysis, finding, pattern, or theme accurately. Keep explanations of why it happened and broad recommendations for the Discussion."],
+        ["Check scope and completeness", "Verify values against your analysis, include relevant unexpected or non-supporting findings, and avoid turning statistical association into causal proof."],
+      ]
+    : isMethodology
+      ? [
+          ["Begin with the research question", "Choose a level of procedural detail that lets readers see why the design, data, or participants fit the question you are trying to answer."],
+          ["Describe the study in a repeatable order", "Move from design and setting to participants or sources, collection procedures, analysis, and any rationale your field expects."],
+          ["Separate completed actions from plans", "Use accurate tense and say what you actually did. Do not invent approval, recruitment, measures, or analytical decisions that your study did not use."],
+          ["Keep findings and interpretation out", "Explain procedures, limitations, and relevant safeguards here; reserve reported results for Results and explanations of meaning for Discussion."],
+        ]
+      : null;
 
   return (
     <>
@@ -251,6 +267,28 @@ export default function SectionWritingPractice({
               </ul>
             </aside>
           </section>
+          {sectionProcess && (
+            <section className="max-w-5xl mx-auto mt-8 p-7 bg-white border border-border rounded-2xl" aria-labelledby={`${kind}-process-title`}>
+              <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Drafting workflow</p>
+              <h2 id={`${kind}-process-title`} className="font-serif text-3xl text-slate-purple mb-5">
+                {isResults ? "How to build a Results section step by step" : "How to build a Methodology section step by step"}
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {sectionProcess.map(([title, copy], index) => (
+                  <article key={title} className="rounded-xl bg-muted/50 p-5">
+                    <p className="text-xs font-sans font-semibold text-primary mb-2">STEP {index + 1}</p>
+                    <h3 className="font-serif text-xl text-slate-purple mb-2">{title}</h3>
+                    <p className="text-sm font-sans text-muted-foreground leading-relaxed">{copy}</p>
+                  </article>
+                ))}
+              </div>
+              <p className="mt-5 text-sm font-sans text-muted-foreground leading-relaxed">
+                {isResults
+                  ? "A fictional model can help you see the reporting order, but use only your own verified analysis, tables, figures, and course conventions in a submitted paper."
+                  : "A fictional model can help you plan transparency, but use only verified details from your own design and follow your instructor, ethics process, discipline, or target journal where requirements differ."}
+              </p>
+            </section>
+          )}
           <section className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href={item.next as string} className="block">
               <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
@@ -271,6 +309,30 @@ export default function SectionWritingPractice({
                   </h2>
                   <p className="text-sm text-muted-foreground font-sans">
                     Connect the literature&apos;s limits to a focused research purpose.
+                  </p>
+                </div>
+              </Link>
+            )}
+            {isResults && (
+              <Link href="/how-to-write-discussion-section" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                  <h2 className="font-serif text-xl text-slate-purple mb-2">
+                    Interpret findings in Discussion
+                  </h2>
+                  <p className="text-sm text-muted-foreground font-sans">
+                    Move from reported patterns to careful explanations, limits, and implications.
+                  </p>
+                </div>
+              </Link>
+            )}
+            {isMethodology && (
+              <Link href="/methodology-vs-methods-research-paper" className="block">
+                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                  <h2 className="font-serif text-xl text-slate-purple mb-2">
+                    Compare methodology and methods
+                  </h2>
+                  <p className="text-sm text-muted-foreground font-sans">
+                    Check whether your assignment expects procedures, a rationale, or both.
                   </p>
                 </div>
               </Link>

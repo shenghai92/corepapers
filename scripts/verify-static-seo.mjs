@@ -390,6 +390,14 @@ expect(
   resultsPracticeHtml.includes("results section sample"),
   "results practice: sample-query keyword metadata"
 );
+expect(
+  resultsPracticeHtml.includes("How to build a Results section step by step"),
+  "results practice: drafting workflow"
+);
+expect(
+  resultsPracticeHtml.includes('/how-to-write-discussion-section/'),
+  "results practice: discussion-transition link"
+);
 const methodologyPracticeHtml = read(
   "methodology-section-example-research-paper/index.html"
 );
@@ -410,6 +418,14 @@ expect(
 expect(
   methodologyPracticeHtml.includes("sample methodology section"),
   "methodology practice: sample-query keyword metadata"
+);
+expect(
+  methodologyPracticeHtml.includes("How to build a Methodology section step by step"),
+  "methodology practice: drafting workflow"
+);
+expect(
+  methodologyPracticeHtml.includes("never invent approval"),
+  "methodology practice: research-responsibility boundary"
 );
 const researchPaperSectionsHtml = read("research-paper-sections/index.html");
 expect(
