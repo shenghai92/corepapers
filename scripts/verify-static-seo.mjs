@@ -1192,7 +1192,21 @@ expect(methodologyFaqHtml.includes("How do I write about ethics without inventin
 
 const methodologyVsMethodsHtml = read("methodology-vs-methods-research-paper/index.html");
 expect(methodologyVsMethodsHtml.includes("Fictional learning example"), "methodology vs methods: fictional-example disclosure");
+expect(methodologyVsMethodsHtml.includes("This fictional learning example is invented for practice"), "methodology vs methods: fictional learning boundary");
+expect(methodologyVsMethodsHtml.includes("Make design, procedure, and rationale traceable"), "methodology vs methods: traceability workflow");
+expect(methodologyVsMethodsHtml.includes("Confirm section task and convention"), "methodology vs methods: section-task workflow step");
+expect(methodologyVsMethodsHtml.includes("Re-state question and design boundary"), "methodology vs methods: question-design workflow step");
+expect(methodologyVsMethodsHtml.includes("Identify materials, data, participants, or cases"), "methodology vs methods: selection workflow step");
+expect(methodologyVsMethodsHtml.includes("Describe procedure chronologically"), "methodology vs methods: procedure workflow step");
+expect(methodologyVsMethodsHtml.includes("Explain analysis path"), "methodology vs methods: analysis workflow step");
+expect(methodologyVsMethodsHtml.includes("Give proportionate rationale"), "methodology vs methods: rationale workflow step");
+expect(methodologyVsMethodsHtml.includes("State limitations and ethics honestly"), "methodology vs methods: limitation-ethics workflow step");
+expect(methodologyVsMethodsHtml.includes("Separate method from results and reverse-check"), "methodology vs methods: boundary workflow step");
 expect(methodologyVsMethodsHtml.includes("libguides.usc.edu"), "methodology vs methods: USC guidance link");
+expect(methodologyVsMethodsHtml.includes('/research-question-examples/'), "methodology vs methods: research-question link");
+expect(methodologyVsMethodsHtml.includes('/research-proposal-template/'), "methodology vs methods: proposal link");
+expect(methodologyVsMethodsHtml.includes('/academic-integrity-and-source-use/'), "methodology vs methods: source-use link");
+expect(methodologyVsMethodsHtml.includes('/citations/'), "methodology vs methods: citations link");
 
 const annotatedBibliographyHtml = read("annotated-bibliography-example/index.html");
 expect(annotatedBibliographyHtml.includes("Fictional learning example"), "annotated bibliography: fictional-example disclosure");
