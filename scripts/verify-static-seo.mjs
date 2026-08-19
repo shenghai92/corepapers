@@ -263,10 +263,15 @@ expect(
   "APA citation landing: expected H1"
 );
 expect(apaCitationLandingHtml.includes("Generate a formatting draft, then verify it"), "APA citation landing: generator-responsibility boundary");
-expect(apaCitationLandingHtml.includes("1. Identify the source type"), "APA citation landing: six-step workflow");
-expect(apaCitationLandingHtml.includes("2. Record original details"), "APA citation landing: source-field preparation");
-expect(apaCitationLandingHtml.includes("4. Match text and reference"), "APA citation landing: in-text-reference matching");
-expect(apaCitationLandingHtml.includes("6. Check source-use responsibility"), "APA citation landing: source-use accountability");
+expect(apaCitationLandingHtml.includes("An eight-step APA 7 citation workflow"), "APA citation landing: eight-step workflow");
+expect(apaCitationLandingHtml.includes("Confirm APA and course rule"), "APA citation landing: requirement workflow step");
+expect(apaCitationLandingHtml.includes("Open work used"), "APA citation landing: original-work workflow step");
+expect(apaCitationLandingHtml.includes("Confirm type, version, and container"), "APA citation landing: identity workflow step");
+expect(apaCitationLandingHtml.includes("Collect original details"), "APA citation landing: source-field workflow step");
+expect(apaCitationLandingHtml.includes("Create transparent draft"), "APA citation landing: draft workflow step");
+expect(apaCitationLandingHtml.includes("Compare official examples"), "APA citation landing: official-review workflow step");
+expect(apaCitationLandingHtml.includes("Link text and reference"), "APA citation landing: in-text-reference workflow step");
+expect(apaCitationLandingHtml.includes("Reopen record before submission"), "APA citation landing: reverse-check workflow step");
 expect(apaCitationLandingHtml.includes("apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/author-date"), "APA citation landing: official APA author-date guidance link");
 expect(apaCitationLandingHtml.includes('/citations/'), "APA citation landing: citation-generator link");
 expect(apaCitationLandingHtml.includes('/citation-examples/'), "APA citation landing: citation-examples link");
