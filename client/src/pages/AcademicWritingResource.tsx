@@ -341,6 +341,19 @@ function ExamplesPage() {
             </p>
           </section>
 
+          <section className={`max-w-5xl mx-auto mt-6 ${commonClass.card}`}>
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Read a model as a rhetorical decision</p>
+            <h2 className={commonClass.title}>Move from what the example says to why the move works here</h2>
+            <p className={`${commonClass.copy} mt-3`}>A useful model is not only a sentence pattern. It is a response to a specific reader, purpose, genre, evidence record, and stage of an argument. Separate what you can see from the decision it performs, then decide what must change when you write from your own material.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">1. Describe the visible move</h3><p className={commonClass.copy}>Point to the claim, source signal, result, table reference, definition, transition, or qualification the model actually contains.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">2. Analyse the choice</h3><p className={commonClass.copy}>Ask why that evidence, order, degree of certainty, or wording helps this writer address this particular audience and task.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">3. Evaluate the fit</h3><p className={commonClass.copy}>Test whether the passage&apos;s claim, support, and implied warrant are proportionate and whether the move would still work in a different discipline or assignment.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">4. Rebuild from your record</h3><p className={commonClass.copy}>Use your own question, verified sources or data, course rules, and citation system. Keep the function only if it fits your argument.</p></article>
+            </div>
+            <p className={`${commonClass.copy} mt-5`}><strong className="text-foreground">Quick claim map:</strong> identify what the writer wants readers to accept, the source or data that supports it, and the reasoning that makes that support relevant. If you cannot identify all three, do not imitate the sentence before you understand the missing connection.</p>
+          </section>
+
           <section
             className="max-w-4xl mx-auto mt-8 space-y-6"
             aria-label="Academic writing examples"
@@ -380,6 +393,7 @@ function ExamplesPage() {
                 evidence. The citation identifies the source of the idea, while
                 the sentence remains part of the writer&apos;s argument.
               </p>
+              <div className="grid sm:grid-cols-2 gap-4 mt-5 text-sm font-sans leading-relaxed"><p className="rounded-xl bg-emerald-50/70 p-4 text-muted-foreground"><strong className="text-foreground">You can transfer:</strong> the move from a bounded source finding to a cautious, cited claim that your paragraph then explains.</p><p className="rounded-xl bg-amber-50/70 p-4 text-muted-foreground"><strong className="text-foreground">You must rebuild:</strong> the actual author, year, finding, scope, relevance, citation style, and your own reason for using the source.</p></div>
             </article>
 
             <article className={commonClass.card}>
@@ -402,6 +416,7 @@ function ExamplesPage() {
                 sentence to use unchanged. Add the details that let a reader
                 understand your actual procedure.
               </p>
+              <div className="grid sm:grid-cols-2 gap-4 mt-5 text-sm font-sans leading-relaxed"><p className="rounded-xl bg-emerald-50/70 p-4 text-muted-foreground"><strong className="text-foreground">You can transfer:</strong> the reader&apos;s need to understand what was done, with whom or with what material, and how the material was analysed.</p><p className="rounded-xl bg-amber-50/70 p-4 text-muted-foreground"><strong className="text-foreground">You must rebuild:</strong> the actual design, access, consent or ethics position where applicable, sample or corpus, procedure, analysis, limitations, and course requirements.</p></div>
             </article>
 
             <article className={commonClass.card}>
@@ -429,6 +444,7 @@ function ExamplesPage() {
                 likewise advises writers to present results in logical order and
                 keep evaluation of their meaning for the discussion.
               </p>
+              <div className="grid sm:grid-cols-2 gap-4 mt-5 text-sm font-sans leading-relaxed"><p className="rounded-xl bg-emerald-50/70 p-4 text-muted-foreground"><strong className="text-foreground">You can transfer:</strong> the sequence of naming the pattern, pointing to the relevant display, and keeping interpretation for the appropriate section.</p><p className="rounded-xl bg-amber-50/70 p-4 text-muted-foreground"><strong className="text-foreground">You must rebuild:</strong> the real measure, comparison, analysis, statistical reporting convention, table or figure, uncertainty, and interpretation allowed by your design.</p></div>
             </article>
           </section>
 
@@ -439,7 +455,7 @@ function ExamplesPage() {
             </article>
             <article className="p-7 bg-white border border-border rounded-2xl">
               <h2 className="font-serif text-3xl text-slate-purple mb-4">Use writing-center guidance when you analyse a model</h2>
-              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><ExternalLink href="https://writersworkshop.illinois.edu/resources-2/writer-resources/academic-writing/rhetorical-analysis/">University of Illinois Writers Workshop</ExternalLink> recommends analysing a text&apos;s audience, purpose, context, message, medium, and genre rather than simply summarizing it. <ExternalLink href="https://miamioh.edu/howe-center/hwc/writing-resources/handouts/types-of-writing/rhetorical-analyses.html">Miami University Howe Writing Center</ExternalLink> distinguishes description, analysis, and evaluation, including the relationship between claim, support, and warrant. <ExternalLink href="https://purdueglobalwriting.center/writing-with-integrity/">Purdue Global Writing Center</ExternalLink> explains that research-based writing develops an original contribution while accurately integrating and documenting others&apos; ideas.</p>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><ExternalLink href="https://writersworkshop.illinois.edu/resources-2/writer-resources/academic-writing/rhetorical-analysis/">University of Illinois Writers Workshop</ExternalLink> recommends analysing a text&apos;s audience, purpose, context, message, medium, and genre rather than simply summarizing it. <ExternalLink href="https://miamioh.edu/howe-center/hwc/writing-resources/handouts/types-of-writing/rhetorical-analyses.html">Miami University Howe Writing Center</ExternalLink> distinguishes description, analysis, and evaluation, including the relationship between claim, support, and warrant. <ExternalLink href="https://usingsources.fas.harvard.edu/how-avoid-plagiarism-0">Harvard&apos;s Guide to Using Sources</ExternalLink> connects responsible source use with a clear question, systematic notes, and author responsibility at submission. <ExternalLink href="https://purdueglobalwriting.center/writing-with-integrity/">Purdue Global Writing Center</ExternalLink> explains that research-based writing develops an original contribution while accurately integrating and documenting others&apos; ideas.</p>
             </article>
           </section>
 
@@ -485,6 +501,30 @@ function ExamplesPage() {
               copy="Reshape a source after understanding it; do not copy a model&apos;s source relationship or wording."
               href="/how-to-paraphrase-without-plagiarizing"
               label="Read paraphrasing guide"
+            />
+            <ToolNextStep
+              title="Refine the research question"
+              copy="Test whether your own example answers a focused, feasible question before copying any structural move."
+              href="/research-question-examples"
+              label="Use research-question guide"
+            />
+            <ToolNextStep
+              title="State a careful research gap"
+              copy="Learn to distinguish a real limitation or underexplored area from an unsupported claim that no research exists."
+              href="/research-gap-examples"
+              label="Use research-gap guide"
+            />
+            <ToolNextStep
+              title="Synthesize a source conversation"
+              copy="Map themes, methods, agreements, and limits across sources before making a literature-based example your own."
+              href="/literature-review-synthesis-matrix"
+              label="Use synthesis matrix"
+            />
+            <ToolNextStep
+              title="Verify citations after drafting"
+              copy="Check source records and in-text links after rebuilding a passage from your own evidence."
+              href="/citations"
+              label="Check citations"
             />
             <ToolNextStep
               title="Protect academic integrity"

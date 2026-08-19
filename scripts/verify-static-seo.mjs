@@ -466,11 +466,21 @@ expect(
   "academic writing examples: results fictional-example disclosure"
 );
 expect(academicWritingExamplesHtml.includes("Transfer the move, not the sentence"), "academic writing examples: transfer boundary");
+expect(academicWritingExamplesHtml.includes("Move from what the example says to why the move works here"), "academic writing examples: rhetorical-decision workflow");
+expect(academicWritingExamplesHtml.includes("Describe the visible move"), "academic writing examples: description-analysis workflow");
+expect(academicWritingExamplesHtml.includes("Quick claim map"), "academic writing examples: claim-support-warrant check");
+expect(academicWritingExamplesHtml.includes("You can transfer"), "academic writing examples: transferable-move boundary");
+expect(academicWritingExamplesHtml.includes("You must rebuild"), "academic writing examples: rebuild-from-own-record boundary");
 expect(academicWritingExamplesHtml.includes("writersworkshop.illinois.edu"), "academic writing examples: Illinois guidance link");
 expect(academicWritingExamplesHtml.includes("miamioh.edu"), "academic writing examples: Miami guidance link");
+expect(academicWritingExamplesHtml.includes("usingsources.fas.harvard.edu"), "academic writing examples: Harvard source-responsibility link");
 expect(academicWritingExamplesHtml.includes("purdueglobalwriting.center"), "academic writing examples: Purdue Global integrity link");
 expect(academicWritingExamplesHtml.includes('/thesis-statement-examples/'), "academic writing examples: thesis cluster link");
 expect(academicWritingExamplesHtml.includes('/academic-paragraph-structure/'), "academic writing examples: paragraph cluster link");
+expect(academicWritingExamplesHtml.includes('/research-question-examples/'), "academic writing examples: research-question cluster link");
+expect(academicWritingExamplesHtml.includes('/research-gap-examples/'), "academic writing examples: research-gap cluster link");
+expect(academicWritingExamplesHtml.includes('/literature-review-synthesis-matrix/'), "academic writing examples: synthesis cluster link");
+expect(academicWritingExamplesHtml.includes('/citations/'), "academic writing examples: citations cluster link");
 expect(academicWritingExamplesHtml.includes('/academic-integrity-and-source-use/'), "academic writing examples: source-use cluster link");
 
 const researchPaperTemplatesHtml = read("research-paper-templates/index.html");
