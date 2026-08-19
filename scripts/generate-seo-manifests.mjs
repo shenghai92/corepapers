@@ -119,6 +119,13 @@ const STATIC_PAGE_SEO = {
     keywords:
       "research paper sections, how to write methods section, results section examples, discussion section guide, research paper introduction",
   },
+  "/research-paper-revision-checklist": {
+    title: "Research Paper Revision Checklist: Eight Steps | CorePapers",
+    description:
+      "Use a research paper revision checklist to check assignment fit, thesis, organization, paragraphs, evidence, citations, limits, academic English, and submission responsibility.",
+    keywords:
+      "research paper revision checklist, research paper editing checklist, revise research paper, academic paper checklist, revise essay international students",
+  },
   "/academic-writing-for-graduate-students": {
     title: "Academic Writing for Graduate Students: A Practical Guide | CorePapers",
     description: "Build stronger graduate-level academic writing with a practical guide to audience, genres, argument, evidence, source workflow, revision, and sustainable writing habits.",
@@ -355,6 +362,13 @@ const STATIC_PAGE_SEO = {
     keywords:
       "how CorePapers content is created, academic writing content workflow, multilingual student resources",
   },
+  "/ai-use-disclosure-academic-writing": {
+    title: "AI Use Disclosure in Academic Writing: Responsible Guide | CorePapers",
+    description:
+      "Learn how to disclose permitted AI use in academic writing with a practical workflow for policy, privacy, source checks, human review, and responsible submission.",
+    keywords:
+      "AI use disclosure academic writing, disclose AI use assignment, responsible AI academic writing, AI policy international students, academic integrity AI writing",
+  },
   "/privacy": {
     title: "Privacy Policy | CorePapers",
     description:
@@ -409,6 +423,8 @@ const STATIC_PAGES = [
   },
   {
     path: "/research-paper-sections/", changefreq: "weekly", priority: "0.8" },
+  {
+    path: "/research-paper-revision-checklist/", changefreq: "monthly", priority: "0.8" },
   {
     path: "/academic-writing-for-graduate-students/",
     changefreq: "monthly",
@@ -544,6 +560,11 @@ const STATIC_PAGES = [
     path: "/how-corepapers-content-is-created/",
     changefreq: "monthly",
     priority: "0.5",
+  },
+  {
+    path: "/ai-use-disclosure-academic-writing/",
+    changefreq: "monthly",
+    priority: "0.8",
   },
   { path: "/privacy/", changefreq: "yearly", priority: "0.4" },
   { path: "/terms/", changefreq: "yearly", priority: "0.4" },

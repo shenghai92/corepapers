@@ -6,14 +6,14 @@ const FOOTER_LINKS = {
     { label: "Phrase Library", href: "/phrases" },
     { label: "Citation Generator", href: "/citations" },
   ],
-  Resources: [
-    { label: "Blog", href: "/blog" },
-    { label: "Academic Integrity", href: "/academic-integrity-and-source-use" },
-    { label: "Writing Examples", href: "/academic-writing-examples" },
-    { label: "Research Templates", href: "/research-paper-templates" },
+  "Research guides": [
+    { label: "Research Paper Sections", href: "/research-paper-sections" },
+    { label: "Research Paper Revision Checklist", href: "/research-paper-revision-checklist" },
+    { label: "Academic English for ESL", href: "/academic-english-for-esl-students" },
+    { label: "Literature Review Example", href: "/literature-review-example" },
     { label: "Research Proposal Template", href: "/research-proposal-template" },
-    { label: "APA Citation Examples", href: "/citation-examples" },
-    { label: "Academic Phrases", href: "/phrases" },
+    { label: "Academic Integrity & Sources", href: "/academic-integrity-and-source-use" },
+    { label: "Writing Guides & Blog", href: "/blog" },
   ],
   Popular: [
     {
@@ -33,15 +33,12 @@ const FOOTER_LINKS = {
       href: "/academic-writing-alternative-for-international-students",
     },
   ],
-  Company: [
-    { label: "Pricing", href: "/pricing" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+  "Standards & support": [
+    { label: "AI Use & Disclosure", href: "/ai-use-disclosure-academic-writing" },
     { label: "Editorial Policy", href: "/editorial-policy" },
-    {
-      label: "How Content Is Created",
-      href: "/how-corepapers-content-is-created",
-    },
+    { label: "How Content Is Created", href: "/how-corepapers-content-is-created" },
+    { label: "About CorePapers", href: "/about" },
+    { label: "Contact & Support", href: "/contact" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
   ],
@@ -66,8 +63,10 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              The academic writing assistant built for non-native English
-              speakers. Write with confidence, cite with precision.
+              Researcher-first academic writing support for multilingual and international students. Build your own argument, verify original sources, and write with precision.
+            </p>
+            <p className="text-xs text-muted-foreground mt-4 leading-relaxed max-w-sm">
+              CorePapers is educational support, not a substitute for your instructor, supervisor, institutional policy, editorial review, or your own authorship and source responsibility.
             </p>
             <p className="text-sm text-muted-foreground mt-4">
               Support:{" "}
@@ -107,7 +106,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-1 text-xs text-muted-foreground">
             <span className="deco-bracket">
-              Built for international students worldwide
+              Built for international students worldwide · Source-aware · Author-led
             </span>
           </div>
         </div>

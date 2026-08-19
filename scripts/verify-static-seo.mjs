@@ -1499,6 +1499,43 @@ expect(
   "citation-examples resource: BreadcrumbList JSON-LD"
 );
 
+const aiDisclosureHtml = read("ai-use-disclosure-academic-writing/index.html");
+expect(aiDisclosureHtml.includes("AI use disclosure in academic writing"), "AI disclosure guide: crawler-visible H1");
+expect(aiDisclosureHtml.includes("An eight-step AI use and disclosure workflow"), "AI disclosure guide: eight-step workflow");
+expect(aiDisclosureHtml.includes("Protect private material"), "AI disclosure guide: privacy workflow step");
+expect(aiDisclosureHtml.includes("Keep source work human-led"), "AI disclosure guide: source-verification workflow step");
+expect(aiDisclosureHtml.includes("This fictional learning example is invented for practice"), "AI disclosure guide: fictional-learning boundary");
+expect(aiDisclosureHtml.includes("libguides.princeton.edu/generativeAI/disclosure"), "AI disclosure guide: Princeton primary guidance");
+expect(aiDisclosureHtml.includes("ai.unc.edu/research-generative-ai-usage-guidance"), "AI disclosure guide: UNC primary guidance");
+expect(aiDisclosureHtml.includes("grad.uw.edu/advice/effective-and-responsible-use-of-ai-in-research"), "AI disclosure guide: UW primary guidance");
+expect(aiDisclosureHtml.includes('/academic-integrity-and-source-use/'), "AI disclosure guide: integrity cluster link");
+expect(aiDisclosureHtml.includes('/how-corepapers-content-is-created/'), "AI disclosure guide: content-method link");
+expect(aiDisclosureHtml.includes('"@type":"WebPage"'), "AI disclosure guide: WebPage JSON-LD");
+
+const revisionChecklistHtml = read("research-paper-revision-checklist/index.html");
+expect(revisionChecklistHtml.includes("Research paper revision checklist"), "revision checklist: crawler-visible H1");
+expect(revisionChecklistHtml.includes("An eight-step research paper revision workflow"), "revision checklist: eight-step workflow");
+expect(revisionChecklistHtml.includes("Verify evidence and source records"), "revision checklist: source-record workflow step");
+expect(revisionChecklistHtml.includes("Keep limits, objections, and uncertainty visible"), "revision checklist: limits workflow step");
+expect(revisionChecklistHtml.includes("This fictional learning example is invented for practice"), "revision checklist: fictional-learning boundary");
+expect(revisionChecklistHtml.includes("writingcenter.gmu.edu/writing-resources/writing-as-process/editing-checklist"), "revision checklist: GMU primary guidance");
+expect(revisionChecklistHtml.includes("writingcenter.unc.edu/faculty-resources/classroom-handouts/revision-checklist"), "revision checklist: UNC primary guidance");
+expect(revisionChecklistHtml.includes("owl.excelsior.edu/research/revising-and-editing-a-research-paper"), "revision checklist: Excelsior primary guidance");
+expect(revisionChecklistHtml.includes('/research-paper-sections/'), "revision checklist: section hub link");
+expect(revisionChecklistHtml.includes('/academic-argument-evidence/'), "revision checklist: argument cluster link");
+expect(revisionChecklistHtml.includes('"@type":"WebPage"'), "revision checklist: WebPage JSON-LD");
+
+const editorialPolicyHtml = read("editorial-policy/index.html");
+expect(editorialPolicyHtml.includes("Source and evidence standards"), "editorial policy: source-standard section");
+expect(editorialPolicyHtml.includes("fictional learning examples"), "editorial policy: fictional-example boundary");
+expect(editorialPolicyHtml.includes("Tool output is assistance to inspect"), "editorial policy: tool-responsibility boundary");
+expect(editorialPolicyHtml.includes('/ai-use-disclosure-academic-writing/'), "editorial policy: AI disclosure link");
+
+const contentMethodHtml = read("how-corepapers-content-is-created/index.html");
+expect(contentMethodHtml.includes("An eight-step content development process"), "content method: eight-step process");
+expect(contentMethodHtml.includes("Review static and live visibility"), "content method: static-SEO review step");
+expect(contentMethodHtml.includes('/editorial-policy/'), "content method: editorial-policy link");
+
 const sitemap = read("sitemap-pages.xml");
 expect(
   sitemap.includes(`${BASE_URL}/phrases/introduction/`),
@@ -1635,6 +1672,14 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/citation-examples/`),
   "sitemap: citation-examples resource"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/ai-use-disclosure-academic-writing/`),
+  "sitemap: AI use disclosure guide"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/research-paper-revision-checklist/`),
+  "sitemap: research paper revision checklist"
 );
 expect(
   !sitemap.includes(`${BASE_URL}/phrases</loc>`),

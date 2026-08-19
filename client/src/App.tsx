@@ -24,6 +24,9 @@ const ResearchProposalTemplate = lazy(
 const ResearchGapExamples = lazy(
   () => import("./pages/ResearchGapExamples")
 );
+const ResearchPaperRevisionChecklist = lazy(
+  () => import("./pages/ResearchPaperRevisionChecklist")
+);
 const DiscussionWritingGuide = lazy(
   () => import("./pages/DiscussionWritingGuide")
 );
@@ -79,6 +82,7 @@ const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const EditorialPolicy = lazy(() => import("./pages/EditorialPolicy"));
 const HowContentIsCreated = lazy(() => import("./pages/HowContentIsCreated"));
+const AiUseDisclosureGuide = lazy(() => import("./pages/AiUseDisclosureGuide"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -208,6 +212,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <ResearchPaperSections />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/research-paper-revision-checklist"
+          component={() => (
+            <PublicLayout>
+              <ResearchPaperRevisionChecklist />
             </PublicLayout>
           )}
         />
@@ -506,6 +518,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <HowContentIsCreated />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/ai-use-disclosure-academic-writing"
+          component={() => (
+            <PublicLayout>
+              <AiUseDisclosureGuide />
             </PublicLayout>
           )}
         />
