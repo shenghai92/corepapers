@@ -705,12 +705,21 @@ expect(hedgingLanguageHtml.includes('/how-to-write-discussion-section/'), "hedgi
 
 const graduateAcademicWritingHtml = read("academic-writing-for-graduate-students/index.html");
 expect(graduateAcademicWritingHtml.includes("Fictional learning example"), "graduate academic writing: fictional-example disclosure");
+expect(graduateAcademicWritingHtml.includes("Turn a large graduate project into a sequence of testable decisions"), "graduate academic writing: project-architecture workflow");
+expect(graduateAcademicWritingHtml.includes("Ask a staged feedback question"), "graduate academic writing: staged-feedback workflow");
+expect(graduateAcademicWritingHtml.includes("ask for feedback a reader can actually give"), "graduate academic writing: fictional-feedback-brief disclosure");
+expect(graduateAcademicWritingHtml.includes("Keep responsibility with the right person"), "graduate academic writing: support-responsibility boundary");
+expect(graduateAcademicWritingHtml.includes("writingcenter.unc.edu/tips-and-tools/dissertation-strategies"), "graduate academic writing: UNC dissertation guidance link");
+expect(graduateAcademicWritingHtml.includes("writingcenter.utk.edu/dissertation-writing-guide"), "graduate academic writing: UTK dissertation guidance link");
 expect(graduateAcademicWritingHtml.includes("gsc.upenn.edu"), "graduate academic writing: UPenn guidance link");
 expect(graduateAcademicWritingHtml.includes("poorvucenter.yale.edu"), "graduate academic writing: Yale guidance link");
-expect(graduateAcademicWritingHtml.includes("grad.berkeley.edu"), "graduate academic writing: UC Berkeley guidance link");
-expect(graduateAcademicWritingHtml.includes("asc.dasa.ncsu.edu"), "graduate academic writing: NC State guidance link");
 expect(graduateAcademicWritingHtml.includes('/academic-english-for-esl-students/'), "graduate academic writing: academic-English cluster link");
 expect(graduateAcademicWritingHtml.includes('/research-proposal-template/'), "graduate academic writing: proposal cluster link");
+expect(graduateAcademicWritingHtml.includes('/research-question-examples/'), "graduate academic writing: research-question cluster link");
+expect(graduateAcademicWritingHtml.includes('/research-gap-examples/'), "graduate academic writing: research-gap cluster link");
+expect(graduateAcademicWritingHtml.includes('/research-paper-sections/'), "graduate academic writing: paper-sections cluster link");
+expect(graduateAcademicWritingHtml.includes('/academic-integrity-and-source-use/'), "graduate academic writing: source-use cluster link");
+expect(graduateAcademicWritingHtml.includes('/citations/'), "graduate academic writing: citations cluster link");
 expect(academicEnglishHubHtml.includes('/academic-writing-for-graduate-students/'), "academic-English hub: graduate-writing return link");
 expect(academicEnglishHubHtml.includes('/hedging-language-academic-writing/'), "academic-English hub: hedging return link");
 
