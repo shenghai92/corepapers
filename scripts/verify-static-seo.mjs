@@ -802,11 +802,19 @@ expect(
   "research questions: strengthened H1"
 );
 expect(
-  researchQuestionHtml.includes("1. Start with a broad topic"),
-  "research questions: five-step planning workflow"
+  researchQuestionHtml.includes("Move from a topic to a workable research question"),
+  "research questions: eight-step planning workflow"
 );
+expect(researchQuestionHtml.includes("Confirm assignment and reader"), "research questions: task workflow step");
+expect(researchQuestionHtml.includes("Name broad area to understand"), "research questions: topic workflow step");
+expect(researchQuestionHtml.includes("Scan terms, evidence, and conversations"), "research questions: reading workflow step");
+expect(researchQuestionHtml.includes("Draft a genuinely open inquiry"), "research questions: open-question workflow step");
+expect(researchQuestionHtml.includes("Set useful scope"), "research questions: boundary workflow step");
+expect(researchQuestionHtml.includes("Check reasoning demand"), "research questions: complexity workflow step");
+expect(researchQuestionHtml.includes("Test access, methods, and ethics"), "research questions: feasibility workflow step");
+expect(researchQuestionHtml.includes("Rebuild and reverse-check"), "research questions: iteration workflow step");
 expect(
-  researchQuestionHtml.includes("This is a fictional learning example only"),
+  researchQuestionHtml.includes("This fictional learning example is invented for practice"),
   "research questions: fictional-example disclosure"
 );
 expect(researchQuestionHtml.includes("writingcenter.gmu.edu"), "research questions: George Mason guidance link");
@@ -815,6 +823,10 @@ expect(researchQuestionHtml.includes("writingcenter.uci.edu"), "research questio
 expect(researchQuestionHtml.includes('/research-gap-examples/'), "research questions: research-gap cluster link");
 expect(researchQuestionHtml.includes('/academic-argument-evidence/'), "research questions: argument-evidence cluster link");
 expect(researchQuestionHtml.includes('/research-proposal-template/'), "research questions: research-proposal cluster link");
+expect(researchQuestionHtml.includes('/methodology-vs-methods-research-paper/'), "research questions: methodology cluster link");
+expect(researchQuestionHtml.includes('/thesis-statement-examples/'), "research questions: thesis cluster link");
+expect(researchQuestionHtml.includes('/research-paper-outline-template/'), "research questions: outline cluster link");
+expect(researchQuestionHtml.includes('/academic-integrity-and-source-use/'), "research questions: source-use cluster link");
 
 const argumentEvidenceHtml = read("academic-argument-evidence/index.html");
 expect(
