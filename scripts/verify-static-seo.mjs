@@ -341,8 +341,18 @@ expect(
   academicWritingSupportHtml.includes("Academic writing support for international students"),
   "academic writing support: expected H1"
 );
-expect(academicWritingSupportHtml.includes("1. Interpret the task"), "academic writing support: six-step workflow");
-expect(academicWritingSupportHtml.includes("Keep the writer in control"), "academic writing support: support-responsibility boundary");
+expect(academicWritingSupportHtml.includes("An eight-step author-led academic writing path"), "academic writing support: eight-step workflow");
+expect(academicWritingSupportHtml.includes("Read task and policy"), "academic writing support: task-policy step");
+expect(academicWritingSupportHtml.includes("Name reader and purpose"), "academic writing support: reader-purpose step");
+expect(academicWritingSupportHtml.includes("Build evidence path"), "academic writing support: evidence-path step");
+expect(academicWritingSupportHtml.includes("Write ideas yourself"), "academic writing support: author-drafting step");
+expect(academicWritingSupportHtml.includes("Fix global issues first"), "academic writing support: global-revision step");
+expect(academicWritingSupportHtml.includes("Inspect language and voice"), "academic writing support: language-voice step");
+expect(academicWritingSupportHtml.includes("Recheck facts and sources"), "academic writing support: source-verification step");
+expect(academicWritingSupportHtml.includes("Submit only what you own"), "academic writing support: author-responsibility step");
+expect(academicWritingSupportHtml.includes("Fictional learning example: separate writing decisions from language choices"), "academic writing support: fictional-learning example");
+expect(academicWritingSupportHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or text to submit"), "academic writing support: explicit fictional-learning boundary");
+expect(academicWritingSupportHtml.includes("CorePapers can support practice and review"), "academic writing support: support-responsibility boundary");
 expect(academicWritingSupportHtml.includes("drexel.edu/coas/academics/university-writing-program/multilingual-writers"), "academic writing support: Drexel multilingual guidance link");
 expect(academicWritingSupportHtml.includes("owl.purdue.edu/owl/multilingual/multilingual_students"), "academic writing support: Purdue multilingual guidance link");
 expect(academicWritingSupportHtml.includes("owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html"), "academic writing support: Purdue revision guidance link");
