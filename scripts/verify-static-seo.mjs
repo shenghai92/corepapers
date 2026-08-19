@@ -362,7 +362,31 @@ expect(paraphrasingGuideHtml.includes('/academic-integrity-and-source-use/'), "p
 expect(paraphrasingGuideHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "paraphrasing guide: paraphrasing-tool cluster link");
 
 const academicIntegrityHtml = read("academic-integrity-and-source-use/index.html");
+expect(academicIntegrityHtml.includes("Academic integrity starts with clear source use"), "academic integrity: expected H1");
+expect(academicIntegrityHtml.includes("Move from a source to a traceable academic sentence"), "academic integrity: source-responsibility workflow");
+expect(academicIntegrityHtml.includes("Check task and course policy"), "academic integrity: policy workflow step");
+expect(academicIntegrityHtml.includes("Create a traceable source record"), "academic integrity: source-record workflow step");
+expect(academicIntegrityHtml.includes("Choose quote, paraphrase, or summary"), "academic integrity: source-choice workflow step");
+expect(academicIntegrityHtml.includes("Read until idea is understood"), "academic integrity: source-understanding workflow step");
+expect(academicIntegrityHtml.includes("Draft in your own analytical voice"), "academic integrity: writer-voice workflow step");
+expect(academicIntegrityHtml.includes("Mark exact language and attribution"), "academic integrity: attribution workflow step");
+expect(academicIntegrityHtml.includes("Check accuracy, scope, and reference details"), "academic integrity: accuracy workflow step");
+expect(academicIntegrityHtml.includes("Complete human submission check"), "academic integrity: submission-check workflow step");
+expect(academicIntegrityHtml.includes("Fictional learning example: preserve a source trail before drafting"), "academic integrity: fictional-source-record disclosure");
+expect(academicIntegrityHtml.includes("This fictional learning example is invented for practice"), "academic integrity: fictional-example boundary");
+expect(academicIntegrityHtml.includes("Use AI as a revision step, not a source authority"), "academic integrity: AI-responsibility boundary");
+expect(academicIntegrityHtml.includes("apastyle.apa.org/style-grammar-guidelines/citations/paraphrasing"), "academic integrity: APA paraphrase guidance link");
+expect(academicIntegrityHtml.includes("owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing"), "academic integrity: Purdue source-use guidance link");
+expect(academicIntegrityHtml.includes("pitt.libguides.com/academicintegrity/academicwriting"), "academic integrity: Pittsburgh source-integration guidance link");
 expect(academicIntegrityHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "academic integrity: paraphrasing-guide return link");
+expect(academicIntegrityHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "academic integrity: paraphrasing-tool link");
+expect(academicIntegrityHtml.includes('/annotated-bibliography-example/'), "academic integrity: annotated-bibliography link");
+expect(academicIntegrityHtml.includes('/evaluate-academic-sources/'), "academic integrity: source-evaluation link");
+expect(academicIntegrityHtml.includes('/literature-review-synthesis-matrix/'), "academic integrity: synthesis-matrix link");
+expect(academicIntegrityHtml.includes('/academic-argument-evidence/'), "academic integrity: argument-evidence link");
+expect(academicIntegrityHtml.includes('/research-question-examples/'), "academic integrity: research-question link");
+expect(academicIntegrityHtml.includes('/citations/'), "academic integrity: citation-generator link");
+expect(academicIntegrityHtml.includes('/apa-citation-generator-for-international-students/'), "academic integrity: APA citation guide link");
 
 const chicagoCitationHtml = read("chicago-citation-examples/index.html");
 expect(chicagoCitationHtml.includes("Fictional learning examples"), "Chicago citations: fictional-example disclosure");

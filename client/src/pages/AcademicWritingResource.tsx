@@ -210,87 +210,60 @@ function IntegrityPage() {
             </p>
           </section>
 
-          <section className="max-w-4xl mx-auto mt-8 grid md:grid-cols-2 gap-5">
+          <section className={`max-w-5xl mx-auto mt-8 ${commonClass.card}`} aria-labelledby="source-responsibility-title">
+            <p className="text-xs font-sans font-semibold uppercase tracking-widest text-primary mb-3">Source responsibility workflow</p>
+            <h2 id="source-responsibility-title" className={commonClass.title}>Move from a source to a traceable academic sentence</h2>
+            <p className={commonClass.copy}>
+              A citation format or language tool cannot decide whether a source really supports your point. Choose the source-use move only after you can trace the claim, its meaning, and your own contribution through the full writing process.
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 mt-6">
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">1. Check the task and course policy</h3><p className={commonClass.copy}>Confirm what the assignment, instructor, department, journal, or program permits for sources, citation style, collaboration, translation, AI-assisted revision, quotation, and reference tools before drafting.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">2. Create a traceable source record</h3><p className={commonClass.copy}>Record author, title, date, stable source details, relevant page or location, the exact claim, and why it may matter to your question. Do not rely on a copied passage without its source trail.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">3. Choose quote, paraphrase, or summary</h3><p className={commonClass.copy}>Quote when exact wording matters; paraphrase when a particular idea matters more than wording; summarize when readers need a broad source point. All three require clear attribution when using another author&apos;s words or ideas.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">4. Read until the idea is understood</h3><p className={commonClass.copy}>Read enough context to understand the author&apos;s point, limits, and conditions. Do not draft from a search snippet, a secondhand quotation, a citation generator output, or a sentence whose meaning you cannot explain.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">5. Draft in your own analytical voice</h3><p className={commonClass.copy}>Write the point your paragraph needs to make, then integrate the source as evidence, context, contrast, or qualification. Explain how it supports, complicates, or limits your reasoning instead of letting borrowed material replace your analysis.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">6. Mark exact language and attribution</h3><p className={commonClass.copy}>Use quotation marks for wording retained exactly, signal who makes a source-based claim, and place in-text citations where readers can see the source scope. Reintroduce citations when a new paragraph or source makes attribution unclear.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">7. Check accuracy, scope, and reference details</h3><p className={commonClass.copy}>Compare paraphrase or summary with the original for meaning, context, evidence, limitation, and overstatement. Verify every author, date, page or locator where required, title, URL or DOI, and reference-list entry against the original source.</p></article>
+              <article className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">8. Complete a human submission check</h3><p className={commonClass.copy}>Treat AI output, grammar suggestions, translation, and citation tools as drafts to verify. You remain responsible for source accuracy, attribution, permitted tool use, citations, original analysis, and the final submission under local policy.</p></article>
+            </div>
+          </section>
+
+          <section className="max-w-5xl mx-auto mt-8 grid md:grid-cols-2 gap-5">
             <article className={commonClass.card}>
-              <h2 className={commonClass.title}>A four-step source check</h2>
-              <ol className="space-y-3 text-sm text-muted-foreground font-sans leading-relaxed list-decimal pl-5">
-                <li>
-                  Read until you can explain the source claim without looking at
-                  the sentence.
-                </li>
-                <li>
-                  Write your version from memory, then compare it with the
-                  original for accuracy.
-                </li>
-                <li>
-                  Use quotation marks for distinctive language you keep exactly.
-                </li>
-                <li>
-                  Place a citation where a reader can see which source supports
-                  the idea.
-                </li>
-              </ol>
+              <h2 className={commonClass.title}>Fictional learning example: preserve a source trail before drafting</h2>
+              <p className={commonClass.copy}>
+                <strong>This fictional learning example is invented for practice; it is not a real source record, author, page number, research finding, permission, or text to submit.</strong> A fictional writer saves an invented source title with an invented location and a short note about a fictional claim, then decides that a narrow idea needs a paraphrase rather than an exact quotation. The writer drafts from the note, compares the fictional wording with the fictional source, marks an invented distinctive term for quotation if retained, and keeps an invented citation beside the claim. The writer does not invent a page number, author, quote, citation, permission, or source support to complete a reference.
+              </p>
             </article>
             <article className={commonClass.card}>
-              <h2 className={commonClass.title}>Use AI as a revision step</h2>
+              <h2 className={commonClass.title}>Use AI as a revision step, not a source authority</h2>
               <p className={commonClass.copy}>
-                An AI suggestion can help you notice literal translation or
-                awkward wording, but it cannot decide whether a claim is
-                accurate, whether a source supports it, or what your university
-                permits. Compare every revision with your intended meaning and
-                your course policy.
+                An AI suggestion can help you notice literal translation or awkward wording, but it cannot decide whether a claim is accurate, whether a source supports it, whether a reference is complete, or what your university permits. Compare every revision with your intended meaning, original source, course policy, and final citation record.
               </p>
             </article>
           </section>
 
-          <section className={`max-w-4xl mx-auto mt-8 ${commonClass.card}`}>
-            <h2 className={commonClass.title}>Why this workflow matters</h2>
+          <section className={`max-w-5xl mx-auto mt-8 ${commonClass.card}`}>
+            <h2 className={commonClass.title}>Use authoritative guidance and keep the source relationship visible</h2>
             <p className={commonClass.copy}>
-              APA Style explains that a paraphrase restates another
-              author&apos;s idea in your own words and still requires a
-              citation. Purdue OWL similarly frames paraphrasing as a legitimate
-              form of source use only when it is accurately documented. Read the
-              primary guidance before relying on a tool or a course handout:{" "}
-              <ExternalLink href={sourceLinks.apaParaphrases}>
-                APA Style on paraphrases
-              </ExternalLink>
-              ,{" "}
-              <ExternalLink href={sourceLinks.purdueParaphrase}>
-                Purdue OWL on paraphrasing
-              </ExternalLink>
-              , and{" "}
-              <ExternalLink href={sourceLinks.purdueSourceUse}>
-                Purdue OWL on quoting, paraphrasing, and summarizing
-              </ExternalLink>
-              .
+              APA Style explains that a paraphrase restates another author&apos;s idea in your own words and still requires citation; it also advises keeping source scope clear when paraphrases continue across sentences or shift among sources. Purdue OWL distinguishes exact quotation, paraphrase, and summary by their relationship to source wording and scope, and explains that each requires attribution. University of Pittsburgh Libraries recommends connecting quotations, paraphrases, and summaries to your own reasoning, then explaining why the source matters; its paraphrasing sequence includes understanding, drafting from notes, comparing accuracy, marking retained unique terms, and recording source details. Read the primary guidance before relying on a tool or a course handout:{" "}
+              <ExternalLink href={sourceLinks.apaParaphrases}>APA Style on paraphrases</ExternalLink>,{" "}
+              <ExternalLink href={sourceLinks.purdueParaphrase}>Purdue OWL on paraphrasing</ExternalLink>,{" "}
+              <ExternalLink href={sourceLinks.purdueSourceUse}>Purdue OWL on quoting, paraphrasing, and summarizing</ExternalLink>, and{" "}
+              <ExternalLink href="https://pitt.libguides.com/academicintegrity/academicwriting">University of Pittsburgh Libraries on academic writing and source integration</ExternalLink>.
             </p>
           </section>
 
-          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <ToolNextStep
-              title="Use a full paraphrase process"
-              copy="Work from source understanding to purpose-led restructuring, accuracy review, and visible attribution."
-              href="/how-to-paraphrase-without-plagiarizing"
-              label="Read the paraphrasing guide"
-            />
-            <ToolNextStep
-              title="Build an annotated bibliography"
-              copy="Summarize, evaluate, and connect a verified source to your research question."
-              href="/annotated-bibliography-example"
-              label="Read the annotation guide"
-            />
-            <ToolNextStep
-              title="Check a paraphrase"
-              copy="Review non-native phrasing after you have written and cited the idea yourself."
-              href="/academic-paraphrasing-tool-for-esl-students"
-              label="Open paraphrasing support"
-            />
-            <ToolNextStep
-              title="Build the reference"
-              copy="Generate a citation after checking the original source information."
-              href="/citations"
-              label="Open Citation Generator"
-            />
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <ToolNextStep title="Use a full paraphrase process" copy="Work from source understanding to purpose-led restructuring, accuracy review, and visible attribution." href="/how-to-paraphrase-without-plagiarizing" label="Read paraphrasing guide" />
+            <ToolNextStep title="Compare paraphrasing support" copy="Review non-native phrasing only after you have written, verified, and cited the idea yourself." href="/academic-paraphrasing-tool-for-esl-students" label="Open paraphrasing support" />
+            <ToolNextStep title="Build an annotated bibliography" copy="Summarize, evaluate, and connect a verified source to your research question." href="/annotated-bibliography-example" label="Read annotation guide" />
+            <ToolNextStep title="Evaluate academic sources" copy="Assess author, publication context, evidence, purpose, limits, and relevance before using a source in your paper." href="/evaluate-academic-sources" label="Evaluate a source" />
+            <ToolNextStep title="Synthesize source relationships" copy="Map claims, methods, evidence, differences, and limits before stating a pattern across studies." href="/literature-review-synthesis-matrix" label="Use synthesis matrix" />
+            <ToolNextStep title="Build an evidence-led argument" copy="Connect source support to your own claim, reasoning, counterargument, and bounded conclusion." href="/academic-argument-evidence" label="Read argument guide" />
+            <ToolNextStep title="Refine the research question" copy="Keep source selection, use, and citation connected to a clear, focused, answerable research problem." href="/research-question-examples" label="Use question guide" />
+            <ToolNextStep title="Build the reference" copy="Generate a citation only after checking the original source information and final output against the source." href="/citations" label="Open Citation Generator" />
+            <ToolNextStep title="Check APA 7 citations" copy="Review APA formatting, source data, and in-text attribution before relying on an automatically generated entry." href="/apa-citation-generator-for-international-students" label="Use APA 7 guide" />
           </section>
         </div>
       </main>
