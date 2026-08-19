@@ -60,7 +60,15 @@ expect(citationGeneratorHtml.includes("Chicago 18"), "citation generator: curren
 expect(!citationGeneratorHtml.includes("Chicago 17"), "citation generator: no stale Chicago 17 label");
 expect(citationGeneratorHtml.includes('/ieee-citation-examples/'), "citation generator: IEEE examples return link");
 expect(citationGeneratorHtml.includes('/chicago-citation-examples/'), "citation generator: Chicago examples return link");
-expect(citationGeneratorHtml.includes("1. Confirm the rule"), "citation generator: six-step source-record workflow");
+expect(citationGeneratorHtml.includes("An eight-step workflow for responsible citation generation"), "citation generator: eight-step source-record workflow");
+expect(citationGeneratorHtml.includes("Confirm rule"), "citation generator: requirement workflow step");
+expect(citationGeneratorHtml.includes("Open source used"), "citation generator: original-source workflow step");
+expect(citationGeneratorHtml.includes("Confirm type, version, and container"), "citation generator: identity workflow step");
+expect(citationGeneratorHtml.includes("Verify every field"), "citation generator: field workflow step");
+expect(citationGeneratorHtml.includes("Create formatting draft"), "citation generator: generate workflow step");
+expect(citationGeneratorHtml.includes("Compare against official guidance"), "citation generator: official-review workflow step");
+expect(citationGeneratorHtml.includes("Match credit in text"), "citation generator: in-text workflow step");
+expect(citationGeneratorHtml.includes("Reopen record before submitting"), "citation generator: reverse-check workflow step");
 expect(citationGeneratorHtml.includes("Fictional learning format patterns"), "citation generator: fictional-format disclosure");
 expect(citationGeneratorHtml.includes("Use the output as a reviewable draft"), "citation generator: generator-responsibility boundary");
 expect(citationGeneratorHtml.includes("owl.purdue.edu/owl/research_and_citation/using_citation_machines_responsibly.html"), "citation generator: Purdue citation-machine guidance link");
