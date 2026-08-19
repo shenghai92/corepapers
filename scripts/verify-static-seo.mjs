@@ -494,7 +494,9 @@ expect(polishHtml.includes("fictional learning sample"), "Essay Polish: fictiona
 expect(polishHtml.includes("What an essay polisher cannot decide"), "Essay Polish: tool-responsibility boundary");
 expect(polishHtml.includes('/academic-paragraph-structure/'), "Essay Polish: paragraph-structure learning link");
 expect(polishHtml.includes('/academic-integrity-and-source-use/'), "Essay Polish: source-use learning link");
-expect(polishHtml.includes("An eight-step workflow for AI-assisted academic polishing"), "Essay Polish: eight-step revision workflow");
+expect(polishHtml.includes("Academic language polishing for clearer English"), "Essay Polish: GSC-aligned language-polishing H1");
+expect(polishHtml.includes("Use English language polishing"), "Essay Polish: English-polishing search-intent lead");
+expect(polishHtml.includes("An eight-step workflow for academic language polishing"), "Essay Polish: eight-step revision workflow");
 expect(polishHtml.includes("Check what is permitted"), "Essay Polish: policy workflow step");
 expect(polishHtml.includes("Decide what you can share"), "Essay Polish: privacy workflow step");
 expect(polishHtml.includes("Set revision goal"), "Essay Polish: revision-goal workflow step");
@@ -506,15 +508,22 @@ expect(polishHtml.includes("Read as next reader"), "Essay Polish: reverse-check 
 expect(polishHtml.includes("Revise in layers; review every suggestion"), "Essay Polish: layered-revision boundary");
 expect(polishHtml.includes("owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html"), "Essay Polish: Purdue revision guidance link");
 expect(polishHtml.includes("writingcenter.unc.edu/tips-and-tools/generative-ai-in-academic-writing"), "Essay Polish: UNC AI-policy guidance link");
+expect(polishHtml.includes("Language polishing follows revision; it does not replace it"), "Essay Polish: revision-before-polishing boundary");
+expect(polishHtml.includes("writingcenter.unc.edu/tips-and-tools/revising-drafts"), "Essay Polish: UNC revision guidance link");
+expect(polishHtml.includes("purdueglobalwriting.center/2026/04/24/10-ways-to-polish-a-draft"), "Essay Polish: Purdue Global polishing guidance link");
+expect(polishHtml.includes("gcwritingcenter.commons.gc.cuny.edu/revision-strategies_claritygrammarusage_introduction"), "Essay Polish: CUNY clarity guidance link");
 expect(polishHtml.includes('/academic-argument-evidence/'), "Essay Polish: argument-evidence learning link");
 expect(polishHtml.includes('/academic-writing-examples/'), "Essay Polish: writing-examples learning link");
 expect(polishHtml.includes('/evaluate-academic-sources/'), "Essay Polish: source-evaluation learning link");
 expect(polishHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "Essay Polish: paraphrasing learning link");
 expect(polishHtml.includes('/citations/'), "Essay Polish: citation-generator learning link");
+expect(polishHtml.includes('/academic-english-for-esl-students/'), "Essay Polish: international-student skills learning link");
+expect(polishHtml.includes('/research-paper-revision-checklist/'), "Essay Polish: revision-checklist learning link");
+expect(polishHtml.includes('/hedging-language-academic-writing/'), "Essay Polish: hedging learning link");
 
 const pages = [
   ["/", "Improve academic English without losing your meaning"],
-  ["/polish/", "AI essay polisher for clearer academic English"],
+  ["/polish/", "Academic language polishing for clearer English"],
   [
     "/phrases/",
     "Academic phrase bank with sentence starters for essays and research papers",

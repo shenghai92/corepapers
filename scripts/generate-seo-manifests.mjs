@@ -32,12 +32,11 @@ const BLOG_INDEX_SEO = {
 
 const STATIC_PAGE_SEO = {
   "/polish": {
-    title:
-      "AI Essay Polisher for ESL and Non-Native English Writing | CorePapers",
+    title: "Academic Language Polishing for International Students | CorePapers",
     description:
-      "Use an AI essay polisher to improve non-native expressions, academic tone, and sentence clarity in essays, reports, and research papers.",
+      "Use academic language polishing to review clarity, sentence structure, tone, grammar, and English expression in a draft you wrote. Revise task fit, argument, evidence, structure, source use, and policy requirements before accepting suggestions.",
     keywords:
-      "AI essay polisher, essay polisher for ESL students, academic English revision, non-native English writing help, academic writing tool",
+      "language polishing, English polishing, academic language polishing, academic English polishing, essay polisher for ESL students, academic writing for non-native English speakers, essay revision for international students, improve academic tone",
   },
   "/phrases": {
     title:

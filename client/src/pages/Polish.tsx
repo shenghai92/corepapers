@@ -90,9 +90,9 @@ export default function Polish() {
   return (
     <>
       <SEOHead
-        title="AI Essay Polisher for ESL and Non-Native English Writing"
-        description="Use an AI essay polisher to fix non-native expressions, improve academic tone, and revise essays, reports, and research papers with clearer academic English for ESL and international students."
-        keywords="AI essay polisher, essay polisher for ESL students, academic writing for non-native English speakers, essay revision for international students, Chinglish correction tool, academic writing AI tool, improve academic tone"
+        title="Academic Language Polishing for International Students | CorePapers"
+        description="Use academic language polishing to review clarity, sentence structure, tone, grammar, and English expression in a draft you wrote. Revise task fit, argument, evidence, structure, source use, and policy requirements before accepting suggestions."
+        keywords="language polishing, English polishing, academic language polishing, academic English polishing, essay polisher for ESL students, academic writing for non-native English speakers, essay revision for international students, improve academic tone"
         canonical="/polish"
         jsonLd={POLISH_SCHEMA}
       />
@@ -105,16 +105,16 @@ export default function Polish() {
               AI-Powered Academic Polish
             </div>
             <h1 className="font-serif font-light text-4xl sm:text-5xl text-slate-purple mb-4">
-              AI essay polisher for clearer academic English
+              Academic language polishing for clearer English
             </h1>
             <p className="text-muted-foreground font-sans max-w-xl mx-auto leading-relaxed">
-              Paste your essay, report, or research paragraph below. CorePapers highlights wording, sentence, stance, and formality choices for you to review, then explains each suggestion so you can keep control of your meaning and learn from the draft.
+              Use English language polishing to review wording, sentence structure, stance, formality, and grammar in a draft you wrote. Start with task fit, argument, evidence, organization, and source checks; then assess each suggestion so you keep control of meaning, voice, and responsibility.
             </p>
           </div>
 
           <section className="max-w-5xl mx-auto mb-8 p-7 bg-white border border-border rounded-2xl shadow-card">
             <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Revise in layers; review every suggestion</p>
-            <h2 className="font-serif text-3xl text-slate-purple mb-5">An eight-step workflow for AI-assisted academic polishing</h2>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">An eight-step workflow for academic language polishing</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">1. POLICY</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check what is permitted</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Read the assignment, syllabus, and programme rules before entering a draft. AI permissions and disclosure expectations can differ by class and instructor.</p></article>
               <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">2. PRIVACY</p><h3 className="font-serif text-xl text-slate-purple mb-2">Decide what you can share</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Do not enter confidential, unpublished, sensitive, or restricted material unless the tool&apos;s data terms and institutional rules clearly permit it.</p></article>
@@ -126,6 +126,17 @@ export default function Polish() {
               <article className="rounded-xl bg-muted/50 p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">8. REVERSE-CHECK</p><h3 className="font-serif text-xl text-slate-purple mb-2">Read as your next reader</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">Recheck policy, privacy, thesis, evidence, source links, factual accuracy, voice, required disclosure, and final submission responsibility.</p></article>
             </div>
             <p className="text-sm font-sans text-primary font-medium mt-5">CorePapers offers review prompts, not final academic judgments. You remain responsible for the ideas, evidence, factual accuracy, source use, citations, privacy choices, and policy compliance in anything you submit.</p>
+          </section>
+
+          <section className="max-w-5xl mx-auto mb-8 grid lg:grid-cols-2 gap-6">
+            <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Language polishing follows revision; it does not replace it</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed">A smoother sentence cannot repair a weak thesis, missing reasoning, misleading evidence, disorganized paragraph, or citation problem. Work from task and reader expectations to claim, evidence, paragraph path, source use, and only then to clarity, grammar, and formality. Read the changed sentence in its paragraph rather than approving a change in isolation.</p>
+            </article>
+            <article className="p-7 bg-white border border-border rounded-2xl">
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Use university revision guidance for final decisions</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://writingcenter.unc.edu/tips-and-tools/revising-drafts/" target="_blank" rel="noreferrer">UNC Writing Center</a> distinguishes revision from later proofreading and editing, asking writers to rethink purpose, thesis, evidence, organization, and prose. <a className="text-primary underline underline-offset-4" href="https://purdueglobalwriting.center/2026/04/24/10-ways-to-polish-a-draft/" target="_blank" rel="noreferrer">Purdue Global&apos;s writing resource center</a> frames polishing through assignment expectations, structure, evidence, tone, concision, and flow. <a className="text-primary underline underline-offset-4" href="https://gcwritingcenter.commons.gc.cuny.edu/revision-strategies_claritygrammarusage_introduction/" target="_blank" rel="noreferrer">CUNY Graduate Center&apos;s Writing Center</a> prioritizes strategic clarity checks where readers need to follow an argument, claim, or conclusion.</p>
+            </article>
           </section>
 
           <div className="max-w-4xl mx-auto mb-4 flex flex-wrap gap-3 items-center">
@@ -376,6 +387,24 @@ export default function Polish() {
                   <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
                     <h2 className="font-serif text-2xl text-slate-purple mb-2">Review argument and evidence</h2>
                     <p className="text-sm text-muted-foreground font-sans leading-relaxed">Check the claim, evidence, reasoning, limitation, and language choices before you polish the surface.</p>
+                  </div>
+                </Link>
+                <Link href="/academic-english-for-esl-students" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Build academic English skills</h2>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">Develop task awareness, source use, paragraph structure, feedback habits, and clarity without treating one English variety as a universal target.</p>
+                  </div>
+                </Link>
+                <Link href="/research-paper-revision-checklist" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Run a full revision check</h2>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">Reverse-check task fit, organization, evidence, citations, language clarity, policy, and submission responsibility after polishing.</p>
+                  </div>
+                </Link>
+                <Link href="/hedging-language-academic-writing" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                    <h2 className="font-serif text-2xl text-slate-purple mb-2">Match certainty to evidence</h2>
+                    <p className="text-sm text-muted-foreground font-sans leading-relaxed">Use hedging and stance choices to reflect a claim&apos;s actual support, scope, method, and limits.</p>
                   </div>
                 </Link>
               </div>
