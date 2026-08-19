@@ -191,10 +191,14 @@ export default function SectionWritingPractice({
             ]
           : isConclusion
             ? [
-                ["Return to the addressed problem", "Reorient readers to the completed paper's question or central claim without repeating the Introduction sentence by sentence."],
-                ["Synthesize the evidence path", "Show how the main claim, reasons, evidence, and limitations work together instead of simply listing the paper's sections."],
-                ["State why the established answer matters", "Offer a bounded contribution, implication, or next question that follows from analysis already developed in the body."],
-                ["Remove new material", "Move new evidence, citations, quotations, or subtopics into the body or omit them; do not unveil the thesis for the first time at the end."],
+                ["1. Confirm the ending task", "Check whether the assignment calls the final section Conclusion, Discussion, Reflection, Implications, Recommendations, or a combined Discussion and Conclusion. Identify what must be synthesized here and what the required genre already placed elsewhere."],
+                ["2. Return to the completed question", "Revisit the final research question, purpose, thesis, or central problem in language that matches the paper you actually completed. If the question, scope, or objective changed during research, revise the Introduction and Conclusion until they tell the same accurate story."],
+                ["3. Synthesize the evidence path", "Show how the main claim, reasons, results, source relationships, analysis, and limitations converge to address the completed question. Do not merely list section headings, repeat the abstract, or copy Results and Discussion sentence by sentence."],
+                ["4. Name a bounded contribution", "State what the paper adds, clarifies, qualifies, documents, or helps readers see differently in relation to the defined problem and existing conversation. Make the contribution match the study design, evidence, setting, population, and uncertainty."],
+                ["5. Keep limitations and negative detail visible", "Retain limitations, unexpected or negative results, unresolved questions, and conditions that qualify the final takeaway. Do not apologize for a limitation or turn it into a reason to make the conclusion sound more cautious than evidence requires."],
+                ["6. Explain why the answer matters", "Move from the specific completed problem to a realistic implication, significance, or broader context grounded in analysis already developed. Avoid a universal policy claim, urgency statement, or application that the paper has not supported."],
+                ["7. Place future research once", "When further research belongs in the conclusion, connect it to a real limitation, unanswered question, conflicting finding, or next test. Do not repeat a recommendation already developed in Discussion unless the assignment explicitly asks for recap."],
+                ["8. Run the no-new-material check", "Verify that every statistic, quotation, citation, finding, counterargument, policy recommendation, method detail, and claim was already established in the paper. Move genuinely new evidence into the relevant body section, then check that final wording preserves author responsibility."],
               ]
             : null;
   const sectionProcessTitle = isResults
@@ -214,7 +218,7 @@ export default function SectionWritingPractice({
         ? "A fictional model can help you practise focusing a research problem, but use only accurate context, verified citations, and a purpose that your final paper can genuinely address."
         : isDiscussion
           ? "A fictional model can help you practise interpretation, but use only your own reported findings, verified sources, and actual limitations. Do not invent a result, citation, explanation, policy implication, exception, or causal conclusion; keep every move proportionate to evidence and your assignment's section structure."
-          : "A fictional model can help you practise synthesis, but make your final takeaway follow from the claim, evidence, analysis, and limits already established in your paper.";
+          : "A fictional model can help you practise synthesis, but use only material already established in your own paper. Do not invent a result, citation, limitation, contribution, policy recommendation, or future-research need; make every final takeaway follow from the completed question, evidence, analysis, and limits.";
 
   return (
     <>
@@ -389,6 +393,23 @@ export default function SectionWritingPractice({
               </article>
             </section>
           )}
+          {isConclusion && (
+            <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6" aria-labelledby="conclusion-evidence-title">
+              <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
+                <h2 id="conclusion-evidence-title" className="font-serif text-3xl text-slate-purple mb-4">Close a completed paper without inflating the contribution</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice; it is not a real finding, source, limitation, contribution, recommendation, or conclusion to submit.</strong> A fictional paper examined an association between weekly planning and assignment completion in a defined self-report sample. Its fictional conclusion can return to that completed question, synthesize the fictional design, reported association, cautious Discussion, and cross-sectional limitation, then say the work may help frame a focused future longitudinal question. It must not add an invented statistic or citation, convert association into cause, promise a universal student-support policy, claim a contribution the fictional analysis did not establish, or repeat a recommendation that its fictional Discussion already handled.</p>
+              </article>
+              <article className="p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-4">Use a final synthesis record before you end the draft</h2>
+                <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed"><li><strong className="text-foreground">Question-to-answer check:</strong> does the final takeaway answer the completed question, purpose, or thesis—not an earlier version of the topic?</li><li><strong className="text-foreground">Contribution check:</strong> can you trace each claimed contribution to a specific analytical path, finding, source relationship, or qualified insight already established?</li><li><strong className="text-foreground">Reach check:</strong> do scope, design, population, source, method, negative detail, and limitation still constrain your significance or application claim?</li><li><strong className="text-foreground">New-material check:</strong> can you point to the earlier paper section that already introduced every statistic, quotation, citation, counterargument, recommendation, and future-research premise?</li></ul>
+              </article>
+              <article className="lg:col-span-2 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Use Conclusion guidance, then follow your assignment&apos;s ending rules</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://libguides.usc.edu/writingguide/conclusion" target="_blank" rel="noreferrer">USC Libraries</a> describes a conclusion as a synthesis of key points derived from analysis, not a topic list or repeated research problem; it recommends concise contribution and significance grounded in the completed paper, appropriate future research, and no new information. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&p=185935" target="_blank" rel="noreferrer">Sacred Heart University Library</a> likewise emphasizes synthesis, clear larger significance, honest qualification through problems or negative results, and avoiding unsupported speculation or new material. <a className="text-primary underline underline-offset-4" href="https://writingcenter.fas.harvard.edu/conclusions" target="_blank" rel="noreferrer">Harvard College Writing Center</a> emphasizes that endings depend on the discipline and full argument, and can return to what, why it matters, and what follows without exhaustive repetition. Your instructor, discipline, journal, and paper structure control where they differ.</p>
+              </article>
+            </section>
+          )}
           <section className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href={item.next as string} className="block">
               <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
@@ -539,26 +560,17 @@ export default function SectionWritingPractice({
             )}
             {isConclusion && (
               <>
-                <Link href="/how-to-write-discussion-section" className="block">
-                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                    <h2 className="font-serif text-xl text-slate-purple mb-2">
-                      Place implications carefully
-                    </h2>
-                    <p className="text-sm text-muted-foreground font-sans">
-                      Decide whether implications, limitations, and future research belong in Discussion or Conclusion.
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/academic-argument-evidence" className="block">
-                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                    <h2 className="font-serif text-xl text-slate-purple mb-2">
-                      Check the argument path
-                    </h2>
-                    <p className="text-sm text-muted-foreground font-sans">
-                      Make the final takeaway follow from the claim, support, reasoning, and limits in the body.
-                    </p>
-                  </div>
-                </Link>
+                <Link href="/how-to-write-discussion-section" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Place implications carefully</h2><p className="text-sm text-muted-foreground font-sans">Decide whether implications, limitations, and future research belong in Discussion or Conclusion.</p></div></Link>
+                <Link href="/discussion-section-example-research-paper" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Recheck the Discussion path</h2><p className="text-sm text-muted-foreground font-sans">Confirm that interpretation, comparisons, limitations, and recommendations were already established before final synthesis.</p></div></Link>
+                <Link href="/results-section-example-research-paper" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Trace findings to Results</h2><p className="text-sm text-muted-foreground font-sans">Verify that every final claim, negative detail, and limitation has a reported evidence path.</p></div></Link>
+                <Link href="/research-question-examples" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Return to the final question</h2><p className="text-sm text-muted-foreground font-sans">Check whether the conclusion answers the completed research question rather than a broad original topic.</p></div></Link>
+                <Link href="/research-gap-examples" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Frame a justified next question</h2><p className="text-sm text-muted-foreground font-sans">Connect future research to a real unresolved point or limitation without saying no research exists.</p></div></Link>
+                <Link href="/literature-review-synthesis-matrix" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Locate the contribution in prior work</h2><p className="text-sm text-muted-foreground font-sans">Use theme, method, finding, context, and limit comparisons to keep contribution claims precise.</p></div></Link>
+                <Link href="/phrases/conclusion" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Choose Conclusion phrases carefully</h2><p className="text-sm text-muted-foreground font-sans">Select synthesis, contribution, limitation, implication, and future-research language after checking responsibility.</p></div></Link>
+                <Link href="/hedging-language-academic-writing" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Calibrate the final claim</h2><p className="text-sm text-muted-foreground font-sans">Match the conclusion&apos;s certainty and significance to study design, evidence, scope, and uncertainty.</p></div></Link>
+                <Link href="/academic-argument-evidence" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Check the argument path</h2><p className="text-sm text-muted-foreground font-sans">Make the final takeaway follow from the claim, support, reasoning, and limits in the body.</p></div></Link>
+                <Link href="/academic-integrity-and-source-use" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Keep final claims traceable</h2><p className="text-sm text-muted-foreground font-sans">Check sources, paraphrases, quotations, and references before repeating a claim in the last section.</p></div></Link>
+                <Link href="/citations" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Verify citations in context</h2><p className="text-sm text-muted-foreground font-sans">Confirm that any source recalled in the conclusion was accurately cited and already integrated into the paper.</p></div></Link>
               </>
             )}
             <Link href="/research-paper-templates" className="block">
