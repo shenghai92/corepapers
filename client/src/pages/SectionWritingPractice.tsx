@@ -163,10 +163,13 @@ export default function SectionWritingPractice({
       ]
     : isMethodology
       ? [
-          ["Begin with the research question", "Choose a level of procedural detail that lets readers see why the design, data, or participants fit the question you are trying to answer."],
-          ["Describe the study in a repeatable order", "Move from design and setting to participants or sources, collection procedures, analysis, and any rationale your field expects."],
-          ["Separate completed actions from plans", "Use accurate tense and say what you actually did. Do not invent approval, recruitment, measures, or analytical decisions that your study did not use."],
-          ["Keep findings and interpretation out", "Explain procedures, limitations, and relevant safeguards here; reserve reported results for Results and explanations of meaning for Discussion."],
+          ["1. Reopen the research question", "State enough of the question, problem, or objective for readers to see what the design needs to investigate; do not add a method simply because it sounds sophisticated."],
+          ["2. Match design to the task", "Name the qualitative, quantitative, mixed, archival, experimental, or other approach and explain why it can address this particular question within the assignment's scope."],
+          ["3. Make the selection path visible", "Explain what participants, cases, documents, datasets, or materials were selected, how they were located or included, and why that route fits the research problem."],
+          ["4. Record what actually happened", "Describe completed collection or generation procedures in accurate tense. Never invent approval, consent, recruitment, access, measures, or analytical decisions that your project did not use."],
+          ["5. Trace the analysis route", "Identify how information was processed or analysed and how the approach connects evidence to the research question; distinguish a named analytic approach from an unsupported result."],
+          ["6. Name limits and safeguards", "State relevant practical limits, anticipated problems, data gaps, or safeguards honestly. Mention ethics, consent, or approval only when actually applicable and verified."],
+          ["7. Preserve section boundaries", "Keep findings for Results and explanations of meaning for Discussion. Cite methodological sources when they informed a non-obvious design choice, rather than turning the section into a general literature review."],
         ]
       : isIntroduction
         ? [
@@ -331,6 +334,23 @@ export default function SectionWritingPractice({
               </p>
             </section>
           )}
+          {isMethodology && (
+            <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6" aria-labelledby="methodology-evidence-title">
+              <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
+                <h2 id="methodology-evidence-title" className="font-serif text-3xl text-slate-purple mb-4">Describe a secondary-data route without inventing access or approval</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice.</strong> A fictional project examines publicly available course-policy documents from a defined set of institutions during a stated period. Its Methodology could identify the inclusion criteria, document retrieval date, coding categories, and analytic approach, then explain why these materials can address the fictional question. It must not claim interviews, consent, ethics approval, a dataset licence, institutional access, or a coding process that did not actually occur.</p>
+              </article>
+              <article className="p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-4">Use a transparency record before you draft</h2>
+                <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed"><li><strong className="text-foreground">Question-to-design link:</strong> can you explain why this type of evidence and approach answers the stated question?</li><li><strong className="text-foreground">Selection record:</strong> can you identify inclusion and exclusion decisions, setting, time frame, sample, corpus, or data origin without placeholders?</li><li><strong className="text-foreground">Action record:</strong> can you verify what you collected, transformed, coded, measured, or analysed and what you did not do?</li><li><strong className="text-foreground">Limits and safeguards:</strong> can you distinguish a real limitation or required safeguard from a sentence copied from a model?</li></ul>
+              </article>
+              <article className="lg:col-span-2 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Use methodology guidance, then follow your project&apos;s requirements</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://libguides.usc.edu/writingguide/methodology" target="_blank" rel="noreferrer">USC Libraries</a> explains that a methods section should show what actions were taken to investigate a problem and why the chosen procedures fit, including data or participant selection, collection, processing, analysis, rationale, and anticipated limitations. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&p=185928" target="_blank" rel="noreferrer">Sacred Heart University Library</a> similarly emphasizes direct, precise reporting of how data were obtained and analysed, the match between method and objective, and honest treatment of practical problems. Instructor, ethics-review, journal, and disciplinary requirements control where they differ.</p>
+              </article>
+            </section>
+          )}
           {isResults && (
             <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6" aria-labelledby="results-evidence-title">
               <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
@@ -427,16 +447,58 @@ export default function SectionWritingPractice({
               </>
             )}
             {isMethodology && (
-              <Link href="/methodology-vs-methods-research-paper" className="block">
-                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                  <h2 className="font-serif text-xl text-slate-purple mb-2">
-                    Compare methodology and methods
-                  </h2>
-                  <p className="text-sm text-muted-foreground font-sans">
-                    Check whether your assignment expects procedures, a rationale, or both.
-                  </p>
-                </div>
-              </Link>
+              <>
+                <Link href="/methodology-vs-methods-research-paper" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Compare methodology and methods
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Check whether your assignment expects procedures, a rationale, or both.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/research-question-examples" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Test the research-question fit
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Check whether your evidence source, design, and planned analysis can actually address the question you wrote.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/results-section-example-research-paper" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Align the Results path
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Make sure every result you plan to report follows from the data, procedure, and analysis you have actually described.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/academic-integrity-and-source-use" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Keep records and sources responsible
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Preserve traceable notes for borrowed procedures, datasets, measures, quotations, and decisions before revising your Methods prose.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/research-paper-sections" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Check the full section contract
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Verify that the question, method, results, discussion, and conclusion make compatible promises to the reader.
+                    </p>
+                  </div>
+                </Link>
+              </>
             )}
             {isDiscussion && (
               <>

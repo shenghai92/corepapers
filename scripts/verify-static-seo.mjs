@@ -898,10 +898,23 @@ expect(
   methodologyPracticeHtml.includes("How to build a Methodology section step by step"),
   "methodology practice: drafting workflow"
 );
+expect(methodologyPracticeHtml.includes("Reopen the research question"), "methodology practice: question-led workflow");
+expect(methodologyPracticeHtml.includes("Match design to the task"), "methodology practice: design-fit workflow");
+expect(methodologyPracticeHtml.includes("Make the selection path visible"), "methodology practice: selection-transparency workflow");
+expect(methodologyPracticeHtml.includes("Record what actually happened"), "methodology practice: completed-actions workflow");
+expect(methodologyPracticeHtml.includes("Trace the analysis route"), "methodology practice: analysis-transparency workflow");
+expect(methodologyPracticeHtml.includes("Name limits and safeguards"), "methodology practice: limitations-safeguards workflow");
+expect(methodologyPracticeHtml.includes("Fictional learning example: secondary-data route"), "methodology practice: secondary-data fictional-example disclosure");
+expect(methodologyPracticeHtml.includes("Use a transparency record before drafting"), "methodology practice: transparency-record check");
 expect(
   methodologyPracticeHtml.includes("never invent approval"),
   "methodology practice: research-responsibility boundary"
 );
+expect(methodologyPracticeHtml.includes("library.sacredheart.edu"), "methodology practice: Sacred Heart guidance link");
+expect(methodologyPracticeHtml.includes('/research-question-examples/'), "methodology practice: research-question link");
+expect(methodologyPracticeHtml.includes('/results-section-example-research-paper/'), "methodology practice: results-path link");
+expect(methodologyPracticeHtml.includes('/academic-integrity-and-source-use/'), "methodology practice: source-use link");
+expect(methodologyPracticeHtml.includes('/research-paper-sections/'), "methodology practice: sections-contract link");
 expect(
   researchPaperSectionsHtml.includes("How to write Methods and Methodology"),
   "research-paper sections: methodology how-to entry"
