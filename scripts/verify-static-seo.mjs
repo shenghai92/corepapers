@@ -268,9 +268,12 @@ expect(resultsPhrasesHtml.includes('/academic-integrity-and-source-use/'), "resu
 
 const apaCitationLandingHtml = read("apa-citation-generator-for-international-students/index.html");
 expect(
-  apaCitationLandingHtml.includes("APA 7 citation generator for international students"),
-  "APA citation landing: expected H1"
+  apaCitationLandingHtml.includes("APA 7 citation examples and reference-list format"),
+  "APA citation landing: GSC-aligned expected H1"
 );
+expect(apaCitationLandingHtml.includes("APA 7 format examples show a structure, not a source to copy"), "APA citation landing: format-example responsibility guidance");
+expect(apaCitationLandingHtml.includes("This fictional learning example is invented for practice; it is not a real source, reference, in-text citation, or bibliography entry to submit"), "APA citation landing: explicit fictional-example boundary");
+expect(apaCitationLandingHtml.includes("(Rivera, 2025)"), "APA citation landing: fictional in-text-reference matching example");
 expect(apaCitationLandingHtml.includes("Generate a formatting draft, then verify it"), "APA citation landing: generator-responsibility boundary");
 expect(apaCitationLandingHtml.includes("An eight-step APA 7 citation workflow"), "APA citation landing: eight-step workflow");
 expect(apaCitationLandingHtml.includes("Confirm APA and course rule"), "APA citation landing: requirement workflow step");
@@ -282,6 +285,9 @@ expect(apaCitationLandingHtml.includes("Compare official examples"), "APA citati
 expect(apaCitationLandingHtml.includes("Link text and reference"), "APA citation landing: in-text-reference workflow step");
 expect(apaCitationLandingHtml.includes("Reopen record before submission"), "APA citation landing: reverse-check workflow step");
 expect(apaCitationLandingHtml.includes("apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/author-date"), "APA citation landing: official APA author-date guidance link");
+expect(apaCitationLandingHtml.includes("apastyle.apa.org/style-grammar-guidelines/references/examples"), "APA citation landing: official APA reference-examples link");
+expect(apaCitationLandingHtml.includes("owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_basic_rules.html"), "APA citation landing: Purdue reference-list guidance link");
+expect(apaCitationLandingHtml.includes("libguides.csudh.edu/citation/apa-7"), "APA citation landing: CSUDH APA guidance link");
 expect(apaCitationLandingHtml.includes('/citations/'), "APA citation landing: citation-generator link");
 expect(apaCitationLandingHtml.includes('/citation-examples/'), "APA citation landing: citation-examples link");
 expect(apaCitationLandingHtml.includes('/blog/complete-apa-7th-edition-guide-international-students/'), "APA citation landing: APA guide link");

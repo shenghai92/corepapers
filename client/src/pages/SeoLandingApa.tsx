@@ -54,9 +54,9 @@ export default function SeoLandingApa() {
   return (
     <>
       <SEOHead
-        title="APA Citation Generator for International Students"
-        description="Generate APA 7th edition citations and in-text references for essays, reports, and research papers. Built for international students who need a fast APA citation generator."
-        keywords="APA citation generator for international students, APA 7 citation generator, APA reference generator, APA in-text citation generator, free APA citation tool"
+        title="APA 7 Citation Examples and Generator: Reference List Format | CorePapers"
+        description="Use APA 7 citation examples and a generator to build reference-list entries and matching in-text citations. Verify the actual work, source type, author, date, format details, and assignment requirements before submission."
+        keywords="APA 7th edition format example, APA 7 citation example, bibliography APA 7th edition format example, APA reference list example, APA 7 citation generator, APA in-text citation example, APA reference generator"
         canonical="/apa-citation-generator-for-international-students"
         jsonLd={APA_LANDING_SCHEMA}
       />
@@ -69,11 +69,11 @@ export default function SeoLandingApa() {
               APA 7th Edition Help
             </div>
             <h1 className="font-serif font-light text-3xl sm:text-5xl text-slate-purple mb-4 leading-tight">
-              APA citation generator
-              <span className="italic"> for international students</span>
+              APA 7 citation examples and
+              <span className="italic"> reference-list format</span>
             </h1>
             <p className="text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed mb-8">
-              Turn checked source details into an APA 7 reference draft, connect it to a matching in-text citation, and review both against the original source, current style guidance, and your assignment requirements.
+              Use APA 7 format examples to identify the work you actually consulted, build a reference-list entry and matching in-text citation, then verify every field against the original source, current APA guidance, and your assignment requirements.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">
@@ -112,6 +112,18 @@ export default function SeoLandingApa() {
             <p className="text-sm font-sans text-primary font-medium mt-5">A citation generator cannot decide whether a source is credible, whether a claim accurately represents it, whether you should quote or paraphrase, or whether an assignment permits a particular use of AI or a translated source.</p>
           </section>
 
+          <section className="max-w-5xl mx-auto mb-10 grid lg:grid-cols-2 gap-6" aria-labelledby="apa-format-example-title">
+            <article className="p-8 bg-hero-gradient border border-border rounded-2xl">
+              <h2 id="apa-format-example-title" className="font-serif text-3xl text-slate-purple mb-4">APA 7 format examples show a structure, not a source to copy</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed">Start by identifying the work type and version you actually used. An article, report, book, web page, and translated source can require different elements. A reference pattern only becomes useful after author or group author, date, title, source or container, pages, DOI or URL, and other relevant fields have been checked against the original item.</p>
+            </article>
+            <article className="p-8 bg-white border border-border rounded-2xl">
+              <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Fictional learning example</p>
+              <h2 className="font-serif text-3xl text-slate-purple mb-4">Link a fictional in-text citation to a fictional reference</h2>
+              <p className="text-sm text-muted-foreground font-sans leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice; it is not a real source, reference, in-text citation, or bibliography entry to submit.</strong> In a fictional paragraph, a writer uses the invented parenthetical citation “(Rivera, 2025)” only after describing an invented source-based idea. Its fictional reference-list entry must point to the same invented work and include only invented details. The example demonstrates matching, not a publication, evidence claim, or format to paste into coursework.</p>
+            </article>
+          </section>
+
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 mb-10">
             {[
               "Begin with information from the original work rather than search-result snippets or a copied reference list.",
@@ -131,6 +143,7 @@ export default function SeoLandingApa() {
               <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
                 <p>APA formatting depends on reliable source data. A journal article, a book chapter, a report, a webpage, and a translated or non-English source may each require different information. Start with the version and source record you actually consulted.</p>
                 <p><a className="text-primary underline underline-offset-4" href="https://apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/author-date" target="_blank" rel="noreferrer">APA Style&apos;s author–date guidance</a> explains the relationship between in-text citations and the reference list. Use it to check that author and date in the text point readers to a complete reference for the same work.</p>
+                <p><a className="text-primary underline underline-offset-4" href="https://apastyle.apa.org/style-grammar-guidelines/references/examples" target="_blank" rel="noreferrer">APA Style&apos;s reference examples</a> organizes more than 100 examples by the kind of work, while <a className="text-primary underline underline-offset-4" href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_basic_rules.html" target="_blank" rel="noreferrer">Purdue OWL</a> explains reference-list matching, alphabetical order, hanging indents, and general formatting rules. <a className="text-primary underline underline-offset-4" href="https://libguides.csudh.edu/citation/apa-7" target="_blank" rel="noreferrer">CSUDH Library&apos;s APA 7 guide</a> provides a university-library walkthrough of in-text and reference-list components. Follow the source type and current rule that apply to the work you actually used.</p>
                 <p>For format walkthroughs, read the <Link href="/blog/complete-apa-7th-edition-guide-international-students" className="text-primary underline">APA guide for international students</Link>. If you cite sources with non-English titles or publication details, use the dedicated <Link href="/apa-7-non-english-sources" className="text-primary underline">APA 7 non-English sources guide</Link> rather than guessing how to translate or romanize a field.</p>
               </div>
             </section>

@@ -303,11 +303,11 @@ const STATIC_PAGE_SEO = {
       "APA citation examples, APA 7 reference examples, APA in-text citation examples, citation generator examples, how to cite sources",
   },
   "/apa-citation-generator-for-international-students": {
-    title: "APA 7 Citation Generator for International Students | CorePapers",
+    title: "APA 7 Citation Examples and Generator: Reference List Format | CorePapers",
     description:
-      "Create APA 7 references and in-text citations for common academic sources, then check your work with practical APA examples.",
+      "Use APA 7 citation examples and a generator to build reference-list entries and matching in-text citations. Verify the actual work, source type, author, date, format details, and assignment requirements before submission.",
     keywords:
-      "APA 7 citation generator, APA citation for international students, APA reference generator, APA in-text citation",
+      "APA 7th edition format example, APA 7 citation example, bibliography APA 7th edition format example, APA reference list example, APA 7 citation generator, APA in-text citation example, APA reference generator",
   },
   "/ai-essay-polisher-for-non-native-english-writers": {
     title: "AI Essay Polisher for Non-Native English Writers | CorePapers",
