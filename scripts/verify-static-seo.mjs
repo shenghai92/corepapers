@@ -702,20 +702,31 @@ expect(
   argumentEvidenceHtml.includes("Academic argument and evidence: build a claim readers can follow"),
   "argument evidence: strengthened H1"
 );
-expect(
-  argumentEvidenceHtml.includes("1. Make a defensible claim"),
-  "argument evidence: four-step argument workflow"
-);
-expect(
-  argumentEvidenceHtml.includes("All studies, authors, results, and citations in this example are invented for learning"),
-  "argument evidence: fictional-example disclosure"
-);
-expect(argumentEvidenceHtml.includes("writingcenter.unc.edu"), "argument evidence: UNC guidance link");
-expect(argumentEvidenceHtml.includes("writingcenter.tamu.edu"), "argument evidence: Texas A&M guidance link");
-expect(argumentEvidenceHtml.includes("brandeis.edu/writing-program"), "argument evidence: Brandeis guidance link");
+expect(argumentEvidenceHtml.includes("Build an argument readers can test rather than an information list"), "argument evidence: seven-step workflow heading");
+expect(argumentEvidenceHtml.includes("Task and reader"), "argument evidence: task-reader workflow step");
+expect(argumentEvidenceHtml.includes("Working claim"), "argument evidence: working-claim workflow step");
+expect(argumentEvidenceHtml.includes("Relevant evidence"), "argument evidence: evidence-fit workflow step");
+expect(argumentEvidenceHtml.includes("Reasoning"), "argument evidence: reasoning-bridge workflow step");
+expect(argumentEvidenceHtml.includes("Scope and limits"), "argument evidence: scope-limits workflow step");
+expect(argumentEvidenceHtml.includes("Counterargument"), "argument evidence: counterargument workflow step");
+expect(argumentEvidenceHtml.includes("Reverse check"), "argument evidence: reverse-check workflow step");
+expect(argumentEvidenceHtml.includes("Fictional learning example: map the reasoning, not just the citation"), "argument evidence: fictional-learning-map disclosure");
+expect(argumentEvidenceHtml.includes("This fictional learning example is invented for practice"), "argument evidence: fictional-example boundary");
+expect(argumentEvidenceHtml.includes("Evidence says"), "argument evidence: evidence-reasoning distinction");
+expect(argumentEvidenceHtml.includes("Your reasoning adds"), "argument evidence: writer-reasoning distinction");
+expect(argumentEvidenceHtml.includes("writingcenter.unc.edu/tips-and-tools/argument"), "argument evidence: UNC guidance link");
+expect(argumentEvidenceHtml.includes("wts.indiana.edu/writing-guides/using-evidence"), "argument evidence: Indiana evidence guidance link");
+expect(argumentEvidenceHtml.includes("writingcenter.fas.harvard.edu/counterargument"), "argument evidence: Harvard counterargument guidance link");
+expect(argumentEvidenceHtml.includes("writingcenter.tamu.edu/guides/resources/arguments"), "argument evidence: Texas A&M guidance link");
 expect(argumentEvidenceHtml.includes('/research-question-examples/'), "argument evidence: research-question cluster link");
+expect(argumentEvidenceHtml.includes('/thesis-statement-examples/'), "argument evidence: thesis cluster link");
+expect(argumentEvidenceHtml.includes('/academic-paragraph-structure/'), "argument evidence: paragraphs cluster link");
 expect(argumentEvidenceHtml.includes('/hedging-language-academic-writing/'), "argument evidence: hedging cluster link");
-expect(argumentEvidenceHtml.includes('/how-to-write-discussion-section/'), "argument evidence: discussion cluster link");
+expect(argumentEvidenceHtml.includes('/evaluate-academic-sources/'), "argument evidence: source-evaluation cluster link");
+expect(argumentEvidenceHtml.includes('/literature-review-synthesis-matrix/'), "argument evidence: synthesis cluster link");
+expect(argumentEvidenceHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "argument evidence: paraphrasing cluster link");
+expect(argumentEvidenceHtml.includes('/citations/'), "argument evidence: citations cluster link");
+expect(argumentEvidenceHtml.includes('/academic-integrity-and-source-use/'), "argument evidence: source-use cluster link");
 
 const hedgingLanguageHtml = read("hedging-language-academic-writing/index.html");
 expect(hedgingLanguageHtml.includes("Fictional learning example"), "hedging language: fictional-example disclosure");
