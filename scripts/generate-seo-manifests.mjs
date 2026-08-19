@@ -63,9 +63,9 @@ const STATIC_PAGE_SEO = {
     keywords: "conclusion phrases research paper, conclusion sentence starters academic writing, research paper conclusion phrases",
   },
   "/phrases/literature-review": {
-    title: "Academic Phrases for Literature Reviews and Source Synthesis | CorePapers",
-    description: "Use literature review phrases to synthesize studies by theme, compare findings, signal a cautious research gap, and maintain your own academic voice.",
-    keywords: "literature review phrases, synthesis phrases academic writing, research gap phrases, compare studies phrases",
+    title: "Literature Review Sentence Starters and Synthesis Phrases | CorePapers",
+    description: "Use literature review sentence starters to open a theme, synthesize sources, compare evidence, signal scope, and frame a cautious research question without copying a template or losing citation responsibility.",
+    keywords: "sentence starters for literature review, literature review sentence starters, literature review phrases, synthesis phrases academic writing, research gap phrases, compare studies phrases",
   },
   "/phrases/methods": {
     title: "Academic Phrases for Methods Sections | CorePapers",

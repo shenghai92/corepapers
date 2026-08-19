@@ -117,25 +117,28 @@ expect(conclusionPhrasesHtml.includes('/academic-integrity-and-source-use/'), "c
 expect(conclusionPhrasesHtml.includes('/citations/'), "conclusion phrases: citations link");
 
 const literatureReviewPhrasesHtml = read("phrases/literature-review/index.html");
-expect(literatureReviewPhrasesHtml.includes("Academic phrases for literature reviews and source synthesis"), "literature review phrases: expected H1");
-expect(literatureReviewPhrasesHtml.includes("Turn source notes into a cross-source claim"), "literature review phrases: cross-source workflow");
+expect(literatureReviewPhrasesHtml.includes("Literature review sentence starters and synthesis phrases"), "literature review phrases: sentence-starters H1");
+expect(literatureReviewPhrasesHtml.includes("Theme-led paragraph opener"), "literature review phrases: theme-led paragraph starter");
+expect(literatureReviewPhrasesHtml.includes("Evidence relationship"), "literature review phrases: evidence-relationship starter");
+expect(literatureReviewPhrasesHtml.includes("Method or context boundary"), "literature review phrases: context-boundary starter");
+expect(literatureReviewPhrasesHtml.includes("Choose literature review sentence starters from a real source relationship"), "literature review phrases: sentence-starter workflow");
 expect(literatureReviewPhrasesHtml.includes("Confirm the review task and scope"), "literature review phrases: task-scope workflow step");
 expect(literatureReviewPhrasesHtml.includes("Build a source relationship card"), "literature review phrases: source-card workflow step");
 expect(literatureReviewPhrasesHtml.includes("Choose an organizing lens"), "literature review phrases: organizing-lens workflow step");
 expect(literatureReviewPhrasesHtml.includes("Compare a specific basis"), "literature review phrases: comparison-basis workflow step");
-expect(literatureReviewPhrasesHtml.includes("Write a cross-source theme claim"), "literature review phrases: theme-claim workflow step");
+expect(literatureReviewPhrasesHtml.includes("Choose the paragraph job"), "literature review phrases: paragraph-job workflow step");
+expect(literatureReviewPhrasesHtml.includes("Adapt a cross-source sentence starter"), "literature review phrases: sentence-starter adaptation workflow");
 expect(literatureReviewPhrasesHtml.includes("Preserve disagreement, exceptions, and limits"), "literature review phrases: disagreement workflow step");
-expect(literatureReviewPhrasesHtml.includes("State a bounded research limitation or next question"), "literature review phrases: bounded-next-question workflow step");
-expect(literatureReviewPhrasesHtml.includes("Verify attribution and review boundaries"), "literature review phrases: attribution workflow step");
+expect(literatureReviewPhrasesHtml.includes("Verify attribution, scope, and review boundaries"), "literature review phrases: attribution-scope workflow step");
 expect(literatureReviewPhrasesHtml.includes("Fictional learning example: build a cross-source claim without inventing consensus, conflict, or a research gap"), "literature review phrases: fictional-learning disclosure");
 expect(literatureReviewPhrasesHtml.includes("This fictional learning example is invented for practice"), "literature review phrases: fictional-example boundary");
-expect(literatureReviewPhrasesHtml.includes("Choose a Literature Review phrase only after you identify the source relationship"), "literature review phrases: source-relationship decision guide");
-expect(literatureReviewPhrasesHtml.includes("Organize a thematic synthesis"), "literature review phrases: thematic-synthesis decision card");
+expect(literatureReviewPhrasesHtml.includes("Choose a Literature Review sentence starter only after you identify the source relationship"), "literature review phrases: source-relationship decision guide");
+expect(literatureReviewPhrasesHtml.includes("Launch a theme-led paragraph"), "literature review phrases: thematic-synthesis decision card");
 expect(literatureReviewPhrasesHtml.includes("Compare with a stated basis"), "literature review phrases: comparison decision card");
 expect(literatureReviewPhrasesHtml.includes("Keep disagreement and evidence scope visible"), "literature review phrases: disagreement decision card");
 expect(literatureReviewPhrasesHtml.includes("Frame a careful research limitation"), "literature review phrases: limitation decision card");
 expect(literatureReviewPhrasesHtml.includes("writingcenter.unc.edu/tips-and-tools/literature-reviews"), "literature review phrases: UNC literature-review guidance link");
-expect(literatureReviewPhrasesHtml.includes("researchguides.uoregon.edu/litreview/synthesize"), "literature review phrases: Oregon synthesis guidance link");
+expect(literatureReviewPhrasesHtml.includes("writingcenter.gmu.edu/writing-resources/research-based-writing/writing-a-literature-review"), "literature review phrases: George Mason synthesis guidance link");
 expect(literatureReviewPhrasesHtml.includes("guides.library.jhu.edu/lit-review/synthesize"), "literature review phrases: Johns Hopkins synthesis guidance link");
 expect(literatureReviewPhrasesHtml.includes('/literature-review-example/'), "literature review phrases: literature-review-example link");
 expect(literatureReviewPhrasesHtml.includes('/literature-review-synthesis-matrix/'), "literature review phrases: synthesis-matrix link");
@@ -513,7 +516,7 @@ const pages = [
   ["/phrases/introduction/", "Academic phrases for research paper introductions"],
   ["/phrases/discussion/", "Academic phrases for discussion sections"],
   ["/phrases/conclusion/", "Academic phrases for research paper conclusions"],
-  ["/phrases/literature-review/", "Academic phrases for literature reviews and source synthesis"],
+  ["/phrases/literature-review/", "Literature review sentence starters and synthesis phrases"],
   ["/phrases/methods/", "Academic phrases for research methods sections"],
   ["/phrases/results/", "Academic phrases for reporting research results"],
   ["/citations/", "Free citation generator for APA 7, MLA, Chicago and IEEE"],
