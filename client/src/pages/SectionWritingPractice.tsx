@@ -12,11 +12,11 @@ import { Button } from "@/components/ui/button";
 type PracticeKind = "introduction" | "results" | "methodology" | "discussion" | "conclusion";
 
 const authority = {
-  introduction: "https://writingcenter.unc.edu/tips-and-tools/introductions/",
+  introduction: "https://libguides.usc.edu/writingguide/introduction",
   results: "https://library.sacredheart.edu/c.php?g=29803&p=185931",
   methodology: "https://libguides.usc.edu/writingguide/methodology",
-  discussion: "https://explore.plos.org/author-resources/how-to-write-effective-discussions-and-conclusions",
-  conclusion: "https://explore.plos.org/author-resources/how-to-write-effective-discussions-and-conclusions",
+  discussion: "https://libguides.usc.edu/writingguide/discussion",
+  conclusion: "https://writingcenter.unc.edu/tips-and-tools/conclusions/",
 };
 
 const data = {
@@ -149,6 +149,9 @@ export default function SectionWritingPractice({
   const [, setLocation] = useLocation();
   const isResults = kind === "results";
   const isMethodology = kind === "methodology";
+  const isIntroduction = kind === "introduction";
+  const isDiscussion = kind === "discussion";
+  const isConclusion = kind === "conclusion";
   const sectionProcess = isResults
     ? [
         ["Map the reporting order", "List the research questions, hypotheses, or themes and decide the reader-friendly order in which you will report the findings."],
@@ -163,7 +166,46 @@ export default function SectionWritingPractice({
           ["Separate completed actions from plans", "Use accurate tense and say what you actually did. Do not invent approval, recruitment, measures, or analytical decisions that your study did not use."],
           ["Keep findings and interpretation out", "Explain procedures, limitations, and relevant safeguards here; reserve reported results for Results and explanations of meaning for Discussion."],
         ]
-      : null;
+      : isIntroduction
+        ? [
+            ["Establish only necessary context", "Begin with the subject, setting, or prior work readers need to understand the specific research problem; avoid dictionary openings and unsupported trend claims."],
+            ["Show what is known and limited", "Use selected, cited sources to establish the relevant conversation, then describe a defined question, limitation, or tension without claiming that no research exists."],
+            ["State a focused purpose", "Tell readers what the paper examines, asks, or argues and make sure the scope can be addressed by the evidence and assignment."],
+            ["Align the route with the final paper", "After drafting the body, revise the Introduction so its question, stated method, delimitations, and roadmap still describe the completed work."],
+          ]
+        : isDiscussion
+          ? [
+              ["Bridge from a reported finding", "Refer briefly to the specific result or theme being interpreted rather than repeating a complete Results paragraph."],
+              ["Explain a bounded meaning", "State what the finding may suggest for the research question in language that fits the design, measure, and strength of evidence."],
+              ["Compare, test, and limit", "Connect the interpretation to relevant research, consider plausible alternatives, and explain limitations that affect the reach of the claim."],
+              ["End with a proportionate implication", "Link the analysis to theory, practice, or next research only within the study population, context, method, and uncertainty."],
+            ]
+          : isConclusion
+            ? [
+                ["Return to the addressed problem", "Reorient readers to the completed paper's question or central claim without repeating the Introduction sentence by sentence."],
+                ["Synthesize the evidence path", "Show how the main claim, reasons, evidence, and limitations work together instead of simply listing the paper's sections."],
+                ["State why the established answer matters", "Offer a bounded contribution, implication, or next question that follows from analysis already developed in the body."],
+                ["Remove new material", "Move new evidence, citations, quotations, or subtopics into the body or omit them; do not unveil the thesis for the first time at the end."],
+              ]
+            : null;
+  const sectionProcessTitle = isResults
+    ? "How to build a Results section step by step"
+    : isMethodology
+      ? "How to build a Methodology section step by step"
+      : isIntroduction
+        ? "How to build an Introduction section step by step"
+        : isDiscussion
+          ? "How to build a Discussion section step by step"
+          : "How to build a Conclusion section step by step";
+  const sectionProcessBoundary = isResults
+    ? "A fictional model can help you see the reporting order, but use only your own verified analysis, tables, figures, and course conventions in a submitted paper."
+    : isMethodology
+      ? "A fictional model can help you plan transparency, but use only verified details from your own design and follow your instructor, ethics process, discipline, or target journal where requirements differ."
+      : isIntroduction
+        ? "A fictional model can help you practise focusing a research problem, but use only accurate context, verified citations, and a purpose that your final paper can genuinely address."
+        : isDiscussion
+          ? "A fictional model can help you practise interpretation, but use only your own reported findings and keep every explanation, comparison, and implication proportionate to the evidence."
+          : "A fictional model can help you practise synthesis, but make your final takeaway follow from the claim, evidence, analysis, and limits already established in your paper.";
 
   return (
     <>
@@ -271,7 +313,7 @@ export default function SectionWritingPractice({
             <section className="max-w-5xl mx-auto mt-8 p-7 bg-white border border-border rounded-2xl" aria-labelledby={`${kind}-process-title`}>
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Drafting workflow</p>
               <h2 id={`${kind}-process-title`} className="font-serif text-3xl text-slate-purple mb-5">
-                {isResults ? "How to build a Results section step by step" : "How to build a Methodology section step by step"}
+                {sectionProcessTitle}
               </h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {sectionProcess.map(([title, copy], index) => (
@@ -283,9 +325,7 @@ export default function SectionWritingPractice({
                 ))}
               </div>
               <p className="mt-5 text-sm font-sans text-muted-foreground leading-relaxed">
-                {isResults
-                  ? "A fictional model can help you see the reporting order, but use only your own verified analysis, tables, figures, and course conventions in a submitted paper."
-                  : "A fictional model can help you plan transparency, but use only verified details from your own design and follow your instructor, ethics process, discipline, or target journal where requirements differ."}
+                {sectionProcessBoundary}
               </p>
             </section>
           )}
@@ -337,17 +377,63 @@ export default function SectionWritingPractice({
                 </div>
               </Link>
             )}
-            {kind === "discussion" && (
-              <Link href="/how-to-write-discussion-section" className="block">
-                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                  <h2 className="font-serif text-xl text-slate-purple mb-2">
-                    Plan the full discussion
-                  </h2>
-                  <p className="text-sm text-muted-foreground font-sans">
-                    Move from a finding to careful interpretation, limitations, and implications.
-                  </p>
-                </div>
-              </Link>
+            {isDiscussion && (
+              <>
+                <Link href="/how-to-write-discussion-section" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Plan the full discussion
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Move from a finding to careful interpretation, limitations, and implications.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/results-section-example-research-paper" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Keep Results distinct
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Separate factual reporting from interpretation before you make a claim about meaning.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/hedging-language-academic-writing" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Calibrate certainty
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Match possible explanations and implications to the strength of your evidence.
+                    </p>
+                  </div>
+                </Link>
+              </>
+            )}
+            {isConclusion && (
+              <>
+                <Link href="/how-to-write-discussion-section" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Place implications carefully
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Decide whether implications, limitations, and future research belong in Discussion or Conclusion.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/academic-argument-evidence" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Check the argument path
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Make the final takeaway follow from the claim, support, reasoning, and limits in the body.
+                    </p>
+                  </div>
+                </Link>
+              </>
             )}
             <Link href="/research-paper-templates" className="block">
               <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
