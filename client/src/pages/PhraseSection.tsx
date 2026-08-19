@@ -35,6 +35,11 @@ const SECTION_CONTENT: Record<
       authorityText: string;
       authorityLinks: { href: string; label: string }[];
       resources: { href: string; title: string; text: string }[];
+      evidenceDecision?: {
+        title: string;
+        intro: string;
+        cards: { title: string; text: string }[];
+      };
     };
   }
 > = {
@@ -332,24 +337,40 @@ const SECTION_CONTENT: Record<
       title: "Report the finding before you explain what it means",
       intro: "A results phrase should guide readers from the research question and measurement to a precise, supported observation. Keep interpretation, causal explanation, and broad implication for the Discussion unless your field or assignment combines those functions.",
       steps: [
-        { title: "1. Reorient readers to the question", text: "Use a short transition to remind readers of the relevant hypothesis, question, group, measure, or analytic comparison." },
-        { title: "2. State the result in plain language", text: "Report the most relevant pattern, difference, relationship, theme, or non-result directly before adding technical detail." },
-        { title: "3. Anchor the report in evidence", text: "Point readers to the applicable table, figure, theme, quotation, descriptive statistic, or statistical result without repeating every value twice." },
-        { title: "4. Match certainty to design", text: "Use reporting language that fits the analysis; an association or group difference does not itself establish a cause, mechanism, or universal effect." },
-        { title: "5. Preserve relevant unexpected results", text: "Report null, mixed, or unexpected findings that address the research question rather than omitting them because they do not fit an expectation." },
+        { title: "1. Reopen the question", text: "Use a short transition to identify the relevant hypothesis, question, group, measure, or qualitative theme before choosing a results phrase." },
+        { title: "2. Identify the reportable observation", text: "Decide whether the evidence is a pattern, difference, relationship, theme, quotation, null result, or mixed result. Do not select a phrase before checking the actual analysis." },
+        { title: "3. State the result in plain language", text: "Report the most relevant observation directly before adding technical detail; make the group, measure, comparison, or theme specific enough for readers to follow." },
+        { title: "4. Point readers to the evidence", text: "Refer to the applicable table, figure, theme, quotation, descriptive statistic, or analytic output and tell readers what relevant pattern to look for without reciting every value twice." },
+        { title: "5. Check statistical or thematic precision", text: "Use only the value, effect, confidence interval, quotation, code, or theme that your verified record supports. A sentence starter cannot supply a p value, sample size, effect size, or participant account." },
+        { title: "6. Preserve the Results boundary", text: "Report relevant unexpected, null, or mixed findings. Move causal explanation, comparison with earlier studies, implication, and recommendation to Discussion unless the assignment explicitly combines sections." },
       ],
-      fictionalTitle: "Fictional learning example: separate reporting from interpretation",
-      fictionalText: "This invented practice situation is not a real dataset or result to submit. A fictional writer first states a measured group difference in plain language, then points to a fictional table and the supporting statistic. The writer saves the possible reason for the difference, comparison with past studies, and limitation for a separate Discussion paragraph.",
-      authorityText: "USC Libraries describes Results as a logical, concise report of findings based on the methods, without bias or interpretation. Purdue OWL similarly recommends reporting the question or hypothesis, relevant operation, plain-language result, supporting statistic, and any needed qualification in an order readers can follow.",
+      fictionalTitle: "Fictional learning example: separate reporting from interpretation and never fill in a statistic",
+      fictionalText: "This invented practice situation is not a real dataset, statistical output, or result to submit. A fictional writer first checks a fictional analysis record, states a measured group difference in plain language, then points to a fictional table and a verified fictional statistic. The writer does not fill in a p value, effect size, sample size, quotation, or theme merely because a phrase has a bracket. The possible reason for the difference, comparison with past studies, and limitation remain for a separate Discussion paragraph.",
+      authorityText: "USC Libraries describes Results as a logical, concise report of findings based on the methods, without bias or interpretation. Purdue OWL advises writers to use tables and figures to supplement text, mention every display in the text, and focus readers on the key point rather than repeat every value. APA Style emphasizes that visual displays should help readers understand the work, while Illinois State University provides discipline-specific examples of how statistical quantities are reported in text. Check the required style manual, course, journal, and verified analysis before using any reporting form.",
       authorityLinks: [
         { href: "https://libguides.usc.edu/writingguide/results", label: "Read USC Libraries' Results guidance" },
         { href: "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_the_social_sciences/writing_in_psychology_experimental_report_writing/experimental_reports_2.html", label: "Read Purdue OWL's Results guidance" },
+        { href: "https://apastyle.apa.org/style-grammar-guidelines/tables-figures", label: "Read APA Style's tables and figures guidance" },
+        { href: "https://about.illinoisstate.edu/jhkahn/apastats/", label: "Read Illinois State University's statistics-reporting examples" },
       ],
+      evidenceDecision: {
+        title: "Choose a Results phrase only after you identify the evidence job",
+        intro: "A phrase can signal a result, but it cannot turn a display, statistic, theme, or absence of a pattern into evidence. Match the phrase to the record readers need to inspect, then make the reporting choice fit your discipline and assignment.",
+        cards: [
+          { title: "Guide a reader to a table or figure", text: "Use a display phrase only after the table or figure is numbered, readable on its own, referenced in the text, and genuinely helps the reader see a pattern. Name the point to notice instead of narrating every cell or label." },
+          { title: "Report a quantitative pattern", text: "Choose an association, difference, or null-result phrase only when your analysis supports that description. Verify measure, group, direction, uncertainty, statistical values, and required reporting format; do not imply causation from an association." },
+          { title: "Report a qualitative theme", text: "Use a theme phrase after checking how the theme was identified and how any excerpt or illustration is attributed under your method and discipline. A theme label is not an explanation of why participants acted or felt that way." },
+          { title: "Report a null, mixed, or unexpected result", text: "Keep a relevant non-result visible when it answers the question or complicates an expectation. Describe what the analysis did or did not show, then reserve explanations of why for a later interpretive section." },
+        ],
+      },
       resources: [
         { href: "/results-section-example-research-paper", title: "Results section example", text: "Review reporting order, fictional learning examples, and boundaries between reporting and interpretation." },
         { href: "/how-to-write-discussion-section", title: "Discussion writing guide", text: "Move from reported findings to careful interpretation, comparison, limitations, and implications." },
+        { href: "/methodology-section-example-research-paper", title: "Methodology section example", text: "Check that every reported finding follows from the design, data source, procedure, and analysis actually described." },
         { href: "/hedging-language-academic-writing", title: "Hedging language", text: "Calibrate certainty so claims remain proportionate to the method and evidence." },
         { href: "/academic-argument-evidence", title: "Academic argument and evidence", text: "Connect reported evidence to a defensible claim without overstating what the evidence can show." },
+        { href: "/citations", title: "Citation check", text: "Verify source records when a display, dataset, scale, quotation, or adapted material requires attribution." },
+        { href: "/academic-integrity-and-source-use", title: "Source-use guide", text: "Keep analyses, data records, quotations, and borrowed material traceable while drafting Results." },
       ],
     },
   },
@@ -471,6 +492,22 @@ export default function PhraseSection() {
                   </div>
                 </article>
               </section>
+
+              {content.deepDive.evidenceDecision && (
+                <section className="max-w-5xl mx-auto mt-8 p-8 bg-white border border-border rounded-2xl" aria-labelledby={`${key}-evidence-decision-title`}>
+                  <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Evidence-to-language check</p>
+                  <h2 id={`${key}-evidence-decision-title`} className="font-serif text-3xl text-slate-purple mb-3">{content.deepDive.evidenceDecision.title}</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">{content.deepDive.evidenceDecision.intro}</p>
+                  <div className="grid sm:grid-cols-2 gap-4 mt-6">
+                    {content.deepDive.evidenceDecision.cards.map(card => (
+                      <article key={card.title} className="rounded-xl bg-muted/50 p-5">
+                        <h3 className="font-serif text-xl text-slate-purple mb-2">{card.title}</h3>
+                        <p className="text-sm text-muted-foreground font-sans leading-relaxed">{card.text}</p>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {content.deepDive.resources.map(resource => (

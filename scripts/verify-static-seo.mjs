@@ -134,15 +134,28 @@ expect(methodsPhrasesHtml.includes('/academic-integrity-and-source-use/'), "meth
 const resultsPhrasesHtml = read("phrases/results/index.html");
 expect(resultsPhrasesHtml.includes("Academic phrases for reporting research results"), "results phrases: expected H1");
 expect(resultsPhrasesHtml.includes("Report the finding before explaining what it means"), "results phrases: reporting-interpretation workflow");
-expect(resultsPhrasesHtml.includes("State the result in plain language"), "results phrases: plain-language workflow step");
-expect(resultsPhrasesHtml.includes("Match certainty to design"), "results phrases: evidence-calibration workflow step");
-expect(resultsPhrasesHtml.includes("Fictional learning example: separate reporting from interpretation"), "results phrases: fictional-learning disclosure");
+expect(resultsPhrasesHtml.includes("Reopen the question"), "results phrases: question-led workflow step");
+expect(resultsPhrasesHtml.includes("Identify the reportable observation"), "results phrases: reportable-observation workflow step");
+expect(resultsPhrasesHtml.includes("Point readers to the evidence"), "results phrases: evidence-anchor workflow step");
+expect(resultsPhrasesHtml.includes("Check statistical or thematic precision"), "results phrases: statistical-theme precision workflow step");
+expect(resultsPhrasesHtml.includes("Preserve the Results boundary"), "results phrases: results-discussion boundary workflow step");
+expect(resultsPhrasesHtml.includes("Fictional learning example: separate reporting from interpretation and never fill in a statistic"), "results phrases: fictional-statistics boundary disclosure");
+expect(resultsPhrasesHtml.includes("Choose a Results phrase only after you identify the evidence job"), "results phrases: evidence-to-language decision guide");
+expect(resultsPhrasesHtml.includes("Guide a reader to a table or figure"), "results phrases: table-figure decision card");
+expect(resultsPhrasesHtml.includes("Report a quantitative pattern"), "results phrases: quantitative-report decision card");
+expect(resultsPhrasesHtml.includes("Report a qualitative theme"), "results phrases: qualitative-theme decision card");
+expect(resultsPhrasesHtml.includes("Report a null, mixed, or unexpected result"), "results phrases: null-mixed decision card");
 expect(resultsPhrasesHtml.includes("libguides.usc.edu/writingguide/results"), "results phrases: USC Results guidance link");
-expect(resultsPhrasesHtml.includes("owl.purdue.edu/owl/subject_specific_writing/writing_in_the_social_sciences/writing_in_psychology_experimental_report_writing/experimental_reports_2.html"), "results phrases: Purdue Results guidance link");
+expect(resultsPhrasesHtml.includes("owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_tables_and_figures.html"), "results phrases: Purdue tables-figures guidance link");
+expect(resultsPhrasesHtml.includes("apastyle.apa.org/style-grammar-guidelines/tables-figures"), "results phrases: APA tables-figures guidance link");
+expect(resultsPhrasesHtml.includes("about.illinoisstate.edu/jhkahn/apastats"), "results phrases: Illinois State statistics guidance link");
 expect(resultsPhrasesHtml.includes('/results-section-example-research-paper/'), "results phrases: results-example link");
 expect(resultsPhrasesHtml.includes('/how-to-write-discussion-section/'), "results phrases: discussion-guide link");
+expect(resultsPhrasesHtml.includes('/methodology-section-example-research-paper/'), "results phrases: methodology-path link");
 expect(resultsPhrasesHtml.includes('/hedging-language-academic-writing/'), "results phrases: hedging link");
 expect(resultsPhrasesHtml.includes('/academic-argument-evidence/'), "results phrases: argument-evidence link");
+expect(resultsPhrasesHtml.includes('/citations/'), "results phrases: citations link");
+expect(resultsPhrasesHtml.includes('/academic-integrity-and-source-use/'), "results phrases: source-use link");
 
 const apaCitationLandingHtml = read("apa-citation-generator-for-international-students/index.html");
 expect(
