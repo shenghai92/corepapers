@@ -286,12 +286,17 @@ expect(
   paraphrasingSupportLandingHtml.includes("Academic paraphrasing support for source-based writing"),
   "paraphrasing support landing: expected H1"
 );
-expect(paraphrasingSupportLandingHtml.includes("Choose the source move before revising language"), "paraphrasing support landing: source-move framework");
-expect(paraphrasingSupportLandingHtml.includes("Quote: use exact wording when it matters"), "paraphrasing support landing: quotation decision");
-expect(paraphrasingSupportLandingHtml.includes("Paraphrase: rebuild a needed idea"), "paraphrasing support landing: paraphrase decision");
-expect(paraphrasingSupportLandingHtml.includes("Summarize: condense a broad pattern"), "paraphrasing support landing: summary decision");
-expect(paraphrasingSupportLandingHtml.includes("Analyze: explain your own point"), "paraphrasing support landing: analysis decision");
-expect(paraphrasingSupportLandingHtml.includes("Fictional learning decision"), "paraphrasing support landing: fictional-decision disclosure");
+expect(paraphrasingSupportLandingHtml.includes("An eight-step source-based paraphrasing workflow"), "paraphrasing support landing: eight-step source workflow");
+expect(paraphrasingSupportLandingHtml.includes("Open source used"), "paraphrasing support landing: source-record step");
+expect(paraphrasingSupportLandingHtml.includes("Read for original claim"), "paraphrasing support landing: source-understanding step");
+expect(paraphrasingSupportLandingHtml.includes("Choose source move"), "paraphrasing support landing: source-move decision");
+expect(paraphrasingSupportLandingHtml.includes("State paragraph purpose"), "paraphrasing support landing: paragraph-purpose step");
+expect(paraphrasingSupportLandingHtml.includes("Close source and write"), "paraphrasing support landing: reconstruction step");
+expect(paraphrasingSupportLandingHtml.includes("Check accuracy and distance"), "paraphrasing support landing: accuracy-distance step");
+expect(paraphrasingSupportLandingHtml.includes("Place citation near idea"), "paraphrasing support landing: citation-placement step");
+expect(paraphrasingSupportLandingHtml.includes("Add your own analysis"), "paraphrasing support landing: analysis step");
+expect(paraphrasingSupportLandingHtml.includes("Fictional learning example"), "paraphrasing support landing: fictional-learning disclosure");
+expect(paraphrasingSupportLandingHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, a source, or text to submit"), "paraphrasing support landing: explicit fictional-learning boundary");
 expect(paraphrasingSupportLandingHtml.includes("owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"), "paraphrasing support landing: Purdue paraphrasing guidance link");
 expect(paraphrasingSupportLandingHtml.includes("writing.wisc.edu/handbook/quotingsources"), "paraphrasing support landing: Wisconsin source-use guidance link");
 expect(paraphrasingSupportLandingHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "paraphrasing support landing: detailed-guide link");
