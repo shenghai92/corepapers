@@ -1165,8 +1165,25 @@ expect(
 
 const nonEnglishApaHtml = read("apa-7-non-english-sources/index.html");
 expect(nonEnglishApaHtml.includes("Fictional learning examples"), "APA non-English sources: fictional-example disclosure");
+expect(nonEnglishApaHtml.includes("This fictional learning example is invented for practice"), "APA non-English sources: fictional learning boundary");
+expect(nonEnglishApaHtml.includes("Build the APA reference from the version you actually used"), "APA non-English sources: version workflow");
+expect(nonEnglishApaHtml.includes("Confirm the writing and citation requirement"), "APA non-English sources: requirement workflow step");
+expect(nonEnglishApaHtml.includes("Identify the exact version consulted"), "APA non-English sources: version workflow step");
+expect(nonEnglishApaHtml.includes("Verify the original source record"), "APA non-English sources: source-record workflow step");
+expect(nonEnglishApaHtml.includes("Choose the correct language path"), "APA non-English sources: language-path workflow step");
+expect(nonEnglishApaHtml.includes("Transliterate non-Roman titles carefully"), "APA non-English sources: transliteration workflow step");
+expect(nonEnglishApaHtml.includes("Add only required title translation"), "APA non-English sources: title-translation workflow step");
+expect(nonEnglishApaHtml.includes("Match in-text citation and reference"), "APA non-English sources: in-text-match workflow step");
+expect(nonEnglishApaHtml.includes("Reverse-check against official guidance"), "APA non-English sources: official-check workflow step");
+expect(nonEnglishApaHtml.includes("Use a version-and-language record before formatting"), "APA non-English sources: version-record checklist");
 expect(nonEnglishApaHtml.includes("apastyle.apa.org"), "APA non-English sources: official APA guidance link");
 expect(nonEnglishApaHtml.includes("library.unimelb.edu.au"), "APA non-English sources: university guide link");
+expect(nonEnglishApaHtml.includes('/citation-examples/'), "APA non-English sources: APA examples link");
+expect(nonEnglishApaHtml.includes('/citations/'), "APA non-English sources: citations link");
+expect(nonEnglishApaHtml.includes('/evaluate-academic-sources/'), "APA non-English sources: source-evaluation link");
+expect(nonEnglishApaHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "APA non-English sources: paraphrasing link");
+expect(nonEnglishApaHtml.includes('/academic-integrity-and-source-use/'), "APA non-English sources: source-use link");
+expect(nonEnglishApaHtml.includes('/annotated-bibliography-example/'), "APA non-English sources: annotated-bibliography link");
 
 const methodologyFaqHtml = read("blog/methodology-section-faq-for-research-papers/index.html");
 expect(methodologyFaqHtml.includes('"@type":"FAQPage"'), "methodology FAQ: FAQPage JSON-LD");
