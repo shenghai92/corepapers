@@ -1429,6 +1429,27 @@ expect(methodologyFaqHtml.includes('"@type":"FAQPage"'), "methodology FAQ: FAQPa
 expect(methodologyFaqHtml.includes("How do you write a methodology section for a research paper?"), "methodology FAQ: visible question in JSON-LD");
 expect(methodologyFaqHtml.includes("How do I write about ethics without inventing approval?"), "methodology FAQ: ethics question in JSON-LD");
 
+const commonAcademicWritingMistakesHtml = read("blog/how-to-avoid-common-esl-writing-mistakes/index.html");
+expect(commonAcademicWritingMistakesHtml.includes("Common Mistakes in Academic Writing: 10 ESL Patterns and Revision Checks"), "common academic writing mistakes: GSC-aligned expected H1");
+expect(commonAcademicWritingMistakesHtml.includes("Fictional learning examples"), "common academic writing mistakes: fictional-example disclosure");
+expect(commonAcademicWritingMistakesHtml.includes("They are not real student work, research findings, instructor feedback, or sentences to submit unchanged"), "common academic writing mistakes: explicit fictional boundary");
+expect(commonAcademicWritingMistakesHtml.includes("An eight-step way to find patterns, not just isolated errors"), "common academic writing mistakes: eight-step diagnostic workflow");
+expect(commonAcademicWritingMistakesHtml.includes("Read task, reader, and policy"), "common academic writing mistakes: task-reader-policy step");
+expect(commonAcademicWritingMistakesHtml.includes("Check the whole paper first"), "common academic writing mistakes: global-revision step");
+expect(commonAcademicWritingMistakesHtml.includes("Choose one recurring pattern"), "common academic writing mistakes: focused-pattern step");
+expect(commonAcademicWritingMistakesHtml.includes("Read as a new reader"), "common academic writing mistakes: reader-clarity step");
+expect(commonAcademicWritingMistakesHtml.includes("Revise for the actual meaning"), "common academic writing mistakes: meaning-preservation step");
+expect(commonAcademicWritingMistakesHtml.includes("Check claims and sources"), "common academic writing mistakes: source-verification step");
+expect(commonAcademicWritingMistakesHtml.includes("Proofread one category at a time"), "common academic writing mistakes: focused-proofreading step");
+expect(commonAcademicWritingMistakesHtml.includes("Record and recheck"), "common academic writing mistakes: learning-responsibility step");
+expect(commonAcademicWritingMistakesHtml.includes("writing.wisc.edu/handbook/commonerrors"), "common academic writing mistakes: Wisconsin guidance link");
+expect(commonAcademicWritingMistakesHtml.includes("owl.purdue.edu/owl/general_writing/mechanics/sentence_clarity.html"), "common academic writing mistakes: Purdue clarity guidance link");
+expect(commonAcademicWritingMistakesHtml.includes("writingcenter.unc.edu/tips-and-tools/editing-and-proofreading"), "common academic writing mistakes: UNC editing guidance link");
+expect(commonAcademicWritingMistakesHtml.includes('/academic-english-for-esl-students/'), "common academic writing mistakes: Academic English cluster link");
+expect(commonAcademicWritingMistakesHtml.includes('/research-paper-revision-checklist/'), "common academic writing mistakes: revision-checklist cluster link");
+expect(commonAcademicWritingMistakesHtml.includes('/hedging-language-academic-writing/'), "common academic writing mistakes: hedging cluster link");
+expect(commonAcademicWritingMistakesHtml.includes('/academic-integrity-and-source-use/'), "common academic writing mistakes: source-use cluster link");
+
 const methodologyVsMethodsHtml = read("methodology-vs-methods-research-paper/index.html");
 expect(methodologyVsMethodsHtml.includes("Fictional learning example"), "methodology vs methods: fictional-example disclosure");
 expect(methodologyVsMethodsHtml.includes("This fictional learning example is invented for practice"), "methodology vs methods: fictional learning boundary");

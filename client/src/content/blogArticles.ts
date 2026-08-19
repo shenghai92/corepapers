@@ -670,14 +670,14 @@ Once you follow a clear structure, abstract writing becomes much easier and much
   },
   {
     slug: "how-to-avoid-common-esl-writing-mistakes",
-    title: "10 Most Common ESL Writing Mistakes in Academic Papers (And How to Fix Them)",
+    title: "Common Mistakes in Academic Writing: 10 ESL Patterns and Revision Checks",
     excerpt:
-      "Learn the most common ESL writing mistakes in academic papers and how to fix them with clearer examples specifically tailored for international students.",
+      "Identify common mistakes in academic writing through fictional ESL learning examples, a layered revision process, clearer academic alternatives, and writing-center-backed editing checks for international students.",
     category: "Writing Tips",
     tags: ["ESL", "Academic Writing", "Common Mistakes"],
     readingTime: 8,
     metaDescription:
-      "Discover the most common ESL writing mistakes in academic papers and how to fix them with examples, revision tips, and clearer academic alternatives for international students.",
+      "Identify common mistakes in academic writing with fictional ESL learning examples, sentence-clarity checks, editing versus proofreading guidance, and a layered revision routine for international students.",
     publishedAt: "2024-01-15",
     featured: true,
     content: `## Introduction
@@ -686,7 +686,18 @@ Writing academic papers in an additional language can make it harder to present 
 
 The good news is that many grammar and style patterns are visible once you know what to check. A focused review can help you make the relationship among claim, evidence, and sentence structure easier for a reader to follow—without replacing your own ideas with generic or unnecessarily complicated language.
 
-> **Fictional learning examples:** The short sentences in this guide are invented examples for practice. They are not real student work, research findings, or sentences to submit unchanged. Adapt any revision to your own meaning, evidence, discipline, and assignment instructions.
+> **Fictional learning examples:** The short sentences in this guide are invented examples for practice. They are not real student work, research findings, instructor feedback, or sentences to submit unchanged. Adapt any revision to your own meaning, evidence, discipline, and assignment instructions.
+
+## An eight-step way to find patterns, not just isolated errors
+
+1. **Read task, reader, and policy.** Confirm the genre, discipline, required level of formality, language or AI policy, and the kind of support your instructor permits before changing sentences.
+2. **Check the whole paper first.** Revisit the question, thesis or central claim, evidence, section purpose, and paragraph sequence; a grammar correction cannot repair a missing reason or unsupported conclusion.
+3. **Choose one recurring pattern.** Start with the issue that makes meaning hard to follow—such as an unclear pronoun, article choice, subject–verb match, sentence boundary, or literal translation—rather than trying to fix everything at once.
+4. **Read as a new reader.** Read the sentence aloud and in its paragraph. Ask what each pronoun refers to, what the main verb is, and how the sentence connects old information to new information.
+5. **Revise for the actual meaning.** Retain technical terms, qualification, discipline-specific wording, and your intended level of certainty; do not replace words merely to sound more “advanced.”
+6. **Check claims and sources.** Make sure an edited sentence has not altered a result, changed causal language, removed a limitation, or separated a borrowed idea from its citation.
+7. **Proofread one category at a time.** After the content and structure pass, make focused passes for grammar, punctuation, spelling, and formatting rather than relying blindly on a checker.
+8. **Record and recheck.** Note patterns you want to learn, use a dictionary, writing center, librarian, or instructor when uncertain, and submit only writing you can explain and take responsibility for.
 
 ## Mistake 1: Redundant Subject Pronouns
 
@@ -704,9 +715,9 @@ Corrected: "The study shows that..."
 
 **Why it happens:** Students often translate intensifiers directly from everyday speech into their academic writing.
 
-**The fix:** Replace vague emphasis with precise, strong academic vocabulary.
+**The fix:** State the specific reason something matters, and use stronger wording only when your evidence and discipline justify it. Do not use *significant* merely as a more formal synonym for *important* when you mean statistical significance or another technical claim.
 
-Corrected: Use words like "critical," "substantial," "highly significant," or "central" when those words better match your specific meaning.
+Corrected: Replace vague emphasis with the criterion that matters—for example, explain whether a factor is central to the research question, substantial in scale, or relevant to a particular outcome.
 
 ## Mistake 3: Informal First-Person Fillers
 
@@ -742,9 +753,9 @@ Corrected: "The **number** [of participants] **was**..." but "The **participants
 
 **What it looks like:** "It was found by the researchers that the results were shown to be significant."
 
-**Why it happens:** ESL students are often taught that academic writing must sound completely impersonal, so they rely far too heavily on complex passive structures, making sentences hard to read.
+**Why it happens:** Some writers learn that academic writing must always sound impersonal, so they may choose a complex passive structure even when naming the actor would help a reader follow the process.
 
-**The fix:** Use active voice when it improves clarity and directness.
+**The fix:** Use active voice when it improves clarity and directness, but keep passive voice when the action, result, or conventional disciplinary focus matters more than the actor.
 
 Corrected: "The researchers found that the results were significant."
 
@@ -810,11 +821,11 @@ Before submitting your paper, do one revision pass strictly for grammar and anot
 
 ## Use writing-center guidance and your assignment instructions
 
-The [University of Toronto](https://www.utm.utoronto.ca/rgasc/student-resource-hub/writing-resources/ten-common-grammatical-errors-and-conventions-academic) offers examples of agreement errors, comma splices, unclear pronoun reference, modifiers, punctuation, active and passive voice, fragments, and wordiness. The [Excelsior OWL](https://owl.excelsior.edu/grammar-essentials/common-errors/) notes that error patterns change over time and that reducing errors supports clearer communication, not a measure of a writer’s ideas or potential. Your instructor’s rubric and discipline-specific conventions remain the final standard.
+The [University of Wisconsin–Madison Writing Center](https://writing.wisc.edu/handbook/commonerrors/) presents common error categories as brief editing reminders and directs writers to classes, conferences, instructors, and handbooks for fuller support. [Purdue OWL](https://owl.purdue.edu/owl/general_writing/mechanics/sentence_clarity.html) explains reader-oriented clarity choices such as information flow, transitions, clause placement, parallel construction, action verbs, and clear pronoun references. [UNC Writing Center](https://writingcenter.unc.edu/tips-and-tools/editing-and-proofreading/) separates content, structure, paragraph, clarity, style, and citation editing from final proofreading for surface errors. These resources support clearer communication; they do not measure a writer’s ideas, potential, or value. Your instructor’s rubric and discipline-specific conventions remain the final standard.
 
 ## Keep Learning From Your Revision Patterns
 
-Many of these problems appear when a sentence has been translated too closely from another language or when conversational English is used in a formal context. For more focused guidance, visit [Academic English support for ESL and international students](/academic-english-for-esl-students/), browse the [academic phrase library](/phrases/), use the [academic paragraph structure guide](/academic-paragraph-structure/), or use [CorePapers Essay Polish](/polish) for a second pass on clarity, tone, and academic phrasing. When your draft uses sources, review [academic integrity and source use](/academic-integrity-and-source-use/) before submitting.`,
+Many of these problems can arise when a sentence has been translated too closely from another language, when conversational language is transferred to a formal task, or when a draft is edited before its argument and paragraph path are clear. For more focused guidance, visit [Academic English support for ESL and international students](/academic-english-for-esl-students/), browse the [academic phrase library](/phrases/), use the [academic paragraph structure guide](/academic-paragraph-structure/), or use [CorePapers Essay Polish](/polish) for a second pass on clarity, tone, and academic phrasing. Check [hedging language](/hedging-language-academic-writing/) before making a claim sound stronger, use the [research paper revision checklist](/research-paper-revision-checklist/) for a final whole-draft review, and consult [academic integrity and source use](/academic-integrity-and-source-use/) whenever the draft uses sources.`,
   },
   {
     slug: "complete-apa-7th-edition-guide-international-students",
