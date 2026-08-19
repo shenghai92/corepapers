@@ -338,8 +338,17 @@ expect(
   academicParaphrasingToolHtml.includes("Academic paraphrasing tool for ESL students"),
   "academic paraphrasing tool: expected H1"
 );
-expect(academicParaphrasingToolHtml.includes("1. Keep the source details"), "academic paraphrasing tool: six-step workflow");
+expect(academicParaphrasingToolHtml.includes("An eight-step academic paraphrasing workflow"), "academic paraphrasing tool: eight-step workflow");
+expect(academicParaphrasingToolHtml.includes("Keep source and version details"), "academic paraphrasing tool: source-record workflow step");
+expect(academicParaphrasingToolHtml.includes("Read for full idea"), "academic paraphrasing tool: understanding workflow step");
+expect(academicParaphrasingToolHtml.includes("Choose what point needs"), "academic paraphrasing tool: purpose workflow step");
+expect(academicParaphrasingToolHtml.includes("Set source aside"), "academic paraphrasing tool: rebuild workflow step");
+expect(academicParaphrasingToolHtml.includes("Check accuracy and distance"), "academic paraphrasing tool: accuracy workflow step");
+expect(academicParaphrasingToolHtml.includes("Handle exact language honestly"), "academic paraphrasing tool: quotation workflow step");
+expect(academicParaphrasingToolHtml.includes("Credit borrowed ideas near use"), "academic paraphrasing tool: attribution workflow step");
+expect(academicParaphrasingToolHtml.includes("Confirm before submission"), "academic paraphrasing tool: final-check workflow step");
 expect(academicParaphrasingToolHtml.includes("Fictional learning example"), "academic paraphrasing tool: fictional-example disclosure");
+expect(academicParaphrasingToolHtml.includes("This fictional learning example is invented for practice"), "academic paraphrasing tool: fictional-example boundary");
 expect(academicParaphrasingToolHtml.includes("Understand, rebuild, then attribute"), "academic paraphrasing tool: tool-responsibility boundary");
 expect(academicParaphrasingToolHtml.includes("owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"), "academic paraphrasing tool: Purdue guidance link");
 expect(academicParaphrasingToolHtml.includes("writingcenter.gmu.edu/writing-resources/citing-sources/paraphrasing"), "academic paraphrasing tool: George Mason guidance link");
