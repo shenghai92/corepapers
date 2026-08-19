@@ -980,7 +980,17 @@ expect(argumentEvidenceHtml.includes('/academic-integrity-and-source-use/'), "ar
 expect(argumentEvidenceHtml.includes('/how-to-write-discussion-section/'), "argument evidence: discussion cluster link");
 
 const hedgingLanguageHtml = read("hedging-language-academic-writing/index.html");
+expect(hedgingLanguageHtml.includes("An eight-step claim-to-certainty workflow"), "hedging language: eight-step workflow");
+expect(hedgingLanguageHtml.includes("Name claim&apos;s job"), "hedging language: claim-function step");
+expect(hedgingLanguageHtml.includes("Reopen evidence"), "hedging language: evidence-trace step");
+expect(hedgingLanguageHtml.includes("State real scope"), "hedging language: scope step");
+expect(hedgingLanguageHtml.includes("Check relationship"), "hedging language: relationship step");
+expect(hedgingLanguageHtml.includes("Look for exceptions"), "hedging language: exceptions step");
+expect(hedgingLanguageHtml.includes("Fix logic before hedging"), "hedging language: logic-before-hedge step");
+expect(hedgingLanguageHtml.includes("Choose certainty and distance"), "hedging language: calibration step");
+expect(hedgingLanguageHtml.includes("Check reader responsibility"), "hedging language: responsibility step");
 expect(hedgingLanguageHtml.includes("Fictional learning example"), "hedging language: fictional-example disclosure");
+expect(hedgingLanguageHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or text to submit"), "hedging language: explicit fictional-learning boundary");
 expect(hedgingLanguageHtml.includes("writingcenter.gmu.edu"), "hedging language: George Mason guidance link");
 expect(hedgingLanguageHtml.includes("owl.purdue.edu"), "hedging language: Purdue OWL guidance link");
 expect(hedgingLanguageHtml.includes("students.unimelb.edu.au"), "hedging language: University of Melbourne guidance link");
