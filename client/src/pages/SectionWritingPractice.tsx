@@ -44,27 +44,28 @@ const data = {
   results: {
     canonical: "/results-section-example-research-paper/",
     title:
-      "How to Write a Results Section for a Research Paper: Example and Checklist",
+      "How to Write a Results Section of a Research Paper: Example and Checklist",
     description:
-      "Learn how to write a results section for a research paper with a fictional example, a practical template, and a checklist for reporting findings without turning them into discussion.",
+      "Learn how to write a results section of a research paper with a fictional example, sample reporting workflow, and checklist for presenting findings, tables, figures, negative results, and boundaries without turning Results into Discussion.",
     keywords:
-      "how to write results section research paper, how to write a results section for a research paper, results section example research paper, results section sample, research paper results section example, results section template",
+      "results section of a research paper, how to write results section of research paper, how to write a results section for a research paper, results section example research paper, results section sample, research paper results section example, example of results section of a research paper, results section template",
     eyebrow: "Research paper results practice",
-    h1: "How to write a Results section for a research paper",
+    h1: "How to write a Results section of a research paper",
     intro:
-      "Learn how to write a Results section that reports findings in a logical order through this fictional learning example, practical structure, and self-check. It is a writing model, not real research data, and it should never replace your own analysis or course requirements.",
-    question: "What did the study find?",
+      "Learn how to write a Results section that reports actual findings in a logical order through fictional learning examples, an eight-step reporting workflow, and checks for tables, figures, statistics, themes, negative results, and the Results–Discussion boundary. It is a writing model, not research data, and it cannot replace verified analysis or course requirements.",
+    question: "What did the study actually find in relation to the question, hypothesis, or theme?",
     checklist: [
-      "I organised findings around a research question, hypothesis, or clearly named theme.",
-      "I reported only information that helps answer the research question.",
-      "I used past tense and referred to every table or figure in numerical order.",
-      "I removed explanations of why a result occurred; those belong in the Discussion section.",
+      "I confirmed whether my assignment separates Results from Discussion or combines them, and I followed the required format.",
+      "I organised only actual, relevant findings around a research question, hypothesis, or clearly named theme rather than collection order.",
+      "I checked every statistic, quotation, theme, table, and figure against verified analysis, gave displays meaningful labels, and referred to each included display in the text.",
+      "I retained relevant null, negative, mixed, or unexpected findings instead of selecting only evidence that supports a preferred conclusion.",
+      "I used past tense where appropriate and removed explanations of why results occurred, literature comparison, implications, and recommendations unless the assignment explicitly combines those functions.",
     ],
-    sampleTitle: "Fictional quantitative example",
+    sampleTitle: "Fictional quantitative learning example",
     sample:
-      "To examine whether weekly planning was associated with assignment completion, a linear regression was conducted. Planning frequency was positively associated with completion score, b = 0.31, p = .02. As shown in Table 1, participants who reported planning at least four days per week had a higher mean completion score than participants who reported planning one day or fewer.",
+      "This fictional learning example is invented for practice; it is not a real dataset, statistical output, study result, table, figure, or text to submit. To examine a fictional association between weekly planning and assignment completion, a fictional linear regression reported an invented positive association. The fictional Results paragraph refers readers to an invented Table 1 and names only the fictional comparison it displays. It does not claim why planning helped, recommend an intervention, or treat invented values as evidence.",
     explanation:
-      "This paragraph names the analysis, reports the association, and directs the reader to the table. It does not claim why planning helped or recommend an intervention.",
+      "The fictional paragraph models a reportable relationship and a display reference without inventing a claim about cause or significance. In a real paper, check the exact analysis, values, labels, citations, uncertainty, and reporting conventions before drafting.",
     next: "/phrases/results",
     nextLabel: "Open Results phrases",
   },
@@ -155,12 +156,14 @@ export default function SectionWritingPractice({
   const isConclusion = kind === "conclusion";
   const sectionProcess = isResults
     ? [
-        ["1. Reopen the research question", "List the research questions, hypotheses, or qualitative themes, then decide the reader-friendly order in which each finding will answer the task."],
-        ["2. Choose the evidence readers need", "Select the results, quotations, descriptive statistics, comparisons, or displays that are necessary to answer the question; do not reproduce every raw observation."],
-        ["3. Prepare tables and figures first", "Check labels, notes, units, captions, and numbering before drafting. Refer to each table or figure only after introducing the relevant finding."],
-        ["4. Report the main finding precisely", "Name the analysis, finding, pattern, or theme accurately and use language that matches the actual measure, comparison, and degree of uncertainty."],
-        ["5. Include meaningful exceptions", "Check relevant unexpected, negative, or non-supporting findings against the analysis. Do not hide them because they complicate a preferred conclusion."],
-        ["6. Preserve the Discussion boundary", "Report what the analysis shows here; move explanations of why it happened, comparisons with earlier studies, implications, and recommendations to Discussion unless the task explicitly combines the sections."],
+        ["1. Confirm the Results contract", "Check whether the assignment separates Results from Discussion or combines them; confirm headings, required data or themes, display conventions, reporting style, word limit, and whether the study is completed or proposed."],
+        ["2. Reopen the research question or hypothesis", "List the research questions, hypotheses, qualitative themes, or required outcomes, then decide the reader-friendly order in which findings will answer the task."],
+        ["3. Inventory actual reportable findings", "Return to verified outputs, coded material, quotations, tables, figures, and analytic records. Do not draft from memory or create a value, theme, participant account, result, or significance statement because a model has a place for it."],
+        ["4. Select relevant and representative evidence", "Choose findings that answer the question, including relevant null, negative, mixed, or unexpected outcomes. Do not reproduce every raw observation or select only material that supports a preferred conclusion."],
+        ["5. Choose a logical reporting order", "Organize by question, hypothesis, key comparison, theme, or other explicit reader path rather than the chronological order of collection. Make the order match the research problem and the requirements of the assignment or discipline."],
+        ["6. Make tables and figures do distinct work", "Check labels, notes, units, captions, and numbering before drafting. Refer to each included table or figure in the text, highlight the finding readers need, and avoid repeating every value already visible in a display or caption."],
+        ["7. Report factual outcomes precisely", "Name the analysis, finding, pattern, theme, comparison, or uncertainty accurately and use language that matches the actual measure and record. Do not turn an observation into cause, explanation, recommendation, or claim of proof."],
+        ["8. Protect the Results boundary and reverse-check", "Report what the analysis shows here; move explanations of why it happened, prior-study comparison, implications, and recommendations to Discussion unless the task explicitly combines the sections. Recheck every reported item against the source record, display, method, research question, and final Discussion claim."],
       ]
     : isMethodology
       ? [
@@ -387,7 +390,7 @@ export default function SectionWritingPractice({
               <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
                 <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
                 <h2 id="results-evidence-title" className="font-serif text-3xl text-slate-purple mb-4">Report a qualitative pattern without making it a conclusion</h2>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice.</strong> A fictional interview project identifies three recurring descriptions of assignment planning: setting a weekly time, using reminders, and revising plans after missed deadlines. A Results section could introduce each theme, give a short, clearly attributed participant excerpt if the assignment permits, and show how the theme connects to the research question. It should not assert that reminders improve achievement or recommend a campus policy before the discussion has evaluated what the fictional evidence can and cannot show.</p>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice; it is not a real interview, participant quotation, coded theme, result, table, figure, or text to submit.</strong> A fictional interview project identifies three invented recurring descriptions of assignment planning: setting a weekly time, using reminders, and revising plans after missed deadlines. A fictional Results section could introduce each fictional theme, give a short, clearly attributed fictional participant excerpt if the assignment permits, and show how the theme connects to the fictional research question. It should not assert that reminders improve achievement, invent a count or quotation, or recommend a campus policy before Discussion has evaluated what the fictional evidence can and cannot show.</p>
               </article>
               <article className="p-7 bg-white border border-border rounded-2xl">
                 <h2 className="font-serif text-3xl text-slate-purple mb-4">Make displays do work, not repeat the paragraph</h2>
@@ -395,7 +398,7 @@ export default function SectionWritingPractice({
               </article>
               <article className="lg:col-span-2 p-7 bg-white border border-border rounded-2xl">
                 <h2 className="font-serif text-3xl text-slate-purple mb-3">Use Results guidance, then follow your assignment&apos;s reporting rules</h2>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://guides.lib.uci.edu/scientificwriting/results" target="_blank" rel="noreferrer">UC Irvine Libraries</a> advises writers to present representative data in logical order, use meaningful statistics, refer to each included table or figure in the text, and keep evaluation of significance for the Discussion. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&p=185931" target="_blank" rel="noreferrer">Sacred Heart University Library</a> likewise recommends a concise, factual Results section that focuses on findings relevant to the research question, does not ignore negative results, and distinguishes raw data or appendices from the main report. Check your instructor, department, journal, and discipline when they use a different structure or combine Results and Discussion.</p>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://libguides.usc.edu/writingguide/results" target="_blank" rel="noreferrer">USC Libraries</a> explains that Results report study findings in a logical sequence without bias or interpretation, focus on findings critical to the research problem, distinguish reportable results from raw material, and retain relevant negative results. <a className="text-primary underline underline-offset-4" href="https://guides.lib.uci.edu/scientificwriting/results" target="_blank" rel="noreferrer">UC Irvine Libraries</a> advises writers to present representative data in logical order, use meaningful statistics, refer to each included table or figure in the text, and keep evaluation of significance for Discussion. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&p=185931" target="_blank" rel="noreferrer">Sacred Heart University Library</a> likewise recommends concise, factual reporting relevant to the research question, non-duplication between displays and prose, and careful handling of negative results and appendices. Check your instructor, department, journal, and discipline when they use a different structure or combine Results and Discussion.</p>
               </article>
             </section>
           )}

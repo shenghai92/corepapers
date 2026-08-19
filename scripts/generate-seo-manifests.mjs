@@ -252,11 +252,11 @@ const STATIC_PAGE_SEO = {
   },
   "/results-section-example-research-paper": {
     title:
-      "How to Write a Results Section for a Research Paper: Example and Checklist | CorePapers",
+      "How to Write a Results Section of a Research Paper: Example and Checklist | CorePapers",
     description:
-      "Learn how to write a results section for a research paper with a fictional example, practical template, and checklist for reporting findings without turning them into discussion.",
+      "Learn how to write a results section of a research paper with a fictional example, sample reporting workflow, and checklist for presenting findings, tables, figures, negative results, and boundaries without turning Results into Discussion.",
     keywords:
-      "how to write results section research paper, how to write a results section for a research paper, results section example research paper, results section sample, research paper results section example, results section template",
+      "results section of a research paper, how to write results section of research paper, how to write a results section for a research paper, results section example research paper, results section sample, research paper results section example, example of results section of a research paper, results section template",
   },
   "/methodology-vs-methods-research-paper": {
     title: "Methodology vs. Methods in a Research Paper: Definition and Example | CorePapers",
