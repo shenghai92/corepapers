@@ -72,33 +72,37 @@ export default function ResearchGapExamples() {
             ))}
           </section>
 
-          <section className="mt-8 grid lg:grid-cols-2 gap-6">
-            <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
-              <p className="text-xs font-sans uppercase tracking-widest text-primary font-semibold mb-3">Find the pattern before naming the gap</p>
-              <h2 className="font-serif text-3xl text-slate-purple mb-4">A four-step search-and-synthesis routine</h2>
-              <ol className="space-y-4 text-sm font-sans text-muted-foreground leading-relaxed list-decimal pl-5">
-                {SIGNALS.map(item => <li key={item}>{item}</li>)}
-              </ol>
-            </article>
-            <article className="p-7 bg-white border border-border rounded-2xl">
-              <p className="text-xs font-sans uppercase tracking-widest text-primary font-semibold mb-3">Gap-statement structure</p>
-              <h2 className="font-serif text-3xl text-slate-purple mb-4">Connect evidence, limit, and purpose</h2>
-              <p className="text-sm font-sans text-muted-foreground leading-relaxed mb-4">
-                Try a three-part move rather than a standalone claim: describe the pattern in the literature, identify its specific boundary, then state what your project will examine. The final sentence should respond to the particular limit you named.
-              </p>
-              <div className="space-y-3">
-                <p className="rounded-xl bg-hero-gradient p-4 text-sm font-sans text-foreground/80"><strong>Pattern:</strong> Existing studies have mainly examined [topic] in [defined context].</p>
-                <p className="rounded-xl bg-hero-gradient p-4 text-sm font-sans text-foreground/80"><strong>Limit:</strong> Evidence about [specified population, condition, method, or outcome] remains limited or mixed.</p>
-                <p className="rounded-xl bg-hero-gradient p-4 text-sm font-sans text-foreground/80"><strong>Purpose:</strong> This study therefore investigates [focused question] using [appropriate scope or approach].</p>
-              </div>
-            </article>
+          <section className="mt-8 p-7 bg-hero-gradient border border-border rounded-2xl">
+            <p className="text-xs font-sans uppercase tracking-widest text-primary font-semibold mb-3">Find the pattern before naming the gap</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">An eight-step search-and-synthesis routine</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <article className="rounded-xl bg-white/80 border border-white p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">STEP 1 · BOUND</p><h3 className="font-serif text-xl text-slate-purple mb-2">Set a review boundary</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Define the task, topic, discipline, question, time frame, population, setting, and evidence expectations before searching for a “gap.”</p></article>
+              <article className="rounded-xl bg-white/80 border border-white p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">STEP 2 · RECORD</p><h3 className="font-serif text-xl text-slate-purple mb-2">Keep a search record</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Record databases, terms, date limits, inclusion choices, and the sources you actually reviewed so the claim has an honest scope.</p></article>
+              <article className="rounded-xl bg-white/80 border border-white p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">STEP 3 · SYNTHESIZE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Map the conversation</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Compare themes, methods, populations, contexts, findings, and limitations across sources rather than listing studies one by one.</p></article>
+              <article className="rounded-xl bg-white/80 border border-white p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">STEP 4 · VERIFY</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check limitation signals</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Treat “under-explored,” limitations, disagreements, exclusions, and future-research wording as leads to verify—not proof by themselves.</p></article>
+              <article className="rounded-xl bg-white/80 border border-white p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">STEP 5 · CHALLENGE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Search for counterevidence</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Search again with related terms, recent dates, key authors, and alternative contexts before saying evidence is limited or mixed.</p></article>
+              <article className="rounded-xl bg-white/80 border border-white p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">STEP 6 · STATE</p><h3 className="font-serif text-xl text-slate-purple mb-2">Name a bounded limit</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Describe only the specific conceptual, methodological, or contextual limit that your reviewed literature supports; do not claim no research exists.</p></article>
+              <article className="rounded-xl bg-white/80 border border-white p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">STEP 7 · CONNECT</p><h3 className="font-serif text-xl text-slate-purple mb-2">Link gap to a feasible fill</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Explain how a focused question and suitable approach could modestly address the boundary instead of promising a universal answer.</p></article>
+              <article className="rounded-xl bg-white/80 border border-white p-5"><p className="text-xs font-sans font-semibold text-primary mb-2">STEP 8 · RE-READ</p><h3 className="font-serif text-xl text-slate-purple mb-2">Check ethics and responsibility</h3><p className="text-sm font-sans text-muted-foreground leading-relaxed">Recheck feasibility, access, ethics, citations, field conventions, and assignment rules before presenting the gap as your proposal&apos;s rationale.</p></article>
+            </div>
+          </section>
+
+          <section className="mt-8 p-7 bg-white border border-border rounded-2xl">
+            <p className="text-xs font-sans uppercase tracking-widest text-primary font-semibold mb-3">Gap-statement structure</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-4">Connect evidence, limit, and purpose</h2>
+            <p className="text-sm font-sans text-muted-foreground leading-relaxed mb-4">Try a three-part move rather than standalone claim: describe pattern in literature, identify specific boundary, then state what project will examine. The final sentence should respond to particular limit you named.</p>
+            <div className="grid lg:grid-cols-3 gap-3">
+              <p className="rounded-xl bg-hero-gradient p-4 text-sm font-sans text-foreground/80"><strong>Pattern:</strong> Existing studies have mainly examined [topic] in [defined context].</p>
+              <p className="rounded-xl bg-hero-gradient p-4 text-sm font-sans text-foreground/80"><strong>Limit:</strong> Evidence about [specified population, condition, method, or outcome] remains limited or mixed.</p>
+              <p className="rounded-xl bg-hero-gradient p-4 text-sm font-sans text-foreground/80"><strong>Purpose:</strong> This study therefore investigates [focused question] using [appropriate scope or approach].</p>
+            </div>
           </section>
 
           <section className="mt-8 p-7 bg-hero-gradient border border-border rounded-2xl">
             <p className="text-xs font-sans uppercase tracking-widest text-primary font-semibold mb-3">Fictional learning example</p>
             <h2 className="font-serif text-3xl text-slate-purple mb-4">Turn a source pattern into a cautious gap statement</h2>
             <p className="text-sm font-sans text-muted-foreground leading-relaxed mb-5">
-              This fictional learning example is invented for practice. Its studies, authors, findings, and citations are not real evidence and must not be submitted as research sources.
+              <strong>This fictional learning example is invented for practice; it is not student work, research evidence, or text to submit.</strong> Its studies, authors, findings, and citations are not real evidence and must not be submitted as research sources.
             </p>
             <div className="grid lg:grid-cols-3 gap-4 mb-5">
               <div className="rounded-xl bg-white/80 border border-white p-5"><p className="font-sans text-xs font-semibold text-primary mb-2">Fictional source pattern</p><p className="font-sans text-sm text-foreground/80 leading-relaxed">Three invented studies examine deadline reminders for first-year students, but all use short self-report surveys during one term.</p></div>

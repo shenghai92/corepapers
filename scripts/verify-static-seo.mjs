@@ -1058,7 +1058,17 @@ expect(proposalTemplateHtml.includes('/academic-integrity-and-source-use/'), "re
 expect(proposalTemplateHtml.includes('/citations/'), "research proposal template: citations link");
 
 const researchGapHtml = read("research-gap-examples/index.html");
+expect(researchGapHtml.includes("An eight-step search-and-synthesis routine"), "research gap examples: eight-step search workflow");
+expect(researchGapHtml.includes("Set review boundary"), "research gap examples: review-boundary step");
+expect(researchGapHtml.includes("Keep search record"), "research gap examples: search-record step");
+expect(researchGapHtml.includes("Map conversation"), "research gap examples: synthesis step");
+expect(researchGapHtml.includes("Check limitation signals"), "research gap examples: limitation-signal step");
+expect(researchGapHtml.includes("Search for counterevidence"), "research gap examples: counterevidence step");
+expect(researchGapHtml.includes("Name bounded limit"), "research gap examples: bounded-limit step");
+expect(researchGapHtml.includes("Link gap to feasible fill"), "research gap examples: gap-fill step");
+expect(researchGapHtml.includes("Check ethics and responsibility"), "research gap examples: ethics-responsibility step");
 expect(researchGapHtml.includes("Fictional learning example"), "research gap examples: fictional-example disclosure");
+expect(researchGapHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or text to submit"), "research gap examples: explicit fictional-learning boundary");
 expect(researchGapHtml.includes("guides.lib.uchicago.edu"), "research gap examples: University of Chicago guidance link");
 expect(researchGapHtml.includes("owl.purdue.edu"), "research gap examples: Purdue OWL guidance link");
 expect(researchGapHtml.includes("sites.middlebury.edu"), "research gap examples: Middlebury guidance link");
