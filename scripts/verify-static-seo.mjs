@@ -1019,9 +1019,17 @@ expect(
   ),
   "literature synthesis: Purdue OWL guidance link"
 );
-expect(synthesisHtml.includes("1. Start with scope"), "literature synthesis: five-step workflow");
+expect(synthesisHtml.includes("An eight-step matrix-to-synthesis workflow"), "literature synthesis: eight-step workflow");
+expect(synthesisHtml.includes("Set question and boundary"), "literature synthesis: scope step");
+expect(synthesisHtml.includes("Keep sources traceable"), "literature synthesis: source-record step");
+expect(synthesisHtml.includes("Select evidence for question"), "literature synthesis: evidence-selection step");
+expect(synthesisHtml.includes("Compare like with like"), "literature synthesis: coding step");
+expect(synthesisHtml.includes("Find relationships and differences"), "literature synthesis: grouping step");
+expect(synthesisHtml.includes("Check gaps and counterexamples"), "literature synthesis: counterexample step");
+expect(synthesisHtml.includes("Turn labels into claims"), "literature synthesis: assertion step");
+expect(synthesisHtml.includes("Read back with responsibility"), "literature synthesis: responsibility step");
 expect(
-  synthesisHtml.includes("This entire fictional learning example, including its matrix, is invented for practice"),
+  synthesisHtml.includes("This entire fictional learning example, including its matrix, is invented for practice; it is not student work, research evidence, or text to submit"),
   "literature synthesis: fictional-matrix disclosure"
 );
 expect(synthesisHtml.includes("Let the matrix reveal questions, not prove absences"), "literature synthesis: research-gap boundary");
