@@ -353,13 +353,27 @@ expect(academicParaphrasingToolHtml.includes('/academic-writing-examples/'), "ac
 expect(academicParaphrasingToolHtml.includes('/polish/'), "academic paraphrasing tool: essay-polish link");
 
 const paraphrasingGuideHtml = read("how-to-paraphrase-without-plagiarizing/index.html");
+expect(paraphrasingGuideHtml.includes("An eight-step academic paraphrasing process"), "paraphrasing guide: eight-step workflow");
+expect(paraphrasingGuideHtml.includes("Record original source"), "paraphrasing guide: source-record workflow step");
+expect(paraphrasingGuideHtml.includes("Understand source first"), "paraphrasing guide: understanding workflow step");
+expect(paraphrasingGuideHtml.includes("Decide why paragraph needs it"), "paraphrasing guide: purpose workflow step");
+expect(paraphrasingGuideHtml.includes("Set source aside and rebuild"), "paraphrasing guide: rebuild workflow step");
+expect(paraphrasingGuideHtml.includes("Compare for accuracy and distance"), "paraphrasing guide: accuracy workflow step");
+expect(paraphrasingGuideHtml.includes("Mark exact or distinctive wording"), "paraphrasing guide: quotation workflow step");
+expect(paraphrasingGuideHtml.includes("Attribute where borrowed idea appears"), "paraphrasing guide: attribution workflow step");
+expect(paraphrasingGuideHtml.includes("Reverse-check before submission"), "paraphrasing guide: final-check workflow step");
 expect(paraphrasingGuideHtml.includes("Fictional learning example"), "paraphrasing guide: fictional-example disclosure");
+expect(paraphrasingGuideHtml.includes("This fictional learning example is invented for practice"), "paraphrasing guide: fictional-example boundary");
 expect(paraphrasingGuideHtml.includes("writingcenter.unc.edu"), "paraphrasing guide: UNC guidance link");
 expect(paraphrasingGuideHtml.includes("writingcenter.gmu.edu"), "paraphrasing guide: George Mason guidance link");
 expect(paraphrasingGuideHtml.includes("niu.edu/academic-integrity"), "paraphrasing guide: NIU integrity guidance link");
+expect(paraphrasingGuideHtml.includes("owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html"), "paraphrasing guide: Purdue guidance link");
 expect(paraphrasingGuideHtml.includes("What a paraphrasing tool cannot decide"), "paraphrasing guide: tool-responsibility boundary");
 expect(paraphrasingGuideHtml.includes('/academic-integrity-and-source-use/'), "paraphrasing guide: source-use cluster link");
 expect(paraphrasingGuideHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "paraphrasing guide: paraphrasing-tool cluster link");
+expect(paraphrasingGuideHtml.includes('/evaluate-academic-sources/'), "paraphrasing guide: source-evaluation cluster link");
+expect(paraphrasingGuideHtml.includes('/academic-argument-evidence/'), "paraphrasing guide: argument-evidence cluster link");
+expect(paraphrasingGuideHtml.includes('/academic-paragraph-structure/'), "paraphrasing guide: paragraph-structure cluster link");
 
 const academicIntegrityHtml = read("academic-integrity-and-source-use/index.html");
 expect(academicIntegrityHtml.includes("Academic integrity starts with clear source use"), "academic integrity: expected H1");
