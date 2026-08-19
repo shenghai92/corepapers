@@ -1110,11 +1110,17 @@ expect(outlineTemplateHtml.includes('/citations/'), "research-paper outline: cit
 
 const abstractGuideHtml = read("how-to-write-an-abstract-research-paper/index.html");
 expect(abstractGuideHtml.includes("How to write an abstract for a research paper"), "abstract guide: expected H1");
-expect(abstractGuideHtml.includes("Build the abstract from the completed paper"), "abstract guide: verification workflow");
-expect(abstractGuideHtml.includes("Identify required abstract type"), "abstract guide: abstract-type checkpoint");
+expect(abstractGuideHtml.includes("An eight-step abstract verification workflow"), "abstract guide: eight-step verification workflow");
+expect(abstractGuideHtml.includes("Confirm abstract rule"), "abstract guide: abstract-rule checkpoint");
+expect(abstractGuideHtml.includes("Work from completed paper"), "abstract guide: completed-paper checkpoint");
+expect(abstractGuideHtml.includes("State focused purpose"), "abstract guide: purpose checkpoint");
+expect(abstractGuideHtml.includes("Report actual approach"), "abstract guide: approach checkpoint");
 expect(abstractGuideHtml.includes("Make result informative"), "abstract guide: informative-result checkpoint");
-expect(abstractGuideHtml.includes("Reverse-check against paper"), "abstract guide: reverse-check checkpoint");
+expect(abstractGuideHtml.includes("Match implication to evidence"), "abstract guide: implication-evidence checkpoint");
+expect(abstractGuideHtml.includes("Check searchability and format"), "abstract guide: searchability-format checkpoint");
+expect(abstractGuideHtml.includes("Reverse-check with responsibility"), "abstract guide: responsibility checkpoint");
 expect(abstractGuideHtml.includes("Fictional learning example"), "abstract guide: fictional-example disclosure");
+expect(abstractGuideHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or a model to submit unchanged"), "abstract guide: explicit fictional-learning boundary");
 expect(abstractGuideHtml.includes("writingcenter.gmu.edu/writing-resources/different-genres/writing-an-abstract"), "abstract guide: GMU guidance link");
 expect(abstractGuideHtml.includes("writing.wisc.edu"), "abstract guide: Wisconsin guidance link");
 expect(abstractGuideHtml.includes('/introduction-section-example-research-paper/'), "abstract guide: introduction-example link");

@@ -11,11 +11,14 @@ const ABSTRACT_MOVES = [
 ] as const;
 
 const ABSTRACT_CHECKPOINTS = [
-  ["1. Identify the required abstract type", "Check the assignment, journal, conference, or department instructions for word limit, headings, tense, keywords, and whether the abstract is structured or unstructured. Do not force an IMRaD sequence onto a paper that uses a different genre."],
-  ["2. Draft from the completed paper", "Mark the exact problem or claim, approach, principal result or answer, and scope-limited implication in the final draft before condensing them. An abstract should report completed work, not promise a future investigation."],
-  ["3. Make the result informative", "Replace broad category language such as 'the study draws conclusions' with the specific result, relationship, theme, or central argument that readers need to evaluate relevance."],
-  ["4. Keep the takeaway proportionate", "Match implications to the design, data, population, context, and uncertainty. A self-report association, for example, does not establish a general causal effect."],
-  ["5. Reverse-check against the paper", "Read every abstract sentence alongside the final paper. Remove a detail, citation, claim, keyword, or recommendation that the body does not support or that exceeds the required length."],
+  ["1. Confirm the abstract rule", "Check the assignment, journal, conference, or department instructions for word limit, headings, tense, keywords, and whether the abstract is structured or unstructured. Do not force an IMRaD sequence onto a different genre."],
+  ["2. Work from the completed paper", "Mark the exact problem or claim, approach, principal result or answer, and scope-limited implication in the stable final draft. An abstract reports completed work; it does not promise a future investigation."],
+  ["3. State the focused purpose", "Name the specific problem, question, or central claim without turning the abstract into a broad introduction or a mini literature review."],
+  ["4. Report the actual approach", "Name the design, material, data, source base, or analytical approach only as precisely as the completed paper supports; do not add a method the paper did not use."],
+  ["5. Make the result informative", "Replace broad category language such as 'the study draws conclusions' with the specific finding, relationship, theme, or central argument readers need to evaluate relevance."],
+  ["6. Match implication to evidence", "Keep takeaway proportionate to design, data, population, context, and uncertainty. A self-report association, for example, does not establish a general causal effect."],
+  ["7. Check searchability and format", "Choose accurate content and method keywords, meet the required word count and format, and remove citations, detailed background, or unnecessary promises unless the required style explicitly calls for them."],
+  ["8. Reverse-check with responsibility", "Read every sentence alongside final paper and assignment rule. Remove a detail, claim, keyword, or recommendation the body does not support, then submit only an abstract you can explain and defend."],
 ] as const;
 
 export default function AbstractWritingGuide() {
@@ -79,9 +82,9 @@ export default function AbstractWritingGuide() {
 
           <section className="mt-6 p-7 bg-white border border-border rounded-2xl">
             <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Verification workflow</p>
-            <h2 className="font-serif text-3xl text-slate-purple mb-4">Build the abstract from the completed paper</h2>
+            <h2 className="font-serif text-3xl text-slate-purple mb-4">An eight-step abstract verification workflow</h2>
             <p className="font-sans text-sm text-muted-foreground leading-relaxed mb-6">Use these checkpoints after the paper is stable. They help you make the abstract searchable and informative without turning it into an introduction, a proposal, a mini literature review, or a list of promises.</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {ABSTRACT_CHECKPOINTS.map(([title, detail]) => (
                 <article key={title} className="p-5 rounded-xl bg-muted/50">
                   <h3 className="font-serif text-xl text-slate-purple mb-2">{title}</h3>
@@ -96,7 +99,7 @@ export default function AbstractWritingGuide() {
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
               <h2 className="font-serif text-3xl text-slate-purple mb-4">A compact IMRaD-style abstract</h2>
               <p className="font-sans text-sm text-foreground/80 leading-relaxed">
-                This fictional learning example is not real student work, research evidence, or a model to submit unchanged. This study examined the association between weekly planning routines and self-reported assignment completion among first-year undergraduates. An anonymous cross-sectional survey was completed by students recruited through an approved course channel. More frequent planning was associated with higher completion scores. Because the data were self-reported and cross-sectional, the findings cannot establish causation; however, they identify a focused question for future longitudinal research.
+                <strong>This fictional learning example is invented for practice; it is not student work, research evidence, or a model to submit unchanged.</strong> This fictional study examined the association between weekly planning routines and self-reported assignment completion among first-year undergraduates. An anonymous cross-sectional survey was completed by students recruited through an approved course channel. More frequent planning was associated with higher completion scores. Because the data were self-reported and cross-sectional, the findings cannot establish causation; however, they identify a focused question for future longitudinal research.
               </p>
               <p className="mt-4 font-sans text-sm text-muted-foreground leading-relaxed">
                 The example states purpose, method, principal finding, and a cautious implication. It does not add citations, tables, or a detailed literature review.
