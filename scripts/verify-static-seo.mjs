@@ -71,6 +71,30 @@ expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation 
 expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
 expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
+const conclusionPhrasesHtml = read("phrases/conclusion/index.html");
+expect(conclusionPhrasesHtml.includes("Academic phrases for research paper conclusions"), "conclusion phrases: expected H1");
+expect(conclusionPhrasesHtml.includes("Leave readers with an evidence-led takeaway"), "conclusion phrases: evidence-led-takeaway workflow");
+expect(conclusionPhrasesHtml.includes("Synthesize argument path"), "conclusion phrases: synthesis workflow step");
+expect(conclusionPhrasesHtml.includes("Remove new material"), "conclusion phrases: new-material boundary");
+expect(conclusionPhrasesHtml.includes("Fictional learning example: synthesize instead of restating"), "conclusion phrases: fictional-learning disclosure");
+expect(conclusionPhrasesHtml.includes("writingcenter.unc.edu/tips-and-tools/conclusions"), "conclusion phrases: UNC conclusion guidance link");
+expect(conclusionPhrasesHtml.includes('/conclusion-section-example-research-paper/'), "conclusion phrases: conclusion-example link");
+expect(conclusionPhrasesHtml.includes('/how-to-write-discussion-section/'), "conclusion phrases: discussion-guide link");
+expect(conclusionPhrasesHtml.includes('/academic-argument-evidence/'), "conclusion phrases: argument-evidence link");
+expect(conclusionPhrasesHtml.includes('/research-question-examples/'), "conclusion phrases: research-question link");
+
+const literatureReviewPhrasesHtml = read("phrases/literature-review/index.html");
+expect(literatureReviewPhrasesHtml.includes("Academic phrases for literature reviews and source synthesis"), "literature review phrases: expected H1");
+expect(literatureReviewPhrasesHtml.includes("Turn source notes into a cross-source claim"), "literature review phrases: cross-source workflow");
+expect(literatureReviewPhrasesHtml.includes("Group by meaningful lens"), "literature review phrases: thematic-grouping workflow step");
+expect(literatureReviewPhrasesHtml.includes("State bounded next question"), "literature review phrases: bounded-next-question workflow step");
+expect(literatureReviewPhrasesHtml.includes("Fictional learning example: build synthesis before using a gap phrase"), "literature review phrases: fictional-learning disclosure");
+expect(literatureReviewPhrasesHtml.includes("guides.library.jhu.edu/lit-review/synthesize"), "literature review phrases: Johns Hopkins synthesis guidance link");
+expect(literatureReviewPhrasesHtml.includes('/literature-review-example/'), "literature review phrases: literature-review-example link");
+expect(literatureReviewPhrasesHtml.includes('/literature-review-synthesis-matrix/'), "literature review phrases: synthesis-matrix link");
+expect(literatureReviewPhrasesHtml.includes('/research-gap-examples/'), "literature review phrases: research-gap link");
+expect(literatureReviewPhrasesHtml.includes('/research-question-examples/'), "literature review phrases: research-question link");
+
 const introductionPhrasesHtml = read("phrases/introduction/index.html");
 expect(introductionPhrasesHtml.includes("Academic phrases for research paper introductions"), "introduction phrases: expected H1");
 expect(introductionPhrasesHtml.includes("Guide readers from a bounded context to a research question"), "introduction phrases: context-question workflow");

@@ -98,6 +98,29 @@ const SECTION_CONTENT: Record<
     checks: ["Organize paragraphs around a theme, question, method, or debate rather than author order.", "Place citations close to the particular source-based claim they support.", "Distinguish your synthesis from the individual findings you are reporting."],
     guideHref: "/literature-review-example",
     guideTitle: "Read the thematic Literature Review example",
+    deepDive: {
+      title: "Turn source notes into a cross-source claim",
+      intro: "A literature review phrase should express a relationship you have established across sources, not make a row of separate summaries sound like synthesis. Organize source notes around a question, theme, method, variable, or debate before choosing comparison and gap language.",
+      steps: [
+        { title: "1. Record the source relationship", text: "For each source, note its relevant claim, method, setting, population, evidence, and limit rather than only saving a quotation or topic label." },
+        { title: "2. Group by a meaningful lens", text: "Arrange sources by shared theme, variable, approach, disagreement, time period, or theoretical position that helps answer the review question." },
+        { title: "3. Compare a specific feature", text: "Use comparison phrases to identify what aligns, differs, extends, or remains uncertain in the sources' evidence, design, context, or conclusion." },
+        { title: "4. Explain the connection", text: "Show readers why the relationship matters to the review question; do not imply that sources agree simply because they discuss the same topic." },
+        { title: "5. State a bounded next question", text: "Describe limited, uneven, or underexplored evidence only after reviewing an appropriate body of work, then frame a focused next step that follows from the synthesis." },
+      ],
+      fictionalTitle: "Fictional learning example: build synthesis before using a gap phrase",
+      fictionalText: "This invented practice situation is not a research finding or paragraph to submit. A fictional writer places three invented study notes in a matrix, groups them by a shared variable, identifies a difference in setting and measurement, and uses a cautious phrase to describe limited insight into one defined context. The writer does not claim that no research exists or treat the fictional sources as real evidence.",
+      authorityText: "Johns Hopkins Libraries explains that a synthesis matrix can record each source's main points and reveal how sources relate to one another when arranged by themes or variables. Use this relationship work before adapting a shared-pattern, contrast, or research-gap phrase.",
+      authorityLinks: [
+        { href: "https://guides.library.jhu.edu/lit-review/synthesize", label: "Read Johns Hopkins Libraries' synthesis guidance" },
+      ],
+      resources: [
+        { href: "/literature-review-example", title: "Literature Review example", text: "Review a thematic structure and a clearly labelled fictional learning example before drafting." },
+        { href: "/literature-review-synthesis-matrix", title: "Synthesis matrix guide", text: "Map sources, themes, methods, and relationships before writing cross-source paragraphs." },
+        { href: "/research-gap-examples", title: "Research gap examples", text: "Describe underexplored evidence carefully and connect a gap to a feasible research question." },
+        { href: "/research-question-examples", title: "Research question examples", text: "Turn a synthesis finding into a focused, researchable next question." },
+      ],
+    },
   },
   conclusion: {
     eyebrow: "Academic phrase library · Conclusion",
@@ -117,6 +140,29 @@ const SECTION_CONTENT: Record<
     checks: ["State what the paper established without repeating the abstract sentence by sentence.", "Remove new data, citations, and claims that have not been developed in the body.", "Use a careful implication that matches the limits of the evidence."],
     guideHref: "/conclusion-section-example-research-paper",
     guideTitle: "Read the Conclusion structure and example guide",
+    deepDive: {
+      title: "Leave readers with an evidence-led takeaway",
+      intro: "A conclusion phrase should help readers see how the paper's claim, evidence, analysis, and limits fit together. It is a place to synthesize and clarify why the established argument matters, not a place to introduce a new thesis, unsupported evidence, or unrelated subtopic.",
+      steps: [
+        { title: "1. Return to the question or claim", text: "Reorient readers to the problem the paper actually addressed without copying the introduction or simply repeating the thesis word for word." },
+        { title: "2. Synthesize the argument path", text: "Show how the major points and evidence work together to support a bounded answer or contribution rather than listing each section again." },
+        { title: "3. State a proportionate contribution", text: "Explain what the analysis clarifies, changes, or makes newly visible within the paper's evidence, context, and limitations." },
+        { title: "4. Answer the so-what question carefully", text: "Connect the established argument to a broader implication, application, or next question only when the body has prepared readers for that move." },
+        { title: "5. Remove new material", text: "Before finalizing, move new evidence, quotations, citations, subtopics, and unargued claims into the body or omit them; do not unveil the thesis for the first time at the end." },
+      ],
+      fictionalTitle: "Fictional learning example: synthesize instead of restating",
+      fictionalText: "This invented practice situation is not a conclusion to submit. A fictional writer connects an already established claim, two previously analyzed strands of evidence, and a stated limitation to explain a bounded contribution. The writer deletes a newly discovered quotation and a new policy recommendation because neither has been developed in the body of the fictional paper.",
+      authorityText: "UNC Writing Center describes a conclusion as an opportunity to synthesize the paper's ideas, demonstrate their importance, and give readers a useful takeaway. Its guidance distinguishes synthesis from simple summary and cautions against first stating the thesis, adding new ideas, or inserting evidence that belongs in the body.",
+      authorityLinks: [
+        { href: "https://writingcenter.unc.edu/tips-and-tools/conclusions/", label: "Read UNC Writing Center's conclusion guidance" },
+      ],
+      resources: [
+        { href: "/conclusion-section-example-research-paper", title: "Conclusion section example", text: "Review conclusion functions and a clearly labelled fictional learning example before drafting." },
+        { href: "/how-to-write-discussion-section", title: "Discussion writing guide", text: "Decide whether implications, limitations, and future research belong in the Discussion or Conclusion for your assignment." },
+        { href: "/academic-argument-evidence", title: "Academic argument and evidence", text: "Check that the final takeaway follows from the claim, support, reasoning, and limitations in the body." },
+        { href: "/research-question-examples", title: "Research question examples", text: "Return to the focused problem the paper set out to address rather than widening the scope at the end." },
+      ],
+    },
   },
   methods: {
     eyebrow: "Academic phrase library · Methods",
