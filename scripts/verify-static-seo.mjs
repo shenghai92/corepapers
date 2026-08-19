@@ -915,8 +915,27 @@ expect(researchGapHtml.includes('/research-proposal-template/'), "research gap e
 
 const outlineTemplateHtml = read("research-paper-outline-template/index.html");
 expect(outlineTemplateHtml.includes("Fictional learning example"), "research-paper outline: fictional-example disclosure");
+expect(outlineTemplateHtml.includes("This fictional learning example is invented for practice"), "research-paper outline: fictional learning boundary");
+expect(outlineTemplateHtml.includes("Build an outline from a task, evidence path, and reader&apos;s next question"), "research-paper outline: evidence-path workflow");
+expect(outlineTemplateHtml.includes("Confirm the task and reader"), "research-paper outline: task-reader workflow step");
+expect(outlineTemplateHtml.includes("State a working purpose or claim"), "research-paper outline: purpose-claim workflow step");
+expect(outlineTemplateHtml.includes("Inventory usable material"), "research-paper outline: material-inventory workflow step");
+expect(outlineTemplateHtml.includes("Group related work"), "research-paper outline: grouping workflow step");
+expect(outlineTemplateHtml.includes("Choose a reader-facing order"), "research-paper outline: ordering workflow step");
+expect(outlineTemplateHtml.includes("Label hierarchy and evidence jobs"), "research-paper outline: hierarchy workflow step");
+expect(outlineTemplateHtml.includes("Check the full paper contract"), "research-paper outline: paper-contract workflow step");
+expect(outlineTemplateHtml.includes("Revise as research develops"), "research-paper outline: revision workflow step");
+expect(outlineTemplateHtml.includes("Use an evidence-path record before drafting"), "research-paper outline: evidence-path checklist");
 expect(outlineTemplateHtml.includes("owl.purdue.edu"), "research-paper outline: Purdue OWL guidance link");
 expect(outlineTemplateHtml.includes("writingcenter.gmu.edu"), "research-paper outline: university writing-center guidance link");
+expect(outlineTemplateHtml.includes('/research-question-examples/'), "research-paper outline: research-question link");
+expect(outlineTemplateHtml.includes('/thesis-statement-examples/'), "research-paper outline: thesis link");
+expect(outlineTemplateHtml.includes('/academic-paragraph-structure/'), "research-paper outline: paragraph link");
+expect(outlineTemplateHtml.includes('/research-paper-sections/'), "research-paper outline: sections hub link");
+expect(outlineTemplateHtml.includes('/literature-review-synthesis-matrix/'), "research-paper outline: synthesis-matrix link");
+expect(outlineTemplateHtml.includes('/academic-argument-evidence/'), "research-paper outline: argument link");
+expect(outlineTemplateHtml.includes('/academic-integrity-and-source-use/'), "research-paper outline: source-use link");
+expect(outlineTemplateHtml.includes('/citations/'), "research-paper outline: citations link");
 
 const abstractGuideHtml = read("how-to-write-an-abstract-research-paper/index.html");
 expect(abstractGuideHtml.includes("How to write an abstract for a research paper"), "abstract guide: expected H1");
