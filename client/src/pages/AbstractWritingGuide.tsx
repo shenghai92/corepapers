@@ -10,6 +10,14 @@ const ABSTRACT_MOVES = [
   ["Implication", "State what the result means within the limits of the paper; do not introduce new evidence or overclaim."],
 ] as const;
 
+const ABSTRACT_CHECKPOINTS = [
+  ["1. Identify the required abstract type", "Check the assignment, journal, conference, or department instructions for word limit, headings, tense, keywords, and whether the abstract is structured or unstructured. Do not force an IMRaD sequence onto a paper that uses a different genre."],
+  ["2. Draft from the completed paper", "Mark the exact problem or claim, approach, principal result or answer, and scope-limited implication in the final draft before condensing them. An abstract should report completed work, not promise a future investigation."],
+  ["3. Make the result informative", "Replace broad category language such as 'the study draws conclusions' with the specific result, relationship, theme, or central argument that readers need to evaluate relevance."],
+  ["4. Keep the takeaway proportionate", "Match implications to the design, data, population, context, and uncertainty. A self-report association, for example, does not establish a general causal effect."],
+  ["5. Reverse-check against the paper", "Read every abstract sentence alongside the final paper. Remove a detail, citation, claim, keyword, or recommendation that the body does not support or that exceeds the required length."],
+] as const;
+
 export default function AbstractWritingGuide() {
   const [, setLocation] = useLocation();
   return (
@@ -69,6 +77,20 @@ export default function AbstractWritingGuide() {
             ))}
           </section>
 
+          <section className="mt-6 p-7 bg-white border border-border rounded-2xl">
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Verification workflow</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-4">Build the abstract from the completed paper</h2>
+            <p className="font-sans text-sm text-muted-foreground leading-relaxed mb-6">Use these checkpoints after the paper is stable. They help you make the abstract searchable and informative without turning it into an introduction, a proposal, a mini literature review, or a list of promises.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {ABSTRACT_CHECKPOINTS.map(([title, detail]) => (
+                <article key={title} className="p-5 rounded-xl bg-muted/50">
+                  <h3 className="font-serif text-xl text-slate-purple mb-2">{title}</h3>
+                  <p className="font-sans text-sm text-muted-foreground leading-relaxed">{detail}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
           <section className="mt-6 grid lg:grid-cols-[1.15fr_0.85fr] gap-6">
             <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
               <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
@@ -105,15 +127,30 @@ export default function AbstractWritingGuide() {
             </p>
           </section>
 
-          <section className="mt-6 grid sm:grid-cols-3 gap-4">
-            <Link href="/introduction-section-example-research-paper" className="p-5 bg-white border border-border rounded-xl">
+          <section className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link href="/introduction-section-example-research-paper" className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
               <h2 className="font-serif text-xl text-slate-purple">Plan the Introduction</h2><p className="text-sm mt-2 text-muted-foreground font-sans">Define the research problem before you summarize it.</p>
             </Link>
-            <Link href="/discussion-section-example-research-paper" className="p-5 bg-white border border-border rounded-xl">
+            <Link href="/methodology-section-example-research-paper" className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+              <h2 className="font-serif text-xl text-slate-purple">Verify the method</h2><p className="text-sm mt-2 text-muted-foreground font-sans">Name only the design, materials, and analysis the completed paper actually used.</p>
+            </Link>
+            <Link href="/results-section-example-research-paper" className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+              <h2 className="font-serif text-xl text-slate-purple">Check the result</h2><p className="text-sm mt-2 text-muted-foreground font-sans">Make the central finding concrete without importing extra values or a new claim.</p>
+            </Link>
+            <Link href="/discussion-section-example-research-paper" className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
               <h2 className="font-serif text-xl text-slate-purple">Check implications</h2><p className="text-sm mt-2 text-muted-foreground font-sans">Keep the final takeaway proportionate to the evidence.</p>
             </Link>
-            <Link href="/phrases/introduction" className="p-5 bg-white border border-border rounded-xl">
+            <Link href="/conclusion-section-example-research-paper" className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+              <h2 className="font-serif text-xl text-slate-purple">Align the close</h2><p className="text-sm mt-2 text-muted-foreground font-sans">Keep the abstract contribution and paper conclusion consistent without copying either one.</p>
+            </Link>
+            <Link href="/phrases/introduction" className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
               <h2 className="font-serif text-xl text-slate-purple">Use section phrases</h2><p className="text-sm mt-2 text-muted-foreground font-sans">Adapt academic wording to your own verified details.</p>
+            </Link>
+            <Link href="/academic-integrity-and-source-use" className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+              <h2 className="font-serif text-xl text-slate-purple">Protect source accuracy</h2><p className="text-sm mt-2 text-muted-foreground font-sans">Do not add citations, borrowed claims, or details that the paper has not verified.</p>
+            </Link>
+            <Link href="/polish" className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+              <h2 className="font-serif text-xl text-slate-purple">Polish after checking</h2><p className="text-sm mt-2 text-muted-foreground font-sans">Use language support only after the content, source responsibility, and required format are settled.</p>
             </Link>
           </section>
 

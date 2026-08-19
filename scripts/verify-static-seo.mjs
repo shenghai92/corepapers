@@ -755,8 +755,21 @@ expect(outlineTemplateHtml.includes("owl.purdue.edu"), "research-paper outline: 
 expect(outlineTemplateHtml.includes("writingcenter.gmu.edu"), "research-paper outline: university writing-center guidance link");
 
 const abstractGuideHtml = read("how-to-write-an-abstract-research-paper/index.html");
+expect(abstractGuideHtml.includes("How to write an abstract for a research paper"), "abstract guide: expected H1");
+expect(abstractGuideHtml.includes("Build the abstract from the completed paper"), "abstract guide: verification workflow");
+expect(abstractGuideHtml.includes("Identify required abstract type"), "abstract guide: abstract-type checkpoint");
+expect(abstractGuideHtml.includes("Make result informative"), "abstract guide: informative-result checkpoint");
+expect(abstractGuideHtml.includes("Reverse-check against paper"), "abstract guide: reverse-check checkpoint");
 expect(abstractGuideHtml.includes("Fictional learning example"), "abstract guide: fictional-example disclosure");
-expect(abstractGuideHtml.includes("writing.wisc.edu"), "abstract guide: university guidance link");
+expect(abstractGuideHtml.includes("writingcenter.gmu.edu/writing-resources/different-genres/writing-an-abstract"), "abstract guide: GMU guidance link");
+expect(abstractGuideHtml.includes("writing.wisc.edu"), "abstract guide: Wisconsin guidance link");
+expect(abstractGuideHtml.includes('/introduction-section-example-research-paper/'), "abstract guide: introduction-example link");
+expect(abstractGuideHtml.includes('/methodology-section-example-research-paper/'), "abstract guide: methodology-example link");
+expect(abstractGuideHtml.includes('/results-section-example-research-paper/'), "abstract guide: results-example link");
+expect(abstractGuideHtml.includes('/discussion-section-example-research-paper/'), "abstract guide: discussion-example link");
+expect(abstractGuideHtml.includes('/conclusion-section-example-research-paper/'), "abstract guide: conclusion-example link");
+expect(abstractGuideHtml.includes('/academic-integrity-and-source-use/'), "abstract guide: source-use link");
+expect(abstractGuideHtml.includes('/polish/'), "abstract guide: polish link");
 const introductionPracticeHtml = read("introduction-section-example-research-paper/index.html");
 expect(introductionPracticeHtml.includes("Fictional learning example"), "introduction practice: fictional example in raw HTML");
 expect(introductionPracticeHtml.includes("How to build an Introduction section step by step"), "introduction practice: drafting workflow");
