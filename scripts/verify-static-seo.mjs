@@ -899,10 +899,28 @@ expect(synthesisHtml.includes('/research-gap-examples/'), "literature synthesis:
 
 const proposalTemplateHtml = read("research-proposal-template/index.html");
 expect(proposalTemplateHtml.includes("Fictional learning example"), "research proposal template: fictional-example disclosure");
+expect(proposalTemplateHtml.includes("This fictional learning example is invented for practice"), "research proposal template: fictional learning boundary");
+expect(proposalTemplateHtml.includes("Build a proposal readers can assess before the study exists"), "research proposal template: assessable-proposal workflow");
+expect(proposalTemplateHtml.includes("Confirm the proposal task and reader"), "research proposal template: task-reader workflow step");
+expect(proposalTemplateHtml.includes("Define a bounded problem and purpose"), "research proposal template: bounded-problem workflow step");
+expect(proposalTemplateHtml.includes("Build a traceable evidence base"), "research proposal template: evidence-base workflow step");
+expect(proposalTemplateHtml.includes("Make the rationale proportionate"), "research proposal template: rationale workflow step");
+expect(proposalTemplateHtml.includes("Match design and methods to the question"), "research proposal template: methods workflow step");
+expect(proposalTemplateHtml.includes("Test access, feasibility, and ethics"), "research proposal template: feasibility-ethics workflow step");
+expect(proposalTemplateHtml.includes("State bounded anticipated contribution"), "research proposal template: contribution workflow step");
+expect(proposalTemplateHtml.includes("Reverse-check coherence and revise"), "research proposal template: coherence workflow step");
+expect(proposalTemplateHtml.includes("Use a proposal decision record before drafting"), "research proposal template: decision-record checklist");
 expect(proposalTemplateHtml.includes("ugradresearch.uconn.edu"), "research proposal template: UConn guidance link");
 expect(proposalTemplateHtml.includes("libguides.usc.edu"), "research proposal template: USC guidance link");
+expect(proposalTemplateHtml.includes("writersworkshop.illinois.edu"), "research proposal template: Illinois guidance link");
 expect(proposalTemplateHtml.includes('/research-question-examples/'), "research proposal template: research-question link");
+expect(proposalTemplateHtml.includes('/literature-review-synthesis-matrix/'), "research proposal template: synthesis-matrix link");
+expect(proposalTemplateHtml.includes('/literature-review-example/'), "research proposal template: literature-review-example link");
 expect(proposalTemplateHtml.includes('/research-gap-examples/'), "research proposal template: research-gap link");
+expect(proposalTemplateHtml.includes('/methodology-vs-methods-research-paper/'), "research proposal template: methodology-vs-methods link");
+expect(proposalTemplateHtml.includes('/methodology-section-example-research-paper/'), "research proposal template: methodology-example link");
+expect(proposalTemplateHtml.includes('/academic-integrity-and-source-use/'), "research proposal template: source-use link");
+expect(proposalTemplateHtml.includes('/citations/'), "research proposal template: citations link");
 
 const researchGapHtml = read("research-gap-examples/index.html");
 expect(researchGapHtml.includes("Fictional learning example"), "research gap examples: fictional-example disclosure");
