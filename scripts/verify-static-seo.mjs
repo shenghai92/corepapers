@@ -547,7 +547,7 @@ const pages = [
   ],
   [
     "/academic-english-for-esl-students/",
-    "Academic English support for ESL and international students",
+    "Academic writing skills for international students",
   ],
   [
     "/academic-paraphrasing-tool-for-esl-students/",
@@ -879,31 +879,39 @@ expect(researchPaperSectionsHtml.includes('/citations/'), "research paper sectio
 
 const academicEnglishHubHtml = read("academic-english-for-esl-students/index.html");
 expect(
-  academicEnglishHubHtml.includes("Academic English support for ESL and international students"),
-  "academic English hub: expected H1"
+  academicEnglishHubHtml.includes("Academic writing skills for international students"),
+  "academic English hub: GSC-aligned expected H1"
+);
+expect(
+  academicEnglishHubHtml.includes("Build transferable academic writing skills"),
+  "academic English hub: international-student skills lead"
 );
 expect(
   academicEnglishHubHtml.includes("An eight-step Academic English learning path"),
   "academic English hub: eight-step learning workflow"
 );
 expect(academicEnglishHubHtml.includes("Read task and policy"), "academic English hub: task-policy step");
-expect(academicEnglishHubHtml.includes("Name reader and purpose"), "academic English hub: reader-purpose step");
-expect(academicEnglishHubHtml.includes("Plan argument and evidence"), "academic English hub: argument-evidence step");
+expect(academicEnglishHubHtml.includes("Map reader and academic conventions"), "academic English hub: conventions-reader step");
+expect(academicEnglishHubHtml.includes("Frame question, claim, and evidence"), "academic English hub: question-claim-evidence step");
 expect(academicEnglishHubHtml.includes("Keep support traceable"), "academic English hub: source-traceability step");
 expect(academicEnglishHubHtml.includes("Revise global writing first"), "academic English hub: global-revision step");
 expect(academicEnglishHubHtml.includes("Revise in layers"), "academic English hub: layered-language step");
 expect(academicEnglishHubHtml.includes("Learn repeated patterns"), "academic English hub: feedback-learning step");
 expect(academicEnglishHubHtml.includes("Check reader and responsibility"), "academic English hub: reader-responsibility step");
 expect(
-  academicEnglishHubHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or text to submit"),
+  academicEnglishHubHtml.includes("This fictional learning example is invented for practice; it is not real student work, research evidence, instructor feedback, or text to submit"),
   "academic English hub: explicit fictional-example disclosure"
 );
-expect(academicEnglishHubHtml.includes("owl.purdue.edu"), "academic English hub: Purdue OWL guidance link");
-expect(academicEnglishHubHtml.includes("drexel.edu"), "academic English hub: Drexel guidance link");
-expect(academicEnglishHubHtml.includes("dickinson.edu"), "academic English hub: Dickinson guidance link");
+expect(academicEnglishHubHtml.includes("writingcenter.unc.edu/esl"), "academic English hub: UNC multilingual guidance link");
+expect(academicEnglishHubHtml.includes("american.edu/provost/eagle-learning-center/writing-center/about.cfm"), "academic English hub: American University guidance link");
+expect(academicEnglishHubHtml.includes("usf.edu/arts-sciences/departments/world-languages/resources/multilingual-writing-center"), "academic English hub: USF multilingual guidance link");
 expect(academicEnglishHubHtml.includes("cannot verify a research design"), "academic English hub: responsibility boundary");
 expect(academicEnglishHubHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "academic English hub: paraphrasing cluster link");
 expect(academicEnglishHubHtml.includes('/research-paper-sections/'), "academic English hub: paper-sections cluster link");
+expect(academicEnglishHubHtml.includes('/research-question-examples/'), "academic English hub: research-question cluster link");
+expect(academicEnglishHubHtml.includes('/thesis-statement-examples/'), "academic English hub: thesis cluster link");
+expect(academicEnglishHubHtml.includes('/literature-review-example/'), "academic English hub: literature-review cluster link");
+expect(academicEnglishHubHtml.includes('/research-paper-revision-checklist/'), "academic English hub: revision-checklist cluster link");
 
 const sourceEvaluationHtml = read("evaluate-academic-sources/index.html");
 expect(

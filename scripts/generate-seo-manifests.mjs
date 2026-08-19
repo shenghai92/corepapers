@@ -137,12 +137,11 @@ const STATIC_PAGE_SEO = {
     keywords: "hedging language academic writing, hedging examples academic writing, cautious language academic writing, academic hedging phrases, how to hedge academic claims",
   },
   "/academic-english-for-esl-students": {
-    title:
-      "Academic English Support for ESL and International Students | CorePapers",
+    title: "Academic Writing Skills for International Students | CorePapers",
     description:
-      "Improve academic English with practical help for ESL writing mistakes, literal translation, academic tone, hedging, and sentence clarity.",
+      "Build academic writing skills for international and multilingual students through task interpretation, academic conventions, research and source work, paragraph structure, revision, feedback, language clarity, and responsible authorship.",
     keywords:
-      "academic English for ESL students, academic writing help for international students, ESL academic writing, non-native English writing",
+      "academic writing skills for international students, academic writing skills international students, academic writing help for international students, academic English for international students, multilingual academic writing, ESL academic writing support, non-native English writing",
   },
   "/academic-integrity-and-source-use": {
     title:
