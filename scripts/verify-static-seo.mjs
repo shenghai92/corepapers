@@ -713,7 +713,7 @@ expect(
   thesisStatementHtml.includes("Thesis statement examples: make an academic claim specific and arguable"),
   "thesis statements: expected H1"
 );
-expect(thesisStatementHtml.includes("1. Read the task"), "thesis statements: five-step drafting workflow");
+expect(thesisStatementHtml.includes("Move from task and evidence to a supportable working thesis"), "thesis statements: eight-step drafting workflow");
 expect(
   thesisStatementHtml.includes("This fictional learning example is invented for practice"),
   "thesis statements: fictional-example disclosure"
@@ -725,6 +725,9 @@ expect(thesisStatementHtml.includes("normative or policy thesis"), "thesis state
 expect(thesisStatementHtml.includes('/research-question-examples/'), "thesis statements: research-question cluster link");
 expect(thesisStatementHtml.includes('/academic-paragraph-structure/'), "thesis statements: paragraph cluster link");
 expect(thesisStatementHtml.includes('/research-paper-outline-template/'), "thesis statements: outline cluster link");
+expect(thesisStatementHtml.includes('/hedging-language-academic-writing/'), "thesis statements: hedging cluster link");
+expect(thesisStatementHtml.includes('/academic-integrity-and-source-use/'), "thesis statements: source-use cluster link");
+expect(thesisStatementHtml.includes('/citations/'), "thesis statements: citations cluster link");
 
 const researchPaperSectionsHtml = read("research-paper-sections/index.html");
 expect(
@@ -1072,7 +1075,22 @@ expect(conclusionPracticeHtml.includes('/citations/'), "conclusion practice: cit
 expect(conclusionPracticeHtml.includes('/how-to-write-an-abstract-research-paper/'), "conclusion practice: abstract-guide link");
 const thesisGuideHtml = read("thesis-statement-examples/index.html");
 expect(thesisGuideHtml.includes("Fictional learning example"), "thesis guide: fictional-example disclosure");
-expect(thesisGuideHtml.includes("writingcenter.unc.edu"), "thesis guide: university guidance link");
+expect(thesisGuideHtml.includes("This fictional learning example is invented for practice"), "thesis guide: fictional learning boundary");
+expect(thesisGuideHtml.includes("Move from task and evidence to a supportable working thesis"), "thesis guide: working-thesis workflow");
+expect(thesisGuideHtml.includes("Confirm assignment and reader"), "thesis guide: assignment workflow step");
+expect(thesisGuideHtml.includes("Frame problem worth answering"), "thesis guide: problem workflow step");
+expect(thesisGuideHtml.includes("Study available material"), "thesis guide: evidence workflow step");
+expect(thesisGuideHtml.includes("Choose kind of claim"), "thesis guide: claim-type workflow step");
+expect(thesisGuideHtml.includes("State provisional answer"), "thesis guide: working-claim workflow step");
+expect(thesisGuideHtml.includes("Set scope and certainty"), "thesis guide: scope workflow step");
+expect(thesisGuideHtml.includes("Map reasons and challenges"), "thesis guide: support workflow step");
+expect(thesisGuideHtml.includes("Revise against completed paper"), "thesis guide: revision workflow step");
+expect(thesisGuideHtml.includes("writingcenter.fas.harvard.edu"), "thesis guide: Harvard guidance link");
+expect(thesisGuideHtml.includes("writingcenter.unc.edu"), "thesis guide: UNC guidance link");
+expect(thesisGuideHtml.includes("owl.purdue.edu"), "thesis guide: Purdue guidance link");
+expect(thesisGuideHtml.includes('/hedging-language-academic-writing/'), "thesis guide: hedging link");
+expect(thesisGuideHtml.includes('/academic-integrity-and-source-use/'), "thesis guide: source-use link");
+expect(thesisGuideHtml.includes('/citations/'), "thesis guide: citations link");
 
 const resultsPracticeHtml = read(
   "results-section-example-research-paper/index.html"
