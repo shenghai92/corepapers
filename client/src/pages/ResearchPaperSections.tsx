@@ -134,8 +134,24 @@ export default function ResearchPaperSections() {
           </section>
 
           <section className="max-w-5xl mx-auto mt-6 p-8 bg-white border border-border rounded-2xl">
+            <p className="text-xs font-sans uppercase tracking-widest text-primary mb-3">Cross-section revision</p>
+            <h2 className="font-serif text-3xl text-slate-purple mb-5">Give each section a contract, then test the whole route</h2>
+            <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-6">A section can look fluent in isolation but still fail the paper when its purpose, evidence, and conclusion no longer align. Treat each section as a reader-facing contract and reverse-check the completed draft from the research task through the final contribution.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                ["1. Confirm the paper type", "Re-read the prompt and identify whether you are reporting an original study, reviewing literature, making an argument, proposing research, or documenting work in progress."],
+                ["2. Write a section contract", "For every heading, state in one sentence what question it answers, what evidence or source record it uses, and what readers should understand before moving on."],
+                ["3. Trace the evidence path", "Check that the Introduction&apos;s question or claim is genuinely addressed by the source approach, method, analysis, reported material, and final explanation."],
+                ["4. Preserve reporting and interpretation boundaries", "When the assignment separates sections, keep factual results in Results and reserve explanations, comparisons, limits, and implications for Discussion."],
+                ["5. Account for real variations", "A literature review, multi-experiment report, in-progress project, or course assignment may require a different path. Use a variation only when the task and evidence justify it."],
+                ["6. Reconcile the completion layer", "Draft Abstract and Conclusion after the paper is stable, then check that they summarize the same purpose, method or approach, key answer, and bounded contribution."],
+              ].map(([title, copy]) => <article key={title} className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">{title}</h3><p className="text-sm text-muted-foreground font-sans leading-relaxed">{copy}</p></article>)}
+            </div>
+          </section>
+
+          <section className="max-w-5xl mx-auto mt-6 p-8 bg-white border border-border rounded-2xl">
             <h2 className="font-serif text-3xl text-slate-purple mb-3">Use common structures carefully</h2>
-            <p className="text-sm text-muted-foreground font-sans leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://psychology.ucsd.edu/undergraduate-program/undergraduate-resources/academic-writing-resources/writing-research-papers/research-paper-structure.html" target="_blank" rel="noreferrer">UC San Diego Psychology</a> outlines a common APA experimental-report structure while noting variations for literature reviews, multiple experiments, incomplete research, and course assignments. <a className="text-primary underline underline-offset-4" href="https://writing.wisc.edu/handbook/planresearchpaper/" target="_blank" rel="noreferrer">UW–Madison Writing Center</a> treats research writing as recursive and recommends organizing the body around the points you want to make rather than allowing sources to determine the order. <a className="text-primary underline underline-offset-4" href="https://knight.as.cornell.edu/writing-resource-organizing-papers" target="_blank" rel="noreferrer">Cornell Knight Institute</a> offers organization by perspectives, evidence, points, or sections. Follow your instructor, department, publisher, and disciplinary conventions whenever they differ.</p>
+            <p className="text-sm text-muted-foreground font-sans leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://writingcenter.gmu.edu/writing-resources/imrad/writing-an-imrad-report" target="_blank" rel="noreferrer">George Mason University Writing Center</a> describes IMRaD as a common route for planned, systematic research and separates Introduction&apos;s research case, Methods&apos; procedural account, Results&apos; reporting, and Discussion&apos;s interpretation. <a className="text-primary underline underline-offset-4" href="https://psychology.ucsd.edu/undergraduate-program/undergraduate-resources/academic-writing-resources/writing-research-papers/research-paper-structure.html" target="_blank" rel="noreferrer">UC San Diego Psychology</a> outlines a common APA experimental-report structure while noting variations for literature reviews, multiple experiments, incomplete research, and course assignments. <a className="text-primary underline underline-offset-4" href="https://writing.wisc.edu/handbook/planresearchpaper/" target="_blank" rel="noreferrer">UW–Madison Writing Center</a> treats research writing as recursive and recommends organizing the body around the points you want to make rather than allowing sources to determine the order. Follow your instructor, department, publisher, and disciplinary conventions whenever they differ.</p>
           </section>
 
           <section className="max-w-4xl mx-auto mt-12 p-8 bg-white border border-border rounded-2xl">
@@ -158,7 +174,7 @@ export default function ResearchPaperSections() {
             </div>
           </section>
 
-          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-3 gap-4">
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href="/research-paper-outline-template" className="block">
               <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
                 <h2 className="font-serif text-2xl text-slate-purple mb-2">Plan the full paper outline</h2>
@@ -169,6 +185,18 @@ export default function ResearchPaperSections() {
               <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
                 <h2 className="font-serif text-2xl text-slate-purple mb-2">Plan a research proposal</h2>
                 <p className="text-sm text-muted-foreground font-sans leading-relaxed">Connect a research problem, rationale, question, methods, feasibility, and references before the project begins.</p>
+              </div>
+            </Link>
+            <Link href="/literature-review-example" className="block">
+              <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Choose a literature-review route</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Group source evidence by themes, methods, debates, or patterns instead of forcing an empirical Results section.</p>
+              </div>
+            </Link>
+            <Link href="/how-to-write-an-abstract-research-paper" className="block">
+              <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Reconcile the Abstract</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Write the summary after the completed sections, then check that its purpose, approach, result, and implication agree.</p>
               </div>
             </Link>
             <Link href="/phrases/introduction" className="block">
@@ -194,14 +222,25 @@ export default function ResearchPaperSections() {
                 <p className="text-sm text-muted-foreground font-sans leading-relaxed">Interpret results and state limitations without overstating evidence.</p>
               </div>
             </Link>
+            <Link href="/academic-integrity-and-source-use" className="block">
+              <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Keep source use visible</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Check that quotations, paraphrases, summaries, data, and source-derived claims receive clear credit throughout the paper.</p>
+              </div>
+            </Link>
+            <Link href="/citations" className="block">
+              <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
+                <h2 className="font-serif text-2xl text-slate-purple mb-2">Recheck the reference system</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">Verify source metadata and make every in-text reference lead to the correct completed entry.</p>
+              </div>
+            </Link>
             <Link href="/polish" className="block">
               <div className="h-full p-6 bg-hero-gradient border border-border rounded-2xl hover:border-primary/30 transition-all">
                 <h2 className="font-serif text-2xl text-slate-purple mb-2">
                   Polish a section draft
                 </h2>
                 <p className="text-sm text-muted-foreground font-sans leading-relaxed">
-                  Review non-native phrasing and academic tone after you have
-                  drafted the idea.
+                  Review non-native phrasing and academic tone after you have drafted the idea and checked its structure, evidence, and source responsibility.
                 </p>
               </div>
             </Link>

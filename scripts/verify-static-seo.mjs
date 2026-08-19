@@ -601,12 +601,17 @@ expect(
   "research paper sections: fictional-example disclosure"
 );
 expect(researchPaperSectionsHtml.includes("Revise recursively"), "research paper sections: recursive-revision workflow");
+expect(researchPaperSectionsHtml.includes("Give each section a contract"), "research paper sections: section-contract workflow");
+expect(researchPaperSectionsHtml.includes("Trace the evidence path"), "research paper sections: evidence-path workflow");
+expect(researchPaperSectionsHtml.includes("writingcenter.gmu.edu"), "research paper sections: GMU IMRaD guidance link");
 expect(researchPaperSectionsHtml.includes("psychology.ucsd.edu"), "research paper sections: UCSD guidance link");
 expect(researchPaperSectionsHtml.includes("writing.wisc.edu"), "research paper sections: UW Madison guidance link");
-expect(researchPaperSectionsHtml.includes("knight.as.cornell.edu"), "research paper sections: Cornell guidance link");
 expect(researchPaperSectionsHtml.includes('/research-paper-outline-template/'), "research paper sections: outline cluster link");
 expect(researchPaperSectionsHtml.includes('/research-proposal-template/'), "research paper sections: proposal cluster link");
-expect(researchPaperSectionsHtml.includes('/literature-review-synthesis-matrix/'), "research paper sections: synthesis cluster link");
+expect(researchPaperSectionsHtml.includes('/literature-review-example/'), "research paper sections: literature-review cluster link");
+expect(researchPaperSectionsHtml.includes('/how-to-write-an-abstract-research-paper/'), "research paper sections: abstract cluster link");
+expect(researchPaperSectionsHtml.includes('/academic-integrity-and-source-use/'), "research paper sections: source-use cluster link");
+expect(researchPaperSectionsHtml.includes('/citations/'), "research paper sections: citations cluster link");
 
 const academicEnglishHubHtml = read("academic-english-for-esl-students/index.html");
 expect(
