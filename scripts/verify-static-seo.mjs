@@ -457,6 +457,16 @@ expect(chicagoCitationHtml.includes('/ieee-citation-examples/'), "Chicago citati
 
 const ieeeCitationHtml = read("ieee-citation-examples/index.html");
 expect(ieeeCitationHtml.includes("Fictional learning examples"), "IEEE citations: fictional-example disclosure");
+expect(ieeeCitationHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or a reference list to submit"), "IEEE citations: explicit fictional-learning boundary");
+expect(ieeeCitationHtml.includes("An eight-step IEEE check before submission"), "IEEE citations: eight-step verification workflow");
+expect(ieeeCitationHtml.includes("Confirm required IEEE variant and submission rule"), "IEEE citations: submission-rule step");
+expect(ieeeCitationHtml.includes("Open original work used"), "IEEE citations: original-source step");
+expect(ieeeCitationHtml.includes("Mark every source-based sentence"), "IEEE citations: source-coverage step");
+expect(ieeeCitationHtml.includes("Assign and reuse bracket number"), "IEEE citations: number-reuse step");
+expect(ieeeCitationHtml.includes("Check direct-quote locator"), "IEEE citations: quotation-locator step");
+expect(ieeeCitationHtml.includes("Check sequence and coverage"), "IEEE citations: sequence-coverage step");
+expect(ieeeCitationHtml.includes("Verify fields and official examples"), "IEEE citations: metadata-example step");
+expect(ieeeCitationHtml.includes("Read as reader before submission"), "IEEE citations: reader-responsibility step");
 expect(ieeeCitationHtml.includes("ieeeauthorcenter.ieee.org"), "IEEE citations: official IEEE guidance link");
 expect(ieeeCitationHtml.includes("owl.purdue.edu"), "IEEE citations: Purdue OWL guidance link");
 expect(ieeeCitationHtml.includes("researchguides.njit.edu"), "IEEE citations: NJIT guidance link");
