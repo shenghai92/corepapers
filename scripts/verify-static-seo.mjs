@@ -694,7 +694,23 @@ expect(
   academicParagraphHtml.includes("Academic paragraph structure: topic sentence, evidence, and explanation"),
   "academic paragraphs: expected H1"
 );
-expect(academicParagraphHtml.includes("1. Name the function"), "academic paragraphs: six-step workflow");
+expect(academicParagraphHtml.includes("Build a paragraph readers can follow and evaluate"), "academic paragraphs: eight-step workflow");
+expect(academicParagraphHtml.includes("Name paragraph’s job"), "academic paragraphs: function workflow step");
+expect(academicParagraphHtml.includes("Give it one focus"), "academic paragraphs: focus workflow step");
+expect(academicParagraphHtml.includes("Choose support with a job"), "academic paragraphs: evidence workflow step");
+expect(academicParagraphHtml.includes("Make attribution visible"), "academic paragraphs: attribution workflow step");
+expect(academicParagraphHtml.includes("Show reasoning connection"), "academic paragraphs: explanation workflow step");
+expect(academicParagraphHtml.includes("Keep claims proportionate"), "academic paragraphs: limit workflow step");
+expect(academicParagraphHtml.includes("Guide readers through real relationship"), "academic paragraphs: connection workflow step");
+expect(academicParagraphHtml.includes("Test unity, development, and sequence"), "academic paragraphs: reverse-check workflow step");
+expect(academicParagraphHtml.includes("This fictional learning example is invented for practice"), "academic paragraphs: fictional learning boundary");
+expect(academicParagraphHtml.includes("owl.purdue.edu"), "academic paragraphs: Purdue guidance link");
+expect(academicParagraphHtml.includes("writingcenter.unc.edu"), "academic paragraphs: UNC guidance link");
+expect(academicParagraphHtml.includes("writingcenter.fas.harvard.edu"), "academic paragraphs: Harvard guidance link");
+expect(academicParagraphHtml.includes('/academic-integrity-and-source-use/'), "academic paragraphs: source-use cluster link");
+expect(academicParagraphHtml.includes('/citations/'), "academic paragraphs: citations cluster link");
+expect(academicParagraphHtml.includes('/research-paper-outline-template/'), "academic paragraphs: outline cluster link");
+expect(academicParagraphHtml.includes("Build a paragraph readers can follow and evaluate"), "academic paragraphs: eight-step workflow regression guard");
 expect(
   academicParagraphHtml.includes("This fictional learning example is invented for practice"),
   "academic paragraphs: fictional-example disclosure"
