@@ -71,6 +71,31 @@ expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation 
 expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
 expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
+const methodsPhrasesHtml = read("phrases/methods/index.html");
+expect(methodsPhrasesHtml.includes("Academic phrases for research methods sections"), "methods phrases: expected H1");
+expect(methodsPhrasesHtml.includes("Move from a method label to a traceable study account"), "methods phrases: traceable-method workflow");
+expect(methodsPhrasesHtml.includes("Define the design"), "methods phrases: design workflow step");
+expect(methodsPhrasesHtml.includes("Name analysis and purpose"), "methods phrases: analysis-boundary workflow step");
+expect(methodsPhrasesHtml.includes("Fictional learning example: adapt a methods phrase to real decisions"), "methods phrases: fictional-learning disclosure");
+expect(methodsPhrasesHtml.includes("owl.purdue.edu/owl/subject_specific_writing/writing_in_the_social_sciences/writing_in_psychology_experimental_report_writing/experimental_reports_2.html"), "methods phrases: Purdue Methods guidance link");
+expect(methodsPhrasesHtml.includes('/methodology-vs-methods-research-paper/'), "methods phrases: methodology-vs-methods link");
+expect(methodsPhrasesHtml.includes('/methodology-section-example-research-paper/'), "methods phrases: methodology-example link");
+expect(methodsPhrasesHtml.includes('/research-paper-sections/'), "methods phrases: research-sections link");
+expect(methodsPhrasesHtml.includes('/academic-integrity-and-source-use/'), "methods phrases: source-use link");
+
+const resultsPhrasesHtml = read("phrases/results/index.html");
+expect(resultsPhrasesHtml.includes("Academic phrases for reporting research results"), "results phrases: expected H1");
+expect(resultsPhrasesHtml.includes("Report the finding before explaining what it means"), "results phrases: reporting-interpretation workflow");
+expect(resultsPhrasesHtml.includes("State the result in plain language"), "results phrases: plain-language workflow step");
+expect(resultsPhrasesHtml.includes("Match certainty to design"), "results phrases: evidence-calibration workflow step");
+expect(resultsPhrasesHtml.includes("Fictional learning example: separate reporting from interpretation"), "results phrases: fictional-learning disclosure");
+expect(resultsPhrasesHtml.includes("libguides.usc.edu/writingguide/results"), "results phrases: USC Results guidance link");
+expect(resultsPhrasesHtml.includes("owl.purdue.edu/owl/subject_specific_writing/writing_in_the_social_sciences/writing_in_psychology_experimental_report_writing/experimental_reports_2.html"), "results phrases: Purdue Results guidance link");
+expect(resultsPhrasesHtml.includes('/results-section-example-research-paper/'), "results phrases: results-example link");
+expect(resultsPhrasesHtml.includes('/how-to-write-discussion-section/'), "results phrases: discussion-guide link");
+expect(resultsPhrasesHtml.includes('/hedging-language-academic-writing/'), "results phrases: hedging link");
+expect(resultsPhrasesHtml.includes('/academic-argument-evidence/'), "results phrases: argument-evidence link");
+
 const apaCitationLandingHtml = read("apa-citation-generator-for-international-students/index.html");
 expect(
   apaCitationLandingHtml.includes("APA 7 citation generator for international students"),

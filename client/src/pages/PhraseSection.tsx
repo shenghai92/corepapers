@@ -26,6 +26,16 @@ const SECTION_CONTENT: Record<
     checks: string[];
     guideHref: string;
     guideTitle: string;
+    deepDive?: {
+      title: string;
+      intro: string;
+      steps: { title: string; text: string }[];
+      fictionalTitle: string;
+      fictionalText: string;
+      authorityText: string;
+      authorityLinks: { href: string; label: string }[];
+      resources: { href: string; title: string; text: string }[];
+    };
   }
 > = {
   introduction: {
@@ -134,6 +144,29 @@ const SECTION_CONTENT: Record<
     ],
     guideHref: "/blog/how-to-write-a-methodology-section-for-a-research-paper",
     guideTitle: "Read the methodology structure and example guide",
+    deepDive: {
+      title: "Move from a method label to a traceable study account",
+      intro: "A useful methods phrase names something the study actually did. Build the section around decisions a reader needs to understand the design and procedure, then adjust terminology, order, detail, and tense to your discipline and assignment.",
+      steps: [
+        { title: "1. Define the design", text: "State the research question, overall design, and why the approach can address that question. A design label alone does not explain the study logic." },
+        { title: "2. Identify people, data, or materials", text: "Describe participants, datasets, documents, instruments, settings, and eligibility or selection criteria only as they actually apply to the study." },
+        { title: "3. Describe the procedure in a usable order", text: "Walk readers through collection and preparation in the order events occurred, including instructions, conditions, and relevant controls where required." },
+        { title: "4. Name the analysis and its purpose", text: "Specify what analytic procedure was used and what pattern, relationship, or theme it was used to examine; do not report findings here." },
+        { title: "5. Check scope, ethics, and transparency", text: "Include approvals, consent, safeguards, exclusions, limitations, or access details when they are relevant and permitted by your discipline or instructor." },
+      ],
+      fictionalTitle: "Fictional learning example: adapt a methods phrase to real decisions",
+      fictionalText: "This invented practice situation is not a completed study or text to submit. A fictional writer first records the study's actual design, recruitment criteria, survey materials, chronological procedure, and planned thematic analysis. The writer then changes the bracketed phrases only after checking each detail against the study record, rather than using a generic method sentence to fill an information gap.",
+      authorityText: "Purdue OWL explains that a Method section should let readers follow how research was conducted, including relevant participants, materials, design, variables, and procedure. Use its guidance to decide what information a phrase must connect to, not as a substitute for reporting your own study accurately.",
+      authorityLinks: [
+        { href: "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_the_social_sciences/writing_in_psychology_experimental_report_writing/experimental_reports_2.html", label: "Read Purdue OWL's Methods guidance" },
+      ],
+      resources: [
+        { href: "/methodology-vs-methods-research-paper", title: "Methodology vs. methods", text: "Separate the rationale for an approach from the procedures that carried it out." },
+        { href: "/methodology-section-example-research-paper", title: "Methodology section example", text: "Review section functions and a clearly labelled fictional learning example before drafting." },
+        { href: "/research-paper-sections", title: "Research paper sections", text: "Connect methods language to the question, results, discussion, and paper structure." },
+        { href: "/academic-integrity-and-source-use", title: "Academic integrity and source use", text: "Keep study materials, measures, quotations, citations, and disclosures traceable." },
+      ],
+    },
   },
   discussion: {
     eyebrow: "Academic phrase library · Discussion",
@@ -203,6 +236,30 @@ const SECTION_CONTENT: Record<
     ],
     guideHref: "/blog/how-to-write-a-results-section-research-paper-esl",
     guideTitle: "Read the results-section guide and examples",
+    deepDive: {
+      title: "Report the finding before you explain what it means",
+      intro: "A results phrase should guide readers from the research question and measurement to a precise, supported observation. Keep interpretation, causal explanation, and broad implication for the Discussion unless your field or assignment combines those functions.",
+      steps: [
+        { title: "1. Reorient readers to the question", text: "Use a short transition to remind readers of the relevant hypothesis, question, group, measure, or analytic comparison." },
+        { title: "2. State the result in plain language", text: "Report the most relevant pattern, difference, relationship, theme, or non-result directly before adding technical detail." },
+        { title: "3. Anchor the report in evidence", text: "Point readers to the applicable table, figure, theme, quotation, descriptive statistic, or statistical result without repeating every value twice." },
+        { title: "4. Match certainty to design", text: "Use reporting language that fits the analysis; an association or group difference does not itself establish a cause, mechanism, or universal effect." },
+        { title: "5. Preserve relevant unexpected results", text: "Report null, mixed, or unexpected findings that address the research question rather than omitting them because they do not fit an expectation." },
+      ],
+      fictionalTitle: "Fictional learning example: separate reporting from interpretation",
+      fictionalText: "This invented practice situation is not a real dataset or result to submit. A fictional writer first states a measured group difference in plain language, then points to a fictional table and the supporting statistic. The writer saves the possible reason for the difference, comparison with past studies, and limitation for a separate Discussion paragraph.",
+      authorityText: "USC Libraries describes Results as a logical, concise report of findings based on the methods, without bias or interpretation. Purdue OWL similarly recommends reporting the question or hypothesis, relevant operation, plain-language result, supporting statistic, and any needed qualification in an order readers can follow.",
+      authorityLinks: [
+        { href: "https://libguides.usc.edu/writingguide/results", label: "Read USC Libraries' Results guidance" },
+        { href: "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_the_social_sciences/writing_in_psychology_experimental_report_writing/experimental_reports_2.html", label: "Read Purdue OWL's Results guidance" },
+      ],
+      resources: [
+        { href: "/results-section-example-research-paper", title: "Results section example", text: "Review reporting order, fictional learning examples, and boundaries between reporting and interpretation." },
+        { href: "/how-to-write-discussion-section", title: "Discussion writing guide", text: "Move from reported findings to careful interpretation, comparison, limitations, and implications." },
+        { href: "/hedging-language-academic-writing", title: "Hedging language", text: "Calibrate certainty so claims remain proportionate to the method and evidence." },
+        { href: "/academic-argument-evidence", title: "Academic argument and evidence", text: "Connect reported evidence to a defensible claim without overstating what the evidence can show." },
+      ],
+    },
   },
 };
 
@@ -289,6 +346,52 @@ export default function PhraseSection() {
               ))}
             </div>
           </section>
+
+          {content.deepDive && (
+            <>
+              <section className="max-w-5xl mx-auto mt-12 p-8 bg-white border border-border rounded-2xl shadow-card">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Use phrases inside a section-level writing decision</p>
+                <h2 className="font-serif text-3xl text-slate-purple mb-4">{content.deepDive.title}</h2>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-6">{content.deepDive.intro}</p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {content.deepDive.steps.map(step => (
+                    <article key={step.title} className="rounded-xl bg-muted/50 p-5">
+                      <h3 className="font-serif text-xl text-slate-purple mb-2">{step.title}</h3>
+                      <p className="text-sm text-muted-foreground font-sans leading-relaxed">{step.text}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-5">
+                <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                  <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Practice boundary</p>
+                  <h2 className="font-serif text-2xl text-slate-purple mb-3">{content.deepDive.fictionalTitle}</h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">{content.deepDive.fictionalText}</p>
+                </article>
+                <article className="p-7 bg-white border border-border rounded-2xl">
+                  <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">University guidance</p>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed">{content.deepDive.authorityText}</p>
+                  <div className="mt-4 space-y-2">
+                    {content.deepDive.authorityLinks.map(link => (
+                      <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className="block text-sm font-sans text-primary underline underline-offset-4">{link.label}</a>
+                    ))}
+                  </div>
+                </article>
+              </section>
+
+              <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {content.deepDive.resources.map(resource => (
+                  <Link key={resource.href} href={resource.href} className="block">
+                    <article className="h-full p-5 bg-white border border-border rounded-xl hover:border-primary/30 hover:shadow-card transition-all">
+                      <h2 className="font-serif text-2xl text-slate-purple mb-2">{resource.title}</h2>
+                      <p className="text-sm text-muted-foreground font-sans leading-relaxed">{resource.text}</p>
+                    </article>
+                  </Link>
+                ))}
+              </section>
+            </>
+          )}
 
           <section className="max-w-4xl mx-auto mt-12 p-8 bg-white border border-border rounded-2xl">
             <h2 className="font-serif text-3xl text-slate-purple mb-4">
