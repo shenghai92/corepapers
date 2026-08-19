@@ -173,10 +173,14 @@ export default function SectionWritingPractice({
         ]
       : isIntroduction
         ? [
-            ["Establish only necessary context", "Begin with the subject, setting, or prior work readers need to understand the specific research problem; avoid dictionary openings and unsupported trend claims."],
-            ["Show what is known and limited", "Use selected, cited sources to establish the relevant conversation, then describe a defined question, limitation, or tension without claiming that no research exists."],
-            ["State a focused purpose", "Tell readers what the paper examines, asks, or argues and make sure the scope can be addressed by the evidence and assignment."],
-            ["Align the route with the final paper", "After drafting the body, revise the Introduction so its question, stated method, delimitations, and roadmap still describe the completed work."],
+            ["1. Confirm the Introduction task", "Re-read the assignment, paper type, required headings, word limit, evidence expectations, and whether it asks for a question, hypothesis, thesis, method preview, significance statement, or roadmap. Do not import every convention from a generic research-article template."],
+            ["2. Identify the reader and task", "Name the specific problem, disciplinary conversation, and reader need that make this inquiry worth following. Use the paper title's key terms early enough to establish focus, but do not rely on a dramatic hook, dictionary definition, or unsupported trend to create importance."],
+            ["3. Establish only necessary context", "Give readers the smallest accurate amount of background, history, setting, definition, or foundational scholarship needed to understand the problem. Move detailed historical material or comprehensive source comparison into the Literature Review when the assignment uses one."],
+            ["4. Show what is known and verifiably limited", "Use selected, accurately cited sources to establish what relevant work has found, debated, measured, or left uncertain in the defined context. Distinguish a balanced introductory foundation from a complete literature review, and do not make a source sound broader than its evidence."],
+            ["5. State a cautious gap or tension", "Describe a specific limitation, disagreement, underexplored context, unanswered relationship, methodological constraint, or practical tension shown by the reviewed material. Do not say no research exists unless a genuinely exhaustive, supportable search makes that claim appropriate."],
+            ["6. Declare a focused purpose and scope", "State what the paper examines, asks, argues, or tests; identify relevant cases, population, evidence, setting, time frame, or conceptual boundary when needed. Make clear what the study does not cover when that decision keeps the question feasible; delimitations are not failures or post-study limitations."],
+            ["7. Provide a conditional roadmap", "Briefly forecast the argument, sections, or approach only when the genre and assignment call for it. Make every method preview, section promise, and outcome-oriented statement conditional on what the completed paper can accurately show."],
+            ["8. Align with the final completed paper", "After drafting the body, reverse-check that the Introduction's context, cited conversation, question, scope, design preview, roadmap, and significance still describe the work you actually completed. Revise the opening rather than preserving an attractive promise the evidence, structure, or conclusion no longer supports."],
           ]
         : isDiscussion
           ? [
@@ -215,7 +219,7 @@ export default function SectionWritingPractice({
     : isMethodology
       ? "A fictional model can help you plan transparency, but use only verified details from your own design and follow your instructor, ethics process, discipline, or target journal where requirements differ."
       : isIntroduction
-        ? "A fictional model can help you practise focusing a research problem, but use only accurate context, verified citations, and a purpose that your final paper can genuinely address."
+        ? "A fictional model can help you practise an Introduction's narrowing path, but use only accurate context, verified source relationships, a cautious research gap, and a purpose, scope, design preview, and roadmap that your completed paper can genuinely support. Do not invent a field-wide problem, source, method, finding, reader need, or significance claim merely because a model has a place for one."
         : isDiscussion
           ? "A fictional model can help you practise interpretation, but use only your own reported findings, verified sources, and actual limitations. Do not invent a result, citation, explanation, policy implication, exception, or causal conclusion; keep every move proportionate to evidence and your assignment's section structure."
           : "A fictional model can help you practise synthesis, but use only material already established in your own paper. Do not invent a result, citation, limitation, contribution, policy recommendation, or future-research need; make every final takeaway follow from the completed question, evidence, analysis, and limits.";
@@ -359,6 +363,23 @@ export default function SectionWritingPractice({
               </article>
             </section>
           )}
+          {isIntroduction && (
+            <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6" aria-labelledby="introduction-evidence-title">
+              <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
+                <h2 id="introduction-evidence-title" className="font-serif text-3xl text-slate-purple mb-4">Narrow a fictional problem without manufacturing a research gap</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice; it is not a real research gap, source, method, finding, or Introduction to submit.</strong> A fictional writer begins with a defined question about weekly planning routines in one first-year programme. The writer uses invented, clearly labelled background notes only to practise narrowing from the local context to a fictional tension: available fictional accounts describe planning in general, while the fictional assignment asks about a particular routine and setting. The writer then states a bounded fictional purpose and a provisional roadmap. The writer must not convert a limited fictional reading into “no research exists,” cite an invented study, promise results not yet reported, or imply that a planning routine causes assignment completion.</p>
+              </article>
+              <article className="p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-4">Use an Introduction record before you draft the opening</h2>
+                <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed"><li><strong className="text-foreground">Context check:</strong> can you identify the smallest relevant setting, history, definition, or source-based background the reader needs before the problem?</li><li><strong className="text-foreground">Known-and-limited check:</strong> can you trace each claim about existing research to an accurate source and distinguish a limited evidence base from a universal claim?</li><li><strong className="text-foreground">Gap check:</strong> can you state the specific relationship, context, method, population, period, debate, or evidence condition that remains uncertain without saying nothing exists?</li><li><strong className="text-foreground">Purpose-and-scope check:</strong> can you show how the question, claim, evidence route, boundaries, and roadmap fit the final task rather than an attractive generic template?</li></ul>
+              </article>
+              <article className="lg:col-span-2 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Use Introduction guidance, then follow your assignment&apos;s opening rules</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://libguides.usc.edu/writingguide/introduction" target="_blank" rel="noreferrer">USC Libraries</a> describes an Introduction as a path from a general subject area to a particular inquiry, with necessary context, existing understanding, a focused problem or purpose, possible design framing, and a structure that must be reviewed against the completed paper. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&amp;p=185916" target="_blank" rel="noreferrer">Sacred Heart University Library</a> similarly recommends a concise, balanced foundation in published work, a defined research niche, explicit scope decisions, and a roadmap that matches the finished paper. <a className="text-primary underline underline-offset-4" href="https://www.utep.edu/uwc/writing%20help%20online/researchpaper-intro.html" target="_blank" rel="noreferrer">UTEP University Writing Center</a> frames the Introduction as a reader reference framework that defines scope and boundaries, identifies relevant deficiencies cautiously, and uses a specific, neutral purpose statement. Your instructor, discipline, journal, and paper type control where they differ.</p>
+              </article>
+            </section>
+          )}
           {isResults && (
             <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6" aria-labelledby="results-evidence-title">
               <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
@@ -422,17 +443,18 @@ export default function SectionWritingPractice({
                 </p>
               </div>
             </Link>
-            {kind === "introduction" && (
-              <Link href="/research-gap-examples" className="block">
-                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                  <h2 className="font-serif text-xl text-slate-purple mb-2">
-                    State a cautious gap
-                  </h2>
-                  <p className="text-sm text-muted-foreground font-sans">
-                    Connect the literature&apos;s limits to a focused research purpose.
-                  </p>
-                </div>
-              </Link>
+            {isIntroduction && (
+              <>
+                <Link href="/research-gap-examples" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">State a cautious gap</h2><p className="text-sm text-muted-foreground font-sans">Connect a visible limit, tension, or underexplored context to a focused purpose without saying nothing exists.</p></div></Link>
+                <Link href="/research-question-examples" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Refine the research question</h2><p className="text-sm text-muted-foreground font-sans">Test whether the question is focused, researchable, and compatible with the evidence route you can complete.</p></div></Link>
+                <Link href="/literature-review-example" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Separate context from full synthesis</h2><p className="text-sm text-muted-foreground font-sans">Use only necessary foundational context here, then develop full source relationships in the Literature Review.</p></div></Link>
+                <Link href="/methodology-section-example-research-paper" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Check the Methods promise</h2><p className="text-sm text-muted-foreground font-sans">Make sure any design preview or evidence route in the opening describes what you can actually document later.</p></div></Link>
+                <Link href="/phrases/introduction" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Choose Introduction phrases carefully</h2><p className="text-sm text-muted-foreground font-sans">Adapt context, gap, purpose, scope, and roadmap language after checking the source and section responsibility.</p></div></Link>
+                <Link href="/hedging-language-academic-writing" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Calibrate the gap claim</h2><p className="text-sm text-muted-foreground font-sans">Use cautious language when existing evidence is limited, uneven, mixed, or context-bound.</p></div></Link>
+                <Link href="/academic-argument-evidence" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Build the argument path</h2><p className="text-sm text-muted-foreground font-sans">Connect the opening problem to a traceable claim, source record, reasoning route, and bounded conclusion.</p></div></Link>
+                <Link href="/academic-integrity-and-source-use" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Keep the opening traceable</h2><p className="text-sm text-muted-foreground font-sans">Check that every source-based context, paraphrase, and gap statement preserves accurate attribution.</p></div></Link>
+                <Link href="/citations" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Verify cited context</h2><p className="text-sm text-muted-foreground font-sans">Confirm citation choices and reference entries before presenting previous research in the opening.</p></div></Link>
+              </>
             )}
             {isResults && (
               <>
