@@ -5,7 +5,7 @@ export default function Privacy() {
     <>
       <SEOHead
         title="Privacy Policy"
-        description="Read the CorePapers privacy policy, including how we handle account details, usage data, and support requests."
+        description="Read the CorePapers privacy policy, including account details, submitted writing content, support requests, third-party service processing, and privacy questions."
         canonical="/privacy"
       />
 
@@ -20,7 +20,11 @@ export default function Privacy() {
             </p>
             <section>
               <h2 className="font-serif text-2xl text-slate-purple mb-2">Information we collect</h2>
-              <p>We may collect account details, payment-related identifiers from our payment providers, support messages, and the writing content you choose to submit for processing.</p>
+              <p>We may collect account details, payment-related identifiers from payment providers, support messages, technical or usage information, and the writing content you choose to submit for processing. The information collected depends on the feature you use and the details you choose to provide.</p>
+            </section>
+            <section>
+              <h2 className="font-serif text-2xl text-slate-purple mb-2">Use data minimization for academic material</h2>
+              <p>Before submitting material to a writing tool or support channel, consider whether it contains confidential research data, identifiable participant information, unpublished manuscripts, peer-review content, grant or proprietary material, credentials, or payment details. Do not submit information you are not permitted to share, and follow the privacy, ethics, data-management, and course requirements that apply to your work.</p>
             </section>
             <section>
               <h2 className="font-serif text-2xl text-slate-purple mb-2">How we use information</h2>
@@ -28,15 +32,19 @@ export default function Privacy() {
             </section>
             <section>
               <h2 className="font-serif text-2xl text-slate-purple mb-2">Third-party services</h2>
-              <p>Payments may be processed by third-party providers. Authentication, hosting, analytics, or infrastructure services may also process limited data on our behalf.</p>
+              <p>Payments may be processed by third-party providers. Authentication, hosting, analytics, infrastructure, and feature providers may process information needed to provide their relevant services. Their handling of information is governed by their applicable terms and privacy notices as well as the arrangements that apply to the service.</p>
             </section>
             <section>
               <h2 className="font-serif text-2xl text-slate-purple mb-2">Data retention</h2>
               <p>We retain data for as long as needed to operate the service, resolve disputes, meet legal requirements, and support legitimate business operations.</p>
             </section>
             <section>
+              <h2 className="font-serif text-2xl text-slate-purple mb-2">Academic writing and permitted AI use</h2>
+              <p>Privacy is only one part of responsible use. Before using AI-assisted writing features, follow the most local instruction that applies to your assignment, research, thesis, manuscript, or institution. The <a className="text-primary underline" href="/ai-use-disclosure-academic-writing">AI Use &amp; Disclosure Guide</a> explains a policy-first approach to privacy, source verification, human review, and disclosure.</p>
+            </section>
+            <section>
               <h2 className="font-serif text-2xl text-slate-purple mb-2">Contact</h2>
-              <p>For privacy questions or requests, contact us at <a className="text-primary underline" href="mailto:support@corepapers.space">support@corepapers.space</a>.</p>
+              <p>For privacy questions or requests, contact us at <a className="text-primary underline" href="mailto:support@corepapers.space">support@corepapers.space</a>. For site content standards and updates, see the <a className="text-primary underline" href="/editorial-policy">Editorial Policy</a> and <a className="text-primary underline" href="/how-corepapers-content-is-created">How CorePapers Content Is Created</a>.</p>
             </section>
           </div>
         </div>

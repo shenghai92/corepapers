@@ -1515,6 +1515,19 @@ expect(contactHtml.includes("Protect private academic material"), "contact: priv
 expect(contactHtml.includes('/ai-use-disclosure-academic-writing/'), "contact: AI disclosure link");
 expect(contactHtml.includes('/research-paper-revision-checklist/'), "contact: revision checklist link");
 
+const privacyHtml = read("privacy/index.html");
+expect(privacyHtml.includes("Use data minimization for academic material"), "privacy: academic-material minimization section");
+expect(privacyHtml.includes("Do not submit information you are not permitted to share"), "privacy: sensitive-material boundary");
+expect(privacyHtml.includes('/ai-use-disclosure-academic-writing/'), "privacy: AI disclosure link");
+expect(privacyHtml.includes('/editorial-policy/'), "privacy: editorial policy link");
+
+const termsHtml = read("terms/index.html");
+expect(termsHtml.includes("Academic writing support and author responsibility"), "terms: author-responsibility section");
+expect(termsHtml.includes("Academic integrity and acceptable use"), "terms: integrity-acceptable-use section");
+expect(termsHtml.includes("fabricate sources, evidence, data"), "terms: fabrication prohibition");
+expect(termsHtml.includes('/ai-use-disclosure-academic-writing/'), "terms: AI disclosure link");
+expect(termsHtml.includes('/research-paper-revision-checklist/'), "terms: revision checklist link");
+
 const aiDisclosureHtml = read("ai-use-disclosure-academic-writing/index.html");
 expect(aiDisclosureHtml.includes("AI use disclosure in academic writing"), "AI disclosure guide: crawler-visible H1");
 expect(aiDisclosureHtml.includes("An eight-step AI use and disclosure workflow"), "AI disclosure guide: eight-step workflow");
