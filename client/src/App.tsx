@@ -27,6 +27,9 @@ const ResearchGapExamples = lazy(
 const ResearchPaperRevisionChecklist = lazy(
   () => import("./pages/ResearchPaperRevisionChecklist")
 );
+const InternationalSourcesLiteratureReview = lazy(
+  () => import("./pages/InternationalSourcesLiteratureReview")
+);
 const DiscussionWritingGuide = lazy(
   () => import("./pages/DiscussionWritingGuide")
 );
@@ -366,6 +369,14 @@ function Router() {
           component={() => (
             <PublicLayout>
               <LiteratureReviewSynthesis />
+            </PublicLayout>
+          )}
+        />
+        <Route
+          path="/international-sources-literature-review"
+          component={() => (
+            <PublicLayout>
+              <InternationalSourcesLiteratureReview />
             </PublicLayout>
           )}
         />

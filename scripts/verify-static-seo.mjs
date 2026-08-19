@@ -57,6 +57,7 @@ expect(homeHtml.includes('/ai-use-disclosure-academic-writing/'), "home: AI use 
 expect(homeHtml.includes("original-source checks"), "home: author-responsibility boundary");
 expect(homeHtml.includes('>Revision Checklist</a>'), "static shell: revision-checklist navigation entry");
 expect(homeHtml.includes('>Terms</a>'), "static shell: terms footer entry");
+expect(homeHtml.includes('>International sources</a>'), "static shell: international-sources footer entry");
 expect(homeHtml.includes('/ieee-citation-examples/'), "home: IEEE citation examples resource link");
 expect(homeHtml.includes('/chicago-citation-examples/'), "home: Chicago citation examples resource link");
 
@@ -1543,6 +1544,19 @@ expect(aiDisclosureHtml.includes('/academic-integrity-and-source-use/'), "AI dis
 expect(aiDisclosureHtml.includes('/how-corepapers-content-is-created/'), "AI disclosure guide: content-method link");
 expect(aiDisclosureHtml.includes('"@type":"WebPage"'), "AI disclosure guide: WebPage JSON-LD");
 
+const internationalSourcesHtml = read("international-sources-literature-review/index.html");
+expect(internationalSourcesHtml.includes("International and non-English sources in a literature review"), "international sources guide: crawler-visible H1");
+expect(internationalSourcesHtml.includes("An eight-step process for international source use"), "international sources guide: eight-step workflow");
+expect(internationalSourcesHtml.includes("Confirm actual work and version"), "international sources guide: language-version verification step");
+expect(internationalSourcesHtml.includes("Fictional learning example"), "international sources guide: fictional-learning boundary");
+expect(internationalSourcesHtml.includes("This fictional learning example is invented for practice"), "international sources guide: explicit fictional disclaimer");
+expect(internationalSourcesHtml.includes("https://writingcenter.unc.edu/tips-and-tools/literature-reviews/"), "international sources guide: UNC authority link");
+expect(internationalSourcesHtml.includes("https://guides.library.ucdavis.edu/urc/literature-review"), "international sources guide: UC Davis authority link");
+expect(internationalSourcesHtml.includes("https://guides.library.uwm.edu/languages/search"), "international sources guide: UWM authority link");
+expect(internationalSourcesHtml.includes('/literature-review-synthesis-matrix/'), "international sources guide: synthesis matrix cluster link");
+expect(internationalSourcesHtml.includes('/apa-7-non-english-sources/'), "international sources guide: APA multilingual cluster link");
+expect(internationalSourcesHtml.includes('/evaluate-academic-sources/'), "international sources guide: source-evaluation cluster link");
+
 const revisionChecklistHtml = read("research-paper-revision-checklist/index.html");
 expect(revisionChecklistHtml.includes("Research paper revision checklist"), "revision checklist: crawler-visible H1");
 expect(revisionChecklistHtml.includes("An eight-step research paper revision workflow"), "revision checklist: eight-step workflow");
@@ -1711,6 +1725,10 @@ expect(
 expect(
   sitemap.includes(`${BASE_URL}/research-paper-revision-checklist/`),
   "sitemap: research paper revision checklist"
+);
+expect(
+  sitemap.includes(`${BASE_URL}/international-sources-literature-review/`),
+  "sitemap: international and non-English sources literature-review guide"
 );
 expect(
   !sitemap.includes(`${BASE_URL}/phrases</loc>`),

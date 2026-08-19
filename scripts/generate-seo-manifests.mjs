@@ -218,6 +218,13 @@ const STATIC_PAGE_SEO = {
     keywords:
       "how to synthesize sources literature review, synthesis matrix example, literature review synthesis example, research gap literature review",
   },
+  "/international-sources-literature-review": {
+    title: "International and Non-English Sources in a Literature Review | CorePapers",
+    description:
+      "Learn how to use international and non-English sources in a literature review: scope language-aware searches, verify actual versions, synthesize by theme, translate carefully, and cite responsibly.",
+    keywords:
+      "foreign literature in research paper, international sources literature review, non-English sources research paper, multilingual literature review, foreign language academic sources",
+  },
   "/how-to-write-an-abstract-research-paper": {
     title: "How to Write an Abstract for a Research Paper: Example and Checklist | CorePapers",
     description: "Learn how to write a research paper abstract with a fictional learning example, IMRaD structure, revision checklist, and academic phrase guidance for international students.",
@@ -480,6 +487,11 @@ const STATIC_PAGES = [
   },
   {
     path: "/literature-review-synthesis-matrix/",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
+    path: "/international-sources-literature-review/",
     changefreq: "monthly",
     priority: "0.8",
   },

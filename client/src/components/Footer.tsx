@@ -11,6 +11,7 @@ const FOOTER_LINKS = {
     { label: "Research Paper Revision Checklist", href: "/research-paper-revision-checklist" },
     { label: "Academic English for ESL", href: "/academic-english-for-esl-students" },
     { label: "Literature Review Example", href: "/literature-review-example" },
+    { label: "International & Non-English Sources", href: "/international-sources-literature-review" },
     { label: "Research Proposal Template", href: "/research-proposal-template" },
     { label: "Academic Integrity & Sources", href: "/academic-integrity-and-source-use" },
     { label: "Writing Guides & Blog", href: "/blog" },
