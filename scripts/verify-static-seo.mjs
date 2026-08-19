@@ -627,12 +627,21 @@ expect(
   academicPhraseLibraryHtml.includes("Academic phrase bank with sentence starters for essays and research papers"),
   "academic phrase library: expected H1"
 );
-expect(academicPhraseLibraryHtml.includes("1. Name the writing job"), "academic phrase library: six-step workflow");
+expect(academicPhraseLibraryHtml.includes("An eight-step check before using a sentence starter"), "academic phrase library: eight-step workflow");
+expect(academicPhraseLibraryHtml.includes("Name writing job"), "academic phrase library: task-function step");
+expect(academicPhraseLibraryHtml.includes("Identify real connection"), "academic phrase library: logical-relation step");
+expect(academicPhraseLibraryHtml.includes("Check source and support"), "academic phrase library: evidence-source step");
+expect(academicPhraseLibraryHtml.includes("Calibrate claim"), "academic phrase library: certainty step");
+expect(academicPhraseLibraryHtml.includes("Match discipline and reader"), "academic phrase library: discipline-reader step");
+expect(academicPhraseLibraryHtml.includes("Rewrite for context"), "academic phrase library: adaptation step");
+expect(academicPhraseLibraryHtml.includes("Test logic in context"), "academic phrase library: contextual-readback step");
+expect(academicPhraseLibraryHtml.includes("Recheck attribution and policy"), "academic phrase library: attribution-policy step");
 expect(
   academicPhraseLibraryHtml.includes("Fictional learning example: let the relationship choose the phrase"),
   "academic phrase library: fictional-example disclosure"
 );
-expect(academicPhraseLibraryHtml.includes("All sentence starters and mini-sentences in this library are fictional learning prompts"), "academic phrase library: template boundary");
+expect(academicPhraseLibraryHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or text to submit"), "academic phrase library: explicit fictional-example boundary");
+expect(academicPhraseLibraryHtml.includes("All sentence starters and mini-sentences in this library are <strong>fictional learning prompts</strong>"), "academic phrase library: template boundary");
 expect(academicPhraseLibraryHtml.includes("writingcenter.unc.edu"), "academic phrase library: UNC transitions guidance link");
 expect(academicPhraseLibraryHtml.includes("writingcenter.gmu.edu"), "academic phrase library: George Mason guidance link");
 expect(academicPhraseLibraryHtml.includes('/hedging-language-academic-writing/'), "academic phrase library: hedging cluster link");
