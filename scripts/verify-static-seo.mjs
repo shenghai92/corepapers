@@ -797,11 +797,19 @@ expect(
   "source evaluation: strengthened H1"
 );
 expect(
-  sourceEvaluationHtml.includes("1. Start with task fit"),
-  "source evaluation: five-step critical-reading workflow"
+  sourceEvaluationHtml.includes("Evaluate how a source can serve this project"),
+  "source evaluation: eight-step critical-reading workflow"
 );
+expect(sourceEvaluationHtml.includes("Start with project need"), "source evaluation: task-role workflow step");
+expect(sourceEvaluationHtml.includes("Identify creator, venue, and record"), "source evaluation: identity-version workflow step");
+expect(sourceEvaluationHtml.includes("Read claim and evidence"), "source evaluation: claim-evidence workflow step");
+expect(sourceEvaluationHtml.includes("Locate viewpoint and reach"), "source evaluation: perspective workflow step");
+expect(sourceEvaluationHtml.includes("Test key material laterally"), "source evaluation: cross-check workflow step");
+expect(sourceEvaluationHtml.includes("Decide project use"), "source evaluation: project-use workflow step");
+expect(sourceEvaluationHtml.includes("Keep source use traceable"), "source evaluation: source-boundary workflow step");
+expect(sourceEvaluationHtml.includes("Reopen decision before drafting"), "source evaluation: reverse-check workflow step");
 expect(
-  sourceEvaluationHtml.includes("This fictional learning example contains no real sources or findings"),
+  sourceEvaluationHtml.includes("This fictional learning example is invented for practice"),
   "source evaluation: fictional-example disclosure"
 );
 expect(sourceEvaluationHtml.includes("writingcenter.unc.edu"), "source evaluation: UNC guidance link");
@@ -811,6 +819,8 @@ expect(sourceEvaluationHtml.includes("usingsources.fas.harvard.edu"), "source ev
 expect(sourceEvaluationHtml.includes('/research-question-examples/'), "source evaluation: research-question cluster link");
 expect(sourceEvaluationHtml.includes('/academic-argument-evidence/'), "source evaluation: argument-evidence cluster link");
 expect(sourceEvaluationHtml.includes('/annotated-bibliography-example/'), "source evaluation: annotated-bibliography cluster link");
+expect(sourceEvaluationHtml.includes('/academic-integrity-and-source-use/'), "source evaluation: source-use cluster link");
+expect(sourceEvaluationHtml.includes('/citations/'), "source evaluation: citations cluster link");
 
 const researchQuestionHtml = read("research-question-examples/index.html");
 expect(
