@@ -72,6 +72,7 @@ function pageShell(content) {
         <a href="/phrases/">Phrase Library</a>
         <a href="/citations/">Citation Generator</a>
         <a href="/research-paper-sections/">Research Paper Writing</a>
+        <a href="/research-paper-revision-checklist/">Revision Checklist</a>
         <a href="/academic-english-for-esl-students/">Academic English for ESL</a>
         <a href="/academic-integrity-and-source-use/">Academic Integrity</a>
         <a href="/ai-use-disclosure-academic-writing/">AI Use &amp; Disclosure</a>
@@ -82,7 +83,7 @@ function pageShell(content) {
     <main id="main-content" class="seo-main">${content}</main>
     <footer class="seo-footer">
       <p>CorePapers provides researcher-first academic writing support for multilingual and international students. Educational resources do not replace local policy, original source verification, or author responsibility.</p>
-      <p><a href="/academic-integrity-and-source-use/">Academic integrity</a> · <a href="/ai-use-disclosure-academic-writing/">AI use &amp; disclosure</a> · <a href="/editorial-policy/">Editorial policy</a> · <a href="/how-corepapers-content-is-created/">How content is created</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a></p>
+      <p><a href="/academic-integrity-and-source-use/">Academic integrity</a> · <a href="/ai-use-disclosure-academic-writing/">AI use &amp; disclosure</a> · <a href="/editorial-policy/">Editorial policy</a> · <a href="/how-corepapers-content-is-created/">How content is created</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
     </footer>`;
 }
 

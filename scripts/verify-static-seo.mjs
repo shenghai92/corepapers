@@ -55,6 +55,8 @@ const homeHtml = read("index.html");
 expect(homeHtml.includes('/research-paper-revision-checklist/'), "home: research-paper revision checklist entry");
 expect(homeHtml.includes('/ai-use-disclosure-academic-writing/'), "home: AI use disclosure entry");
 expect(homeHtml.includes("original-source checks"), "home: author-responsibility boundary");
+expect(homeHtml.includes('>Revision Checklist</a>'), "static shell: revision-checklist navigation entry");
+expect(homeHtml.includes('>Terms</a>'), "static shell: terms footer entry");
 expect(homeHtml.includes('/ieee-citation-examples/'), "home: IEEE citation examples resource link");
 expect(homeHtml.includes('/chicago-citation-examples/'), "home: Chicago citation examples resource link");
 
