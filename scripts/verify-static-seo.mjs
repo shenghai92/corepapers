@@ -71,6 +71,30 @@ expect(citationGeneratorHtml.includes('/evaluate-academic-sources/'), "citation 
 expect(citationGeneratorHtml.includes('/academic-integrity-and-source-use/'), "citation generator: source-use return link");
 expect(citationGeneratorHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "citation generator: paraphrasing return link");
 
+const introductionPhrasesHtml = read("phrases/introduction/index.html");
+expect(introductionPhrasesHtml.includes("Academic phrases for research paper introductions"), "introduction phrases: expected H1");
+expect(introductionPhrasesHtml.includes("Guide readers from a bounded context to a research question"), "introduction phrases: context-question workflow");
+expect(introductionPhrasesHtml.includes("Define a bounded problem"), "introduction phrases: bounded-problem workflow step");
+expect(introductionPhrasesHtml.includes("Reconcile scope at the end"), "introduction phrases: final-scope workflow step");
+expect(introductionPhrasesHtml.includes("Fictional learning example: turn a broad opening into a focused entry point"), "introduction phrases: fictional-learning disclosure");
+expect(introductionPhrasesHtml.includes("libguides.usc.edu/writingguide/introduction"), "introduction phrases: USC Introduction guidance link");
+expect(introductionPhrasesHtml.includes('/research-question-examples/'), "introduction phrases: research-question link");
+expect(introductionPhrasesHtml.includes('/research-gap-examples/'), "introduction phrases: research-gap link");
+expect(introductionPhrasesHtml.includes('/introduction-section-example-research-paper/'), "introduction phrases: introduction-example link");
+expect(introductionPhrasesHtml.includes('/research-paper-sections/'), "introduction phrases: research-sections link");
+
+const discussionPhrasesHtml = read("phrases/discussion/index.html");
+expect(discussionPhrasesHtml.includes("Academic phrases for discussion sections"), "discussion phrases: expected H1");
+expect(discussionPhrasesHtml.includes("Interpret a finding without writing a second Results section"), "discussion phrases: interpretation workflow");
+expect(discussionPhrasesHtml.includes("State bounded interpretation"), "discussion phrases: bounded-interpretation workflow step");
+expect(discussionPhrasesHtml.includes("End with proportionate implication"), "discussion phrases: bounded-implication workflow step");
+expect(discussionPhrasesHtml.includes("Fictional learning example: build an interpretive bridge"), "discussion phrases: fictional-learning disclosure");
+expect(discussionPhrasesHtml.includes("libguides.usc.edu/writingguide/discussion"), "discussion phrases: USC Discussion guidance link");
+expect(discussionPhrasesHtml.includes('/how-to-write-discussion-section/'), "discussion phrases: discussion-guide link");
+expect(discussionPhrasesHtml.includes('/results-section-example-research-paper/'), "discussion phrases: results-example link");
+expect(discussionPhrasesHtml.includes('/hedging-language-academic-writing/'), "discussion phrases: hedging link");
+expect(discussionPhrasesHtml.includes('/academic-argument-evidence/'), "discussion phrases: argument-evidence link");
+
 const methodsPhrasesHtml = read("phrases/methods/index.html");
 expect(methodsPhrasesHtml.includes("Academic phrases for research methods sections"), "methods phrases: expected H1");
 expect(methodsPhrasesHtml.includes("Move from a method label to a traceable study account"), "methods phrases: traceable-method workflow");

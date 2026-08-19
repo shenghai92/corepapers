@@ -56,6 +56,29 @@ const SECTION_CONTENT: Record<
     checks: ["Cite all factual claims about prior research or the research context.", "Move from broad context to a defined problem without adding unrelated background.", "State a purpose or question that your paper can genuinely answer."],
     guideHref: "/introduction-section-example-research-paper",
     guideTitle: "Read the Introduction structure and example guide",
+    deepDive: {
+      title: "Guide readers from a bounded context to a research question",
+      intro: "An introduction phrase has a job in a sequence: orient the reader, establish what is known, define a focused problem or gap, state what the paper will do, and make the scope match the work that follows. Recheck this sequence after the body is complete.",
+      steps: [
+        { title: "1. Place the topic", text: "Begin with context readers need to understand the specific research problem, not a broad dictionary definition or unsupported trend claim." },
+        { title: "2. Establish what is known", text: "Use selected, cited background to show the relevant conversation without turning the opening into a full literature review." },
+        { title: "3. Define a bounded problem", text: "Identify a specific unanswered question, limited evidence base, conflicting pattern, or defined context; do not claim that no research exists without a transparent search basis." },
+        { title: "4. State purpose and route", text: "Tell readers what the study or paper examines, asks, or argues, and use a roadmap only when the discipline or assignment expects one." },
+        { title: "5. Reconcile scope at the end", text: "After completing the paper, check that the stated question, method, delimitations, results, and structural forecast still describe what the final paper actually does." },
+      ],
+      fictionalTitle: "Fictional learning example: turn a broad opening into a focused entry point",
+      fictionalText: "This invented practice situation is not a research claim or paragraph to submit. A fictional writer replaces an unsupported broad statement with cited context, identifies a limited population and setting, uses a cautious gap phrase tied to reviewed sources, then states a question the planned evidence can address. The writer revisits the opening after drafting to remove a roadmap promise the paper no longer keeps.",
+      authorityText: "USC Libraries describes an introduction as a path from a general subject area to a particular inquiry, establishing context and significance before stating a focused purpose or problem. Its guidance also recommends reviewing the introduction after the paper is completed so the scope and roadmap match the final work.",
+      authorityLinks: [
+        { href: "https://libguides.usc.edu/writingguide/introduction", label: "Read USC Libraries' Introduction guidance" },
+      ],
+      resources: [
+        { href: "/research-question-examples", title: "Research question examples", text: "Test whether a topic has become a clear, focused, complex, and answerable research question." },
+        { href: "/research-gap-examples", title: "Research gap examples", text: "Frame limited or underexplored evidence carefully without claiming that nothing exists." },
+        { href: "/introduction-section-example-research-paper", title: "Introduction section example", text: "Review section functions and a clearly labelled fictional learning example before drafting." },
+        { href: "/research-paper-sections", title: "Research paper sections", text: "Match the introduction's question and roadmap to the method, results, discussion, and conclusion." },
+      ],
+    },
   },
   "literature-review": {
     eyebrow: "Academic phrase library · Literature Review",
@@ -186,6 +209,29 @@ const SECTION_CONTENT: Record<
     checks: ["Interpret principal findings instead of repeating all results.", "Do not turn a correlation or self-report pattern into a causal claim.", "Keep new data and new evidence out of the Discussion section."],
     guideHref: "/discussion-section-example-research-paper",
     guideTitle: "Read the Discussion structure and example guide",
+    deepDive: {
+      title: "Interpret a finding without writing a second Results section",
+      intro: "A Discussion phrase should make an evidence-led interpretive move. Refer briefly to a result, explain what it may mean in relation to the research problem and prior work, examine limits or alternatives, and keep the final implication inside the study's scope.",
+      steps: [
+        { title: "1. Return to the relevant finding", text: "Use a bridge sentence that reminds readers of the particular result or theme being interpreted without repeating a full Results paragraph." },
+        { title: "2. State a bounded interpretation", text: "Explain what the finding suggests for the research question, using language that matches the design, measurement, and evidence rather than treating a result as proof." },
+        { title: "3. Compare with relevant studies", text: "Use cited literature to show whether the interpretation aligns, contrasts, or adds a condition to earlier findings; explain the specific basis of comparison." },
+        { title: "4. Consider alternatives and limits", text: "Acknowledge plausible competing explanations, unexpected patterns, and limitations that affect the reach of the interpretation without using an apologetic tone." },
+        { title: "5. End with a proportionate implication", text: "State what the result may contribute to theory, practice, policy, or future inquiry only within the population, context, method, and uncertainty of the study." },
+      ],
+      fictionalTitle: "Fictional learning example: build an interpretive bridge",
+      fictionalText: "This invented practice situation is not a real finding or discussion paragraph to submit. A fictional writer briefly refers to a reported pattern, uses a cautious phrase to offer one possible interpretation, compares it with a fictional earlier study, identifies a fictional sampling limit, and frames a limited future question. The writer does not add a new statistic or present the possible mechanism as established fact.",
+      authorityText: "USC Libraries explains that Discussion interprets the significance of findings in relation to the research problem and prior work rather than restating Results. Its guidance recommends considering alternative explanations and limitations, avoiding new results and unsupported speculation, and keeping implications proportionate to the evidence.",
+      authorityLinks: [
+        { href: "https://libguides.usc.edu/writingguide/discussion", label: "Read USC Libraries' Discussion guidance" },
+      ],
+      resources: [
+        { href: "/how-to-write-discussion-section", title: "Discussion writing guide", text: "Follow a full findings-to-interpretation workflow with limitations, comparison, and implications." },
+        { href: "/results-section-example-research-paper", title: "Results section example", text: "Keep factual reporting distinct from the analysis of what findings may mean." },
+        { href: "/hedging-language-academic-writing", title: "Hedging language", text: "Calibrate explanation and implication to the strength and limits of the evidence." },
+        { href: "/academic-argument-evidence", title: "Academic argument and evidence", text: "Connect findings, claims, reasons, and limitations in an argument readers can assess." },
+      ],
+    },
   },
   results: {
     eyebrow: "Academic phrase library · Results",
