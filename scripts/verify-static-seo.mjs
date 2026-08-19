@@ -849,13 +849,14 @@ expect(
   argumentEvidenceHtml.includes("Academic argument and evidence: build a claim readers can follow"),
   "argument evidence: strengthened H1"
 );
-expect(argumentEvidenceHtml.includes("Build an argument readers can test rather than an information list"), "argument evidence: seven-step workflow heading");
+expect(argumentEvidenceHtml.includes("Build an argument readers can test rather than an information list"), "argument evidence: eight-step workflow heading");
 expect(argumentEvidenceHtml.includes("Task and reader"), "argument evidence: task-reader workflow step");
-expect(argumentEvidenceHtml.includes("Working claim"), "argument evidence: working-claim workflow step");
-expect(argumentEvidenceHtml.includes("Relevant evidence"), "argument evidence: evidence-fit workflow step");
+expect(argumentEvidenceHtml.includes("Question"), "argument evidence: question workflow step");
+expect(argumentEvidenceHtml.includes("Claim"), "argument evidence: claim workflow step");
+expect(argumentEvidenceHtml.includes("Evidence role"), "argument evidence: evidence-role workflow step");
+expect(argumentEvidenceHtml.includes("Source boundary"), "argument evidence: source-boundary workflow step");
 expect(argumentEvidenceHtml.includes("Reasoning"), "argument evidence: reasoning-bridge workflow step");
-expect(argumentEvidenceHtml.includes("Scope and limits"), "argument evidence: scope-limits workflow step");
-expect(argumentEvidenceHtml.includes("Counterargument"), "argument evidence: counterargument workflow step");
+expect(argumentEvidenceHtml.includes("Counterargument and limit"), "argument evidence: counterargument-limit workflow step");
 expect(argumentEvidenceHtml.includes("Reverse check"), "argument evidence: reverse-check workflow step");
 expect(argumentEvidenceHtml.includes("Fictional learning example: map the reasoning, not just the citation"), "argument evidence: fictional-learning-map disclosure");
 expect(argumentEvidenceHtml.includes("This fictional learning example is invented for practice"), "argument evidence: fictional-example boundary");
@@ -874,6 +875,7 @@ expect(argumentEvidenceHtml.includes('/literature-review-synthesis-matrix/'), "a
 expect(argumentEvidenceHtml.includes('/academic-paraphrasing-tool-for-esl-students/'), "argument evidence: paraphrasing cluster link");
 expect(argumentEvidenceHtml.includes('/citations/'), "argument evidence: citations cluster link");
 expect(argumentEvidenceHtml.includes('/academic-integrity-and-source-use/'), "argument evidence: source-use cluster link");
+expect(argumentEvidenceHtml.includes('/how-to-write-discussion-section/'), "argument evidence: discussion cluster link");
 
 const hedgingLanguageHtml = read("hedging-language-academic-writing/index.html");
 expect(hedgingLanguageHtml.includes("Fictional learning example"), "hedging language: fictional-example disclosure");
