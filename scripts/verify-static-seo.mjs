@@ -842,12 +842,20 @@ expect(
   "academic English hub: expected H1"
 );
 expect(
-  academicEnglishHubHtml.includes("Build academic English around the work your paper needs to do"),
-  "academic English hub: five-step learning workflow"
+  academicEnglishHubHtml.includes("An eight-step Academic English learning path"),
+  "academic English hub: eight-step learning workflow"
 );
+expect(academicEnglishHubHtml.includes("Read task and policy"), "academic English hub: task-policy step");
+expect(academicEnglishHubHtml.includes("Name reader and purpose"), "academic English hub: reader-purpose step");
+expect(academicEnglishHubHtml.includes("Plan argument and evidence"), "academic English hub: argument-evidence step");
+expect(academicEnglishHubHtml.includes("Keep support traceable"), "academic English hub: source-traceability step");
+expect(academicEnglishHubHtml.includes("Revise global writing first"), "academic English hub: global-revision step");
+expect(academicEnglishHubHtml.includes("Revise in layers"), "academic English hub: layered-language step");
+expect(academicEnglishHubHtml.includes("Learn repeated patterns"), "academic English hub: feedback-learning step");
+expect(academicEnglishHubHtml.includes("Check reader and responsibility"), "academic English hub: reader-responsibility step");
 expect(
-  academicEnglishHubHtml.includes("This fictional learning example is invented for practice"),
-  "academic English hub: fictional-example disclosure"
+  academicEnglishHubHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or text to submit"),
+  "academic English hub: explicit fictional-example disclosure"
 );
 expect(academicEnglishHubHtml.includes("owl.purdue.edu"), "academic English hub: Purdue OWL guidance link");
 expect(academicEnglishHubHtml.includes("drexel.edu"), "academic English hub: Drexel guidance link");
