@@ -1142,9 +1142,28 @@ expect(methodologyVsMethodsHtml.includes("libguides.usc.edu"), "methodology vs m
 
 const annotatedBibliographyHtml = read("annotated-bibliography-example/index.html");
 expect(annotatedBibliographyHtml.includes("Fictional learning example"), "annotated bibliography: fictional-example disclosure");
+expect(annotatedBibliographyHtml.includes("This fictional learning example is invented for practice"), "annotated bibliography: fictional learning boundary");
+expect(annotatedBibliographyHtml.includes("Build an annotation from a verified source record"), "annotated bibliography: source-record workflow");
+expect(annotatedBibliographyHtml.includes("Confirm the annotation task"), "annotated bibliography: task workflow step");
+expect(annotatedBibliographyHtml.includes("Verify the original source record"), "annotated bibliography: original-source workflow step");
+expect(annotatedBibliographyHtml.includes("Identify the source&apos;s specific job"), "annotated bibliography: source-job workflow step");
+expect(annotatedBibliographyHtml.includes("Write an accurate, bounded summary"), "annotated bibliography: summary workflow step");
+expect(annotatedBibliographyHtml.includes("Evaluate on a named criterion"), "annotated bibliography: evaluation workflow step");
+expect(annotatedBibliographyHtml.includes("Reflect on a specific research use"), "annotated bibliography: reflection workflow step");
+expect(annotatedBibliographyHtml.includes("Compare only when assignment calls for it"), "annotated bibliography: comparison workflow step");
+expect(annotatedBibliographyHtml.includes("Verify format, attribution, and boundaries"), "annotated bibliography: attribution-boundary workflow step");
+expect(annotatedBibliographyHtml.includes("Use a source record before drafting"), "annotated bibliography: source-record checklist");
 expect(annotatedBibliographyHtml.includes("writingcenter.unc.edu"), "annotated bibliography: UNC guidance link");
 expect(annotatedBibliographyHtml.includes("writingcenter.gmu.edu"), "annotated bibliography: university writing-center guidance link");
 expect(annotatedBibliographyHtml.includes("owl.purdue.edu"), "annotated bibliography: Purdue OWL guidance link");
+expect(annotatedBibliographyHtml.includes('/evaluate-academic-sources/'), "annotated bibliography: source-evaluation link");
+expect(annotatedBibliographyHtml.includes('/how-to-paraphrase-without-plagiarizing/'), "annotated bibliography: paraphrasing link");
+expect(annotatedBibliographyHtml.includes('/citations/'), "annotated bibliography: citations link");
+expect(annotatedBibliographyHtml.includes('/literature-review-synthesis-matrix/'), "annotated bibliography: synthesis-matrix link");
+expect(annotatedBibliographyHtml.includes('/literature-review-example/'), "annotated bibliography: literature-review-example link");
+expect(annotatedBibliographyHtml.includes('/research-question-examples/'), "annotated bibliography: research-question link");
+expect(annotatedBibliographyHtml.includes('/academic-integrity-and-source-use/'), "annotated bibliography: source-use link");
+expect(annotatedBibliographyHtml.includes('/academic-argument-evidence/'), "annotated bibliography: argument link");
 
 const mlaCitationHtml = read("mla-citation-examples/index.html");
 expect(mlaCitationHtml.includes("MLA 9 citation examples"), "MLA citations: expected H1");
