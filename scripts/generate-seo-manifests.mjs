@@ -189,9 +189,9 @@ const STATIC_PAGE_SEO = {
       "research question examples, how to write a research question, focused research question",
   },
   "/thesis-statement-examples": {
-    title: "Thesis Statement Examples: Make an Academic Claim Specific and Arguable | CorePapers",
-    description: "Build a clearer thesis statement by turning a broad topic into a specific, arguable, evidence-led claim with a fictional learning example and checklist.",
-    keywords: "thesis statement examples, academic thesis statement, how to write thesis statement, arguable thesis claim",
+    title: "Thesis Statement Examples and Placement: Where It Goes in an Essay | CorePapers",
+    description: "Learn where a thesis statement usually goes in an essay, then build a specific, arguable, evidence-led claim with a fictional learning example, placement check, and revision workflow.",
+    keywords: "where does thesis statement go in essay, where to put thesis statement, thesis statement placement, thesis statement examples, academic thesis statement, how to write thesis statement, arguable thesis claim",
   },
   "/academic-paragraph-structure": {
     title: "Academic Paragraph Structure: Topic Sentence, Evidence, and Explanation | CorePapers",

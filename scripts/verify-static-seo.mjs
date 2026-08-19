@@ -571,7 +571,7 @@ const pages = [
   ],
   [
     "/thesis-statement-examples/",
-    "Thesis statement examples: make an academic claim specific and arguable",
+    "Thesis statement examples and placement: build an arguable claim",
   ],
   [
     "/how-to-write-an-abstract-research-paper/",
@@ -819,19 +819,32 @@ expect(academicParagraphHtml.includes('/hedging-language-academic-writing/'), "a
 
 const thesisStatementHtml = read("thesis-statement-examples/index.html");
 expect(
-  thesisStatementHtml.includes("Thesis statement examples: make an academic claim specific and arguable"),
+  thesisStatementHtml.includes("Thesis statement examples and placement: build an arguable claim"),
   "thesis statements: expected H1"
 );
+expect(thesisStatementHtml.includes("where a thesis statement usually goes in an essay"), "thesis statements: placement search intent");
+expect(thesisStatementHtml.includes("Place a thesis where readers can find the paper&apos;s controlling claim"), "thesis statements: reader-path placement guidance");
 expect(thesisStatementHtml.includes("Move from task and evidence to a supportable working thesis"), "thesis statements: eight-step drafting workflow");
+expect(thesisStatementHtml.includes("Confirm assignment and reader"), "thesis statements: task-reader workflow step");
+expect(thesisStatementHtml.includes("Frame problem worth answering"), "thesis statements: question workflow step");
+expect(thesisStatementHtml.includes("Study available material"), "thesis statements: evidence workflow step");
+expect(thesisStatementHtml.includes("Choose kind of claim"), "thesis statements: claim-type workflow step");
+expect(thesisStatementHtml.includes("State provisional answer"), "thesis statements: working-claim workflow step");
+expect(thesisStatementHtml.includes("Choose the reader path before the claim"), "thesis statements: placement workflow step");
+expect(thesisStatementHtml.includes("Set scope and map the evidence path"), "thesis statements: calibration-support workflow step");
+expect(thesisStatementHtml.includes("Revise placement against completed paper"), "thesis statements: placement reverse-check workflow step");
 expect(
   thesisStatementHtml.includes("This fictional learning example is invented for practice"),
   "thesis statements: fictional-example disclosure"
 );
+expect(thesisStatementHtml.includes("not a real source set, policy, record, claim, reason, counterpoint, or thesis to submit"), "thesis statements: explicit fictional boundary");
 expect(thesisStatementHtml.includes("writingcenter.fas.harvard.edu"), "thesis statements: Harvard guidance link");
 expect(thesisStatementHtml.includes("writingcenter.unc.edu"), "thesis statements: UNC guidance link");
 expect(thesisStatementHtml.includes("owl.purdue.edu"), "thesis statements: Purdue guidance link");
 expect(thesisStatementHtml.includes("normative or policy thesis"), "thesis statements: claim-type boundary");
+expect(thesisStatementHtml.includes("often the first paragraph"), "thesis statements: conditional first-paragraph placement guidance");
 expect(thesisStatementHtml.includes('/research-question-examples/'), "thesis statements: research-question cluster link");
+expect(thesisStatementHtml.includes('/introduction-section-example-research-paper/'), "thesis statements: introduction-placement cluster link");
 expect(thesisStatementHtml.includes('/academic-paragraph-structure/'), "thesis statements: paragraph cluster link");
 expect(thesisStatementHtml.includes('/research-paper-outline-template/'), "thesis statements: outline cluster link");
 expect(thesisStatementHtml.includes('/hedging-language-academic-writing/'), "thesis statements: hedging cluster link");
@@ -1257,9 +1270,9 @@ expect(thesisGuideHtml.includes("Frame problem worth answering"), "thesis guide:
 expect(thesisGuideHtml.includes("Study available material"), "thesis guide: evidence workflow step");
 expect(thesisGuideHtml.includes("Choose kind of claim"), "thesis guide: claim-type workflow step");
 expect(thesisGuideHtml.includes("State provisional answer"), "thesis guide: working-claim workflow step");
-expect(thesisGuideHtml.includes("Set scope and certainty"), "thesis guide: scope workflow step");
-expect(thesisGuideHtml.includes("Map reasons and challenges"), "thesis guide: support workflow step");
-expect(thesisGuideHtml.includes("Revise against completed paper"), "thesis guide: revision workflow step");
+expect(thesisGuideHtml.includes("Choose the reader path before the claim"), "thesis guide: placement workflow step");
+expect(thesisGuideHtml.includes("Set scope and map the evidence path"), "thesis guide: scope-support workflow step");
+expect(thesisGuideHtml.includes("Revise placement against completed paper"), "thesis guide: placement-revision workflow step");
 expect(thesisGuideHtml.includes("writingcenter.fas.harvard.edu"), "thesis guide: Harvard guidance link");
 expect(thesisGuideHtml.includes("writingcenter.unc.edu"), "thesis guide: UNC guidance link");
 expect(thesisGuideHtml.includes("owl.purdue.edu"), "thesis guide: Purdue guidance link");
