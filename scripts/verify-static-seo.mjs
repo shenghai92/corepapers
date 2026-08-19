@@ -1165,9 +1165,29 @@ expect(mlaCitationHtml.includes('/annotated-bibliography-example/'), "MLA citati
 expect(mlaCitationHtml.includes('/academic-integrity-and-source-use/'), "MLA citations: source-use link");
 const literatureReviewExampleHtml = read("literature-review-example/index.html");
 expect(literatureReviewExampleHtml.includes("Fictional learning example"), "literature-review example: fictional-example disclosure");
+expect(literatureReviewExampleHtml.includes("This fictional learning example is invented for practice"), "literature-review example: fictional learning boundary");
+expect(literatureReviewExampleHtml.includes("Build a Literature Review from source relationships, not source order"), "literature-review example: synthesis workflow");
+expect(literatureReviewExampleHtml.includes("Confirm the review task and reader"), "literature-review example: task-reader workflow step");
+expect(literatureReviewExampleHtml.includes("Build a source relationship record"), "literature-review example: source-record workflow step");
+expect(literatureReviewExampleHtml.includes("Choose an organizing lens"), "literature-review example: organizing-lens workflow step");
+expect(literatureReviewExampleHtml.includes("Check evidence scope before grouping"), "literature-review example: evidence-scope workflow step");
+expect(literatureReviewExampleHtml.includes("Draft a theme-led claim"), "literature-review example: theme-claim workflow step");
+expect(literatureReviewExampleHtml.includes("Compare on a specific basis"), "literature-review example: comparison workflow step");
+expect(literatureReviewExampleHtml.includes("Frame a bounded research limitation or next question"), "literature-review example: limitation workflow step");
+expect(literatureReviewExampleHtml.includes("Verify attribution and review boundaries"), "literature-review example: attribution-boundary workflow step");
+expect(literatureReviewExampleHtml.includes("Use a source relationship record before drafting"), "literature-review example: source-record checklist");
 expect(literatureReviewExampleHtml.includes("writingcenter.gmu.edu"), "literature-review example: university synthesis guidance link");
+expect(literatureReviewExampleHtml.includes("writingcenter.unc.edu/tips-and-tools/literature-reviews"), "literature-review example: UNC guidance link");
 expect(literatureReviewExampleHtml.includes("guides.library.jhu.edu"), "literature-review example: library synthesis guidance link");
+expect(literatureReviewExampleHtml.includes('/literature-review-synthesis-matrix/'), "literature-review example: synthesis-matrix link");
 expect(literatureReviewExampleHtml.includes('/research-gap-examples/'), "literature-review example: research-gap return link");
+expect(literatureReviewExampleHtml.includes('/research-question-examples/'), "literature-review example: research-question link");
+expect(literatureReviewExampleHtml.includes('/phrases/literature-review/'), "literature-review example: phrases link");
+expect(literatureReviewExampleHtml.includes('/introduction-section-example-research-paper/'), "literature-review example: introduction-example link");
+expect(literatureReviewExampleHtml.includes('/academic-argument-evidence/'), "literature-review example: argument link");
+expect(literatureReviewExampleHtml.includes('/hedging-language-academic-writing/'), "literature-review example: hedging link");
+expect(literatureReviewExampleHtml.includes('/academic-integrity-and-source-use/'), "literature-review example: source-use link");
+expect(literatureReviewExampleHtml.includes('/citations/'), "literature-review example: citations link");
 
 const integrityHtml = read("academic-integrity-and-source-use/index.html");
 expect(
