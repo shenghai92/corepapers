@@ -435,7 +435,15 @@ expect(polishHtml.includes("fictional learning sample"), "Essay Polish: fictiona
 expect(polishHtml.includes("What an essay polisher cannot decide"), "Essay Polish: tool-responsibility boundary");
 expect(polishHtml.includes('/academic-paragraph-structure/'), "Essay Polish: paragraph-structure learning link");
 expect(polishHtml.includes('/academic-integrity-and-source-use/'), "Essay Polish: source-use learning link");
-expect(polishHtml.includes("1. Check what is permitted"), "Essay Polish: six-step revision workflow");
+expect(polishHtml.includes("An eight-step workflow for AI-assisted academic polishing"), "Essay Polish: eight-step revision workflow");
+expect(polishHtml.includes("Check what is permitted"), "Essay Polish: policy workflow step");
+expect(polishHtml.includes("Decide what you can share"), "Essay Polish: privacy workflow step");
+expect(polishHtml.includes("Set revision goal"), "Essay Polish: revision-goal workflow step");
+expect(polishHtml.includes("Fix argument first"), "Essay Polish: global-revision workflow step");
+expect(polishHtml.includes("Inspect every suggestion"), "Essay Polish: suggestion-review workflow step");
+expect(polishHtml.includes("Protect facts and sources"), "Essay Polish: source-verification workflow step");
+expect(polishHtml.includes("Finish sentence level"), "Essay Polish: sentence-editing workflow step");
+expect(polishHtml.includes("Read as next reader"), "Essay Polish: reverse-check workflow step");
 expect(polishHtml.includes("Revise in layers; review every suggestion"), "Essay Polish: layered-revision boundary");
 expect(polishHtml.includes("owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html"), "Essay Polish: Purdue revision guidance link");
 expect(polishHtml.includes("writingcenter.unc.edu/tips-and-tools/generative-ai-in-academic-writing"), "Essay Polish: UNC AI-policy guidance link");
