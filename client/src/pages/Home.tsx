@@ -71,6 +71,16 @@ const RESOURCE_CENTERS = [
     href: "/evaluate-academic-sources",
     desc: "Evaluate sources, focus a research question, shape a thesis, and build an evidence-based argument.",
   },
+  {
+    title: "Research Paper Revision Checklist",
+    href: "/research-paper-revision-checklist",
+    desc: "Check task fit, argument, evidence, citations, limits, language, and final submission responsibility.",
+  },
+  {
+    title: "AI Use & Disclosure",
+    href: "/ai-use-disclosure-academic-writing",
+    desc: "Check local policy, protect private material, verify sources, and document permitted use responsibly.",
+  },
 ];
 
 const FEATURES = [
@@ -93,7 +103,7 @@ const FEATURES = [
   {
     icon: Quote,
     title: "Citation Generator",
-    desc: "Create APA, MLA, Chicago, and IEEE citations quickly without formatting guesswork.",
+    desc: "Build APA, MLA, Chicago, and IEEE citation drafts from checked source details, then review each format before submission.",
     href: "/citations",
     color: "bg-mint-light",
     iconColor: "text-emerald-600",
@@ -144,7 +154,7 @@ const PAIN_POINTS = [
 const HOME_FAQ = [
   {
     q: "Who is CorePapers best for?",
-    a: "CorePapers is built for international students and non-native English writers who already have a draft, paragraph, citation list, or research section they need to improve quickly.",
+    a: "CorePapers is built for international students and non-native English writers who already have a draft, paragraph, source record, citation list, or research section they need to review more carefully.",
   },
   {
     q: "Can I use CorePapers for more than grammar correction?",
@@ -152,7 +162,11 @@ const HOME_FAQ = [
   },
   {
     q: "What should I try first?",
-    a: "Most users start with the essay polisher for draft revision, then use the phrase library for sentence patterns and the citation generator for reference formatting.",
+    a: "Most users start with the essay polisher for a draft they have written, then use the phrase library for sentence patterns and the citation generator for reference formatting from original source details.",
+  },
+  {
+    q: "Can CorePapers make academic decisions for me?",
+    a: "No. You remain responsible for your evidence, source accuracy, citations, privacy choices, course policy, permitted AI use, and the work submitted under your name. Use the resource guides to check those decisions before polishing language.",
   },
 ];
 
@@ -204,7 +218,7 @@ export default function Home() {
     <>
       <SEOHead
         title="CorePapers: Academic Writing Tool for International Students | Essay Polish, Phrases & Citations"
-        description="CorePapers helps international students fix non-native phrasing, find academic sentence templates, and generate APA, MLA, Chicago, and IEEE citations in seconds. Free to start."
+        description="CorePapers helps international students revise non-native phrasing, find academic sentence templates, and build APA, MLA, Chicago, and IEEE citations from verified source details. Free to start."
         keywords="CorePapers, core papers, AI academic writing assistant, academic phrase bank, writing tools for international students, AI essay polisher, APA 7 citation generator"
         canonical="/"
         jsonLd={HOME_SCHEMA}
@@ -239,8 +253,8 @@ export default function Home() {
                 CorePapers helps international students and non-native English
                 speakers fix translated phrasing, strengthen academic
                 vocabulary, find better academic English expressions, and
-                generate accurate citations so each draft reads more clearly and
-                credibly.
+                  build citations from verified source details so each draft reads more clearly and
+                  credibly.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -297,10 +311,10 @@ export default function Home() {
                   <CheckCircle2 size={13} className="text-emerald-500" />
                   Free plan for trying real tasks
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 size={13} className="text-emerald-500" />
-                  Upgrade when your writing load grows
-                </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 size={13} className="text-emerald-500" />
+                    Author-led revision and source responsibility
+                  </span>
               </div>
             </div>
 
