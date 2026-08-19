@@ -154,10 +154,12 @@ export default function SectionWritingPractice({
   const isConclusion = kind === "conclusion";
   const sectionProcess = isResults
     ? [
-        ["Map the reporting order", "List the research questions, hypotheses, or themes and decide the reader-friendly order in which you will report the findings."],
-        ["Prepare tables and figures first", "Check labels, notes, units, and numbering before you draft. Refer to each table or figure only after you introduce the relevant finding."],
-        ["Report what the analysis shows", "Name the analysis, finding, pattern, or theme accurately. Keep explanations of why it happened and broad recommendations for the Discussion."],
-        ["Check scope and completeness", "Verify values against your analysis, include relevant unexpected or non-supporting findings, and avoid turning statistical association into causal proof."],
+        ["1. Reopen the research question", "List the research questions, hypotheses, or qualitative themes, then decide the reader-friendly order in which each finding will answer the task."],
+        ["2. Choose the evidence readers need", "Select the results, quotations, descriptive statistics, comparisons, or displays that are necessary to answer the question; do not reproduce every raw observation."],
+        ["3. Prepare tables and figures first", "Check labels, notes, units, captions, and numbering before drafting. Refer to each table or figure only after introducing the relevant finding."],
+        ["4. Report the main finding precisely", "Name the analysis, finding, pattern, or theme accurately and use language that matches the actual measure, comparison, and degree of uncertainty."],
+        ["5. Include meaningful exceptions", "Check relevant unexpected, negative, or non-supporting findings against the analysis. Do not hide them because they complicate a preferred conclusion."],
+        ["6. Preserve the Discussion boundary", "Report what the analysis shows here; move explanations of why it happened, comparisons with earlier studies, implications, and recommendations to Discussion unless the task explicitly combines the sections."],
       ]
     : isMethodology
       ? [
@@ -329,6 +331,23 @@ export default function SectionWritingPractice({
               </p>
             </section>
           )}
+          {isResults && (
+            <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6" aria-labelledby="results-evidence-title">
+              <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
+                <h2 id="results-evidence-title" className="font-serif text-3xl text-slate-purple mb-4">Report a qualitative pattern without making it a conclusion</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice.</strong> A fictional interview project identifies three recurring descriptions of assignment planning: setting a weekly time, using reminders, and revising plans after missed deadlines. A Results section could introduce each theme, give a short, clearly attributed participant excerpt if the assignment permits, and show how the theme connects to the research question. It should not assert that reminders improve achievement or recommend a campus policy before the discussion has evaluated what the fictional evidence can and cannot show.</p>
+              </article>
+              <article className="p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-4">Make displays do work, not repeat the paragraph</h2>
+                <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed"><li><strong className="text-foreground">Introduce each display in prose:</strong> tell readers what finding to look for, then refer to the numbered table or figure.</li><li><strong className="text-foreground">Choose a logical order:</strong> organize by question, hypothesis, theme, or key comparison rather than the order in which data happened to be collected.</li><li><strong className="text-foreground">Avoid duplication:</strong> highlight the relevant pattern instead of restating every value already visible in a table, caption, or figure.</li><li><strong className="text-foreground">Keep source records visible:</strong> check figures, quotations, data transformations, and statistical values against the verified analysis or approved project record.</li></ul>
+              </article>
+              <article className="lg:col-span-2 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Use Results guidance, then follow your assignment&apos;s reporting rules</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://guides.lib.uci.edu/scientificwriting/results" target="_blank" rel="noreferrer">UC Irvine Libraries</a> advises writers to present representative data in logical order, use meaningful statistics, refer to each included table or figure in the text, and keep evaluation of significance for the Discussion. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&p=185931" target="_blank" rel="noreferrer">Sacred Heart University Library</a> likewise recommends a concise, factual Results section that focuses on findings relevant to the research question, does not ignore negative results, and distinguishes raw data or appendices from the main report. Check your instructor, department, journal, and discipline when they use a different structure or combine Results and Discussion.</p>
+              </article>
+            </section>
+          )}
           <section className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href={item.next as string} className="block">
               <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
@@ -354,16 +373,58 @@ export default function SectionWritingPractice({
               </Link>
             )}
             {isResults && (
-              <Link href="/how-to-write-discussion-section" className="block">
-                <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                  <h2 className="font-serif text-xl text-slate-purple mb-2">
-                    Interpret findings in Discussion
-                  </h2>
-                  <p className="text-sm text-muted-foreground font-sans">
-                    Move from reported patterns to careful explanations, limits, and implications.
-                  </p>
-                </div>
-              </Link>
+              <>
+                <Link href="/how-to-write-discussion-section" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Interpret findings in Discussion
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Move from reported patterns to careful explanations, limits, and implications.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/methodology-section-example-research-paper" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Recheck the Methods path
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Confirm that every reported result follows from the design, data source, procedure, and analysis you actually described.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/research-question-examples" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Return to the research question
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Decide which finding genuinely answers the question before adding another table, quotation, or statistic.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/hedging-language-academic-writing" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Match language to the result
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Use cautious reporting and interpretation language when design, sample, measure, or uncertainty limits the claim.
+                    </p>
+                  </div>
+                </Link>
+                <Link href="/academic-argument-evidence" className="block">
+                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
+                    <h2 className="font-serif text-xl text-slate-purple mb-2">
+                      Connect results to argument
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      Explain in the right section how a reported finding supports, complicates, or limits the broader claim.
+                    </p>
+                  </div>
+                </Link>
+              </>
             )}
             {isMethodology && (
               <Link href="/methodology-vs-methods-research-paper" className="block">

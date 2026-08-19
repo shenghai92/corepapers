@@ -858,10 +858,21 @@ expect(
   resultsPracticeHtml.includes("How to build a Results section step by step"),
   "results practice: drafting workflow"
 );
+expect(resultsPracticeHtml.includes("Reopen the research question"), "results practice: question-led reporting workflow");
+expect(resultsPracticeHtml.includes("Include meaningful exceptions"), "results practice: negative-results workflow");
+expect(resultsPracticeHtml.includes("Preserve the Discussion boundary"), "results practice: reporting-interpretation boundary");
+expect(resultsPracticeHtml.includes("Fictional qualitative learning example"), "results practice: qualitative fictional-example disclosure");
+expect(resultsPracticeHtml.includes("Make displays do work, not repeat the paragraph"), "results practice: display-use workflow");
+expect(resultsPracticeHtml.includes("guides.lib.uci.edu/scientificwriting/results"), "results practice: UCI Results guidance link");
+expect(resultsPracticeHtml.includes("library.sacredheart.edu"), "results practice: Sacred Heart Results guidance link");
 expect(
   resultsPracticeHtml.includes('/how-to-write-discussion-section/'),
   "results practice: discussion-transition link"
 );
+expect(resultsPracticeHtml.includes('/methodology-section-example-research-paper/'), "results practice: methodology-path link");
+expect(resultsPracticeHtml.includes('/research-question-examples/'), "results practice: research-question link");
+expect(resultsPracticeHtml.includes('/hedging-language-academic-writing/'), "results practice: hedging link");
+expect(resultsPracticeHtml.includes('/academic-argument-evidence/'), "results practice: argument-evidence link");
 const methodologyPracticeHtml = read(
   "methodology-section-example-research-paper/index.html"
 );
