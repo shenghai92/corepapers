@@ -307,11 +307,17 @@ expect(
   essayPolisherLandingHtml.includes("AI essay polisher for non-native English writers"),
   "essay polisher landing: expected H1"
 );
-expect(essayPolisherLandingHtml.includes("Prepare, polish, and check a paragraph responsibly"), "essay polisher landing: review workflow");
-expect(essayPolisherLandingHtml.includes("Before: confirm the task"), "essay polisher landing: task-policy preparation");
-expect(essayPolisherLandingHtml.includes("Before: protect the draft"), "essay polisher landing: draft-privacy boundary");
-expect(essayPolisherLandingHtml.includes("During: review each change"), "essay polisher landing: suggestion-review step");
-expect(essayPolisherLandingHtml.includes("After: verify source-based content"), "essay polisher landing: source-verification step");
+expect(essayPolisherLandingHtml.includes("An eight-step responsible revision workflow"), "essay polisher landing: eight-step review workflow");
+expect(essayPolisherLandingHtml.includes("Confirm task and policy"), "essay polisher landing: task-policy preparation");
+expect(essayPolisherLandingHtml.includes("Protect draft"), "essay polisher landing: draft-privacy boundary");
+expect(essayPolisherLandingHtml.includes("Name one revision goal"), "essay polisher landing: scoped-revision goal");
+expect(essayPolisherLandingHtml.includes("Review global writing first"), "essay polisher landing: global-revision first");
+expect(essayPolisherLandingHtml.includes("Compare every change"), "essay polisher landing: suggestion-review step");
+expect(essayPolisherLandingHtml.includes("Verify facts and sources"), "essay polisher landing: source-verification step");
+expect(essayPolisherLandingHtml.includes("Edit language deliberately"), "essay polisher landing: language-editing step");
+expect(essayPolisherLandingHtml.includes("Read as reader"), "essay polisher landing: reader-responsibility step");
+expect(essayPolisherLandingHtml.includes("Fictional learning example: practise a transparent revision decision"), "essay polisher landing: fictional-learning boundary");
+expect(essayPolisherLandingHtml.includes("This fictional learning example is invented for practice; it is not student work, research evidence, or text to submit"), "essay polisher landing: explicit fictional-learning disclosure");
 expect(essayPolisherLandingHtml.includes("owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/steps_for_revising.html"), "essay polisher landing: Purdue revision guidance link");
 expect(essayPolisherLandingHtml.includes("writingcenter.unc.edu/tips-and-tools/generative-ai-in-academic-writing"), "essay polisher landing: UNC AI-policy guidance link");
 expect(essayPolisherLandingHtml.includes('/academic-paragraph-structure/'), "essay polisher landing: paragraph-structure link");
