@@ -17,7 +17,7 @@ export default function About() {
     <>
       <SEOHead
         title="About CorePapers and Our Academic Writing Tools for International Students"
-        description="Learn about CorePapers, our academic writing tools for international students, and how to contact support for essay polishing, phrase help, and citations."
+        description="Learn how CorePapers supports international students with author-led academic revision, source-aware citation workflows, research writing resources, and transparent content standards."
         canonical="/about"
         jsonLd={ABOUT_SCHEMA}
       />
@@ -48,7 +48,7 @@ export default function About() {
               {
                 icon: Quote,
                 title: "Citation workflow",
-                desc: "Generate references and in-text citations without losing time on formatting details.",
+                desc: "Build citation drafts from original source details, then check in-text attribution and required format before submission.",
               },
               {
                 icon: GraduationCap,
@@ -74,7 +74,7 @@ export default function About() {
               {
                 icon: FileText,
                 title: "Editorial transparency",
-                desc: "We publish how our educational content is structured, improved, and distinguished from tool-driven output.",
+                desc: "We publish how educational content is sourced, reviewed, updated, and kept distinct from tool output or unverified claims.",
               },
               {
                 icon: GraduationCap,
@@ -98,13 +98,19 @@ export default function About() {
                   Many academic writing tools are designed for very broad use cases. CorePapers is narrower by design. The goal is to support students who already have real writing tasks in front of them and want clearer academic English, not just generic grammar cleanup.
                 </p>
                 <p>
-                  That means focusing on things like non-native phrasing, academic tone, source-based writing, literature review language, and citation-heavy workflows.
+                  That means focusing on non-native phrasing, academic tone, source-based writing, literature review language, citation-heavy workflows, and the revision decisions that affect a paper&apos;s meaning—not simply surface grammar.
+                </p>
+                <p>
+                  CorePapers is educational support, not a substitute for local course policy, subject expertise, original-source verification, ethics review, supervision, or author responsibility. Users remain responsible for their argument, evidence, citations, privacy choices, permitted AI use, and every submission made in their name.
                 </p>
                 <p>
                   If you want to try the product directly, start with <Link href="/polish" className="text-primary underline">essay polish</Link>, <Link href="/citations" className="text-primary underline">citation generation</Link>, or the <Link href="/phrases" className="text-primary underline">academic phrase library</Link>.
                 </p>
                 <p>
-                  If you want more detail about how we publish and improve site content, see the{" "}
+                  If you are revising a research paper, use the <Link href="/research-paper-revision-checklist" className="text-primary underline">research paper revision checklist</Link> before language editing. For permitted AI assistance, use the <Link href="/ai-use-disclosure-academic-writing" className="text-primary underline">AI use and disclosure guide</Link> to check local policy, privacy, source verification, and your disclosure obligation.
+                </p>
+                <p>
+                  For more detail about how we publish and improve site content, see the{" "}
                   <Link href="/editorial-policy" className="text-primary underline">editorial policy</Link> and{" "}
                   <Link href="/how-corepapers-content-is-created" className="text-primary underline">how CorePapers content is created</Link>.
                 </p>
@@ -125,8 +131,9 @@ export default function About() {
                 <p className="mb-2">
                   For policy and publishing information, visit{" "}
                   <Link href="/contact" className="text-primary underline">Contact</Link>,{" "}
-                  <Link href="/editorial-policy" className="text-primary underline">Editorial Policy</Link>, and{" "}
-                  <Link href="/how-corepapers-content-is-created" className="text-primary underline">How Content Is Created</Link>.
+                  <Link href="/editorial-policy" className="text-primary underline">Editorial Policy</Link>,{" "}
+                  <Link href="/how-corepapers-content-is-created" className="text-primary underline">How Content Is Created</Link>, and the{" "}
+                  <Link href="/ai-use-disclosure-academic-writing" className="text-primary underline">AI Use & Disclosure Guide</Link>.
                 </p>
               </div>
               <Button asChild className="w-full bg-cta-gradient text-white border-0 shadow-soft hover:opacity-90">

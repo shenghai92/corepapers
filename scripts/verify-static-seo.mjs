@@ -1502,6 +1502,19 @@ expect(
   "citation-examples resource: BreadcrumbList JSON-LD"
 );
 
+const aboutHtml = read("about/index.html");
+expect(aboutHtml.includes("What remains the author&apos;s responsibility"), "about: author-responsibility section");
+expect(aboutHtml.includes("original-source verification"), "about: source-verification boundary");
+expect(aboutHtml.includes('/research-paper-revision-checklist/'), "about: revision checklist link");
+expect(aboutHtml.includes('/ai-use-disclosure-academic-writing/'), "about: AI disclosure link");
+expect(aboutHtml.includes('/editorial-policy/'), "about: editorial policy link");
+
+const contactHtml = read("contact/index.html");
+expect(contactHtml.includes("Content corrections and source feedback"), "contact: correction-feedback section");
+expect(contactHtml.includes("Protect private academic material"), "contact: privacy-safe support section");
+expect(contactHtml.includes('/ai-use-disclosure-academic-writing/'), "contact: AI disclosure link");
+expect(contactHtml.includes('/research-paper-revision-checklist/'), "contact: revision checklist link");
+
 const aiDisclosureHtml = read("ai-use-disclosure-academic-writing/index.html");
 expect(aiDisclosureHtml.includes("AI use disclosure in academic writing"), "AI disclosure guide: crawler-visible H1");
 expect(aiDisclosureHtml.includes("An eight-step AI use and disclosure workflow"), "AI disclosure guide: eight-step workflow");
