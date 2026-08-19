@@ -180,10 +180,14 @@ export default function SectionWritingPractice({
           ]
         : isDiscussion
           ? [
-              ["Bridge from a reported finding", "Refer briefly to the specific result or theme being interpreted rather than repeating a complete Results paragraph."],
-              ["Explain a bounded meaning", "State what the finding may suggest for the research question in language that fits the design, measure, and strength of evidence."],
-              ["Compare, test, and limit", "Connect the interpretation to relevant research, consider plausible alternatives, and explain limitations that affect the reach of the claim."],
-              ["End with a proportionate implication", "Link the analysis to theory, practice, or next research only within the study population, context, method, and uncertainty."],
+              ["1. Check the Discussion contract", "Confirm whether the assignment separates Results, Discussion, and Conclusion or combines them, then identify where interpretation, implications, limitations, recommendations, and future research belong. Follow the required genre rather than copying a generic template."],
+              ["2. Reopen the reported finding", "Name the specific result, comparison, pattern, theme, exception, or unresolved question that will be interpreted. Use a short bridge from Results; do not repeat a table, statistic, quotation, or full Results paragraph."],
+              ["3. Explain a bounded meaning", "State what the reported evidence may suggest for the research question in language that fits the design, measure, analysis, population, context, and degree of uncertainty. Separate an interpretation from a fact reported in Results."],
+              ["4. Compare with a specific research relationship", "Connect the interpretation to prior research by identifying what genuinely aligns, differs, extends, or remains uncertain in relation to the same question, evidence, setting, method, population, or outcome. Cite each source-based relationship accurately."],
+              ["5. Consider alternatives and unexpected detail", "Test a plausible competing explanation, unexpected finding, negative result, contextual factor, measurement issue, or design feature without selectively choosing only the account that supports a preferred argument. Label speculation as speculation."],
+              ["6. Name limitations that change reach", "Explain how sample, setting, source, measure, design, missing data, timing, analytic choice, or other verified limitation affects the interpretation, transferability, or certainty of the claim. Do not apologize or invent a limitation for effect."],
+              ["7. State a proportionate implication or next question", "Link the analysis to theory, practice, policy, or further research only where evidence and prior scholarship support that move. Make recommendations conditional, specify context, and connect future research to a real unanswered question or limitation."],
+              ["8. Reconcile section boundaries", "Check that every fact, statistic, theme, quotation, or display was reported in Results; every comparison is supported by cited source; and any final takeaway or repeated recommendation is placed once in the location required by the paper's conclusion structure."],
             ]
           : isConclusion
             ? [
@@ -209,7 +213,7 @@ export default function SectionWritingPractice({
       : isIntroduction
         ? "A fictional model can help you practise focusing a research problem, but use only accurate context, verified citations, and a purpose that your final paper can genuinely address."
         : isDiscussion
-          ? "A fictional model can help you practise interpretation, but use only your own reported findings and keep every explanation, comparison, and implication proportionate to the evidence."
+          ? "A fictional model can help you practise interpretation, but use only your own reported findings, verified sources, and actual limitations. Do not invent a result, citation, explanation, policy implication, exception, or causal conclusion; keep every move proportionate to evidence and your assignment's section structure."
           : "A fictional model can help you practise synthesis, but make your final takeaway follow from the claim, evidence, analysis, and limits already established in your paper.";
 
   return (
@@ -368,6 +372,23 @@ export default function SectionWritingPractice({
               </article>
             </section>
           )}
+          {isDiscussion && (
+            <section className="max-w-5xl mx-auto mt-8 grid lg:grid-cols-2 gap-6" aria-labelledby="discussion-evidence-title">
+              <article className="p-7 bg-hero-gradient border border-border rounded-2xl">
+                <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Fictional learning example</p>
+                <h2 id="discussion-evidence-title" className="font-serif text-3xl text-slate-purple mb-4">Interpret a reported pattern without making it a causal or universal claim</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><strong className="text-foreground">This fictional learning example is invented for practice; it is not a real finding, source, comparison, limitation, policy recommendation, or paragraph to submit.</strong> A fictional Results section reported an association between weekly planning and assignment completion in one fictional self-report sample. A fictional Discussion can briefly bridge to that reported association, say it may be consistent with an invented account of planning as a support routine, and compare it cautiously with an invented study in a different setting. It should name the fictional cross-sectional self-report limitation, consider reverse direction or an unmeasured factor as possible alternatives, and propose a fictional longitudinal question. It must not invent a supporting source, claim that planning caused completion, promise a universal intervention, or add a new statistic that Results did not report.</p>
+              </article>
+              <article className="p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-4">Use an interpretation record before choosing a confident sentence</h2>
+                <ul className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed"><li><strong className="text-foreground">Finding bridge:</strong> can a reader locate the exact reported result, theme, exception, or unanswered question you are interpreting?</li><li><strong className="text-foreground">Meaning path:</strong> can you distinguish what data reported, what you infer, and what prior research supports?</li><li><strong className="text-foreground">Comparison basis:</strong> can you name the shared question and the particular evidence, design, setting, population, measure, or outcome that aligns or differs?</li><li><strong className="text-foreground">Reach check:</strong> can you identify relevant alternatives, limitations, uncertainty, and conditions before stating an implication or next question?</li></ul>
+              </article>
+              <article className="lg:col-span-2 p-7 bg-white border border-border rounded-2xl">
+                <h2 className="font-serif text-3xl text-slate-purple mb-3">Use Discussion guidance, then follow your assignment&apos;s section rules</h2>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://libguides.usc.edu/writingguide/discussion" target="_blank" rel="noreferrer">USC Libraries</a> describes Discussion as evidence-based interpretation of findings in relation to the research problem and prior work; it advises writers to compare relevant studies, consider alternatives, acknowledge limitations, state significance proportionately, and avoid restating Results or introducing new results. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&p=185933" target="_blank" rel="noreferrer">Sacred Heart University Library</a> likewise recommends explaining meaning, comparing research, retaining conflicting detail, discussing limitations, and linking future research to unanswered questions. <a className="text-primary underline underline-offset-4" href="https://explore.plos.org/author-resources/how-to-write-effective-discussions-and-conclusions" target="_blank" rel="noreferrer">PLOS Author Resources</a> emphasizes realistic implications, limitations and negative results, and avoiding new evidence or overstated importance. Your instructor, discipline, journal, and paper structure control where they differ.</p>
+              </article>
+            </section>
+          )}
           <section className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link href={item.next as string} className="block">
               <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
@@ -502,36 +523,18 @@ export default function SectionWritingPractice({
             )}
             {isDiscussion && (
               <>
-                <Link href="/how-to-write-discussion-section" className="block">
-                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                    <h2 className="font-serif text-xl text-slate-purple mb-2">
-                      Plan the full discussion
-                    </h2>
-                    <p className="text-sm text-muted-foreground font-sans">
-                      Move from a finding to careful interpretation, limitations, and implications.
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/results-section-example-research-paper" className="block">
-                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                    <h2 className="font-serif text-xl text-slate-purple mb-2">
-                      Keep Results distinct
-                    </h2>
-                    <p className="text-sm text-muted-foreground font-sans">
-                      Separate factual reporting from interpretation before you make a claim about meaning.
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/hedging-language-academic-writing" className="block">
-                  <div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30">
-                    <h2 className="font-serif text-xl text-slate-purple mb-2">
-                      Calibrate certainty
-                    </h2>
-                    <p className="text-sm text-muted-foreground font-sans">
-                      Match possible explanations and implications to the strength of your evidence.
-                    </p>
-                  </div>
-                </Link>
+                <Link href="/how-to-write-discussion-section" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Plan the full Discussion</h2><p className="text-sm text-muted-foreground font-sans">Move from a finding to careful interpretation, limitations, implications, and next research.</p></div></Link>
+                <Link href="/results-section-example-research-paper" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Keep Results distinct</h2><p className="text-sm text-muted-foreground font-sans">Separate factual reporting from interpretation before making a claim about meaning.</p></div></Link>
+                <Link href="/methodology-section-example-research-paper" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Recheck the Methods path</h2><p className="text-sm text-muted-foreground font-sans">Use the actual design, source, measure, procedure, and analysis to define what a finding can support.</p></div></Link>
+                <Link href="/phrases/discussion" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Choose Discussion phrases carefully</h2><p className="text-sm text-muted-foreground font-sans">Select comparison, limitation, implication, and future-research language after identifying its evidence responsibility.</p></div></Link>
+                <Link href="/hedging-language-academic-writing" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Calibrate certainty</h2><p className="text-sm text-muted-foreground font-sans">Match possible explanations and implications to evidence strength, uncertainty, and design limits.</p></div></Link>
+                <Link href="/conclusion-section-example-research-paper" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Place the final takeaway</h2><p className="text-sm text-muted-foreground font-sans">Decide what belongs in Discussion and what should be held for final conclusion synthesis.</p></div></Link>
+                <Link href="/academic-argument-evidence" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Test the argument path</h2><p className="text-sm text-muted-foreground font-sans">Check how a finding supports, complicates, limits, or leaves a broader claim unresolved.</p></div></Link>
+                <Link href="/literature-review-synthesis-matrix" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Compare research precisely</h2><p className="text-sm text-muted-foreground font-sans">Map themes, designs, findings, contexts, and limits before declaring alignment or difference.</p></div></Link>
+                <Link href="/research-question-examples" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Return to the research question</h2><p className="text-sm text-muted-foreground font-sans">Decide which reported finding genuinely answers the question before expanding an implication.</p></div></Link>
+                <Link href="/research-gap-examples" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">State a careful next question</h2><p className="text-sm text-muted-foreground font-sans">Connect a limitation or unresolved result to specific future research without saying nothing exists.</p></div></Link>
+                <Link href="/academic-integrity-and-source-use" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Keep comparisons traceable</h2><p className="text-sm text-muted-foreground font-sans">Check that every cited study, paraphrase, limitation, and interpretation has accurate source support.</p></div></Link>
+                <Link href="/citations" className="block"><div className="p-5 bg-white border border-border rounded-xl hover:border-primary/30"><h2 className="font-serif text-xl text-slate-purple mb-2">Verify citations in context</h2><p className="text-sm text-muted-foreground font-sans">Confirm that sources used to compare or contextualize findings are accurately cited and formatted.</p></div></Link>
               </>
             )}
             {isConclusion && (
