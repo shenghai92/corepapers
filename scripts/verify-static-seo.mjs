@@ -624,7 +624,7 @@ const pages = [
   ],
   [
     "/methodology-section-example-research-paper/",
-    "How to write a Methodology section for a research paper",
+    "How to write a Methodology or Methods section for a research paper",
   ],
   [
     "/apa-7-non-english-sources/",
@@ -1316,23 +1316,26 @@ expect(
   "methodology practice: USC guidance link"
 );
 expect(
-  methodologyPracticeHtml.includes("How to write a Methodology section for a research paper"),
-  "methodology practice: GSC-aligned how-to intent"
+  methodologyPracticeHtml.includes("How to write a Methodology or Methods section for a research paper"),
+  "methodology practice: GSC-aligned methods-and-methodology how-to intent"
 );
 expect(
   methodologyPracticeHtml.includes("sample methodology section"),
   "methodology practice: sample-query keyword metadata"
 );
 expect(
-  methodologyPracticeHtml.includes("How to build a Methodology section step by step"),
-  "methodology practice: drafting workflow"
+  methodologyPracticeHtml.includes("How to build a Methodology or Methods section step by step"),
+  "methodology practice: eight-step drafting workflow"
 );
+expect(methodologyPracticeHtml.includes("Confirm the section contract"), "methodology practice: section-contract workflow");
 expect(methodologyPracticeHtml.includes("Reopen the research question"), "methodology practice: question-led workflow");
-expect(methodologyPracticeHtml.includes("Match design to the task"), "methodology practice: design-fit workflow");
+expect(methodologyPracticeHtml.includes("Name the approach and its rationale"), "methodology practice: methods-methodology rationale workflow");
 expect(methodologyPracticeHtml.includes("Make the selection path visible"), "methodology practice: selection-transparency workflow");
 expect(methodologyPracticeHtml.includes("Record what actually happened"), "methodology practice: completed-actions workflow");
 expect(methodologyPracticeHtml.includes("Trace the analysis route"), "methodology practice: analysis-transparency workflow");
-expect(methodologyPracticeHtml.includes("Name limits and safeguards"), "methodology practice: limitations-safeguards workflow");
+expect(methodologyPracticeHtml.includes("Name limits, ethics, and safeguards"), "methodology practice: limitations-ethics-safeguards workflow");
+expect(methodologyPracticeHtml.includes("Preserve section boundaries and reverse-check"), "methodology practice: results-discussion boundary workflow");
+expect(methodologyPracticeHtml.includes("This fictional learning example is invented for practice; it is not a real study"), "methodology practice: explicit fictional-study boundary");
 expect(methodologyPracticeHtml.includes("Fictional learning example: secondary-data route"), "methodology practice: secondary-data fictional-example disclosure");
 expect(methodologyPracticeHtml.includes("Use a transparency record before drafting"), "methodology practice: transparency-record check");
 expect(
@@ -1340,8 +1343,10 @@ expect(
   "methodology practice: research-responsibility boundary"
 );
 expect(methodologyPracticeHtml.includes("library.sacredheart.edu"), "methodology practice: Sacred Heart guidance link");
+expect(methodologyPracticeHtml.includes("p=185929"), "methodology practice: Sacred Heart qualitative-methods guidance");
 expect(methodologyPracticeHtml.includes('/research-question-examples/'), "methodology practice: research-question link");
 expect(methodologyPracticeHtml.includes('/results-section-example-research-paper/'), "methodology practice: results-path link");
+expect(methodologyPracticeHtml.includes('/how-to-write-discussion-section/'), "methodology practice: discussion-boundary link");
 expect(methodologyPracticeHtml.includes('/academic-integrity-and-source-use/'), "methodology practice: source-use link");
 expect(methodologyPracticeHtml.includes('/research-paper-sections/'), "methodology practice: sections-contract link");
 expect(

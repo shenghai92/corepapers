@@ -113,28 +113,29 @@ const data = {
   methodology: {
     canonical: "/methodology-section-example-research-paper/",
     title:
-      "How to Write a Methodology Section for a Research Paper: Example and Planner",
+      "How to Write a Methodology or Methods Section: Example and Checklist | CorePapers",
     description:
-      "Learn how to write a methodology or methods section for a research paper with a fictional example and planner for design, participants, data collection, analysis, and limitations.",
+      "Learn how to write a methodology or methods section for a research paper with a fictional example, eight-step checklist, and guidance on design, selection, procedures, analysis, rationale, limitations, and ethics.",
     keywords:
-      "how to write methodology section research paper, how to write a methodology section of a research paper, methodology section example research paper, sample methodology section, methodology section template, methods section research paper",
+      "how to write methodology section research paper, how to write a methodology section of a research paper, methodology section example research paper, sample methodology section, methodology section template, methods section research paper, method section research paper",
     eyebrow: "Research methodology planner",
-    h1: "How to write a Methodology section for a research paper",
+    h1: "How to write a Methodology or Methods section for a research paper",
     intro:
-      "Learn how to write a Methodology or Methods section through this fictional learning example and planner for describing research design. Replace every bracketed placeholder with verified details from your study and follow any method, ethics, or format requirements from your instructor.",
+      "Learn how to write a Methodology or Methods section with a fictional learning example, an eight-step planning workflow, and checks for research design, selection, actual procedures, analysis, rationale, limits, and ethics. Replace every placeholder with verified details from your own project and follow the requirements that govern your work.",
     question:
-      "How was information collected or generated, and how was it analysed?",
+      "What did you do, why did this approach fit the question, and how did you analyse the information?",
     checklist: [
-      "I stated the research design and explained why it fits the research question.",
-      "I described the participants, data, setting, or sources and how they were selected.",
-      "I explained collection procedures and the steps used to analyse the information.",
-      "I identified relevant limitations and separated what I did from the interpretation of results.",
+      "I confirmed whether this assignment needs methods, methodology, a proposal, or a completed-study account.",
+      "I stated the research design and showed why it fits the research question rather than naming a method for effect.",
+      "I described the participants, data, setting, or sources, including the real selection route and time or context boundary.",
+      "I explained verified procedures and the steps used to analyse information without inventing access, approval, consent, collection, or results.",
+      "I identified relevant limitations or safeguards and kept findings in Results and their meaning in Discussion.",
     ],
     sampleTitle: "Fictional methodology example",
     sample:
-      "This study used a cross-sectional survey design to examine the association between weekly planning and assignment completion among undergraduate students. Participants were recruited through [approved course channel] and completed an anonymous online questionnaire. Responses were screened using the predefined inclusion criteria. Descriptive statistics and linear regression were used to examine the relationship between planning frequency and completion score.",
+      "This fictional learning example is invented for practice; it is not a real study, participant record, approval, dataset, result, or methodology section to submit. A fictional study used a cross-sectional survey design to examine the association between weekly planning and assignment completion among undergraduate students. Fictional participants were recruited through an [approved course channel] and completed a fictional anonymous online questionnaire. Fictional responses were screened using predefined inclusion criteria. Descriptive statistics and linear regression were used to examine the fictional relationship between planning frequency and completion score.",
     explanation:
-      "This paragraph gives a reader enough information to understand the design, sample route, procedure, and analysis. It does not report findings or argue that planning is effective.",
+      "The fictional paragraph gives a reader enough information to understand a fictional design, sample route, procedure, and analysis. It does not report findings or argue that planning is effective, and it cannot substitute for verified details from a real project.",
     next: "/methodology-vs-methods-research-paper",
     nextLabel: "Compare methodology and methods",
   },
@@ -163,13 +164,14 @@ export default function SectionWritingPractice({
       ]
     : isMethodology
       ? [
-          ["1. Reopen the research question", "State enough of the question, problem, or objective for readers to see what the design needs to investigate; do not add a method simply because it sounds sophisticated."],
-          ["2. Match design to the task", "Name the qualitative, quantitative, mixed, archival, experimental, or other approach and explain why it can address this particular question within the assignment's scope."],
-          ["3. Make the selection path visible", "Explain what participants, cases, documents, datasets, or materials were selected, how they were located or included, and why that route fits the research problem."],
-          ["4. Record what actually happened", "Describe completed collection or generation procedures in accurate tense. Never invent approval, consent, recruitment, access, measures, or analytical decisions that your project did not use."],
-          ["5. Trace the analysis route", "Identify how information was processed or analysed and how the approach connects evidence to the research question; distinguish a named analytic approach from an unsupported result."],
-          ["6. Name limits and safeguards", "State relevant practical limits, anticipated problems, data gaps, or safeguards honestly. Mention ethics, consent, or approval only when actually applicable and verified."],
-          ["7. Preserve section boundaries", "Keep findings for Results and explanations of meaning for Discussion. Cite methodological sources when they informed a non-obvious design choice, rather than turning the section into a general literature review."],
+          ["1. Confirm the section contract", "Check whether the assignment calls this Methods, Methodology, Research Design, Materials and Methods, or a proposal plan. Confirm required headings, tense, word limit, discipline, and whether you describe completed work or a proposed procedure."],
+          ["2. Reopen the research question", "State enough of the question, problem, or objective for readers to see what the design needs to investigate; do not add a method simply because it sounds sophisticated."],
+          ["3. Name the approach and its rationale", "Distinguish methods—the procedures you used—from methodology—the reasoning for selecting an approach when your field or assignment makes that distinction. Name the qualitative, quantitative, mixed, archival, experimental, or other approach and explain why it can address this question."],
+          ["4. Make the selection path visible", "Explain what participants, cases, documents, datasets, or materials were selected, how they were located or included, and why that route fits the research problem, setting, time frame, and scope."],
+          ["5. Record what actually happened", "Describe completed collection or generation procedures in accurate tense. Never invent approval, consent, recruitment, access, measures, instruments, transformations, or analytical decisions that your project did not use."],
+          ["6. Trace the analysis route", "Identify how information was processed or analysed and how the approach connects evidence to the research question; distinguish a named analytic approach from an unsupported result or interpretation."],
+          ["7. Name limits, ethics, and safeguards", "State relevant practical limits, data gaps, confidentiality steps, and safeguards honestly. Mention ethics review, consent, licence, or approval only when actually applicable and verified; local requirements control."],
+          ["8. Preserve section boundaries and reverse-check", "Keep findings for Results and explanations of meaning for Discussion. Cite methodological sources when they informed a non-obvious choice, then check that the question, design, selection, procedure, analysis, safeguards, and later claims describe the same real project."],
         ]
       : isIntroduction
         ? [
@@ -359,7 +361,7 @@ export default function SectionWritingPractice({
               </article>
               <article className="lg:col-span-2 p-7 bg-white border border-border rounded-2xl">
                 <h2 className="font-serif text-3xl text-slate-purple mb-3">Use methodology guidance, then follow your project&apos;s requirements</h2>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://libguides.usc.edu/writingguide/methodology" target="_blank" rel="noreferrer">USC Libraries</a> explains that a methods section should show what actions were taken to investigate a problem and why the chosen procedures fit, including data or participant selection, collection, processing, analysis, rationale, and anticipated limitations. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&p=185928" target="_blank" rel="noreferrer">Sacred Heart University Library</a> similarly emphasizes direct, precise reporting of how data were obtained and analysed, the match between method and objective, and honest treatment of practical problems. Instructor, ethics-review, journal, and disciplinary requirements control where they differ.</p>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed"><a className="text-primary underline underline-offset-4" href="https://libguides.usc.edu/writingguide/methodology" target="_blank" rel="noreferrer">USC Libraries</a> explains that a methods section should make the research design, selection, collection, processing, analysis, rationale, and anticipated limitations clear enough for readers to assess the study; it also distinguishes technical methods from methodology&apos;s underlying reasoning. <a className="text-primary underline underline-offset-4" href="https://library.sacredheart.edu/c.php?g=29803&p=185929" target="_blank" rel="noreferrer">Sacred Heart University Library</a> notes that qualitative research design needs an account of goals, conceptual framework, research questions, actual methods, and validity, with attention to context, reflexivity, and plausible alternative explanations. Instructor, ethics-review, journal, and disciplinary requirements control where they differ.</p>
               </article>
             </section>
           )}

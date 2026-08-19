@@ -265,11 +265,11 @@ const STATIC_PAGE_SEO = {
   },
   "/methodology-section-example-research-paper": {
     title:
-      "How to Write a Methodology Section for a Research Paper: Example and Planner | CorePapers",
+      "How to Write a Methodology or Methods Section: Example and Checklist | CorePapers",
     description:
-      "Learn how to write a methodology or methods section for a research paper with a fictional example and planner for design, participants, data collection, analysis, and limitations.",
+      "Learn how to write a methodology or methods section for a research paper with a fictional example, eight-step checklist, and guidance on design, selection, procedures, analysis, rationale, limitations, and ethics.",
     keywords:
-      "how to write methodology section research paper, how to write a methodology section of a research paper, methodology section example research paper, sample methodology section, methodology section template, methods section research paper",
+      "how to write methodology section research paper, how to write a methodology section of a research paper, methodology section example research paper, sample methodology section, methodology section template, methods section research paper, method section research paper",
   },
   "/how-to-paraphrase-without-plagiarizing": {
     title: "How to Paraphrase Without Plagiarizing: Source-Use Process | CorePapers",
