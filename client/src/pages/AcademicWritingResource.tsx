@@ -37,6 +37,8 @@ const sourceLinks = {
   mlaStyle: "https://style.mla.org/",
   mlaQuickGuide: "https://writingcenter.gmu.edu/writing-resources/citing-sources/mla-citation-style-quick-guide",
   mlaInText: "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_in_text_citations_the_basics.html",
+  mlaWorksCited: "https://style.mla.org/works-cited/works-cited-a-quick-guide/",
+  mlaInTextOfficial: "https://style.mla.org/in-text-citations-overview/",
 };
 
 function ExternalLink({
@@ -696,6 +698,21 @@ function MlaCitationExamplesPage() {
           <section className={`max-w-4xl mx-auto ${commonClass.card}`}>
             <p className="text-sm font-sans text-primary font-medium">The names, titles, publishers, journals, pages, and URLs below are fictional learning examples. They demonstrate citation structure only and must never be presented as real sources.</p>
           </section>
+          <section className={`max-w-5xl mx-auto mt-8 ${commonClass.card}`}>
+            <p className="text-xs font-sans font-semibold tracking-widest uppercase text-primary mb-3">Citation workflow</p>
+            <h2 className={commonClass.title}>Build an MLA citation from verified source information</h2>
+            <p className={`${commonClass.copy} mb-5`}>Use the original source, publication record, or stable library record to collect information before you format it. A clean-looking entry is not reliable if its creator, version, date, container, location, or relationship to your borrowed idea is wrong.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                ["1. Open the original source", "Record the source as you actually consulted it. Do not copy incomplete metadata from a search snippet, a secondary quotation, or an unverified generator preview."],
+                ["2. Identify the source and first element", "Decide what you are citing and which creator, title, or description appears first in its Works Cited entry. That same starting point helps readers follow the in-text reference."],
+                ["3. Map the relevant core elements", "Collect only elements the source provides: creator, source title, container, contributors, version or number, publisher, date, and location. Leave unavailable elements out rather than inventing them."],
+                ["4. Check the container relationship", "If an article, chapter, episode, post, or story sits inside a journal, book, platform, or collection, distinguish the smaller source from the larger container that holds it."],
+                ["5. Match prose, parentheses, and location", "Use the shortest information that directs readers to the Works Cited entry. Add a page, line, timestamp, or other location only when the source has a real relevant locator."],
+                ["6. Review the final pair", "Compare every in-text reference against the Works Cited list and every Works Cited entry against the original source. Then apply your instructor&apos;s course-specific MLA requirements."],
+              ].map(([title, copy]) => <article key={title} className="rounded-xl bg-muted/50 p-5"><h3 className="font-serif text-xl text-slate-purple mb-2">{title}</h3><p className={commonClass.copy}>{copy}</p></article>)}
+            </div>
+          </section>
           <section className="max-w-4xl mx-auto mt-8 space-y-5">
             {[
               ["Book", "Okafor, Mara. Writing with Evidence. Academic Press, 2024.", "Narrative: Okafor argues that careful source use supports a reader’s trust (42). · Parenthetical: (Okafor 42)."],
@@ -714,10 +731,12 @@ function MlaCitationExamplesPage() {
             <ul className="space-y-3 text-sm text-muted-foreground font-sans leading-relaxed">
               {["Check the exact creator, title, container, other contributors, version or number, publisher, date, and location available for the source.", "Make sure the first meaningful element in the in-text citation helps a reader find the matching Works Cited entry.", "Use page numbers only when they exist in the source; do not invent page or paragraph numbers for a web page.", "Compare the finished citation with the course, instructor, or current MLA guidance that applies to your work."].map(item => <li key={item} className="flex gap-3"><CheckCircle2 size={18} className="text-primary shrink-0 mt-0.5" />{item}</li>)}
             </ul>
-            <p className={`${commonClass.copy} mt-5`}>For authoritative guidance, consult the <ExternalLink href={sourceLinks.mlaStyle}>MLA Style Center</ExternalLink>, the <ExternalLink href={sourceLinks.mlaQuickGuide}>George Mason University MLA quick guide</ExternalLink>, and <ExternalLink href={sourceLinks.mlaInText}>Purdue OWL&apos;s MLA in-text citation guide</ExternalLink>. A generator can format details you provide, but it cannot verify a source or decide whether you have credited every borrowed idea.</p>
+            <p className={`${commonClass.copy} mt-5`}>The <ExternalLink href={sourceLinks.mlaWorksCited}>MLA Style Center Works Cited guide</ExternalLink> explains that entries assemble core elements in a specific order and that containers matter when a source forms part of a larger whole. Its <ExternalLink href={sourceLinks.mlaInTextOfficial}>in-text citation overview</ExternalLink> explains that short references should direct readers to Works Cited entries and use a real locator when relevant. Compare with your course instructions and sources such as the <ExternalLink href={sourceLinks.mlaQuickGuide}>George Mason University MLA quick guide</ExternalLink> or <ExternalLink href={sourceLinks.mlaInText}>Purdue OWL&apos;s MLA in-text citation guide</ExternalLink>. A generator can format details you provide, but it cannot verify source facts or decide whether every borrowed idea has been credited.</p>
           </section>
-          <section className="max-w-4xl mx-auto mt-8 grid sm:grid-cols-2 gap-4">
+          <section className="max-w-5xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <ToolNextStep title="Generate a citation" copy="Enter checked source details, then review the final Works Cited entry before submission." href="/citations" label="Open Citation Generator" />
+            <ToolNextStep title="Compare all citation styles" copy="Choose APA 7, MLA 9, Chicago 18, or IEEE based on the assignment before formatting a source." href="/citation-examples" label="Open citation examples hub" />
+            <ToolNextStep title="Annotate the source first" copy="Record source facts, summarize its point, and evaluate fit before formatting a citation for a research project." href="/annotated-bibliography-example" label="Use annotation guide" />
             <ToolNextStep title="Use sources responsibly" copy="Choose whether to quote, paraphrase, or summarize—and cite the borrowed idea clearly." href="/academic-integrity-and-source-use" label="Read source-use guide" />
           </section>
         </div>

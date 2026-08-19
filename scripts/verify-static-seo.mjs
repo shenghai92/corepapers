@@ -897,9 +897,22 @@ expect(annotatedBibliographyHtml.includes("writingcenter.gmu.edu"), "annotated b
 expect(annotatedBibliographyHtml.includes("owl.purdue.edu"), "annotated bibliography: Purdue OWL guidance link");
 
 const mlaCitationHtml = read("mla-citation-examples/index.html");
+expect(mlaCitationHtml.includes("MLA 9 citation examples"), "MLA citations: expected H1");
+expect(mlaCitationHtml.includes("Build an MLA citation from verified source information"), "MLA citations: verification workflow");
+expect(mlaCitationHtml.includes("Open original source"), "MLA citations: original-source workflow step");
+expect(mlaCitationHtml.includes("Map relevant core elements"), "MLA citations: core-elements workflow step");
+expect(mlaCitationHtml.includes("Check container relationship"), "MLA citations: container workflow step");
+expect(mlaCitationHtml.includes("Match prose, parentheses, and location"), "MLA citations: in-text matching workflow step");
+expect(mlaCitationHtml.includes("Review final pair"), "MLA citations: final-pair workflow step");
 expect(mlaCitationHtml.includes("fictional learning examples"), "MLA citations: fictional-example disclosure");
-expect(mlaCitationHtml.includes("style.mla.org"), "MLA citations: official MLA guidance link");
+expect(mlaCitationHtml.includes("style.mla.org/works-cited/works-cited-a-quick-guide"), "MLA citations: official Works Cited guidance link");
+expect(mlaCitationHtml.includes("style.mla.org/in-text-citations-overview"), "MLA citations: official in-text guidance link");
 expect(mlaCitationHtml.includes("writingcenter.gmu.edu"), "MLA citations: university writing-center guidance link");
+expect(mlaCitationHtml.includes("owl.purdue.edu"), "MLA citations: Purdue OWL guidance link");
+expect(mlaCitationHtml.includes('/citations/'), "MLA citations: generator link");
+expect(mlaCitationHtml.includes('/citation-examples/'), "MLA citations: citation-examples hub link");
+expect(mlaCitationHtml.includes('/annotated-bibliography-example/'), "MLA citations: annotated-bibliography link");
+expect(mlaCitationHtml.includes('/academic-integrity-and-source-use/'), "MLA citations: source-use link");
 const literatureReviewExampleHtml = read("literature-review-example/index.html");
 expect(literatureReviewExampleHtml.includes("Fictional learning example"), "literature-review example: fictional-example disclosure");
 expect(literatureReviewExampleHtml.includes("writingcenter.gmu.edu"), "literature-review example: university synthesis guidance link");
