@@ -2877,14 +2877,14 @@ When your final paragraph restates the argument clearly, summarizes the reasonin
   },
   {
     slug: "how-to-write-a-results-section-research-paper-esl",
-    title: "How to Write a Results Section: Examples for ESL Students",
+    title: "How to Write a Results Section of a Research Paper: Examples for ESL Students",
     excerpt:
-      "Learn how to write a results section in a research paper with clear structure, quantitative and qualitative examples, and academic phrases for international students.",
+      "Learn how to write a results section of a research paper with clear structure, fictional quantitative and qualitative examples, reporting phrases, and an evidence-first checklist for international students.",
     category: "Research Writing",
     tags: ["Results Section", "Research Paper", "ESL Writing", "Academic Phrases"],
     readingTime: 7,
     metaDescription:
-      "Learn how to write a results section with quantitative and qualitative examples, reporting phrases, table references, and structure advice for ESL students.",
+      "Learn how to write a results section of a research paper with fictional quantitative and qualitative examples, reporting phrases, table references, and evidence-first structure advice for ESL students.",
     publishedAt: "2026-06-21",
     featured: false,
     content: `## Why the Results Section Feels Difficult for ESL Writers

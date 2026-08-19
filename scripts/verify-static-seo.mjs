@@ -723,7 +723,7 @@ const resultsHtml = read(
 );
 expect(
   resultsHtml.includes(
-    "How to Write a Results Section: Examples for ESL Students"
+    "How to Write a Results Section of a Research Paper: Examples for ESL Students"
   ),
   "results article: updated title in raw HTML"
 );
